@@ -16,11 +16,11 @@ When writing `.mod` files by hand, the biggest risk is **silent failure**: timin
 
 ## Requirements
 
-| What you want to do                                     | What you need                                                        |
-| ------------------------------------------------------- | -------------------------------------------------------------------- |
-| Let it**write / edit / inspect** `.mod` files   | Only[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
-| **Run** the generated `.mod` files yourself     | Also install[Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
-| Let it**run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
+| What you want to do                                       | What you need                                                        |
+| --------------------------------------------------------- | -------------------------------------------------------------------- |
+| Let it**write / edit / inspect** `.mod` files     | Only[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| **Run** the generated `.mod` files yourself       | Also install[Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
+| Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
 
 > You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
