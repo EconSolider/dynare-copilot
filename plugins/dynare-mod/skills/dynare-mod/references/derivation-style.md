@@ -13,9 +13,15 @@
 
 - 推导文件是**给人读、供用户审阅**的数学文档，不是代码——用规范 LaTeX 写公式，不用 Dynare 语法。
 - 一条 FOC = 一个编号 = 后续 .mod 里的一条方程，三者一一对应（用 `[name=]` 回指编号）。
-- 中文叙述 + LaTeX 公式；术语首次出现给中英文（如 欧拉方程 Euler equation）。
+- 用 §0 选定语言叙述 + LaTeX 公式；术语首次出现建议附英文（如 Euler equation / 欧拉方程 / オイラー方程式）。
 
 ## 固定结构（八节，顺序与标题照用）
+
+> **[LANG] 适配**：下方模板以中文为例。§0 选定 English 时八节标题改为：
+> 1. Model Overview / 2. Optimization Problems / 3. First-Order Conditions /
+> 4. Market Clearing & Identities / 5. Exogenous Processes / 6. Steady-State Solution /
+> 7. Timing & Form Conventions / 8. Variable & Parameter Reference Table
+> 选 Japanese 时同理翻译；**叙述正文与标题一律用 §0 选定语言**。
 
 ```markdown
 # <模型名> —— 推导（最优化问题 + 一阶条件）
