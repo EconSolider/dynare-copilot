@@ -49,6 +49,10 @@ end;
 - `oo_.endo_simul`、`oo_.exo_simul`：模拟序列（当 `periods > 0`）。
 - `oo_.variance_decomposition` / `oo_.conditional_variance_decomposition`。
 
+**画发表级 IRF**：自带画图粗糙。要顶刊级图（多情景/多冲击对比、矢量 PDF）→ `stoch_simul`
+加 `nograph` 省时间，再用本 skill 自带的 `references/plot_irfs_pub.m` 从 `oo_.irfs` 出图，
+详见 `references/publication-plots.md`。
+
 ## 规范示例——基础 RBC（含 Pfeifer 写法）
 
 要点：内生 AR 过程（`z` 内生、`eps_z` 外生）、解析 `steady_state_model`、`[name=]` 标注、

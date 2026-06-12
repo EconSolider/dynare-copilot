@@ -5,7 +5,7 @@
 ![Dynare](https://img.shields.io/badge/Dynare-7.1-blue)
 
 > 一个帮你**编写、运行、调试 Dynare `.mod` 模型**的 Claude Code 插件。
-> 覆盖 DSGE / RBC / 新凯恩斯 / HANK 等宏观模型，从随机模拟到贝叶斯估计、最优政策、偶尔约束全流程。
+> 覆盖 DSGE / RBC / 新凯恩斯 / HANK 等宏观模型，从随机模拟到贝叶斯估计、最优政策、偶尔约束全流程，并能一键导出顶刊级 IRF 图。
 
 手写 `.mod` 最怕**静默出错**——时序、命名、稳态代数错了往往不报错，却给出错误的 IRF 或矩。本插件把"先把数学推导做对，再机械翻译成代码，并用 Dynare 自身命令逐步验证"固化成流程，帮你在出错前拦住错误。
 
@@ -47,6 +47,7 @@
 - “复制 Smets-Wouters 2007，季度校准，跑 IRF。”
 - “给我的新凯恩斯模型加名义利率有效下限（ZLB），用 OccBin。”
 - “我的 mod 报 `Blanchard-Kahn conditions are not satisfied`，帮我看时序。”
+- “把这几个变量的 IRF 画成顶刊级图，基准 vs 高粘性两情景叠加对比，导出 PDF。”
 
 也可以手动调用：`/dynare-mod:dynare-mod`。
 
@@ -68,6 +69,7 @@
 | Ramsey、相机抉择、福利、简单规则 | 最优政策 | `ramsey_model` / `osr` |
 | ZLB / 有效下限、抵押 / 借贷约束 | 偶尔约束 | `occbin_*` / `lmmcp` |
 | 多国、多部门、变体切换 | 宏处理器 | `@#define / @#if / @#for` |
+| 顶刊级 IRF 图、导出 PDF 论文图、多情景 / 多冲击对比 | 发表级绘图 | `plot_irfs_pub.m` |
 | 跑不通、BK 不满足、稳态求不出 | 排错 | 诊断命令 |
 
 ## 工作原理
@@ -104,7 +106,7 @@ plugins/dynare-mod/                  # 插件
   ├── .claude-plugin/plugin.json     # 插件清单
   └── skills/dynare-mod/             # 捆绑的 skill
       ├── SKILL.md                   # 主干：硬规则 + 任务路由 + 主流程
-      └── references/                # 18 个按需读取的细节文件
+      └── references/                # 19 个按需读取的细节文件 + 发表级绘图脚本 plot_irfs_pub.m
 examples/                            # 用法示范（不属 skill 本体）
 ```
 
@@ -130,6 +132,7 @@ examples/                            # 用法示范（不属 skill 本体）
 | `optimal-policy.md` | Ramsey / OSR / 相机抉择 |
 | `occbin.md` | ZLB / 偶尔约束 |
 | `macro-processor.md` | `@#` 宏处理器 |
+| `publication-plots.md` | 发表级 IRF 绘图（配套脚本 `plot_irfs_pub.m`） |
 
 </details>
 
