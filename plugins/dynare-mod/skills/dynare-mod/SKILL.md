@@ -71,11 +71,40 @@ description: 编写、运行、调试和审查 Dynare 的 .mod 模型文件（DS
 | 写阶段1 推导文件的结构与公式规范 | 推导规范 | — | `references/derivation-style.md` |
 | 各主体最优化问题/FOC 怎么推、有哪些会改方程结构的变体 | 建模逻辑 | — | `references/modeling-blocks.md` |
 
+## §2.5 本机 Dynare 7.1 官方示例速查（`C:\dynare\7.1\examples\`）
+
+| 任务类型 | 本机示例路径（相对 `C:\dynare\7.1\examples\`） |
+|---------|----------------------------------------------|
+| 随机模拟：NK 基线 + 解析稳态 | `stochastic_simulations/nk_baseline.mod` + `nk_baseline_steadystate.m` |
+| 随机模拟：Collard 2001（解析稳态辅助函数写法） | `stochastic_simulations/collard_2001_analytical_steady_state.mod` + `_helper.m` |
+| 随机模拟：模拟矩 vs 理论矩对比 | `stochastic_simulations/collard_2001_simulated_moments.mod` + `_theoretical_moments.mod` |
+| 随机模拟：非平稳/趋势冲击（Aguiar-Gopinath 2007） | `stochastic_simulations/aguiar_gopinath_2007_trend.mod` |
+| 估计：贝叶斯全系统（Schorfheide 2000） | `estimation/schorfheide_2000.mod` + `schorfheide_2000_data.m` |
+| 估计：IRF 匹配（RBC） | `estimation/rbc_irf_matching.mod` + `rbc_irf_matching_data.csv` + `_transformations.m` |
+| 估计：Galí 2015（先验限制写法） | `estimation/gali_2015.mod` + `gali_2015_prior_restrictions.m` |
+| 最优政策：Ramsey + OSR（NK） | `optimal_policy/nk_ramsey_osr.mod` |
+| 最优政策：Ramsey + 外部稳态文件 | `optimal_policy/nk_ramsey_steady_file.mod` + `nk_ramsey_steady_file_steadystate.m` |
+| 偶尔约束（OccBin） | `occbin/rbc_occbin.mod` |
+| 完全预见：基础 RBC | `perfect_foresight/perfect_foresight_rbc.mod` |
+| 完全预见：预期误差冲击 | `perfect_foresight/perfect_foresight_expectation_errors.mod` |
+| 异质主体：HANK 单资产 | `heterogeneity/hank_one_asset.mod` + `hank_one_asset_steady_state.mod` |
+| 异质主体：HANK 双资产 | `heterogeneity/hank_two_assets.mod` + `hank_two_assets_steady_state.mod` |
+| 异质主体：Krusell-Smith 1998 | `heterogeneity/krusell_smith_1998.mod` + `krusell_smith_1998_steady_state.mod` |
+| 宏处理器：多国（BKK 1992） | `macroprocessor/bkk_1992.mod` |
+| 半结构/PAC 模型 | `semistructural/pac_model.mod` |
+
+使用原则：这些是**官方示例**，语法与本机 Dynare 7.1 完全兼容，用于核对块结构、命令用法和
+稳态文件写法。**不照搬方程/校准**（它们自有设定）——取的是**命令语法、块格式、稳态辅助函数
+的接口写法**。Read 前先确认文件存在（路径对大小写敏感）。
+
 **参照来源优先级（建模/复制类任务，落笔前）**：① **本地模型库** `references/catalog.csv`（149 篇
 MMB rep-mmb 复制模型，按特征检索 → 读 `references/examples/<ModelID>.mod`，见 §3 第1.3步与
-`references/catalog-lookup.md`）——免检索、论文忠实、时序与校准现成，**首选**；② [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod)
+`references/catalog-lookup.md`）——免检索、论文忠实、时序与校准现成，**首选**；
+② **本机 Dynare 7.1 官方示例** `C:\dynare\7.1\examples`（见上表）——语法一定兼容当前版本，
+块结构/命令/稳态辅助函数写法有官方背书，本地库命中不理想或需核对命令用法时优先读此；
+③ [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod)
 某论文（Galí 2015、SW 2007、RBC_baseline、SGU 2003 等），本地库未覆盖时以其 `.mod` 为模板；
-③ web 检索论文原文（第3步，兜底/补论文特定细节）。
+④ web 检索论文原文（第3步，兜底/补论文特定细节）。
 
 ## §3 主流程（按序执行，不跳步；每步 = 一个 TodoList 条目）
 
@@ -91,6 +120,9 @@ MMB rep-mmb 复制模型，按特征检索 → 读 `references/examples/<ModelID
         **时序约定**、参数校准、冲击设定。**⚠ 别照搬**：catalog 的 ModelType 标 `(linearized)` 者是线性化版，
         与 R8 冲突——线性化参照只取"内容/机制/时序/校准"，形式仍按 R8 自己写非线性；非线性参照可更直接
         跟随，但都要适配用户的具体设定，且**参照不替代阶段1 推导**。命中相似实现后，第3步 web 检索降为兜底。
+        **catalog 命中不理想或需核对命令语法/块格式时**，补充读 §2.5 表中对应的本机 Dynare 7.1 官方示例
+        `C:\dynare\7.1\examples\<子目录>\<文件>.mod`——官方示例语法保证兼容本机版本，是最可靠的命令/块
+        结构参照；但同样**不照搬方程/校准**。
         检索步骤、14 类索引与照搬警示详见 `references/catalog-lookup.md`。
 第1.5步 ⏸ 逐主体确认特征 + 建模选择（即闸门1）：搭主体前先问用户各主体（家庭/厂商/央行/政府/银行…）
         的特征，**以及任何会影响方程结构的分叉**（劳动供给同/异？含资本否？市场结构？）。
