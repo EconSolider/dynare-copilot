@@ -4,183 +4,185 @@
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
 ![Dynare](https://img.shields.io/badge/Dynare-7.1-blue)
 
-> 一个帮你**编写、运行、调试 Dynare `.mod` 模型**的 Claude Code 插件。
-> 覆盖 DSGE / RBC / 新凯恩斯 / HANK 等宏观模型，从随机模拟到贝叶斯估计、最优政策、偶尔约束全流程，并能一键导出顶刊级 IRF 图。
+[中文说明](./README.zh-CN.md)
 
-手写 `.mod` 最怕**静默出错**——时序、命名、稳态代数错了往往不报错，却给出错误的 IRF 或矩。本插件把"先把数学推导做对，再机械翻译成代码，并用 Dynare 自身命令逐步验证"固化成流程，帮你在出错前拦住错误。
+> A Claude Code plugin that helps you **write, run, and debug Dynare `.mod` models**.
+> It covers the full workflow for macroeconomic models such as DSGE, RBC, New Keynesian, and HANK models, from stochastic simulation to Bayesian estimation, optimal policy, occasionally binding constraints, and one-click export of journal-quality IRF figures.
+
+When writing `.mod` files by hand, the biggest risk is **silent failure**: timing, naming, or steady-state algebra mistakes often do not throw errors, but still produce incorrect IRFs or moments. This plugin turns the workflow of "derive the math correctly first, mechanically translate it into code, then validate step by step with Dynare itself" into a fixed process, helping catch mistakes before they propagate.
 
 ---
 
-## 环境要求
+## Requirements
 
-| 你想做的事                               | 需要装的东西                                                         |
-| ---------------------------------------- | -------------------------------------------------------------------- |
-| 让它**写 / 改 / 查** `.mod` 文件 | 只需[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
-| 自己**运行**生成的 `.mod`        | 额外需要[Dynare 7.1](https://www.dynare.org/) + MATLAB（或 Octave）     |
-| 让它**自动运行并循环纠错**         | 再额外装一个 MATLAB MCP 服务器（在 VSCode 中）                       |
+| What you want to do | What you need |
+| ------------------- | ------------- |
+| Let it **write / edit / inspect** `.mod` files | Only [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| **Run** the generated `.mod` files yourself | Also install [Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave |
+| Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode |
 
-> 不装 MATLAB 也能用——它照样能帮你写模型、查报错，只是不替你跑。
+> You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
-> 如果提供具体的论文，能大大减少反应时间和token消耗。
+> Providing the specific paper can greatly reduce response time and token usage.
 
-## 安装（约 1 分钟）
+## Installation (about 1 minute)
 
-先装好 Claude Code（见[官方安装指南](https://docs.claude.com/en/docs/claude-code/overview)，常见方式：`npm install -g @anthropic-ai/claude-code`）。然后：
+First install Claude Code. See the [official installation guide](https://docs.claude.com/en/docs/claude-code/overview); a common method is `npm install -g @anthropic-ai/claude-code`. Then:
 
-1. 在终端进入任意项目目录，运行 `claude` 启动 Claude Code。
-2. 在 Claude Code 的对话里**逐行粘贴**下面两条命令：
+1. In a terminal, enter any project directory and run `claude` to start Claude Code.
+2. In the Claude Code conversation, paste the following two commands **one line at a time**:
 
    ```text
    /plugin marketplace add EconSolider/dynare-mod
    /plugin install dynare-mod@econsolider-skills
    ```
 
-   第一行把本仓库登记为插件市场，第二行安装 `dynare-mod` 插件。
-3. 完成。输入 `/` 能在菜单里看到 dynare-mod 就说明装好了。
+   The first line registers this repository as a plugin marketplace, and the second line installs the `dynare-mod` plugin.
+3. Done. If typing `/` shows dynare-mod in the menu, the installation succeeded.
 
-> 把 `EconSolider/dynare-mod` 换成本仓库实际的 `用户名/仓库名`；`@econsolider-skills` 是固定的市场名，不用改。
+> Replace `EconSolider/dynare-mod` with the actual `username/repository` for this repository. `@econsolider-skills` is the fixed marketplace name and does not need to be changed.
 
-## 快速上手
+## Quick Start
 
-装好后，在 Claude Code 里**直接用中文描述任务**即可，它会自动启用：
+After installation, **describe the task directly in Chinese or English** inside Claude Code. The plugin will be enabled automatically:
 
-- “把这组 FOC 写成 Dynare 代码：`c^-sigma = beta*E[c(+1)^-sigma*(r(+1)+1-delta)]` ……”
-- “复制 Smets-Wouters 2007，季度校准，跑 IRF。”
-- “给我的新凯恩斯模型加名义利率有效下限（ZLB），用 OccBin。”
-- “我的 mod 报 `Blanchard-Kahn conditions are not satisfied`，帮我看时序。”
-- “把这几个变量的 IRF 画成顶刊级图，基准 vs 高粘性两情景叠加对比，导出 PDF。”
+- "Turn this set of FOCs into Dynare code: `c^-sigma = beta*E[c(+1)^-sigma*(r(+1)+1-delta)]` ..."
+- "Replicate Smets-Wouters 2007 with quarterly calibration and run IRFs."
+- "Add a zero lower bound on the nominal interest rate to my New Keynesian model using OccBin."
+- "My mod reports `Blanchard-Kahn conditions are not satisfied`; help me check the timing."
+- "Plot journal-quality IRFs for these variables, comparing baseline vs high-stickiness scenarios, and export them as a PDF."
 
-也可以手动调用：`/dynare-mod:dynare-mod`。
+You can also invoke it manually with `/dynare-mod:dynare-mod`.
 
-`examples/` 里有一个完整示范（含政府支出的 RBC），包含推导文件和最终 `.mod`，可对照学习。skill 内部还捆绑了一个最小范例（基础 RBC，见 `references/examples/`），推导与 `.mod` 逐条对应、随 skill 一起安装，供它在写推导时照格式仿写。
+The `examples/` directory contains a complete repository-level example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself also bundles a minimal example, a basic RBC model under `references/examples/`, whose derivation and `.mod` file correspond line by line and are installed together with the skill for format imitation during derivation writing.
 
-## 支持的任务
+## Supported Tasks
 
-| 你说的                                              | 它做的       | Dynare 命令                             |
-| --------------------------------------------------- | ------------ | --------------------------------------- |
-| IRF、矩、方差分解、“模拟这个 DSGE/RBC/NK”         | 随机模拟     | `stoch_simul`                         |
-| 过渡路径、永久冲击、确定性、完全预见                | 完全预见     | `perfect_foresight_*`                 |
-| 贝叶斯、先验、MCMC、极大似然                        | 估计         | `estimation`                          |
-| GMM、SMM、模拟矩、IRF 匹配                          | 矩方法估计   | `method_of_moments`                   |
-| 历史分解、“哪个冲击在驱动”                        | 冲击分解     | `shock_decomposition`                 |
-| 外推、条件预测、扇形图                              | 预测         | `forecast` / `conditional_forecast` |
-| 能否识别、敏感性 / GSA                              | 识别与敏感性 | `identification` / `sensitivity`    |
-| Markov switching、结构 BVAR                         | MS-SBVAR     | `markov_switching` / `sbvar`        |
-| HANK、Krusell-Smith、异质家庭                       | 异质性       | `heterogeneity_*`                     |
-| Ramsey、相机抉择、福利、简单规则                    | 最优政策     | `ramsey_model` / `osr`              |
-| ZLB / 有效下限、抵押 / 借贷约束                     | 偶尔约束     | `occbin_*` / `lmmcp`                |
-| 多国、多部门、变体切换                              | 宏处理器     | `@#define / @#if / @#for`             |
-| 顶刊级 IRF 图、导出 PDF 论文图、多情景 / 多冲击对比 | 发表级绘图   | `plot_irfs_pub.m`                     |
-| 跑不通、BK 不满足、稳态求不出                       | 排错         | 诊断命令                                |
+| What you say | What it does | Dynare command |
+| ------------ | ------------ | -------------- |
+| IRFs, moments, variance decomposition, "simulate this DSGE/RBC/NK" | Stochastic simulation | `stoch_simul` |
+| Transition paths, permanent shocks, deterministic, perfect foresight | Perfect foresight | `perfect_foresight_*` |
+| Bayesian, priors, MCMC, maximum likelihood | Estimation | `estimation` |
+| GMM, SMM, simulated moments, IRF matching | Method-of-moments estimation | `method_of_moments` |
+| Historical decomposition, "which shock is driving this" | Shock decomposition | `shock_decomposition` |
+| Extrapolation, conditional forecasts, fan charts | Forecasting | `forecast` / `conditional_forecast` |
+| Identifiability, sensitivity / GSA | Identification and sensitivity | `identification` / `sensitivity` |
+| Markov switching, structural BVAR | MS-SBVAR | `markov_switching` / `sbvar` |
+| HANK, Krusell-Smith, heterogeneous households | Heterogeneity | `heterogeneity_*` |
+| Ramsey, discretion, welfare, simple rules | Optimal policy | `ramsey_model` / `osr` |
+| ZLB / effective lower bound, collateral / borrowing constraints | Occasionally binding constraints | `occbin_*` / `lmmcp` |
+| Multi-country, multi-sector, switching variants | Macro processor | `@#define / @#if / @#for` |
+| Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting | `plot_irfs_pub.m` |
+| It does not run, BK conditions fail, steady state cannot be solved | Debugging | Diagnostic commands |
 
-## 工作原理
+## How It Works
 
-它不靠记忆硬写，而是按固定流程推进：
+It does not write purely from memory. It follows a fixed workflow:
 
-1. **先确认、再落笔**——动手前先就**会改变方程结构的建模选择**（含哪些主体、劳动供给同/异、含不含资本、市场结构……）问你拍板；随后产出一份结构化推导文件（最优化问题 → FOC → 稳态求解 → 时序），你确认后才写代码。两处暂停都是为了在出错前拦住错误，而不是写完一堆再返工。
-2. **增量构建**——变量声明 → 方程 → 稳态 → 冲击与实验，每阶段跑通才往下写。
-3. **非线性优先**——默认写原始非线性方程组交给 Dynare 展开，不手推线性化（隐蔽错误重灾区）。
-4. **运行-纠错闭环**——接好 MATLAB MCP 时自动跑 Dynare、读报错、最小化修复、重跑。
-5. **不熟先检索**——遇到不熟的论文/机制，先查原文与现成实现（优先 DSGE_mod）再动笔。
+1. **Confirm first, then write**: before coding, it asks you to approve **modeling choices that change equation structure**, such as which agents are included, whether labor supply is homogeneous or heterogeneous, whether capital is included, and the market structure. It then produces a structured derivation file covering the optimization problems, FOCs, steady-state solution, and timing. It only writes code after you confirm. These two pauses are meant to catch mistakes before they happen, rather than reworking a large block of code afterward.
+2. **Incremental construction**: variable declarations, equations, steady state, shocks, and experiments are written stage by stage. Each stage must work before moving to the next one.
+3. **Nonlinear first**: by default, it writes the original nonlinear equation system and lets Dynare handle expansion, instead of manually deriving a linearized system, which is a common source of hidden mistakes.
+4. **Run-debug loop**: when connected to MATLAB MCP, it automatically runs Dynare, reads errors, applies minimal fixes, and reruns.
+5. **Retrieve first when unfamiliar**: for unfamiliar papers or mechanisms, it first checks the original paper and existing implementations, prioritizing DSGE_mod, before writing.
 
 <details>
-<summary>展开：八条硬规则 R1–R8（写每一行都对照）</summary>
+<summary>Expand: eight hard rules R1-R8, checked line by line</summary>
 
-| #  | 规则                                                                                                    |
-| -- | ------------------------------------------------------------------------------------------------------- |
-| R1 | 注释一律中文；注释以外（`long_name`、`[name=]`、标识符）一律英文 / ASCII                            |
-| R2 | 时序 = 决定期（期末存量）：状态变量当期带滞后，运动律左边是期末存量                                     |
-| R3 | `varexo` 只放创新项；AR 等持续过程是内生变量                                                          |
-| R4 | 方程数 = 内生变量数（`ramsey_model` / `discretionary_policy` 例外少 1 条）                          |
-| R5 | 禁用命名 `i`/`inv`/`e`/`E`、Dynare 命令、MATLAB 函数名；希腊字母写 `alppha`/`betta`/`gam` |
-| R6 | 随机情形禁用 `max`/`min`/`abs`/`sign`/ 比较算子；偶尔约束用 OccBin                              |
-| R7 | 每条语句 `;` 结尾、每块 `end;` 结尾、一行一条；参数先赋值后用                                       |
-| R8 | 非线性优先；仅 `discretionary_policy` 或论文只给线性系统时才 `model(linear);`                       |
+| #  | Rule |
+| -- | ---- |
+| R1 | Comments must be in Chinese; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII. |
+| R2 | Timing = decision period / end-of-period stock: state variables carry lags in the current period, and the law of motion has the end-of-period stock on the left-hand side. |
+| R3 | `varexo` contains only innovations; persistent AR processes are endogenous variables. |
+| R4 | Number of equations = number of endogenous variables, except `ramsey_model` / `discretionary_policy`, which has one fewer equation. |
+| R5 | Do not use the names `i`/`inv`/`e`/`E`, Dynare commands, or MATLAB function names; write Greek letters as `alppha`/`betta`/`gam`. |
+| R6 | In stochastic settings, do not use `max`/`min`/`abs`/`sign`/comparison operators; use OccBin for occasionally binding constraints. |
+| R7 | Every statement ends with `;`, every block ends with `end;`, one statement per line, and parameters are assigned before use. |
+| R8 | Nonlinear first; use `model(linear);` only for `discretionary_policy` or when the paper provides only a linear system. |
 
 </details>
 
-## 仓库结构
+## Repository Structure
 
-```
-.claude-plugin/marketplace.json     # 插件市场目录
-plugins/dynare-mod/                  # 插件
-  ├── .claude-plugin/plugin.json     # 插件清单
-  └── skills/dynare-mod/             # 捆绑的 skill
-      ├── SKILL.md                   # 主干：硬规则 + 任务路由 + 主流程
-      └── references/                # 20 个按需读取的细节文件 + 发表级绘图脚本 plot_irfs_pub.m
-          └── examples/              # skill 自带最小范例：基础 RBC 推导 + 配套 .mod
-examples/                            # 仓库级用法示范（含政府支出的 RBC，不属 skill 本体）
+```text
+.claude-plugin/marketplace.json     # Plugin marketplace directory
+plugins/dynare-mod/                  # Plugin
+  ├── .claude-plugin/plugin.json     # Plugin manifest
+  └── skills/dynare-mod/             # Bundled skill
+      ├── SKILL.md                   # Main file: hard rules + task routing + main workflow
+      └── references/                # 20 detail files loaded on demand + publication-quality plotting script plot_irfs_pub.m
+          └── examples/              # Skill-bundled minimal example: basic RBC derivation + matching .mod
+examples/                            # Repository-level usage example, RBC with government spending, not part of the skill itself
 ```
 
 <details>
-<summary>展开：references/ 各文件职责</summary>
+<summary>Expand: responsibilities of files under references/</summary>
 
-| 文件                         | 内容                                                                                     |
-| ---------------------------- | ---------------------------------------------------------------------------------------- |
-| `workflow-detail.md`       | 主流程各步展开、运行闭环、收尾清理                                                       |
-| `derivation-style.md`      | 推导文件的八节结构与公式规范                                                             |
-| `modeling-blocks.md`       | 分主体建模逻辑库：家庭/厂商/政府央行/市场出清各 block 的最优化问题、FOC 与结构变体       |
-| `steady-state.md`          | 解析 / 数值稳态、反解校准、homotopy                                                      |
-| `debugging.md`             | 报错 → 病因 → 修法、最终检查清单                                                       |
-| `templates.md`             | RBC / NK / 完全预见 规范骨架                                                             |
-| `stochastic-simulation.md` | `stoch_simul`                                                                          |
-| `perfect-foresight.md`     | 确定性 / 完全预见                                                                        |
-| `estimation.md`            | 贝叶斯 / 极大似然                                                                        |
-| `moments-method.md`        | GMM / SMM / IRF 匹配                                                                     |
-| `shock-decomposition.md`   | 冲击 / 历史分解                                                                          |
-| `forecasting.md`           | 预测 / 条件预测                                                                          |
-| `identification.md`        | 识别与敏感性                                                                             |
-| `ms-sbvar.md`              | 区制切换 / SBVAR                                                                         |
-| `heterogeneity.md`         | HANK / 异质主体                                                                          |
-| `optimal-policy.md`        | Ramsey / OSR / 相机抉择                                                                  |
-| `occbin.md`                | ZLB / 偶尔约束                                                                           |
-| `macro-processor.md`       | `@#` 宏处理器                                                                          |
-| `publication-plots.md`     | 发表级 IRF 绘图（配套脚本 `plot_irfs_pub.m`）                                          |
-| `examples/`                | skill 自带最小范例：基础 RBC 八节推导 + 配套 `.mod`（FOC 编号与 `[name=]` 一一对应） |
+| File | Contents |
+| ---- | -------- |
+| `workflow-detail.md` | Expanded main workflow, run-debug loop, and final cleanup |
+| `derivation-style.md` | Eight-section derivation-file structure and formula conventions |
+| `modeling-blocks.md` | Library of agent-specific modeling logic: optimization problems, FOCs, and structural variants for households, firms, government / central bank, and market clearing blocks |
+| `steady-state.md` | Analytical / numerical steady state, reverse calibration, homotopy |
+| `debugging.md` | Error -> cause -> fix, final checklist |
+| `templates.md` | Standard skeletons for RBC / NK / perfect foresight models |
+| `stochastic-simulation.md` | `stoch_simul` |
+| `perfect-foresight.md` | Deterministic / perfect foresight |
+| `estimation.md` | Bayesian / maximum likelihood |
+| `moments-method.md` | GMM / SMM / IRF matching |
+| `shock-decomposition.md` | Shock / historical decomposition |
+| `forecasting.md` | Forecasting / conditional forecasting |
+| `identification.md` | Identification and sensitivity |
+| `ms-sbvar.md` | Regime switching / SBVAR |
+| `heterogeneity.md` | HANK / heterogeneous agents |
+| `optimal-policy.md` | Ramsey / OSR / discretion |
+| `occbin.md` | ZLB / occasionally binding constraints |
+| `macro-processor.md` | `@#` macro processor |
+| `publication-plots.md` | Publication-quality IRF plotting, with companion script `plot_irfs_pub.m` |
+| `examples/` | Skill-bundled minimal example: basic RBC eight-section derivation + matching `.mod`, with FOC numbers aligned to `[name=]` entries |
 
 </details>
 
-## 进阶
+## Advanced
 
 <details>
-<summary>不走市场，手动安装 skill</summary>
+<summary>Manual skill installation without the marketplace</summary>
 
-把 skill 目录拷进个人 skills 目录即可（无需插件市场）：
+Copy the skill directory into your personal skills directory; the plugin marketplace is not required:
 
 ```bash
 cp -r plugins/dynare-mod/skills/dynare-mod ~/.claude/skills/
 ```
 
-首次新建 `~/.claude/skills/` 后需重启 Claude Code。只想给单个项目用，则放到该项目的 `.claude/skills/dynare-mod/`。
+After creating `~/.claude/skills/` for the first time, restart Claude Code. To use it for a single project only, place it under that project's `.claude/skills/dynare-mod/`.
 
 </details>
 
 <details>
-<summary>本地校验与更新</summary>
+<summary>Local validation and updates</summary>
 
 ```bash
-claude plugin validate .                      # 校验 marketplace.json
-claude plugin validate ./plugins/dynare-mod   # 校验 plugin.json 及 skill 元数据
+claude plugin validate .                      # Validate marketplace.json
+claude plugin validate ./plugins/dynare-mod   # Validate plugin.json and skill metadata
 ```
 
-发布更新：推一次 commit，用户运行 `/plugin marketplace update` 即可拉到最新。每次发布记得在 `plugin.json` 里递增 `version`。
+To publish an update, push a commit. Users can then run `/plugin marketplace update` to pull the latest version. Remember to increment `version` in `plugin.json` for every release.
 
 </details>
 
 <details>
-<summary>运行环境路径配置</summary>
+<summary>Runtime path configuration</summary>
 
-自动运行用到的 Dynare / MATLAB 路径在 `references/workflow-detail.md` 里配置，默认示例为 `C:\dynare\7.1`，按你的实际安装修改。
+The Dynare / MATLAB paths used for automatic execution are configured in `references/workflow-detail.md`. The default example is `C:\dynare\7.1`; change it according to your actual installation.
 
 </details>
 
-## 致谢
+## Acknowledgements
 
-- [Dynare](https://www.dynare.org/) 及其[官方手册](https://www.dynare.org/manual/)。
-- Johannes Pfeifer 的 [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod)——规范写法（文件头、`long_name`/LaTeX 名、`[name=]` 标注、`steady_state_model` 反解校准）的主要参考。
+- [Dynare](https://www.dynare.org/) and its [official manual](https://www.dynare.org/manual/).
+- Johannes Pfeifer's [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod), the main reference for standard style, including file headers, `long_name` / LaTeX names, `[name=]` labels, and reverse calibration in `steady_state_model`.
 
 ## License
 
 [MIT](./LICENSE) © 2026 EconSolider
 
-MIT 仅覆盖本仓库自有内容；使用 Dynare 与 DSGE_mod 的素材请遵循其各自许可。
+MIT only covers content owned by this repository. Materials from Dynare and DSGE_mod are subject to their respective licenses.
