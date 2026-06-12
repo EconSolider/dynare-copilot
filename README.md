@@ -4,7 +4,7 @@
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
 ![Dynare](https://img.shields.io/badge/Dynare-7.1-blue)
 
-[中文说明](./README.zh-CN.md)
+[中文说明](./README_zh-CN.md)
 
 > A Claude Code plugin that helps you **write, run, and debug Dynare `.mod` models**.
 > It covers the full workflow for macroeconomic models such as DSGE, RBC, New Keynesian, and HANK models, from stochastic simulation to Bayesian estimation, optimal policy, occasionally binding constraints, and one-click export of journal-quality IRF figures.
@@ -16,11 +16,11 @@ When writing `.mod` files by hand, the biggest risk is **silent failure**: timin
 
 ## Requirements
 
-| What you want to do | What you need |
-| ------------------- | ------------- |
-| Let it **write / edit / inspect** `.mod` files | Only [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
-| **Run** the generated `.mod` files yourself | Also install [Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave |
-| Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode |
+| What you want to do                                     | What you need                                                        |
+| ------------------------------------------------------- | -------------------------------------------------------------------- |
+| Let it**write / edit / inspect** `.mod` files   | Only[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| **Run** the generated `.mod` files yourself     | Also install[Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
+| Let it**run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
 
 > You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
@@ -59,23 +59,23 @@ The `examples/` directory contains a complete repository-level example with an R
 
 ## Supported Tasks
 
-| What you say | What it does | Dynare command |
-| ------------ | ------------ | -------------- |
-| IRFs, moments, variance decomposition, "simulate this DSGE/RBC/NK" | Stochastic simulation | `stoch_simul` |
-| Transition paths, permanent shocks, deterministic, perfect foresight | Perfect foresight | `perfect_foresight_*` |
-| Bayesian, priors, MCMC, maximum likelihood | Estimation | `estimation` |
-| GMM, SMM, simulated moments, IRF matching | Method-of-moments estimation | `method_of_moments` |
-| Historical decomposition, "which shock is driving this" | Shock decomposition | `shock_decomposition` |
-| Extrapolation, conditional forecasts, fan charts | Forecasting | `forecast` / `conditional_forecast` |
-| Identifiability, sensitivity / GSA | Identification and sensitivity | `identification` / `sensitivity` |
-| Markov switching, structural BVAR | MS-SBVAR | `markov_switching` / `sbvar` |
-| HANK, Krusell-Smith, heterogeneous households | Heterogeneity | `heterogeneity_*` |
-| Ramsey, discretion, welfare, simple rules | Optimal policy | `ramsey_model` / `osr` |
-| ZLB / effective lower bound, collateral / borrowing constraints | Occasionally binding constraints | `occbin_*` / `lmmcp` |
-| Multi-country, multi-sector, switching variants | Macro processor | `@#define / @#if / @#for` |
-| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists | Local model-library lookup (runs first) | grep `catalog.csv` → read `examples/<ID>.mod` |
-| Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting | `plot_irfs_pub.m` |
-| It does not run, BK conditions fail, steady state cannot be solved | Debugging | Diagnostic commands |
+| What you say                                                                                   | What it does                            | Dynare command                                     |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------- |
+| IRFs, moments, variance decomposition, "simulate this DSGE/RBC/NK"                             | Stochastic simulation                   | `stoch_simul`                                    |
+| Transition paths, permanent shocks, deterministic, perfect foresight                           | Perfect foresight                       | `perfect_foresight_*`                            |
+| Bayesian, priors, MCMC, maximum likelihood                                                     | Estimation                              | `estimation`                                     |
+| GMM, SMM, simulated moments, IRF matching                                                      | Method-of-moments estimation            | `method_of_moments`                              |
+| Historical decomposition, "which shock is driving this"                                        | Shock decomposition                     | `shock_decomposition`                            |
+| Extrapolation, conditional forecasts, fan charts                                               | Forecasting                             | `forecast` / `conditional_forecast`            |
+| Identifiability, sensitivity / GSA                                                             | Identification and sensitivity          | `identification` / `sensitivity`               |
+| Markov switching, structural BVAR                                                              | MS-SBVAR                                | `markov_switching` / `sbvar`                   |
+| HANK, Krusell-Smith, heterogeneous households                                                  | Heterogeneity                           | `heterogeneity_*`                                |
+| Ramsey, discretion, welfare, simple rules                                                      | Optimal policy                          | `ramsey_model` / `osr`                         |
+| ZLB / effective lower bound, collateral / borrowing constraints                                | Occasionally binding constraints        | `occbin_*` / `lmmcp`                           |
+| Multi-country, multi-sector, switching variants                                                | Macro processor                         | `@#define / @#if / @#for`                        |
+| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists    | Local model-library lookup (runs first) | grep `catalog.csv` → read `examples/<ID>.mod` |
+| Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting            | `plot_irfs_pub.m`                                |
+| It does not run, BK conditions fail, steady state cannot be solved                             | Debugging                               | Diagnostic commands                                |
 
 ## How It Works
 
@@ -90,16 +90,16 @@ It does not write purely from memory. It follows a fixed workflow:
 <details>
 <summary>Expand: eight hard rules R1-R8, checked line by line</summary>
 
-| #  | Rule |
-| -- | ---- |
-| R1 | Comments must be in Chinese; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII. |
+| #  | Rule                                                                                                                                                                       |
+| -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1 | Comments must be in Chinese; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII.                                  |
 | R2 | Timing = decision period / end-of-period stock: state variables carry lags in the current period, and the law of motion has the end-of-period stock on the left-hand side. |
-| R3 | `varexo` contains only innovations; persistent AR processes are endogenous variables. |
-| R4 | Number of equations = number of endogenous variables, except `ramsey_model` / `discretionary_policy`, which has one fewer equation. |
-| R5 | Do not use the names `i`/`inv`/`e`/`E`, Dynare commands, or MATLAB function names; write Greek letters as `alppha`/`betta`/`gam`. |
-| R6 | In stochastic settings, do not use `max`/`min`/`abs`/`sign`/comparison operators; use OccBin for occasionally binding constraints. |
-| R7 | Every statement ends with `;`, every block ends with `end;`, one statement per line, and parameters are assigned before use. |
-| R8 | Nonlinear first; use `model(linear);` only for `discretionary_policy` or when the paper provides only a linear system. |
+| R3 | `varexo` contains only innovations; persistent AR processes are endogenous variables.                                                                                    |
+| R4 | Number of equations = number of endogenous variables, except `ramsey_model` / `discretionary_policy`, which has one fewer equation.                                    |
+| R5 | Do not use the names `i`/`inv`/`e`/`E`, Dynare commands, or MATLAB function names; write Greek letters as `alppha`/`betta`/`gam`.                            |
+| R6 | In stochastic settings, do not use `max`/`min`/`abs`/`sign`/comparison operators; use OccBin for occasionally binding constraints.                                 |
+| R7 | Every statement ends with `;`, every block ends with `end;`, one statement per line, and parameters are assigned before use.                                           |
+| R8 | Nonlinear first; use `model(linear);` only for `discretionary_policy` or when the paper provides only a linear system.                                                 |
 
 </details>
 
@@ -119,30 +119,30 @@ examples/                            # Repository-level usage example, RBC with 
 <details>
 <summary>Expand: responsibilities of files under references/</summary>
 
-| File | Contents |
-| ---- | -------- |
-| `workflow-detail.md` | Expanded main workflow, run-debug loop, and final cleanup |
-| `derivation-style.md` | Eight-section derivation-file structure and formula conventions |
-| `modeling-blocks.md` | Library of agent-specific modeling logic: optimization problems, FOCs, and structural variants for households, firms, government / central bank, and market clearing blocks |
-| `steady-state.md` | Analytical / numerical steady state, reverse calibration, homotopy |
-| `debugging.md` | Error -> cause -> fix, final checklist |
-| `templates.md` | Standard skeletons for RBC / NK / perfect foresight models |
-| `stochastic-simulation.md` | `stoch_simul` |
-| `perfect-foresight.md` | Deterministic / perfect foresight |
-| `estimation.md` | Bayesian / maximum likelihood |
-| `moments-method.md` | GMM / SMM / IRF matching |
-| `shock-decomposition.md` | Shock / historical decomposition |
-| `forecasting.md` | Forecasting / conditional forecasting |
-| `identification.md` | Identification and sensitivity |
-| `ms-sbvar.md` | Regime switching / SBVAR |
-| `heterogeneity.md` | HANK / heterogeneous agents |
-| `optimal-policy.md` | Ramsey / OSR / discretion |
-| `occbin.md` | ZLB / occasionally binding constraints |
-| `macro-processor.md` | `@#` macro processor |
-| `publication-plots.md` | Publication-quality IRF plotting, with companion script `plot_irfs_pub.m` |
-| `catalog.csv` | Index of the 149-model reference library: `ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features |
-| `catalog-lookup.md` | How to search the catalog by feature, the 14-category index, and caveats on using the reference `.mod` files (linearized vs nonlinear, reference not verbatim copy) |
-| `examples/` | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), used as references during modeling, plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries) |
+| File                         | Contents                                                                                                                                                                                                                                  |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `workflow-detail.md`       | Expanded main workflow, run-debug loop, and final cleanup                                                                                                                                                                                 |
+| `derivation-style.md`      | Eight-section derivation-file structure and formula conventions                                                                                                                                                                           |
+| `modeling-blocks.md`       | Library of agent-specific modeling logic: optimization problems, FOCs, and structural variants for households, firms, government / central bank, and market clearing blocks                                                               |
+| `steady-state.md`          | Analytical / numerical steady state, reverse calibration, homotopy                                                                                                                                                                        |
+| `debugging.md`             | Error -> cause -> fix, final checklist                                                                                                                                                                                                    |
+| `templates.md`             | Standard skeletons for RBC / NK / perfect foresight models                                                                                                                                                                                |
+| `stochastic-simulation.md` | `stoch_simul`                                                                                                                                                                                                                           |
+| `perfect-foresight.md`     | Deterministic / perfect foresight                                                                                                                                                                                                         |
+| `estimation.md`            | Bayesian / maximum likelihood                                                                                                                                                                                                             |
+| `moments-method.md`        | GMM / SMM / IRF matching                                                                                                                                                                                                                  |
+| `shock-decomposition.md`   | Shock / historical decomposition                                                                                                                                                                                                          |
+| `forecasting.md`           | Forecasting / conditional forecasting                                                                                                                                                                                                     |
+| `identification.md`        | Identification and sensitivity                                                                                                                                                                                                            |
+| `ms-sbvar.md`              | Regime switching / SBVAR                                                                                                                                                                                                                  |
+| `heterogeneity.md`         | HANK / heterogeneous agents                                                                                                                                                                                                               |
+| `optimal-policy.md`        | Ramsey / OSR / discretion                                                                                                                                                                                                                 |
+| `occbin.md`                | ZLB / occasionally binding constraints                                                                                                                                                                                                    |
+| `macro-processor.md`       | `@#` macro processor                                                                                                                                                                                                                    |
+| `publication-plots.md`     | Publication-quality IRF plotting, with companion script `plot_irfs_pub.m`                                                                                                                                                               |
+| `catalog.csv`              | Index of the 149-model reference library:`ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features                                                                                               |
+| `catalog-lookup.md`        | How to search the catalog by feature, the 14-category index, and caveats on using the reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                                     |
+| `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), used as references during modeling, plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries) |
 
 </details>
 
