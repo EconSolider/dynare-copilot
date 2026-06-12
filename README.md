@@ -51,7 +51,7 @@
 
 也可以手动调用：`/dynare-mod:dynare-mod`。
 
-`examples/` 里有一个完整示范（含政府支出的 RBC），包含推导文件和最终 `.mod`，可对照学习。
+`examples/` 里有一个完整示范（含政府支出的 RBC），包含推导文件和最终 `.mod`，可对照学习。skill 内部还捆绑了一个最小范例（基础 RBC，见 `references/examples/`），推导与 `.mod` 逐条对应、随 skill 一起安装，供它在写推导时照格式仿写。
 
 ## 支持的任务
 
@@ -76,7 +76,7 @@
 
 它不靠记忆硬写，而是按固定流程推进：
 
-1. **推导先行**——先产出一份结构化的推导文件（最优化问题 → FOC → 稳态求解 → 时序），你确认后再写代码。
+1. **先确认、再落笔**——动手前先就**会改变方程结构的建模选择**（含哪些主体、劳动供给同/异、含不含资本、市场结构……）问你拍板；随后产出一份结构化推导文件（最优化问题 → FOC → 稳态求解 → 时序），你确认后才写代码。两处暂停都是为了在出错前拦住错误，而不是写完一堆再返工。
 2. **增量构建**——变量声明 → 方程 → 稳态 → 冲击与实验，每阶段跑通才往下写。
 3. **非线性优先**——默认写原始非线性方程组交给 Dynare 展开，不手推线性化（隐蔽错误重灾区）。
 4. **运行-纠错闭环**——接好 MATLAB MCP 时自动跑 Dynare、读报错、最小化修复、重跑。
@@ -106,7 +106,9 @@ plugins/dynare-mod/                  # 插件
   ├── .claude-plugin/plugin.json     # 插件清单
   └── skills/dynare-mod/             # 捆绑的 skill
       ├── SKILL.md                   # 主干：硬规则 + 任务路由 + 主流程
-      └── references/                # 19 个按需读取的细节文件 + 发表级绘图脚本 plot_irfs_pub.m
+      └── references/                # 20 个按需读取的细节文件 + 发表级绘图脚本 plot_irfs_pub.m
+          └── examples/              # skill 自带最小范例：基础 RBC 推导 + 配套 .mod
+examples/                            # 仓库级用法示范（含政府支出的 RBC，不属 skill 本体）
 ```
 
 <details>
@@ -116,6 +118,7 @@ plugins/dynare-mod/                  # 插件
 |------|------|
 | `workflow-detail.md` | 主流程各步展开、运行闭环、收尾清理 |
 | `derivation-style.md` | 推导文件的八节结构与公式规范 |
+| `modeling-blocks.md` | 分主体建模逻辑库：家庭/厂商/政府央行/市场出清各 block 的最优化问题、FOC 与结构变体 |
 | `steady-state.md` | 解析 / 数值稳态、反解校准、homotopy |
 | `debugging.md` | 报错 → 病因 → 修法、最终检查清单 |
 | `templates.md` | RBC / NK / 完全预见 规范骨架 |
@@ -132,6 +135,7 @@ plugins/dynare-mod/                  # 插件
 | `occbin.md` | ZLB / 偶尔约束 |
 | `macro-processor.md` | `@#` 宏处理器 |
 | `publication-plots.md` | 发表级 IRF 绘图（配套脚本 `plot_irfs_pub.m`） |
+| `examples/` | skill 自带最小范例：基础 RBC 八节推导 + 配套 `.mod`（FOC 编号与 `[name=]` 一一对应） |
 
 </details>
 
