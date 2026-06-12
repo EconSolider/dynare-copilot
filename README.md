@@ -44,7 +44,7 @@ First install Claude Code. See the [official installation guide](https://docs.cl
 
 ## Quick Start
 
-After installation, **describe the task directly in Chinese or English** inside Claude Code. The plugin will be enabled automatically:
+After installation, **describe the task directly in your preferred language** inside Claude Code. The plugin will be enabled automatically:
 
 - "Turn this set of FOCs into Dynare code: `c^-sigma = beta*E[c(+1)^-sigma*(r(+1)+1-delta)]` ..."
 - "Replicate Smets-Wouters 2007 with quarterly calibration and run IRFs."
@@ -90,7 +90,7 @@ It does not write purely from memory. It follows a fixed workflow:
 
 | #  | Rule |
 | -- | ---- |
-| R1 | Comments must be in Chinese; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII. |
+| R1 | Comments should use the user's preferred language; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII. |
 | R2 | Timing = decision period / end-of-period stock: state variables carry lags in the current period, and the law of motion has the end-of-period stock on the left-hand side. |
 | R3 | `varexo` contains only innovations; persistent AR processes are endogenous variables. |
 | R4 | Number of equations = number of endogenous variables, except `ramsey_model` / `discretionary_policy`, which has one fewer equation. |
