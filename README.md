@@ -107,7 +107,6 @@ plugins/dynare-mod/                  # 插件
   └── skills/dynare-mod/             # 捆绑的 skill
       ├── SKILL.md                   # 主干：硬规则 + 任务路由 + 主流程
       └── references/                # 19 个按需读取的细节文件 + 发表级绘图脚本 plot_irfs_pub.m
-examples/                            # 用法示范（不属 skill 本体）
 ```
 
 <details>
