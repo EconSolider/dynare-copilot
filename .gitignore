@@ -1,0 +1,22 @@
+# Dynare 预处理器/运行自动产物（对应 skill「收尾清理」白名单）
++*/
+Output/
+*_results.mat
+*.log
+*.jnl
+*_dynamic.m
+*_static.m
+*_set_auxiliary_variables.m
+driver.m
+*_steadystate2.m
+*_IRF_*.eps
+*_IRF_*.pdf
+*_IRF_*.fig
+simulation_IRFs/
+
+# 各 example 模型的图形输出夹（按需取消注释或逐个忽略）
+examples/rbc_gov/
+
+# 系统/编辑器
+.DS_Store
+*.asv
