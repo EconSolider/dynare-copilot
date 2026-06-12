@@ -1,0 +1,13 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "dynare-mod",
+  "description": "编写、运行、调试和审查 Dynare .mod 模型文件（DSGE / RBC / 新凯恩斯 / HANK / 最优政策 / 估计 / 偶尔约束等）。捆绑同名 skill。",
+  "version": "1.0.0",
+  "author": {
+    "name": "EconSolider",
+    "url": "https://github.com/EconSolider"
+  },
+  "homepage": "https://github.com/EconSolider/dynare-mod",
+  "license": "MIT",
+  "keywords": ["dynare", "dsge", "rbc", "new-keynesian", "hank", "macroeconomics"]
+}
