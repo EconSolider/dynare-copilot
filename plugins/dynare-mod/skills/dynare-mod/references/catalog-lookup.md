@@ -142,7 +142,7 @@
 - **DSGE_mod 已本地化**：不再需要上网找 DSGE_mod（github.com/JohannesPfeifer/DSGE_mod），
   其全部关键 .mod 文件已在 `references/examples-code/` 中，直接读即可。
 
-## 用户记忆库（memory-catalog.csv）
+## 用户模型存档库（model-archive-catalog.csv）
 
-`references/memory-catalog.csv` 是历次任务积累的第三层索引，优先级低于两套主库。
-检索方式、字段格式、存档流程详见 `references/memory.md`。
+`references/model-archive-catalog.csv` 是历次任务积累的第三层索引，优先级低于两套主库。
+检索方式、字段格式、存档流程详见 `references/model-archive.md`。

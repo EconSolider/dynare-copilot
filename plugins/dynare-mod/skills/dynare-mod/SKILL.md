@@ -78,12 +78,14 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
 | ZLB/有效下限、抵押/借贷约束、不可逆投资、偶尔约束                                                                                      | 偶尔约束                         | `occbin_*` 或完全预见 `lmmcp`/`⟂`                                              | `references/occbin.md`（确定性单约束亦见 perfect-foresight.md「lmmcp」） |
 | —（几乎都涉及）                                                                                                                       | 稳态                             | `steady_state_model`/`initval`                                                    | `references/steady-state.md`                                             |
 | 多国、多部门、变体切换、@#、循环生成方程                                                                                               | 宏处理器                         | `@#define/@#if/@#for`                                                               | `references/macro-processor.md`                                          |
-| 报错、跑不通、BK 不满足、稳态求不出                                                                                                    | 排错                             | 诊断命令                                                                              | `references/debugging.md`                                                |
+| 报错、跑不通、BK 不满足、稳态求不出、**结果数值可疑**（无报错但数不对劲、乘数/IRF 量级或符号存疑）                                     | 排错                             | 诊断命令                                                                              | `references/debugging.md`                                                |
+| 已踩过的具体坑速查（先扫实战日志命中现成修法）、自己新解决报错后 encode-back 回写                                                       | 排错日志                         | —                                                                                    | `references/known-issues.md`                                            |
 | 对**已有 .mod** 修改/扩展（加冲击/机制/估计/OSR/切换价格黏性等）、"帮我改这个文件"                                               | 存量文件修改                     | —                                                                                    | **走 §2.8，跳过建模主流程**                                         |
 | **凡产出 IRF 即默认出图**（见 §3 阶段5b）；用户提到好看的图、顶刊/发表级 IRF、导出 PDF、多情景/多冲击对比、置信带时同样读此参考 | 发表级绘图（**默认产出**） | `plot_irfs_pub.m`（替代自带画图）                                                   | `references/publication-plots.md`                                        |
-| 复制某论文模型、"要个带 X 特征的模型"、不确定有无现成实现 →**建模/复制类任务落笔前必做**                                        | 本地双库检索           | ① grep `catalog.csv`（模型结构）→ 读 `examples/<ID>.mod`；② grep `catalog-code.csv`（编程逻辑）→ 读 `examples-code/<Folder>/<ID>.mod`；两库无命中再 grep `memory-catalog.csv`          | `references/catalog-lookup.md`                                           |
+| 复制某论文模型、"要个带 X 特征的模型"、不确定有无现成实现 →**建模/复制类任务落笔前必做**                                        | 本地双库检索           | ① grep `catalog.csv`（模型结构）→ 读 `examples/<ID>.mod`；② grep `catalog-code.csv`（编程逻辑）→ 读 `examples-code/<Folder>/<ID>.mod`；两库无命中再 grep `model-archive-catalog.csv`  | `references/catalog-lookup.md`                                           |
 | 需要现成骨架                                                                                                                           | 模板                             | —                                                                                    | `references/templates.md`                                                |
 | 主流程任一步的细节（暂停点/检索/分阶段构建/闭环/骨架/细则）                                                                            | 流程                             | —                                                                                    | `references/workflow-detail.md`                                          |
+| 求解慢、反复改图/改归一化要重算、缓存 oo_、多模型/多情景对比（HANK vs RANK）、求解与分析解耦、运行脚本、迭代效率                       | MATLAB 侧工作流                  | —                                                                                    | `references/matlab-workflow.md`                                          |
 | 写阶段1 推导文件的结构与公式规范                                                                                                       | 推导规范                         | —                                                                                    | `references/derivation-style.md`                                         |
 | 各主体最优化问题/FOC 怎么推、有哪些会改方程结构的变体                                                                                  | 建模逻辑                         | —                                                                                    | `references/modeling-blocks.md`                                          |
 
@@ -121,7 +123,7 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
 
 **经济建模参照优先级**（第1.3步，针对"模型结构该怎么设"）：
 ① 本地模型参考库 `references/catalog.csv`（149 篇 MMB/rep-mmb）——首选，论文忠实、时序与校准现成；
-② 用户记忆库 `references/memory-catalog.csv`（历次任务积累，.mod 在 `references/memory/`）——①无命中时次选；
+② 用户模型存档库 `references/model-archive-catalog.csv`（历次任务积累，.mod 在 `references/model-archive/`）——①无命中时次选；
 ③ web 检索论文原文——两套本地库均无命中时兜底。
 
 **Dynare 编程逻辑参照优先级**（第1.3步②，针对"这个块/命令怎么写"）：
@@ -177,8 +179,8 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
            `references/examples-code/<Folder>/<CodeID>.mod` 中的相关块——
            只取语法样板，不要照搬经济结构。
 
-        两套均无命中 → 再 grep `references/memory-catalog.csv`（用户记忆库）；
-        若该文件不存在，直接跳过、不报错；有命中则读 `references/memory/<ModelID>.mod`（同样只取内容/时序/校准）。
+        两套均无命中 → 再 grep `references/model-archive-catalog.csv`（用户模型存档库）；
+        若该文件不存在，直接跳过、不报错；有命中则读 `references/model-archive/<ModelID>.mod`（同样只取内容/时序/校准）。
 
         命中后，第3步 web 检索降为兜底（仅补论文精确校准来源或某条推导细节）。
         **DSGE_mod 已本地化**，不再需要上网找 DSGE_mod——其关键 .mod 已全部在
@@ -266,6 +268,10 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
                （纯稳态检查 / 纯识别 / 预测扇形图等有专门图的场景）；② 用户明说不要出版图。
                跳过时在交付里一句话说明原因。
         每跑一次都走"运行与纠错闭环"（上限5轮、同错2轮即停）。详见 workflow-detail.md。
+        **遇报错先走 debugging.md「bug 处理协议」**：① 先查 skill 内已编码排错知识（先扫
+        `known-issues.md` 实战坑日志 + debugging.md「报错→病因→修法」表 + 相关 reference 的
+        "常见报错与陷阱"节），命中直接照修法改、不重推；② 查不到才自己诊断；③ 自己新解决的报错，
+        修好后**回写 `known-issues.md`**，让排错库随用随长。skill 里写过的坑不要从头再踩一遍。
 第5步   自查：对完整文件跑 references/debugging.md 的"最终检查清单"（12 条）；多主体模型额外确认 Walras 定律冗余方程已剔出 model 块（见清单第13条）。
 第6步   交付：见下方"交付格式"。
 ```
@@ -294,5 +300,5 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
    `plot_irfs_pub.m` 与它导出的论文图 `fig_*.pdf/.eps/.png`**（skill 资产与用户成果，不是中间产物；
    要删的是 Dynare 自带的 `<模型名>_IRF_*.eps`）。详见 workflow-detail.md「收尾清理」。最后向用户
    报告删了哪些、保留了哪些。
-10. ⏸ **记忆存档**（建模/复制类任务；纯排错且无新 .mod 产出时跳过）：
-    读 `references/memory.md`，按其"二、存档"节执行——先停下询问用户，等确认后再操作文件。
+10. ⏸ **模型存档**（建模/复制类任务；纯排错且无新 .mod 产出时跳过）：
+    读 `references/model-archive.md`，按其"二、存档"节执行——先停下询问用户，等确认后再操作文件。

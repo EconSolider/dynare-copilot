@@ -177,7 +177,8 @@ d. 可信度纪律：论文原文/附录 > 作者代码 > 知名复制(DSGE_mod)
       cd('<.mod所在目录>');
 2. 循环（n=1，上限 5 轮）：
    a. 运行：dynare <文件名不带扩展名> noclearall   （调试期可加 nograph）
-   b. 按输出分支：
+   b. 按输出分支（**先查后补**：先扫 `known-issues.md` 实战坑日志命中直接改、不重推；自己新解决
+      的报错修好后回写 `known-issues.md`，详见 debugging.md「bug 处理协议」）：
       - ERROR/syntax error/报错堆栈 → 查 debugging.md「报错→病因→修法」
       - "Blanchard-Kahn conditions are not satisfied" → 优先查 R2/符号/R4；跑 model_info;
       - 稳态含 NaN 或 resid 残差大 → 查 steady-state.md；跑 resid; 定位残差大的方程
@@ -192,6 +193,10 @@ d. 可信度纪律：论文原文/附录 > 作者代码 > 知名复制(DSGE_mod)
       oo_.irfs           % IRF（如有）
 ```
 调试期可随时通过 MCP 追加：`resid;`、`model_diagnostics;`、`model_info;`、`check;`。
+
+> **求解贵且要反复出图/对比时**（异质性、二/三阶、估计、大型模型）：别把 `dynare <model>` 和
+> 绘图/分析写在同一脚本里反复重解——把求解与分析拆成两段、用 `save <model>_oo.mat oo_ M_` 缓存，
+> 改图/改归一化只读缓存秒级重跑。组织方式与多模型对比见 `references/matlab-workflow.md`。
 
 ## 第6步　收尾清理（交付前复查工作目录）
 

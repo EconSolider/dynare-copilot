@@ -1,7 +1,7 @@
-# 用户记忆库（memory）使用规范
+# 模型存档库（model archive）使用规范
 
-> **何时读**：① 第1.3步检索模型库时需要查记忆库；② 第6步交付收尾时需要执行存档。
-> 本文件规定记忆库的目录结构、检索方式、存档流程与全新安装时的初始化行为。
+> **何时读**：① 第1.3步检索模型库时需要查模型存档库；② 第6步交付收尾时需要执行存档。
+> 本文件规定模型存档库的目录结构、检索方式、存档流程与全新安装时的初始化行为。
 
 ---
 
@@ -9,10 +9,10 @@
 
 ```
 references/
-├── memory-catalog.csv        ← 记忆库索引（格式同 catalog.csv，可同一 grep 命令搜索）
-└── memory/
-    ├── <模型名>.mod           ← 存档的 Dynare 模型文件
-    └── <模型名>_derivation.md ← （可选）配套推导文件
+├── model-archive-catalog.csv   ← 存档库索引（格式同 catalog.csv，可同一 grep 命令搜索）
+└── model-archive/
+    ├── <模型名>.mod             ← 存档的 Dynare 模型文件
+    └── <模型名>_derivation.md   ← （可选）配套推导文件
 ```
 
 全新安装时以上文件/目录均不存在，属正常情况——按下方"全新安装"处理。
@@ -21,17 +21,17 @@ references/
 
 ## 一、检索（第1.3步执行）
 
-在 `catalog.csv`（149 篇 MMB）无相近命中后，检索记忆库：
+在 `catalog.csv`（149 篇 MMB）无相近命中后，检索模型存档库：
 
 ```bash
 # 先确认文件存在，再 grep
-grep -i "TANK\|hand-to-mouth" references/memory-catalog.csv
-grep -i "financial accelerator" references/memory-catalog.csv
+grep -i "TANK\|hand-to-mouth" references/model-archive-catalog.csv
+grep -i "financial accelerator" references/model-archive-catalog.csv
 ```
 
-**全新安装时**：`references/memory-catalog.csv` 不存在 → 直接跳过，视为无命中，不报错，不尝试读取。
+**全新安装时**：`references/model-archive-catalog.csv` 不存在 → 直接跳过，视为无命中，不报错，不尝试读取。
 
-有命中时，读 `references/memory/<ModelID>.mod` 作补充参照（只取内容/时序/校准，勿照搬形式）。
+有命中时，读 `references/model-archive/<ModelID>.mod` 作补充参照（只取内容/时序/校准，勿照搬形式）。
 
 ---
 
@@ -46,7 +46,7 @@ grep -i "financial accelerator" references/memory-catalog.csv
 
 清理工作目录完成后，向用户发出：
 
-> "是否将本次模型归档至记忆库？归档后可在未来任务中自动检索调用。（是/否）"
+> "是否将本次模型归档至模型存档库？归档后可在未来任务中自动检索调用。（是/否）"
 
 用户回答**否**：跳过，不做任何文件操作。  
 用户回答**是**：按下方步骤执行。
@@ -55,14 +55,14 @@ grep -i "financial accelerator" references/memory-catalog.csv
 
 **a. 初始化目录**（全新安装时执行，已存在则跳过）
 ```bash
-mkdir -p references/memory
+mkdir -p references/model-archive
 ```
 
 **b. 复制模型文件**
 ```bash
-cp <工作目录>/<模型名>.mod references/memory/<模型名>.mod
+cp <工作目录>/<模型名>.mod references/model-archive/<模型名>.mod
 # 若本任务产出了推导 md，一并复制
-cp <工作目录>/<模型名>_derivation.md references/memory/<模型名>_derivation.md
+cp <工作目录>/<模型名>_derivation.md references/model-archive/<模型名>_derivation.md
 ```
 
 **c. 初始化 CSV 表头**（全新安装、文件不存在时执行）
@@ -88,7 +88,7 @@ cp <工作目录>/<模型名>_derivation.md references/memory/<模型名>_deriva
 
 **e. 完成报告**
 
-向用户报告："已归档至记忆库：`references/memory/<模型名>.mod`"
+向用户报告："已归档至模型存档库：`references/model-archive/<模型名>.mod`"
 
 ---
 

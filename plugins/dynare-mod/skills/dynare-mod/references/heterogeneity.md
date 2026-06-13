@@ -98,6 +98,56 @@ Dynare `examples/` 提供（与 shade-econ/sequence-jacobian 同模型）：
 - 调试：先跑通自带 example（krusell_smith / hank_one_asset）确认环境，再改成自己的模型。
 - 稳态载入时核对 MAT 文件字段（策略函数、冲击离散化、平稳分布）与模型维度一致。
 
+## 常见报错与陷阱（Dynare 7.1，实测）
+
+**`heterogeneity_solve` 崩在 `eq` 未定义 / `process_jacobian_block`——病因是 varexo 声明顺序**
+
+总量层若有**只带滞后出现**的 varexo（典型：泰勒规则带实施滞后 `rstar(-1)`，或 `pi(-1)` 之外
+再引 `g(-1)`），Dynare 会为它建一条辅助方程 `aux(+1) = rstar`，该辅助方程的行号 **大于**
+`M_.orig_endo_nbr`。`heterogeneity_solve` 内部用 `find()` 遍历雅可比块，而 MATLAB 的 `find()`
+**按列优先**返回——若这个 lag-only varexo 在 `varexo` 块里**声明在前**，它的辅助行就排在常规
+方程项之前被先遇到，循环里 `eq` 还没被赋值就被引用 → 崩溃。
+
+**修法：把任何"只带滞后出现"的 varexo 声明在 `varexo` 块的最后。** 这样常规方程项先被遍历、
+先给 `eq` 赋值，辅助行随后才出现。官方示例 `hank_one_asset_steady_state.mod` 正是这么做的
+（`varexo G markup rstar;`，`rstar` 殿后）。
+
+```dynare
+// ✅ 正确：lag-only 的 rstar 殿后
+varexo G TR markup rstar;     // rstar(-1) 进泰勒规则 → 必须最后声明
+// ❌ 触发崩溃：varexo rstar G TR markup;
+```
+
+> 这是 heterogeneity 框架特有的表现。**非异质**模型里同样的 lag-only varexo 会在 `disp_dr` 阶段
+> 触发另一个 `subst_auxvar` 崩溃（"索引生成 2 个值"）——那种情形改用 AR(1) 内生变量替代 lagged
+> varexo，见 `references/known-issues.md`「非异质模型 disp_dr / subst_auxvar 崩」。
+
+**稳态：纯 varexo 在稳态取 0**
+
+`G`、`TR` 等作为纯 varexo（非 AR 内生过程）时，稳态值就是 0。政府预算等稳态方程里**不要**把它们
+当正值代入：若 `Tax = r*B + G + TR`，稳态应为 `Tax_ss = r_ss*B`（`G=TR=0`），写成
+`r_ss*B + G_ss + TR_ss` 会让稳态残差不为零。
+
+## IRF 取数（heterogeneity_solve 后）
+
+异质性框架的 IRF **不在 `oo_.irfs`**（那是 `stoch_simul` 的产物）。`heterogeneity_solve` 把总量
+动态存成**序列空间雅可比** `oo_.heterogeneity.dr`：
+
+- `oo_.heterogeneity.dr.G.<var>.<shock>` 是一个 **T×T 矩阵**（T = `truncation_horizon`），第 `(t,s)`
+  元 = 变量 `var` 在 `t` 期对"`s` 期发生一单位 `shock`"的响应。
+- **对一次性冲击（t=1 发生）的 IRF = 该矩阵的第一列**：`oo_.heterogeneity.dr.G.Y.G(:,1)`
+  就是 Y 对单位 G 冲击的脉冲响应路径。
+- 这是**每单位冲击**的响应；要对应某个冲击大小（如 1%），乘以冲击幅度即可。
+- 没单独存的总量（如总消费 C）走 Walras 恒等式从已有变量反推（如商品市场 `C = Y - G`）。
+
+```matlab
+% Y 对单位 G 冲击的 IRF（前 20 期），再缩放到 1% 冲击
+irf_Y_G = oo_.heterogeneity.dr.G.Y.G(1:20, 1) * 0.01;
+```
+
+要和 RANK（`oo_.irfs`）并排对比、或反复改图，**先把 `oo_` 冻存再分析**，别每改一次图就重跑
+30 秒的 HANK 求解——见 `references/matlab-workflow.md`。
+
 参考：Dynare 7.0 发布说明（heterogeneity 框架）；手册 §4.26；example mods（与 SSJ 同模型）；
 Auclert-Bardóczy-Rognlie-Straub (2021)、Bhandari-Bourany-Evans-Golosov (2023)。
 
