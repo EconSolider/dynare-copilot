@@ -272,7 +272,7 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
         `known-issues.md` 实战坑日志 + debugging.md「报错→病因→修法」表 + 相关 reference 的
         "常见报错与陷阱"节），命中直接照修法改、不重推；② 查不到才自己诊断；③ 自己新解决的报错，
         修好后**回写 `known-issues.md`**，让排错库随用随长。skill 里写过的坑不要从头再踩一遍。
-第5步   自查：对完整文件跑 references/debugging.md 的"最终检查清单"（12 条）；多主体模型额外确认 Walras 定律冗余方程已剔出 model 块（见清单第13条）。
+第5步   自查：对完整文件跑 references/debugging.md 的"最终检查清单"（共13条）；多主体模型尤其确认 Walras 定律冗余方程已剔出 model 块（清单第13条）。
 第6步   交付：见下方"交付格式"。
 ```
 

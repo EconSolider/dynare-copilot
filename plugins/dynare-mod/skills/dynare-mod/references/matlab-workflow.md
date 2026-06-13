@@ -5,7 +5,7 @@
 > 或想把 `.mod` 的运行包成**可复跑脚本**。**本文件回答**：MATLAB 侧的驱动脚本怎么组织，
 > 让"贵的求解只跑一次、便宜且要反复试的分析随便改"，并用解析基准即时抓 bug。
 >
-> 这是 SKILL.md §4.1「运行与纠错闭环」的补充：闭环讲"怎么把 .mod 跑通"，本文件讲"跑通之后
+> 这是 workflow-detail.md §4.1「运行与纠错闭环」的补充：闭环讲"怎么把 .mod 跑通"，本文件讲"跑通之后
 > 怎么高效地反复分析、出图、对比，不每改一处就重解一遍模型"。
 
 ## 一句话原则：求解贵、分析便宜且要反复试 → 两者拆开，中间用 .mat 缓存 oo_ 衔接
@@ -108,7 +108,7 @@ plot_irfs_pub({'Y','C'}, 'eps_g', ...
 
 ## 与既有参考的分工
 
-- **怎么把 .mod 跑通、报错怎么修** → SKILL.md §4.1 + `references/debugging.md`（本文件不重复）。
+- **怎么把 .mod 跑通、报错怎么修** → workflow-detail.md §4.1「运行与纠错闭环」+ `references/debugging.md`（本文件不重复）。
 - **画图函数 `plot_irfs_pub` 的参数/多情景/置信带** → `references/publication-plots.md`。
 - **异质性框架、HANK IRF 取数** → `references/heterogeneity.md`。
 - **本文件**只回答"驱动脚本怎么组织，让贵的求解只跑一次、便宜的分析随便改"。
