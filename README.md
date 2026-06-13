@@ -8,7 +8,7 @@
 
 > A Claude Code skill that takes your macroeconomic intuition — "I want a New Keynesian model with a financial accelerator," "replicate Smets-Wouters 2007" — and turns it into a working, validated Dynare `.mod` file with steady state solved and IRFs in hand.
 >
-> Its core job is to enforce the workflow experienced modelers follow anyway: **derive first, translate second, validate incrementally**. Timing errors, naming conflicts, and steady-state algebra mistakes get caught before they become wrong results. A built-in library of **149 MMB replication models** (from the [Macroeconomic Model Data Base](https://www.macromodelbase.com/rep-mmb)) means every new model starts from a vetted reference, not guesswork. Every model you finish is automatically archived in a **personal memory library** and consulted on future tasks — the tool gets sharper the more you use it. Every IRF is delivered as a publication-ready vector figure, ready to drop into your paper.
+> Its core job is to enforce the workflow experienced modelers follow anyway: **derive first, translate second, validate incrementally**. Timing errors, naming conflicts, and steady-state algebra mistakes get caught before they become wrong results. A built-in **dual reference library** — **149 MMB replication models** (from the [Macroeconomic Model Data Base](https://www.macromodelbase.com/rep-mmb)) for economic structure, and **41 Pfeifer DSGE_mod examples** (from [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod)) for Dynare programming patterns — means every new model starts from a vetted reference, not guesswork. Every model you finish is automatically archived in a **personal memory library** and consulted on future tasks — the tool gets sharper the more you use it. Every IRF is delivered as a publication-ready vector figure, ready to drop into your paper.
 >
 > No timing pitfalls. No silent errors. No blank page.
 >
@@ -57,7 +57,12 @@ After installation, **describe the task directly in Chinese or English** inside 
 
 You can also invoke it manually with `/dynare-mod:dynare-mod`.
 
-The `examples/` directory contains a complete repository-level example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself bundles, under `references/examples/`, the **149 MMB rep-mmb replication models** (one `.mod` per paper, named by its `ModelID`) indexed by `references/catalog.csv`, plus a minimal teaching example (a basic RBC model whose derivation and `.mod` file correspond line by line) for format imitation during derivation writing. When you ask it to build a model, it first searches `catalog.csv` by feature, then your personal `memory-catalog.csv`, and reads the closest matching `.mod` files as references before writing.
+The `examples/` directory (at repository root) contains a complete usage example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself bundles two reference libraries under `references/`:
+
+- **Model reference library** (`references/examples/`, indexed by `references/catalog.csv`): 149 MMB rep-mmb replication models (one `.mod` per paper, named by its `ModelID`), plus a minimal RBC teaching example with a line-by-line derivation.
+- **Programming logic library** (`references/examples-code/`, indexed by `references/catalog-code.csv`): 41 Pfeifer DSGE_mod examples organized by Dynare feature — `discretionary_policy`, `steadystate.m` patterns, `lmmcp` ZLB, welfare computation, news shocks, higher-order methods, and more.
+
+When asked to build a model, it first searches both local libraries, then your personal `memory-catalog.csv`, and only falls back to web search for paper-specific details (calibration, derivations) that neither library contains.
 
 ## Supported Tasks
 
@@ -75,7 +80,7 @@ The `examples/` directory contains a complete repository-level example with an R
 | Ramsey, discretion, welfare, simple rules                                                      | Optimal policy                          | `ramsey_model` / `osr`                                         |
 | ZLB / effective lower bound, collateral / borrowing constraints                                | Occasionally binding constraints        | `occbin_*` / `lmmcp`                                           |
 | Multi-country, multi-sector, switching variants                                                | Macro processor                         | `@#define / @#if / @#for`                                        |
-| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists   | Local library + memory library lookup (runs first) | grep `catalog.csv` → `memory-catalog.csv` → read `.mod`  |
+| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists   | Dual local library lookup (runs first)  | grep `catalog.csv` (structure) + `catalog-code.csv` (syntax) → `memory-catalog.csv` → web |
 | Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting            | `plot_irfs_pub.m`                                                |
 | It does not run, BK conditions fail, steady state cannot be solved                             | Debugging                               | Diagnostic commands                                                |
 
@@ -87,14 +92,18 @@ It does not write purely from memory. It follows a fixed workflow:
 2. **Incremental construction**: variable declarations, equations, steady state, shocks, and experiments are written stage by stage. Each stage must work before moving to the next one.
 3. **Nonlinear first**: by default, it writes the original nonlinear equation system and lets Dynare handle expansion, instead of manually deriving a linearized system, which is a common source of hidden mistakes.
 4. **Run-debug loop**: when connected to MATLAB MCP, it automatically runs Dynare, reads errors, applies minimal fixes, and reruns.
-5. **Three-tier model lookup**: before writing a model, it searches (1) the bundled **149-model MMB library**, then (2) your **personal memory library** of models you've built in past sessions, and only falls back to (3) DSGE_mod and web search when neither has a close match. The memory library grows automatically at the end of every modeling task — the final `.mod` and derivation file are archived to `references/memory/` and indexed in `references/memory-catalog.csv`. Linearized reference models are used only for equation content, timing, and calibration, not copied verbatim.
+5. **Dual local library lookup**: before writing a model, it searches two separate local libraries:
+   - **Model reference library** (`catalog.csv`, 149 MMB/rep-mmb models): answers "how should this economic mechanism be structured?" — FOC patterns, timing conventions, calibration.
+   - **Programming logic library** (`catalog-code.csv`, 41 Pfeifer DSGE_mod examples): answers "how do I write this Dynare block?" — command syntax, `steadystate.m` interface, `discretionary_policy`, `lmmcp`, welfare blocks, news shocks, higher-order methods.
+
+   After both local libraries, it checks your **personal memory library** (`memory-catalog.csv`) of models built in past sessions, then falls back to web search only for paper-specific details (precise calibration targets, derivation steps) not covered by the libraries. DSGE_mod is fully bundled locally — no web fetch needed. The memory library grows automatically at the end of every modeling task — the final `.mod` and derivation file are archived to `references/memory/`. Linearized reference models are used only for equation content, timing, and calibration, never copied verbatim.
 
 <details>
-<summary>Expand: eight hard rules R1-R8, checked line by line</summary>
+<summary>Expand: eight hard rules R1–R8, checked line by line</summary>
 
 | #  | Rule                                                                                                                                                                       |
 | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| R1 | Comments must be in Chinese; everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII.                                  |
+| R1 | Comments must be in Chinese (or the language the user writes in); everything outside comments, including `long_name`, `[name=]`, and identifiers, must be English / ASCII. |
 | R2 | Timing = decision period / end-of-period stock: state variables carry lags in the current period, and the law of motion has the end-of-period stock on the left-hand side. |
 | R3 | `varexo` contains only innovations; persistent AR processes are endogenous variables.                                                                                    |
 | R4 | Number of equations = number of endogenous variables, except `ramsey_model` / `discretionary_policy`, which has one fewer equation.                                    |
@@ -110,13 +119,15 @@ It does not write purely from memory. It follows a fixed workflow:
 ```text
 .claude-plugin/marketplace.json     # Plugin marketplace directory
 plugins/dynare-mod/                  # Plugin
-  ├── .claude-plugin/plugin.json     # Plugin manifest
+  └── .claude-plugin/plugin.json     # Plugin manifest
   └── skills/dynare-mod/             # Bundled skill
       ├── SKILL.md                   # Main file: hard rules + task routing + main workflow
       └── references/                # Detail files loaded on demand + model catalogs + plotting script
-          ├── catalog.csv            # Index of 149 MMB replication models
+          ├── catalog.csv            # Index of 149 MMB replication models (model structure reference)
+          ├── catalog-code.csv       # Index of 41 Pfeifer DSGE_mod examples (programming logic reference)
           ├── memory-catalog.csv     # Index of your accumulated models (grows as you work)
           ├── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID) + minimal RBC teaching example
+          ├── examples-code/         # 41 Pfeifer DSGE_mod .mod files organized by feature (21 subfolders)
           └── memory/                # Your archived .mod files and derivation docs, built up over time
 examples/                            # Repository-level usage example, RBC with government spending, not part of the skill itself
 ```
@@ -145,10 +156,12 @@ examples/                            # Repository-level usage example, RBC with 
 | `occbin.md`                | ZLB / occasionally binding constraints                                                                                                                                                                                                    |
 | `macro-processor.md`       | `@#` macro processor                                                                                                                                                                                                                    |
 | `publication-plots.md`     | Publication-quality IRF plotting, with companion script `plot_irfs_pub.m`                                                                                                                                                               |
-| `catalog.csv`              | Index of the 149-model MMB reference library: `ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features                                                                                         |
-| `catalog-lookup.md`        | How to search the catalog by feature, the 14-category index, memory library lookup, and caveats on using reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                 |
+| `catalog.csv`              | Index of the 149-model MMB reference library: `ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features. Used to answer "how should this economic mechanism be structured?"                      |
+| `catalog-code.csv`         | Index of the 41-model Pfeifer DSGE_mod library: `CodeID`, folder, paper, authors, model type, `DynareFeatures` (grep target for commands/blocks), category (11 buckets). Used to answer "how do I write this Dynare block/command?"   |
+| `catalog-lookup.md`        | How to search both catalogs by feature, the category indexes, memory library lookup, and caveats on using reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                 |
 | `memory-catalog.csv`       | Index of models you've built across sessions; same columns as `catalog.csv` plus a `Task` and `DateAdded` field. Grows automatically at the end of each modeling task.                                                                  |
-| `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), used as references during modeling, plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries) |
+| `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries). Answers "what's the economic structure?" |
+| `examples-code/`           | 41 Pfeifer DSGE_mod `.mod` files (and key `.m` helpers) in 21 subfolders. Answers "how is this Dynare feature implemented?" Covers: RBC basics, NK linearized/nonlinear, TANK, estimation (ML/Bayesian/IRF-matching), optimal policy, higher-order methods, perfect foresight, open economy, welfare, news shocks, forward guidance. |
 | `memory/`                  | Archive of `.mod` files and derivation docs from your past sessions. Consulted automatically on future modeling tasks, ahead of web search.                                                                                             |
 
 </details>
@@ -190,8 +203,8 @@ The Dynare / MATLAB paths used for automatic execution are configured in `refere
 ## Acknowledgements
 
 - [Dynare](https://www.dynare.org/) and its [official manual](https://www.dynare.org/manual/).
-- Johannes Pfeifer's [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod), the main reference for standard style, including file headers, `long_name` / LaTeX names, `[name=]` labels, and reverse calibration in `steady_state_model`.
-- The [Macroeconomic Model Data Base (MMB)](https://www.macromodelbase.com/rep-mmb) and its replication archive (`IMFS-MMB/mmb-rep`), headed by Volker Wieland — the source of the bundled 149-model reference library and the `catalog.csv` index.
+- Johannes Pfeifer's [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod) — the source of the 41-example programming logic library bundled under `references/examples-code/`. The main reference for standard Dynare style: file headers, `long_name` / LaTeX names, `[name=]` labels, and `steadystate.m` reverse calibration patterns.
+- The [Macroeconomic Model Data Base (MMB)](https://www.macromodelbase.com/rep-mmb) and its replication archive (`IMFS-MMB/mmb-rep`), headed by Volker Wieland — the source of the 149-model reference library bundled under `references/examples/` and indexed by `references/catalog.csv`.
 
 ## License
 
