@@ -6,11 +6,13 @@
 
 [中文说明](./README_zh-CN.md)
 
-> A Claude Code plugin that helps you **write, run, and debug Dynare `.mod` models**.
-> It covers the full workflow for macroeconomic models such as DSGE, RBC, New Keynesian, and HANK models, from stochastic simulation to Bayesian estimation, optimal policy, occasionally binding constraints, and one-click export of journal-quality IRF figures.
-> It ships with a **built-in library of 149 replication models** (from the [Macroeconomic Model Data Base](https://www.macromodelbase.com/rep-mmb)) that it searches by feature, so every new model is grounded on a vetted reference implementation rather than written from memory.
-
-When writing `.mod` files by hand, the biggest risk is **silent failure**: timing, naming, or steady-state algebra mistakes often do not throw errors, but still produce incorrect IRFs or moments. This plugin turns the workflow of "derive the math correctly first, mechanically translate it into code, then validate step by step with Dynare itself" into a fixed process, helping catch mistakes before they propagate.
+> A Claude Code skill that takes your macroeconomic intuition — "I want a New Keynesian model with a financial accelerator," "replicate Smets-Wouters 2007" — and turns it into a working, validated Dynare `.mod` file with steady state solved and IRFs in hand.
+>
+> Its core job is to enforce the workflow experienced modelers follow anyway: **derive first, translate second, validate incrementally**. Timing errors, naming conflicts, and steady-state algebra mistakes get caught before they become wrong results. A built-in library of **149 MMB replication models** (from the [Macroeconomic Model Data Base](https://www.macromodelbase.com/rep-mmb)) means every new model starts from a vetted reference, not guesswork. Every model you finish is automatically archived in a **personal memory library** and consulted on future tasks — the tool gets sharper the more you use it. Every IRF is delivered as a publication-ready vector figure, ready to drop into your paper.
+>
+> No timing pitfalls. No silent errors. No blank page.
+>
+> *Enjoy the world of macroeconomics.*
 
 ---
 
@@ -18,9 +20,9 @@ When writing `.mod` files by hand, the biggest risk is **silent failure**: timin
 
 | What you want to do                                       | What you need                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------- |
-| Let it**write / edit / inspect** `.mod` files     | Only[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
-| **Run** the generated `.mod` files yourself       | Also install[Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
-| Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
+| Let it **write / edit / inspect** `.mod` files            | Only [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| **Run** the generated `.mod` files yourself               | Also install [Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave |
+| Let it **run automatically and iterate on errors**        | Also install a MATLAB MCP server in VSCode                           |
 
 > You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
@@ -55,27 +57,27 @@ After installation, **describe the task directly in Chinese or English** inside 
 
 You can also invoke it manually with `/dynare-mod:dynare-mod`.
 
-The `examples/` directory contains a complete repository-level example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself bundles, under `references/examples/`, the **149 MMB rep-mmb replication models** (one `.mod` per paper, named by its `ModelID`) indexed by `references/catalog.csv`, plus a minimal teaching example (a basic RBC model whose derivation and `.mod` file correspond line by line) for format imitation during derivation writing. When you ask it to build a model, it first searches `catalog.csv` by feature and reads the closest one or two `.mod` files as references before writing.
+The `examples/` directory contains a complete repository-level example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself bundles, under `references/examples/`, the **149 MMB rep-mmb replication models** (one `.mod` per paper, named by its `ModelID`) indexed by `references/catalog.csv`, plus a minimal teaching example (a basic RBC model whose derivation and `.mod` file correspond line by line) for format imitation during derivation writing. When you ask it to build a model, it first searches `catalog.csv` by feature, then your personal `memory-catalog.csv`, and reads the closest matching `.mod` files as references before writing.
 
 ## Supported Tasks
 
-| What you say                                                                                   | What it does                            | Dynare command                                     |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------- |
-| IRFs, moments, variance decomposition, "simulate this DSGE/RBC/NK"                             | Stochastic simulation                   | `stoch_simul`                                    |
-| Transition paths, permanent shocks, deterministic, perfect foresight                           | Perfect foresight                       | `perfect_foresight_*`                            |
-| Bayesian, priors, MCMC, maximum likelihood                                                     | Estimation                              | `estimation`                                     |
-| GMM, SMM, simulated moments, IRF matching                                                      | Method-of-moments estimation            | `method_of_moments`                              |
-| Historical decomposition, "which shock is driving this"                                        | Shock decomposition                     | `shock_decomposition`                            |
-| Extrapolation, conditional forecasts, fan charts                                               | Forecasting                             | `forecast` / `conditional_forecast`            |
-| Identifiability, sensitivity / GSA                                                             | Identification and sensitivity          | `identification` / `sensitivity`               |
-| Markov switching, structural BVAR                                                              | MS-SBVAR                                | `markov_switching` / `sbvar`                   |
-| HANK, Krusell-Smith, heterogeneous households                                                  | Heterogeneity                           | `heterogeneity_*`                                |
-| Ramsey, discretion, welfare, simple rules                                                      | Optimal policy                          | `ramsey_model` / `osr`                         |
-| ZLB / effective lower bound, collateral / borrowing constraints                                | Occasionally binding constraints        | `occbin_*` / `lmmcp`                           |
-| Multi-country, multi-sector, switching variants                                                | Macro processor                         | `@#define / @#if / @#for`                        |
-| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists    | Local model-library lookup (runs first) | grep `catalog.csv` → read `examples/<ID>.mod` |
-| Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting            | `plot_irfs_pub.m`                                |
-| It does not run, BK conditions fail, steady state cannot be solved                             | Debugging                               | Diagnostic commands                                |
+| What you say                                                                                   | What it does                            | Dynare command                                                     |
+| ---------------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------ |
+| IRFs, moments, variance decomposition, "simulate this DSGE/RBC/NK"                             | Stochastic simulation                   | `stoch_simul`                                                    |
+| Transition paths, permanent shocks, deterministic, perfect foresight                           | Perfect foresight                       | `perfect_foresight_*`                                            |
+| Bayesian, priors, MCMC, maximum likelihood                                                     | Estimation                              | `estimation`                                                     |
+| GMM, SMM, simulated moments, IRF matching                                                      | Method-of-moments estimation            | `method_of_moments`                                              |
+| Historical decomposition, "which shock is driving this"                                        | Shock decomposition                     | `shock_decomposition`                                            |
+| Extrapolation, conditional forecasts, fan charts                                               | Forecasting                             | `forecast` / `conditional_forecast`                            |
+| Identifiability, sensitivity / GSA                                                             | Identification and sensitivity          | `identification` / `sensitivity`                               |
+| Markov switching, structural BVAR                                                              | MS-SBVAR                                | `markov_switching` / `sbvar`                                   |
+| HANK, Krusell-Smith, heterogeneous households                                                  | Heterogeneity                           | `heterogeneity_*`                                                |
+| Ramsey, discretion, welfare, simple rules                                                      | Optimal policy                          | `ramsey_model` / `osr`                                         |
+| ZLB / effective lower bound, collateral / borrowing constraints                                | Occasionally binding constraints        | `occbin_*` / `lmmcp`                                           |
+| Multi-country, multi-sector, switching variants                                                | Macro processor                         | `@#define / @#if / @#for`                                        |
+| Replicate paper X, "I want a model with feature Y", unsure whether an implementation exists   | Local library + memory library lookup (runs first) | grep `catalog.csv` → `memory-catalog.csv` → read `.mod`  |
+| Journal-quality IRF figures, export PDF paper figures, multi-scenario / multi-shock comparison | Publication-quality plotting            | `plot_irfs_pub.m`                                                |
+| It does not run, BK conditions fail, steady state cannot be solved                             | Debugging                               | Diagnostic commands                                                |
 
 ## How It Works
 
@@ -85,7 +87,7 @@ It does not write purely from memory. It follows a fixed workflow:
 2. **Incremental construction**: variable declarations, equations, steady state, shocks, and experiments are written stage by stage. Each stage must work before moving to the next one.
 3. **Nonlinear first**: by default, it writes the original nonlinear equation system and lets Dynare handle expansion, instead of manually deriving a linearized system, which is a common source of hidden mistakes.
 4. **Run-debug loop**: when connected to MATLAB MCP, it automatically runs Dynare, reads errors, applies minimal fixes, and reruns.
-5. **Look up the built-in model library first**: before writing a model, it searches the bundled catalog of 149 MMB rep-mmb replication models by feature (model type, mechanism, economy), locates a few similar papers, and reads the corresponding `.mod` files under `references/examples/` as references. It falls back to DSGE_mod and web search only when the library has no close match. Linearized reference models are used only for their equation content, timing, and calibration, not copied verbatim, since the skill writes nonlinear by default (R8).
+5. **Three-tier model lookup**: before writing a model, it searches (1) the bundled **149-model MMB library**, then (2) your **personal memory library** of models you've built in past sessions, and only falls back to (3) DSGE_mod and web search when neither has a close match. The memory library grows automatically at the end of every modeling task — the final `.mod` and derivation file are archived to `references/memory/` and indexed in `references/memory-catalog.csv`. Linearized reference models are used only for equation content, timing, and calibration, not copied verbatim.
 
 <details>
 <summary>Expand: eight hard rules R1-R8, checked line by line</summary>
@@ -111,8 +113,11 @@ plugins/dynare-mod/                  # Plugin
   ├── .claude-plugin/plugin.json     # Plugin manifest
   └── skills/dynare-mod/             # Bundled skill
       ├── SKILL.md                   # Main file: hard rules + task routing + main workflow
-      └── references/                # Detail files loaded on demand + model catalog catalog.csv + plotting script plot_irfs_pub.m
-          └── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID) + a minimal RBC teaching example
+      └── references/                # Detail files loaded on demand + model catalogs + plotting script
+          ├── catalog.csv            # Index of 149 MMB replication models
+          ├── memory-catalog.csv     # Index of your accumulated models (grows as you work)
+          ├── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID) + minimal RBC teaching example
+          └── memory/                # Your archived .mod files and derivation docs, built up over time
 examples/                            # Repository-level usage example, RBC with government spending, not part of the skill itself
 ```
 
@@ -125,7 +130,7 @@ examples/                            # Repository-level usage example, RBC with 
 | `derivation-style.md`      | Eight-section derivation-file structure and formula conventions                                                                                                                                                                           |
 | `modeling-blocks.md`       | Library of agent-specific modeling logic: optimization problems, FOCs, and structural variants for households, firms, government / central bank, and market clearing blocks                                                               |
 | `steady-state.md`          | Analytical / numerical steady state, reverse calibration, homotopy                                                                                                                                                                        |
-| `debugging.md`             | Error -> cause -> fix, final checklist                                                                                                                                                                                                    |
+| `debugging.md`             | Error → cause → fix, final checklist                                                                                                                                                                                                    |
 | `templates.md`             | Standard skeletons for RBC / NK / perfect foresight models                                                                                                                                                                                |
 | `stochastic-simulation.md` | `stoch_simul`                                                                                                                                                                                                                           |
 | `perfect-foresight.md`     | Deterministic / perfect foresight                                                                                                                                                                                                         |
@@ -140,9 +145,11 @@ examples/                            # Repository-level usage example, RBC with 
 | `occbin.md`                | ZLB / occasionally binding constraints                                                                                                                                                                                                    |
 | `macro-processor.md`       | `@#` macro processor                                                                                                                                                                                                                    |
 | `publication-plots.md`     | Publication-quality IRF plotting, with companion script `plot_irfs_pub.m`                                                                                                                                                               |
-| `catalog.csv`              | Index of the 149-model reference library:`ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features                                                                                               |
-| `catalog-lookup.md`        | How to search the catalog by feature, the 14-category index, and caveats on using the reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                                     |
+| `catalog.csv`              | Index of the 149-model MMB reference library: `ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features                                                                                         |
+| `catalog-lookup.md`        | How to search the catalog by feature, the 14-category index, memory library lookup, and caveats on using reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                 |
+| `memory-catalog.csv`       | Index of models you've built across sessions; same columns as `catalog.csv` plus a `Task` and `DateAdded` field. Grows automatically at the end of each modeling task.                                                                  |
 | `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), used as references during modeling, plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries) |
+| `memory/`                  | Archive of `.mod` files and derivation docs from your past sessions. Consulted automatically on future modeling tasks, ahead of web search.                                                                                             |
 
 </details>
 
