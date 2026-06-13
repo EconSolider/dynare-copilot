@@ -170,8 +170,9 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
          ⚠ catalog 参照只回答"模型经济学结构怎么设"——命令语法/块格式是独立的问题，
          查 §2.5 的 Dynare 7.1 官方示例（两类参照分工见 §2.5「两类参照的分工」）。
          检索步骤、14 类索引与照搬警示详见 `references/catalog-lookup.md`。
-         catalog 无相近命中 → 再 grep `references/memory-catalog.csv`（用户记忆库），
-         读 `references/memory/<ModelID>.mod` 作补充参照（同样只取内容/时序/校准，勿照搬）。
+         catalog 无相近命中 → 再 grep `references/memory-catalog.csv`（用户记忆库）；
+         若该文件不存在（全新安装、尚无历史任务），直接跳过、视为无命中，不报错；
+         有命中则读 `references/memory/<ModelID>.mod` 作补充参照（同样只取内容/时序/校准，勿照搬）。
 第1.5步 ⏸ 逐主体确认特征 + 建模选择（即闸门1）：
         【满足任一条件 → 直接跳过，不停顿】
           A. 用户已点名具体论文（第3步检索定模型）
@@ -189,9 +190,12 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
         特定细节（精确校准来源/某条推导）；catalog 无相近模型、或对模型没十足把握（"大概记得"=不会）→
         实际调用 web 搜索查论文原文与现成 Dynare 实现，提取方程组/校准/时序/冲击四样；缺关键信息 ⏸
         停下问用户。教科书标准件且有把握 → 直接第4步。详见 workflow-detail.md。
-第4步   增量构建（绝不一次写完再跑，每阶段跑通/确认才往下写）。
+第4步   增量构建——**三跑三锁，前一跑未过不得写下一段**。
+        绝不一次写完整个 .mod 再跑。每跑一次都必须实际调用 MATLAB MCP 执行 Dynare，
+        看到输出结果确认通过后，才能继续写下一段。
         **核心：阶段2起写 .mod 时全程打开阶段1 的推导 md，对照逐条翻译（变量照第8节、方程照
         第2–5节 FOC、稳态照第6节），不凭记忆重推——更快更准、且与推导一致。**
+
         阶段1  ⏸ 先写推导（即闸门2）：
                【满足任一条件 → 跳过，直接进阶段2】
                  A. 用户明确说"不用推导"/"直接写 .mod"/"跳过推导"
@@ -211,14 +215,37 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
                任何一行"由哪条方程决定"为空则方程缺失，必须补进推导再进阶段2）**。
                完整范例见 `references/examples/rbc_baseline_derivation.md`。
                **这是暂停点**：交付推导文件 → 结束本轮 → 等用户确认后才进阶段2。详见 workflow-detail.md。
-        阶段2 先列变量清单：写文件头 + var/varexo/parameters 三类声明（含 long_name），
+
+        阶段2  先列变量清单：写文件头 + var/varexo/parameters 三类声明（含 long_name），
                **只声明、不写方程**；逐一核对：所有内生量都进 var、只有创新项进 varexo(R3)、
                参数齐全。把清单整理好作为后续方程的基准，确认无误再进阶段3。
-        阶段3  写模型方程 + 参数校准（**逐条对应阶段1 推导里的某条 FOC，[name=] 标注来源**）→
-               跑 Dynare 核对方程数=变量数(R4)，过关再继续；
-        阶段4  加稳态：把阶段1 推导第6节的稳态解**照抄进 steady_state_model**（解不出才用
-               initval 初猜）+ resid; steady; check; → 跑通、稳态求出再继续；
-        阶段5a 加"shocks+实验命令"→ 跑出 BK/矩/IRF（或过渡路径/后验）。
+
+        ══ 第一跑：结构验证 ══════════════════════════════════════════
+        阶段3  写：模型方程（model...end;）+ 参数赋值
+               逐条对应推导里的 FOC，加 [name=] 标注。
+               ▶ 立即用 MATLAB MCP 跑 Dynare（noclearall nointeractive）
+               ✔ 通过标准："Found N equation(s)" 中 N = var 变量数；预处理无报错；
+                 无 R5 命名警告（如 alpha/beta 未改写）。
+               ✘ 未通过：修复报错后重跑，不得写阶段4。
+        ══════════════════════════════════════════════════════════════
+
+        ══ 第二跑：稳态验证 ══════════════════════════════════════════
+        阶段4  写：steady_state_model（照抄推导第6节解析解；解不出才用 initval 初猜）
+                  + steady; resid(non_zero); check;
+               ▶ 立即用 MATLAB MCP 跑 Dynare
+               ✔ 通过标准："All residuals are zero"；check 输出
+                 "The rank conditions are verified"（BK 初步满足）。
+               ✘ 未通过：查 resid 哪条非零 → 核对对应 FOC 的稳态方程，修复后重跑；
+                 不得写阶段5。
+        ══════════════════════════════════════════════════════════════
+
+        ══ 第三跑：完整模拟 ══════════════════════════════════════════
+        阶段5a 写：shocks; ... end; + stoch_simul(order=1, irf=20, nograph, periods=0);
+               ▶ 立即用 MATLAB MCP 跑 Dynare
+               ✔ 通过标准：BK 条件满足（爆炸根数 = 跳跃变量数）；IRF 无 NaN/Inf。
+               ✘ 未通过：查 debugging.md「BK」小节；修方程或 Taylor 参数，重跑。
+        ══════════════════════════════════════════════════════════════
+
         阶段5b ⭐发表级绘图（**默认必做**，不必等用户点名——这是本 skill 的标准产出，不是可选附加）：
                **凡本任务产出了 IRF**（stoch_simul 的 `irf=`、贝叶斯后验 IRF、或完全预见过渡路径），
                就读 `references/publication-plots.md`，按其"接入流程"用 `references/plot_irfs_pub.m`
@@ -226,7 +253,7 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
                运行核对出图、确认 `fig_*.pdf` 已生成。**仅两种情况跳过**：① 本任务压根不产出 IRF
                （纯稳态检查 / 纯识别 / 预测扇形图等有专门图的场景）；② 用户明说不要出版图。
                跳过时在交付里一句话说明原因。
-        阶段3起每阶段都走"运行与纠错闭环"（上限5轮、同错2轮即停）。详见 workflow-detail.md。
+        每跑一次都走"运行与纠错闭环"（上限5轮、同错2轮即停）。详见 workflow-detail.md。
 第5步   自查：对完整文件跑 references/debugging.md 的"最终检查清单"（12 条）；多主体模型额外确认 Walras 定律冗余方程已剔出 model 块（见清单第13条）。
 第6步   交付：见下方"交付格式"。
 ```
@@ -255,13 +282,5 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
    `plot_irfs_pub.m` 与它导出的论文图 `fig_*.pdf/.eps/.png`**（skill 资产与用户成果，不是中间产物；
    要删的是 Dynare 自带的 `<模型名>_IRF_*.eps`）。详见 workflow-detail.md「收尾清理」。最后向用户
    报告删了哪些、保留了哪些。
-10. **记忆存档**（建模/复制类任务；纯排错且无新 .mod 产出时跳过）：清理完成后，**先征询用户**：
-    "是否将本次模型归档至记忆库？归档后可在未来任务中自动检索调用。（是/否）"
-    用户同意后执行——
-    a. 将最终 `.mod` 复制到 `references/memory/<模型名>.mod`（文件夹不存在则先 `mkdir` 创建）；
-    b. 若本任务产出了推导 md（`<模型名>_derivation.md`），同步复制到 `references/memory/`；
-    c. 在 `references/memory-catalog.csv` 追加一行（字段格式与 catalog.csv 兼容，便于同一 grep 检索）：
-       `ModelID`=`<模型名>`, `Task`=任务一句话摘要, `Paper`=复现论文名（自建模型填 "custom"）,
-       `Year`=论文年份（自建填当年）, `ModelType`, `Economy`, `Category`, `KeyFeatures`（同 catalog
-       格式填写）, `DateAdded`=当日 YYYY-MM-DD。
-    完成后报告"已归档至记忆库：`references/memory/<模型名>.mod`"。用户拒绝则跳过，不做任何文件操作。
+10. ⏸ **记忆存档**（建模/复制类任务；纯排错且无新 .mod 产出时跳过）：
+    读 `references/memory.md`，按其"二、存档"节执行——先停下询问用户，等确认后再操作文件。

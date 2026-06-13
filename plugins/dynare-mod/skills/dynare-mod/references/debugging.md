@@ -67,9 +67,9 @@
 - 预处理器在解析模型时会校验方程数与内生变量数。**数目不符**会直接报错，类似
   `ERROR: ... The number of equations (N) doesn't match the number of endogenous
   variables (M)`——按提示增删方程或变量声明。
-- 让"半成品"能被 Dynare 处理：在 model 块后临时加一个空的 `initval; end;` 占位即可；
+- Dynare 能直接处理只含 var/varexo/parameters/model 的半成品文件，无需临时加 initval 占位。
   此阶段不追求算出稳态，只确认结构（方程数、语法、命名、时序笔误）正确。
-- 数目对上、无语法/命名错后，删掉占位、进入阶段4 写真正的稳态求解。
+- 数目对上、无语法/命名错后，进入阶段4 写真正的稳态求解。
 
 ## 报错 → 病因 → 修法
 

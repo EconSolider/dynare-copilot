@@ -74,26 +74,5 @@
 
 ## 用户记忆库（memory-catalog.csv）
 
-`references/memory-catalog.csv` 是历次任务积累的**第二层索引**，存放用户自建或扩展的模型。
-优先级低于 `catalog.csv`（149 篇 MMB）——catalog 无命中时才检索记忆库，记忆库无命中才上网。
-
-**格式**（各字段含义与 catalog.csv 相同，便于同一 grep 命令跨两个文件搜索）：
-
-```
-ModelID, Task, Paper, Year, ModelType, Economy, Category, KeyFeatures, DateAdded
-```
-
-- `ModelID`：文件名（无 `.mod` 后缀），对应 `references/memory/<ModelID>.mod`
-- `Task`：本次任务一句话摘要（区别于 Paper 的自由描述）
-- `Paper`：复现的论文名；自建模型填 `custom`
-- `Year`：论文年份；自建填建模当年
-- 其余字段格式同 catalog.csv
-
-**检索方式**（与 catalog.csv 完全相同的 grep 模式）：
-```bash
-grep -i "TANK\|hand-to-mouth" references/memory-catalog.csv
-grep -i "small open" references/memory-catalog.csv
-```
-
-**记忆库由第6步第10条（记忆存档）自动维护**：每次建模任务收尾时，将最终 `.mod` 和推导 md
-复制到 `references/memory/`，并追加一行到本文件。
+`references/memory-catalog.csv` 是历次任务积累的第二层索引，优先级低于 `catalog.csv`。
+检索方式、字段格式、存档流程、全新安装时的初始化行为，详见 `references/memory.md`。
