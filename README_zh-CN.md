@@ -62,11 +62,7 @@
 /plugin uninstall dynare-mod@econsolider-skills
 ```
 
-如不再需要这个市场，可一并移除其注册：
-
-```text
-/plugin marketplace remove econsolider-skills
-```
+这样只卸载插件、保留市场注册，之后想重装或更新都不必再重新添加市场。
 
 > 如果你是手动安装的（见下方「进阶」），没有插件可卸载，直接删掉拷过去的目录即可：`rm -rf ~/.claude/skills/dynare-mod`（或项目级的 `.claude/skills/dynare-mod/`）。
 

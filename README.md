@@ -64,11 +64,7 @@ To remove the plugin, run in Claude Code:
 /plugin uninstall dynare-mod@econsolider-skills
 ```
 
-Optionally also remove the marketplace registration:
-
-```text
-/plugin marketplace remove econsolider-skills
-```
+This removes the plugin while keeping the marketplace registered, so you can reinstall or update later without re-adding it.
 
 > If you installed manually (the Advanced method below), there is no plugin to uninstall — just delete the copied directory: `rm -rf ~/.claude/skills/dynare-mod` (or the project-local `.claude/skills/dynare-mod/`).
 
