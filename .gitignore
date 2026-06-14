@@ -14,9 +14,9 @@ driver.m
 *_IRF_*.fig
 simulation_IRFs/
 
-# 各 example 模型的图形输出夹（按需取消注释或逐个忽略）
-examples/rbc_gov/
-
 # 系统/编辑器
 .DS_Store
 *.asv
+
+# 打包产物（如 skill-creator 等插件下载的 .zip）
+*.zip
