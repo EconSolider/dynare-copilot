@@ -131,6 +131,23 @@ stoch_simul(order=1, irf=40, hp_filter=1600) log_y log_c log_k log_l z;
 
 ---
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_04_stoch_simul/`（以及入门 `Chapter_01_Dynare/NK_linear.mod`）。
+> `grep -i "stoch_simul\|hp_filter\|conditional_variance_decomposition" references/catalog-code.csv`。
+
+| 文件 | 教什么 |
+| ---- | ------ |
+| `Chapter_01_Dynare/NK_linear.mod` | **最小 mod 文件解剖**：三方程线性 NK，`model(linear)`、`stoch_simul(order=1,irf,tex,irf_plot_threshold=0)`、`long_name`/LaTeX 名、`write_latex_steady_state_model`——新手起手范本 |
+| `Chapter_04_stoch_simul/RBC_IRF.mod` | 非线性 RBC（仅 TFP）：`stoch_simul(order=1,irf=40,hp_filter=1600,TeX)`，**用 `LOG_` 辅助变量把 IRF 报成对数/百分比偏离**，AR(1) 冲击拟合在去趋势数据上 |
+| `Chapter_04_stoch_simul/RBC_baseline.mod` | RBC（TFP + 政府支出双冲击）：`conditional_variance_decomposition=[4]`、`hp_filter=1600`、方差分解 |
+
+`RBC_IRF.mod` 的 `LOG_` 辅助变量写法是把 IRF 单位变成"百分比偏离"的标准做法之一（对照本文上面"报告对数
+偏离的三法"），照抄即可。`RBC_baseline.mod` 是后续第5–10章（滤波/估计/识别/MoM/预测）反复复用的同一个
+RBC——把它当贯穿全课程的基准模型来读，能省去在各章重复理解模型结构。
+
+---
+
 # 手册增补（Dynare 7.1 §4.13）
 
 ## `stoch_simul` 重要选项补全

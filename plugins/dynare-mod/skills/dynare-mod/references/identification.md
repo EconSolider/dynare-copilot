@@ -88,6 +88,22 @@ end;
 - `order=2` 能识别更多参数但更慢；先 `order=1` 看大局。
 - 读 `oo_.identification`（强度、共线性、不可识别清单）；GSA 图在 `GSA/` 夹。
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_07_Identification/`。第7章专门讲"参数到底能不能识别"，
+> 三个例子从最干净的反例到实战检查，正好覆盖 `identification` 的读法。
+> `grep -i "identification\|no_identification\|varobs" references/catalog-code.csv`。
+
+| 文件 | 教什么 |
+| ---- | ------ |
+| `cochrane_toy.mod` | **最佳教学反例**：Cochrane 式 Fisher+泰勒规则玩具模型，`identification(no_identification_minimal,no_identification_spectrum,advanced=1)`，亲眼看一个**不可识别**参数长什么样、诊断输出怎么读 |
+| `forward_looking_varobs_x.mod` | **观测变量决定识别**：同一前瞻 3 方程模型，换 `varobs` 集合，可识别性随之变——估计前定 observables 时的核心权衡 |
+| `RBC_bayesian.mod` | 在实战 RBC 上 `identification(advanced=1)`，估计前后各跑一次，看识别强度/共线性 |
+
+`cochrane_toy.mod` 值得精读：它把"为什么某参数后验贴着先验"这件事用最小模型讲清楚了——比在大模型里
+猜哪个参数弱识别直观得多。建议每次准备开长 MCMC 前，先想想自己的 `varobs` 是否足以识别要估的参数
+（对照 `forward_looking_varobs_x.mod` 的思路）。
+
 参考 DSGE_mod：`Smets_Wouters_2007`（估计前识别检查）；Dynare `tests/identification`、`tests/gsa` 示例。
 
 ---

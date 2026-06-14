@@ -66,6 +66,7 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 | 信号词                                                                                                                                 | 任务                             | 命令族                                                                                | 必读参考                                                                   |
 | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | IRF、矩、方差分解、"模拟这个 DSGE/RBC/NK"                                                                                              | 随机模拟                         | `stoch_simul`                                                                       | `references/stochastic-simulation.md`                                    |
+| 风险溢价/资产定价、不确定性（波动率）冲击、预防性储蓄、二/三阶福利、Epstein-Zin 递归偏好、GIRF、随机/遍历稳态、`order=2/3`、pruning | 高阶摄动                         | `stoch_simul(order=2/3)`                                                             | `references/higher-order.md`                                             |
 | 过渡路径、永久冲击、确定性、完全预见                                                                                                   | 完全预见                         | `perfect_foresight_*`                                                               | `references/perfect-foresight.md`                                        |
 | 估计、贝叶斯、先验、MCMC、极大似然、数据、varobs                                                                                       | 估计                             | `estimation`                                                                        | `references/estimation.md` + steady-state.md                             |
 | 矩方法、GMM、SMM、模拟矩、IRF 匹配、匹配矩校准                                                                                         | 矩方法估计                       | `method_of_moments`                                                                 | `references/moments-method.md` + estimation.md                           |
@@ -127,7 +128,9 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 ③ web 检索论文原文——两套本地库均无命中时兜底。
 
 **Dynare 编程逻辑参照优先级**（第1.3步②，针对"这个块/命令怎么写"）：
-① 本地编程逻辑库 `references/catalog-code.csv`（41 个 Pfeifer DSGE_mod 示例，已本地化）——首选；
+① 本地编程逻辑库 `references/catalog-code.csv`（89 个示例：41 个 Pfeifer DSGE_mod + 48 个
+   Pfeifer《Advanced Dynare》课程教学示例，后者 Folder 以 `Dynare_Course/` 开头、按 Dynare 功能逐章组织，
+   是抄某命令/块写法的最佳模板；全部已本地化）——首选；
 ② 本机 Dynare 7.1 官方示例（上表）——补充 7.1 特有语法细节；
 ③ web 检索 Dynare 文档——两者均无明确答案时兜底。**不再需要上网找 DSGE_mod**。
 
@@ -232,16 +235,13 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
                     → 省略推导，但在回复中一句话说明稳态解析解来源
                【必须写推导】：含非标准机制（TANK/HANK/金融摩擦/开放经济/最优政策/OccBin 等），
                或用户给出方程需核对自洽性时。
-               产出：`<模型名>_derivation.md`，严格按 references/derivation-style.md 的八节结构。
-               各主体 FOC 按 references/modeling-blocks.md 逐块推。
-               八节：第1节 模型概述；第2节 各主体最优化问题；第3节 FOC（编号 F1,F2…）；
-               **第4节 市场出清（必须执行 Walras 定律检查：在 GE 中找出哪条均衡条件由其余条件
-               线性组合得出，在推导里明确注明"该方程冗余，不进 model 块"并写出推导路径——
-               漏做此步将导致方程数=变量数但实际独立方程少一条，BK 失败）**；
-               第5节 外生过程；第6节 稳态求解（写到能照抄进 steady_state_model）；
-               第7节 时序约定；**第8节 变量参数对照表（每个 var 变量必须有对应方程，预核对 R4；
-               任何一行"由哪条方程决定"为空则方程缺失，必须补进推导再进阶段2）**。
-               **这是暂停点**：交付推导文件 → 结束本轮 → 等用户确认后才进阶段2。详见 workflow-detail.md。
+               产出 `<模型名>_derivation.md`，严格按 references/derivation-style.md 的八节结构
+               （各主体 FOC 按 references/modeling-blocks.md 逐块推）。八节里有两处最易漏、漏则 BK 失败，
+               务必硬查：**第4节 Walras 定律检查**——GE 中必有一条均衡条件冗余，找出它、注明"不进 model 块"
+               并写出推导路径；**第8节 R4 预核对**——每个 var 都要有对应方程，"由哪条方程决定"留空即方程缺失，
+               补全再进阶段2。
+               **这是暂停点**：交付推导文件 → 结束本轮 → 等用户确认后才进阶段2。
+               八节逐节展开 + 两处硬查的完整说明见 workflow-detail.md「第4步」阶段1。
 
         阶段2  先列变量清单：写文件头 + var/varexo/parameters 三类声明（含 long_name），
                **只声明、不写方程**；逐一核对：所有内生量都进 var、只有创新项进 varexo(R3)、
@@ -280,23 +280,19 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
                运行核对出图、确认 `fig_*.pdf` 已生成。**仅两种情况跳过**：① 本任务压根不产出 IRF
                （纯稳态检查 / 纯识别 / 预测扇形图等有专门图的场景）；② 用户明说不要出版图。
                跳过时在交付里一句话说明原因。
-        每跑一次都走"运行与纠错闭环"（上限5轮、同错2轮即停）。详见 workflow-detail.md。
-        **遇报错先走 debugging.md「bug 处理协议」**：① 先查 skill 内已编码排错知识（先扫
-        `known-issues.md` 实战坑日志 + debugging.md「报错→病因→修法」表 + 相关 reference 的
-        "常见报错与陷阱"节），命中直接照修法改、不重推；② 查不到才自己诊断；③ **解决一个 skill 里
-        查不到的新报错，就地（解决的当下、趁现象/根因/修法还在眼前）往 TodoList 追加一条
-        `回写 known-issues.md：<一句话现象>`**——不要等收尾再回忆。原因：bug 一修好注意力立刻转回
-        任务，到交付时这条经验已模糊、或被"任务完成"的压力挤掉，这正是排错库长不起来的根因。
-        该条目按 debugging.md「bug 处理协议」第3步的格式回写后才可勾掉。skill 里写过的坑不要从头再踩一遍。
+        每跑一次都走"运行与纠错闭环"（上限5轮、同错2轮即停），详见 workflow-detail.md「§4.1」。
+        **遇报错先查后补**：先扫 `known-issues.md` 实战坑日志 + `debugging.md`「报错→病因→修法」表，
+        命中直接照修法改、不重推；查不到才自己诊断。**解决一个 skill 里查不到的新报错，就地（趁现象/根因/
+        修法还在眼前）往 TodoList 追加一条 `回写 known-issues.md：<一句话现象>`**——别等收尾再回忆，否则经验
+        已模糊、且易被"任务完成"挤掉（这正是排错库长不起来的根因）。完整协议与回写格式见 debugging.md「bug 处理协议」。
 第5步   自查：对完整文件跑 references/debugging.md 的"最终检查清单"（共13条）；多主体模型尤其确认 Walras 定律冗余方程已剔出 model 块（清单第13条）。
 第6步   交付：见下方"交付格式"。
 第7步   ⏸🔒 归档门控（建模/复制类任务且产出新 .mod 必做；纯排错、无新 .mod 则跳过）——
-        这是「收尾门控(a)」的执行步（why 见 §3 前言，此处只讲怎么做）：把
-        "是否将本模型归档到存档库供未来复用？(是/否)" 作为交付消息**固定最后一行**问出，停下等回答。
-        用户答"是"才按 `references/model-archive.md`「二、存档」新建 `references/model-archive/<模型名>/`，
-        把 `.mod`、推导 md、**稳态/辅助 .m（外部 steadystate.m、求解脚本、helper、params include 等
-        运行所需文件）**一并复制进去，再追加 catalog 索引行；答"否"则跳过文件操作。
-        ✔ 完成标准：交付消息里**确实出现了归档询问这一行**（无论用户随后答是/答否），该 TodoList 项才可勾掉。
+        这是「收尾门控(a)」的执行步（why 见 §3 前言）：把"是否将本模型归档到存档库供未来复用？(是/否)"
+        作为交付消息**固定最后一行**问出，停下等回答。用户答"是"才按 `references/model-archive.md`「二、存档」
+        新建 `references/model-archive/<模型名>/`，把 .mod、推导 md、运行所需的稳态/辅助 .m 一并复制进去、
+        追加 catalog 索引行；答"否"则跳过。
+        ✔ 完成标准：交付消息里**确实出现了归档询问这一行**（无论用户答是/否），该 TodoList 项才可勾掉。
 ```
 
 形式默认非线性(R8)，不需在脑内判断"该不该线性化"——仅 `discretionary_policy` 或用户要线性版/
@@ -315,14 +311,11 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 6. 稳态为数值求解时，提醒确认 `resid;` 近 0、`check;` 通过；
 7. 最终 TodoList（全部勾选；有遗留项如实保留未勾并说明原因）；
 8. 走过文献检索时，注明实际依据的来源（论文/附录/参考实现），与文件头注释一致；
-9. **收尾清理工作目录**：复查文件夹，**白名单内的中间产物直接删**（Dynare 自动生成的
-   `+<模型名>/`、`<模型名>/` 图形夹、`Output/`、`<模型名>_results.mat`、`<模型名>.log`、
-   自动生成的 `<模型名>_dynamic.m/_static.m` 等，以及 agent 自己留下的占位/调试脚本/跑崩的旧版
-   .mod）；**来源不确定的先列出来问用户，不擅自删**。绝不删：用户上传的文件/数据、推导 md、
-   最终 .mod、**用户手写的 `<模型名>_steadystate.m`**（这是稳态文件不是中间产物）、**绘图脚本
-   `plot_irfs_pub.m` 与它导出的论文图 `fig_*.pdf/.eps/.png`**（skill 资产与用户成果，不是中间产物；
-   要删的是 Dynare 自带的 `<模型名>_IRF_*.eps`）。详见 workflow-detail.md「收尾清理」。最后向用户
-   报告删了哪些、保留了哪些。
+9. **收尾清理工作目录**：复查文件夹，按 workflow-detail.md「收尾清理」的白/黑名单处理——白名单内的
+   Dynare 自动产物（`+<模型名>/`、`Output/`、`<模型名>_results.mat`、`.log`、自动 `_dynamic.m/_static.m` 等）
+   与 agent 临时文件直接删，来源不确定的先列出来问用户、不擅自删。**最易误删、务必保留**：用户上传的文件/数据、
+   推导 md、最终 .mod、用户手写的 `<模型名>_steadystate.m`、绘图脚本 `plot_irfs_pub.m` 与它导出的论文图
+   `fig_*.pdf/.eps/.png`。最后向用户报告删了哪些、保留了哪些。
 10. 🔒 **回写 known-issues.md（收尾门控(b)，详见第4步 bug 协议）**：把第4步沉淀的 TodoList 条目
     按 `references/known-issues.md` 条目格式（现象→根因→修法带代码→详见）逐一落地；框架特异的坑
     同时补进对应 reference 的"常见报错与陷阱"节。无需问用户（是写库不是外发）。没踩新坑则一句话跳过。

@@ -73,11 +73,35 @@
 
 ### 这是什么
 
-- `references/catalog-code.csv`：41 个 Dynare 编程逻辑示例的索引，来自
-  Johannes Pfeifer 的 **DSGE_mod** 仓库（github.com/JohannesPfeifer/DSGE_mod）。
-  目标是展示 Dynare **最佳实践**和特定命令/模块的标准写法，而非复制某篇论文的经济结构。
-- `references/examples-code/<Folder>/<CodeID>.mod`：对应的 .mod 文件（及关键 .m 辅助文件），
-  **文件夹名 = catalog-code 里的 Folder 列**。
+- `references/catalog-code.csv`：89 个 Dynare 编程逻辑示例的索引，两套来源：
+  - **DSGE_mod**（41 个）：来自 Johannes Pfeifer 的 DSGE_mod 仓库（github.com/JohannesPfeifer/DSGE_mod），
+    每个示范某命令/模块在一篇论文复制件里的实战写法。
+  - **Dynare Course**（48 个，Folder 以 `Dynare_Course/` 开头）：来自 Pfeifer《Advanced Dynare》课程，
+    **按 Dynare 功能逐章组织**的教学示例——同一个 RBC/NK 贯穿多章，"怎么用某个命令/选项"讲得最干净，
+    抄命令写法时**优先看这套**。
+  两套目标一致：展示 Dynare **最佳实践**和命令/模块的标准写法，而非复制某篇论文的经济结构。
+- `references/examples-code/<Folder>/<CodeID>.mod`：对应的 .mod 文件（及关键 .m/.inc/.mat 辅助文件），
+  **文件夹名 = catalog-code 里的 Folder 列**（课程示例形如 `Dynare_Course/Chapter_10_forecasting`）。
+
+### 课程示例按功能定位（chapter → 功能 .md，请求某功能时这里直达对应 code）
+
+> 每个功能 reference 的末尾都有「课程示例」小节，列出该功能对应的课程 .mod 路径与各自教学点。
+> 路由时：先按 §2 读功能 .md，其末尾即指向这些可跑示例；或直接 grep `catalog-code.csv` 的 DynareFeatures。
+
+| 课程章 | 功能 .md | 课程文件夹 `Dynare_Course/` | 代表命令 |
+| ------ | -------- | --------------------------- | -------- |
+| Ch1 入门 | stochastic-simulation.md | `Chapter_01_Dynare` | `model(linear)`, `stoch_simul(tex)` |
+| Ch2/3 预/宏处理器 | macro-processor.md | （内联，实例见 Ch9/11/13） | `@#include`, `@#if` |
+| Ch4 随机模拟 | stochastic-simulation.md | `Chapter_04_stoch_simul` | `stoch_simul`, `hp_filter`, `conditional_variance_decomposition` |
+| Ch5 Kalman/ML | estimation.md | `Chapter_05_Kalman_ML` | `calib_smoother` |
+| Ch6 贝叶斯 | estimation.md | `Chapter_06_Bayesian` | `estimation`, `mh_jscale`（接受率调参） |
+| Ch7 识别 | identification.md | `Chapter_07_Identification` | `identification`, `no_identification_*` |
+| Ch8 高阶 | higher-order.md | `Chapter_08_Higher_order` | `stoch_simul(order=2/3)`, 风险溢价 |
+| Ch9 矩方法 | moments-method.md | `Chapter_09_Method_of_Moments` | `method_of_moments`(GMM/SMM/irf_matching) |
+| Ch10 预测 | forecasting.md | `Chapter_10_forecasting` | `forecast`, `conditional_forecast`, `smoother2histval` |
+| Ch11 完全预见 | perfect-foresight.md | `Chapter_11_perfect_foresight` | `perfect_foresight_*`, `endval`, `extended_path`, `lmmcp` |
+| Ch12 OccBin | occbin.md | `Chapter_12_OccBin` | `occbin_constraints/setup/solver`, `lmmcp` |
+| Ch13 最优政策 | optimal-policy.md | `Chapter_13_optimal_policy` | `ramsey_model`, `discretionary_policy`, `osr` |
 
 ### catalog-code.csv 的列
 
@@ -106,7 +130,7 @@
 
 1. **确认要解决的编程问题**：找对应的 Dynare 特性关键词（如 `discretionary_policy`、
    `lmmcp`、`steadystate.m`、`ramsey_model`、`loglinear`、`news shock`、`welfare`…）。
-2. **grep DynareFeatures 列**（41 行，速度很快）：
+2. **grep DynareFeatures 列**（89 行，速度很快）：
    - 找特定命令：`grep -i "ramsey_model\|discretionary" references/catalog-code.csv`
    - 找块/接口：`grep -i "steadystate.m" references/catalog-code.csv`
    - 找功能：`grep -i "lmmcp\|ZLB\|zero lower bound" references/catalog-code.csv`

@@ -150,6 +150,35 @@ beta*C/C(+1)*R(+1) = 1;
 - **OccBin**（偶尔约束）：`occbin_setup; occbin_solver;`，参考 DSGE_mod 的
   `Guerrieri_Iacoviello_2015`。
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_11_perfect_foresight/`。第11章把本文上面每个概念
+> 都配了一个最小可跑 .mod——查"某种 initval/endval/冲击写法到底怎么落地"时，直接读对应文件比凭记忆稳。
+> `grep -i "perfect_foresight\|extended_path\|expectation_errors\|endval\|histval\|lmmcp" references/catalog-code.csv`。
+> 共享方程在 `rbc_model_eq.inc`（det 系列用 `@#include` 引入），改文件时连它一起看。
+
+| 文件 | 对应本文哪节 / 教什么 |
+| ---- | --------------------- |
+| `rbc_basic.mod` | 基础 `setup/solver`，临时冲击后回稳态 |
+| `rbc_det1.mod` | `histval` 设初始资本偏离稳态 → 过渡回稳态（「任意历史路径」节） |
+| `rbc_det2.mod` | `shocks; periods 1` 单期未预期冲击 |
+| `rbc_det3.mod` | `shocks; periods 4, 5:8` 多期**预期到的**未来冲击（区间写法） |
+| `rbc_det4.mod` | `endval` 永久变化、过渡到**新**稳态（「永久冲击」节） |
+| `rbc_det5.mod` | `endval` + `shocks` 永久变化叠加时点冲击 |
+| `rbc_det_dates.mod` | `perfect_foresight_setup(first_simulation_period=2025Q2)` 日历日期模拟 |
+| `rbc_ep.mod` | `extended_path(periods)` 扩展路径（把未来不确定性纳入确定性求解器） |
+| `rbc_expectation_errors.mod` | `shocks(learnt_in=)` + `perfect_foresight_with_expectation_errors_*`（「预期误差」节） |
+| `rbcii.mod` | 不可逆投资：`[mcp='i>0']` 方程标注 + `perfect_foresight_solver(lmmcp)`（「lmmcp/互补」节） |
+| `nk3.mod` | 三方程 NK 基线，作 ZLB 练习的无约束对照 |
+| `nk3_zlb_det.mod` | 确定性下让名义利率撞 ZLB 的液动陷阱路径 |
+| `nk3_zlb_det_anticipated_exit.mod` | ZLB **预期到的**退出时点（前瞻指引式） |
+| `nk3_zlb_det_unexpected_exit.mod` | ZLB **意外**退出：两段式求解、agent 被 lift-off 惊到 |
+| `nk3_zlb_ep.mod` | 用 `extended_path` 处理 ZLB |
+| `nk3_zlb_stoch.mod` | 故意用 `stoch_simul` 跑 ZLB，演示**标准摄动抓不住偶尔约束**（动机→ OccBin/完全预见） |
+
+ZLB「预期 vs 意外退出」这组对比（`nk3_zlb_det_anticipated_exit` vs `_unexpected_exit`）尤其值得直接抄：
+两者方程相同，差别只在**何时让 agent 知道约束会松开**——这是前瞻指引建模的核心，手册不会手把手教。
+
 ---
 
 # 手册增补（Dynare 7.1 §4.7/4.8/4.12）

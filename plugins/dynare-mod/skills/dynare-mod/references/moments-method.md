@@ -121,9 +121,30 @@ method_of_moments(mom_method = irf_matching, order = 1, mode_compute = 13);
 
 ---
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_09_Method_of_Moments/`。三法各一个最小可跑例子，
+> 命令选项写全（带逐行注释），是抄 `method_of_moments(...)` 选项的最佳模板。
+> `grep -i "mom_method\|method_of_moments\|irf_matching" references/catalog-code.csv`。
+> 共享设定在 `RBC_MoM_common.inc`（`@#include` 引入）、稳态辅助 `RBC_MoM_steady_helper.m`、数据 `RBC_Data_2.mat`——都已随同复制。
+
+| 文件 | 方法 | 关键选项 |
+| ---- | ---- | -------- |
+| `RBC_MoM_GMM_order2.mod` | GMM | `mom_method=GMM, order=2, mode_compute=4, additional_optimizer_steps=[13]`、`matched_moments` |
+| `RBC_MoM_SMM_order2.mod` | SMM | `mom_method=SMM, order=2`（模拟矩；同模型同矩，只换方法对照 GMM） |
+| `rbc_irf_matching.mod` | IRF 匹配 | `mom_method=irf_matching`、经验 IRF 当"数据"、对角权重=IRF 方差倒数、**用 AR 根重参数化 AR(2)** 以约束在稳定域、`estimated_params(overwrite)` |
+
+GMM 与 SMM 两文件刻意共用 `RBC_MoM_common.inc` 与同一组 `matched_moments`，**只改 `mom_method`**——
+想看"解析矩 vs 模拟矩"在写法和结果上差多少，直接 diff 这两个文件即可。`rbc_irf_matching.mod` 的两个进阶技巧
+（经验 IRF 作数据、用特征根而非系数估 AR(2) 以保稳定）手册不会手把手教，遇到 IRF 匹配/估持续性参数时值得照搬。
+
+---
+
 # 手册增补（Dynare 7.1 §4.17 Estimation based on moments）
 
 - 命令子节：必填选项 / 通用 / SMM 专属 / GMM 专属 / IRF 匹配专属 / 一般 / 数据 / 优化 / 贝叶斯 / 数值算法 / 专属输出。
 - `matched_moments` 块只接受**线性乘积矩**（方差=`xx`、协方差=`xy`）；相关系数需经方差+协方差间接匹配。
 - 惩罚化矩方法：`estimated_params` 用贝叶斯式行（带先验）即把先验当额外矩条件（penalized MoM）。
 - 输出在 `oo_.mom`。
+
+参考 DSGE_mod：`Born_Pfeifer_2014`（GMM/SMM 经典示例）；Dynare `examples/` 下 `method_of_moments` 示例。

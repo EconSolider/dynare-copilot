@@ -86,8 +86,33 @@ plot_conditional_forecast(periods = 20) y c;
 - 估计后预测确认 `parameter_set` 与已载入的后验一致。
 - 读 `oo_.forecast` / `oo_.conditional_forecast` 核对均值与置信带。
 
-参考 DSGE_mod：`Smets_Wouters_2007`（后验预测）；Dynare `examples/` 的 `fs2000`（`forecast` 基本用法）、
-条件预测示例。
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_10_forecasting/`。这是 Johannes Pfeifer
+> 《Advanced Dynare》课程第10章的预测教学集，按"每种预测怎么写"组织，比论文复制件更适合直接抄命令/选项。
+> 也可 `grep -i "forecast\|conditional_forecast\|smoother2histval" references/catalog-code.csv`（Folder 以 `Dynare_Course/` 开头）。
+
+| 文件 | 教什么（grep 命中点） |
+| ---- | --------------------- |
+| `forecast_test_AR1.mod` | 最小可跑：纯 AR(1) 上 `forecast(periods,conf_sig)`，看均值回归与置信带形状 |
+| `rbc_basic_forecast.mod` | 无条件预测 + 用 `histval` **指定预测起点状态**（不从稳态出发） |
+| `rbc_basic_forecast_varexo_det.mod` | `varexo_det` + `forecast`：把**已知的未来确定性冲击路径**并入无条件预测 |
+| `rbc_basic_calib_smoother.mod` | `calib_smoother` → `smoother2histval` → `forecast`：**从滤波/平滑末态接力预测**的标准链 |
+| `rbc_basic_ML_forecast.mod` | `estimation(order=1,forecast=8)` ML 估计后的样本外预测 |
+| `rbc_basic_posterior_forecast.mod` | 贝叶斯后验预测（把参数不确定性整合进预测带） |
+| `rbc_basic_recursive_estimation.mod` | 递归/实时预测：扩窗反复重估再预测 |
+| `rbc_basic_pf_controlled_paths.mod` | 用 `perfect_foresight_*` 施加受控未来路径——条件预测的确定性替代法 |
+| `NK_linear_controlled_forecast.mod` | **条件预测全流程**：`conditional_forecast_paths` + `conditional_forecast(controlled_varexo=)` + `plot_conditional_forecast` |
+
+**课程补充的两个实用模式**（手册里散、容易漏）：
+
+1. **从平滑末态预测**：估计/校准模型对历史数据跑 `calib_smoother` 得到滤波状态后，用
+   `smoother2histval;` 把平滑末态写进 `histval`，再 `forecast(periods=...)`——这样预测**接着真实数据末期**走，
+   而不是从稳态突跳。比手动设 `histval` 更准。
+2. **递归/实时预测**：在 MATLAB 侧对扩展窗口循环调用 `estimation(...,forecast=h)`，每步用新到数据重估再预测，
+   得到实时预测序列（评估模型预测力时用）。见 `rbc_basic_recursive_estimation.mod` 的脚本写法。
+
+参考 DSGE_mod / Dynare 官方：`Smets_Wouters_2007`（后验预测）；Dynare `examples/` 的 `fs2000`（`forecast` 基本用法）。
 
 ---
 

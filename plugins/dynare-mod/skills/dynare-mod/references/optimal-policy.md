@@ -104,6 +104,29 @@ osr(opt_algo=9) x pi i;          // 最小化加权方差损失
 
 ---
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_13_optimal_policy/`。**同一个 NK 模型**用四种
+> 政策口径各写一遍（Christiano《Notes on Ramsey-Optimal Monetary Policy》Section 2），并排对照三种最优政策
+> 命令是怎么用的。`grep -i "ramsey_model\|discretionary_policy\|osr\|planner_objective" references/catalog-code.csv`。
+
+| 文件 | 政策口径 | 关键命令 |
+| ---- | -------- | -------- |
+| `Ramsey_Example_commitment.mod` | 承诺下 Ramsey | `ramsey_model(instruments=(r),planner_discount=beta)` + `planner_objective` + `evaluate_planner_objective` + `stoch_simul(order=2,periods=0)` |
+| `Ramsey_Example_discretionary.mod` | 相机抉择 | `discretionary_policy(instruments=(r))` + `model(linear)` + 二次 `planner_objective` |
+| `Ramsey_Example_OSR.mod` | 最优简单规则 | `osr(opt_algo=9,order=2,planner_discount=beta)` + `osr_params` + `osr_params_bounds` |
+| `Ramsey_Example_macroexp.mod` | **一文件三选一** | 宏处理器 `@#if` 开关在 ramsey/discretion/osr 之间切换——一份代码复用三种实验 |
+
+这组的最大价值是**口径对照**：同模型同校准，只换最优政策命令，能直接看出 `ramsey_model`（承诺、用
+`MULT_` 乘子、缺一条工具规则方程）、`discretionary_policy`（须 `model(linear)`、给二次损失）、`osr`
+（只优化简单规则系数、损失=加权无条件方差）三者在**写法和结果**上的区别。`Ramsey_Example_macroexp.mod`
+还顺带示范了用宏开关把三种实验收进一个文件的工程写法（配合 macro-processor.md）。
+
+参考 DSGE_mod：`Gali_2015_chapter_5_commitment`（`ramsey_model`）、
+`Gali_2015_chapter_5_discretion`（`discretionary_policy`）、含 ZLB 的对应变体。
+
+---
+
 # 手册增补（Dynare 7.1 §4.22）
 
 - `ramsey_model` 用辅助乘子 `MULT_i`（i=约束在 model 块的声明序），故模型块比内生少一个方程——

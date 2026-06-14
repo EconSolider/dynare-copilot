@@ -148,6 +148,40 @@ estimation(datafile='data.csv', mh_replic=20000, mh_nblocks=2, mode_compute=5)
 
 ---
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_05_Kalman_ML/`（滤波/平滑、ML）与
+> `Chapter_06_Bayesian/`（贝叶斯 MH）。同一个 RBC 贯穿两章，便于对照不同估计法。
+> `grep -i "calib_smoother\|estimation\|mh_jscale\|estimated_params" references/catalog-code.csv`。
+> 数据文件 `first_diff.mat` 已随同复制（一阶差分观测）。
+
+| 文件 | 教什么（grep 命中点） |
+| ---- | --------------------- |
+| `Chapter_05_Kalman_ML/RBC_smoother.mod` | `calib_smoother(datafile=,filter_step_ahead=[1,4])`：**不估计、只对校准模型跑 Kalman 滤波/平滑**取状态；`steady_state_model` 里反解 `betta/delta/psi` 命中目标比率 |
+| `Chapter_06_Bayesian/RBC_Bayesian.mod` | 完整 MH：`estimated_params` + `estimated_params_init(use_calibration)` + `estimation(mh_replic,mh_nblocks,smoother,moments_varendo,raftery_lewis_diagnostics,bayesian_irf,forecast=8,tex)` |
+| `Chapter_06_Bayesian/RBC_high/medium/low_acceptance.mod` | **同模型只改 `mh_jscale`**（0.2 / 1.5 / 3.5），演示 MCMC 接受率怎么被提案步长决定 |
+
+**课程补的关键实务——调 MH 接受率（手册只给选项、不讲怎么调）**：
+随机游走 Metropolis-Hastings 的接受率应落在 **约 25–35%**（高维偏低端）。唯一的调节钮是
+`mh_jscale`（提案分布标准差的缩放）——方向是反的：
+
+| `mh_jscale` | 提案步长 | 接受率 | 症状 |
+| ----------- | -------- | ------ | ---- |
+| 太小（0.2） | 小碎步 | **过高** | 链挪不动、自相关高、有效样本少 |
+| 合适（~1.5）| 适中 | ~25–35% | 健康混合 |
+| 太大（3.5） | 大跳 | **过低** | 频繁被拒、链"卡住"不动 |
+
+实操：先短跑看 `Acceptance ratio`，按上表反向调 `mh_jscale` 再正式长跑；Dynare 也可 `mode_compute` 后用
+`mh_tune_jscale` 自动整定。三个 `*_acceptance.mod` 就是让你把这三种情形各跑一遍、亲眼看链的差别。
+
+`calib_smoother` 的另一大用途是**接力预测**：跑完它用 `smoother2histval` 把平滑末态写进 `histval` 再
+`forecast`（见 forecasting.md 课程示例 `rbc_basic_calib_smoother.mod`）。
+
+参考 DSGE_mod：`Smets_Wouters_2007`（完整中型 DSGE 估计）、`Ireland_2004`（极大似然）、
+`RBC_baseline_first_diff_bayesian`（增长率观测方程的最小贝叶斯例子）。
+
+---
+
 # 手册增补（Dynare 7.1 §4.8/4.16）
 
 - **测量误差/异方差**：`heteroskedastic_shocks` 块在估计期逐期改某冲击标准差，`values`（直接给）

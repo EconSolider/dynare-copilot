@@ -248,3 +248,20 @@ estimation(smoother, heteroskedastic_filter, ...);
 | 约束数量 | 最多 2 个 | 不限 |
 | 写法 | 需要写各 regime 方程 | 直接写不等式互补 |
 | 参考 | `Guerrieri_Iacoviello_2015`（DSGE_mod） | perfect-foresight.md「lmmcp」 |
+
+---
+
+## §8 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 路径 `references/examples-code/Dynare_Course/Chapter_12_OccBin/`。同一个 NK + ELB 模型，用**三种**方式
+> 处理同一个有效下限——这组对照是理解"该用哪条路"的最佳教材。`grep -i "occbin\|lmmcp\|ELB" references/catalog-code.csv`。
+
+| 文件 | 处理 ELB 的方式 | 何时选它 |
+| ---- | ----------------- | -------- |
+| `NK_det.mod` | 完全预见里直接写带折点的泰勒规则 | 只想看一条确定性路径、约束写法最朴素 |
+| `NK_det_mcp.mod` | `[mcp]` 方程标注 + `perfect_foresight_solver(lmmcp)` | 确定性、要把下界**精确**钉住（§7 lmmcp 列） |
+| `NK_occbin.mod` | `occbin_constraints` + `occbin_setup`/`occbin_solver` + `bind=`/`relax=` 标签 | 要随机模拟/含预期/可估计（§0–§3 的标准 OccBin 写法） |
+
+读这组时按 `NK_det → NK_det_mcp → NK_occbin` 的顺序看：能清楚看到从"手写折点"到"互补松弛"再到"分段线性
+工具箱"的递进，以及每一步多解决了什么（精确钉住下界 → 支持随机/预期）。`NK_occbin.mod` 是 §0 骨架的
+最小可跑实例，照它对齐 regime 标签的成对写法（一 `bind` 一 `relax`，共用 `name`）最不容易错。

@@ -210,6 +210,22 @@ end;
 
 ---
 
+## 课程示例（Pfeifer Dynare Course，本地可跑，**首选参照**）
+
+> 第2章（预处理器）、第3章（宏处理器）的讲解以幻灯片内联片段为主，没有独立 .mod；但宏处理器最实用的
+> 两种用法在别的章节有**完整可跑**的实例，查"宏开关/包含到底怎么落地"时直接读它们：
+
+| 用法 | 课程实例（本地路径） | 看点 |
+| ---- | -------------------- | ---- |
+| `@#if`/`@#else` **一文件多变体** | `Dynare_Course/Chapter_13_optimal_policy/Ramsey_Example_macroexp.mod` | 一个开关在 `ramsey_model` / `discretionary_policy` / `osr` 三种实验间切换——经典的"同模型多政策口径"复用 |
+| `@#include` **拆分共享方程** | `Dynare_Course/Chapter_11_perfect_foresight/rbc_det1..5.mod` + `rbc_model_eq.inc` | 把模型方程抽到 `.inc`，多个实验文件 `@#include` 同一份——改方程只改一处 |
+| `@#include` **拆分共享设定** | `Dynare_Course/Chapter_09_Method_of_Moments/RBC_MoM_*.mod` + `RBC_MoM_common.inc` | GMM/SMM 两文件共用一份 common.inc，只在主文件里换方法 |
+
+这三种都是"用宏处理器消除重复"的标准工程模式——做模型变体对比（如价格黏性 Calvo vs Rotemberg、
+多国、多政策）时，优先照搬 `@#if` 开关 + `@#include` 共享方程的组织方式，而不是复制粘贴整份 .mod。
+
+---
+
 # 手册增补（Dynare 7.1 §4.2/4.5 + §3）
 
 ## `change_type` 与「变量翻转」（稳态反解参数的正规机制）
@@ -248,3 +264,4 @@ delta = 0.025;  alpha = 0.36;
 
 `-DA=true`、`'-DB="a string"'`、`-DC=[1,2,3]`、`-I<path>`（`@#include` 搜索路径，优先于
 `@#includepath`）。`savemacro` 查看展开结果。
+
