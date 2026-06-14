@@ -52,6 +52,16 @@
 
 第一行从仓库刷新插件市场的元数据，第二行把已安装的插件升级到最新发布的 `version`。如果没有立即生效，重启一次 Claude Code 即可。
 
+### 开启自动更新（推荐）
+
+第三方市场**默认不自动更新**，所以不开启的话每次都得手动跑上面两条命令。让 Claude Code 在每次启动时自动刷新本市场并升级插件：
+
+1. 运行 `/plugin` 打开插件管理器。
+2. 切到 **Marketplaces** 标签页，选中 `econsolider-skills`。
+3. 选择 **Enable auto-update**。
+
+设好之后，每次启动 Claude Code 都会自动拉取最新版；有更新时会提示你运行 `/reload-plugins`。这一步只需做一次。
+
 ## 卸载
 
 在 Claude Code 里运行即可卸载插件：

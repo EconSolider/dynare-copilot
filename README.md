@@ -54,6 +54,16 @@ To pull the latest version after installing, run these two commands in Claude Co
 
 The first line refreshes the marketplace metadata from the repository; the second line upgrades the installed plugin to the latest released `version`. Restart Claude Code if the change doesn't take effect immediately.
 
+### Enable auto-update (recommended)
+
+Third-party marketplaces have auto-update **off by default**, so the two commands above are needed every time unless you turn it on. To have Claude Code refresh this marketplace and upgrade the plugin automatically at startup:
+
+1. Run `/plugin` to open the plugin manager.
+2. Go to the **Marketplaces** tab and select `econsolider-skills`.
+3. Choose **Enable auto-update**.
+
+After that, each time you start Claude Code it pulls the latest version on its own; when an update is applied you'll be prompted to run `/reload-plugins`. You only need to do this once.
+
 ## Uninstall
 
 To remove the plugin, run in Claude Code:
