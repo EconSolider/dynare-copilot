@@ -27,9 +27,6 @@
   **文件名 = catalog 里的 ModelID**（如 `references/examples/EA_GNSS10_rep.mod`）。
 - 这些 `_rep` 文件是**复现原论文**版，已剥去 MMB 的公共政策接口，是干净、论文忠实的参照。
 
-> 注：`references/examples/` 里还有一个教学用最小范例（`rbc_baseline.mod` +
-> `rbc_baseline_derivation.md`，供写推导时模仿格式），它与 149 个库文件并存、不冲突。
-
 ### catalog.csv 的列
 
 `ModelID, Paper, Authors, Year, Journal, ModelType, Economy, Category, KeyFeatures`

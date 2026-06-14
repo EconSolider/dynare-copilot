@@ -241,7 +241,6 @@ description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆
                第5节 外生过程；第6节 稳态求解（写到能照抄进 steady_state_model）；
                第7节 时序约定；**第8节 变量参数对照表（每个 var 变量必须有对应方程，预核对 R4；
                任何一行"由哪条方程决定"为空则方程缺失，必须补进推导再进阶段2）**。
-               完整范例见 `references/examples/rbc_baseline_derivation.md`。
                **这是暂停点**：交付推导文件 → 结束本轮 → 等用户确认后才进阶段2。详见 workflow-detail.md。
 
         阶段2  先列变量清单：写文件头 + var/varexo/parameters 三类声明（含 long_name），

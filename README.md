@@ -59,7 +59,7 @@ You can also invoke it manually with `/dynare-mod:dynare-mod`.
 
 The `examples/` directory (at repository root) contains a complete usage example with an RBC model and government spending, including the derivation file and the final `.mod` file for reference. The skill itself bundles two reference libraries under `references/`:
 
-- **Model reference library** (`references/examples/`, indexed by `references/catalog.csv`): 149 MMB rep-mmb replication models (one `.mod` per paper, named by its `ModelID`), plus a minimal RBC teaching example with a line-by-line derivation.
+- **Model reference library** (`references/examples/`, indexed by `references/catalog.csv`): 149 MMB rep-mmb replication models (one `.mod` per paper, named by its `ModelID`).
 - **Programming logic library** (`references/examples-code/`, indexed by `references/catalog-code.csv`): 41 Pfeifer DSGE_mod examples organized by Dynare feature — `discretionary_policy`, `steadystate.m` patterns, `lmmcp` ZLB, welfare computation, news shocks, higher-order methods, and more.
 
 When asked to build a model, it first searches both local libraries, then your personal `model-archive-catalog.csv`, and only falls back to web search for paper-specific details (calibration, derivations) that neither library contains.
@@ -129,7 +129,7 @@ plugins/dynare-mod/                  # Plugin
           ├── model-archive-catalog.csv # Index of your accumulated models (grows as you work)
           ├── known-issues.md       # Real-world bug log (symptom → cause → fix), grows via encode-back
           ├── matlab-workflow.md    # MATLAB-side workflow: decouple solve/plot, cache oo_, multi-model comparison
-          ├── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID) + minimal RBC teaching example
+          ├── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID)
           ├── examples-code/         # 41 Pfeifer DSGE_mod .mod files organized by feature (21 subfolders)
           └── model-archive/         # Your archived .mod files and derivation docs, built up over time
 examples/                            # Repository-level usage example, RBC with government spending, not part of the skill itself
@@ -166,7 +166,7 @@ examples/                            # Repository-level usage example, RBC with 
 | `catalog-lookup.md`        | How to search both catalogs by feature, the category indexes, model archive lookup, and caveats on using reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                 |
 | `model-archive-catalog.csv` | Index of models you've built across sessions; same columns as `catalog.csv` plus a `Task` and `DateAdded` field. Grows automatically at the end of each modeling task.                                                                  |
 | `model-archive.md`         | Spec for the personal model archive: directory structure, how to search it, the archiving flow, and fresh-install initialization. |
-| `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`), plus a minimal RBC teaching example (eight-section derivation + matching `.mod`, FOC numbers aligned to `[name=]` entries). Answers "what's the economic structure?" |
+| `examples/`                | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`). Answers "what's the economic structure?" |
 | `examples-code/`           | 41 Pfeifer DSGE_mod `.mod` files (and key `.m` helpers) in 21 subfolders. Answers "how is this Dynare feature implemented?" Covers: RBC basics, NK linearized/nonlinear, TANK, estimation (ML/Bayesian/IRF-matching), optimal policy, higher-order methods, perfect foresight, open economy, welfare, news shocks, forward guidance. |
 | `model-archive/`           | Archive of `.mod` files and derivation docs from your past sessions. Consulted automatically on future modeling tasks, ahead of web search.                                                                                             |
 
