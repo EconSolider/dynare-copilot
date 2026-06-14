@@ -54,6 +54,22 @@
 
 第一行从仓库刷新插件市场的元数据，第二行把已安装的插件升级到最新发布的 `version`。如果没有立即生效，重启一次 Claude Code 即可。
 
+## 卸载
+
+在 Claude Code 里运行即可卸载插件：
+
+```text
+/plugin uninstall dynare-mod@econsolider-skills
+```
+
+如不再需要这个市场，可一并移除其注册：
+
+```text
+/plugin marketplace remove econsolider-skills
+```
+
+> 如果你是手动安装的（见下方「进阶」），没有插件可卸载，直接删掉拷过去的目录即可：`rm -rf ~/.claude/skills/dynare-mod`（或项目级的 `.claude/skills/dynare-mod/`）。
+
 ## 快速上手
 
 装好后，在 Claude Code 里**直接用中文或英文描述任务**即可，它会自动启用：

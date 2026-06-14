@@ -56,6 +56,22 @@ To pull the latest version after installing, run these two commands in Claude Co
 
 The first line refreshes the marketplace metadata from the repository; the second line upgrades the installed plugin to the latest released `version`. Restart Claude Code if the change doesn't take effect immediately.
 
+## Uninstall
+
+To remove the plugin, run in Claude Code:
+
+```text
+/plugin uninstall dynare-mod@econsolider-skills
+```
+
+Optionally also remove the marketplace registration:
+
+```text
+/plugin marketplace remove econsolider-skills
+```
+
+> If you installed manually (the Advanced method below), there is no plugin to uninstall — just delete the copied directory: `rm -rf ~/.claude/skills/dynare-mod` (or the project-local `.claude/skills/dynare-mod/`).
+
 ## Quick Start
 
 After installation, **describe the task directly in Chinese or English** inside Claude Code. The plugin will be enabled automatically:
