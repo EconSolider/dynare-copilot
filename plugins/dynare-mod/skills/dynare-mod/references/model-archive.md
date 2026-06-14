@@ -7,13 +7,23 @@
 
 ## 目录结构
 
+**每个模型在存档库里有自己的子文件夹**（文件夹名 = ModelID），子文件夹里放该模型**全部运行所需文件**：
+
 ```
 references/
-├── model-archive-catalog.csv   ← 存档库索引（格式同 catalog.csv，可同一 grep 命令搜索）
+├── model-archive-catalog.csv        ← 存档库索引（格式同 catalog.csv，可同一 grep 命令搜索）
 └── model-archive/
-    ├── <模型名>.mod             ← 存档的 Dynare 模型文件
-    └── <模型名>_derivation.md   ← （可选）配套推导文件
+    └── <ModelID>/                    ← 每个模型一个子文件夹（文件夹名 = ModelID）
+        ├── <ModelID>.mod            ← Dynare 模型文件（必有）
+        ├── <ModelID>_derivation.md  ← 配套推导文件（可选）
+        ├── <ModelID>_steadystate.m  ← 外部稳态文件（稳态写在 .m 里时必存，否则模型跑不出稳态）
+        └── ...                       ← 其余运行所需 .m / 数据：求解 driver、helper 函数、
+                                         params include、IRF-matching 目标函数等
 ```
+
+**为什么用子文件夹 + 收齐 .m**：扁平存放时（早期做法）一来文件名前缀容易撞、归属不清，二来
+**稳态/系数常常算在 .m 文件里**（外部 `steadystate.m` 反解校准、BGG 的 ζ 系数 fzero、IRF-matching 目标
+函数等）——只存 `.mod + 推导 md` 会让模型**无法复跑**。一个子文件夹装齐 = 未来任务直接整夹复制即可运行。
 
 全新安装时以上文件/目录均不存在，属正常情况——按下方"全新安装"处理。
 
@@ -21,21 +31,27 @@ references/
 
 ## 一、检索（第1.3步执行）
 
-在 `catalog.csv`（149 篇 MMB）无相近命中后，检索模型存档库：
+在 `catalog.csv`（149 篇 MMB）无相近命中后，检索模型存档库。**两条路都走**——既搜 catalog 文本，
+也扫**文件夹名**（folder = ModelID，机制有时就体现在命名上，且能兜底 catalog 行漏写的情况）：
 
 ```bash
-# 先确认文件存在，再 grep
-grep -i "TANK\|hand-to-mouth" references/model-archive-catalog.csv
-grep -i "financial accelerator" references/model-archive-catalog.csv
+# 先确认文件存在，再 grep catalog（机制标签/经济体/类别都在这里）
+grep -i "financial accelerator\|BGG\|spread" references/model-archive-catalog.csv
+grep -i "TANK\|hand-to-mouth"               references/model-archive-catalog.csv
+
+# 同时扫子文件夹名（ModelID），命中常见模型族缩写
+ls references/model-archive/ | grep -i "swff\|bgg\|hank\|rbc\|nk"
 ```
 
-**全新安装时**：`references/model-archive-catalog.csv` 不存在 → 直接跳过，视为无命中，不报错，不尝试读取。
+**全新安装时**：`references/model-archive-catalog.csv` 或 `references/model-archive/` 不存在 → 直接跳过，
+视为无命中，不报错，不尝试读取。
 
-有命中时，读 `references/model-archive/<ModelID>.mod` 作补充参照（只取内容/时序/校准，勿照搬形式）。
+有命中时，进对应子文件夹 `references/model-archive/<ModelID>/`，读其中的 `.mod`（必要时连带
+`<ModelID>_steadystate.m` 等 .m）作补充参照（只取内容/时序/校准，勿照搬形式）。
 
 ---
 
-## 二、存档（第6步第10条执行）
+## 二、存档（SKILL.md §3 第7步 / 交付格式第11条执行）
 
 ### 触发条件
 
@@ -56,17 +72,26 @@ grep -i "financial accelerator" references/model-archive-catalog.csv
 
 ### 存档步骤
 
-**a. 初始化目录**（全新安装时执行，已存在则跳过）
+**a. 建该模型的子文件夹**（文件夹名 = ModelID；父目录不存在时一并创建）
 ```bash
-mkdir -p references/model-archive
+mkdir -p references/model-archive/<ModelID>
 ```
 
-**b. 复制模型文件**
+**b. 复制该模型的全部运行所需文件进子文件夹**
 ```bash
-cp <工作目录>/<模型名>.mod references/model-archive/<模型名>.mod
-# 若本任务产出了推导 md，一并复制
-cp <工作目录>/<模型名>_derivation.md references/model-archive/<模型名>_derivation.md
+cp <工作目录>/<ModelID>.mod              references/model-archive/<ModelID>/
+# 推导 md（本任务产出了就一并复制）
+cp <工作目录>/<ModelID>_derivation.md    references/model-archive/<ModelID>/
+# 稳态/辅助 .m —— 凡稳态或关键系数算在 .m 里，必须一并存，否则模型跑不出来：
+#   外部稳态文件 <ModelID>_steadystate.m、求解 driver（如 run_<ModelID>.m）、
+#   helper 函数（BGG ζ 系数、IRF-matching 目标函数…）、params include（*.inc）等
+cp <工作目录>/<ModelID>_steadystate.m    references/model-archive/<ModelID>/   # 若存在
+cp <工作目录>/run_<ModelID>.m            references/model-archive/<ModelID>/   # 若存在
+# 其余该模型专属、复跑必需的 .m / .inc / 小数据，按需一并复制
 ```
+> 判据：**离开这个子文件夹，模型还能不能从头跑出稳态与 IRF？** 不能则缺的文件就得补进来。
+> 不复制：Dynare 自动产物（`+<ModelID>/`、`Output/`、`*_results.mat`、自动生成的 `*_dynamic.m/_static.m`）、
+> 论文 PDF、通用 skill 资产（`plot_irfs_pub.m` 已在 skill 里，不必随模型存）。
 
 **c. 初始化 CSV 表头**（全新安装、文件不存在时执行）
 ```
@@ -79,7 +104,7 @@ cp <工作目录>/<模型名>_derivation.md references/model-archive/<模型名>
 
 | 字段 | 说明 |
 |------|------|
-| `ModelID` | 文件名（不含 `.mod`） |
+| `ModelID` | 模型标识 = 子文件夹名 = `.mod` 文件名（不含 `.mod`） |
 | `Task` | 本次任务一句话摘要（区分于 Paper 描述） |
 | `Paper` | 复现论文全名；自建模型填 `custom` |
 | `Year` | 论文年份；自建填建模当年 |
@@ -91,7 +116,8 @@ cp <工作目录>/<模型名>_derivation.md references/model-archive/<模型名>
 
 **e. 完成报告**
 
-向用户报告："已归档至模型存档库：`references/model-archive/<模型名>.mod`"
+向用户报告："已归档至模型存档库：`references/model-archive/<ModelID>/`（含 .mod、推导 md、稳态/辅助 .m）"，
+并列出实际复制进去的文件，便于核对是否齐全（复跑所需文件都在）。
 
 ---
 
