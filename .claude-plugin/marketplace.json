@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
   "name": "econsolider-skills",
-  "description": "EconSolider 的 Claude Code skills（宏观/DSGE 方向）。",
+  "description": "EconSolider's Claude Code skills (macroeconomics / DSGE).",
   "owner": {
     "name": "EconSolider",
     "url": "https://github.com/EconSolider"
@@ -10,7 +10,7 @@
     {
       "name": "dynare-mod",
       "source": "./plugins/dynare-mod",
-      "description": "编写、运行、调试和审查 Dynare .mod 模型文件（DSGE / RBC / 新凯恩斯 / HANK / 最优政策 / 估计 / 偶尔约束等）。",
+      "description": "Write, run, debug, and review Dynare .mod model files (DSGE / RBC / New Keynesian / HANK / optimal policy / estimation / occasionally binding constraints, and more).",
       "category": "development",
       "keywords": ["dynare", "dsge", "rbc", "new-keynesian", "macroeconomics"]
     }
