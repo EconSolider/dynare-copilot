@@ -146,5 +146,3 @@ GMM 与 SMM 两文件刻意共用 `RBC_MoM_common.inc` 与同一组 `matched_mom
 - `matched_moments` 块只接受**线性乘积矩**（方差=`xx`、协方差=`xy`）；相关系数需经方差+协方差间接匹配。
 - 惩罚化矩方法：`estimated_params` 用贝叶斯式行（带先验）即把先验当额外矩条件（penalized MoM）。
 - 输出在 `oo_.mom`。
-
-参考 DSGE_mod：`Born_Pfeifer_2014`（GMM/SMM 经典示例）；Dynare `examples/` 下 `method_of_moments` 示例。

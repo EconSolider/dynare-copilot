@@ -177,9 +177,6 @@ estimation(datafile='data.csv', mh_replic=20000, mh_nblocks=2, mode_compute=5)
 `calib_smoother` 的另一大用途是**接力预测**：跑完它用 `smoother2histval` 把平滑末态写进 `histval` 再
 `forecast`（见 forecasting.md 课程示例 `rbc_basic_calib_smoother.mod`）。
 
-参考 DSGE_mod：`Smets_Wouters_2007`（完整中型 DSGE 估计）、`Ireland_2004`（极大似然）、
-`RBC_baseline_first_diff_bayesian`（增长率观测方程的最小贝叶斯例子）。
-
 ---
 
 # 手册增补（Dynare 7.1 §4.8/4.16）

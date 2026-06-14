@@ -122,9 +122,6 @@ osr(opt_algo=9) x pi i;          // 最小化加权方差损失
 （只优化简单规则系数、损失=加权无条件方差）三者在**写法和结果**上的区别。`Ramsey_Example_macroexp.mod`
 还顺带示范了用宏开关把三种实验收进一个文件的工程写法（配合 macro-processor.md）。
 
-参考 DSGE_mod：`Gali_2015_chapter_5_commitment`（`ramsey_model`）、
-`Gali_2015_chapter_5_discretion`（`discretionary_policy`）、含 ZLB 的对应变体。
-
 ---
 
 # 手册增补（Dynare 7.1 §4.22）

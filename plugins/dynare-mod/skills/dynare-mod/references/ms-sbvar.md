@@ -69,7 +69,7 @@ linear restriction）。
 | `ms_simulation` | 后验抽样模拟 | 同上 file_tag 串联 |
 | `ms_compute_mdd` | 计算边际数据密度 | 输出 Müller / Bridged log-MDD 进 `oo_.ms`（模型比较用） |
 | `ms_compute_probabilities` | 滤波/平滑区制概率 | 画各期处于各区制的概率 |
-| `ms_irf` | 区制相关 IRF | `horizon`(默认?)、`filtered_probabilities`/`regime=`/`regimes`(三选一)、`percentiles`(默认[.16 .5 .84])、`draws`、`parameter_uncertainty` |
+| `ms_irf` | 区制相关 IRF | `horizon`、`filtered_probabilities`/`regime=`/`regimes`(三选一)、`percentiles`(默认[.16 .5 .84])、`draws`、`parameter_uncertainty` |
 | `ms_forecast` | 预测 | `forecast`(horizon，默认12)、`regime`/`regimes`/`filtered_probabilities`、`percentiles` |
 | `ms_variance_decomposition` | 方差分解 | `horizon`、`filtered_probabilities`/`regime`、`percentiles` |
 
