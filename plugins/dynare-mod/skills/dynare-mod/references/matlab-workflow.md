@@ -34,7 +34,11 @@ oo_ = S.oo_;  M_ = S.M_;
 
 ## 项目目录与运行脚本（多文件项目的标准骨架）
 
-单文件模型不必如此；但凡涉及**多模型对比、外部稳态、反复出图**，按下面组织，自己和用户都不易乱：
+> 运行脚本 `run_<model>.m` 是**默认交付物**（不是可选项），它怎么写——自包含开箱即用、按实验类型
+> 选产出、**自动调用绘图/产出代码**、有 `main` 的项目怎么接入——见 `references/run-script.md`。
+> 本节只讲**多文件项目**里它与 `analyze_*.m`、`.mat` 缓存怎么配合，不重复 run 脚本的完整骨架。
+
+凡涉及**多模型对比、外部稳态、反复出图**，按下面组织，自己和用户都不易乱：
 
 ```
 <project>/
@@ -46,10 +50,12 @@ oo_ = S.oo_;  M_ = S.M_;
 └── <model>_oo.mat              # 冻存的求解结果（中间产物，可重生成）
 ```
 
-**运行脚本（`run_<model>.m`）固定写法**——让 MCP 一句 `run_matlab_file` 就能复跑，也方便用户自己重跑：
+**求解段（`run_<model>.m`）的最小核**——多文件项目里它只负责"求解 + 冻存"，出图交给 `analyze_*.m`；
+单文件项目则把出图也并进 run 脚本（完整五环节骨架见 `references/run-script.md`）：
 
 ```matlab
-cd('<工作目录>');                        % 绝对路径，避免 MCP 会话工作目录漂移
+addpath('C:\dynare\7.1\matlab');         % 自包含：干净 MATLAB 也找得到 Dynare（按本机改）
+cd(fileparts(mfilename('fullpath')));    % 切到脚本自身目录，避免会话工作目录漂移
 dynare <model> noclearall nointeractive  % noclearall 保留 oo_；nointeractive 不弹窗等输入
 save('<model>_oo.mat', 'oo_', 'M_', 'options_');
 ```

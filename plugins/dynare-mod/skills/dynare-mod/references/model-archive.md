@@ -91,7 +91,7 @@ cp <工作目录>/run_<ModelID>.m            references/model-archive/<ModelID>/
 ```
 > 判据：**离开这个子文件夹，模型还能不能从头跑出稳态与 IRF？** 不能则缺的文件就得补进来。
 > 不复制：Dynare 自动产物（`+<ModelID>/`、`Output/`、`*_results.mat`、自动生成的 `*_dynamic.m/_static.m`）、
-> 论文 PDF、通用 skill 资产（`plot_irfs_pub.m` 已在 skill 里，不必随模型存）。
+> 论文 PDF、通用 skill 资产（`plot_irfs_pub.m`、`plot_series_pub.m` 已在 skill 里，不必随模型存）。
 
 **c. 初始化 CSV 表头**（全新安装、文件不存在时执行）
 ```

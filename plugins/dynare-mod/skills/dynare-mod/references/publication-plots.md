@@ -65,6 +65,31 @@ plot_irfs_pub
 再退变量名。所以**写 `.mod` 时给全 `long_name` 和 `${tex}$`，图就自带漂亮标题**——这反过来
 强化 R1（标识符英文、注释用 §0 选定语言 [LANG]）与可读性习惯。
 
+## 时间序列/模拟/过渡路径：`plot_series_pub`（IRF 之外的序列产出）
+
+并非每次都出 IRF。**随机模拟序列**（`stoch_simul(periods=T)`）与**完全预见过渡路径**
+（`perfect_foresight_solver`）的产出都落在 `oo_.endo_simul`，用姊妹脚本
+**`references/plot_series_pub.m`** 出图（接口与风格同 `plot_irfs_pub`，run 脚本里**调用它、不内联手写 `plot`**）：
+
+```matlab
+% 最简：oo_/M_ 在工作区，画 endo_simul 里这几条路径
+plot_series_pub({'y','c','k'}, 'Save','fig_sim');
+
+% 看对稳态的偏离（减 oo_.steady_state；配 Scale=100 看百分比偏离）
+plot_series_pub({'y','c'}, 'Center','ss', 'Scale',100, 'Save','fig_dev');
+
+% 多情景过渡路径叠线（如基线 vs 改革）
+plot_series_pub({'y','c'}, 'Scenarios',{ooA,ooB}, ...
+    'ScenarioNames',{'Baseline','Reform'}, 'Save','fig_transition');
+
+% 无参跑一张合成演示图，先确认风格
+plot_series_pub
+```
+
+常用参数：`Source`（取哪条 [endo×T] 路径，默认 `endo_simul`）、`Center`（`none`/`ss`/`mean`）、
+`Scale`、`Time`（自定义横轴）、`Horizon`，以及与 `plot_irfs_pub` 同名的 `Layout`/`Titles`/`Save`/`Formats` 等。
+标题同样自动取 `long_name`/`${tex}$`。**两个脚本都是 skill 资产，收尾清理时不删。**
+
 ## 兼容性与清理
 
 - 需 MATLAB R2020a+（`tiledlayout`/`exportgraphics`/`yline`）；更老版本自动回退

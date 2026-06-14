@@ -50,13 +50,13 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 ② 本 skill 同一会话内已确认过语言（只需确认一次，不必每轮重复问）。
 用户中途要求切换语言 → `[LANG]` 同步切换，无需再次确认。
 
-`[LANG]` **只影响**：`.mod` 的 `//`/`/* */` 注释、推导 md 的叙述文字（含八节标题）、向用户提的所有建模问题与消息。**不影响**：变量名、标识符、`long_name`、`[name=]` 及其他非注释内容——这些一律英文/ASCII（R1 其余条款不变）。
+`[LANG]` **只影响**：`.mod` 的 `//`/`/* */` 注释、**配套 `.m` 文件（run 脚本、稳态文件、绘图封装）里的 `%` 注释**、推导 md 的叙述文字（含八节标题）、向用户提的所有建模问题与消息。**不影响**：变量名、标识符、`long_name`、`[name=]`、MATLAB 函数/字段名及其他非注释内容——这些一律英文/ASCII（R1 其余条款不变）。
 
 ## §1 硬规则 R1–R8（违反任一 = 文件失败，写每一行都对照）
 
 | #  | 规则                                                                                                                                                                                                                                                    | 正例 / 反例                                                                                             |
 | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| R1 | **注释一律用 §0 选定语言；注释以外一律英文/ASCII**。`long_name`、`[name=]`、标识符、字符串禁止非 ASCII                                                                                                                                       | ✅`[name='Euler equation']` 上方加该语言注释；❌ `[name='欧拉方程']` 或 `[name='オイラー方程式']` |
+| R1 | **注释一律用 §0 选定语言；注释以外一律英文/ASCII**。覆盖本 skill 生成的**全部代码文件**——`.mod` 与配套 `.m`（run 脚本/稳态文件/绘图封装）注释同规则。`long_name`、`[name=]`、标识符、字符串禁止非 ASCII                                                                                                                                       | ✅`[name='Euler equation']` 上方加该语言注释；❌ `[name='欧拉方程']` 或 `[name='オイラー方程式']` |
 | R2 | **时序 = 决定期**（期末存量）。状态变量当期带滞后；运动律左边是期末存量                                                                                                                                                                           | ✅`y=...k(-1)...` 与 `k=invest+(1-delta)*k(-1);`；❌ 生产函数里写 `k`                             |
 | R3 | **varexo 只放创新项**；持续过程（AR 等）是内生变量                                                                                                                                                                                                | ✅`var z; varexo eps_z;`；❌ `varexo z;`                                                            |
 | R4 | **方程数 = 内生变量数**（例外：`ramsey_model`/`discretionary_policy` 少 1 条）                                                                                                                                                                | 写完模型块数一遍                                                                                        |
@@ -86,11 +86,12 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 | 报错、跑不通、BK 不满足、稳态求不出、**结果数值可疑**（无报错但数不对劲、乘数/IRF 量级或符号存疑）                                     | 排错                             | 诊断命令                                                                              | `references/debugging.md`                                                |
 | 已踩过的具体坑速查（先扫实战日志命中现成修法）、自己新解决报错后 encode-back 回写                                                       | 排错日志                         | —                                                                                    | `references/known-issues.md`                                            |
 | 对**已有 .mod** 修改/扩展（加冲击/机制/估计/OSR/切换价格黏性等）、"帮我改这个文件"                                               | 存量文件修改                     | —                                                                                    | **走 §2.8，跳过建模主流程**                                         |
-| **凡产出 IRF 即默认出图**（见 §3 阶段5b）；用户提到好看的图、顶刊/发表级 IRF、导出 PDF、多情景/多冲击对比、置信带时同样读此参考 | 发表级绘图（**默认产出**） | `plot_irfs_pub.m`（替代自带画图）                                                   | `references/publication-plots.md`                                        |
+| **凡产出 IRF 即默认出图**（见 §3 阶段5b）；用户提到好看的图、顶刊/发表级 IRF/时间序列、导出 PDF、多情景/多冲击对比、置信带时同样读此参考 | 发表级绘图（**默认产出**） | IRF→`plot_irfs_pub.m`；模拟序列/过渡路径→`plot_series_pub.m`（均替代自带画图）   | `references/publication-plots.md`                                        |
 | 复制某论文模型、"要个带 X 特征的模型"、不确定有无现成实现 →**建模/复制类任务落笔前必做**                                        | 本地双库检索           | ① grep `catalog.csv`（模型结构）→ 读 `examples/<ID>.mod`；② grep `catalog-code.csv`（编程逻辑）→ 读 `examples-code/<Folder>/<ID>.mod`；两库无命中再 grep `model-archive-catalog.csv`  | `references/catalog-lookup.md`                                           |
 | 需要现成骨架                                                                                                                           | 模板                             | —                                                                                    | `references/templates.md`                                                |
 | 主流程任一步的细节（暂停点/检索/分阶段构建/闭环/骨架/细则）                                                                            | 流程                             | —                                                                                    | `references/workflow-detail.md`                                          |
-| 求解慢、反复改图/改归一化要重算、缓存 oo_、多模型/多情景对比（HANK vs RANK）、求解与分析解耦、运行脚本、迭代效率                       | MATLAB 侧工作流                  | —                                                                                    | `references/matlab-workflow.md`                                          |
+| 求解慢、反复改图/改归一化要重算、缓存 oo_、多模型/多情景对比（HANK vs RANK）、求解与分析解耦、迭代效率                       | MATLAB 侧工作流                  | —                                                                                    | `references/matlab-workflow.md`                                          |
+| 给用户可一键复跑的运行脚本、把 .mod+稳态.m+绘图代码串成总装、**让绘图/产出代码被自动调用**、有特定 main 的项目编排、按实验类型（IRF/模拟/过渡路径/矩）选产出 | 运行脚本（**默认产出**） | `run_<模型名>.m`                                                                   | `references/run-script.md`                                              |
 | 写阶段1 推导文件的结构与公式规范                                                                                                       | 推导规范                         | —                                                                                    | `references/derivation-style.md`                                         |
 | 各主体最优化问题/FOC 怎么推、有哪些会改方程结构的变体                                                                                  | 建模逻辑                         | —                                                                                    | `references/modeling-blocks.md`                                          |
 
@@ -286,6 +287,17 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
                运行核对出图、确认 `fig_*.pdf` 已生成。**仅两种情况跳过**：① 本任务压根不产出 IRF
                （纯稳态检查 / 纯识别 / 预测扇形图等有专门图的场景）；② 用户明说不要出版图。
                跳过时在交付里一句话说明原因。
+
+        阶段5c 🏃生成运行脚本 `run_<模型名>.m`（**默认产出**，不必等用户点名）：
+               读 `references/run-script.md`，按其五环节骨架把工作目录里的零件**串成一键复跑的总装脚本**：
+               自包含（addpath Dynare + cd 到脚本目录，干净 MATLAB 双击即跑）→ `dynare <模型名>`（自动用
+               同名稳态 `.m`）→ 稳态/解析基准自检打印 → **第4环节按本任务实验类型选产出并真正调用产出代码**
+               （IRF→`plot_irfs_pub.m`；模拟序列/完全预见过渡路径→`plot_series_pub.m`；纯矩→打印矩表）→ 冻存 `oo_.mat`。
+               **核心：绘图脚本必须被 run 脚本自动调用**——这是过去最常漏的一环（脚本拷了却没人调）；
+               两个绘图脚本各管一类产出（IRF / 时间序列），都现成、直接调用、不内联手写 `plot`。
+               注释随 [LANG]（R1）。项目已有 `main` 则接进去、不另起；多模型/贵求解按 run-script.md 的变体拆分。
+               写完用 MATLAB MCP 跑一遍 `run_<模型名>.m` 核对它一条龙跑通、产出文件确已生成。
+               **仅一种情况跳过**：用户明说不要运行脚本（交付里一句话说明）。
         每跑一次都走"运行与纠错闭环"（上限5轮、同错2轮即停），详见 workflow-detail.md「§4.1」。
         **遇报错先查后补**：先扫 `known-issues.md` 实战坑日志 + `debugging.md`「报错→病因→修法」表，
         命中直接照修法改、不重推；查不到才自己诊断。**解决一个 skill 里查不到的新报错，就地（趁现象/根因/
@@ -314,14 +326,17 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 4. 运行结果摘要（BK、稳态、矩/IRF/估计关键数字）；未能运行时给运行方式与预期输出；
 5. **发表级 IRF 图**（凡产出 IRF 时必交付，阶段5b 产出）：plot_irfs_pub 导出的 `fig_*.pdf`
    （论文可直接用的矢量图），正文嵌图或附图说明；未出图时一句话说明原因（无 IRF / 用户不要）；
+5b. **运行脚本 `run_<模型名>.m`**（阶段5c 产出，默认必交付）：自包含、可一键复跑的总装脚本，
+   把 `.mod`+稳态 `.m`+产出代码串起来并**自动调用绘图/产出代码**；说明用户需按本机改的那行 Dynare 路径；
+   接进既有 `main` 时改为指明接入位置；用户明说不要时一句话说明跳过；
 6. 稳态为数值求解时，提醒确认 `resid;` 近 0、`check;` 通过；
 7. 最终 TodoList（全部勾选；有遗留项如实保留未勾并说明原因）；
 8. 走过文献检索时，注明实际依据的来源（论文/附录/参考实现），与文件头注释一致；
 9. **收尾清理工作目录**：复查文件夹，按 workflow-detail.md「收尾清理」的白/黑名单处理——白名单内的
    Dynare 自动产物（`+<模型名>/`、`Output/`、`<模型名>_results.mat`、`.log`、自动 `_dynamic.m/_static.m` 等）
    与 agent 临时文件直接删，来源不确定的先列出来问用户、不擅自删。**最易误删、务必保留**：用户上传的文件/数据、
-   推导 md、最终 .mod、用户手写的 `<模型名>_steadystate.m`、绘图脚本 `plot_irfs_pub.m` 与它导出的论文图
-   `fig_*.pdf/.eps/.png`。最后向用户报告删了哪些、保留了哪些。
+   推导 md、最终 .mod、用户手写的 `<模型名>_steadystate.m`、**运行脚本 `run_<模型名>.m` 与 `analyze_<模型名>.m`**、
+   绘图脚本 `plot_irfs_pub.m`、`plot_series_pub.m` 与它们导出的论文图 `fig_*.pdf/.eps/.png`。最后向用户报告删了哪些、保留了哪些。
 10. 🔒 **回写 known-issues.md（收尾门控(b)，详见第4步 bug 协议）**：把第4步沉淀的 TodoList 条目
     按 `references/known-issues.md` 条目格式（现象→根因→修法带代码→详见）逐一落地；框架特异的坑
     同时补进对应 reference 的"常见报错与陷阱"节。无需问用户（是写库不是外发）。没踩新坑则一句话跳过。
