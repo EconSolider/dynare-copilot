@@ -8,7 +8,11 @@
 
 > A Claude Code skill that takes your macroeconomic intuition — "I want a New Keynesian model with a financial accelerator," "replicate Smets-Wouters 2007" — and turns it into a working, validated Dynare `.mod` file with steady state solved and IRFs in hand.
 >
-> Its core job is to enforce the workflow experienced modelers follow anyway: **derive first, translate second, validate incrementally**. Timing errors, naming conflicts, and steady-state algebra mistakes get caught before they become wrong results. A built-in **dual reference library** — **149 MMB replication models** (from the [Macroeconomic Model Data Base](https://www.macromodelbase.com/rep-mmb)) for economic structure, and **89 Johannes Pfeifer examples** (41 from [DSGE_mod](https://github.com/JohannesPfeifer/DSGE_mod) plus 48 from his *Advanced Dynare* course) for Dynare programming patterns — means every new model starts from a vetted reference, not guesswork. Every model you finish is automatically archived in a **personal model archive** and consulted on future tasks; every bug you hit is logged with its fix, so the same trap is never debugged twice — the tool gets sharper the more you use it. Every IRF is delivered as a publication-ready vector figure, ready to drop into your paper.
+> Its core job is to enforce the workflow experienced modelers follow anyway: **derive first, translate second, validate incrementally** — so timing errors, naming conflicts, and steady-state algebra mistakes get caught before they become wrong results. Concretely, it gives you:
+>
+> - **A vetted starting point, never a blank page** — a built-in dual reference library (149 MMB replication models for economic structure + 89 Pfeifer examples for Dynare syntax) means every model starts from working code.
+> - **A tool that sharpens with use** — every model you finish is archived and consulted on future tasks; every bug you hit is logged with its fix, so the same trap is never debugged twice.
+> - **Paper-ready output** — every IRF is delivered as a publication-quality vector figure, ready to drop into your manuscript.
 >
 > No timing pitfalls. No silent errors. No blank page.
 >
@@ -16,13 +20,29 @@
 
 ---
 
+## Contents
+
+- [Requirements](#requirements)
+- [Installation](#installation-about-1-minute)
+- [Update](#update)
+- [Uninstall](#uninstall)
+- [Quick Start](#quick-start)
+- [Supported Tasks](#supported-tasks)
+- [How It Works](#how-it-works)
+- [Repository Structure](#repository-structure)
+- [Advanced](#advanced)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+---
+
 ## Requirements
 
 | What you want to do                                     | What you need                                                        |
 | ------------------------------------------------------- | -------------------------------------------------------------------- |
-| Let it**write / edit / inspect** `.mod` files   | Only[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
-| **Run** the generated `.mod` files yourself     | Also install[Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
-| Let it**run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
+| Let it **write / edit / inspect** `.mod` files   | Only [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| **Run** the generated `.mod` files yourself     | Also install [Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
+| Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
 
 > You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
@@ -88,12 +108,7 @@ After installation, **describe the task directly in Chinese or English** inside 
 
 You can also invoke it manually with `/dynare-mod:dynare-mod`.
 
-The skill bundles two reference libraries under `references/`:
-
-- **Model reference library** (`references/examples/`, indexed by `references/catalog.csv`): 149 MMB rep-mmb replication models (one `.mod` per paper, named by its `ModelID`).
-- **Programming logic library** (`references/examples-code/`, indexed by `references/catalog-code.csv`): 89 Johannes Pfeifer examples — 41 from DSGE_mod plus 48 from his *Advanced Dynare* course — organized by Dynare feature: `discretionary_policy`, `steadystate.m` patterns, `lmmcp` ZLB, welfare computation, news shocks, higher-order methods, and more.
-
-When asked to build a model, it first searches both local libraries, then your personal `model-archive-catalog.csv`, and only falls back to web search for paper-specific details (calibration, derivations) that neither library contains.
+The skill bundles two reference libraries under `references/` — 149 MMB replication models for economic structure and 89 Pfeifer examples for Dynare syntax — plus your own growing model archive. When asked to build a model it searches these local libraries first, and only falls back to web search for paper-specific details neither covers. See [How It Works](#how-it-works) for the lookup logic, and [Repository Structure](#repository-structure) for what each library contains.
 
 ## Supported Tasks
 
