@@ -4,6 +4,8 @@
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
 ![Dynare](https://img.shields.io/badge/Dynare-7.1-blue)
 
+[English](./README.md) | **中文** | [日本語](./README_ja.md)
+
 > 这是一个 Claude Code skill，代替你把语言中的宏观经济直觉——"我想建一个带金融加速器的 NK 模型"、"请复制 Smets-Wouters 2007"——转化为跑通、稳态解出、IRF 出图到手的具体 Dynare `.mod` 文件。
 >
 > 它的核心在于把所有经验丰富的建模者无论如何都会遵循的流程**固定下来**：先推导方程、后翻译代码、再分阶段运行验证——让时序错误、命名冲突、稳态代数失误，在它们成为错误结果前就被截住。具体而言，它给你：
@@ -46,6 +48,8 @@
 > 不装 MATLAB 也能用——它同样能帮你写模型、查查错，只是不替你跑。
 >
 > 如果提供具体的论文，能大大减少响应时间和 token 消耗。
+>
+> 🔌 **没配过 MCP？** 如果你从没把 MATLAB（或 Stata）接进 Claude Code，请跟着这份零基础图文教程一步步来：**[给 Claude Code 接上 MATLAB / Stata（MCP 配置入门指南）](./docs/mcp-setup-guide_zh-CN.md)**。它默认你毫无配置基础，手把手教你安装 Claude Code、接好驱动上面「自动运行-纠错」闭环的 MATLAB MCP，以及 Stata MCP。
 
 ## 安装（约 1 分钟）
 

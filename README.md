@@ -4,7 +4,7 @@
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
 ![Dynare](https://img.shields.io/badge/Dynare-7.1-blue)
 
-[中文说明](./README_zh-CN.md)
+**English** | [中文](./README_zh-CN.md) | [日本語](./README_ja.md)
 
 > A Claude Code skill that takes your macroeconomic intuition — "I want a New Keynesian model with a financial accelerator," "replicate Smets-Wouters 2007" — and turns it into a working, validated Dynare `.mod` file with steady state solved and IRFs in hand.
 >
@@ -48,6 +48,8 @@
 > You can still use it without MATLAB: it can write models and inspect errors, but it will not run Dynare for you.
 >
 > Providing the specific paper can greatly reduce response time and token usage.
+>
+> 🔌 **New to MCP?** If you've never connected MATLAB (or Stata) to Claude Code before, follow the step-by-step beginner's guide: **[Connecting MATLAB / Stata to Claude Code (MCP Setup Guide)](./docs/mcp-setup-guide.md)**. It assumes zero prior setup and covers installing Claude Code, wiring up the MATLAB MCP that powers the automatic run-debug loop above, and the Stata MCP.
 
 ## Installation (about 1 minute)
 
