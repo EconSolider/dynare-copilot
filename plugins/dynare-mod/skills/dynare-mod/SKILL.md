@@ -1,6 +1,6 @@
 ---
 name: dynare-mod
-description: 编写、运行、调试、修改和审查 Dynare .mod 文件，覆盖 DSGE/RBC/NK/HANK/OLG 等宏观模型全流程。以下场景必须触发：① 从零写新 .mod 或把论文方程翻成 Dynare 代码；② 复制某篇论文模型（"复制 Smets-Wouters 2007"、"按 GK 2011 写"）；③ 修改或扩展已有 .mod（加冲击/机制/模块/估计）；④ 调试 Dynare 报错（BK 不满足、稳态求不出、奇异雅可比、时序错）；⑤ 搭建 stoch_simul / perfect_foresight / estimation / method_of_moments / shock_decomposition / ramsey_model / occbin / identification 等实验；⑥ 出发表级 IRF 图（AER/JME 风格 PDF）。用户贴出模型方程、提到 .mod 文件或"用 Dynare 跑"时即触发——不要凭记忆写 Dynare，时序与块语法极易写错。
+description: Write, run, debug, modify, and review Dynare .mod files across the full lifecycle of macro models (DSGE/RBC/NK/HANK/OLG). MUST trigger when: ① writing a new .mod from scratch or translating paper equations into Dynare code; ② replicating a published model ("replicate Smets-Wouters 2007", "code it per GK 2011"); ③ modifying or extending an existing .mod (adding shocks/mechanisms/blocks/estimation); ④ debugging Dynare errors (Blanchard-Kahn not satisfied, no steady state found, singular Jacobian, timing mistakes); ⑤ setting up stoch_simul / perfect_foresight / estimation / method_of_moments / shock_decomposition / ramsey_model / occbin / identification experiments; ⑥ producing publication-grade IRF figures (AER/JME-style PDF). Trigger whenever the user pastes model equations, mentions a .mod file, or says "run it in Dynare" — do not write Dynare from memory, as timing conventions and block syntax are extremely error-prone.
 ---
 # 编写与调试 Dynare .mod 文件
 
