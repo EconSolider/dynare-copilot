@@ -43,6 +43,17 @@
 
 > 把 `EconSolider/dynare-mod` 换成本仓库实际的 `用户名/仓库名`，`@econsolider-skills` 是固定的市场名，不用改。
 
+## 更新
+
+装好后想拉最新版，在 Claude Code 里**逐行粘贴**下面两条命令：
+
+```text
+/plugin marketplace update econsolider-skills
+/plugin update dynare-mod@econsolider-skills
+```
+
+第一行从仓库刷新插件市场的元数据，第二行把已安装的插件升级到最新发布的 `version`。如果没有立即生效，重启一次 Claude Code 即可。
+
 ## 快速上手
 
 装好后，在 Claude Code 里**直接用中文或英文描述任务**即可，它会自动启用：

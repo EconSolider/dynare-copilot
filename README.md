@@ -45,6 +45,17 @@ First install Claude Code. See the [official installation guide](https://docs.cl
 
 > Replace `EconSolider/dynare-mod` with the actual `username/repository` for this repository. `@econsolider-skills` is the fixed marketplace name and does not need to be changed.
 
+## Update
+
+To pull the latest version after installing, run these two commands in Claude Code, **one line at a time**:
+
+```text
+/plugin marketplace update econsolider-skills
+/plugin update dynare-mod@econsolider-skills
+```
+
+The first line refreshes the marketplace metadata from the repository; the second line upgrades the installed plugin to the latest released `version`. Restart Claude Code if the change doesn't take effect immediately.
+
 ## Quick Start
 
 After installation, **describe the task directly in Chinese or English** inside Claude Code. The plugin will be enabled automatically:
