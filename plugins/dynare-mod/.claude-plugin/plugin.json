@@ -1,13 +1,13 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "dynare-mod",
-  "description": "Write, run, debug, and review Dynare .mod model files (DSGE / RBC / New Keynesian / HANK / optimal policy / estimation / occasionally binding constraints, and more). Bundles the skill of the same name.",
+  "name": "dynare-copilot",
+  "description": "Turn macro intuition into validated Dynare .mod files — a coding agent skill for DSGE modeling.",
   "version": "1.0.0",
   "author": {
     "name": "EconSolider",
     "url": "https://github.com/EconSolider"
   },
-  "homepage": "https://github.com/EconSolider/dynare-mod",
+  "homepage": "https://github.com/EconSolider/dynare-copilot",
   "license": "MIT",
-  "keywords": ["dynare", "dsge", "rbc", "new-keynesian", "hank", "macroeconomics"]
+  "keywords": ["dynare", "dsge", "macroeconomics", "claude-code", "claude-skill", "matlab", "codex-skill", "ai-agent", "rbc", "new-keynesian", "hank"]
 }

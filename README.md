@@ -1,4 +1,4 @@
-# dynare-mod
+# dynare-copilot
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
@@ -60,12 +60,12 @@ First install Claude Code. See the [official installation guide](https://docs.cl
 2. In the Claude Code conversation, paste the following two commands **one line at a time**:
 
    ```text
-   /plugin marketplace add EconSolider/dynare-mod
-   /plugin install dynare-mod@econsolider-skills
+   /plugin marketplace add EconSolider/dynare-copilot
+   /plugin install dynare-copilot@econsolider-skills
    ```
 
-   The first line registers this repository as a plugin marketplace, and the second line installs the `dynare-mod` plugin.
-3. Done. If typing `/` shows dynare-mod in the menu, the installation succeeded.
+   The first line registers this repository as a plugin marketplace, and the second line installs the `dynare-copilot` plugin.
+3. Done. If typing `/` shows the dynare-mod skill in the menu, the installation succeeded.
 
 ## Update
 
@@ -73,7 +73,7 @@ To pull the latest version after installing, run these two commands in Claude Co
 
 ```text
 /plugin marketplace update econsolider-skills
-/plugin update dynare-mod@econsolider-skills
+/plugin update dynare-copilot@econsolider-skills
 ```
 
 The first line refreshes the marketplace metadata from the repository; the second line upgrades the installed plugin to the latest released `version`. Restart Claude Code if the change doesn't take effect immediately.
@@ -93,7 +93,7 @@ After that, each time you start Claude Code it pulls the latest version on its o
 To remove the plugin, run in Claude Code:
 
 ```text
-/plugin uninstall dynare-mod@econsolider-skills
+/plugin uninstall dynare-copilot@econsolider-skills
 ```
 
 This removes the plugin while keeping the marketplace registered, so you can reinstall or update later without re-adding it.

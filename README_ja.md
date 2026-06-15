@@ -1,4 +1,4 @@
-# dynare-mod
+# dynare-copilot
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
@@ -60,12 +60,12 @@
 2. Claude Code の会話内で、次の 2 つのコマンドを**1 行ずつ**貼り付けます。
 
    ```text
-   /plugin marketplace add EconSolider/dynare-mod
-   /plugin install dynare-mod@econsolider-skills
+   /plugin marketplace add EconSolider/dynare-copilot
+   /plugin install dynare-copilot@econsolider-skills
    ```
 
-   1 行目はこのリポジトリをプラグインマーケットプレイスとして登録し、2 行目が `dynare-mod` プラグインをインストールします。
-3. 完了です。`/` を入力してメニューに dynare-mod が表示されれば、インストール成功です。
+   1 行目はこのリポジトリをプラグインマーケットプレイスとして登録し、2 行目が `dynare-copilot` プラグインをインストールします。
+3. 完了です。`/` を入力してメニューに dynare-mod skill が表示されれば、インストール成功です。
 
 ## アップデート
 
@@ -73,7 +73,7 @@
 
 ```text
 /plugin marketplace update econsolider-skills
-/plugin update dynare-mod@econsolider-skills
+/plugin update dynare-copilot@econsolider-skills
 ```
 
 1 行目はマーケットプレイスのメタデータをリポジトリから更新し、2 行目はインストール済みプラグインを最新リリースの `version` にアップグレードします。すぐに反映されない場合は Claude Code を再起動してください。
@@ -93,7 +93,7 @@
 プラグインを削除するには、Claude Code で次を実行します。
 
 ```text
-/plugin uninstall dynare-mod@econsolider-skills
+/plugin uninstall dynare-copilot@econsolider-skills
 ```
 
 これはマーケットプレイスの登録を残したままプラグインのみを削除するので、再追加なしで再インストールやアップデートができます。

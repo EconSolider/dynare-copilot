@@ -1,4 +1,4 @@
-# dynare-mod
+# dynare-copilot
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2)
@@ -60,12 +60,12 @@
 2. 在 Claude Code 的对话里**逐行粘贴**下面两条命令：
 
    ```text
-   /plugin marketplace add EconSolider/dynare-mod
-   /plugin install dynare-mod@econsolider-skills
+   /plugin marketplace add EconSolider/dynare-copilot
+   /plugin install dynare-copilot@econsolider-skills
    ```
 
-   第一行把本仓库注册为插件市场，第二行安装 `dynare-mod` 插件。
-3. 完成。输入 `/` 能在菜单里看到 dynare-mod 就说明装好了。
+   第一行把本仓库注册为插件市场，第二行安装 `dynare-copilot` 插件。
+3. 完成。输入 `/` 能在菜单里看到 dynare-mod skill 就说明装好了。
 
 ## 更新
 
@@ -73,7 +73,7 @@
 
 ```text
 /plugin marketplace update econsolider-skills
-/plugin update dynare-mod@econsolider-skills
+/plugin update dynare-copilot@econsolider-skills
 ```
 
 第一行从仓库刷新插件市场的元数据，第二行把已安装的插件升级到最新发布的 `version`。如果没有立即生效，重启一次 Claude Code 即可。
@@ -93,7 +93,7 @@
 在 Claude Code 里运行即可卸载插件：
 
 ```text
-/plugin uninstall dynare-mod@econsolider-skills
+/plugin uninstall dynare-copilot@econsolider-skills
 ```
 
 这样只卸载插件、保留市场注册，之后想重装或更新都不必再重新添加市场。
