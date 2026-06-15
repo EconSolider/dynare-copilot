@@ -32,6 +32,7 @@
 - [Output Structure](#output-structure)
 - [Repository Structure](#repository-structure)
 - [Advanced](#advanced)
+- [Join the Project](#join-the-project)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -281,6 +282,10 @@ To publish an update, push a commit. Users can then run `/plugin marketplace upd
 The Dynare / MATLAB paths used for automatic execution are configured in `references/workflow-detail.md`. The default example is `C:\dynare\7.1`; change it according to your actual installation.
 
 </details>
+
+## Join the Project
+
+This is a fast-evolving project. We warmly welcome contributions to development and usage feedback.
 
 ## Acknowledgements
 

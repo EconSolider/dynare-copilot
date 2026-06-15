@@ -32,6 +32,7 @@
 - [产出结构](#产出结构)
 - [仓库结构](#仓库结构)
 - [进阶](#进阶)
+- [参与共建](#参与共建)
 - [致谢](#致谢)
 - [License](#license)
 
@@ -281,6 +282,10 @@ claude plugin validate ./plugins/dynare-mod   # 校验 plugin.json 和 skill 元
 自动运行用到的 Dynare / MATLAB 路径在 `references/workflow-detail.md` 里配置，默认示例为 `C:\dynare\7.1`，按你的实际安装修改。
 
 </details>
+
+## 参与共建
+
+这是一个正在快速迭代的项目。我们热情欢迎加入开发、反馈使用意见。
 
 ## 致谢
 
