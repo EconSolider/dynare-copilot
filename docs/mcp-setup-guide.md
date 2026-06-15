@@ -273,7 +273,7 @@ In a Claude Code session, you can give instructions in plain language, for examp
 
 Claude Code uses MCP tools to **actually run** MATLAB / Stata, get the real output, and then analyze it for you — instead of guessing code and making up results.
 
-> 💡 If you do **DSGE / macro modeling**, this repo's `dynare-mod` skill works best paired with the MATLAB MCP: the MCP runs Dynare, while the skill turns your economic intuition into a working `.mod` file. See the [README](../README.md) for installation.
+> 💡 If you do **DSGE / macro modeling**, this repo's `dynare-copilot` skill works best paired with the MATLAB MCP: the MCP runs Dynare, while the skill turns your economic intuition into a working `.mod` file. See the [README](../README.md) for installation.
 
 ---
 

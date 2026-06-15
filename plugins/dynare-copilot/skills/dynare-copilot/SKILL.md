@@ -1,5 +1,5 @@
 ---
-name: dynare-mod
+name: dynare-copilot
 description: Write, run, debug, modify, and review Dynare .mod files across the full lifecycle of macro models (DSGE/RBC/NK/HANK/OLG). MUST trigger when: ① writing a new .mod from scratch or translating paper equations into Dynare code; ② replicating a published model ("replicate Smets-Wouters 2007", "code it per GK 2011"); ③ modifying or extending an existing .mod (adding shocks/mechanisms/blocks/estimation); ④ debugging Dynare errors (Blanchard-Kahn not satisfied, no steady state found, singular Jacobian, timing mistakes); ⑤ setting up stoch_simul / perfect_foresight / estimation / method_of_moments / shock_decomposition / ramsey_model / occbin / identification experiments; ⑥ producing publication-grade IRF figures (AER/JME-style PDF). Trigger whenever the user pastes model equations, mentions a .mod file, or says "run it in Dynare" — do not write Dynare from memory, as timing conventions and block syntax are extremely error-prone.
 ---
 # 编写与调试 Dynare .mod 文件

@@ -273,7 +273,7 @@ claude mcp remove stata-mcp
 
 Claude Code 会通过 MCP 工具**真的去运行** MATLAB / Stata，拿到真实输出，再帮你分析——而不是凭空猜代码、编结果。
 
-> 💡 如果你做的是 **DSGE / 宏观建模**，本仓库的 `dynare-mod` skill 配合 MATLAB MCP 使用效果最佳：MCP 负责跑 Dynare，skill 负责把你的经济直觉变成跑得通的 `.mod` 文件。安装方式见 [README](../README_zh-CN.md)。
+> 💡 如果你做的是 **DSGE / 宏观建模**，本仓库的 `dynare-copilot` skill 配合 MATLAB MCP 使用效果最佳：MCP 负责跑 Dynare，skill 负责把你的经济直觉变成跑得通的 `.mod` 文件。安装方式见 [README](../README_zh-CN.md)。
 
 ---
 

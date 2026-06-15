@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "dynare-copilot",
-      "source": "./plugins/dynare-mod",
+      "source": "./plugins/dynare-copilot",
       "description": "Turn macro intuition into validated Dynare .mod files — a coding agent skill for DSGE modeling.",
       "category": "development",
       "keywords": ["dynare", "dsge", "macroeconomics", "claude-code", "claude-skill", "matlab", "codex-skill", "ai-agent", "rbc", "new-keynesian"]

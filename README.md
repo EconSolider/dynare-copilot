@@ -65,7 +65,7 @@ First install Claude Code. See the [official installation guide](https://docs.cl
    ```
 
    The first line registers this repository as a plugin marketplace, and the second line installs the `dynare-copilot` plugin.
-3. Done. If typing `/` shows the dynare-mod skill in the menu, the installation succeeded.
+3. Done. If typing `/` shows the dynare-copilot skill in the menu, the installation succeeded.
 
 ## Update
 
@@ -98,7 +98,7 @@ To remove the plugin, run in Claude Code:
 
 This removes the plugin while keeping the marketplace registered, so you can reinstall or update later without re-adding it.
 
-> If you installed manually (the Advanced method below), there is no plugin to uninstall — just delete the copied directory: `rm -rf ~/.claude/skills/dynare-mod` (or the project-local `.claude/skills/dynare-mod/`).
+> If you installed manually (the Advanced method below), there is no plugin to uninstall — just delete the copied directory: `rm -rf ~/.claude/skills/dynare-copilot` (or the project-local `.claude/skills/dynare-copilot/`).
 
 ## Quick Start
 
@@ -110,7 +110,7 @@ After installation, **describe the task directly in Chinese or English** inside 
 - "My mod reports `Blanchard-Kahn conditions are not satisfied`; help me check the timing."
 - "Plot journal-quality IRFs for these variables, comparing baseline vs high-stickiness scenarios, and export them as a PDF."
 
-You can also invoke it manually with `/dynare-mod:dynare-mod`.
+You can also invoke it manually with `/dynare-copilot:dynare-copilot`.
 
 The skill bundles two reference libraries under `references/` — 149 MMB replication models for economic structure and 89 Pfeifer examples for Dynare syntax — plus your own growing model archive. When asked to build a model it searches these local libraries first, and only falls back to web search for paper-specific details neither covers. See [How It Works](#how-it-works) for the lookup logic, and [Repository Structure](#repository-structure) for what each library contains.
 
@@ -194,9 +194,9 @@ On cleanup it removes only Dynare's auto-generated artifacts (`+<model>/`, `Outp
 
 ```text
 .claude-plugin/marketplace.json     # Plugin marketplace directory
-plugins/dynare-mod/                  # Plugin
+plugins/dynare-copilot/                  # Plugin
   └── .claude-plugin/plugin.json     # Plugin manifest
-  └── skills/dynare-mod/             # Bundled skill
+  └── skills/dynare-copilot/             # Bundled skill
       ├── SKILL.md                   # Main file: hard rules + task routing + main workflow
       └── references/                # Detail files loaded on demand + model catalogs + plotting & run scripts
           ├── catalog.csv            # Index of 149 MMB replication models (model structure reference)
@@ -257,10 +257,10 @@ paper-candidates/                    # Candidate papers shortlisted for future i
 Copy the skill directory into your personal skills directory; the plugin marketplace is not required:
 
 ```bash
-cp -r plugins/dynare-mod/skills/dynare-mod ~/.claude/skills/
+cp -r plugins/dynare-copilot/skills/dynare-copilot ~/.claude/skills/
 ```
 
-After creating `~/.claude/skills/` for the first time, restart Claude Code. To use it for a single project only, place it under that project's `.claude/skills/dynare-mod/`.
+After creating `~/.claude/skills/` for the first time, restart Claude Code. To use it for a single project only, place it under that project's `.claude/skills/dynare-copilot/`.
 
 </details>
 
@@ -269,7 +269,7 @@ After creating `~/.claude/skills/` for the first time, restart Claude Code. To u
 
 ```bash
 claude plugin validate .                      # Validate marketplace.json
-claude plugin validate ./plugins/dynare-mod   # Validate plugin.json and skill metadata
+claude plugin validate ./plugins/dynare-copilot   # Validate plugin.json and skill metadata
 ```
 
 To publish an update, push a commit. Users can then run `/plugin marketplace update` to pull the latest version. Remember to increment `version` in `plugin.json` for every release.
