@@ -23,9 +23,8 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 - **闸门1：写任何 var 声明 / 方程之前。** 用户已给全结构信息（论文/完整方程/已答完所有分叉）、
   或任务是对已有 .mod 修改/排错 → **直接跳过**；否则把悬空的结构选择一次性抛给用户（带推荐），
   停下等回答。具体跳过条件见第1.5步。
-- **闸门2：动 .mod 之前，仅含非标准机制时。** 含 TANK/HANK/金融摩擦/开放经济/最优政策/OccBin 等
-  非标准机制 → 先写推导 md、交付用户、停下确认；教科书标准模型（基础 RBC/三方程 NK）且信息充分、
-  或修改类任务 → **直接跳过推导**。具体条件见阶段1。
+- **闸门2：动 .mod 之前，默认都要先写推导。** 除两种情况外一律先写推导 md、交付用户、停下确认：
+  ① 纯排错或对已有 .mod 的修改/扩展（走 §2.8）；② 教科书标准模型（基础 RBC/三方程 NK）。其余一律写——含非标准机制、**复现/复制任何论文模型**、用户给方程需核对自洽性等。具体条件见阶段1。
 
 到了闸门且条件触发时：**停下 → 把待定项连同推荐输出 → 结束本轮 → 等用户回答**（不替用户拟答案、
 不绕过提问继续写）。
@@ -56,7 +55,7 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 
 | #  | 规则                                                                                                                                                                                                                                                    | 正例 / 反例                                                                                             |
 | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| R1 | **注释一律用 §0 选定语言；注释以外一律英文/ASCII**。覆盖本 skill 生成的**全部代码文件**——`.mod` 与配套 `.m`（run 脚本/稳态文件/绘图封装）注释同规则。`long_name`、`[name=]`、标识符、字符串禁止非 ASCII                                                                                                                                       | ✅`[name='Euler equation']` 上方加该语言注释；❌ `[name='欧拉方程']` 或 `[name='オイラー方程式']` |
+| R1 | **注释一律用 §0 选定语言；注释以外一律英文/ASCII**。覆盖本 skill 生成的**全部代码文件**——`.mod` 与配套 `.m`（run 脚本/稳态文件/绘图封装）注释同规则。`long_name`、`[name=]`、标识符、字符串禁止非 ASCII                          | ✅`[name='Euler equation']` 上方加该语言注释；❌ `[name='欧拉方程']` 或 `[name='オイラー方程式']` |
 | R2 | **时序 = 决定期**（期末存量）。状态变量当期带滞后；运动律左边是期末存量                                                                                                                                                                           | ✅`y=...k(-1)...` 与 `k=invest+(1-delta)*k(-1);`；❌ 生产函数里写 `k`                             |
 | R3 | **varexo 只放创新项**；持续过程（AR 等）是内生变量                                                                                                                                                                                                | ✅`var z; varexo eps_z;`；❌ `varexo z;`                                                            |
 | R4 | **方程数 = 内生变量数**（例外：`ramsey_model`/`discretionary_policy` 少 1 条）                                                                                                                                                                | 写完模型块数一遍                                                                                        |
@@ -67,33 +66,33 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 
 ## §2 任务路由（判型 → 读对应参考，然后才动笔）
 
-| 信号词                                                                                                                                 | 任务                             | 命令族                                                                                | 必读参考                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| IRF、矩、方差分解、"模拟这个 DSGE/RBC/NK"                                                                                              | 随机模拟                         | `stoch_simul`                                                                       | `references/stochastic-simulation.md`                                    |
-| 风险溢价/资产定价、不确定性（波动率）冲击、预防性储蓄、二/三阶福利、Epstein-Zin 递归偏好、GIRF、随机/遍历稳态、`order=2/3`、pruning | 高阶摄动                         | `stoch_simul(order=2/3)`                                                             | `references/higher-order.md`                                             |
-| 过渡路径、永久冲击、确定性、完全预见                                                                                                   | 完全预见                         | `perfect_foresight_*`                                                               | `references/perfect-foresight.md`                                        |
-| 估计、贝叶斯、先验、MCMC、极大似然、数据、varobs                                                                                       | 估计                             | `estimation`                                                                        | `references/estimation.md` + steady-state.md                             |
-| 矩方法、GMM、SMM、模拟矩、IRF 匹配、匹配矩校准                                                                                         | 矩方法估计                       | `method_of_moments`                                                                 | `references/moments-method.md` + estimation.md                           |
-| 冲击分解、历史分解、哪个冲击驱动、实时分解、初始条件分解                                                                               | 冲击分解                         | `shock_decomposition`/`realtime_*`/`plot_*`/`initial_condition_decomposition` | `references/shock-decomposition.md`                                      |
-| 预测、外推、条件预测、约束某变量未来路径、扇形图                                                                                       | 预测                             | `forecast`/`conditional_forecast`/`conditional_forecast_paths`                  | `references/forecasting.md`                                              |
-| 识别、能否识别、估计前查识别、敏感性/GSA、IRF/矩校准先验                                                                               | 识别与敏感性                     | `identification`/`sensitivity`                                                    | `references/identification.md`                                           |
-| 区制切换、Markov switching、结构 BVAR、SBVAR、SWZ、时变波动/系数                                                                       | MS-SBVAR                         | `markov_switching`/`svar`/`sbvar`/`ms_*`                                      | `references/ms-sbvar.md`                                                 |
-| 异质主体、HANK、Krusell-Smith、连续分布家庭、SSJ、一/两资产 HANK                                                                       | 异质性                           | `heterogeneity_dimension`/`heterogeneity_*`                                       | `references/heterogeneity.md`                                            |
-| 最优政策、Ramsey、相机抉择、福利、简单规则                                                                                             | 最优政策                         | `ramsey_model`/`discretionary_policy`/`osr`                                     | `references/optimal-policy.md`                                           |
-| ZLB/有效下限、抵押/借贷约束、不可逆投资、偶尔约束                                                                                      | 偶尔约束                         | `occbin_*` 或完全预见 `lmmcp`/`⟂`                                              | `references/occbin.md`（确定性单约束亦见 perfect-foresight.md「lmmcp」） |
-| —（几乎都涉及）                                                                                                                       | 稳态                             | `steady_state_model`/`initval`                                                    | `references/steady-state.md`                                             |
-| 多国、多部门、变体切换、@#、循环生成方程                                                                                               | 宏处理器                         | `@#define/@#if/@#for`                                                               | `references/macro-processor.md`                                          |
-| 报错、跑不通、BK 不满足、稳态求不出、**结果数值可疑**（无报错但数不对劲、乘数/IRF 量级或符号存疑）                                     | 排错                             | 诊断命令                                                                              | `references/debugging.md`                                                |
-| 已踩过的具体坑速查（先扫实战日志命中现成修法）、自己新解决报错后 encode-back 回写                                                       | 排错日志                         | —                                                                                    | `references/known-issues.md`                                            |
-| 对**已有 .mod** 修改/扩展（加冲击/机制/估计/OSR/切换价格黏性等）、"帮我改这个文件"                                               | 存量文件修改                     | —                                                                                    | **走 §2.8，跳过建模主流程**                                         |
-| **凡产出 IRF 即默认出图**（见 §3 阶段5b）；用户提到好看的图、顶刊/发表级 IRF/时间序列、导出 PDF、多情景/多冲击对比、置信带时同样读此参考 | 发表级绘图（**默认产出**） | IRF→`plot_irfs_pub.m`；模拟序列/过渡路径→`plot_series_pub.m`（均替代自带画图）   | `references/publication-plots.md`                                        |
-| 复制某论文模型、"要个带 X 特征的模型"、不确定有无现成实现 →**建模/复制类任务落笔前必做**                                        | 本地双库检索           | ① grep `catalog.csv`（模型结构）→ 读 `examples/<ID>.mod`；② grep `catalog-code.csv`（编程逻辑）→ 读 `examples-code/<Folder>/<ID>.mod`；两库无命中再 grep `model-archive-catalog.csv`  | `references/catalog-lookup.md`                                           |
-| 需要现成骨架                                                                                                                           | 模板                             | —                                                                                    | `references/templates.md`                                                |
-| 主流程任一步的细节（暂停点/检索/分阶段构建/闭环/骨架/细则）                                                                            | 流程                             | —                                                                                    | `references/workflow-detail.md`                                          |
-| 求解慢、反复改图/改归一化要重算、缓存 oo_、多模型/多情景对比（HANK vs RANK）、求解与分析解耦、迭代效率                       | MATLAB 侧工作流                  | —                                                                                    | `references/matlab-workflow.md`                                          |
-| 给用户可一键复跑的运行脚本、把 .mod+稳态.m+绘图代码串成总装、**让绘图/产出代码被自动调用**、有特定 main 的项目编排、按实验类型（IRF/模拟/过渡路径/矩）选产出 | 运行脚本（**默认产出**） | `run_<模型名>.m`                                                                   | `references/run-script.md`                                              |
-| 写阶段1 推导文件的结构与公式规范                                                                                                       | 推导规范                         | —                                                                                    | `references/derivation-style.md`                                         |
-| 各主体最优化问题/FOC 怎么推、有哪些会改方程结构的变体                                                                                  | 建模逻辑                         | —                                                                                    | `references/modeling-blocks.md`                                          |
+| 信号词                                                                                                                                                             | 任务                             | 命令族                                                                                                                                                                                             | 必读参考                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| IRF、矩、方差分解、"模拟这个 DSGE/RBC/NK"                                                                                                                          | 随机模拟                         | `stoch_simul`                                                                                                                                                                                    | `references/stochastic-simulation.md`                                    |
+| 风险溢价/资产定价、不确定性（波动率）冲击、预防性储蓄、二/三阶福利、Epstein-Zin 递归偏好、GIRF、随机/遍历稳态、`order=2/3`、pruning                              | 高阶摄动                         | `stoch_simul(order=2/3)`                                                                                                                                                                         | `references/higher-order.md`                                             |
+| 过渡路径、永久冲击、确定性、完全预见                                                                                                                               | 完全预见                         | `perfect_foresight_*`                                                                                                                                                                            | `references/perfect-foresight.md`                                        |
+| 估计、贝叶斯、先验、MCMC、极大似然、数据、varobs                                                                                                                   | 估计                             | `estimation`                                                                                                                                                                                     | `references/estimation.md` + steady-state.md                             |
+| 矩方法、GMM、SMM、模拟矩、IRF 匹配、匹配矩校准                                                                                                                     | 矩方法估计                       | `method_of_moments`                                                                                                                                                                              | `references/moments-method.md` + estimation.md                           |
+| 冲击分解、历史分解、哪个冲击驱动、实时分解、初始条件分解                                                                                                           | 冲击分解                         | `shock_decomposition`/`realtime_*`/`plot_*`/`initial_condition_decomposition`                                                                                                              | `references/shock-decomposition.md`                                      |
+| 预测、外推、条件预测、约束某变量未来路径、扇形图                                                                                                                   | 预测                             | `forecast`/`conditional_forecast`/`conditional_forecast_paths`                                                                                                                               | `references/forecasting.md`                                              |
+| 识别、能否识别、估计前查识别、敏感性/GSA、IRF/矩校准先验                                                                                                           | 识别与敏感性                     | `identification`/`sensitivity`                                                                                                                                                                 | `references/identification.md`                                           |
+| 区制切换、Markov switching、结构 BVAR、SBVAR、SWZ、时变波动/系数                                                                                                   | MS-SBVAR                         | `markov_switching`/`svar`/`sbvar`/`ms_*`                                                                                                                                                   | `references/ms-sbvar.md`                                                 |
+| 异质主体、HANK、Krusell-Smith、连续分布家庭、SSJ、一/两资产 HANK                                                                                                   | 异质性                           | `heterogeneity_dimension`/`heterogeneity_*`                                                                                                                                                    | `references/heterogeneity.md`                                            |
+| 最优政策、Ramsey、相机抉择、福利、简单规则                                                                                                                         | 最优政策                         | `ramsey_model`/`discretionary_policy`/`osr`                                                                                                                                                  | `references/optimal-policy.md`                                           |
+| ZLB/有效下限、抵押/借贷约束、不可逆投资、偶尔约束                                                                                                                  | 偶尔约束                         | `occbin_*` 或完全预见 `lmmcp`/`⟂`                                                                                                                                                           | `references/occbin.md`（确定性单约束亦见 perfect-foresight.md「lmmcp」） |
+| —（几乎都涉及）                                                                                                                                                   | 稳态                             | `steady_state_model`/`initval`                                                                                                                                                                 | `references/steady-state.md`                                             |
+| 多国、多部门、变体切换、@#、循环生成方程                                                                                                                           | 宏处理器                         | `@#define/@#if/@#for`                                                                                                                                                                            | `references/macro-processor.md`                                          |
+| 报错、跑不通、BK 不满足、稳态求不出、**结果数值可疑**（无报错但数不对劲、乘数/IRF 量级或符号存疑）                                                           | 排错                             | 诊断命令                                                                                                                                                                                           | `references/debugging.md`                                                |
+| 已踩过的具体坑速查（先扫实战日志命中现成修法）、自己新解决报错后 encode-back 回写                                                                                  | 排错日志                         | —                                                                                                                                                                                                 | `references/known-issues.md`                                             |
+| 对**已有 .mod** 修改/扩展（加冲击/机制/估计/OSR/切换价格黏性等）、"帮我改这个文件"                                                                           | 存量文件修改                     | —                                                                                                                                                                                                 | **走 §2.8，跳过建模主流程**                                         |
+| **凡产出 IRF 即默认出图**（见 §3 阶段5b）；用户提到好看的图、顶刊/发表级 IRF/时间序列、导出 PDF、多情景/多冲击对比、置信带时同样读此参考                    | 发表级绘图（**默认产出**） | IRF→`plot_irfs_pub.m`；模拟序列/过渡路径→`plot_series_pub.m`（均替代自带画图）                                                                                                               | `references/publication-plots.md`                                        |
+| 复制某论文模型、"要个带 X 特征的模型"、不确定有无现成实现 →**建模/复制类任务落笔前必做**                                                                    | 本地双库检索                     | ① grep `catalog.csv`（模型结构）→ 读 `examples/<ID>.mod`；② grep `catalog-code.csv`（编程逻辑）→ 读 `examples-code/<Folder>/<ID>.mod`；两库无命中再 grep `model-archive-catalog.csv` | `references/catalog-lookup.md`                                           |
+| 需要现成骨架                                                                                                                                                       | 模板                             | —                                                                                                                                                                                                 | `references/templates.md`                                                |
+| 主流程任一步的细节（暂停点/检索/分阶段构建/闭环/骨架/细则）                                                                                                        | 流程                             | —                                                                                                                                                                                                 | `references/workflow-detail.md`                                          |
+| 求解慢、反复改图/改归一化要重算、缓存 oo_、多模型/多情景对比（HANK vs RANK）、求解与分析解耦、迭代效率                                                             | MATLAB 侧工作流                  | —                                                                                                                                                                                                 | `references/matlab-workflow.md`                                          |
+| 给用户可一键复跑的运行脚本、把 .mod+稳态.m+绘图代码串成总装、**让绘图/产出代码被自动调用**、有特定 main 的项目编排、按实验类型（IRF/模拟/过渡路径/矩）选产出 | 运行脚本（**默认产出**）   | `run_<模型名>.m`                                                                                                                                                                                 | `references/run-script.md`                                               |
+| 写阶段1 推导文件的结构与公式规范                                                                                                                                   | 推导规范                         | —                                                                                                                                                                                                 | `references/derivation-style.md`                                         |
+| 各主体最优化问题/FOC 怎么推、有哪些会改方程结构的变体                                                                                                              | 建模逻辑                         | —                                                                                                                                                                                                 | `references/modeling-blocks.md`                                          |
 
 ## §2.5 本机 Dynare 7.1 官方示例速查（`C:\dynare\7.1\examples\`）
 
@@ -119,11 +118,11 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 
 **三类参照的分工（重要）**：三类来源服务于不同问题，不互相替代，通常组合使用：
 
-| 问题                                                              | 用哪个来源                              | 从中取什么                 | 绝不照搬                 |
-| ----------------------------------------------------------------- | --------------------------------------- | -------------------------- | ------------------------ |
-| **经济学怎么建模？** FOC 结构、机制设计、校准策略、时序约定 | 本地模型参考库 `catalog.csv` → web     | 方程逻辑、参数值、时序选择 | 代码形式（尤其线性化版） |
-| **Dynare 块/命令怎么写？** 语法、块格式、辅助函数接口       | 本地编程逻辑库 `catalog-code.csv`       | 命令选项、块结构、接口写法 | 方程内容/校准            |
-| **Dynare 内置命令细节？** 7.1 新选项、边缘语法确认          | 本机 Dynare 7.1 官方示例（上表）        | 语法细节、版本兼容性       | 方程内容/校准            |
+| 问题                                                              | 用哪个来源                            | 从中取什么                 | 绝不照搬                 |
+| ----------------------------------------------------------------- | ------------------------------------- | -------------------------- | ------------------------ |
+| **经济学怎么建模？** FOC 结构、机制设计、校准策略、时序约定 | 本地模型参考库 `catalog.csv` → web | 方程逻辑、参数值、时序选择 | 代码形式（尤其线性化版） |
+| **Dynare 块/命令怎么写？** 语法、块格式、辅助函数接口       | 本地编程逻辑库 `catalog-code.csv`   | 命令选项、块结构、接口写法 | 方程内容/校准            |
+| **Dynare 内置命令细节？** 7.1 新选项、边缘语法确认          | 本机 Dynare 7.1 官方示例（上表）      | 语法细节、版本兼容性       | 方程内容/校准            |
 
 官方示例语法与本机版本完全兼容；Read 前先确认路径存在（大小写敏感）。
 
@@ -224,7 +223,7 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
         一份选择题（附推荐）一次性发出，停下等回答。（R8 非线性形式不必问。）详见 workflow-detail.md。
 第2步   读参考：读 §2 指定的参考文件（含 steady-state.md）。
 第3步   知识判定（**本地库优先，web 兜底**）：第1.3步已在两套本地库命中相近实现 → web 降为只补
-        论文特定细节（精确校准来源/某条推导）；**不需要上网找 DSGE_mod**（已本地化）。
+        论文特定细节（精确校准来源/某条推导）。
         两套本地库均无相近模型、或对模型没十足把握（"大概记得"=不会）→
         实际调用 web 搜索查论文原文，提取方程组/校准/时序/冲击四样；缺关键信息 ⏸
         停下问用户。教科书标准件且有把握 → 直接第4步。详见 workflow-detail.md。
@@ -235,13 +234,15 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
         第2–5节 FOC、稳态照第6节），不凭记忆重推——更快更准、且与推导一致。**
 
         阶段1  ⏸ 先写推导（即闸门2）：
-               【满足任一条件 → 跳过，直接进阶段2】
-                 A. 用户明确说"不用推导"/"直接写 .mod"/"跳过推导"
-                 B. 是纯排错或对已有 .mod 的修改/扩展任务（走 §2.8）
-                 C. 教科书标准模型（基础 RBC 或三方程 NK）+ catalog 有直接命中
+               【仅以下两种情况 → 跳过，直接进阶段2】
+                 A. 是纯排错或对已有 .mod 的修改任务（走 §2.8）
+                 B. 教科书标准模型（基础 RBC 或三方程 NK）
                     → 省略推导，但在回复中一句话说明稳态解析解来源
-               【必须写推导】：含非标准机制（TANK/HANK/金融摩擦/开放经济/最优政策/OccBin 等），
-               或用户给出方程需核对自洽性时。
+               【其余一律必须写推导】：含非标准机制（TANK/HANK/金融摩擦/开放经济/最优政策/OccBin 等）、
+               用户给出方程需核对自洽性、**以及复现/复制任何论文模型**——后者尤其必须写：论文方程到
+               Dynare 的时序翻译最易错，推导 md 正是逐条对照翻译的蓝本。**即便用户说"不用推导/直接写
+               .mod/跳过推导"，只要不属于上面 A、B 两种情况，也仍要写**——推导是把经济学先做对的前置，
+               跳过它等于把数学错误留到跑出错误 IRF 时才暴露。
                产出 `<模型名>_derivation.md`，严格按 references/derivation-style.md 的八节结构
                （各主体 FOC 按 references/modeling-blocks.md 逐块推）。八节里有两处最易漏、漏则 BK 失败，
                务必硬查：**第4节 Walras 定律检查**——GE 中必有一条均衡条件冗余，找出它、注明"不进 model 块"
@@ -326,7 +327,7 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 4. 运行结果摘要（BK、稳态、矩/IRF/估计关键数字）；未能运行时给运行方式与预期输出；
 5. **发表级 IRF 图**（凡产出 IRF 时必交付，阶段5b 产出）：plot_irfs_pub 导出的 `fig_*.pdf`
    （论文可直接用的矢量图），正文嵌图或附图说明；未出图时一句话说明原因（无 IRF / 用户不要）；
-5b. **运行脚本 `run_<模型名>.m`**（阶段5c 产出，默认必交付）：自包含、可一键复跑的总装脚本，
+   5b. **运行脚本 `run_<模型名>.m`**（阶段5c 产出，默认必交付）：自包含、可一键复跑的总装脚本，
    把 `.mod`+稳态 `.m`+产出代码串起来并**自动调用绘图/产出代码**；说明用户需按本机改的那行 Dynare 路径；
    接进既有 `main` 时改为指明接入位置；用户明说不要时一句话说明跳过；
 6. 稳态为数值求解时，提醒确认 `resid;` 近 0、`check;` 通过；
