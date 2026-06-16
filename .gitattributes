@@ -1,0 +1,3 @@
+# Dynare model files use the .mod extension, which GitHub Linguist can
+# misclassify as AMPL. Classify them with the closest supported language.
+*.mod linguist-language=MATLAB
