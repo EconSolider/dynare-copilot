@@ -1,0 +1,74 @@
+{
+  "model_id": "NK_CGG02AL",
+  "status": "needs_review",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_CGG02AL",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_CGG02AL/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_CGG02AL/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_CGG02AL/worker_report.json"
+  ],
+  "shared_indexes_modified": false,
+  "git_actions": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "source_reading": {
+    "skill": ".agents/skills/mmb-model-archive-builder/SKILL.md",
+    "build_plan": "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    "style_guide": ".agents/skills/dynare-copilot/references/derivation-style.md",
+    "example_derivation": ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "model_index_row": "raw/mmb_mineru/model_index.csv:NK_CGG02AL",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "appendix_normalization_exists": false,
+    "implementation_cross_check_exists": false,
+    "raw_pdf_exists": true,
+    "raw_pdf_body_read": false
+  },
+  "proposed_catalog_row": {
+    "ModelID": "NK_CGG02AL",
+    "Task": "Monetary policy analysis in a two-country open-economy NK model",
+    "Paper": "A simple framework for international monetary policy analysis",
+    "Year": "2002",
+    "ModelType": "Open-economy NK, log-linear analytical",
+    "Economy": "Two-country",
+    "Category": "Monetary Policy",
+    "KeyFeatures": "Calvo prices; complete markets; terms of trade; Nash vs cooperation; cost-push shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "RawPDF": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "DOI": "10.3386/w8870",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_CGG02AL",
+    "paper_title": "A simple framework for international monetary policy analysis",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "status": "needs_review",
+    "formula_quality": "mostly_readable_with_ocr_flags",
+    "steady_state_quality": "log_linear_reference_only",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation; cooperative reduced-form formulas and policy coefficient notation need PDF check."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_validation": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_check": "passed",
+    "details": {
+      "unique_f_numbers_english": 48,
+      "unique_f_numbers_chinese": 48,
+      "total_f_references_english": 111,
+      "total_f_references_chinese": 111
+    }
+  },
+  "unresolved_issues": [
+    "OCR renders the policy-rule coefficient near paper Eqs. (61) and (77) as 9; derivation uses vartheta by inference.",
+    "The cooperative reduced-form inflation equation around paper Eq. (76) is not reliable enough from Markdown alone.",
+    "The source Markdown does not specify a standalone technology shock process.",
+    "No runtime validation was performed."
+  ]
+}

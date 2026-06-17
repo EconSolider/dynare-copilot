@@ -1,0 +1,56 @@
+{
+  "model_id": "US_BKM12",
+  "worker_status": "needs_review",
+  "archive_status": "draft_extracted",
+  "write_scope": "mmb-paper-derivations/derivations/US_BKM12/",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_BKM12/US_BKM12_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_BKM12/US_BKM12_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_BKM12/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_BKM12/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_BKM12/worker_report.json"
+  ],
+  "source_index_issue": null,
+  "runtime_validation": {
+    "performed": false,
+    "reason": "User explicitly instructed not to run Dynare; archive phase is derivation extraction only."
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_BKM12",
+    "Task": "mmb_derivation",
+    "Paper": "Reset Price Inflation and the Impact of Monetary Policy Shocks",
+    "Year": "2012",
+    "ModelType": "linearized bimonthly medium-scale New Keynesian DSGE based on Smets-Wouters",
+    "Economy": "United States",
+    "Category": "estimated DSGE; reset price inflation; sticky prices and wages",
+    "KeyFeatures": "bimonthly reestimated Smets-Wouters model; Calvo prices and wages; Kimball strategic complementarities; no price indexation in reset-price exercise; reset-inflation measurement equations; seven structural shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_bkm12__reset_price_inflation_and_the_impact_of_monetary_policy_shocks__f65547b5/full.md",
+    "RawPDF": "raw/mmb_papers/Reset Price Inflation and the Impact of Monetary Policy Shocks.pdf",
+    "DOI": "10.1257/aer.102.6.2798",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_BKM12",
+    "paper_title": "Reset Price Inflation and the Impact of Monetary Policy Shocks",
+    "source_full_md": "raw/mmb_mineru/runs/us_bkm12__reset_price_inflation_and_the_impact_of_monetary_policy_shocks__f65547b5/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Reset Price Inflation and the Impact of Monetary Policy Shocks.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_linearized",
+    "needs_human_review": true,
+    "notes": "First-pass extraction. Article body does not provide full nonlinear SW derivation; price-indexation treatment and Kimball curvature require source-level review. No Dynare runtime validation."
+  },
+  "unresolved_issues": [
+    "Exact Kimball goods and labor curvature terms are not printed in the paper body.",
+    "The paper-side no-price-indexation reset-price exercise needs reconciliation with the implementation's price Phillips curve and `cindp` parameter.",
+    "The derivation records reset-inflation measurement equations but does not reconstruct the simulation code that generates model reset inflation.",
+    "No Dynare runtime validation was performed."
+  ],
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_match": "passed: English and Chinese F-number sequences match"
+  }
+}

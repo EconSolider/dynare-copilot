@@ -1,0 +1,113 @@
+{
+  "model_id": "CA_ToTEM10",
+  "paper_title": "ToTEM: The Bank of Canada's New Canadian Projection Model",
+  "authors": [
+    "Murchison, Stephen",
+    "Rennison, Andrew"
+  ],
+  "year": "2006",
+  "journal_or_series": "Bank of Canada Technical Report",
+  "doi": "",
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "model_id": "CA_ToTEM10",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "ToTEM- The Bank of Canada's New Canadian Projection Model",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_ids": [
+      "1f1558b7-6221-43b1-bd72-0da851c17e30"
+    ],
+    "primary_full_md_path": "raw/mmb_mineru/runs/ca_totem10__totem_the_bank_of_canada_s_new_canadian_projection_model__1f1558b7/full.md",
+    "primary_full_md_sha256": "aa04b5100362b38a2bd9d2a3cb81538770ec75122336002e60331702640c936f",
+    "formula_quality": "narrative_source_limited; first_pass_needs_review"
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/ToTEM- The Bank of Canada's New Canadian Projection Model.pdf",
+    "exists": true,
+    "sha256": "cb9f417bf7e4e6edb118cd06abc194483df2d855e0cac6e8b24d09599862bb48",
+    "body_read": false,
+    "body_read_reason": "Not opened by default; Markdown source was sufficient for a source-limited first-pass structural map."
+  },
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/CA_ToTEM10.md",
+    "exists": false
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/CA_ToTEM10_rep.mod",
+    "exists": true,
+    "sha256": "a6c0cce85d616289822647c913e9342cb0156a121e2907ad3249316647a7608a",
+    "use_scope": "implementation_cross_check_only",
+    "notes": [
+      "Used to cross-check variable blocks, shock names, policy-rule variables, NFA/risk-premium block, and fiscal-rule variables.",
+      "Not treated as paper-side mathematical evidence."
+    ]
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/CA_ToTEM10/CA_ToTEM10_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/CA_ToTEM10/CA_ToTEM10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/CA_ToTEM10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/CA_ToTEM10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/CA_ToTEM10/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "CA_ToTEM10",
+    "paper_slug": "ca_totem10__totem_the_bank_of_canada_s_new_canadian_projection_model",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "1f1558b7-6221-43b1-bd72-0da851c17e30"
+    ],
+    "primary_source_title": "ToTEM- The Bank of Canada's New Canadian Projection Model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ca_totem10__totem_the_bank_of_canada_s_new_canadian_projection_model__1f1558b7/full.md",
+    "raw_pdf_path": "raw/mmb_papers/ToTEM- The Bank of Canada's New Canadian Projection Model.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ca_totem10__totem_the_bank_of_canada_s_new_canadian_projection_model__1f1558b7/full.md",
+      "sha256": "aa04b5100362b38a2bd9d2a3cb81538770ec75122336002e60331702640c936f",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/ToTEM- The Bank of Canada's New Canadian Projection Model.pdf",
+      "sha256": "cb9f417bf7e4e6edb118cd06abc194483df2d855e0cac6e8b24d09599862bb48",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/CA_ToTEM10.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/CA_ToTEM10_rep.mod",
+      "sha256": "a6c0cce85d616289822647c913e9342cb0156a121e2907ad3249316647a7608a",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/CA_ToTEM10/CA_ToTEM10_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/CA_ToTEM10/CA_ToTEM10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/CA_ToTEM10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/CA_ToTEM10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/CA_ToTEM10/worker_report.json"
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

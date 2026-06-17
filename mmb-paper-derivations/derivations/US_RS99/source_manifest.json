@@ -1,0 +1,92 @@
+{
+  "model_id": "US_RS99",
+  "status": "needs_review",
+  "paper": {
+    "title": "Policy rules for inflation targeting",
+    "authors": [
+      "Rudebusch, Glenn",
+      "Svensson, Lars E.O."
+    ],
+    "year": 1999,
+    "journal_or_series": "Journal of Economic Dynamics & Control 32, pp. 2512-2535",
+    "doi": "10.3386/w6512"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_RS99",
+    "paper_slug": "us_rs99__policy_rules_for_inflation_targeting",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "d61abd68-0095-43ac-84b0-e97284c3d016"
+    ],
+    "primary_source_title": "Policy rules for inflation targeting   ",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_rs99__policy_rules_for_inflation_targeting__d61abd68/full.md",
+      "sha256": "87e07f7a668232b817925f1059d25cbdc9d5ca95554d6dcea537901c754fe64f",
+      "exists": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Policy rules for inflation targeting   .pdf",
+      "sha256": "be98f046c7ae1cc0612046e0455fe0c6823bbe595943459149edbc2e5e61607b",
+      "exists": true,
+      "opened_for_formula_check": false,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_RS99.md",
+      "sha256": null,
+      "exists": false,
+      "source_role": "hand-normalized appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_RS99_rep.mod",
+      "sha256": "bf2b03ed87554f102d12004d92dc3a7bfe989d564213523f435fee5065fb4543",
+      "exists": true,
+      "used_as": "implementation_cross_check",
+      "notes": "Used only to identify the Rep-MMB selected rule coefficients, variables, shocks, and linear model form; not used as a paper-side mathematical source."
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "d61abd68-0095-43ac-84b0-e97284c3d016"
+    ],
+    "paper_slug": "us_rs99__policy_rules_for_inflation_targeting"
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_RS99/US_RS99_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_RS99/US_RS99_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_RS99/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_RS99/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_RS99/worker_report.json"
+  },
+  "source_sniff": {
+    "first_page_title_matches_index": true,
+    "first_page_title": "Policy Rules for Inflation Targeting",
+    "first_page_authors": "Glenn D. Rudebusch; Lars E.O. Svensson",
+    "notes": "First 80 Markdown lines identify the expected title/authors despite OCR mojibake in the word inflation and symbols."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Core equations (2.1), (2.2), loss function, state-space definitions, and simple policy-rule family are readable in MinerU Markdown.",
+      "The selected MMB rule coefficients are source-table matched and implementation-cross-checked, but the PDF body was not opened for equation-level verification.",
+      "Several OCR artifacts are present in prose and symbols, so first-pass formula uncertainty remains needs_review."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Dynare was intentionally not run. Current phase is private derivation extraction only."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper."
+}

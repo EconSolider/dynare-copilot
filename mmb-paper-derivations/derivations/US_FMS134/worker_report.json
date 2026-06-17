@@ -1,0 +1,65 @@
+{
+  "model_id": "US_FMS134",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_FMS134/US_FMS134_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_FMS134/US_FMS134_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_FMS134/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_FMS134/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_FMS134/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_FMS134",
+    "Task": "mmb_derivation",
+    "Paper": "A pitfall with estimated dsge-based government spending multipliers",
+    "Year": "2013",
+    "ModelType": "medium-scale linearized New Keynesian DSGE",
+    "Economy": "United States",
+    "Category": "fiscal_policy_government_spending",
+    "KeyFeatures": "Edgeworth complementarity; endogenous government spending rule; Smets-Wouters-type robustness model; habit formation; investment adjustment costs; variable capital utilization; Calvo prices and wages",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_fms134__a_pitfall_with_estimated_dsge_based_government_spending_multipliers__a04139a9/full.md",
+    "RawPDF": "raw/mmb_papers/A pitfall with estimated dsge-based government spending multipliers.pdf",
+    "DOI": "10.1257/mac.5.4.141",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_FMS134",
+    "paper_title": "A pitfall with estimated dsge-based government spending multipliers",
+    "source_full_md": "raw/mmb_mineru/runs/us_fms134__a_pitfall_with_estimated_dsge_based_government_spending_multipliers__a04139a9/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A pitfall with estimated dsge-based government spending multipliers.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass; medium-scale equations require appendix/source-package verification",
+    "steady_state_quality": "linear_model; steady-state ratios implementation_cross_check_only",
+    "needs_human_review": "true",
+    "notes": "Shared CSVs not edited by request. No Dynare run was performed."
+  },
+  "validation": [
+    {
+      "check": "source_manifest_json",
+      "status": "passed"
+    },
+    {
+      "check": "worker_report_json",
+      "status": "passed"
+    },
+    {
+      "check": "eight_english_sections",
+      "status": "passed"
+    },
+    {
+      "check": "matching_english_chinese_f_numbers",
+      "status": "passed"
+    },
+    {
+      "check": "git_diff_check",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "No local normalized appendix exists for complete FOC verification.",
+    "The paper describes the Smets-Wouters-type robustness model compactly and does not print all medium-scale equations in the MinerU Markdown.",
+    "Several dynamic FOCs and Phillips curves are marked implementation_cross_check/needs_review.",
+    "No runtime validation was performed."
+  ]
+}

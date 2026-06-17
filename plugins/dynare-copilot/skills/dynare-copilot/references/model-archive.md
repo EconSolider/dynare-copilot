@@ -27,18 +27,6 @@ references/
 
 全新安装时以上文件/目录均不存在，属正常情况——按下方"全新安装"处理。
 
-### MMB 论文推导语料
-
-`references/model-archive/mmb-paper-derivations/` 是独立的 MMB 论文推导语料库，不等同于上面的可运行
-`.mod` 模型存档。它保存按 MMB `model_id` 整理的中英文公式/推导 Markdown、提取说明和机器可读 manifest，
-并用 `metadata/model_metadata.csv` 与 `metadata/source_metadata.csv` 连接到私有 `dsge-evaluation` 中的
-MinerU 原文 Markdown/PDF provenance。
-
-注意：`dynare-copilot` 是公开仓库，论文全文 `full.md` 不在这里 vendored；metadata 只记录私有源仓库相对路径
-和 SHA256，用于检索、审计和本地复现。
-
----
-
 ## 一、检索（第1.3步执行）
 
 在 `catalog.csv`（149 篇 MMB）无相近命中后，检索模型存档库。**两条路都走**——既搜 catalog 文本，

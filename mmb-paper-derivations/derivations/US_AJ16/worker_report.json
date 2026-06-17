@@ -1,0 +1,52 @@
+{
+  "model_id": "US_AJ16",
+  "status": "needs_review",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/US_AJ16/US_AJ16_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_AJ16/US_AJ16_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_AJ16/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_AJ16/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_AJ16/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_AJ16",
+    "Task": "Derive source-backed model archive entry",
+    "Paper": "Financial intermediation, investment dynamics, and business cycle fluctuations",
+    "Year": "2016",
+    "ModelType": "log-linear estimated DSGE",
+    "Economy": "United States",
+    "Category": "Financial frictions / New Keynesian",
+    "KeyFeatures": "financial intermediation wedge; heterogeneous capital installation technologies; seller-keeper-buyer household members; financing gap share observable; sticky prices and wages",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_aj16__financial_intermediation_investment_dynamics_and_business_cycle_fluctuat__68cd7c2d/full.md",
+    "RawPDF": "raw/mmb_papers/Financial intermediation, investment dynamics, and business cycle fluctuations.pdf",
+    "DOI": "10.1257/aer.20120079",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_AJ16",
+    "paper_title": "Financial intermediation, investment dynamics, and business cycle fluctuations",
+    "source_full_md": "raw/mmb_mineru/runs/us_aj16__financial_intermediation_investment_dynamics_and_business_cycle_fluctuat__68cd7c2d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial intermediation, investment dynamics, and business cycle fluctuations.pdf",
+    "status": "needs_review",
+    "formula_quality": "medium",
+    "steady_state_quality": "partial",
+    "needs_human_review": true,
+    "notes": "Article body is usable, but online appendix derivations are absent; heterogeneous-agent integrals and wedge notation need review."
+  },
+  "validation": {
+    "dynare_run": false,
+    "runtime_validation": "not_performed",
+    "commands_to_run": [
+      "git diff --check",
+      "python3 -m json.tool mmb-paper-derivations/derivations/US_AJ16/source_manifest.json >/dev/null",
+      "python3 - <<'PY' ... archive section/F-number checks ... PY"
+    ]
+  },
+  "unresolved_issues": [
+    "Online appendix derivations unavailable in the source packet.",
+    "Heterogeneous-agent Euler equations and lognormal aggregate integrals need source-level review.",
+    "Paper wedge notation versus implementation log wedge convention should be reconciled.",
+    "Closed-form steady-state recursion is partial."
+  ]
+}

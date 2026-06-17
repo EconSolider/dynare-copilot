@@ -1,0 +1,77 @@
+{
+  "model_id": "US_GG24",
+  "status": "needs_review",
+  "paper": {
+    "title": "Oil Prices, Monetary Policy and Inflation Surges",
+    "authors": "Gagliardone, Giacomo; Gertler, Mark",
+    "year": 2024,
+    "journal_or_series": "Working Paper, January 2024",
+    "doi": "10.3386/w31263"
+  },
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_GG24",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "primary_source_title": "Oil Prices, Monetary Policy and Inflation Surges",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_gg24__oil_prices_monetary_policy_and_inflation_surges__65e1c546/full.md",
+      "sha256": "9998e75faaac7b7e7280ba6585208268d939c90a3ef4af91a67d7c6dfe45a232",
+      "role": "paper_side_primary_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Oil Prices, Monetary Policy and Inflation Surges.pdf",
+      "sha256": "ceaf2de396e21001c3fd9ff5059c5fe0f17c480aca644831f7f455c50dee0904",
+      "exists": true,
+      "role": "provenance_pdf_not_body_read"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_GG24.md",
+      "exists": false,
+      "role": "not_available"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_GG24_rep.mod",
+      "exists": false,
+      "role": "implementation_cross_check",
+      "dynare_run": false
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "65e1c546-8764-48d5-8571-e080685b9992"
+    ],
+    "selected_run_id": "65e1c546-8764-48d5-8571-e080685b9992",
+    "paper_slug": "us_gg24__oil_prices_monetary_policy_and_inflation_surges"
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_GG24/US_GG24_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_GG24/US_GG24_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_GG24/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_GG24/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_GG24/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "issues": [
+      "Habit marginal utility line has OCR noise in the source Markdown.",
+      "Nash wage expression was normalized from OCR and needs source-level formula review.",
+      "Taylor rule appears with an additive join in OCR despite being described as a standard smoothing rule; implementation should verify whether multiplication is intended.",
+      "Shock AR(1) processes for demand and matching shocks are inferred from text and appendix estimates rather than printed as main model equations.",
+      "No local implementation file was available for cross-checking variable coverage or timing."
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": "Dynare",
+    "status": "not_performed",
+    "reason": "Task contract explicitly says do not run Dynare."
+  },
+  "created_at": "2026-06-17"
+}

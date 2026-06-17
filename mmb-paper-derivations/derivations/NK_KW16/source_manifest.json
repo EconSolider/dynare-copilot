@@ -1,0 +1,148 @@
+{
+  "model_id": "NK_KW16",
+  "status": "completed_needs_review",
+  "paper": {
+    "title": "Fiscal deficits, financial fragility, and the effectiveness of government policies",
+    "authors": [
+      "Markus Kirchner",
+      "Sweder van Wijnbergen"
+    ],
+    "year": 2016,
+    "journal_or_series": "Journal of Monetary Economics 80, 51-68",
+    "doi": "10.1016/j.jmoneco.2016.04.007"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=NK_KW16",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "mineru_run_ids": [
+      "1f4dab15-8f18-4970-8871-ae86652134f8"
+    ],
+    "primary_source_title": "Fiscal deficits, financial fragility, and the effectiveness of government policies",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_kw16__fiscal_deficits_financial_fragility_and_the_effectiveness_of_government__1f4dab15/full.md",
+      "sha256": "340b964617beaa18edb9e75d79b1376e73b594573eaec0a262d67fc2bcb64359",
+      "mineru_run_id": "1f4dab15-8f18-4970-8871-ae86652134f8",
+      "used_as": "paper_side_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Fiscal deficits, financial fragility, and the effectiveness of government policies.pdf",
+      "sha256": "cbbb9b599ab27077d706b889b7fcb1b29ad8123f3032de6ff03df6df6fcd18c8",
+      "exists_checked": true,
+      "body_read": false,
+      "body_not_read_reason": "Current build checked path existence only; MinerU Markdown was sufficient to identify that the full formal model is in online supplementary data."
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_KW16_rep.mod",
+      "sha256": "22c8422c2eba17bf0cc69bf6ceba510858aff77a3d9c93b1211e12e0750c1b39",
+      "used_as": "implementation_cross_check_only",
+      "runtime_executed": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_KW16/NK_KW16_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_KW16/NK_KW16_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_KW16/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_KW16/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_KW16/worker_report.json"
+  },
+  "extraction": {
+    "model_form": "nonlinear_log_level_exp_transformed",
+    "equation_count_en": 40,
+    "equation_count_zh": 40,
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "source_limitations": [
+      "The paper body says the formal structure, steady state, and dynamics are listed in the appendix.",
+      "The local MinerU Markdown contains Appendix A only as a supplementary-data pointer, not the full supplementary appendix.",
+      "Detailed non-financial and equilibrium equations are therefore cross-checked against the MMB implementation and marked needs_review."
+    ],
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "User explicitly instructed not to run Dynare."
+    }
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "paper_title": "Fiscal deficits, financial fragility, and the effectiveness of government policies",
+  "authors": "Kirchner, Markus; van Wijnbergen, Sweder ",
+  "year": "2016",
+  "journal_or_series": "Journal of Monetary Economics 80, 51-68",
+  "doi": "10.1016/j.jmoneco.2016.04.007",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_KW16",
+    "paper_title": "Fiscal deficits, financial fragility, and the effectiveness of government policies",
+    "authors": "Kirchner, Markus; van Wijnbergen, Sweder ",
+    "year": "2016",
+    "journal_or_series": "Journal of Monetary Economics 80, 51-68",
+    "doi": "10.1016/j.jmoneco.2016.04.007",
+    "paper_slug": "nk_kw16__fiscal_deficits_financial_fragility_and_the_effectiveness_of_government",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "1f4dab15-8f18-4970-8871-ae86652134f8",
+    "primary_source_title": "Fiscal deficits, financial fragility, and the effectiveness of government policies",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_kw16__fiscal_deficits_financial_fragility_and_the_effectiveness_of_government__1f4dab15/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Fiscal deficits, financial fragility, and the effectiveness of government policies.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_kw16__fiscal_deficits_financial_fragility_and_the_effectiveness_of_government__1f4dab15/full.md",
+      "exists": true,
+      "sha256": "340b964617beaa18edb9e75d79b1376e73b594573eaec0a262d67fc2bcb64359"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Fiscal deficits, financial fragility, and the effectiveness of government policies.pdf",
+      "exists": true,
+      "sha256": "cbbb9b599ab27077d706b889b7fcb1b29ad8123f3032de6ff03df6df6fcd18c8"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_KW16/NK_KW16_derivation.en.md",
+      "exists": true,
+      "sha256": "15d5b273b6c2a60222281fe89ef35cbadd4466394d35d870ed8e59481b954943"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_KW16/NK_KW16_derivation.zh.md",
+      "exists": true,
+      "sha256": "28ddab13764453079998ea69160064270b026f8e1b28aca23652f8e006472e87"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_KW16/source_manifest.json",
+      "exists": true,
+      "sha256": "1a34b78545a81af6f3762fdeb84459348b814bb1af475656fb984b86ac41c159"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_KW16/extraction_notes.md",
+      "exists": true,
+      "sha256": "6a16ba65481627c1e73107de66d13942d9b2d153488a64473510f37379761660"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_KW16/worker_report.json",
+      "exists": true,
+      "sha256": "e0187b89fe27425b471d94ba2112c0ac1d601b67049038266dbbd4d2e0787565"
+    }
+  ],
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

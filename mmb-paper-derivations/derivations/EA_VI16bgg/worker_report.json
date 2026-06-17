@@ -1,0 +1,69 @@
+{
+  "model_id": "EA_VI16bgg",
+  "status": "needs_review",
+  "owned_directory": "mmb-paper-derivations/derivations/EA_VI16bgg/",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/EA_VI16bgg/EA_VI16bgg_derivation.en.md",
+    "mmb-paper-derivations/derivations/EA_VI16bgg/EA_VI16bgg_derivation.zh.md",
+    "mmb-paper-derivations/derivations/EA_VI16bgg/source_manifest.json",
+    "mmb-paper-derivations/derivations/EA_VI16bgg/extraction_notes.md",
+    "mmb-paper-derivations/derivations/EA_VI16bgg/worker_report.json"
+  ],
+  "shared_indexes_touched": false,
+  "commit_or_push_performed": false,
+  "source_summary": {
+    "paper_title": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+    "authors": ["Stefania Villa"],
+    "year": 2016,
+    "doi": "10.1017/s1365100514000881",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+    "mineru_run_id": "ed2f2b1d-60d9-4da9-a9c6-b57af3b7e740",
+    "appendix_normalization_path": null,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/EA_VI16bgg_rep.mod"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "EA_VI16bgg",
+    "Task": "Derivation",
+    "Paper": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+    "Year": "2016",
+    "ModelType": "Linearized DSGE",
+    "Economy": "Euro Area",
+    "Category": "Financial frictions",
+    "KeyFeatures": "Smets-Wouters with BGG firm balance-sheet channel",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+    "RawPDF": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+    "DOI": "10.1017/s1365100514000881",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "EA_VI16bgg",
+    "paper_title": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+    "source_full_md": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "linear_zero_steady_state_with_scaling_constants",
+    "needs_human_review": true,
+    "notes": "First-pass extraction from MinerU Table 1; employment equation omission, shock signs, and shifted BGG timing need source review."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_validation": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_check": "passed",
+    "f_number_details": {
+      "english_equation_definition_count": 35,
+      "chinese_equation_definition_count": 35,
+      "english_total_f_occurrences_including_cross_references": 67,
+      "chinese_total_f_occurrences_including_cross_references": 67
+    }
+  },
+  "unresolved_issues": [
+    "Employment Phillips curve is visible in the paper table but omitted in the EA_VI16bgg implementation.",
+    "Shock process sign conventions were taken from the implementation cross-check and should be checked against the online appendix before reviewed status.",
+    "BGG timing is shifted between paper notation and implementation notation; this draft documents the convention but does not prove equivalence.",
+    "Runtime validation was not performed."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "model_id": "EAUS_NAWMctww",
+  "status": "needs_review",
+  "paper_title": "Fiscal consolidation strategy",
+  "authors": [
+    "John F. Cogan",
+    "John B. Taylor",
+    "Volker Wieland",
+    "Maik H. Wolters"
+  ],
+  "year": "2013",
+  "journal_or_series": "Journal of Economic Dynamics and Control 37, pp. 404-421",
+  "doi": "10.1016/j.jedc.2012.10.004",
+  "model_index_row": {
+    "model_id": "EAUS_NAWMctww",
+    "paper_slug": "eaus_nawmctww__fiscal_consolidation_strategy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "97cf0e5f-085a-426c-ac73-d01b58305110",
+    "primary_source_title": "Fiscal consolidation strategy",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "source_match": {
+    "first_80_markdown_lines_checked": true,
+    "expected_title": "Fiscal consolidation strategy",
+    "observed_title": "Fiscal consolidation strategy",
+    "expected_authors": "Cogan, John F.; Taylor, John B.; Wieland, Volker; Wolters, Maik H.",
+    "observed_authors": "John F. Cogan; John B. Taylor; Volker Wieland; Maik H. Wolters",
+    "mismatch": false,
+    "notes": "First 80 Markdown lines contain the expected title, authors, JEDC abstract metadata, and fiscal-consolidation/NAWM context."
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/eaus_nawmctww__fiscal_consolidation_strategy__97cf0e5f/full.md",
+      "sha256": "cf88cce82ab5257a4b408ab12f46203f1ed6305c5bc09c08b7a4444f7649e766",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Fiscal consolidation strategy.pdf",
+      "sha256": "4497e0d943d4ef918f61c003607cc30e34d693b647b6d962a1dc95298ff7fe88",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EAUS_NAWMctww.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EAUS_NAWMctww_rep.mod",
+      "sha256": "49c8494626d904ea585665f1b93ce6d086c59c4f189740d3f01fb8f6d9cf1c25",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EAUS_NAWMctww/EAUS_NAWMctww_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EAUS_NAWMctww/EAUS_NAWMctww_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EAUS_NAWMctww/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EAUS_NAWMctww/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EAUS_NAWMctww/worker_report.json"
+  },
+  "formula_quality": {
+    "overall": "needs_review",
+    "notes": [
+      "Paper Markdown contains core equations for the fiscal authority, household problems, firm technology, final-good technologies, and monetary rule.",
+      "Several Calvo wage and price recursions are represented compactly and marked needs_review where the paper does not provide full operational recursions.",
+      "Full steady-state solution was not re-derived or runtime-validated."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "created_by": "Codex",
+  "created_date": "2026-06-17",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EAUS_NAWMctww",
+    "paper_slug": "eaus_nawmctww__fiscal_consolidation_strategy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "97cf0e5f-085a-426c-ac73-d01b58305110"
+    ],
+    "primary_source_title": "Fiscal consolidation strategy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/eaus_nawmctww__fiscal_consolidation_strategy__97cf0e5f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Fiscal consolidation strategy.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

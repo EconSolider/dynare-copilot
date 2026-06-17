@@ -1,0 +1,70 @@
+{
+  "model_id": "EAUS_NAWMctww",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/EAUS_NAWMctww/EAUS_NAWMctww_derivation.en.md",
+    "mmb-paper-derivations/derivations/EAUS_NAWMctww/EAUS_NAWMctww_derivation.zh.md",
+    "mmb-paper-derivations/derivations/EAUS_NAWMctww/source_manifest.json",
+    "mmb-paper-derivations/derivations/EAUS_NAWMctww/extraction_notes.md",
+    "mmb-paper-derivations/derivations/EAUS_NAWMctww/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EAUS_NAWMctww",
+    "Task": "derive_mmb_model_archive_entry",
+    "Paper": "Fiscal consolidation strategy",
+    "Year": "2013",
+    "ModelType": "two-region open-economy New Keynesian DSGE",
+    "Economy": "United States and euro area",
+    "Category": "fiscal policy; NAWM/CMS",
+    "KeyFeatures": "two household types, distortionary taxes, government debt, transfers, government purchases, Calvo wage and price rigidities, investment/import adjustment costs, open-economy spillovers",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/eaus_nawmctww__fiscal_consolidation_strategy__97cf0e5f/full.md",
+    "RawPDF": "raw/mmb_papers/Fiscal consolidation strategy.pdf",
+    "DOI": "10.1016/j.jedc.2012.10.004",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EAUS_NAWMctww",
+    "paper_title": "Fiscal consolidation strategy",
+    "source_full_md": "raw/mmb_mineru/runs/eaus_nawmctww__fiscal_consolidation_strategy__97cf0e5f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Fiscal consolidation strategy.pdf",
+    "status": "needs_review",
+    "formula_quality": "usable first-pass OCR with selected needs_review equations",
+    "steady_state_quality": "deferred; no full steady-state solve",
+    "needs_human_review": "true",
+    "notes": "Do not merge automatically without reviewing compact Calvo recursions, foreign-bond timing, and full steady-state derivation."
+  },
+  "validation": [
+    {
+      "check": "json_source_manifest",
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/EAUS_NAWMctww/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "json_worker_report",
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/EAUS_NAWMctww/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "english_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "english_chinese_f_number_count_match",
+      "english_f_occurrences": 108,
+      "chinese_f_occurrences": 108,
+      "status": "passed"
+    },
+    {
+      "check": "git_diff_check",
+      "command": "git diff --check -- mmb-paper-derivations/derivations/EAUS_NAWMctww",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "Calvo wage and price recursions require source-level verification beyond the compact paper text.",
+    "Full two-country steady-state derivation was not completed.",
+    "Foreign-bond timing identity is marked needs_review.",
+    "Dynare runtime validation was not performed by request."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "model_id": "US_PM08fl",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "A small quarterly projection model of the US economy",
+    "authors": [
+      "Ioan Carabenciov",
+      "Igor Ermolaev",
+      "Charles Freedman",
+      "Michel Juillard",
+      "Ondrej Kamenik",
+      "Dmitry Korshunov",
+      "Douglas Laxton"
+    ],
+    "year": 2008,
+    "journal_or_series": "IMF Working Paper 08/278",
+    "doi": "10.5089/9781451871364.001"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 157,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+      "sha256": "678667ba943ffde92ce650faae292b6e348886ea2fc504ab20b9cf1544b987d6",
+      "mineru_run_id": "a2e8676b-943b-4810-bcb5-d716951a7fa4",
+      "role": "paper_side_primary_source",
+      "title_sniff": "A Small Quarterly Projection Model of the US Economy",
+      "title_match": "unambiguous"
+    },
+    "alternate_mineru_run_ids": [
+      "86500816-7954-4f67-b157-79058ffc0fde"
+    ],
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+      "sha256": "fca7f36de0799f0fb9fe8996c5f08bf73a2855b8e8a602f341644786115863d5",
+      "exists": true,
+      "role": "provenance_only_pdf_body_not_read"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_PM08fl.md",
+      "exists": false,
+      "role": "not_available"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_PM08fl_rep.mod",
+      "sha256": "f4b4f676a9fb253e20dfb0d621fb2b94e6697c340c2648ef2c4250514b2e77c4",
+      "exists": true,
+      "role": "implementation_cross_check",
+      "notes": "Used only to confirm the stationarized financial-linkages model(linear) form, variable names, shock names, reporting expectation variables, BLT innovation state, and the year-on-year inflation identity."
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_PM08fl/US_PM08fl_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_PM08fl/US_PM08fl_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_PM08fl/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_PM08fl/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_PM08fl/worker_report.json"
+  },
+  "extraction": {
+    "source_order_followed": [
+      ".agents/skills/mmb-model-archive-builder/SKILL.md",
+      "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+      ".agents/skills/dynare-copilot/references/derivation-style.md",
+      ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+      "raw/mmb_mineru/model_index.csv row for US_PM08fl",
+      "primary_full_md_path",
+      "raw_pdf_path existence check",
+      "appendix normalization check",
+      "implementation_cross_check"
+    ],
+    "language_order": [
+      "English first",
+      "Chinese second"
+    ],
+    "formula_quality": "needs_review",
+    "steady_state_quality": "linear_stationarized_zero_gap_steady_state; original level steady-state algorithm not source-stated",
+    "runtime_validation": {
+      "performed": false,
+      "reason": "User explicitly instructed not to run Dynare."
+    }
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_PM08fl",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "A small quarterly projection model of the US economy",
+    "Year": "2008",
+    "ModelType": "linear stationarized semi-structural quarterly projection model with financial-real linkages",
+    "Economy": "United States",
+    "Category": "semi-structural projection model; monetary policy; financial-real linkages",
+    "KeyFeatures": "output gap; hybrid inflation equation; Taylor-type policy rule; dynamic Okun law; stochastic potential output and NAIRU; equilibrium real-rate process; BLT lending-tightness block; cross-correlated shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "RawPDF": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "DOI": "10.5089/9781451871364.001",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_PM08fl",
+    "paper_title": "A small quarterly projection model of the US economy",
+    "source_full_md": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "linear_stationarized_zero_gap_steady_state_only",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation; OCR has damaged symbols around definitions and inflation prose; no appendix normalization; raw PDF body not read; Dynare runtime validation not performed."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "model_id": "NK_GLSV07",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Understanding the effects of government spending on consumption",
+    "authors": [
+      "Gali, Jordi",
+      "Lopez-Salido, J. David",
+      "Valles, Javier"
+    ],
+    "year": 2007,
+    "journal_or_series": "Journal of the European Economic Association 5 (1), 227-270",
+    "doi": "10.1162/jeea.2007.5.1.227"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_GLSV07",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Understanding the effects of government spending on consumption",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_glsv07__understanding_the_effects_of_government_spending_on_consumption__47e78a28/full.md",
+      "sha256": "1d12148d24732963d9afaf056bb51a2c9b30d5e274173e02cbd3d665aad46241",
+      "mineru_run_id": "47e78a28-668e-4d2c-a7ff-9274c85dd958",
+      "used_for": [
+        "paper metadata",
+        "model structure",
+        "optimization problems",
+        "equilibrium conditions",
+        "appendix reduced system"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Understanding the effects of government spending on consumption.pdf",
+      "sha256": "6aa0d1f4f26a8b292de7a6dfc2a7d642e9f9ee275cc8febafc842b5ed438e2de",
+      "exists_checked": true,
+      "body_read": false,
+      "used_for": [
+        "provenance only"
+      ]
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_GLSV07_rep.mod",
+      "sha256": "8d08edaffa60a4983a3841e46801894b4f81a689c6fb1376801a780e5a250d95",
+      "used_for": [
+        "variable coverage",
+        "selected labor-market variant",
+        "timing convention",
+        "shock naming",
+        "parameter naming"
+      ],
+      "not_used_as_paper_source": true
+    }
+  },
+  "source_sections_used": [
+    "Section 3. A New Keynesian Model with Rule-of-Thumb Consumers",
+    "Section 3.1. Households",
+    "Section 3.2. Firms",
+    "Section 3.3. Monetary Policy",
+    "Section 3.4. Fiscal Policy",
+    "Section 3.5. Market Clearing",
+    "Section 3.6. Linearized Equilibrium Conditions",
+    "Appendix A. Alternative Labor Market Structures",
+    "Appendix B. Steady State Analysis",
+    "Appendix C. Derivation of the Reduced Dynamical System"
+  ],
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_GLSV07/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_GLSV07/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_GLSV07/worker_report.json"
+  },
+  "derivation": {
+    "language_versions": [
+      "en",
+      "zh"
+    ],
+    "required_sections": 8,
+    "equation_numbering": {
+      "style": "continuous F-numbering",
+      "first": "F1",
+      "last": "F17"
+    },
+    "model_form": "log-linear / model(linear)",
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "No Dynare run was executed for this derivation-only archive entry."
+    }
+  },
+  "quality_flags": {
+    "formula_quality": "draft_ocr_checked_against_markdown",
+    "steady_state_quality": "log_linear_zero_deviation_with_coefficient_definitions",
+    "needs_human_review": true,
+    "needs_review_reasons": [
+      "Markup convention differs between paper prose and implementation parameter naming/value.",
+      "No targeted PDF formula check was performed because Markdown was sufficient for first-pass extraction.",
+      "Runtime validation deferred."
+    ]
+  },
+  "created_at": "2026-06-17",
+  "created_by": "Codex",
+  "paper_title": "Understanding the effects of government spending on consumption",
+  "authors": "Gali, Jordí; López-Salido, J. David; Vallés, Javier",
+  "year": "2007",
+  "journal_or_series": "Journal of the European Economic Association 5 (1), 227-270",
+  "doi": "10.1162/jeea.2007.5.1.227",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_GLSV07",
+    "paper_title": "Understanding the effects of government spending on consumption",
+    "authors": "Gali, Jordí; López-Salido, J. David; Vallés, Javier",
+    "year": "2007",
+    "journal_or_series": "Journal of the European Economic Association 5 (1), 227-270",
+    "doi": "10.1162/jeea.2007.5.1.227",
+    "paper_slug": "nk_glsv07__understanding_the_effects_of_government_spending_on_consumption",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "47e78a28-668e-4d2c-a7ff-9274c85dd958",
+    "primary_source_title": "Understanding the effects of government spending on consumption",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_glsv07__understanding_the_effects_of_government_spending_on_consumption__47e78a28/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Understanding the effects of government spending on consumption.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_glsv07__understanding_the_effects_of_government_spending_on_consumption__47e78a28/full.md",
+      "exists": true,
+      "sha256": "1d12148d24732963d9afaf056bb51a2c9b30d5e274173e02cbd3d665aad46241"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Understanding the effects of government spending on consumption.pdf",
+      "exists": true,
+      "sha256": "6aa0d1f4f26a8b292de7a6dfc2a7d642e9f9ee275cc8febafc842b5ed438e2de"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.en.md",
+      "exists": true,
+      "sha256": "a384bdca3b30ed3d1271a2305681dbf754e99ba5515e07f620a928bb8115f620"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.zh.md",
+      "exists": true,
+      "sha256": "583da49aadba04efce52bef4b7a629e46db35a1f40bb5bada162a486e0b52520"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_GLSV07/source_manifest.json",
+      "exists": true,
+      "sha256": "570673ced53783c19f23fdda4db69778fcc35cca82c480566b42fd5458061cb4"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_GLSV07/extraction_notes.md",
+      "exists": true,
+      "sha256": "18ae834c4d98c8694555e9115d2a65f340cb40f971fc89a02f98b4c8ded54630"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_GLSV07/worker_report.json",
+      "exists": true,
+      "sha256": "62f24935d50d2f71822ff87886eb2102d508114904304127a6eef71f78f1065a"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "model_id": "US_FGKR15",
+  "status": "needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "dynare_run": false,
+    "notes": "User explicitly requested .mod only as implementation_cross_check and no Dynare run."
+  },
+  "paper": {
+    "title": "Fiscal volatility shocks and economic activity",
+    "authors": "Fernandez-Villaverde, Jesus; Guerron-Quintana, Pablo; Kuester, Keith; Rubio-Ramirez, Juan",
+    "year": 2015,
+    "journal_or_series": "American Economic Review 105(11), pp. 3352-3384",
+    "doi": "10.1257/aer.20121236"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 124,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": [
+    {
+      "role": "primary_full_markdown",
+      "path": "raw/mmb_mineru/runs/us_fgkr15__fiscal_volatility_shocks_and_economic_activity__c11fd284/full.md",
+      "sha256": "8242db93513e0ca26369817f0d43de3c35aead60d123ab2c36cf502fd75d48cb",
+      "mineru_run_id": "c11fd284-6f64-4c88-bb10-440da7196eef",
+      "title_check": "First page matches expected title and authors.",
+      "used_for": [
+        "paper metadata",
+        "model overview",
+        "main-text model equations",
+        "fiscal rules",
+        "Taylor rules"
+      ]
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/Fiscal volatility shocks and economic activity.pdf",
+      "sha256": "d9b0da56a9dd89dbad144e257ae5727de633cb0b0dd6590464c9b2678bdca3fb",
+      "used_for": [
+        "existence and metadata check",
+        "targeted text extraction around the model section"
+      ]
+    },
+    {
+      "role": "online_appendix_pdf",
+      "path": "raw/theory_sources/mmb_appendix_us_fgkr15/files/20121236_app.pdf",
+      "sha256": "8944334d4ff65c82a695616ff183a58172a2f4772078bded31655568c13d774e",
+      "source_url": "https://www.aeaweb.org/articles/materials/4474",
+      "final_download_url": "https://assets.aeaweb.org/asset-server/articles-attachments/aer/app/10511/20121236_app.pdf",
+      "used_for": [
+        "household first-order conditions",
+        "aggregation conditions",
+        "model structure cross-check"
+      ]
+    },
+    {
+      "role": "implementation_cross_check",
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FGKR15_rep.mod",
+      "sha256": "e73fb539d63ae342cee8873927719699d9a7b34783e993672300457cc06c6857",
+      "used_for": [
+        "variable coverage",
+        "timing convention",
+        "shock names",
+        "growth-normalized implementation cues"
+      ],
+      "not_used_for": "paper-side mathematical source"
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_FGKR15.md",
+    "exists": false
+  },
+  "archive_outputs": [
+    "mmb-paper-derivations/derivations/US_FGKR15/US_FGKR15_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_FGKR15/US_FGKR15_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_FGKR15/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_FGKR15/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_FGKR15/worker_report.json"
+  ],
+  "catalog_proposal": {
+    "ModelID": "US_FGKR15",
+    "Task": "Fiscal volatility shocks in a medium-scale New Keynesian model",
+    "Paper": "Fiscal volatility shocks and economic activity",
+    "Year": "2015",
+    "ModelType": "Nonlinear DSGE, New Keynesian, fiscal volatility",
+    "Economy": "United States",
+    "Category": "Monetary-fiscal DSGE",
+    "KeyFeatures": "Distortionary taxes; stochastic fiscal volatility; Rotemberg prices and wages; habit; investment adjustment; variable utilization; government debt",
+    "DateAdded": "2026-06-17",
+    "Status": "needs_review"
+  },
+  "status_proposal": {
+    "model_id": "US_FGKR15",
+    "status": "needs_review",
+    "formula_quality": "mixed: main equations readable; wage and investment FOCs need source-level review",
+    "steady_state_quality": "partial: source logic recorded; growth-normalized closed form needs review",
+    "needs_human_review": true
+  }
+}

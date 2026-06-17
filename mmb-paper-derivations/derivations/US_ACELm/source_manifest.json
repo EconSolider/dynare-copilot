@@ -1,0 +1,68 @@
+{
+  "model_id": "US_ACELm",
+  "title": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle",
+  "authors": [
+    "David Altig",
+    "Lawrence J. Christiano",
+    "Martin Eichenbaum",
+    "Jesper Linde"
+  ],
+  "year": 2005,
+  "journal_or_series": "CEPR Discussion Papers 4858",
+  "doi": "10.3386/w11034",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_number": 99,
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+      "sha256": "076ad1ff4d2146c511b4feabae5490d12292e7ee485f953b8320dfd9751542c7",
+      "mineru_run_id": "e0fac58f-0dfb-476b-b2df-8712e57d9ce4",
+      "primary_source_title": "Firm-Specific Capital, Nominal Rigidities",
+      "title_sniff": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+      "sha256": "b418270ebc5f8698a2a1d2562d236ccdefe30fb4ee04561a1287a8872c205618",
+      "exists": true
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_ACELm.md",
+      "exists": false
+    }
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_ACELm_rep.mod",
+    "sha256": "d9915e4aa848fd5c8fa0f1817c9c3173712466b9e17cd8e38229c384edf7696d",
+    "used_for": [
+      "variable coverage",
+      "shock names",
+      "linear model form",
+      "sticky-price and flexible-price block coverage",
+      "timing conventions"
+    ],
+    "used_as_paper_source": false
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_ACELm/US_ACELm_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_ACELm/US_ACELm_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_ACELm/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_ACELm/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_ACELm/worker_report.json"
+  },
+  "formula_quality": "needs_review",
+  "steady_state_quality": "needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "dynare_run": false,
+    "status": "not_performed"
+  },
+  "status_recommendation": "needs_review",
+  "created_at": "2026-06-17"
+}

@@ -1,0 +1,131 @@
+{
+  "model_id": "NK_CGG02",
+  "status": "needs_review",
+  "paper": {
+    "title": "A simple framework for international monetary policy analysis",
+    "authors": [
+      "Clarida, Richard",
+      "Gali, Jordi",
+      "Gertler, Mark"
+    ],
+    "year": 2002,
+    "journal_or_series": "Journal of Monetary Economics 49(5), pp. 879-904",
+    "doi": "10.3386/w8870"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_CGG02",
+    "paper_slug": "nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+      "exists": true,
+      "sha256": "a08d373aa4bfb9d0e0658c8f0851744d3aa7d64513b5ea5be47c3fd04e8cc25d",
+      "mineru_run_id": "8ffaf5fd-ee22-465d-89b8-0690a85353c0",
+      "primary_source_title": "A simple framework for international monetary policy analysis"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+      "exists": true,
+      "sha256": "e10d439ff44d8ae9be58a914614e1b9e714a3e7d29eaf53b68a76c2686cfb590",
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_CGG02.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CGG02_rep.mod",
+      "exists": true,
+      "sha256": "7ad2ea34edb73a95d57b53901eb7afd8e7b01a85f45ff2d044940b422e7ff907",
+      "used_as": "implementation_cross_check_only"
+    }
+  },
+  "other_mineru_run_ids": [
+    "6a29a2f0-556b-4ff8-b273-d71880107e67"
+  ],
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_CGG02/NK_CGG02_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_CGG02/NK_CGG02_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_CGG02/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_CGG02/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_CGG02/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "summary": "Main household, firm, market-clearing, IS, Phillips, shock, and natural-rate equations were readable from MinerU Markdown. OCR artifacts remain around the reset-price objective and several policy-rule/reduced-form coefficients."
+  },
+  "paper_title": "A simple framework for international monetary policy analysis",
+  "authors": [
+    "Clarida, Richard",
+    "Gali, Jordi",
+    "Gertler, Mark"
+  ],
+  "year": "2002",
+  "journal_or_series": "Journal of Monetary Economics 49(5), pp. 879-904",
+  "doi": "10.3386/w8870",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "NK_CGG02",
+    "paper_slug": "nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "8ffaf5fd-ee22-465d-89b8-0690a85353c0",
+      "6a29a2f0-556b-4ff8-b273-d71880107e67"
+    ],
+    "primary_source_title": "A simple framework for international monetary policy analysis",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+      "sha256": "a08d373aa4bfb9d0e0658c8f0851744d3aa7d64513b5ea5be47c3fd04e8cc25d",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+      "sha256": "e10d439ff44d8ae9be58a914614e1b9e714a3e7d29eaf53b68a76c2686cfb590",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_CGG02.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CGG02_rep.mod",
+      "sha256": "7ad2ea34edb73a95d57b53901eb7afd8e7b01a85f45ff2d044940b422e7ff907",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/NK_CGG02/NK_CGG02_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/NK_CGG02/NK_CGG02_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_CGG02/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_CGG02/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_CGG02/worker_report.json"
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

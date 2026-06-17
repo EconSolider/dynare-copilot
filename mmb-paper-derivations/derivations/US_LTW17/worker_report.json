@@ -1,0 +1,65 @@
+{
+  "model_id": "US_LTW17",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_LTW17/US_LTW17_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_LTW17/US_LTW17_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_LTW17/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_LTW17/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_LTW17/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_LTW17",
+    "Task": "mmb_derivation",
+    "Paper": "Clearing Up the Fiscal Multiplier Morass",
+    "Year": "2017",
+    "ModelType": "linearized monetary-fiscal DSGE",
+    "Economy": "United States",
+    "Category": "medium_scale_monetary_fiscal",
+    "KeyFeatures": "Government consumption in utility; saver and non-saver households; sticky prices and wages; long-term nominal government debt; distortionary steady-state taxes; fiscal feedback rules",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+    "RawPDF": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+    "DOI": "10.1257/aer.20111196",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_LTW17",
+    "paper_title": "Clearing Up the Fiscal Multiplier Morass",
+    "source_full_md": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass; several FOCs require appendix/PDF verification",
+    "steady_state_quality": "implementation_cross_check_only",
+    "needs_human_review": "true",
+    "notes": "Shared CSVs not edited by request. No Dynare run was performed."
+  },
+  "validation": [
+    {
+      "check": "source_manifest_json",
+      "status": "passed"
+    },
+    {
+      "check": "worker_report_json",
+      "status": "passed"
+    },
+    {
+      "check": "eight_english_sections",
+      "status": "passed"
+    },
+    {
+      "check": "matching_english_chinese_f_numbers",
+      "status": "passed"
+    },
+    {
+      "check": "git_diff_check",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "No local normalized appendix exists for complete FOC verification.",
+    "Targeted PDF checks are deferred.",
+    "Price and wage Phillips equations, saver marginal utility, capital FOC, investment FOC, and government budget need paper-side verification.",
+    "No runtime validation was performed."
+  ]
+}

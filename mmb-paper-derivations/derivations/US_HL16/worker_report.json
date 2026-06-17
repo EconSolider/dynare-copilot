@@ -1,0 +1,54 @@
+{
+  "model_id": "US_HL16",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_HL16/US_HL16_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_HL16/US_HL16_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_HL16/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_HL16/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_HL16/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_HL16",
+    "Task": "mmb_derivation",
+    "Paper": "The equity price channel in a New-Keynesian DSGE model with financial frictions and banking",
+    "Year": "2016",
+    "ModelType": "New-Keynesian DSGE with financial frictions, equity price channel, and banking",
+    "Economy": "US",
+    "Category": "Financial frictions; banking; equity price channel",
+    "KeyFeatures": "Heterogeneous saver and borrower households; equity in household wealth and collateral; entrepreneur collateral; bank capital channel; Calvo prices; Taylor rule; Bayesian estimation",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_hl16__the_equity_price_channel_in_a_new_keynesian_dsge_model_with_financial_fr__e3259b88/full.md",
+    "RawPDF": "raw/mmb_papers/The equity price channel in a New-Keynesian DSGE model with financial frictions and banking.pdf",
+    "DOI": "10.1016/j.econmod.2015.09.015",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_HL16",
+    "paper_title": "The equity price channel in a New-Keynesian DSGE model with financial frictions and banking",
+    "source_full_md": "raw/mmb_mineru/runs/us_hl16__the_equity_price_channel_in_a_new_keynesian_dsge_model_with_financial_fr__e3259b88/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The equity price channel in a New-Keynesian DSGE model with financial frictions and banking.pdf",
+    "status": "needs_review",
+    "formula_quality": "mixed_ocr_needs_review",
+    "steady_state_quality": "partial_ratio_based_needs_review",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation. Appendix A OCR corruption remains around capital, equity dividend, retail loan-rate, aggregate labor, and monetary-policy shock formulas. Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "source_manifest_json_tool": "passed",
+    "worker_report_json_tool": "passed",
+    "english_eight_sections": "passed",
+    "english_f1_present": "passed",
+    "f_number_counts_match": "passed",
+    "english_f_count": 120,
+    "english_unique_f_count": 56,
+    "chinese_f_count": 120,
+    "chinese_unique_f_count": 56,
+    "dynare_run": "not_performed"
+  },
+  "runtime_validation": {
+    "performed": false,
+    "reason": "Task contract explicitly says not to run Dynare."
+  }
+}

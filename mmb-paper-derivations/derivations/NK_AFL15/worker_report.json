@@ -1,0 +1,62 @@
+{
+  "model_id": "NK_AFL15",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_AFL15",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_AFL15/NK_AFL15_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_AFL15/NK_AFL15_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_AFL15/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_AFL15/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_AFL15/worker_report.json"
+  ],
+  "shared_indexes_modified": false,
+  "proposed_catalog_row": {
+    "ModelID": "NK_AFL15",
+    "Task": "mmb_derivation",
+    "Paper": "Monetary policy and risk taking",
+    "Year": "2015",
+    "ModelType": "New Keynesian with bank runs and endogenous risk taking",
+    "Economy": "US/closed economy calibration",
+    "Category": "Financial frictions; monetary policy; bank runs",
+    "KeyFeatures": "Endogenous deposit ratio; bank capital; fundamental bank runs; risk-taking channel; quadratic price adjustment; Tobin's Q",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_afl15__monetary_policy_and_risk_taking__00cda0fc/full.md",
+    "RawPDF": "raw/mmb_papers/Monetary policy and risk taking.pdf",
+    "DOI": "10.1016/j.jedc.2014.12.001",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_AFL15",
+    "paper_title": "Monetary policy and risk taking",
+    "source_full_md": "raw/mmb_mineru/runs/nk_afl15__monetary_policy_and_risk_taking__00cda0fc/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary policy and risk taking.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual extraction; OCR noise in Eq. 26, resource-cost integral, Appendix A loss term; runtime validation not performed."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_validation": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_check": "passed",
+    "details": {
+      "english_f_numbers": "24 unique numbers covering F1-F24",
+      "chinese_f_numbers": "24 unique numbers covering F1-F24",
+      "english_chinese_f_sequence": "matched",
+      "shared_indexes": "not modified"
+    }
+  },
+  "unresolved_issues": [
+    "Confirm risky deposit loss wedge treatment in steady state.",
+    "Confirm bank capital accumulation timing against source/PDF if needed.",
+    "Confirm OCR-normalized adjustment-cost term in Eq. (26).",
+    "Runtime validation was not performed."
+  ],
+  "commit": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  }
+}

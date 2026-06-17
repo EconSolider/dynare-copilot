@@ -1,0 +1,65 @@
+{
+  "model_id": "US_DNGS15_SWSP",
+  "status": "needs_review",
+  "title": "Inflation in the Great Recession and New Keynesian Models",
+  "authors": [
+    "Del Negro, Marco",
+    "Giannoni, Marc P.",
+    "Schorfheide, Frank"
+  ],
+  "year": 2015,
+  "journal_or_series": "American Economic Journal: Macroeconomics 7 (1), 168-96",
+  "doi": "10.1257/mac.20140097",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "US_DNGS15_SWSP",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Infation in the Great recession and New Keynesian models",
+    "model_title_match_score": 0.9912,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_dngs15_us_dngs15_sw_us_dngs15_swsp_us_dngs15__infation_in_the_great_recession_and_new_keynesian_models__c8e184ab/full.md",
+      "sha256": "bfd43e66408395b5765a1d965343d9e09538ea7487844be973a375275f3b07f0",
+      "mineru_run_id": "c8e184ab-3624-4257-9ea5-7ec1cf904fbb",
+      "formula_quality": "usable_with_ocr_review"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Infation in the Great recession and New Keynesian models.pdf",
+      "sha256": "61321a255d611f1c0c0db485ee98862d2e1350bfce989a7fd007db890342a7de",
+      "exists": true,
+      "read_body": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_DNGS15_SWSP.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_DNGS15_SWSP_rep.mod",
+      "sha256": "cafb346308e37f3d36b777172db98170535d417bef6065f87cd57833199ba42d",
+      "role": "implementation_cross_check_only",
+      "runtime_validation": "not_performed"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_DNGS15_SWSP/US_DNGS15_SWSP_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_DNGS15_SWSP/US_DNGS15_SWSP_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_DNGS15_SWSP/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_DNGS15_SWSP/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_DNGS15_SWSP/worker_report.json"
+  },
+  "model_form": "model(linear)",
+  "runtime_validation": {
+    "dynare_run": false,
+    "status": "not_performed",
+    "reason": "User explicitly requested not to run Dynare; archive task is derivation-only."
+  },
+  "source_index_issue": {
+    "present": true,
+    "note": "The primary source title in model_index.csv has the typo 'Infation'; first Markdown page confirms the expected article title 'Inflation in the Great Recession and New Keynesian Models'."
+  },
+  "created_at": "2026-06-17"
+}

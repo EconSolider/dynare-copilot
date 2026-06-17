@@ -1,0 +1,42 @@
+{
+  "model_id": "NK_GM05",
+  "status": "completed_first_pass_needs_review",
+  "owned_scope": "mmb-paper-derivations/derivations/NK_GM05/",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_GM05/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_GM05/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_GM05/worker_report.json"
+  ],
+  "shared_indexes_touched": false,
+  "source_inputs": {
+    "model_index_row": "raw/mmb_mineru/model_index.csv:NK_GM05",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy__6f92413a/full.md",
+    "raw_pdf_path_exists": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_exists": false,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/NK_GM05_rep.mod"
+  },
+  "outputs": {
+    "english_derivation": true,
+    "chinese_derivation": true,
+    "source_manifest_json": true,
+    "extraction_notes_md": true
+  },
+  "validation": {
+    "git_diff_check_targeted": "passed",
+    "source_manifest_json_tool": "passed",
+    "worker_report_json_tool": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "english_chinese_f_number_parity": "passed",
+    "english_f_equation_unique_count": 32,
+    "chinese_f_equation_unique_count": 32
+  },
+  "unresolved_issues": [
+    "Calvo reset-price optimization algebra should be checked against PDF before reviewed status.",
+    "Appendix A steady-state uniqueness algebra has OCR noise and was summarized only for log-linear steady-state conventions.",
+    "No runtime validation was performed."
+  ]
+}

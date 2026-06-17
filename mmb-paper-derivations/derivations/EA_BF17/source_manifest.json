@@ -1,0 +1,143 @@
+{
+  "model_id": "EA_BF17",
+  "status": "needs_review",
+  "paper": {
+    "title": "Money And Monetary Policy In The Eurozone: An Empirical Analysis During Crises",
+    "authors": [
+      "Benchimol, Jonathan",
+      "Fourcans, Andre"
+    ],
+    "year": 2017,
+    "journal_or_series": "Macroeconomic Dynamics, Cambridge University Press, vol. 21(03), 677-707",
+    "doi": "10.1017/s1365100515000644"
+  },
+  "paper_title": "Money And Monetary Policy In The Eurozone: An Empirical Analysis During Crises",
+  "authors": [
+    "Benchimol, Jonathan",
+    "Fourcans, Andre"
+  ],
+  "year": "2017",
+  "journal_or_series": "Macroeconomic Dynamics, Cambridge University Press, vol. 21(03), 677-707",
+  "doi": "10.1017/s1365100515000644",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "EA_BF17",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_BF17",
+    "paper_slug": "ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "c4e7b84e-cfee-46d2-910b-8167adc738b2"
+    ],
+    "primary_source_title": "Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c__c4e7b84e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises.pdf",
+    "model_match_notes": ""
+  },
+  "source_match_check": {
+    "first_80_markdown_lines_checked": true,
+    "expected_title": "Money And Monetary Policy In The Eurozone: An Empirical Analysis During Crises",
+    "observed_title": "MONEY AND MONETARY POLICY IN THE EUROZONE: AN EMPIRICAL ANALYSIS DURING CRISES",
+    "expected_authors": "Jonathan Benchimol; Andre Fourcans",
+    "observed_authors": "JONATHAN BENCHIMOL; ANDRE´ FOURC¸ANS",
+    "mismatch": false,
+    "notes": "Title matches case-insensitively in the first Markdown line; author names match with OCR accent artifacts."
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c__c4e7b84e/full.md",
+      "sha256": "3037c6f46d189a4a1aa21c6e7bfc47c6be1cb9329b925af48a23d83c8c93dfd1",
+      "exists": true
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises.pdf",
+      "sha256": "5bde331554f5adb3d17a15e7986ecd34158d755fbca17bc625bab8ae615fb213",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_BF17.md",
+      "sha256": null,
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_BF17_rep.mod",
+      "sha256": "079992c873b66e5a5852498e0c5814d7e249bb7bd526ed92a859e40df4308f17",
+      "exists": true,
+      "used_as": "implementation_cross_check"
+    }
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c__c4e7b84e/full.md",
+      "sha256": "3037c6f46d189a4a1aa21c6e7bfc47c6be1cb9329b925af48a23d83c8c93dfd1",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises.pdf",
+      "sha256": "5bde331554f5adb3d17a15e7986ecd34158d755fbca17bc625bab8ae615fb213",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_BF17.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_BF17_rep.mod",
+      "sha256": "079992c873b66e5a5852498e0c5814d7e249bb7bd526ed92a859e40df4308f17",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "c4e7b84e-cfee-46d2-910b-8167adc738b2"
+    ],
+    "paper_slug": "ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c"
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/EA_BF17/EA_BF17_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/EA_BF17/EA_BF17_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_BF17/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_BF17/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_BF17/worker_report.json"
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EA_BF17/EA_BF17_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EA_BF17/EA_BF17_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_BF17/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_BF17/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_BF17/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Primary OCR Markdown states the model comparison, data, parameter descriptions, priors, shock categories, and selected money-channel coefficient references.",
+      "The detailed model equations are said to be in the Online Appendix, which is not present in the MinerU Markdown and has no local appendix normalization file.",
+      "Reduced-form equations were drafted with explicit needs_review markers where they depend on the MMB implementation cross-check.",
+      "The Taylor-rule money term differs between source prose and the implementation cross-check comment state and needs human review."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

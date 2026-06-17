@@ -1,0 +1,72 @@
+{
+  "model_id": "US_PM08",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_PM08/US_PM08_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_PM08/US_PM08_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_PM08/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_PM08/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_PM08/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_PM08",
+    "Task": "mmb_derivation_archive",
+    "Paper": "A small quarterly projection model of the US economy",
+    "Year": "2008",
+    "ModelType": "Estimated small quarterly projection model; linear stationary gap form with financial-real linkages",
+    "Economy": "US",
+    "Category": "Semi-structural projection model",
+    "KeyFeatures": "GPM-style small quarterly projection model; output gap; inflation; unemployment gap; Taylor rule; equilibrium real rate; BLT financial-real linkage; Bayesian estimation",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "RawPDF": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "DOI": "10.5089/9781451871364.001",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_PM08",
+    "paper_title": "A small quarterly projection model of the US economy",
+    "source_full_md": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "stationary_gap_mapping_partial",
+    "needs_human_review": "true",
+    "notes": "First-pass semi-structural projection-model extraction. Source title match is clean, but equation 7/equation 13 OCR and paper-level stochastic trend to stationary MMB mapping need review. Dynare was not run."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/US_PM08",
+      "status": "passed",
+      "details": "No output."
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_PM08/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_PM08/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English has all eight sections and includes (F1)",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "English count 68, Chinese count 68; 21 unique equation labels."
+    },
+    {
+      "check": "Explicit whitespace scan of new untracked files",
+      "status": "passed",
+      "details": "No trailing whitespace found in mmb-paper-derivations/derivations/US_PM08 files."
+    }
+  ],
+  "unresolved_issues": [
+    "Equation 7 equilibrium real-rate coefficient placement needs rendered PDF review.",
+    "Equation 13 BLT equilibrium process has OCR/subscript ambiguity.",
+    "Paper-level stochastic-trend states need careful reconciliation with stationary MMB variables.",
+    "Dynare runtime validation was not performed."
+  ]
+}

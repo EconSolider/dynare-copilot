@@ -1,0 +1,49 @@
+{
+  "model_id": "US_CPS10",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/US_CPS10/US_CPS10_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_CPS10/US_CPS10_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_CPS10/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_CPS10/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_CPS10/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_CPS10",
+    "Task": "mmb_derivation",
+    "Paper": "Inflation-gap persistence in the us",
+    "Year": "2010",
+    "ModelType": "Linearized New-Keynesian DSGE",
+    "Economy": "United States",
+    "Category": "New Keynesian",
+    "KeyFeatures": "inflation-gap persistence; time-varying inflation target; Calvo pricing; habit formation; estimated subsamples",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_cps10__inflation_gap_persistence_in_the_us__1f4da37a/full.md",
+    "RawPDF": "raw/mmb_papers/Inflation-gap persistence in the us.pdf",
+    "DOI": "10.1257/mac.2.1.43",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_CPS10",
+    "paper_title": "Inflation-gap persistence in the us",
+    "source_full_md": "raw/mmb_mineru/runs/us_cps10__inflation_gap_persistence_in_the_us__1f4da37a/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Inflation-gap persistence in the us.pdf",
+    "status": "needs_review",
+    "formula_quality": "paper primitives extracted; full linear system from implementation_cross_check",
+    "steady_state_quality": "linear steady state documented; nonlinear level mapping partial",
+    "needs_human_review": true,
+    "notes": "Paper does not print complete log-linear system; equation 21 OCR/lag issue needs source review."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- mmb-paper-derivations/derivations/US_CPS10",
+    "json_tool": "passed: source_manifest.json and worker_report.json",
+    "english_sections": "passed: sections 1-8 present",
+    "f_number_count_match": "passed: English and Chinese F-number occurrence counts match",
+    "dynare_run": "not_performed"
+  },
+  "status": "needs_review",
+  "unresolved_issues": [
+    "Paper-to-implementation algebra for the complete model(linear) block needs source-level review.",
+    "Inflation-target process OCR lag in equation (21) needs targeted PDF/source confirmation.",
+    "Dynare runtime validation intentionally not performed."
+  ]
+}

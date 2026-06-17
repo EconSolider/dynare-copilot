@@ -1,0 +1,113 @@
+{
+  "model_id": "US_FV15",
+  "status": "needs_review",
+  "paper": {
+    "title": "Estimating dynamic equilibrium models with stochastic volatility",
+    "authors": [
+      "Fernandez-Villaverde, Jesus",
+      "Guerron-Quintana, Pablo",
+      "Rubio-Ramirez, Juan F."
+    ],
+    "year": 2015,
+    "journal_or_series": "Journal of Econometrics 185 (1), 216-229",
+    "doi": "10.1016/j.jeconom.2014.08.010"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_FV15",
+    "paper_slug": "us_fv15__estimating_dynamic_equilibrium_models_with_stochastic_volatility",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "ae6b2e5b-1c94-4709-949d-ba79746e88f9"
+    ],
+    "primary_source_title": "Estimating dynamic equilibrium models with stochastic volatility",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_fv15__estimating_dynamic_equilibrium_models_with_stochastic_volatility__ae6b2e5b/full.md",
+      "sha256": "f626b31fc9860d47cf03753f6fbc93e3222a8150fe3e0e81dfbffa87e33d1cf3",
+      "exists": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Estimating dynamic equilibrium models with stochastic volatility.pdf",
+      "sha256": "8b7ddd033ad4129b0eaca7b72d1a51b865925ea8de5ffb4f86c0be77d546d864",
+      "exists": true,
+      "opened_for_formula_check": false,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_FV15.md",
+      "sha256": null,
+      "exists": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FV15_rep.mod",
+      "sha256": "2ff1076c15710eba207562146b83418207f70943f8ed03c721d54b8ada420912",
+      "exists": true,
+      "used_as": "implementation_cross_check",
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_sniff": {
+    "method": "first 80 Markdown lines",
+    "expected_title": "Estimating dynamic equilibrium models with stochastic volatility",
+    "observed_title": "Estimating dynamic equilibrium models with stochastic volatility",
+    "expected_authors": "Fernandez-Villaverde, Jesus; Guerron-Quintana, Pablo; Rubio-Ramirez, Juan",
+    "observed_authors": "Jesus Fernandez-Villaverde; Pablo Guerron-Quintana; Juan F. Rubio-Ramirez",
+    "mismatch": false,
+    "notes": "Title and author list match the model index after ASCII normalization of accents."
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/us_fv15__estimating_dynamic_equilibrium_models_with_stochastic_volatility__ae6b2e5b/full.md",
+      "spans": [
+        "section 5.1 household preferences, budget constraint, capital accumulation, labor packing, and wage setting",
+        "section 5.2 final-good aggregation, intermediate production, neutral technology, and Calvo price setting",
+        "section 5.3 Taylor rule, monetary-policy volatility, and drifting policy parameters",
+        "section 5.4 stationarization, state vector, structural shocks, volatility shocks, innovations, and observables",
+        "tables 5.1-5.4 parameter values and estimates"
+      ]
+    },
+    {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FV15_rep.mod",
+      "spans": [
+        "variable, shock, and parameter declarations",
+        "predetermined capital declaration",
+        "36-equation model block",
+        "calibration values matching paper tables"
+      ],
+      "used_as": "implementation_cross_check"
+    }
+  ],
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_FV15/US_FV15_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_FV15/US_FV15_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_FV15/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_FV15/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_FV15/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_edited": false,
+    "shared_status_edited": false
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown; key full equilibrium equations are appendix-dependent and no local appendix normalization is available."
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper."
+}

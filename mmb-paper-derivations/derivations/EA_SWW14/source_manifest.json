@@ -1,0 +1,174 @@
+{
+  "model_id": "EA_SWW14",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Professional forecasters and real-time forecasting with a DSGE model",
+    "authors": [
+      "Frank Smets",
+      "Anders Warne",
+      "Rafael Wouters"
+    ],
+    "year": 2014,
+    "journal_or_series": "International Journal of Forecasting 30 (2014) 981-995",
+    "doi": "10.1016/j.ijforecast.2014.03.018",
+    "source_match": {
+      "mineru_match_status": "matched",
+      "mineru_match_score": 1.0,
+      "model_title_match_score": 1.0,
+      "primary_source_title": "Professional forecasters and real-time forecasting with a DSGE model",
+      "first_page_sniff": "Title and authors match the model_index row.",
+      "source_index_issue": null
+    }
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=EA_SWW14",
+    "mineru_run_ids": [
+      "2118a8eb-5532-46a0-a3fb-bbbf4871f8d4"
+    ],
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_sww14__professional_forecasters_and_real_time_forecasting_with_a_dsge_model__2118a8eb/full.md",
+      "sha256": "820f3d7546e8b7abb7a3175a39e4f2eeff2f785ab0d4ee7b443b2442a9d047ee",
+      "mineru_run_id": "2118a8eb-5532-46a0-a3fb-bbbf4871f8d4",
+      "line_count": 737,
+      "used_for": [
+        "title_author_sniff",
+        "model_equations",
+        "measurement_equations",
+        "steady_state_transformations",
+        "forecast_conditioning_description"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Professional forecasters and real-time forecasting with a DSGE model.pdf",
+      "sha256": "f282495cc774d4cfe7ee0c5b3d06fa8df6a9cd628538f2ae0db78af7cab3c402",
+      "exists": true,
+      "body_read": false,
+      "used_for": [
+        "provenance_path_existence"
+      ]
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_SWW14.md",
+      "exists": false,
+      "used_for": []
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_SWW14_rep.mod",
+      "sha256": "128f72c62d5629ae7b2022280737adfe583660a5de6bce6b9c8e6b9570c42a86",
+      "exists": true,
+      "line_count": 312,
+      "used_for": [
+        "variable_names",
+        "model(linear)_form",
+        "shock_process_equations",
+        "flex_block_presence",
+        "measurement_equation_cross_check"
+      ],
+      "source_boundary": "implementation_cross_check_only"
+    }
+  },
+  "outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/EA_SWW14/EA_SWW14_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/EA_SWW14/EA_SWW14_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_SWW14/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_SWW14/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_SWW14/worker_report.json"
+  },
+  "quality": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "source_title_status": "matched",
+    "runtime_validation": {
+      "performed": false,
+      "reason": "Not assigned for this archive pass."
+    },
+    "f_number_count": 30,
+    "uncertainties": [
+      "OCR artifacts in shock notation and markup definitions in Section 2.",
+      "Paper does not print all flexible-price/wage counterpart equations.",
+      "Measurement-equation wage row differs between source Markdown rendering and implementation cross-check.",
+      "Monetary-policy shock sign differs between paper equation and implementation cross-check."
+    ]
+  },
+  "paper_title": "Professional forecasters and real-time forecasting with a DSGE model",
+  "authors": "Smets, Frank; Warne, Anders; Wouters, Rafael",
+  "year": "2014",
+  "journal_or_series": "International Journal of Forecasting 30 (2014) 981–995",
+  "doi": "10.1016/j.ijforecast.2014.03.018",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "EA_SWW14",
+    "paper_title": "Professional forecasters and real-time forecasting with a DSGE model",
+    "authors": "Smets, Frank; Warne, Anders; Wouters, Rafael",
+    "year": "2014",
+    "journal_or_series": "International Journal of Forecasting 30 (2014) 981–995",
+    "doi": "10.1016/j.ijforecast.2014.03.018",
+    "paper_slug": "ea_sww14__professional_forecasters_and_real_time_forecasting_with_a_dsge_model",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "2118a8eb-5532-46a0-a3fb-bbbf4871f8d4",
+    "primary_source_title": "Professional forecasters and real-time forecasting with a DSGE model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_sww14__professional_forecasters_and_real_time_forecasting_with_a_dsge_model__2118a8eb/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Professional forecasters and real-time forecasting with a DSGE model.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_sww14__professional_forecasters_and_real_time_forecasting_with_a_dsge_model__2118a8eb/full.md",
+      "exists": true,
+      "sha256": "820f3d7546e8b7abb7a3175a39e4f2eeff2f785ab0d4ee7b443b2442a9d047ee"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Professional forecasters and real-time forecasting with a DSGE model.pdf",
+      "exists": true,
+      "sha256": "f282495cc774d4cfe7ee0c5b3d06fa8df6a9cd628538f2ae0db78af7cab3c402"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_SWW14/EA_SWW14_derivation.en.md",
+      "exists": true,
+      "sha256": "820f1dafde02ba9c79d0e79d529b80bfefda70c0705ca90632fe8040ceee589d"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_SWW14/EA_SWW14_derivation.zh.md",
+      "exists": true,
+      "sha256": "67782f8c64c8d4cb80184e7d0a0150605f394258f212fc0f5f9cb6e939861a3a"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/EA_SWW14/source_manifest.json",
+      "exists": true,
+      "sha256": "fe892ca8fb928bd19f01d97b1210696b9119f37f0181515a1883ac18d4667756"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/EA_SWW14/extraction_notes.md",
+      "exists": true,
+      "sha256": "cd1ea889ca1c33f672c2df54ae2b797394247a46fa3643e93e87b1b9ceaecf11"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/EA_SWW14/worker_report.json",
+      "exists": true,
+      "sha256": "ec148ec6182401e1735a8a2170f7b3ff36a9ddc24497baebf1f4813a355e7146"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

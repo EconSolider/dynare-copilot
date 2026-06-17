@@ -1,0 +1,94 @@
+{
+  "model_id": "US_FV10",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "The Econometrics of DSGE Models",
+    "authors": "Fernandez-Villaverde, Jesus",
+    "year": 2010,
+    "journal_or_series": "SERIEs 1 (1-2), 3-49",
+    "doi": "10.1007/s13209-009-0014-7"
+  },
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "model_id": "US_FV10",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "The Econometrics of DSGE Models",
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+      "sha256": "35caebb7448cab1e5e89e00e6cd7a91bd409d577c63194f151943944cab271f4",
+      "mineru_run_id": "99400522-70f9-4f64-a057-70a15fa06579",
+      "use": "paper_side_source",
+      "title_sniff": "The econometrics of DSGE models; Jesus Fernandez-Villaverde; abstract matches DSGE econometrics and benchmark application"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+      "sha256": "5cfc9f3a37473d034b421efea63f323a9d259568378724acf3d57d974f731396",
+      "exists": true,
+      "use": "provenance_only"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_FV10.md",
+      "exists": false,
+      "use": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FV10_rep.mod",
+      "sha256": "ff15f7c17efe73727350e25e334386428f6ae4b11429af020ae0f711d4a504f4",
+      "exists": true,
+      "use": "implementation_cross_check_only",
+      "notes": "The .mod comments identify FV and Rubio-Ramirez (2006) as the detailed equation source and FV (2010) as the parameterization source; it was used only to check variable names, timing, shock names, and likely omitted processes."
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_FV10/US_FV10_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_FV10/US_FV10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_FV10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_FV10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_FV10/worker_report.json"
+  },
+  "quality": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "f_number_count_en": 33,
+    "f_number_count_zh": 33,
+    "runtime_validation": {
+      "performed": false,
+      "tool": "Dynare",
+      "status": "not_performed",
+      "reason": "User explicitly required no Dynare run."
+    }
+  },
+  "catalog_proposal": {
+    "ModelID": "US_FV10",
+    "Task": "Derive the Fernandez-Villaverde (2010) benchmark estimated US DSGE model",
+    "Paper": "The Econometrics of DSGE Models",
+    "Year": "2010",
+    "ModelType": "Estimated medium-scale New Keynesian DSGE",
+    "Economy": "United States",
+    "Category": "New Keynesian; Bayesian estimation; real and nominal rigidities",
+    "KeyFeatures": "External habits; investment adjustment costs; variable utilization; Calvo wage and price setting with indexation; neutral and investment-specific technology trends; Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+    "RawPDF": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+    "DOI": "10.1007/s13209-009-0014-7",
+    "Status": "needs_review"
+  },
+  "status_proposal": {
+    "model_id": "US_FV10",
+    "paper_title": "The Econometrics of DSGE Models",
+    "source_full_md": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "First-pass extraction from MinerU Markdown. Main unresolved issues: OCR ambiguity in household habit FOC, composite trend text, explicit investment-specific process, and absent closed-form steady-state algorithm."
+  }
+}

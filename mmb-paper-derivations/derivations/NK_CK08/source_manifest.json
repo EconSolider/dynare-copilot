@@ -1,0 +1,152 @@
+{
+  "model_id": "NK_CK08",
+  "status": "needs_review",
+  "title": "Resuscitating the wage channel in models with unemployment",
+  "authors": "Christoffel, Kai; Kuester, Keith",
+  "year": "2008",
+  "journal_or_series": "Journal of Monetary Economics 55(5), pp. 865-887",
+  "doi": "10.1016/j.jmoneco.2008.03.009",
+  "mineru": {
+    "match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "run_ids": [
+      "9824f7f5-cffe-47c7-8bf0-1ade5a06c243"
+    ],
+    "primary_source_title": "Resuscitating the wage channel in models with unemployment",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "model_index": {
+      "path": "raw/mmb_mineru/model_index.csv",
+      "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+      "row_key": "model_id=NK_CK08"
+    },
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment__9824f7f5/full.md",
+      "sha256": "bd1b0e34d418821bb571a50f40e0c6103cc7e68512ca2770edea717de83b2016"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Resuscitating the wage channel in models with unemployment.pdf",
+      "sha256": "deeb6545a157d0a880ccf016f34516525a81f061a33ca2dbbb811c4907a90c27",
+      "body_read": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CK08_rep.mod",
+      "sha256": "3f3d9e198d24395c089fe9e4c6b7136cff48fd507d5d175d98ec24461971915e",
+      "used_for": [
+        "model(linear) form confirmation",
+        "variable and shock coverage",
+        "timing and quarterly-recalibration note"
+      ],
+      "paper_side_source": false
+    }
+  },
+  "outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_CK08/NK_CK08_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_CK08/NK_CK08_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_CK08/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_CK08/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_CK08/worker_report.json"
+  },
+  "catalog_row_proposal": {
+    "ModelID": "NK_CK08",
+    "Task": "derivation_extraction",
+    "Paper": "Resuscitating the wage channel in models with unemployment",
+    "Year": "2008",
+    "ModelType": "New Keynesian search-and-matching unemployment model",
+    "Economy": "United States calibration",
+    "Category": "NK labor market frictions",
+    "KeyFeatures": "right-to-manage wage bargaining; Calvo wages and prices; matching unemployment; fixed job costs; linearized model",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment__9824f7f5/full.md",
+    "RawPDF": "raw/mmb_papers/Resuscitating the wage channel in models with unemployment.pdf",
+    "DOI": "10.1016/j.jmoneco.2008.03.009",
+    "Status": "needs_review"
+  },
+  "status_row_proposal": {
+    "model_id": "NK_CK08",
+    "paper_title": "Resuscitating the wage channel in models with unemployment",
+    "source_full_md": "raw/mmb_mineru/runs/nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment__9824f7f5/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Resuscitating the wage channel in models with unemployment.pdf",
+    "status": "needs_review",
+    "formula_quality": "draft_ocr_transcription_with_long_equations_needing_review",
+    "steady_state_quality": "paper_steady_state_system_extracted_no_runtime_validation",
+    "needs_human_review": true,
+    "notes": "Linearized RTM appendix extracted; long wage-surplus equations should be checked against PDF before review."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "notes": "Out of scope for derivation-only archive pass."
+  },
+  "created_at": "2026-06-17",
+  "paper_title": "Resuscitating the wage channel in models with unemployment",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_CK08",
+    "paper_title": "Resuscitating the wage channel in models with unemployment",
+    "authors": "Christoffel, Kai; Kuester, Keith",
+    "year": "2008",
+    "journal_or_series": "Journal of Monetary Economics 55(5), pp. 865-887",
+    "doi": "10.1016/j.jmoneco.2008.03.009",
+    "paper_slug": "nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "9824f7f5-cffe-47c7-8bf0-1ade5a06c243",
+    "primary_source_title": "Resuscitating the wage channel in models with unemployment",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment__9824f7f5/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Resuscitating the wage channel in models with unemployment.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_ck08__resuscitating_the_wage_channel_in_models_with_unemployment__9824f7f5/full.md",
+      "exists": true,
+      "sha256": "bd1b0e34d418821bb571a50f40e0c6103cc7e68512ca2770edea717de83b2016"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Resuscitating the wage channel in models with unemployment.pdf",
+      "exists": true,
+      "sha256": "deeb6545a157d0a880ccf016f34516525a81f061a33ca2dbbb811c4907a90c27"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CK08/NK_CK08_derivation.en.md",
+      "exists": true,
+      "sha256": "52f96de5c8ded4e4ea04148e3a2b9573e0555e7aa7431ccf56625c0bfd190f8e"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CK08/NK_CK08_derivation.zh.md",
+      "exists": true,
+      "sha256": "7e36285b3a10be199e89a1f1ba90815dd88f372cda978d8d1e2e2e06c54af369"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_CK08/source_manifest.json",
+      "exists": true,
+      "sha256": "6fa4ca652ca77505903c74f1328102a1670dff74e1fc4bb2cbd2adc2d6114543"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_CK08/extraction_notes.md",
+      "exists": true,
+      "sha256": "2c207ea82dde25d69c2e5c5e0cf22241a9a617dce3fde272a8a482174d389815"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_CK08/worker_report.json",
+      "exists": true,
+      "sha256": "da3abbc3e353a42d87b50d59d419b8cc02cdec8ad4d483bf9195b19cdb562278"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

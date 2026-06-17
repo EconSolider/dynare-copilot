@@ -1,0 +1,139 @@
+{
+  "model_id": "NK_CFP10",
+  "status": "needs_review",
+  "paper": {
+    "title": "Optimal monetary policy in a model with agency costs",
+    "authors": [
+      "Charles T. Carlstrom",
+      "Timothy S. Fuerst",
+      "Matthias Paustian"
+    ],
+    "year": 2010,
+    "journal_or_series": "Journal of Money, Credit and Banking 42 (s1), 37-70",
+    "doi": "10.1111/j.1538-4616.2010.00329.x"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=NK_CFP10",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Optimal monetary policy in a model with agency costs",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs__381a62e0/full.md",
+      "sha256": "58681eda339ed8fde8437c1a945c6df1a7a2ef183a225ae6f32918dfaede7d3e",
+      "mineru_run_id": "381a62e0-4eaf-4677-976b-3c9175651f77",
+      "used_as": "paper_side_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Optimal monetary policy in a model with agency costs.pdf",
+      "sha256": "5cf5d3a7b526da45422c039dd037a4b854ec5f5c688307a6a4f7f647a8eabd44",
+      "exists_checked": true,
+      "body_read": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CFP10_rep.mod",
+      "sha256": "467b3693e4fec41023b3d1939efde8384ab04ec0c0a76073c2130bae0c8f3676",
+      "used_as": "implementation_cross_check_only"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_CFP10/NK_CFP10_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_CFP10/NK_CFP10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_CFP10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_CFP10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_CFP10/worker_report.json"
+  },
+  "extraction": {
+    "model_form": "model(linear)",
+    "equation_count_en": 26,
+    "equation_count_zh": 26,
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "Archive extraction only; no Dynare execution requested."
+    }
+  },
+  "paper_title": "Optimal monetary policy in a model with agency costs",
+  "authors": "Carlstrom, Charles T.; Fuerst, Timothy S.; Paustian, Matthias",
+  "year": "2010",
+  "journal_or_series": "Journal of Money, Credit and Banking 42 (s1), 37-70",
+  "doi": "10.1111/j.1538-4616.2010.00329.x",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_CFP10",
+    "paper_title": "Optimal monetary policy in a model with agency costs",
+    "authors": "Carlstrom, Charles T.; Fuerst, Timothy S.; Paustian, Matthias",
+    "year": "2010",
+    "journal_or_series": "Journal of Money, Credit and Banking 42 (s1), 37-70",
+    "doi": "10.1111/j.1538-4616.2010.00329.x",
+    "paper_slug": "nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "381a62e0-4eaf-4677-976b-3c9175651f77",
+    "primary_source_title": "Optimal monetary policy in a model with agency costs",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs__381a62e0/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal monetary policy in a model with agency costs.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs__381a62e0/full.md",
+      "exists": true,
+      "sha256": "58681eda339ed8fde8437c1a945c6df1a7a2ef183a225ae6f32918dfaede7d3e"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Optimal monetary policy in a model with agency costs.pdf",
+      "exists": true,
+      "sha256": "5cf5d3a7b526da45422c039dd037a4b854ec5f5c688307a6a4f7f647a8eabd44"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CFP10/NK_CFP10_derivation.en.md",
+      "exists": true,
+      "sha256": "9295397361e65f608ff21b93ddebb313e262a2cecd41c9a82448b2e1c361d98c"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CFP10/NK_CFP10_derivation.zh.md",
+      "exists": true,
+      "sha256": "17fc69029e4782f9eeb128eaa71812fca9473fc6f4a15e0450a5e417217c0ddb"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_CFP10/source_manifest.json",
+      "exists": true,
+      "sha256": "4edcb9f8dd87051b6284e4b855eb643d65d4d7a57899b3d8505beeb68151154e"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_CFP10/extraction_notes.md",
+      "exists": true,
+      "sha256": "e82f8c5be058b2f50ba055a28cfc4ef33029605a6cf75a26cc749d15f5c08c9c"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_CFP10/worker_report.json",
+      "exists": true,
+      "sha256": "f7ba5a88d10ff555c97018d7a1d522053a48e1b06d0e593f6bb41688f5ae4f64"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

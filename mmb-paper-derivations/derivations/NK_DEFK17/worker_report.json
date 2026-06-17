@@ -1,0 +1,82 @@
+{
+  "model_id": "NK_DEFK17",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_DEFK17/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_DEFK17/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_DEFK17/worker_report.json"
+  ],
+  "ownership": {
+    "owned_path": "mmb-paper-derivations/derivations/NK_DEFK17/",
+    "shared_catalog_csv_edited": false,
+    "shared_status_csv_edited": false,
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "source_order_completed": [
+    ".agents/skills/mmb-model-archive-builder/SKILL.md",
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv row for NK_DEFK17",
+    "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+    "raw PDF existence check",
+    "appendix normalization absence check",
+    ".agents/skills/dynare-copilot/references/examples/NK_DEFK17_rep.mod as implementation_cross_check"
+  ],
+  "source_manifest_summary": {
+    "primary_full_md": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+    "raw_pdf": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+    "doi": "10.1257/aer.20121660",
+    "mineru_run_ids": [
+      "b6479bed-1e6a-4753-a815-218bb09c8cd4"
+    ],
+    "appendix_normalization_exists": false,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/NK_DEFK17_rep.mod"
+  },
+  "proposed_catalog_csv_row": {
+    "ModelID": "NK_DEFK17",
+    "Task": "NK_DEFK17_rep",
+    "Paper": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+    "Year": "2017",
+    "ModelType": "Nonlinear New Keynesian DSGE with Kiyotaki-Moore liquidity frictions",
+    "Economy": "United States",
+    "Category": "Financial Frictions and Liquidity Policy",
+    "KeyFeatures": "Liquidity shock, resaleability constraint, borrowing constraint, ZLB, unconventional credit policy, Calvo prices and wages, investment adjustment costs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+    "RawPDF": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+    "DOI": "10.1257/aer.20121660",
+    "Status": "needs_review"
+  },
+  "proposed_status_csv_row": {
+    "model_id": "NK_DEFK17",
+    "paper_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+    "source_full_md": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+    "status": "needs_review",
+    "formula_quality": "partial_paper_body_equations_with_implementation_cross_check",
+    "steady_state_quality": "reported_targets_and_implementation_cross_check_only",
+    "needs_human_review": "true",
+    "notes": "Paper body delegates detailed CEE/SW blocks to online appendix; no normalized appendix file exists for NK_DEFK17."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "source_manifest_json_tool": "passed",
+    "worker_report_json_tool": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "f_number_count_match": "passed",
+    "f_number_range": "F1-F35",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "The paper body refers detailed CEE/SW production, price, wage, and capital-producer equations to the online appendix.",
+    "No NK_DEFK17 appendix normalization file exists in docs/mmb_appendix_full_normalizations.",
+    "Detailed recursive price/wage/capital-producer equations are cross-checked against the local .mod only and marked needs_review.",
+    "Runtime validation and Dynare checks were intentionally not run."
+  ]
+}

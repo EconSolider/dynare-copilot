@@ -1,0 +1,139 @@
+{
+  "model_id": "NK_GN25",
+  "status": "completed_needs_review",
+  "paper": {
+    "title": "Energy price shocks, unemployment, and monetary policy",
+    "authors": [
+      "Gnocato, Nicolo"
+    ],
+    "year": 2025,
+    "journal_or_series": "Journal of Monetary Economics",
+    "doi": "10.1016/j.jmoneco.2025.103734"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=NK_GN25",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Energy price shocks, unemployment, and monetary policy",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_gn25__energy_price_shocks_unemployment_and_monetary_policy__ca6f092e/full.md",
+      "sha256": "b753bda2565646a7e7dc062982cebefd07671524552605912fb992b2e8e8c96a",
+      "mineru_run_id": "ca6f092e-7214-4c3a-be67-f019e816eacc",
+      "used_as": "paper_side_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Energy price shocks, unemployment, and monetary policy.pdf",
+      "sha256": "76d9015df0cb2432ededc96c869ebab9e14c64059215f7efebe46c51ccdd3d37",
+      "exists_checked": true,
+      "body_read": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": null
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_GN25/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_GN25/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_GN25/worker_report.json"
+  },
+  "extraction": {
+    "model_form": "model(linear)",
+    "equation_count_en": 36,
+    "equation_count_zh": 36,
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "Archive derivation only; no Dynare execution requested or performed."
+    }
+  },
+  "paper_title": "Energy price shocks, unemployment, and monetary policy",
+  "authors": "Gnocato, Nicolò",
+  "year": "2025",
+  "journal_or_series": "Journal of Monetary Economics",
+  "doi": "10.1016/j.jmoneco.2025.103734",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_GN25",
+    "paper_title": "Energy price shocks, unemployment, and monetary policy",
+    "authors": "Gnocato, Nicolò",
+    "year": "2025",
+    "journal_or_series": "Journal of Monetary Economics",
+    "doi": "10.1016/j.jmoneco.2025.103734",
+    "paper_slug": "nk_gn25__energy_price_shocks_unemployment_and_monetary_policy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "ca6f092e-7214-4c3a-be67-f019e816eacc",
+    "primary_source_title": "Energy price shocks, unemployment, and monetary policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gn25__energy_price_shocks_unemployment_and_monetary_policy__ca6f092e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Energy price shocks, unemployment, and monetary policy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_gn25__energy_price_shocks_unemployment_and_monetary_policy__ca6f092e/full.md",
+      "exists": true,
+      "sha256": "b753bda2565646a7e7dc062982cebefd07671524552605912fb992b2e8e8c96a"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Energy price shocks, unemployment, and monetary policy.pdf",
+      "exists": true,
+      "sha256": "76d9015df0cb2432ededc96c869ebab9e14c64059215f7efebe46c51ccdd3d37"
+    }
+  ],
+  "catalog_cross_reference": {
+    "catalog_path": "mmb-paper-derivations/derivations/catalog.csv",
+    "status_path": "mmb-paper-derivations/derivations/status.csv",
+    "shared_indexes_updated": false,
+    "reason": "User explicitly limited write ownership to mmb-paper-derivations/derivations/NK_GN25/."
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.en.md",
+      "exists": true,
+      "sha256": "2af6a05d0d82cec2ecb1f232b470d11381aa5b36247c0b9dd9a418e41d49c2e6"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.zh.md",
+      "exists": true,
+      "sha256": "bc4318a171c277b5ec872fc2ccaa1470fb9e646526983d45a7d434ed1bc0b54a"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_GN25/source_manifest.json",
+      "exists": true,
+      "sha256": "d108a71cd7099010bf15f68cf0d0624b25832f203eabd340791d9be1ee0f8b65"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_GN25/extraction_notes.md",
+      "exists": true,
+      "sha256": "3429ccaf000d9579922e50e06ad33e578a27ffabe3a003580e58f4b0876fa437"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_GN25/worker_report.json",
+      "exists": true,
+      "sha256": "f4d46fb501b157183ba7a98bdd4400dd16d9aaa5deb6596f7361949d28e2ee63"
+    }
+  ],
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

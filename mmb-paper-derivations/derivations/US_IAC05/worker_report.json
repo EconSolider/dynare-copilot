@@ -1,0 +1,78 @@
+{
+  "model_id": "US_IAC05",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_IAC05/US_IAC05_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_IAC05/US_IAC05_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_IAC05/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_IAC05/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_IAC05/worker_report.json"
+  ],
+  "ownership": {
+    "owned_path": "mmb-paper-derivations/derivations/US_IAC05/",
+    "shared_indexes_edited": false
+  },
+  "source_summary": {
+    "paper_title": "House prices, borrowing constraints, and monetary policy in the business cycle",
+    "authors": "Iacoviello, Matteo",
+    "year": 2005,
+    "doi": "10.1257/0002828054201477",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_iac05__house_prices_borrowing_constraints_and_monetary_policy_in_the_business_c__4002ee39/full.md",
+    "raw_pdf_path": "raw/mmb_papers/House prices, borrowing constraints, and monetary policy in the business cycle.pdf",
+    "mineru_run_id": "4002ee39-61e1-4470-a4e8-b5386cfee9a2",
+    "appendix_normalization_path": null,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/US_IAC05_rep.mod"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_IAC05",
+    "Task": "mmb_derivation",
+    "Paper": "House prices, borrowing constraints, and monetary policy in the business cycle",
+    "Year": "2005",
+    "ModelType": "Log-linear DSGE, estimated NK model with housing collateral and nominal debt",
+    "Economy": "United States",
+    "Category": "Housing collateral; borrowing constraints; monetary policy",
+    "KeyFeatures": "Patient and impatient households; entrepreneurs; nominal debt; collateral constraints tied to housing values; sticky prices; capital adjustment costs; Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_iac05__house_prices_borrowing_constraints_and_monetary_policy_in_the_business_c__4002ee39/full.md",
+    "RawPDF": "raw/mmb_papers/House prices, borrowing constraints, and monetary policy in the business cycle.pdf",
+    "DOI": "10.1257/0002828054201477",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_IAC05",
+    "paper_title": "House prices, borrowing constraints, and monetary policy in the business cycle",
+    "source_full_md": "raw/mmb_mineru/runs/us_iac05__house_prices_borrowing_constraints_and_monetary_policy_in_the_business_c__4002ee39/full.md",
+    "raw_pdf_path": "raw/mmb_papers/House prices, borrowing constraints, and monetary policy in the business cycle.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "First-pass extraction from MinerU Markdown; PDF-level formula audit and runtime validation deferred; .mod used only as implementation_cross_check."
+  },
+  "validation": {
+    "dynare_run": false,
+    "commands": [
+      {
+        "command": "git diff --check -- mmb-paper-derivations/derivations/US_IAC05",
+        "result": "passed"
+      },
+      {
+        "command": "python3 -m json.tool mmb-paper-derivations/derivations/US_IAC05/source_manifest.json >/dev/null",
+        "result": "passed"
+      },
+      {
+        "command": "python3 -m json.tool mmb-paper-derivations/derivations/US_IAC05/worker_report.json >/dev/null",
+        "result": "passed"
+      },
+      {
+        "command": "python3 section and F-number validation for English and Chinese derivations",
+        "result": "passed; English has all eight required sections; English and Chinese F-number reference counts match at 78 with unique F1-F18"
+      }
+    ]
+  },
+  "unresolved_issues": [
+    "OCR-normalized adjustment-cost term in patient housing equation requires PDF-level check.",
+    "OCR ambiguity around the real-rate term in the entrepreneurial housing-consumption margin requires PDF-level check.",
+    "Steady-state ratios should be reviewed against the original appendix and MMB calibration."
+  ]
+}

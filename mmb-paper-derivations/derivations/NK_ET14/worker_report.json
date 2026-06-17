@@ -1,0 +1,53 @@
+{
+  "model_id": "NK_ET14",
+  "status": "completed_with_needs_review",
+  "owned_paths": [
+    "mmb-paper-derivations/derivations/NK_ET14/"
+  ],
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_ET14/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_ET14/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_ET14/worker_report.json"
+  ],
+  "source_files_read": [
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv",
+    "raw/mmb_mineru/runs/nk_et14__unconventional_government_debt_purchases_as_a_supplement_to_conventional__f7e430ba/full.md",
+    ".agents/skills/dynare-copilot/references/examples/NK_ET14_rep.mod"
+  ],
+  "pdf": {
+    "path": "raw/mmb_papers/Unconventional government debt purchases as a supplement to conventional monetary policy.pdf",
+    "exists_checked": true,
+    "body_read": false
+  },
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/NK_ET14.md",
+    "exists": false
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/NK_ET14_rep.mod",
+    "used": true,
+    "paper_source": false
+  },
+  "validations": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "english_chinese_f_number_parity": "passed"
+  },
+  "unresolved_issues": [
+    "Appendix B OCR artifacts in B.4, B.6, B.28, and B.42 require source-level review before reviewed_derivation status.",
+    "Runtime validation was not performed.",
+    "Shared catalog.csv and status.csv were not updated by user instruction."
+  ],
+  "commit_push": {
+    "performed": false,
+    "reason": "User explicitly instructed not to commit, push, or stage shared indexes and limited ownership to the NK_ET14 folder."
+  }
+}

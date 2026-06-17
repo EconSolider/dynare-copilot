@@ -1,0 +1,77 @@
+{
+  "model_id": "US_CCTW10",
+  "title": "New keynesian versus old keynesian government spending multipliers",
+  "authors": [
+    "John F. Cogan",
+    "Tobias Cwik",
+    "John B. Taylor",
+    "Volker Wieland"
+  ],
+  "year": 2010,
+  "doi": "10.1016/j.jedc.2010.01.010",
+  "journal_or_series": "Journal of Economic Dynamics and Control 34(3), pp. 281-295",
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "row_number": 106,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_ids": [
+      "da0c2db2-6c72-491a-bf19-36494debedbb"
+    ],
+    "primary_source_title": "New keynesian versus old keynesian government spending multipliers",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_cctw10__new_keynesian_versus_old_keynesian_government_spending_multipliers__da0c2db2/full.md",
+    "primary_full_md_sha256": "659ea28a152ae05f8c7de0deebfe6d9467ac2552204ccc1e82d1f6b3af2d2628",
+    "title_sniff": {
+      "checked": true,
+      "result": "first Markdown heading and authors match model_index row"
+    }
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/New keynesian versus old keynesian government spending multipliers.pdf",
+    "sha256": "2390914291da1be9d73049eea0be204c9111362eded196832bd3960b6242eba5",
+    "exists": true,
+    "body_read": false
+  },
+  "appendix_normalization": {
+    "path": null,
+    "exists": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_CCTW10_rep.mod",
+    "sha256": "6eec22c82b6835718c58f0ed87647aca59e60793291d504bbca85f0d6c7becc8",
+    "used_for": [
+      "variable coverage",
+      "timing conventions",
+      "linear equation coverage",
+      "shock names",
+      "scenario dummy paths"
+    ],
+    "not_used_as_paper_source": true
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_CCTW10/US_CCTW10_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_CCTW10/US_CCTW10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_CCTW10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_CCTW10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_CCTW10/worker_report.json"
+  },
+  "source_quality": {
+    "paper_side_model_equations": "partial",
+    "formula_quality": "needs_review",
+    "source_index_issue": false,
+    "notes": "CCTW Appendix A prints the rule-of-thumb and fiscal-policy extension but refers to Smets and Wouters (2007) for the rest of the core model."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "dynare_run": false,
+    "status": "not_performed_by_user_instruction"
+  },
+  "status": "needs_review",
+  "created_date": "2026-06-17"
+}

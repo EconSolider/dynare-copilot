@@ -1,0 +1,75 @@
+{
+  "model_id": "EA_PV16",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/EA_PV16/EA_PV16_derivation.en.md",
+    "mmb-paper-derivations/derivations/EA_PV16/EA_PV16_derivation.zh.md",
+    "mmb-paper-derivations/derivations/EA_PV16/source_manifest.json",
+    "mmb-paper-derivations/derivations/EA_PV16/extraction_notes.md",
+    "mmb-paper-derivations/derivations/EA_PV16/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_PV16",
+    "Task": "mmb_derivation_first_pass",
+    "Paper": "The Portfolio Balance Mechanism and QE in the Euro Area",
+    "Year": "2016",
+    "ModelType": "open-economy DSGE with QE portfolio-balance block",
+    "Economy": "Euro Area",
+    "Category": "QE / portfolio balance / QUEST",
+    "KeyFeatures": "central-bank long-bond purchases; short and long government bonds; imperfect asset substitutability; ZLB simulation; cross-border bond-holding extension",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area__1dbe823d/full.md",
+    "RawPDF": "raw/mmb_papers/The Portfolio Balance Mechanism and QE in the Euro Area.pdf",
+    "DOI": "10.1111/manc.12162",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_PV16",
+    "paper_title": "The Portfolio Balance Mechanism and QE in the Euro Area",
+    "source_full_md": "raw/mmb_mineru/runs/ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area__1dbe823d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Portfolio Balance Mechanism and QE in the Euro Area.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "First-pass source-backed QE block extraction; full QUEST appendix equations and runtime validation deferred."
+  },
+  "validation": [
+    {
+      "check": "source_manifest_json",
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/EA_PV16/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "worker_report_json",
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/EA_PV16/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "english_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "english_chinese_f_number_count_match",
+      "status": "passed",
+      "english_count": 86,
+      "chinese_count": 86,
+      "numbered_equations": 23
+    },
+    {
+      "check": "git_diff_check",
+      "command": "git diff --check -- mmb-paper-derivations/derivations/EA_PV16",
+      "status": "passed"
+    },
+    {
+      "check": "ownership_scope",
+      "status": "passed",
+      "notes": "Only mmb-paper-derivations/derivations/EA_PV16/ was changed; shared CSVs were not edited."
+    }
+  ],
+  "unresolved_issues": [
+    "Full QUEST baseline equations are not printed in the extracted Markdown source.",
+    "QE purchase rule and exact Taylor rule need appendix/source-level verification.",
+    "Runtime validation was not performed."
+  ]
+}

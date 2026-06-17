@@ -1,0 +1,142 @@
+{
+  "model_id": "NK_GK09lin",
+  "paper_title": "A Model of Unconvetional Monetary Policy",
+  "authors": "Gertler, Mark; Karadi, Peter ",
+  "year": "2009",
+  "journal_or_series": "Journal of Monetary Economics 58(1), pp. 17-34",
+  "doi": "10.1016/j.jmoneco.2010.10.004",
+  "source_selection": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "paper_slug": "nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "A Model of Unconvetional Monetary Policy",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md_path": {
+      "path": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+      "sha256": "f2807a3e2a138c02f7fc674f6524c9f15b178477ea1ad0be67ce96dc213a734c",
+      "bytes": 74629,
+      "role": "paper_side_primary_source"
+    },
+    "raw_pdf_path": {
+      "path": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+      "sha256": "b51c431f77b968a4fefed334d746eaf02e74a543cf283d5118f18d9e85b935dd",
+      "bytes": 535251,
+      "role": "provenance_only_pdf_body_not_used",
+      "note": "Path existence and file metadata recorded; PDF body was not used as a source for extraction."
+    },
+    "appendix_normalization_path": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_GK09lin_rep.mod",
+      "sha256": "3405205843f334e5d8e620fe8005a67c5e355825502899ef2fb2ed21b1add06b",
+      "bytes": 5347,
+      "role": "implementation_cross_check_only"
+    },
+    "model_index": {
+      "path": "raw/mmb_mineru/model_index.csv",
+      "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75"
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "e6192938-5688-49c7-9621-66ca2478274f",
+      "7766fa43-5b60-4812-9445-88d48b0fe6cf"
+    ]
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_GK09lin/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_GK09lin/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_GK09lin/worker_report.json"
+  },
+  "extraction": {
+    "status": "needs_review",
+    "model_form": "model(linear)",
+    "equation_numbers": {
+      "english_min": "F1",
+      "english_max": "F35",
+      "chinese_min": "F1",
+      "chinese_max": "F35"
+    },
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed"
+    },
+    "pdf_body_read": false
+  },
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_GK09lin",
+    "paper_title": "A Model of Unconvetional Monetary Policy",
+    "authors": "Gertler, Mark; Karadi, Peter ",
+    "year": "2009",
+    "journal_or_series": "Journal of Monetary Economics 58(1), pp. 17-34",
+    "doi": "10.1016/j.jmoneco.2010.10.004",
+    "paper_slug": "nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "e6192938-5688-49c7-9621-66ca2478274f; 7766fa43-5b60-4812-9445-88d48b0fe6cf",
+    "primary_source_title": "A Model of Unconvetional Monetary Policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+      "exists": true,
+      "sha256": "f2807a3e2a138c02f7fc674f6524c9f15b178477ea1ad0be67ce96dc213a734c"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+      "exists": true,
+      "sha256": "b51c431f77b968a4fefed334d746eaf02e74a543cf283d5118f18d9e85b935dd"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.en.md",
+      "exists": true,
+      "sha256": "ab96df0cbc1e8e40f9d73dcf06de95ca2f4ebd635b546349297633a81db8aeb6"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.zh.md",
+      "exists": true,
+      "sha256": "4e740c7d94e0811cb7a0143abb75dc616ddbc3a89c32af7879cf62161aff7934"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_GK09lin/source_manifest.json",
+      "exists": true,
+      "sha256": "bc74686021f95dea9b70f75db939296afbe6eac5831ce265248de0842c91434c"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_GK09lin/extraction_notes.md",
+      "exists": true,
+      "sha256": "030667d769267221152c3ee9844650c71bef3f3777b17533c5ce8a1c9017e5f9"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_GK09lin/worker_report.json",
+      "exists": true,
+      "sha256": "edb333f1e7fae481daadb19737092593635a75d2a409a4910b8725b02f43e40e"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

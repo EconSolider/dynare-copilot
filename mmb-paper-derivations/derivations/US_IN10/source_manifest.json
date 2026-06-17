@@ -1,0 +1,89 @@
+{
+  "model_id": "US_IN10",
+  "status": "needs_review",
+  "title": "Housing Market Spillovers: Evidence from an Estimated DSGE Model",
+  "authors": "Iacoviello, Matteo; Neri, Stefano",
+  "year": 2010,
+  "doi": "10.1257/mac.2.2.125",
+  "journal_or_series": "American Economic Journal: Macroeconomics 2 (2), pp. 125-64",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_IN10",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": [
+    {
+      "role": "primary_full_markdown",
+      "path": "raw/mmb_mineru/runs/us_in10__housing_market_spillovers_evidence_from_an_estimated_dsge_model__eac0da74/full.md",
+      "sha256": "6a456689e18fdc795e0cc73f14cd71292113b6ebd1136f4e5cb431b19c033441",
+      "mineru_run_id": "eac0da74-ce5a-44ed-87f4-f7ac437abbaf",
+      "title_sniff": "Housing Market Spillovers: Evidence from an Estimated DSGE Model",
+      "used_for": [
+        "model overview",
+        "optimization problems",
+        "equilibrium equations",
+        "balanced-growth rates",
+        "parameter and steady-state ratio extraction"
+      ]
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/Housing market spillovers- Evidence from an estimated dsge model.pdf",
+      "sha256": "693d994803b693b90fdbeda3f4c57f8a1a5f900592b1e51998cd0d13a3232667",
+      "exists": true,
+      "used_for": [
+        "provenance only"
+      ]
+    },
+    {
+      "role": "implementation_cross_check",
+      "path": ".agents/skills/dynare-copilot/references/examples/US_IN10_rep.mod",
+      "sha256": "c3204594eaf7ece1fc9893f8b851b89b1c333be2c0bb149e7a7a2da6bac6465c",
+      "used_for": [
+        "variable coverage",
+        "shock names",
+        "timing conventions",
+        "linearized/log implementation form"
+      ],
+      "not_used_for": [
+        "paper-side mathematical source"
+      ]
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_IN10.md",
+    "exists": false,
+    "used": false
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_IN10/US_IN10_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_IN10/US_IN10_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_IN10/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_IN10/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_IN10/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "proposed_only": true,
+    "shared_catalog_not_edited": true,
+    "shared_status_not_edited": true
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": "Dynare",
+    "reason": "User explicitly requested no Dynare run; archive phase is derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "first_pass_uncertainty_markers": [
+      "patient budget OCR shows q_l h_t where q_t h_t is expected",
+      "wage Phillips-curve slope definitions have inconsistent sector/type notation",
+      "adjustment-cost formula line breaks need PDF-level checking",
+      "Appendix variable list appears duplicated and malformed"
+    ]
+  },
+  "created_utc": "2026-06-17"
+}

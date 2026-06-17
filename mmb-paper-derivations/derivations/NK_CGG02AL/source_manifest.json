@@ -1,0 +1,183 @@
+{
+  "model_id": "NK_CGG02AL",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "A simple framework for international monetary policy analysis",
+    "authors": [
+      "Richard Clarida",
+      "Jordi Gali",
+      "Mark Gertler"
+    ],
+    "year": 2002,
+    "doi": "10.3386/w8870"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "NK_CGG02AL",
+    "source_key": "nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis",
+    "match_status": "matched",
+    "model_title_match_score": 1.0,
+    "primary_source_title": "A simple framework for international monetary policy analysis",
+    "primary_source_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+      "sha256": "a08d373aa4bfb9d0e0658c8f0851744d3aa7d64513b5ea5be47c3fd04e8cc25d",
+      "mineru_run_id": "8ffaf5fd-ee22-465d-89b8-0690a85353c0",
+      "read_for_derivation": true
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+      "sha256": "e10d439ff44d8ae9be58a914614e1b9e714a3e7d29eaf53b68a76c2686cfb590",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_CGG02AL.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CGG02AL_rep.mod",
+      "exists": false,
+      "sha256": null,
+      "used": false
+    }
+  },
+  "outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_CGG02AL/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_CGG02AL/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_CGG02AL/worker_report.json"
+  },
+  "equation_numbering": {
+    "first": "F1",
+    "last": "F48",
+    "english_f_number_count": 48,
+    "chinese_f_number_count": 48
+  },
+  "classification": {
+    "model_type": "Open-economy New Keynesian",
+    "economy": "Two-country",
+    "form": "log-linear analytical model",
+    "key_features": [
+      "complete international risk sharing",
+      "producer-price Calvo stickiness",
+      "cost-push wage-markup shock",
+      "Nash and cooperative monetary policy",
+      "floating exchange rate"
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed",
+    "notes": "This phase is derivation extraction only; no Dynare run was requested or executed."
+  },
+  "review_flags": [
+    "needs_review: OCR renders theta/vartheta-like policy coefficient as '9' in policy-rule equations.",
+    "needs_review: cooperative reduced-form inflation expression around paper Eq. (76) is not fully reliable in MinerU Markdown.",
+    "needs_review: technology process is not specified as a standalone AR(1) in the source Markdown."
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_CGG02AL",
+    "Task": "Monetary policy analysis in a two-country open-economy NK model",
+    "Paper": "A simple framework for international monetary policy analysis",
+    "Year": "2002",
+    "ModelType": "Open-economy NK, log-linear analytical",
+    "Economy": "Two-country",
+    "Category": "Monetary Policy",
+    "KeyFeatures": "Calvo prices; complete markets; terms of trade; Nash vs cooperation; cost-push shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "RawPDF": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "DOI": "10.3386/w8870",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_CGG02AL",
+    "paper_title": "A simple framework for international monetary policy analysis",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "status": "needs_review",
+    "formula_quality": "mostly_readable_with_ocr_flags",
+    "steady_state_quality": "log_linear_reference_only",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation; cooperative reduced-form formulas and policy coefficient notation need PDF check."
+  },
+  "paper_title": "A simple framework for international monetary policy analysis",
+  "authors": "Clarida, Richard; Gali, Jordí; Gertler, Mark",
+  "year": "2002",
+  "journal_or_series": null,
+  "doi": "10.3386/w8870",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_CGG02AL",
+    "paper_title": "A simple framework for international monetary policy analysis",
+    "authors": "Clarida, Richard; Gali, Jordí; Gertler, Mark",
+    "year": "2002",
+    "journal_or_series": "",
+    "doi": "10.3386/w8870",
+    "paper_slug": "nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "8ffaf5fd-ee22-465d-89b8-0690a85353c0; 6a29a2f0-556b-4ff8-b273-d71880107e67",
+    "primary_source_title": "A simple framework for international monetary policy analysis",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+      "exists": true,
+      "sha256": "a08d373aa4bfb9d0e0658c8f0851744d3aa7d64513b5ea5be47c3fd04e8cc25d"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+      "exists": true,
+      "sha256": "e10d439ff44d8ae9be58a914614e1b9e714a3e7d29eaf53b68a76c2686cfb590"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.en.md",
+      "exists": true,
+      "sha256": "00a38dde8d6afeba3a3fdb0750f8a82404522cbedc64565859ba253d16631dc9"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_CGG02AL/NK_CGG02AL_derivation.zh.md",
+      "exists": true,
+      "sha256": "f1f81e541f9825ed35049984093e0736a58c279d3aa4dc60f367aa0335323796"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_CGG02AL/source_manifest.json",
+      "exists": true,
+      "sha256": "af6065a88f65409bb6444ca3101fa5afb3f9b6564366cf085b6a9f1fbcadcecd"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_CGG02AL/extraction_notes.md",
+      "exists": true,
+      "sha256": "5af485503fe1e168e7840eb6efd3f6ae270fd239f4cc25c49fd0321e57cbaf93"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_CGG02AL/worker_report.json",
+      "exists": true,
+      "sha256": "f5554fa4702382639349abddb739554289449f5fe6f7dc445ac18fdbc9e8fcd4"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

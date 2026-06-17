@@ -1,0 +1,38 @@
+{
+  "model_id": "NK_FLMF18",
+  "status": "completed_with_needs_review",
+  "owned_paths": [
+    "mmb-paper-derivations/derivations/NK_FLMF18/NK_FLMF18_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_FLMF18/NK_FLMF18_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_FLMF18/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_FLMF18/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_FLMF18/worker_report.json"
+  ],
+  "shared_indexes_touched": false,
+  "source_inputs": {
+    "model_index_row": "raw/mmb_mineru/model_index.csv:59",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_flmf18__monetary_policy_spillovers_global_commoditiy_prices_and_cooperation__837579b4/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary policy spillovers, global commoditiy prices and cooperation.pdf",
+    "raw_pdf_exists": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_path": null,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/NK_FLMF18_rep.mod"
+  },
+  "validation": {
+    "git_diff_check_model_folder": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "f_number_parity": "passed",
+    "english_unique_f_numbers": 43,
+    "chinese_unique_f_numbers": 43,
+    "f_number_range": "F1-F43"
+  },
+  "unresolved_issues": [
+    "Source Markdown has OCR artifacts in selected appendix equations and captions.",
+    "Runtime validation was not performed.",
+    "Implementation cross-check shows a RHO_GG assignment not visible in the displayed parameter declaration excerpt.",
+    "The DOI is preserved from model_index.csv although the visible paper source is a BIS working paper."
+  ]
+}

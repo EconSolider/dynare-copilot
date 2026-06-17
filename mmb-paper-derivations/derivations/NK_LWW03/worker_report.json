@@ -1,0 +1,53 @@
+{
+  "model_id": "NK_LWW03",
+  "status": "needs_review",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/NK_LWW03/NK_LWW03_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_LWW03/NK_LWW03_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_LWW03/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_LWW03/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_LWW03/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_LWW03",
+    "Task": "Derive linearized optimizing AD-AS model and policy-rule variant",
+    "Paper": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "Year": "2003",
+    "ModelType": "Linearized New Keynesian optimizing AD-AS",
+    "Economy": "United States / generic closed economy",
+    "Category": "New Keynesian; monetary policy rules",
+    "KeyFeatures": "Forward-looking Phillips curve; expectational IS curve; natural-rate shock; inflation shock; forecast-based policy-rule class; MMB current-inflation rule variant",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "RawPDF": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "DOI": "10.1257/000282803322157016",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_LWW03",
+    "paper_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "source_full_md": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "notes": "Reduced-form equations are legible; primitive optimization problems and paper-vs-MMB policy-rule distinction need review."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_match": "passed",
+    "english_f_number_references": 53,
+    "chinese_f_number_references": 53,
+    "unique_f_numbers": 9,
+    "dynare_run": "not_performed"
+  },
+  "unresolved_formula_or_ocr_issues": [
+    "Primitive optimization problems are not present in the extracted paper text.",
+    "Some table-note symbols in MinerU Markdown are incomplete, though the core model equations are legible.",
+    "Paper benchmark forecast rule differs from the MMB implementation policy rule."
+  ]
+}

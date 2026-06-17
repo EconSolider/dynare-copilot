@@ -1,0 +1,150 @@
+{
+  "model_id": "NK_KM16",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Public Debt and Changing Inflation Targets",
+    "authors": "Krause, Michael U.; Moyen, Stephane",
+    "year": 2016,
+    "journal_or_series": "American Economic Journal: Macroeconomics, 8(4): 142-76",
+    "doi": "10.1257/mac.20130014"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_KM16",
+    "paper_slug": "nk_km16__public_debt_and_changing_inflation_targets",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_ids": [
+      "e715ef78-2669-4f27-8813-b62be9614e4e"
+    ],
+    "primary_source_title": "Public Debt and Changing Inflation Targets",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_km16__public_debt_and_changing_inflation_targets__e715ef78/full.md",
+    "primary_full_md_sha256": "c7cde850dbd81556ad218559e53cb05679792550ba9145d9866d795fcc22dd02",
+    "full_md_bytes": 113964,
+    "source_line_cues": {
+      "model_section": "full.md lines 54-348",
+      "calibration_table": "full.md around Table 2",
+      "references": "full.md lines 962-1005"
+    }
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/Public Debt and Changing Inflation Targets.pdf",
+    "sha256": "610df32e1b4c943918759e24e2e15a0eedbdd6a8daa34c9ab0a677ab32452e13",
+    "exists_checked": true,
+    "body_read": false
+  },
+  "appendix_normalization": {
+    "path": null,
+    "exists": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/NK_KM16_rep.mod",
+    "sha256": "a1449badb60d9b079c97e68a00b6aabb91a39b08d65fc5013398c98bc4b2b9d6",
+    "used_as": "implementation_cross_check_only",
+    "notes": [
+      "Confirmed separate natural and sticky-price blocks.",
+      "Confirmed MMB variable names for long-term debt stock, new issuance, average debt rate, new-issue debt rate, inflation target, price dispersion, and Calvo recursions.",
+      "Confirmed steady_state_model assignments used as cross-check, not as paper-side source."
+    ]
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_KM16/NK_KM16_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_KM16/NK_KM16_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_KM16/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_KM16/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_KM16/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "catalog_csv_updated": false,
+    "status_csv_updated": false,
+    "reason": "User explicitly restricted ownership to the NK_KM16 folder and prohibited editing shared indexes."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  },
+  "review_flags": [
+    "needs_review: OCR damage around the long-term bond capital-loss term in equation (4).",
+    "needs_review: Kalman gain algebra was not fully transcribed because the Markdown line is compressed.",
+    "needs_review: natural-rate block is visible in implementation cross-check but only summarized in the paper text."
+  ],
+  "created_utc": "2026-06-17",
+  "paper_title": "Public Debt and Changing Inflation Targets",
+  "authors": "Krause, Michael U.; Moyen, Stéphane",
+  "year": "2016",
+  "journal_or_series": "American Economic Journal: Macroeconomics, 8(4): 142-76",
+  "doi": "10.1257/mac.20130014",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_KM16",
+    "paper_title": "Public Debt and Changing Inflation Targets",
+    "authors": "Krause, Michael U.; Moyen, Stéphane",
+    "year": "2016",
+    "journal_or_series": "American Economic Journal: Macroeconomics, 8(4): 142-76",
+    "doi": "10.1257/mac.20130014",
+    "paper_slug": "nk_km16__public_debt_and_changing_inflation_targets",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "e715ef78-2669-4f27-8813-b62be9614e4e",
+    "primary_source_title": "Public Debt and Changing Inflation Targets",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_km16__public_debt_and_changing_inflation_targets__e715ef78/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Public Debt and Changing Inflation Targets.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_km16__public_debt_and_changing_inflation_targets__e715ef78/full.md",
+      "exists": true,
+      "sha256": "c7cde850dbd81556ad218559e53cb05679792550ba9145d9866d795fcc22dd02"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Public Debt and Changing Inflation Targets.pdf",
+      "exists": true,
+      "sha256": "610df32e1b4c943918759e24e2e15a0eedbdd6a8daa34c9ab0a677ab32452e13"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_KM16/NK_KM16_derivation.en.md",
+      "exists": true,
+      "sha256": "cd27288e364162ecc69ff902a558a649428bfd88d0e8a67e0f18693cdd2f0617"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_KM16/NK_KM16_derivation.zh.md",
+      "exists": true,
+      "sha256": "29d9697e43e5e75fa1338a2810f05ff9f6bbb59c5e9ea0ffb30b9b96ecad6e8f"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_KM16/source_manifest.json",
+      "exists": true,
+      "sha256": "bbe3d3abf113d3ecdc2ebaaa4d9ff89ad1e09ef7c51cfc9042a23a41a22b3101"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_KM16/extraction_notes.md",
+      "exists": true,
+      "sha256": "2d76c658e7ce05962772cbe3663a9cb86bee6463b1ca65fbe5a96669e56f9205"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_KM16/worker_report.json",
+      "exists": true,
+      "sha256": "6ead27b26b5c8f6e5866f58d0915f524db7016a9d5b57da6167598a05ea61760"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

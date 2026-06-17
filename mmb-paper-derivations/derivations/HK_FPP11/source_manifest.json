@@ -1,0 +1,137 @@
+{
+  "model_id": "HK_FPP11",
+  "archive_status": "needs_review",
+  "title": "Stock market wealth effects in an estimated DSGE model for Hong Kong",
+  "authors": "Funke, Michael; Paetz, Michael; Pytlarczyk, Ernest",
+  "year": "2011",
+  "doi": "10.1016/j.econmod.2010.08.016",
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_number": 39,
+    "primary_source_slug": "hk_fpp11__stock_market_wealth_effects_in_an_estimated_dsge_model_for_hong_kong",
+    "source_match_status": "matched",
+    "source_match_score": 1.0,
+    "primary_source_title": "Stock market wealth effects in an estimated DSGE model for Hong Kong",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_id": "24bfe42d-832c-4187-85cd-31bab6f55223",
+    "primary_full_md_path": "raw/mmb_mineru/runs/hk_fpp11__stock_market_wealth_effects_in_an_estimated_dsge_model_for_hong_kong__24bfe42d/full.md",
+    "primary_full_md_sha256": "3ce3539f1a3ce26de2442917d2f5ceff9795dd7af490da7ea60366925dc67630"
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/Stock market wealth effects in an estimated DSGE model for Hong Kong.pdf",
+    "sha256": "67e6c105ef0b97897b442959db041ebe66e36b1e02a90e49d16fe386bc27616c",
+    "exists_checked": true,
+    "body_read": false
+  },
+  "appendix_normalization": null,
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/HK_FPP11_rep.mod",
+    "sha256": "56e70cb6224dbe568438f769e43c303d9c2f009f118a3fd671ca0d560b2a7a20",
+    "used_for": [
+      "variable names",
+      "linear model form",
+      "policy-rule implementation",
+      "shock names",
+      "parameter calibration cross-check"
+    ],
+    "source_role": "implementation_cross_check_only"
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/HK_FPP11/HK_FPP11_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/HK_FPP11/HK_FPP11_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/HK_FPP11/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/HK_FPP11/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/HK_FPP11/worker_report.json"
+  },
+  "model_form": "model(linear)",
+  "equation_count": {
+    "english_f_numbers": 20,
+    "chinese_f_numbers": 20,
+    "matches": true
+  },
+  "quality_flags": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "linearized_steady_state_zero_with_source_steady_state_relations",
+    "needs_human_review": true,
+    "runtime_validation_status": "not_performed"
+  },
+  "created_at": "2026-06-17",
+  "worker_scope": "mmb-paper-derivations/derivations/HK_FPP11/",
+  "paper_title": "Stock market wealth effects in an estimated DSGE model for Hong Kong",
+  "journal_or_series": "Economic Modelling 28, pp. 316-334",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "HK_FPP11",
+    "paper_title": "Stock market wealth effects in an estimated DSGE model for Hong Kong",
+    "authors": "Funke, Michael; Paetz, Michael; Pytlarczyk, Ernest",
+    "year": "2011",
+    "journal_or_series": "Economic Modelling 28, pp. 316-334",
+    "doi": "10.1016/j.econmod.2010.08.016",
+    "paper_slug": "hk_fpp11__stock_market_wealth_effects_in_an_estimated_dsge_model_for_hong_kong",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "24bfe42d-832c-4187-85cd-31bab6f55223",
+    "primary_source_title": "Stock market wealth effects in an estimated DSGE model for Hong Kong",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/hk_fpp11__stock_market_wealth_effects_in_an_estimated_dsge_model_for_hong_kong__24bfe42d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Stock market wealth effects in an estimated DSGE model for Hong Kong.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/hk_fpp11__stock_market_wealth_effects_in_an_estimated_dsge_model_for_hong_kong__24bfe42d/full.md",
+      "exists": true,
+      "sha256": "3ce3539f1a3ce26de2442917d2f5ceff9795dd7af490da7ea60366925dc67630"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Stock market wealth effects in an estimated DSGE model for Hong Kong.pdf",
+      "exists": true,
+      "sha256": "67e6c105ef0b97897b442959db041ebe66e36b1e02a90e49d16fe386bc27616c"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/HK_FPP11/HK_FPP11_derivation.en.md",
+      "exists": true,
+      "sha256": "796d50dedf2a35dff7fa352b35e942d580823c38f802fd86887fb0585ec5e754"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/HK_FPP11/HK_FPP11_derivation.zh.md",
+      "exists": true,
+      "sha256": "8996d2f104aac80ddfa56f141e2a53c47785307496b3bf7a07d23711f6658d36"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/HK_FPP11/source_manifest.json",
+      "exists": true,
+      "sha256": "8deccb9e9b0250ad4a26ac04339eb14fc9d73f99c1908b2831c996db0626bba4"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/HK_FPP11/extraction_notes.md",
+      "exists": true,
+      "sha256": "d119ddc78bb0c76d351ca9521e03a166ffc0a2a17392c32b7a0bc0a52a690161"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/HK_FPP11/worker_report.json",
+      "exists": true,
+      "sha256": "4bde12d59e3caea43eb82e6d1f89383ec690bcd1fa1c52729260969c0dc1f7d7"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

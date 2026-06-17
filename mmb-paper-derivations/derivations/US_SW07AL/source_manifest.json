@@ -1,0 +1,85 @@
+{
+  "model_id": "US_SW07AL",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Learning in an estimated medium-scale DSGE model",
+    "authors": [
+      "Sergey Slobodyan",
+      "Raf Wouters"
+    ],
+    "year": 2012,
+    "publication": "Journal of Economic Dynamics and Control 36 (1), pp. 26-46",
+    "doi": "10.1016/j.jedc.2011.01.016"
+  },
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "US_SW07AL",
+    "slug": "us_sw07al__learning_in_an_estimated_medium_scale_dsge_model",
+    "match_status": "matched",
+    "primary_source_title": "Learning in an estimated medium-scale DSGE model",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_sw07al__learning_in_an_estimated_medium_scale_dsge_model__4c268cb2/full.md",
+      "sha256": "340932d4d04269455a6a543c792f99f524df70f9a4e19b2429e69ead2781e94b",
+      "mineru_run_id": "4c268cb2-b0b4-4ab9-a228-2865f065d4b0",
+      "exists": true,
+      "source_role": "paper_side_primary_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Learning in an estimated medium-scale DSGE model.pdf",
+      "sha256": "b34f583c46e02d71bb87c150efedaf742ee3bddd9c33f5f35e4e9bc4f7ec5565",
+      "exists": true,
+      "source_role": "paper_side_provenance"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_SW07AL.md",
+      "exists": false,
+      "source_role": "not_available"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_SW07AL_rep.mod",
+      "exists": false,
+      "source_role": "implementation_cross_check",
+      "used": false,
+      "notes": "No assigned US_SW07AL_rep.mod file exists. A related US_SW07_rep.mod exists but was not used as US_SW07AL evidence."
+    }
+  },
+  "output_paths": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_SW07AL/US_SW07AL_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_SW07AL/US_SW07AL_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_SW07AL/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_SW07AL/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_SW07AL/worker_report.json"
+  },
+  "extraction": {
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "english_sections_required": 8,
+    "chinese_sections_required": 8,
+    "equation_numbering": "continuous F1-F22 across Sections 3-5",
+    "model_form": "log-linear / model(linear)",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "uncertainty_markers": [
+      "needs_review"
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run": false,
+    "status": "not_performed",
+    "notes": "Per task instruction, Dynare was not run."
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_csv_edited": false,
+    "shared_status_csv_edited": false
+  },
+  "generated_at": "2026-06-17"
+}

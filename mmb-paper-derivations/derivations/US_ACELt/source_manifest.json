@@ -1,0 +1,86 @@
+{
+  "model_id": "US_ACELt",
+  "status": "needs_review",
+  "paper": {
+    "title": "Firm-specific capital, nominal rigidities",
+    "authors": "Altig, David; Christiano, Lawrence J.; Eichenbaum, Martin; Linde, Jesper",
+    "year": 2005,
+    "journal_or_series": "CEPR Discussion Papers 4858",
+    "doi": "10.3386/w11034"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 101,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "e0fac58f-0dfb-476b-b2df-8712e57d9ce4"
+    ],
+    "primary_source_title": "Firm-specific capital, nominal rigidities",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "model_match_notes": ""
+  },
+  "paper_side_sources_used": [
+    {
+      "role": "main_equation_source",
+      "path": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+      "exists": true,
+      "sha256": "076ad1ff4d2146c511b4feabae5490d12292e7ee485f953b8320dfd9751542c7",
+      "mineru_run_id": "e0fac58f-0dfb-476b-b2df-8712e57d9ce4",
+      "source_title_observed": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle",
+      "source_authors_observed": "David Altig; Lawrence J. Christiano; Martin Eichenbaum; Jesper Linde",
+      "usage": "Model overview, optimization problems, market clearing, shock processes, timing, and selected formula references."
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+      "exists": true,
+      "sha256": "b418270ebc5f8698a2a1d2562d236ccdefe30fb4ee04561a1287a8872c205618",
+      "body_opened": false,
+      "usage": "Existence check and provenance only; PDF body was not read."
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_ACELt.md",
+    "exists": false,
+    "used": false
+  },
+  "implementation_cross_check": {
+    "primary_mmb_mod": {
+      "path": "raw/mmb/mmci-cli/models/US_ACELt/US_ACELt.mod",
+      "exists": true,
+      "sha256": "2aa7a433fd7fa4a5dd94a5e92c78c110906a66408a74264f7ea383fccaf7d0f0",
+      "used_as": "implementation_cross_check",
+      "notes": "Used only for variable names, model(linear) form, sticky/flexible block coverage, modelbase interest-rule substitution, shock names, calibration values, and technology-shock timing comments."
+    },
+    "repo_example_mod": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_ACELt_rep.mod",
+      "exists": true,
+      "sha256": "d0ba973563e076b734c219bc1410c7828e456dcefb766a25bcedd157d0940b00",
+      "used_as": "implementation_cross_check",
+      "notes": "Read only as the skill example implementation cross-check; not treated as paper-side mathematical evidence."
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_ACELt/US_ACELt_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_ACELt/US_ACELt_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_ACELt/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_ACELt/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_ACELt/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only. User explicitly instructed not to run Dynare."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown plus implementation cross-check. The paper refers to a technical appendix that is not present as a local normalization file, and several implementation-level equations require source-level formula review before promotion."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

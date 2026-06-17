@@ -1,0 +1,100 @@
+{
+  "model_id": "CA_BMZ12",
+  "paper_title": "Macroprudential rules and monetary policy when financial frictions matter",
+  "authors": [
+    "Bailliu, Jeannine",
+    "Zhang, Yahong",
+    "Meh, Cesaire A."
+  ],
+  "year": "2012",
+  "journal_or_series": "Bank of Canada Working Paper 2012-6",
+  "doi": "10.1016/j.econmod.2015.06.012",
+  "mineru": {
+    "run_id": "aa2f7a66-382f-4b7a-b1e5-7ea424d00208",
+    "match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Macroprudential rules and monetary policy when financial frictions matter",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "catalog_cross_reference": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_index_row_fields": {
+      "model_id": "CA_BMZ12",
+      "paper_slug": "ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte",
+      "raw_pdf_path": "raw/mmb_papers/Macroprudential rules and monetary policy when financial frictions matter.pdf",
+      "primary_full_md_path": "raw/mmb_mineru/runs/ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte__aa2f7a66/full.md"
+    }
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte__aa2f7a66/full.md",
+      "sha256": "7ef665791e162bac910cf647d9d75e5a5ff7ce1ca73ccb16b5dc74ba58263f29",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Macroprudential rules and monetary policy when financial frictions matter.pdf",
+      "sha256": "37cdb7c76d7e0cef53ef9630cb20dc6eb7008b7390dcb4c7b295d782a3c7ed8d",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/CA_BMZ12.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/CA_BMZ12_rep.mod",
+      "sha256": "35ab746fbb8092db84689d3a0ba14681fd7f838d744c59c952a712f92bbc6f63",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/CA_BMZ12/CA_BMZ12_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/CA_BMZ12/CA_BMZ12_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/CA_BMZ12/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/CA_BMZ12/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/CA_BMZ12/worker_report.json"
+  },
+  "source_quality": {
+    "title_author_sniff": "matched",
+    "formula_quality": "needs_review",
+    "ocr_issues": [
+      "Retailer stochastic discount factor around Eq. (28) has malformed OCR.",
+      "Optimal reset-price FOC around Eq. (29) has likely time-subscript OCR issues.",
+      "Entrepreneur net-worth wage-income term around Eqs. (18)-(19) should be PDF-checked.",
+      "Price-index integral in Eq. (26) appears as dz in Markdown; likely should be dj.",
+      "Price-dispersion definition text before Eq. (34) appears to omit the exponent in the integral."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "status": "needs_review",
+  "created_by": "codex",
+  "created_date": "2026-06-17",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "CA_BMZ12",
+    "paper_slug": "ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "aa2f7a66-382f-4b7a-b1e5-7ea424d00208"
+    ],
+    "primary_source_title": "Macroprudential rules and monetary policy when financial frictions matter",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte__aa2f7a66/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Macroprudential rules and monetary policy when financial frictions matter.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

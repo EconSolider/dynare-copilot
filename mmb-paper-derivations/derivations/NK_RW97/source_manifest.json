@@ -1,0 +1,179 @@
+{
+  "model_id": "NK_RW97",
+  "status": "completed_needs_review",
+  "paper": {
+    "title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "authors": [
+      "Rotemberg, Julio",
+      "Woodford, Michael"
+    ],
+    "year": 1997,
+    "journal_or_series": "NBER Macroeconomics Annual 12, pp. 297-346",
+    "doi": "10.1086/654340"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_RW97",
+    "paper_slug": "nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "af3fb04e-c2c6-4864-8a67-4a81a0fc8f98",
+      "8afae8a2-eca9-450d-a44e-a6336fb3cff8"
+    ],
+    "primary_source_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta__af3fb04e/full.md",
+      "sha256": "3ec6da3f6eddba77cc0becc95befb6a093241a2eb9c72c849524d7c449d8c3c5",
+      "exists": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy.pdf",
+      "sha256": "401fba7bc7dfddbf52c23a7fe1e49165525f20d1c822a7bd71833bd5cba0c47c",
+      "exists": true,
+      "opened_for_formula_check": false,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_RW97.md",
+      "sha256": null,
+      "exists": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_RW97_rep.mod",
+      "sha256": "ef583599df41851ded0a374cf3265e9bbba6fbfd992a0e8c50ebeaf080779b1f",
+      "exists": true,
+      "used_as": "implementation_cross_check",
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_sniff": {
+    "method": "first 80 Markdown lines plus alternate run first-page sniff",
+    "expected_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "observed_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "expected_authors": "Rotemberg, Julio; Woodford, Michael",
+    "observed_authors": "Julio J. Rotemberg and Michael Woodford",
+    "mismatch": false,
+    "notes": "Primary and alternate MinerU runs begin with the expected title and authors."
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta__af3fb04e/full.md",
+      "spans": [
+        "section 2 monetary policy rule and VAR state definitions",
+        "section 3 model equations (3.1)-(3.18)",
+        "section 4 parameter identification and calibration",
+        "section 5 shock reconstruction equations (5.1)-(5.5)"
+      ]
+    },
+    {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_RW97_rep.mod",
+      "spans": [
+        "variable and shock declarations",
+        "parameter calibration",
+        "model(linear) block",
+        "shock variance declarations"
+      ],
+      "used_as": "implementation_cross_check"
+    }
+  ],
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_RW97/NK_RW97_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_RW97/NK_RW97_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_RW97/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_RW97/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_RW97/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_edited": false,
+    "shared_status_edited": false
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown; no source-level PDF formula audit was performed."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "paper_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+  "authors": "Rotemberg, Julio; Woodford, Michael",
+  "year": "1997",
+  "journal_or_series": "NBER Macroeconomics Annual 12, pp. 297-346",
+  "doi": "10.1086/654340",
+  "model_index_row_normalized": {
+    "model_id": "NK_RW97",
+    "paper_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "authors": "Rotemberg, Julio; Woodford, Michael",
+    "year": "1997",
+    "journal_or_series": "NBER Macroeconomics Annual 12, pp. 297-346",
+    "doi": "10.1086/654340",
+    "paper_slug": "nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "af3fb04e-c2c6-4864-8a67-4a81a0fc8f98; 8afae8a2-eca9-450d-a44e-a6336fb3cff8",
+    "primary_source_title": "An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta__af3fb04e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_rw97_nk_rw97al__an_optimization_based_econometric_framework_for_the_evaluation_of_moneta__af3fb04e/full.md",
+      "exists": true,
+      "sha256": "3ec6da3f6eddba77cc0becc95befb6a093241a2eb9c72c849524d7c449d8c3c5"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/An Optimization-Based Econometric Framework for the Evaluation of Monetary Policy.pdf",
+      "exists": true,
+      "sha256": "401fba7bc7dfddbf52c23a7fe1e49165525f20d1c822a7bd71833bd5cba0c47c"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_RW97/NK_RW97_derivation.en.md",
+      "exists": true,
+      "sha256": "762399f35c5b383858d7a48ea594f08f3e38cc69a3523e239ebf82696eb34a3f"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_RW97/NK_RW97_derivation.zh.md",
+      "exists": true,
+      "sha256": "8ffd0d28a64771d51c3b94d5edcf82a2abf5ac0f493d149805195fb0f9da9f54"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_RW97/source_manifest.json",
+      "exists": true,
+      "sha256": "6d3b1129f853c0abd7bc409c86fe12c525785fea6389db7f2ddd6afd50233645"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_RW97/extraction_notes.md",
+      "exists": true,
+      "sha256": "c7c456ce441594405ea839f17d60b027a708bac459ef08a2167ca48bd6f6450c"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_RW97/worker_report.json",
+      "exists": true,
+      "sha256": "f027663ae4b4546d65c7fda6a86364a7de1f8fe41116092acefd9ca5b1ad71c2"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "model_id": "NK_GM16",
+  "status": "needs_review",
+  "owned_paths": [
+    "mmb-paper-derivations/derivations/NK_GM16/NK_GM16_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_GM16/NK_GM16_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_GM16/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_GM16/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_GM16/worker_report.json"
+  ],
+  "shared_indexes_modified": false,
+  "source_inputs": {
+    "model_index_row": "raw/mmb_mineru/model_index.csv:68",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gm16__understanding_the_gains_from_wage_flexibility_the_exchange_rate_connecti__f3573fbb/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Understanding the Gains from Wage Flexibility- The Exchange Rate Connection.pdf",
+    "appendix_normalization_path": null,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/NK_GM16_rep.mod"
+  },
+  "actions": [
+    "Read required archive build plan and derivation style references.",
+    "Read BGG archive example for formatting expectations.",
+    "Read NK_GM16 model_index row and primary Markdown sections for the baseline model, appendix derivations, natural equilibrium, and equilibrium dynamics.",
+    "Checked raw PDF path exists without reading PDF body.",
+    "Used NK_GM16_rep.mod only as implementation cross-check.",
+    "Drafted English derivation first, then Chinese translation.",
+    "Created source_manifest.json and extraction_notes.md."
+  ],
+  "validation": {
+    "performed": true,
+    "commands": [
+      "git diff --check -- mmb-paper-derivations/derivations/NK_GM16",
+      "python3 -m json.tool mmb-paper-derivations/derivations/NK_GM16/source_manifest.json >/dev/null",
+      "python3 -m json.tool mmb-paper-derivations/derivations/NK_GM16/worker_report.json >/dev/null",
+      "python3 section and F-number parity check for English and Chinese derivations"
+    ],
+    "results": [
+      "diff_check_ok",
+      "json_ok",
+      "eight_sections_present_in_english_and_chinese",
+      "english_chinese_f_number_sequence_match",
+      "f_number_set_f1_through_f40"
+    ]
+  },
+  "unresolved_issues": [
+    "Formula-level PDF check not performed.",
+    "No Dynare runtime validation performed.",
+    "Some MinerU OCR noise remains around appendix constants and marginal-cost prose; normalized equations should be reviewed."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "model_id": "NK_BGUS10",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_BGUS10",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_BGUS10/NK_BGUS10_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_BGUS10/NK_BGUS10_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_BGUS10/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_BGUS10/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_BGUS10/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_BGUS10",
+    "Task": "derive_mmb_model",
+    "Paper": "Labor markets and monetary policy: A New Keynesian model with unemployment",
+    "Year": "2010",
+    "ModelType": "Linearized New Keynesian model with unemployment",
+    "Economy": "United States",
+    "Category": "Labor market frictions; monetary policy",
+    "KeyFeatures": "Calvo pricing; hiring costs; real wage rigidity; unemployment; optimized simple policy rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_bgeu10_nk_bgus10__labor_markets_and_monetary_policy_a_new_keynesian_model_with_unemploymen__297a65c4/full.md",
+    "RawPDF": "raw/mmb_papers/Labor markets and monetary policy- A New Keynesian model with unemployment.pdf",
+    "DOI": "10.1257/mac.2.2.1",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_BGUS10",
+    "paper_title": "Labor markets and monetary policy: A New Keynesian model with unemployment",
+    "source_full_md": "raw/mmb_mineru/runs/nk_bgeu10_nk_bgus10__labor_markets_and_monetary_policy_a_new_keynesian_model_with_unemploymen__297a65c4/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Labor markets and monetary policy- A New Keynesian model with unemployment.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_ocr_normalized",
+    "steady_state_quality": "linear_model_zero_steady_state",
+    "needs_human_review": true,
+    "notes": "Check marginal-cost equation (paper eq. 25) and shock sign before runtime validation."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- mmb-paper-derivations/derivations/NK_BGUS10",
+    "json_validation": "passed: python3 -m json.tool source_manifest.json and worker_report.json",
+    "eight_section_check": "passed: English and Chinese derivations contain sections 1 through 8",
+    "f_number_count_check": "passed: English and Chinese derivations each contain unique F1-F15"
+  },
+  "unresolved_issues": [
+    "F2 marginal-cost equation normalized from split OCR display needs PDF-level review.",
+    "Rep-MMB technology shock sign differs from the standard AR(1) notation used in the derivation.",
+    "No runtime validation was performed."
+  ],
+  "commit": {
+    "performed": false,
+    "reason": "Worker assignment explicitly says do not commit, push, or stage shared indexes."
+  }
+}

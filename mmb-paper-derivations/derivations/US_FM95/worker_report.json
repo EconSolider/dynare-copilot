@@ -1,0 +1,67 @@
+{
+  "model_id": "US_FM95",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_FM95/US_FM95_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_FM95/US_FM95_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_FM95/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_FM95/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_FM95/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_FM95",
+    "Task": "mmb_derivation_archive",
+    "Paper": "Inflation persistence",
+    "Year": "1995",
+    "ModelType": "Linear overlapping-contract inflation persistence model",
+    "Economy": "US",
+    "Category": "Nominal rigidities and inflation persistence",
+    "KeyFeatures": "Four-quarter overlapping nominal contracts; relative real contract prices; inflation persistence; output-gap pressure; reduced-form VAR expectations; nominal-output policy experiments",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_fm95_us_fm95al__inflation_persistence__c66e898c/full.md",
+    "RawPDF": "raw/mmb_papers/Inflation persistence.pdf",
+    "DOI": "10.2307/2118513",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_FM95",
+    "paper_title": "Inflation persistence",
+    "source_full_md": "raw/mmb_mineru/runs/us_fm95_us_fm95al__inflation_persistence__c66e898c/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Inflation persistence.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "linear_zero_gap_steady_state_with_trend_inflation_relation",
+    "needs_human_review": "true",
+    "notes": "First-pass extraction from MinerU Markdown. Main QJE contracting equations are readable. Rep-MMB .mod includes later LWW/Fuhrer implementation details and was used only as implementation_cross_check. Dynare was not run."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/US_FM95",
+      "status": "passed",
+      "details": "No output."
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_FM95/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_FM95/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has all eight sections and (F1)",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "English references 55; Chinese references 55; unique equation labels 24."
+    }
+  ],
+  "unresolved_issues": [
+    "Reconcile the Rep-MMB LWW-style interest-rate rule with the QJE nominal-output-growth policy experiment.",
+    "Confirm the source of the compact output-gap and term-structure equations used in the .mod.",
+    "Reconstructing the exact QJE covariance matrix and VAR equations is deferred.",
+    "Dynare runtime validation was not performed."
+  ]
+}

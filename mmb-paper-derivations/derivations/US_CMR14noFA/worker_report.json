@@ -1,0 +1,69 @@
+{
+  "model_id": "US_CMR14noFA",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_CMR14noFA/US_CMR14noFA_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_CMR14noFA/US_CMR14noFA_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_CMR14noFA/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_CMR14noFA/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_CMR14noFA/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_CMR14noFA",
+    "Task": "derive_mmb_model",
+    "Paper": "Risk shocks",
+    "Year": "2014",
+    "ModelType": "stationary nonlinear DSGE solved by first-order approximation; no-financial-frictions CEE variant",
+    "Economy": "United States",
+    "Category": "estimated monetary DSGE without financial frictions",
+    "KeyFeatures": "CEE/SW core; Calvo prices and wages; habit formation; investment adjustment costs; variable utilization; investment-specific technology; financial accelerator and risk/equity shocks removed",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_cmr14_us_cmr14nofa__risk_shocks__d33971b2/full.md",
+    "RawPDF": "raw/mmb_papers/Risk shocks.pdf",
+    "DOI": "10.1257/aer.104.1.27",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_CMR14noFA",
+    "paper_title": "Risk shocks",
+    "source_full_md": "raw/mmb_mineru/runs/us_cmr14_us_cmr14nofa__risk_shocks__d33971b2/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Risk shocks.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_source_backed_targets_plus_implementation_cross_check",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation for the CEE/no-financial-frictions variant; full equation appendix not locally normalized; no Dynare runtime validation."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/US_CMR14noFA",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_CMR14noFA/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_CMR14noFA/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English has all eight sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": {
+        "english_f_count": 76,
+        "chinese_f_count": 76
+      }
+    }
+  ],
+  "unresolved_issues": [
+    "Full equation-list review against the online appendix or PDF remains required.",
+    "Calvo price/wage auxiliary kernels were cross-checked against the implementation but not independently source-normalized.",
+    "Steady-state algorithm is not fully reconstructed; implementation initial values are recorded only as cross-check evidence.",
+    "No Dynare runtime validation was performed."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "model_id": "US_CFP17endo",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_CFP17endo/US_CFP17endo_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_CFP17endo/US_CFP17endo_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_CFP17endo/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_CFP17endo/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_CFP17endo/worker_report.json"
+  ],
+  "shared_files_edited": false,
+  "dynare_run_performed": false,
+  "english_first": true,
+  "chinese_second": true,
+  "implementation_cross_check_only": true,
+  "proposed_catalog_row": {
+    "ModelID": "US_CFP17endo",
+    "Task": "mmb_derivation_archive",
+    "Paper": "Targeting long rates in a model with segmented markets",
+    "Year": "2017",
+    "ModelType": "Linearized segmented-markets New Keynesian model with financial intermediaries and endogenous long-debt policy",
+    "Economy": "United States",
+    "Category": "Monetary policy; term premium; segmented markets; financial intermediation",
+    "KeyFeatures": "Habit preferences; sticky wages and prices; investment financed by long-term bonds; FI net-worth and hold-up constraint; term premium; endogenous debt/term-premium peg closure",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_cfp17endo_us_cfp17exo__targeting_long_rates_in_a_model_with_segmented_markets__d8728772/full.md",
+    "RawPDF": "raw/mmb_papers/Targeting long rates in a model with segmented markets.pdf",
+    "DOI": "10.1257/mac.20150179",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_CFP17endo",
+    "paper_title": "Targeting long rates in a model with segmented markets",
+    "source_full_md": "raw/mmb_mineru/runs/us_cfp17endo_us_cfp17exo__targeting_long_rates_in_a_model_with_segmented_markets__d8728772/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Targeting long rates in a model with segmented markets.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_needs_review",
+    "steady_state_quality": "linear_model_zero_deviation_steady_state; numeric calibration_not_recomputed",
+    "needs_human_review": true,
+    "notes": "Endogenous-debt/term-premium-peg variant; PDF body not opened; Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- mmb-paper-derivations/derivations/US_CFP17endo returned no output",
+    "json_tool_source_manifest": "passed: python3 -m json.tool source_manifest.json",
+    "english_eight_sections": "passed",
+    "english_has_F1": "passed",
+    "f_number_counts_match": "passed: English and Chinese each have 79 F-markers and 33 unique F-numbers"
+  },
+  "unresolved_issues": [
+    "Source-level review should check the FI hold-up, leverage, and net-worth adjustment equations.",
+    "No local appendix normalization file exists for US_CFP17endo.",
+    "Exact numeric steady-state constants loaded from parameterfile were not recalculated.",
+    "No runtime validation, residual check, BK check, or IRF check was performed."
+  ]
+}

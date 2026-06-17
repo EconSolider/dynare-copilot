@@ -1,0 +1,38 @@
+{
+  "model_id": "NK_GK09lin",
+  "status": "completed_needs_review",
+  "owned_paths": [
+    "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_GK09lin/NK_GK09lin_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_GK09lin/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_GK09lin/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_GK09lin/worker_report.json"
+  ],
+  "shared_indexes_touched": false,
+  "sources_used": {
+    "model_index_row": true,
+    "primary_full_md_path": true,
+    "raw_pdf_path_exists_checked": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_used": false,
+    "implementation_cross_check_used": true
+  },
+  "artifacts": {
+    "english_derivation": "drafted",
+    "chinese_derivation": "drafted",
+    "source_manifest": "drafted",
+    "extraction_notes": "drafted"
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool": "passed",
+    "eight_sections": "passed",
+    "f_number_parity": "passed",
+    "notes": "English and Chinese derivations define exactly F1 through F35. The requested scoped git diff check returned clean; new files were left untracked as requested."
+  },
+  "unresolved_issues": [
+    "Runtime validation was not performed.",
+    "Exact equation-by-equation mapping from nonlinear paper equations to the compact MMB model(linear) block needs review.",
+    "Targeted PDF checks may be useful for OCR-noisy equations if promoted beyond first-pass status."
+  ]
+}

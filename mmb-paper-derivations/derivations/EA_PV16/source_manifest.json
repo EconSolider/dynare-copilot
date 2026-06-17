@@ -1,0 +1,130 @@
+{
+  "model_id": "EA_PV16",
+  "status": "needs_review",
+  "paper_title": "The Portfolio Balance Mechanism and QE in the Euro Area",
+  "authors": [
+    "Romanos Priftis",
+    "Lukas Vogel"
+  ],
+  "year": "2016",
+  "journal_or_series": "Manchester School, University of Manchester, vol. 84(S1), 84-105",
+  "doi": "10.1111/manc.12162",
+  "catalog_cross_reference": {
+    "source_index": "raw/mmb_mineru/model_index.csv",
+    "source_index_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "The Portfolio Balance Mechanism and QE in the Euro Area",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_id": "1dbe823d-38c1-402a-a377-4ef3dc5a460a",
+    "paper_slug": "ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area",
+    "first_80_line_sniff": {
+      "title_found": "THE PORTFOLIO BALANCE MECHANISM AND QE IN THE EURO AREA",
+      "authors_found": "ROMANOS PRIFTIS and LUKAS VOGEL",
+      "matches_index": true
+    }
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area__1dbe823d/full.md",
+      "sha256": "7d9f439a5c179c3ccc79a0fc8d7add484df736c60d6eef9eef5f5e4c5ae851ec",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The Portfolio Balance Mechanism and QE in the Euro Area.pdf",
+      "sha256": "43fdf6da2bfa6ddd4ef26bc72f5cdbe8eb515d3eddedc4d6e0778965f15dc6dd",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_PV16.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_PV16_rep.mod",
+      "sha256": "473c4542797e053ba867856308b62a00487dfc485bc266c8cb4623a76e476933",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EA_PV16/EA_PV16_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EA_PV16/EA_PV16_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_PV16/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_PV16/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_PV16/worker_report.json"
+  },
+  "formula_extraction": {
+    "english_sections_required": 8,
+    "f_equation_max": 23,
+    "formula_quality": "needs_review",
+    "known_limitations": [
+      "Full QUEST baseline equations are not printed in the extracted Markdown body.",
+      "QE purchase rule and exact Taylor rule are implementation cross-check / paper-summary items until appendix-level source checking.",
+      "PDF body was not read by default."
+    ]
+  },
+  "implementation_cross_check": {
+    "model_form": "nonlinear model block, not model(linear)",
+    "key_variables_seen": [
+      "EA_bl",
+      "EA_blcb",
+      "EA_blnlc",
+      "EA_bs",
+      "EA_pbl",
+      "EA_dm",
+      "ea_inom",
+      "ea_lamnlc",
+      "ea_cnlc",
+      "ea_k",
+      "ea_e"
+    ],
+    "key_exogenous_seen": [
+      "EA_eps_qe",
+      "ea_eps_m",
+      "ea_eps_g",
+      "ea_eps_i",
+      "ea_eps_ltfp",
+      "ea_eps_rpremb",
+      "ea_eps_rpreme",
+      "ea_eps_rpremk"
+    ],
+    "key_parameters_seen": [
+      "EA_deltabl",
+      "EA_gamb",
+      "EA_kbl",
+      "EA_sbl",
+      "EA_rhoqe",
+      "EA_tqe"
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_PV16",
+    "paper_slug": "ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "1dbe823d-38c1-402a-a377-4ef3dc5a460a"
+    ],
+    "primary_source_title": "The Portfolio Balance Mechanism and QE in the Euro Area",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_pv16__the_portfolio_balance_mechanism_and_qe_in_the_euro_area__1dbe823d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Portfolio Balance Mechanism and QE in the Euro Area.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

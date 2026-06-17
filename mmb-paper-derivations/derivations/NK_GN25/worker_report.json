@@ -1,0 +1,70 @@
+{
+  "model_id": "NK_GN25",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_GN25",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_GN25/NK_GN25_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_GN25/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_GN25/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_GN25/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_GN25",
+    "Task": "mmb_derivation",
+    "Paper": "Energy price shocks, unemployment, and monetary policy",
+    "Year": "2025",
+    "ModelType": "HANK New Keynesian search-and-matching model, model(linear)",
+    "Economy": "euro-area style closed economy with imported energy",
+    "Category": "energy shocks; unemployment risk; optimal monetary policy",
+    "KeyFeatures": "non-homothetic energy consumption; uninsured unemployment risk; search and matching; Calvo non-energy inflation; exogenous real energy price shock; optimal policy trade-off",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_gn25__energy_price_shocks_unemployment_and_monetary_policy__ca6f092e/full.md",
+    "RawPDF": "raw/mmb_papers/Energy price shocks, unemployment, and monetary policy.pdf",
+    "DOI": "10.1016/j.jmoneco.2025.103734",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_GN25",
+    "paper_title": "Energy price shocks, unemployment, and monetary policy",
+    "source_full_md": "raw/mmb_mineru/runs/nk_gn25__energy_price_shocks_unemployment_and_monetary_policy__ca6f092e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Energy price shocks, unemployment, and monetary policy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation; OCR placeholders remain in some formula definitions; runtime validation not performed."
+  },
+  "validations": {
+    "git_diff_check": {
+      "command": "git diff --check -- mmb-paper-derivations/derivations/NK_GN25",
+      "status": "passed"
+    },
+    "json_validation": {
+      "command": "python3 -m json.tool source_manifest.json && python3 -m json.tool worker_report.json",
+      "status": "passed"
+    },
+    "eight_section_check": {
+      "status": "passed",
+      "english_missing_sections": [],
+      "chinese_missing_sections": []
+    },
+    "f_number_count_check": {
+      "status": "passed",
+      "english_unique_f_numbers": 36,
+      "chinese_unique_f_numbers": 36,
+      "expected_unique_sequence": "F1-F36"
+    }
+  },
+  "commit": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "reason": "User explicitly requested no staging, commit, or push."
+  },
+  "unresolved_issues": [
+    "Targeted PDF check recommended for the CPI aggregator, Euler inequalities, and composite coefficient definitions.",
+    "No local implementation cross-check file exists for NK_GN25.",
+    "No Dynare runtime validation was performed."
+  ]
+}

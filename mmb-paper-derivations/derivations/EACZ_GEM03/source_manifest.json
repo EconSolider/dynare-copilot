@@ -1,0 +1,137 @@
+{
+  "model_id": "EACZ_GEM03",
+  "status": "needs_review",
+  "paper": {
+    "title": "Monetary rule for small, open, emerging economies",
+    "observed_markdown_title": "Monetary rules for small, open, emerging economies",
+    "authors": [
+      "Laxton, Douglas",
+      "Pesenti, Paolo"
+    ],
+    "year": "2003",
+    "journal_or_series": "Journal of Monetary Economics 50(5), pp. 1109-1146",
+    "doi": "10.1016/s0304-3932(03)00057-6"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "line": 8,
+    "model_id": "EACZ_GEM03",
+    "paper_slug": "eacz_gem03__monetary_rule_for_small_open_emerging_economies",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "7512f0ea-fa74-4a87-a6a7-25f1c080f429"
+    ],
+    "primary_source_title": "Monetary rule for small, open, emerging economies",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/eacz_gem03__monetary_rule_for_small_open_emerging_economies__7512f0ea/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary rule for small, open, emerging economies.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/eacz_gem03__monetary_rule_for_small_open_emerging_economies__7512f0ea/full.md",
+      "sha256": "53cc5fc3cbcaadcf6b8e7eb5a243683800b52115e593bb9b46e6d4d218c51c2b",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Monetary rule for small, open, emerging economies.pdf",
+      "sha256": "246add562a1c8ca74bf354800715f19408bdce792dfbf1102c762fcbfe357e20",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EACZ_GEM03.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EACZ_GEM03_rep.mod",
+      "sha256": "e623ae1a2a4ee9ebd7a878655bfb06d4c9a396ff19cd54ebb354d67fffef4833",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/eacz_gem03__monetary_rule_for_small_open_emerging_economies__7512f0ea/full.md",
+      "spans": [
+        "lines 1-80 for title/author sniff",
+        "Section 2.1 for general two-country model structure",
+        "Section 2.2 for final-good production and CES indexes, equations 1-6",
+        "Section 2.3 for intermediate demand and distribution sector, equations 7-10",
+        "Section 2.4 for intermediate supply and raw-material technologies, equations 11-16 and 22-24",
+        "Section 2.5 for Rotemberg price setting and flexible-price markup limits, equations 17-21",
+        "Section 2.7 for household preferences, budget constraint, UIP, capital accumulation, and wage adjustment, equations 25-36",
+        "Section 2.8 for government budget and monetary rule, equations 37-38",
+        "Section 2.9 for market clearing, equations 39-46",
+        "Section 3.2-3.3 for stochastic process form and baseline calibration"
+      ]
+    }
+  ],
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/EACZ_GEM03/EACZ_GEM03_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/EACZ_GEM03/EACZ_GEM03_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EACZ_GEM03/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EACZ_GEM03/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EACZ_GEM03/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "summary": "Core equation blocks are present in Markdown, but several equations need source-level review due to OCR damage or because the paper states FOCs in prose rather than printing complete equilibrium conditions.",
+    "uncertain_equations": [
+      "F4",
+      "F6",
+      "F7",
+      "F13",
+      "F22",
+      "F30"
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_only": true,
+    "shared_catalog_csv_edited": false,
+    "shared_status_csv_edited": false
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "paper_title": "Monetary rule for small, open, emerging economies",
+  "authors": [
+    "Laxton, Douglas",
+    "Pesenti, Paolo"
+  ],
+  "year": "2003",
+  "journal_or_series": "Journal of Monetary Economics 50(5), pp. 1109-1146",
+  "doi": "10.1016/s0304-3932(03)00057-6",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EACZ_GEM03",
+    "paper_slug": "eacz_gem03__monetary_rule_for_small_open_emerging_economies",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "7512f0ea-fa74-4a87-a6a7-25f1c080f429"
+    ],
+    "primary_source_title": "Monetary rule for small, open, emerging economies",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/eacz_gem03__monetary_rule_for_small_open_emerging_economies__7512f0ea/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary rule for small, open, emerging economies.pdf",
+    "model_match_notes": ""
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EACZ_GEM03/EACZ_GEM03_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EACZ_GEM03/EACZ_GEM03_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EACZ_GEM03/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EACZ_GEM03/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EACZ_GEM03/worker_report.json"
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

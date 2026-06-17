@@ -1,0 +1,64 @@
+{
+  "model_id": "EAES_RA09",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/EAES_RA09/EAES_RA09_derivation.en.md",
+    "mmb-paper-derivations/derivations/EAES_RA09/EAES_RA09_derivation.zh.md",
+    "mmb-paper-derivations/derivations/EAES_RA09/source_manifest.json",
+    "mmb-paper-derivations/derivations/EAES_RA09/extraction_notes.md",
+    "mmb-paper-derivations/derivations/EAES_RA09/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EAES_RA09",
+    "Task": "mmb_derivation",
+    "Paper": "Inflation differentials between Spain and the EMU: A DSGE perspective",
+    "Year": "2009",
+    "ModelType": "Two-country two-sector New Keynesian currency-union DSGE; linearized implementation",
+    "Economy": "Spain and rest of EMU",
+    "Category": "Open economy; monetary union; sectoral inflation differentials",
+    "KeyFeatures": "Tradable and nontradable sectors; Calvo pricing with indexation; complete markets risk sharing; sectoral productivity and demand shocks; ECB Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/eaes_ra09__inflation_differentials_between_spain_and_the_emu_a_dsge_perspective__9d18a448/full.md",
+    "RawPDF": "raw/mmb_papers/Inflation differentials between Spain and the EMU- A DSGE perspective.pdf",
+    "DOI": "10.1111/j.1538-4616.2009.00250.x",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EAES_RA09",
+    "paper_title": "Inflation differentials between Spain and the EMU: A DSGE perspective",
+    "source_full_md": "raw/mmb_mineru/runs/eaes_ra09__inflation_differentials_between_spain_and_the_emu_a_dsge_perspective__9d18a448/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Inflation differentials between Spain and the EMU- A DSGE perspective.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_needs_review",
+    "steady_state_quality": "linearized_zero_steady_state_from_implementation; nonlinear_normalized_steady_state_incomplete",
+    "needs_human_review": "true",
+    "notes": "Complete pricing appendix unavailable locally; Phillips curves and trend-normalized equilibrium conditions need source-level review."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/EAES_RA09",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool source_manifest.json and worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has exact eight required sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number occurrence counts match",
+      "status": "passed",
+      "english_f_count": 88,
+      "chinese_f_count": 88,
+      "unique_f_numbers": 48
+    }
+  ],
+  "unresolved_issues": [
+    "Full appendix equilibrium conditions were not available in local sources.",
+    "Phillips-curve equations are marked needs_review and cross-checked against implementation only.",
+    "Dynare/runtime validation was not performed by request.",
+    "Raw PDF body was not read by default; only existence and hash were recorded."
+  ]
+}

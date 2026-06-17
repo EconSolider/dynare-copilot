@@ -1,0 +1,44 @@
+{
+  "model_id": "US_DNGS15_SWSP",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/US_DNGS15_SWSP/US_DNGS15_SWSP_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_DNGS15_SWSP/US_DNGS15_SWSP_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_DNGS15_SWSP/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_DNGS15_SWSP/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_DNGS15_SWSP/worker_report.json"
+  ],
+  "status": "needs_review",
+  "catalog_row_proposal": {
+    "ModelID": "US_DNGS15_SWSP",
+    "Task": "Estimated US model",
+    "Paper": "Inflation in the Great Recession and New Keynesian Models",
+    "Year": "2015",
+    "ModelType": "Linearized medium-scale New Keynesian DSGE with financial frictions and time-varying inflation target",
+    "Economy": "US",
+    "Category": "Estimated US model",
+    "KeyFeatures": "Smets-Wouters; financial frictions; credit spread observable; nominal wage and price rigidities; habit formation; investment adjustment costs; flexible-price/wage output gap; time-varying inflation target",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_dngs15_us_dngs15_sw_us_dngs15_swsp_us_dngs15__infation_in_the_great_recession_and_new_keynesian_models__c8e184ab/full.md",
+    "RawPDF": "raw/mmb_papers/Infation in the Great recession and New Keynesian models.pdf",
+    "DOI": "10.1257/mac.20140097",
+    "Status": "needs_review"
+  },
+  "status_row_proposal": {
+    "model_id": "US_DNGS15_SWSP",
+    "paper_title": "Inflation in the Great Recession and New Keynesian Models",
+    "source_full_md": "raw/mmb_mineru/runs/us_dngs15_us_dngs15_sw_us_dngs15_swsp_us_dngs15__infation_in_the_great_recession_and_new_keynesian_models__c8e184ab/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Infation in the Great recession and New Keynesian models.pdf",
+    "status": "needs_review",
+    "formula_quality": "usable_with_ocr_review",
+    "steady_state_quality": "linear_deviation_steady_state_only",
+    "needs_human_review": "true",
+    "notes": "Paper provides log-linear equilibrium conditions and refers full steady-state formulas to Del Negro and Schorfheide (2013); no Dynare runtime validation."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool": "passed",
+    "english_sections": "passed",
+    "f_number_match": "passed: English and Chinese each have 104 F-number references and 28 unique F-numbers",
+    "dynare_run": "not_performed"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "model_id": "US_VI16gk",
+  "status": "needs_review",
+  "paper": {
+    "title": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+    "authors": [
+      "Villa, Stefania"
+    ],
+    "year": 2016,
+    "journal_or_series": "Macroeconomic Dynamics, 20(05), pp. 1313-1340.",
+    "doi": "10.1017/s1365100514000881"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 166,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_VI16gk",
+    "paper_slug": "ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "ed2f2b1d-60d9-4da9-a9c6-b57af3b7e740"
+    ],
+    "primary_source_title": "Financial frictions in the Euro Area and the United States- a Bayesian assessment",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+    "model_match_notes": ""
+  },
+  "source_index_issue": null,
+  "source_match_review": {
+    "first_page_sniffed": true,
+    "observed_title": "FINANCIAL FRICTIONS IN THE EURO AREA AND THE UNITED STATES: A BAYESIAN ASSESSMENT",
+    "observed_author": "STEFANIA VILLA",
+    "primary_source_is_expected_paper": true,
+    "alternate_mineru_runs_inspected": false,
+    "notes": "Only one MinerU run id is listed for the row, and the first Markdown lines match the expected title and author."
+  },
+  "paper_side_sources_used": [
+    {
+      "role": "main_equation_source",
+      "path": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+      "exists": true,
+      "sha256": "24af116f5329907e2309f8c7a279c7bbce95b61ea5533508968043be38c019df",
+      "mineru_run_id": "ed2f2b1d-60d9-4da9-a9c6-b57af3b7e740",
+      "source_title_observed": "FINANCIAL FRICTIONS IN THE EURO AREA AND THE UNITED STATES: A BAYESIAN ASSESSMENT",
+      "source_authors_observed": "STEFANIA VILLA",
+      "usage": "Model overview, Table 1 linearized SWGK equations, measurement equations, calibration tables, and US posterior/country-specific context."
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+      "exists": true,
+      "sha256": "dcef1c6973bb0685bbdd2c711afeb60e3199b269ceef8dd01f08882d89b2685f",
+      "body_opened": false,
+      "usage": "Existence/provenance check only; PDF body was not read."
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_VI16gk.md",
+    "exists": false,
+    "used": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_VI16gk_rep.mod",
+    "exists": true,
+    "sha256": "e0d38716c211cbbae71185abb90c75bcc3600c525e613d43c68e9c37feca0147",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only to confirm this is the US SWGK model(linear) implementation, variable names, flexible-price counterpart variables, shock names, estimated US parameter values, and Rep-MMB timing notes. Not used as paper-side mathematical evidence."
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_VI16gk/US_VI16gk_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_VI16gk/US_VI16gk_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_VI16gk/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_VI16gk/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_VI16gk/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown Table 1. Equations were not checked against the PDF body, and implementation timing differs for selected financial equations."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations and avoids copying long prose from the source.",
+  "paper_title": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+  "authors": "Villa, Stefania",
+  "year": "2016",
+  "journal_or_series": "Macroeconomic Dynamics, 20(05), pp. 1313-1340.",
+  "doi": "10.1017/s1365100514000881",
+  "model_index_row_normalized": {
+    "model_id": "US_VI16gk",
+    "paper_title": "Financial frictions in the Euro Area and the United States: a Bayesian assessment",
+    "authors": "Villa, Stefania",
+    "year": "2016",
+    "journal_or_series": "Macroeconomic Dynamics, 20(05), pp. 1313-1340.",
+    "doi": "10.1017/s1365100514000881",
+    "paper_slug": "ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "ed2f2b1d-60d9-4da9-a9c6-b57af3b7e740",
+    "primary_source_title": "Financial frictions in the Euro Area and the United States- a Bayesian assessment",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_vi16bgg_ea_vi16gk_us_vi16bgg_us_vi16gk__financial_frictions_in_the_euro_area_and_the_united_states_a_bayesian_as__ed2f2b1d/full.md",
+      "exists": true,
+      "sha256": "24af116f5329907e2309f8c7a279c7bbce95b61ea5533508968043be38c019df"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Financial frictions in the Euro Area and the United States- a Bayesian assessment.pdf",
+      "exists": true,
+      "sha256": "dcef1c6973bb0685bbdd2c711afeb60e3199b269ceef8dd01f08882d89b2685f"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/US_VI16gk/US_VI16gk_derivation.en.md",
+      "exists": true,
+      "sha256": "2e9b15ff6db9073d4bff89540ace3204554a3233c86b8613a1c6afcdbfb92b6d"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/US_VI16gk/US_VI16gk_derivation.zh.md",
+      "exists": true,
+      "sha256": "4a5536bf75849791b8df50389e149dfc9b768c0c0f93ed6c76076b01f972e4b7"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/US_VI16gk/source_manifest.json",
+      "exists": true,
+      "sha256": "517f7775fc6c9646daf147c65b02c6433531fa48cd550dd2b009ee9543790ce7"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/US_VI16gk/extraction_notes.md",
+      "exists": true,
+      "sha256": "fad755fc8e90ab0798fe809b25bf6b5f12e35aeae19b06e9e0b68917dc71c4c2"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/US_VI16gk/worker_report.json",
+      "exists": true,
+      "sha256": "9f7666d78226e542f8934b836dfc573a1ebdf628c154dbbc228e0c72f588fac8"
+    }
+  ]
+}

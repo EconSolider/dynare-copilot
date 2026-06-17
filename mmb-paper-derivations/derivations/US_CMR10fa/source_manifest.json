@@ -1,0 +1,143 @@
+{
+  "model_id": "US_CMR10fa",
+  "status": "needs_review",
+  "paper": {
+    "title": "Financial factors in economic fluctuations - small version with financial accelerator",
+    "authors": "Christiano, Lawrence J.; Motto, Roberto; Rostagno, Massimo",
+    "year": 2010,
+    "doi": "10.2139/ssrn.1600166",
+    "journal_or_series": "Working Paper Series 1192"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 0.672,
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "paper_slug": "us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations"
+  },
+  "primary_source": {
+    "full_md_path": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+    "full_md_sha256": "ff8a2598380b03976faa2d0874632ea8d4c090124406a585999137d1390f6f06",
+    "raw_pdf_path": "raw/mmb_papers/Financial factors in economic fluctuations - small version with financial accelerator.pdf",
+    "raw_pdf_exists": true,
+    "raw_pdf_sha256": "ea732d591c03b1150a201fceae6decbdd339d4667a7d4da9c9da34680ca1c43e",
+    "mineru_run_id": "7ef56ea6-a645-4778-b698-5201f0b5ffb1",
+    "mineru_source_title": "Financial factors in economic fluctuations - small version with financial accelerator",
+    "image_count": 471,
+    "full_md_bytes": 401494
+  },
+  "alternate_mineru_runs": [
+    {
+      "run_id": "263275d1-4b24-46ce-8450-c343c84e0e16",
+      "source_title": "Financial factors in economic fluctuations",
+      "full_md_path": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__263275d1/full.md",
+      "raw_pdf_path": "raw/mmb_papers/Financial factors in economic fluctuations.pdf",
+      "used_for_derivation": false,
+      "reason_not_primary": "model_index.csv selects the small-version financial-accelerator source for US_CMR10fa"
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_CMR10fa.md",
+    "exists": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_CMR10fa_rep.mod",
+    "exists": true,
+    "sha256": "85148ff4941bfeb7ec95e2336986c2f5e0512fec36f217a77a0a3d09a6db1422",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only to compare active variables, shock names, and the reduced financial-accelerator variant; not used as paper-side mathematical evidence."
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_CMR10fa/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_CMR10fa/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_CMR10fa/worker_report.json"
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+      "spans": [
+        "model overview and sector descriptions around sections 2.1-2.10",
+        "Appendix A first-order conditions A.1-A.35",
+        "Appendix E capital and credit market equations E.1-E.14",
+        "Tables 1-3 for US steady-state targets"
+      ]
+    }
+  ],
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "MinerU OCR captured the model block but several Appendix A equations contain bracket, date, and dimensional ambiguities; no PDF-body formula check was performed."
+  },
+  "created_by": "codex worker",
+  "created_date": "2026-06-17",
+  "paper_title": "Financial factors in economic fluctuations - small version with financial accelerator",
+  "authors": [
+    "Christiano, Lawrence J.",
+    "Motto, Roberto",
+    "Rostagno, Massimo"
+  ],
+  "year": "2010",
+  "journal_or_series": "Working Paper Series 1192",
+  "doi": "10.2139/ssrn.1600166",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "US_CMR10fa",
+    "paper_slug": "us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "0.6720",
+    "mineru_run_ids": [
+      "7ef56ea6-a645-4778-b698-5201f0b5ffb1",
+      "263275d1-4b24-46ce-8450-c343c84e0e16"
+    ],
+    "primary_source_title": "Financial factors in economic fluctuations - small version with financial accelerator",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial factors in economic fluctuations - small version with financial accelerator.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+      "sha256": "ff8a2598380b03976faa2d0874632ea8d4c090124406a585999137d1390f6f06",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Financial factors in economic fluctuations - small version with financial accelerator.pdf",
+      "sha256": "ea732d591c03b1150a201fceae6decbdd339d4667a7d4da9c9da34680ca1c43e",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_CMR10fa.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_CMR10fa_rep.mod",
+      "sha256": "85148ff4941bfeb7ec95e2336986c2f5e0512fec36f217a77a0a3d09a6db1422",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_CMR10fa/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_CMR10fa/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_CMR10fa/worker_report.json"
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

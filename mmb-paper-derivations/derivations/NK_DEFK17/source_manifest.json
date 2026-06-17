@@ -1,0 +1,169 @@
+{
+  "model_id": "NK_DEFK17",
+  "paper_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+  "authors": "Del Negro, Marco; Eggertsson, Gauti; Ferrero, Andrea; Kiyotaki, Nobuhiro",
+  "year": "2017",
+  "journal_or_series": "American Economic Review 107 (3), pp. 824-857",
+  "doi": "10.1257/aer.20121660",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "model_index_row": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "source_csv_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_DEFK17",
+    "paper_slug": "nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "b6479bed-1e6a-4753-a815-218bb09c8cd4"
+    ],
+    "primary_source_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+      "sha256": "404d31b4f06e6d113fb322901a843bdf471ed2ac9e263cd5a9d7f1f513487f34",
+      "mineru_run_id": "b6479bed-1e6a-4753-a815-218bb09c8cd4",
+      "exists": true,
+      "match_role": "primary_paper_markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+      "sha256": "709864fd50000014d522f81983e3d5aa52e855680a8eae4ff7663ade16e3aa79",
+      "exists": true,
+      "opened_for_body_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_DEFK17.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_DEFK17_rep.mod",
+      "sha256": "4d81a37c0b8b3a5b0dfe8533243d00912873b1cfa9d053cb56dbaf85e112309c",
+      "exists": true,
+      "used_as": "implementation_cross_check_only",
+      "dynare_run": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_DEFK17/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_DEFK17/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_DEFK17/worker_report.json"
+  },
+  "source_quality": {
+    "title_match": "clean",
+    "formula_quality": "partial_paper_body_equations_with_implementation_cross_check",
+    "source_index_issue": null,
+    "uncertainty_status": "needs_review",
+    "notes": [
+      "The model-index row reports matched MinerU source and a 1.0000 title-match score.",
+      "The paper body prints the household liquidity constraints, aggregate investment equation, convenience-yield definition, government rules, and aggregate identities.",
+      "The paper body delegates detailed final-good, intermediate-good, wage, and capital-producer equations to online Appendices B.1-B.3.",
+      "No appendix normalization exists for NK_DEFK17 in docs/mmb_appendix_full_normalizations.",
+      "The local .mod confirms the MMB variable list, timing implementation, steady-state values, and the single liquidity shock e_phi, but is not treated as a paper-side source."
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "status": "not_performed",
+    "notes": "Dynare was not run; this entry is a source-backed derivation draft only."
+  },
+  "proposed_index_rows": {
+    "catalog_csv": {
+      "ModelID": "NK_DEFK17",
+      "Task": "NK_DEFK17_rep",
+      "Paper": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+      "Year": "2017",
+      "ModelType": "Nonlinear New Keynesian DSGE with Kiyotaki-Moore liquidity frictions",
+      "Economy": "United States",
+      "Category": "Financial Frictions and Liquidity Policy",
+      "KeyFeatures": "Liquidity shock, resaleability constraint, borrowing constraint, ZLB, unconventional credit policy, Calvo prices and wages, investment adjustment costs",
+      "DateAdded": "2026-06-17",
+      "SourceFullMD": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+      "RawPDF": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+      "DOI": "10.1257/aer.20121660",
+      "Status": "needs_review"
+    },
+    "status_csv": {
+      "model_id": "NK_DEFK17",
+      "paper_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+      "source_full_md": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+      "raw_pdf_path": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+      "status": "needs_review",
+      "formula_quality": "partial_paper_body_equations_with_implementation_cross_check",
+      "steady_state_quality": "reported_targets_and_implementation_cross_check_only",
+      "needs_human_review": "true",
+      "notes": "Paper body delegates detailed CEE/SW blocks to online appendix; no normalized appendix file exists for NK_DEFK17."
+    }
+  },
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_DEFK17",
+    "paper_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+    "authors": "Del Negro, Marco; Eggertsson, Gauti; Ferrero, Andrea; Kiyotaki, Nobuhiro",
+    "year": "2017",
+    "journal_or_series": "American Economic Review 107 (3), pp. 824-857",
+    "doi": "10.1257/aer.20121660",
+    "paper_slug": "nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "b6479bed-1e6a-4753-a815-218bb09c8cd4",
+    "primary_source_title": "The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_defk17__the_great_escape_a_quantitative_evaluation_of_the_fed_s_liquidity_facili__b6479bed/full.md",
+      "exists": true,
+      "sha256": "404d31b4f06e6d113fb322901a843bdf471ed2ac9e263cd5a9d7f1f513487f34"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The Great Escape? A Quantitative Evaluation of the Fed's Liquidity Facilities.pdf",
+      "exists": true,
+      "sha256": "709864fd50000014d522f81983e3d5aa52e855680a8eae4ff7663ade16e3aa79"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.en.md",
+      "exists": true,
+      "sha256": "87e7597d2c492d2b4277e15a52eaf02beacf56b7a2bd6f55186dd180830195f8"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_DEFK17/NK_DEFK17_derivation.zh.md",
+      "exists": true,
+      "sha256": "28bd060711ff07e65773f664540ab069fd054bde75ad689596c7e1ba2b1032b6"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_DEFK17/source_manifest.json",
+      "exists": true,
+      "sha256": "440e78949ba23fa50ab652e474abe9a579053eceb920cc18bb891ac7af6d0b03"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_DEFK17/extraction_notes.md",
+      "exists": true,
+      "sha256": "31718330ba18ad1eb8bff5e97d7095231ac84293efb247214acdaaf14f087e72"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_DEFK17/worker_report.json",
+      "exists": true,
+      "sha256": "519794115455c766a4277121fba443286d91e14a6d0bee2b9a8d8b60be6a47ed"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

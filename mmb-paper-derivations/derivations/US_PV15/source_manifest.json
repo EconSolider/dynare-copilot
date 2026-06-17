@@ -1,0 +1,102 @@
+{
+  "model_id": "US_PV15",
+  "status": "needs_review",
+  "created_utc": "2026-06-17",
+  "title": "Financial frictions and the extensive margin of activity",
+  "authors": [
+    "Jean-Christophe Poutineau",
+    "Gauthier Vermandel"
+  ],
+  "year": 2015,
+  "journal_or_series": "Research in Economics, 69(4), 525-554",
+  "doi": "10.1016/j.rie.2015.09.005",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=US_PV15",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_pv15__financial_frictions_and_the_extensive_margin_of_activity__03a51d35/full.md",
+      "sha256": "2b03f96cf4d12ac2e7640c6dcf5333c1815ae944e8ca6a65f9aa7b334e109d24",
+      "mineru_run_id": "03a51d35-6914-42f0-b0e5-9d7f3e6fe7cb",
+      "title_sniff": "Financial frictions and the extensive margin of activity",
+      "title_match": "exact"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Financial frictions and the extensive margin of activity.pdf",
+      "sha256": "de5115062b57b7046c5f81bd5aa2dcbb12b15dde60e62a92fecd4da9872f0e80",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_PV15.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_PV15_rep.mod",
+      "sha256": "40689dfaeeeae4cf0b3e70e4c7e7f21db5e8f20366598b8556dca6848ef5bdf1",
+      "used_for": [
+        "variable coverage",
+        "timing conventions",
+        "shock names",
+        "natural/flexible counterpart identification",
+        "OCR ambiguity flags"
+      ],
+      "used_as_paper_source": false,
+      "dynare_run": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_PV15/US_PV15_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_PV15/US_PV15_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_PV15/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_PV15/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_PV15/worker_report.json"
+  },
+  "formula_quality": {
+    "overall": "needs_review",
+    "continuous_f_numbers": true,
+    "f_number_count": 46,
+    "known_uncertain_equations": [
+      "F12",
+      "F13",
+      "F19",
+      "F23",
+      "F26",
+      "F29",
+      "F36"
+    ],
+    "notes": "Appendix B equations were extractable from MinerU Markdown, but several equations contain OCR or source-notation ambiguity. First-pass uncertainty is intentionally retained as needs_review."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "status": "not_performed",
+    "reason": "Task contract explicitly says do not run Dynare."
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row": {
+      "ModelID": "US_PV15",
+      "Task": "mmb_derivation",
+      "Paper": "Financial frictions and the extensive margin of activity",
+      "Year": "2015",
+      "ModelType": "estimated nonlinear DSGE",
+      "Economy": "US",
+      "Category": "Financial frictions; endogenous entry",
+      "KeyFeatures": "Endogenous firm entry; financial accelerator; bank lending rate stickiness; sticky prices and wages; variable utilization",
+      "DateAdded": "2026-06-17",
+      "SourceFullMD": "raw/mmb_mineru/runs/us_pv15__financial_frictions_and_the_extensive_margin_of_activity__03a51d35/full.md",
+      "RawPDF": "raw/mmb_papers/Financial frictions and the extensive margin of activity.pdf",
+      "DOI": "10.1016/j.rie.2015.09.005",
+      "Status": "needs_review"
+    },
+    "shared_catalog_updated": false,
+    "shared_status_updated": false
+  }
+}

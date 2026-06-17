@@ -1,0 +1,66 @@
+{
+  "model_id": "NK_BGG99",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_BGG99/NK_BGG99_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_BGG99/NK_BGG99_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_BGG99/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_BGG99/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_BGG99/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "NK_BGG99",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "The financial accelerator in a quantitative business",
+    "Year": "1999",
+    "ModelType": "log-linearized New Keynesian financial accelerator",
+    "Economy": "closed economy",
+    "Category": "financial frictions; New Keynesian",
+    "KeyFeatures": "costly state verification; external finance premium; entrepreneurial net worth; Calvo pricing; monetary policy rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_bgg99_nk_bgg99al__the_financial_accelerator_in_a_quantitative_business__e6291ccb/full.md",
+    "RawPDF": "raw/mmb_papers/The financial accelerator in a quantitative business.pdf",
+    "DOI": "10.1016/s1574-0048(99)10034-x",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "NK_BGG99",
+    "paper_title": "The financial accelerator in a quantitative business",
+    "source_full_md": "raw/mmb_mineru/runs/nk_bgg99_nk_bgg99al__the_financial_accelerator_in_a_quantitative_business__e6291ccb/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The financial accelerator in a quantitative business.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "implementation_cross_check_only",
+    "needs_human_review": "true",
+    "notes": "First-pass extraction from MinerU Markdown; raw PDF existence checked but PDF body not opened; Dynare not run."
+  },
+  "validation": [
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/NK_BGG99/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool mmb-paper-derivations/derivations/NK_BGG99/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "check English has all eight required sections",
+      "status": "passed"
+    },
+    {
+      "command": "check English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "40 total F-number references in each file; 23 unique equation numbers, F1-F23"
+    }
+  ],
+  "unresolved_issues": [
+    "Paper OCR contains ellipses/omitted terms in several log-linear equations.",
+    "Monitoring-cost and net-worth auxiliary terms require formula-level review.",
+    "Appendix contract calibration should be reconciled against implementation steady-state formulas before review promotion.",
+    "Runtime validation was intentionally not performed."
+  ]
+}

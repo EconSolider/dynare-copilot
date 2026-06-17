@@ -1,0 +1,43 @@
+{
+  "model_id": "NK_GLSV07",
+  "status": "completed_needs_review",
+  "owned_paths": [
+    "mmb-paper-derivations/derivations/NK_GLSV07/"
+  ],
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_GLSV07/NK_GLSV07_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_GLSV07/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_GLSV07/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_GLSV07/worker_report.json"
+  ],
+  "inputs_used": {
+    "model_index_row": true,
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_glsv07__understanding_the_effects_of_government_spending_on_consumption__47e78a28/full.md",
+    "raw_pdf_path_exists_checked": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization": null,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/NK_GLSV07_rep.mod"
+  },
+  "outputs": {
+    "english_derivation": "written",
+    "chinese_derivation": "written",
+    "source_manifest": "written",
+    "extraction_notes": "written"
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "no_index_whitespace_check": "passed_after_trimming_blank_eof",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections_en": "passed",
+    "eight_sections_zh": "passed",
+    "english_chinese_f_number_parity": "passed"
+  },
+  "unresolved_issues": [
+    "Markup convention needs human review: paper prose and implementation parameter value require explicit convention choice.",
+    "Runtime validation was not performed.",
+    "No targeted raw-PDF formula check was performed."
+  ],
+  "notes": "No shared indexes were staged, committed, pushed, or edited by this worker task."
+}

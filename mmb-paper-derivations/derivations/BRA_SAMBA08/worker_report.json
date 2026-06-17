@@ -1,0 +1,44 @@
+{
+  "model_id": "BRA_SAMBA08",
+  "owned_path": "mmb-paper-derivations/derivations/BRA_SAMBA08",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/BRA_SAMBA08/BRA_SAMBA08_derivation.en.md",
+    "mmb-paper-derivations/derivations/BRA_SAMBA08/BRA_SAMBA08_derivation.zh.md",
+    "mmb-paper-derivations/derivations/BRA_SAMBA08/source_manifest.json",
+    "mmb-paper-derivations/derivations/BRA_SAMBA08/extraction_notes.md",
+    "mmb-paper-derivations/derivations/BRA_SAMBA08/worker_report.json"
+  ],
+  "shared_indexes_edited": false,
+  "git_staged": false,
+  "git_committed": false,
+  "git_pushed": false,
+  "source_reading": {
+    "skill_read": true,
+    "build_plan_read": true,
+    "derivation_style_read": true,
+    "bgg_example_read": true,
+    "model_index_row_read": true,
+    "primary_full_md_read": true,
+    "appendix_normalization_read": false,
+    "appendix_normalization_reason": "No BRA_SAMBA08 appendix normalization file exists.",
+    "implementation_cross_check_read": true,
+    "raw_pdf_path_checked": true,
+    "raw_pdf_body_read": false
+  },
+  "validation": {
+    "git_diff_check_target": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "f_number_parity": "passed",
+    "english_f_reference_count": 96,
+    "chinese_f_reference_count": 96,
+    "unique_f_numbers": "F1-F50"
+  },
+  "unresolved_issues": [
+    "Model index title/year and primary source title/year mismatch requires human source-review.",
+    "Some OCR formulas in Appendix A are malformed and marked needs_review.",
+    "No runtime validation was performed."
+  ]
+}

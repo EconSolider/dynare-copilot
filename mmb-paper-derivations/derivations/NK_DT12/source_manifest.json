@@ -1,0 +1,110 @@
+{
+  "model_id": "NK_DT12",
+  "paper_title": "Optimal Monetary Policy in a Model of the Credit Channel",
+  "authors": "De Fiore, Fiorella; Tristani, Oreste",
+  "year": "2012",
+  "journal_or_series": "The Economic Journal 123(571), pp. 906-931",
+  "doi": "10.1111/j.1468-0297.2012.02558.x",
+  "mineru": {
+    "run_id": "286bd0e5-2870-46db-bfc4-1f7b2fbf2f3c",
+    "match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Optimal Monetary Policy in a Model of the Credit Channel",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "catalog_cross_reference": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_index_row_number": 57,
+    "model_index_row_fields": {
+      "model_id": "NK_DT12",
+      "paper_slug": "nk_dt12__optimal_monetary_policy_in_a_model_of_the_credit_channel",
+      "raw_pdf_path": "raw/mmb_papers/Optimal Monetary Policy in a Model of the Credit Channel.pdf",
+      "primary_full_md_path": "raw/mmb_mineru/runs/nk_dt12__optimal_monetary_policy_in_a_model_of_the_credit_channel__286bd0e5/full.md"
+    }
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_dt12__optimal_monetary_policy_in_a_model_of_the_credit_channel__286bd0e5/full.md",
+      "exists": true,
+      "sha256": "a2a4ab901df11ab668c285b769b8a378928d4b35f1234544dcc4286356cb65bf"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Optimal Monetary Policy in a Model of the Credit Channel.pdf",
+      "exists": true,
+      "sha256": "ac9dfb6889c0e8ed5f80bcdc418b9e8489153b621d8e79c917ef003cc09e9dff"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_DT12/NK_DT12_derivation.en.md",
+      "exists": true,
+      "sha256": "a1faa98bf071f051a90413d179329f1b947aafe56e40764387625b0e16a989a6"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_DT12/NK_DT12_derivation.zh.md",
+      "exists": true,
+      "sha256": "d2b37314f1652397c0122dd42ebf731af4534f9d3ac89732b48744ea1b76a548"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_DT12/source_manifest.json",
+      "exists": true,
+      "sha256": "44ce9d52cedc28b74a4fc6d9dd867c770cd1d901d136770f2efb5a309ddace6c"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_DT12/extraction_notes.md",
+      "exists": true,
+      "sha256": "291ecbf2cfaca6dd7dbdc5e2b20b2c6759a9451abc09ecc1adf9b484947cb996"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_DT12/worker_report.json",
+      "exists": true,
+      "sha256": "e626767db3aed7b9c0e6fa1804e53194d9c31620d45779e133a71ed0b4893dcc"
+    }
+  ],
+  "source_quality": {
+    "title_author_sniff": "matched",
+    "formula_quality": "needs_review",
+    "ocr_issues": [
+      "Title line in Markdown renders 'CREDITCHANNEL' without a space.",
+      "The text references online Appendices A-D and F-G for contract, price-setting, steady-state, gap, and welfare details, but no local normalization file exists.",
+      "Some OCR text contains malformed punctuation and mojibake around quoted labels, but the main equations used in the derivation are readable."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "status": "needs_review",
+  "created_by": "codex",
+  "created_date": "2026-06-17",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_DT12",
+    "paper_title": "Optimal Monetary Policy in a Model of the Credit Channel",
+    "authors": "De Fiore, Fiorella; Tristani, Oreste",
+    "year": "2012",
+    "journal_or_series": "The Economic Journal 123(571), pp. 906-931",
+    "doi": "10.1111/j.1468-0297.2012.02558.x",
+    "paper_slug": "nk_dt12__optimal_monetary_policy_in_a_model_of_the_credit_channel",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "286bd0e5-2870-46db-bfc4-1f7b2fbf2f3c",
+    "primary_source_title": "Optimal Monetary Policy in a Model of the Credit Channel",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_dt12__optimal_monetary_policy_in_a_model_of_the_credit_channel__286bd0e5/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal Monetary Policy in a Model of the Credit Channel.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

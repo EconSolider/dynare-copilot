@@ -1,0 +1,114 @@
+{
+  "model_id": "EA_AWM05",
+  "status": "needs_review",
+  "paper_title": "Optimal monetary policy rules for the euro area: An analysis using the area wide model",
+  "authors": [
+    "Dieppe, Alistair",
+    "Kuester, Keith",
+    "McAdam, Peter"
+  ],
+  "year": "2005",
+  "journal_or_series": "Journal of Common Market Studies 43(3), pp. 507-537",
+  "doi": "10.1111/j.0021-9886.2005.00567.x",
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "EA_AWM05",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "Optimal monetary policy rules for the euro area- An analysis using the area wide model",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_id": "52db9f78-eac7-4557-90e0-f1fd98503b02",
+    "paper_slug": "ea_awm05__optimal_monetary_policy_rules_for_the_euro_area_an_analysis_using_the_ar"
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_awm05__optimal_monetary_policy_rules_for_the_euro_area_an_analysis_using_the_ar__52db9f78/full.md",
+      "sha256": "0286b2a3d0fa4ae5b2bfd2e04fa1439da6675cd44404c669202537d667f008b8",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Optimal monetary policy rules for the euro area- An analysis using the area wide model.pdf",
+      "sha256": "173ef2966958551b065047e67b38705fdca708e98362bc7c30e51b634c0ab684",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_AWM05.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_AWM05_rep.mod",
+      "sha256": "dff8495f6c0b1176d23c14d0224fd2b79e564675ce1bd04e2053f4fcf798e328",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_sniff": {
+    "method": "first 80 Markdown lines plus first-page metadata",
+    "expected_title": "Optimal monetary policy rules for the euro area: An analysis using the area wide model",
+    "observed_title": "Optimal Monetary Policy Rules for the Euro Area: An Analysis Using the Area Wide Model",
+    "expected_authors": [
+      "Alistair Dieppe",
+      "Keith Kuester",
+      "Peter McAdam"
+    ],
+    "observed_authors": [
+      "ALISTAIR DIEPPE",
+      "KEITH KÜSTER",
+      "PETER McADAM"
+    ],
+    "mismatch": false,
+    "notes": "The implementation .mod header cites Fagan, Henry, and Mestre (2001), the underlying AWM documentation, but the primary Markdown matches the indexed policy-rule paper."
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EA_AWM05/EA_AWM05_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EA_AWM05/EA_AWM05_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_AWM05/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_AWM05/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_AWM05/worker_report.json"
+  },
+  "formula_quality": {
+    "overall": "needs_review",
+    "paper_policy_equations": "usable from Markdown",
+    "awm_private_sector_equations": "compact implementation_cross_check summary; full source model listing is referenced but not reproduced by indexed paper",
+    "ocr_uncertainty": [
+      "Some Greek parameters and table labels in the MinerU Markdown are missing or malformed.",
+      "Private-sector AWM equations were cross-checked against the .mod, not independently verified from the raw PDF body."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_edited": false,
+    "shared_status_edited": false
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_AWM05",
+    "paper_slug": "ea_awm05__optimal_monetary_policy_rules_for_the_euro_area_an_analysis_using_the_ar",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "52db9f78-eac7-4557-90e0-f1fd98503b02"
+    ],
+    "primary_source_title": "Optimal monetary policy rules for the euro area- An analysis using the area wide model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_awm05__optimal_monetary_policy_rules_for_the_euro_area_an_analysis_using_the_ar__52db9f78/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal monetary policy rules for the euro area- An analysis using the area wide model.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

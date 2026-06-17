@@ -1,0 +1,69 @@
+{
+  "model_id": "US_MI07AL",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_MI07AL/US_MI07AL_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_MI07AL/US_MI07AL_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_MI07AL/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_MI07AL/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_MI07AL/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_MI07AL",
+    "Task": "mmb_derivation",
+    "Paper": "Expectations, learning and macroeconomic persistence",
+    "Year": "2007",
+    "ModelType": "Small estimated New Keynesian adaptive-learning model; log-linear/model(linear)",
+    "Economy": "United States",
+    "Category": "Adaptive learning; monetary policy; persistence",
+    "KeyFeatures": "Subjective expectations; constant-gain learning; habit formation; inflation indexation; Taylor rule; natural-rate and cost-push shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_mi07_us_mi07al__expectations_learning_and_macroeconomic_persistence__96c7b552/full.md",
+    "RawPDF": "raw/mmb_papers/Expectations, learning and macroeconomic persistence.pdf",
+    "DOI": "10.1016/j.jmoneco.2006.11.007",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_MI07AL",
+    "paper_title": "Expectations, learning and macroeconomic persistence",
+    "source_full_md": "raw/mmb_mineru/runs/us_mi07_us_mi07al__expectations_learning_and_macroeconomic_persistence__96c7b552/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Expectations, learning and macroeconomic persistence.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_needs_review",
+    "steady_state_quality": "log_linear_zero_deviation_steady_state",
+    "needs_human_review": "true",
+    "notes": "Paper-side equations extracted from Markdown; forecast formula dimensioning and unprinted state-space matrices need source-level review. Dynare was not run."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/US_MI07AL",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_MI07AL/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_MI07AL/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has exact eight required sections and includes (F1)",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number occurrence counts match",
+      "status": "passed",
+      "english_f_count": 62,
+      "chinese_f_count": 62,
+      "unique_f_numbers": 12
+    }
+  ],
+  "unresolved_issues": [
+    "Forecast formula dimensioning in Eq. 11 should be checked because Markdown prints I_5 while Z_t is defined as three-dimensional.",
+    "State-space matrices are not printed in the Markdown and were not reconstructed.",
+    "Implementation policy-rule wrapper differs from the simple paper Taylor rule and is recorded only as implementation_cross_check.",
+    "Dynare/runtime validation was not performed by request.",
+    "Raw PDF body was not read by default; only existence and hash were recorded."
+  ]
+}

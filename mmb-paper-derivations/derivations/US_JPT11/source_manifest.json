@@ -1,0 +1,73 @@
+{
+  "model_id": "US_JPT11",
+  "archive_status": "needs_review",
+  "created_utc": "2026-06-17",
+  "paper": {
+    "title": "Investment shocks and the relative price of investment",
+    "authors": "Justiniano, Alejandro; Primiceri, Giorgio E.; Tambalotti, Andrea",
+    "year": 2011,
+    "journal_or_series": "Review of Economic Dynamics 14, pp. 102-121",
+    "doi": "10.1016/j.red.2010.08.004"
+  },
+  "catalog_cross_reference": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_index_row_number": 143,
+    "paper_slug": "us_jpt11__investment_shocks_and_the_relative_price_of_investment",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Investment shocks and the relative price of investment",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_jpt11__investment_shocks_and_the_relative_price_of_investment__8d6c49b8/full.md",
+      "sha256": "b993962f61ec0e4bba6cd59e6d1b6b5a0c6475a090d8117ebb83052efc59bcd0",
+      "mineru_run_id": "8d6c49b8-f6bc-490f-8ddf-6ab7756b73bc",
+      "first_page_title_observed": "Investment shocks and the relative price of investment",
+      "used_for": "paper_side_derivation"
+    },
+    "alternate_mineru_runs": [],
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Investment shocks and the relative price of investment.pdf",
+      "sha256": "35040fa063271a04a63d6570bb667243f39b7fb6c6cb4bff3d154e09550d95a0",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_JPT11.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_JPT11_rep.mod",
+      "sha256": "d41a21e7f5b0a045b8cafc48ad19165700e7ba1c38b43606ef6090a8ae081513",
+      "used_only_as": "implementation_cross_check",
+      "dynare_run": false
+    },
+    "mineru_index": {
+      "path": "raw/mmb_mineru/index.csv",
+      "sha256": "28059fd98859cc336e9b87cf808d2cd82a155fe1108352bd09a5ec5253b0e120"
+    }
+  },
+  "outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_JPT11/US_JPT11_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_JPT11/US_JPT11_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_JPT11/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_JPT11/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_JPT11/worker_report.json"
+  },
+  "quality": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "translation_status": "translated_from_english",
+    "source_index_issue": false,
+    "source_index_issue_note": "",
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "Dynare was not run per task instruction."
+    }
+  }
+}

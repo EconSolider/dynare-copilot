@@ -1,0 +1,45 @@
+{
+  "model_id": "NK_BGG99AL",
+  "status": "completed_needs_review",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_BGG99AL",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_BGG99AL/NK_BGG99AL_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_BGG99AL/NK_BGG99AL_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_BGG99AL/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_BGG99AL/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_BGG99AL/worker_report.json"
+  ],
+  "sources_read": [
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv",
+    "raw/mmb_mineru/runs/nk_bgg99_nk_bgg99al__the_financial_accelerator_in_a_quantitative_business__e6291ccb/full.md"
+  ],
+  "sources_checked_not_read_body": [
+    "raw/mmb_papers/The financial accelerator in a quantitative business.pdf"
+  ],
+  "missing_optional_sources": [
+    "docs/mmb_appendix_full_normalizations/NK_BGG99AL.md",
+    ".agents/skills/dynare-copilot/references/examples/NK_BGG99AL_rep.mod"
+  ],
+  "shared_indexes_modified": false,
+  "git_staged": false,
+  "git_committed": false,
+  "git_pushed": false,
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections_english": "passed",
+    "eight_sections_chinese": "passed",
+    "f_number_parity_english_chinese": "passed",
+    "f_number_sequence": "F1-F44 continuous"
+  },
+  "unresolved_issues": [
+    "model_index row flags variant mapping for NK_BGG99AL",
+    "no NK_BGG99AL appendix normalization or implementation example was available",
+    "net-worth timing should be source-checked before implementation",
+    "runtime validation was not performed"
+  ]
+}

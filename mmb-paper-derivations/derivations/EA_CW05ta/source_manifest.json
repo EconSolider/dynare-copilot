@@ -1,0 +1,129 @@
+{
+  "model_id": "EA_CW05ta",
+  "status": "needs_review",
+  "paper_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+  "authors": [
+    "Guenther Coenen",
+    "Volker Wieland"
+  ],
+  "year": "2005",
+  "journal_or_series": "European Economic Review 49(5), pp. 1081-1104",
+  "doi": "10.1016/j.euroecorev.2003.05.001",
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "model_title_match_score": "1.0000",
+    "primary_source_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "mineru_run_ids": [
+      "61e070cd-c0ff-4227-a6b9-cd467639e42a",
+      "26225de1-ea64-4af0-b98d-aa4567c0b51d"
+    ],
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+      "sha256": "6e51b2fba84b97951e64979fdd43544eb60aec616690acb0acf6635c281f7dc5",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+      "sha256": "b2d23bb0ec1b61446c02ba61ba9305be172edca764e72d411ca980676a42298d",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_CW05ta.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_CW05ta_rep.mod",
+      "sha256": "c9638fce072042dd423832ff089cc1c172111222954b8f422335217908a6f753",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_sniff": {
+    "first_page_or_first_80_markdown_lines_checked": true,
+    "expected_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "observed_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "expected_authors": "Coenen, Guenther; Wieland, Volker",
+    "observed_authors": "Gunter Coenen; Volker Wieland",
+    "match_status": "matched_with_minor_ocr_author_diacritic_noise",
+    "mismatch_notes": [
+      "OCR drops or normalizes the umlaut/alternate spelling in Guenther/Gunter.",
+      "First page contains OCR substitutions such as in1ation and 2t, but the title and source identity are unambiguous."
+    ]
+  },
+  "archive_files": {
+    "derivation_en": "mmb-paper-derivations/derivations/EA_CW05ta/EA_CW05ta_derivation.en.md",
+    "derivation_zh": "mmb-paper-derivations/derivations/EA_CW05ta/EA_CW05ta_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/EA_CW05ta/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_CW05ta/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_CW05ta/worker_report.json"
+  },
+  "model_form": "linear rational-expectations model; MMB implementation uses model(linear)",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Core equations are extracted from Markdown Tables 1, 4, and 5 plus surrounding Section 5 text.",
+      "The policy-shock term and MMB variable aliases are implementation_cross_check items, not direct paper-side equations.",
+      "Exact MMB transformation from price-level contract equations into helper variables was not source-level rederived."
+    ]
+  },
+  "proposed_catalog_row": {
+    "ModelID": "EA_CW05ta",
+    "Task": "mmb_derivation",
+    "Paper": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "Year": "2005",
+    "ModelType": "linear rational-expectations small euro area model",
+    "Economy": "Euro area",
+    "Category": "Monetary policy; nominal rigidities; overlapping wage contracts",
+    "KeyFeatures": "Taylor nominal wage contracts; aggregate demand equation; term structure; Taylor-type policy rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+    "RawPDF": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+    "DOI": "10.1016/j.euroecorev.2003.05.001",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "EA_CW05ta",
+    "paper_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "source_full_md": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+    "status": "needs_review",
+    "formula_quality": "draft_from_mineru_markdown_needs_review",
+    "steady_state_quality": "linear_model_steady_state_needs_review",
+    "needs_human_review": "true",
+    "notes": "Taylor nominal wage-contract variant; no appendix normalization; PDF body not read; Dynare not run."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_CW05ta",
+    "paper_slug": "ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "61e070cd-c0ff-4227-a6b9-cd467639e42a",
+      "26225de1-ea64-4af0-b98d-aa4567c0b51d"
+    ],
+    "primary_source_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

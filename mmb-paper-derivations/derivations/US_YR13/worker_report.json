@@ -1,0 +1,67 @@
+{
+  "model_id": "US_YR13",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_YR13/US_YR13_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_YR13/US_YR13_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_YR13/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_YR13/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_YR13/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_YR13",
+    "Task": "mmb_derivation_archive",
+    "Paper": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "Year": "2016",
+    "ModelType": "Estimated medium-scale DSGE with financial accelerator and adaptive learning",
+    "Economy": "US",
+    "Category": "Financial frictions; adaptive learning",
+    "KeyFeatures": "Smets-Wouters core; BGG financial accelerator; entrepreneurs and banks; external finance premium; adaptive learning with Kalman-filter belief updating; AR(2)+constant forecasting functions; Calvo prices and wages; habit; investment adjustment costs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+    "RawPDF": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+    "DOI": "10.1016/j.jedc.2016.09.014",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_YR13",
+    "paper_title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "source_full_md": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_linearized_steady_state_notes_only",
+    "needs_human_review": "true",
+    "notes": "Primary Markdown matches title/author. Financial accelerator and learning equations are source-backed; inherited SW07 household, price, wage, and production blocks need review before promotion."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "status": "passed",
+      "details": "No output."
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_YR13/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_YR13/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has all eight sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "English count 87, Chinese count 87; 35 unique equation labels."
+    }
+  ],
+  "unresolved_issues": [
+    "Inherited SW07 household, price, wage, and production equations are not fully reprinted in the Rychalovska paper and are marked needs_review.",
+    "Several MinerU OCR passages around wage Phillips and resource-constraint bank-spread terms need targeted PDF checks.",
+    "Full steady-state ordering was not reconstructed because the paper works with a linearized detrended system.",
+    "Dynare runtime validation was not performed."
+  ]
+}

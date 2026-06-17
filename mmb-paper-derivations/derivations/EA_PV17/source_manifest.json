@@ -1,0 +1,109 @@
+{
+  "model_id": "EA_PV17",
+  "status": "needs_review",
+  "paper_title": "The macroeconomic effects of the ECB's evolving QE programme: a model-based analysis",
+  "authors": "Priftis, Romanos; Vogel, Lukas",
+  "year": "2017",
+  "doi": "10.1007/s11079-017-9460-1",
+  "journal_or_series": "Open Economies Review, Springer, vol. 28(5), 823-845",
+  "mineru": {
+    "run_id": "dca27de6-171d-47e9-978d-bdfbdeadfa8a",
+    "match_status": "matched",
+    "match_score": 1.0,
+    "primary_source_title": "The macroeconomic effects of the ECB's evolving QE programme- a model-based analysis",
+    "model_title_match_score": 1.0,
+    "sniffed_first_80_markdown_lines": true,
+    "sniff_result": "first 80 lines match expected title and authors"
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_pv17__the_macroeconomic_effects_of_the_ecb_s_evolving_qe_programme_a_model_bas__dca27de6/full.md",
+      "exists": true,
+      "sha256": "9b61ea05248791e7f8efa70986a5015af88f325677f104141da41628615b2c3d"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The macroeconomic effects of the ECB's evolving QE programme- a model-based analysis.pdf",
+      "exists": true,
+      "sha256": "6438cb7f8f8bbfdc60d39ecee54695a43b05e62347614dd6bcf457905f118ce4"
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/EA_PV17.md",
+    "exists": false,
+    "used": false
+  },
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_PV17/EA_PV17_derivation.en.md",
+      "exists": true,
+      "sha256": "739dd25aac58a8ffcf6438e0c39a8f51c79aafbee44185566e7c9ad253ff269c"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_PV17/EA_PV17_derivation.zh.md",
+      "exists": true,
+      "sha256": "92b6155c28728ac7812f59c858d69913aa324be879235389bfbf209c9a4c5156"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/EA_PV17/source_manifest.json",
+      "exists": true,
+      "sha256": "14f583dd71944067899d9bb8d7740555ee36ee59ccd309ce853a373839eebf76"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/EA_PV17/extraction_notes.md",
+      "exists": true,
+      "sha256": "5819e873bd906957469a683a4ba6e3ffd5640d2d069cc153590d8fb79e4577e3"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/EA_PV17/worker_report.json",
+      "exists": true,
+      "sha256": "56af12d1594af11972d43e66f918f54adacd0504a86e4fbea3133f8ea840e8bb"
+    }
+  ],
+  "catalog_cross_reference": {
+    "model_id": "EA_PV17",
+    "paper": "The macroeconomic effects of the ECB's evolving QE programme: a model-based analysis",
+    "year": 2017,
+    "model_type": "two-region nonlinear New-Keynesian DSGE with QE, long-term bonds, and portfolio adjustment costs",
+    "economy": "Euro area and rest of world",
+    "category": "Open economy, QE, portfolio rebalancing",
+    "key_features": "QUEST III; Ricardian and liquidity-constrained households; long-term bonds; central-bank bond purchases; cross-border holdings; fiscal closure rule"
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed",
+    "notes": "No Dynare run, steady-state validation, or BK check was executed."
+  },
+  "quality_flags": [
+    "needs_review",
+    "ocr_formula_review_required",
+    "steady_state_reconstruction_incomplete",
+    "implementation_cross_check_not_source"
+  ],
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "EA_PV17",
+    "paper_title": "The macroeconomic effects of the ECB's evolving QE programme: a model-based analysis",
+    "authors": "Priftis, Romanos; Vogel, Lukas",
+    "year": "2017",
+    "journal_or_series": "Open Economies Review, Springer, vol. 28(5), 823-845",
+    "doi": "10.1007/s11079-017-9460-1",
+    "paper_slug": "ea_pv17__the_macroeconomic_effects_of_the_ecb_s_evolving_qe_programme_a_model_bas",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "dca27de6-171d-47e9-978d-bdfbdeadfa8a",
+    "primary_source_title": "The macroeconomic effects of the ECB's evolving QE programme- a model-based analysis",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_pv17__the_macroeconomic_effects_of_the_ecb_s_evolving_qe_programme_a_model_bas__dca27de6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The macroeconomic effects of the ECB's evolving QE programme- a model-based analysis.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

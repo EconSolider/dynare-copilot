@@ -1,0 +1,156 @@
+{
+  "model_id": "NK_ET14",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Unconventional government debt purchases as a supplement to conventional monetary policy",
+    "authors": [
+      "Martin Ellison",
+      "Andreas Tischbirek"
+    ],
+    "year": 2014,
+    "journal_or_series": "Journal of Economic Dynamics and Control 43, pp. 199-217",
+    "doi": "10.1016/j.jedc.2014.03.012"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_ET14",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Unconventional government debt purchases as a supplement to conventional monetary policy",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_et14__unconventional_government_debt_purchases_as_a_supplement_to_conventional__f7e430ba/full.md",
+      "sha256": "e156b19866eeef3c9647a12cdee014ea6d9f2a26b0e07b0a4d113093a4b5ee9f",
+      "mineru_run_id": "f7e430ba-7c77-4633-ba23-6e943c335622",
+      "used_for": [
+        "paper metadata",
+        "model equations",
+        "steady state",
+        "calibration",
+        "appendix formulas"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Unconventional government debt purchases as a supplement to conventional monetary policy.pdf",
+      "sha256": "fedd78b776c6ff90a9bb2a611ac976730851181823ab0d20cbddcb66536572d0",
+      "exists_checked": true,
+      "body_read": false,
+      "used_for": [
+        "provenance only"
+      ]
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_ET14_rep.mod",
+      "sha256": "fa2224f5e6f77007c7279b8ae6fd34323bfc774c59103a2a216815eb1f61cadc",
+      "used_for": [
+        "variable coverage",
+        "shock names",
+        "steady-state formula intent",
+        "timing conventions"
+      ],
+      "not_used_as_paper_source": true
+    }
+  },
+  "outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_ET14/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_ET14/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_ET14/worker_report.json"
+  },
+  "formula_quality": {
+    "overall": "needs_review",
+    "notes": [
+      "Appendix B OCR malformed the exponent in B.4; main-text equation (7) was used.",
+      "Appendix B OCR inserted punctuation in B.6; main-text equation (9) was used.",
+      "Appendix B steady-state equations B.28 and B.42 contain OCR artifacts and need source-level review before promotion."
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed",
+    "notes": "Archive derivation pass only; no Dynare execution was run."
+  },
+  "index_updates": {
+    "catalog_csv_updated": false,
+    "status_csv_updated": false,
+    "reason": "User explicitly limited ownership to mmb-paper-derivations/derivations/NK_ET14/ and instructed not to stage shared indexes."
+  },
+  "paper_title": "Unconventional government debt purchases as a supplement to conventional monetary policy",
+  "authors": "Ellison, Martin; Tischbirek, Andreas",
+  "year": "2014",
+  "journal_or_series": "Journal of Economic Dynamics and Control 43, pp. 199-217",
+  "doi": "10.1016/j.jedc.2014.03.012",
+  "status": "completed_with_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_ET14",
+    "paper_title": "Unconventional government debt purchases as a supplement to conventional monetary policy",
+    "authors": "Ellison, Martin; Tischbirek, Andreas",
+    "year": "2014",
+    "journal_or_series": "Journal of Economic Dynamics and Control 43, pp. 199-217",
+    "doi": "10.1016/j.jedc.2014.03.012",
+    "paper_slug": "nk_et14__unconventional_government_debt_purchases_as_a_supplement_to_conventional",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "f7e430ba-7c77-4633-ba23-6e943c335622",
+    "primary_source_title": "Unconventional government debt purchases as a supplement to conventional monetary policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_et14__unconventional_government_debt_purchases_as_a_supplement_to_conventional__f7e430ba/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Unconventional government debt purchases as a supplement to conventional monetary policy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_et14__unconventional_government_debt_purchases_as_a_supplement_to_conventional__f7e430ba/full.md",
+      "exists": true,
+      "sha256": "e156b19866eeef3c9647a12cdee014ea6d9f2a26b0e07b0a4d113093a4b5ee9f"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Unconventional government debt purchases as a supplement to conventional monetary policy.pdf",
+      "exists": true,
+      "sha256": "fedd78b776c6ff90a9bb2a611ac976730851181823ab0d20cbddcb66536572d0"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.en.md",
+      "exists": true,
+      "sha256": "22b33ac521a6523029bcf30be9eb453aa436406bebfc631c31fb01486b201d4a"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_ET14/NK_ET14_derivation.zh.md",
+      "exists": true,
+      "sha256": "9f63f1a6dbb1dff8b7b1b66c049e682bb090d4777ee09a811f5216b8bd712960"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_ET14/source_manifest.json",
+      "exists": true,
+      "sha256": "887020d6ae421f86b8914ca2b8c932642ab8ba0dfa807e977bd7092c64b48516"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_ET14/extraction_notes.md",
+      "exists": true,
+      "sha256": "8f58c06a3180751ea5644a80251dd86258129a4c53a476dda4580ecde1675a9a"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_ET14/worker_report.json",
+      "exists": true,
+      "sha256": "2f7b5df642f784e2134b685fb3dc5c5657a58fc94de938224234ea71c217ed94"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

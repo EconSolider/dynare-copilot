@@ -1,0 +1,82 @@
+{
+  "model_id": "NK_RA16",
+  "status": "needs_review",
+  "owned_directory": "mmb-paper-derivations/derivations/NK_RA16",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/NK_RA16/NK_RA16_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_RA16/NK_RA16_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_RA16/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_RA16/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_RA16/worker_report.json"
+  ],
+  "source_row": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_row_number": 90,
+    "paper_title": "Bank leverage cycles and the external finance premium",
+    "authors": "Rannenberg, Ansgar",
+    "year": "2016",
+    "doi": "10.1111/jmcb.12359",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_ra16__bank_leverage_cycles_and_the_external_finance_premium__b2ee5225/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Bank leverage cycles and the external finance premium.pdf",
+    "mineru_run_ids": [
+      "b2ee5225-63e2-431a-bf9c-4acdd1d63ebf",
+      "81457220-fcb9-43d8-bf1c-418335166ef5"
+    ],
+    "model_title_match_score": 1.0
+  },
+  "sources_used": {
+    "model_index_row": true,
+    "primary_full_md_path": true,
+    "raw_pdf_path_exists_checked": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_exists": false,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/NK_RA16_rep.mod",
+    "raw_mmb_implementation_cross_check": "raw/mmb/mmci-cli/models/NK_RA16/NK_RA16.mod"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "NK_RA16",
+    "Task": "Bank leverage cycles and the external finance premium",
+    "Paper": "Bank leverage cycles and the external finance premium",
+    "Year": "2016",
+    "ModelType": "Linear New Keynesian model with bank leverage and entrepreneurial financial accelerator",
+    "Economy": "Closed economy, United States calibration",
+    "Category": "Financial frictions; bank leverage; external finance premium",
+    "KeyFeatures": "GK-style banker moral hazard; BGG/CMR-style costly-state-verification entrepreneur contract; working-capital loans; Calvo pricing with indexation; habit formation; investment adjustment costs; variable utilization in implementation",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_ra16__bank_leverage_cycles_and_the_external_finance_premium__b2ee5225/full.md",
+    "RawPDF": "raw/mmb_papers/Bank leverage cycles and the external finance premium.pdf",
+    "DOI": "10.1111/jmcb.12359",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_RA16",
+    "paper_title": "Bank leverage cycles and the external finance premium",
+    "source_full_md": "raw/mmb_mineru/runs/nk_ra16__bank_leverage_cycles_and_the_external_finance_premium__b2ee5225/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Bank leverage cycles and the external finance premium.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "Appendix A equations extracted from MinerU Markdown; entrepreneur payoff integrals, steady-state contract terms, and implementation-supplied utilization calibration require human review before promotion."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- mmb-paper-derivations/derivations/NK_RA16 exited cleanly",
+    "json_tool_source_manifest": "passed: python3 -m json.tool mmb-paper-derivations/derivations/NK_RA16/source_manifest.json",
+    "json_tool_worker_report": "passed: python3 -m json.tool mmb-paper-derivations/derivations/NK_RA16/worker_report.json",
+    "eight_section_check": "passed: English and Chinese files contain sections 1-8",
+    "f_number_count_check": "passed: English and Chinese both contain 125 F-number references covering unique labels F1-F52"
+  },
+  "unresolved_issues": [
+    "Entrepreneur payoff and loan-return integrals need targeted source review because MinerU OCR around Appendix A.4 is fragile.",
+    "Bank and entrepreneur net-worth shocks are source-stated but not retained in the final Rep-MMB shocks block.",
+    "Variable-utilization calibration parameter c_U is implementation-supplied rather than fully documented in the paper text.",
+    "Steady-state contract terms are reconstructed from calibration targets and implementation constants, not from a complete paper-side closed-form derivation.",
+    "Runtime validation was not performed."
+  ],
+  "shared_indexes": {
+    "catalog_csv_updated": false,
+    "status_csv_updated": false,
+    "reason": "User explicitly forbade editing shared indexes and limited ownership to the NK_RA16 folder."
+  },
+  "commit_or_push": "not_performed_user_explicitly_requested_no_commit_push_or_staging"
+}

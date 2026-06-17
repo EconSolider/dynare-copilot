@@ -1,0 +1,61 @@
+{
+  "model_id": "NK_CGG99AL",
+  "worker_status": "completed_first_pass",
+  "archive_status": "needs_review",
+  "owned_files_written": [
+    "mmb-paper-derivations/derivations/NK_CGG99AL/NK_CGG99AL_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_CGG99AL/NK_CGG99AL_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_CGG99AL/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_CGG99AL/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_CGG99AL/worker_report.json"
+  ],
+  "shared_indexes_modified": false,
+  "commit_or_push_performed": false,
+  "source_summary": {
+    "paper_title": "The science of monetary policy: A New Keynesian perspective",
+    "authors": "Clarida, Richard; Gali, Jordi; Gertler, Mark",
+    "year": 1999,
+    "doi": "10.1257/jel.37.4.1661",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_cgg99_nk_cgg99al__the_science_of_monetary_policy_a_new_keynesian_perspective__d3d8dd41/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Science of Monetary Policy- A New Keynesian Perspective.pdf",
+    "mineru_run_id": "d3d8dd41-6e6e-4b99-a950-51f1eeae5ef4",
+    "model_title_match_score": 1.0
+  },
+  "catalog_row_proposal": {
+    "ModelID": "NK_CGG99AL",
+    "Task": "mmb_derivation",
+    "Paper": "The science of monetary policy: A New Keynesian perspective",
+    "Year": "1999",
+    "ModelType": "New Keynesian monetary policy",
+    "Economy": "Closed economy",
+    "Category": "Monetary policy",
+    "KeyFeatures": "Forward-looking IS curve; New Keynesian Phillips curve; discretionary and commitment policy; demand and cost-push shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cgg99_nk_cgg99al__the_science_of_monetary_policy_a_new_keynesian_perspective__d3d8dd41/full.md",
+    "RawPDF": "raw/mmb_papers/The Science of Monetary Policy- A New Keynesian Perspective.pdf",
+    "DOI": "10.1257/jel.37.4.1661",
+    "Status": "needs_review"
+  },
+  "status_row_proposal": {
+    "model_id": "NK_CGG99AL",
+    "paper_title": "The science of monetary policy: A New Keynesian perspective",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cgg99_nk_cgg99al__the_science_of_monetary_policy_a_new_keynesian_perspective__d3d8dd41/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Science of Monetary Policy- A New Keynesian Perspective.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "log_linear_zero_steady_state",
+    "needs_human_review": true,
+    "notes": "First-pass reduced-form log-linear extraction; primitive optimization problems and OCR-damaged symbols need source-level review."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_validation": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_check": "passed"
+  },
+  "unresolved_issues": [
+    "Confirm whether this MMB AL variant should include only the baseline log-linear policy model or a specific implementation variant not present in the optional example path.",
+    "Source-check OCR-damaged or source-compact equations before promotion, especially the demand innovation notation and commitment-policy symbols.",
+    "Runtime validation was not performed."
+  ]
+}

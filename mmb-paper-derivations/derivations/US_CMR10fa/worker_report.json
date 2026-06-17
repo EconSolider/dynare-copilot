@@ -1,0 +1,70 @@
+{
+  "model_id": "US_CMR10fa",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_CMR10fa/US_CMR10fa_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_CMR10fa/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_CMR10fa/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_CMR10fa/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_CMR10fa",
+    "Task": "derive_mmb_model",
+    "Paper": "Financial factors in economic fluctuations - small version with financial accelerator",
+    "Year": "2010",
+    "ModelType": "log-linearized stationary DSGE, financial accelerator variant",
+    "Economy": "United States",
+    "Category": "estimated monetary DSGE with financial accelerator",
+    "KeyFeatures": "CEE/SW core; BGG entrepreneurial credit contract; risk shock; financial wealth shock; Calvo prices and wages; bank funding channel removed",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+    "RawPDF": "raw/mmb_papers/Financial factors in economic fluctuations - small version with financial accelerator.pdf",
+    "DOI": "10.2139/ssrn.1600166",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_CMR10fa",
+    "paper_title": "Financial factors in economic fluctuations - small version with financial accelerator",
+    "source_full_md": "raw/mmb_mineru/runs/us_cmr10_us_cmr10fa__financial_factors_in_economic_fluctuations__7ef56ea6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Financial factors in economic fluctuations - small version with financial accelerator.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_source_backed_targets_only",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation; Appendix A OCR has damaged financial-contract and liquidity formulas; no Dynare runtime validation."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_CMR10fa/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/US_CMR10fa/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English has all eight sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": {
+        "english_f_count": 124,
+        "chinese_f_count": 124
+      }
+    }
+  ],
+  "unresolved_issues": [
+    "A.11 standard debt contract OCR has mismatched parentheses and should be checked against the PDF.",
+    "A.12 bank zero-profit condition appears dimensionally damaged in OCR and should be checked against the PDF.",
+    "A.30 resource constraint bracket structure should be checked against the PDF.",
+    "Steady-state algorithm is not reconstructed; only source-backed scaling, normalizations, and US calibration targets are recorded.",
+    "No Dynare runtime validation was performed."
+  ]
+}

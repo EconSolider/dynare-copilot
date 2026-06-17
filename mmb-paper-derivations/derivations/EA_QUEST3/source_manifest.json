@@ -1,0 +1,114 @@
+{
+  "model_id": "EA_QUEST3",
+  "status": "needs_review",
+  "paper_title": "QUEST III: An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+  "authors": "Ratto, Marco; Roeger, Werner; Veld, Jan",
+  "year": "2009",
+  "journal_or_series": "Economic Modelling 26(1), pp. 222-233",
+  "doi": "10.1016/j.econmod.2008.06.014",
+  "catalog_cross_reference": {
+    "source_index": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_QUEST3",
+    "paper_slug": "ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis__6b625a09/full.md",
+      "exists": true,
+      "sha256": "09e6a9c868b6c03b0e760763aace4dd1bd94eab528b5678d4aaeae9903afbaf2"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy.pdf",
+      "exists": true,
+      "sha256": "e4f83ccf0d1a472d3b30055a5f8a5738836d768414b56a5420db2198ba554cf9"
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/EA_QUEST3.md",
+    "exists": false,
+    "used": false
+  },
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_QUEST3/EA_QUEST3_derivation.en.md",
+      "exists": true,
+      "sha256": "4627fabfd11a0aa22e649014bc371c64334a51acf19f3993bff9d21769d16b86"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_QUEST3/EA_QUEST3_derivation.zh.md",
+      "exists": true,
+      "sha256": "ca1cb6711beb049a89fb34aa2e83f150292d2d1f07f84c34b803035bfc6ca604"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/EA_QUEST3/source_manifest.json",
+      "exists": true,
+      "sha256": "571837c9254df1340ebf912042bbd0e2912faa5f99d389f9a436d7bc7580b33e"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/EA_QUEST3/extraction_notes.md",
+      "exists": true,
+      "sha256": "2cbdb6005b8d2ee2b981e007fb310081e04949555bde51f706c49088cf572f6f"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/EA_QUEST3/worker_report.json",
+      "exists": true,
+      "sha256": "b446d5e09151664c98b401b1a8cb56304d6de676df2be42011fa130969ae6d3f"
+    }
+  ],
+  "extraction": {
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "english_sections_required": 8,
+    "formula_numbering": "continuous F1-F50",
+    "formula_quality": "first-pass OCR extraction; selected equations marked needs_review",
+    "source_boundary": "The .mod file was used only as implementation_cross_check, never as paper-side mathematical evidence."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed",
+    "notes": "No Dynare run was executed for this derivation-only archive entry."
+  },
+  "review": {
+    "needs_human_review": true,
+    "status_reason": "First-pass entry with OCR-sensitive formulas and no targeted PDF body inspection.",
+    "deferred_issues": [
+      "Source-check damaged OCR in firm labor FOC, price markup equation, wage markup equation, and capital timing in investment adjustment equations.",
+      "Recover Appendix 1 steady-state relationships through targeted PDF inspection if a reviewed steady-state block is required.",
+      "Reconcile paper nonlinear notation with MMB linearized/log-growth implementation before any runnable model promotion."
+    ]
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "EA_QUEST3",
+    "paper_title": "QUEST III: An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+    "authors": "Ratto, Marco; Roeger, Werner; Veld, Jan",
+    "year": "2009",
+    "journal_or_series": "Economic Modelling 26(1), pp. 222-233",
+    "doi": "10.1016/j.econmod.2008.06.014",
+    "paper_slug": "ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "6b625a09-9138-4314-b1be-5f8af29cf39a",
+    "primary_source_title": "QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis__6b625a09/full.md",
+    "raw_pdf_path": "raw/mmb_papers/QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

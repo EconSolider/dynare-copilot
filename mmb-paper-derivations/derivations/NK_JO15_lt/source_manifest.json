@@ -1,0 +1,181 @@
+{
+  "model_id": "NK_JO15_lt",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Productivity Shocks and Monetary Policy in a Two-Country Model",
+    "authors": [
+      "Jang, Tae-Seok",
+      "Okano, Eiji"
+    ],
+    "year": 2015,
+    "journal_or_series": "Front. Econ. China, 2015, 10(1): 7-37.",
+    "doi": "10.1016/j.jpolmod.2015.03.017"
+  },
+  "mmb_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=NK_JO15_lt",
+    "paper_slug": "nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "primary_source_title": "Productivity Shocks and Monetary Policy in a Two-Country Model"
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model__f031feec/full.md",
+      "sha256": "6a948a4aeb402f562d65588573168a2463e348d438941f16690e7a467d362664",
+      "mineru_run_id": "f031feec-a81e-43ec-ac7a-f89bd2d73785",
+      "used_for": [
+        "paper metadata",
+        "household problems",
+        "firm problem",
+        "equilibrium equations",
+        "steady-state restrictions",
+        "calibration",
+        "appendix Dynare-code comparison"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Productivity Shocks and Monetary Policy in a Two-Country Model.pdf",
+      "sha256": "82fce4abb9d2f6d69d0d5e9fd2fd7cf004fb7302d038d49223b4340f4dd911a7",
+      "exists": true,
+      "body_read": false,
+      "used_for": [
+        "path existence and provenance only"
+      ]
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_JO15_lt.md",
+      "exists": false,
+      "used_for": []
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_JO15_lt_rep.mod",
+      "sha256": "eae247d33b09ff1d21791f0b81dd7575da3c851b80fdac5999af5ddb250bb3b3",
+      "exists": true,
+      "used_for": [
+        "model(linear) form",
+        "low-trade calibration alpha=0.1",
+        "endogenous and exogenous variable coverage",
+        "timing conventions",
+        "CPI inflation OCR cross-check"
+      ],
+      "source_boundary": "implementation_cross_check_only"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_JO15_lt/NK_JO15_lt_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_JO15_lt/NK_JO15_lt_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_JO15_lt/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_JO15_lt/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_JO15_lt/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "shared_catalog_updated": false,
+    "shared_status_updated": false,
+    "reason": "User limited write ownership to mmb-paper-derivations/derivations/NK_JO15_lt/ and explicitly prohibited editing shared indexes."
+  },
+  "model_characterization": {
+    "model_form": "model(linear)",
+    "economy": "two-country open economy",
+    "category": "New Keynesian open-economy model with cost channel",
+    "variant": "low trade openness",
+    "trade_openness_alpha": 0.1,
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "No Dynare run was executed during archive extraction."
+    }
+  },
+  "quality_flags": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "issues": [
+      "MinerU OCR contains malformed equation numbers and some corrupted inline notation.",
+      "Paper compact Phillips curve and appendix/MMB implementation differ in coefficient presentation.",
+      "CPI inflation equation in OCR source appears to include extra interest-rate terms not used in the appendix Dynare code or MMB implementation.",
+      "Raw PDF body was not read; formulas are extracted from Markdown and implementation cross-check only."
+    ]
+  },
+  "created_by": "Codex",
+  "created_date": "2026-06-17",
+  "paper_title": "Productivity Shocks and Monetary Policy in a Two-Country Model",
+  "authors": "Jang, Tae-Seok; Okano, Eiji",
+  "year": "2015",
+  "journal_or_series": "Front. Econ. China, 2015, 10(1): 7-37.",
+  "doi": "10.1016/j.jpolmod.2015.03.017",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_JO15_lt",
+    "paper_title": "Productivity Shocks and Monetary Policy in a Two-Country Model",
+    "authors": "Jang, Tae-Seok; Okano, Eiji",
+    "year": "2015",
+    "journal_or_series": "Front. Econ. China, 2015, 10(1): 7-37.",
+    "doi": "10.1016/j.jpolmod.2015.03.017",
+    "paper_slug": "nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "f031feec-a81e-43ec-ac7a-f89bd2d73785",
+    "primary_source_title": "Productivity Shocks and Monetary Policy in a Two-Country Model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model__f031feec/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Productivity Shocks and Monetary Policy in a Two-Country Model.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model__f031feec/full.md",
+      "exists": true,
+      "sha256": "6a948a4aeb402f562d65588573168a2463e348d438941f16690e7a467d362664"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Productivity Shocks and Monetary Policy in a Two-Country Model.pdf",
+      "exists": true,
+      "sha256": "82fce4abb9d2f6d69d0d5e9fd2fd7cf004fb7302d038d49223b4340f4dd911a7"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_JO15_lt/NK_JO15_lt_derivation.en.md",
+      "exists": true,
+      "sha256": "c75c9c5f183c100855a870665050c3ec811dec39194476fc0dea49583d655438"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_JO15_lt/NK_JO15_lt_derivation.zh.md",
+      "exists": true,
+      "sha256": "7ac9803d0e39cb1afc2469f0bcc3be16266f8938c1c49ace6be05b0aa5c3121e"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_JO15_lt/source_manifest.json",
+      "exists": true,
+      "sha256": "45bb3087f188725703f412eaa8774f2fc0a82bf7ffa338b62e9089cbabf2bc4e"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_JO15_lt/extraction_notes.md",
+      "exists": true,
+      "sha256": "846d56d3104c43d3076cf10b6c8f3824968147104b6d67e0fed78d50486dbb88"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_JO15_lt/worker_report.json",
+      "exists": true,
+      "sha256": "2eed0bd3f270c73f881102e179a4a7c3be41a18ca9a13c46e6f524c7eee0a52f"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

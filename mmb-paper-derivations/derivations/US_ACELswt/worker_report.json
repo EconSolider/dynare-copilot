@@ -1,0 +1,49 @@
+{
+  "model_id": "US_ACELswt",
+  "status": "needs_review",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/US_ACELswt/US_ACELswt_derivation.en.md",
+    "mmb-paper-derivations/derivations/US_ACELswt/US_ACELswt_derivation.zh.md",
+    "mmb-paper-derivations/derivations/US_ACELswt/source_manifest.json",
+    "mmb-paper-derivations/derivations/US_ACELswt/extraction_notes.md",
+    "mmb-paper-derivations/derivations/US_ACELswt/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_ACELswt",
+    "Task": "mmb_derivation",
+    "Paper": "Firm-specific capital, nominal rigidities",
+    "Year": "2005",
+    "ModelType": "linearized estimated New Keynesian model",
+    "Economy": "United States",
+    "Category": "medium-scale NK; firm-specific capital; nominal rigidities",
+    "KeyFeatures": "firm-specific capital, Calvo prices and wages, habit, variable utilization, investment adjustment costs, money demand, neutral and embodied technology shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "RawPDF": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "DOI": "10.3386/w11034",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_ACELswt",
+    "paper_title": "Firm-specific capital, nominal rigidities",
+    "source_full_md": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "implementation_cross_check",
+    "needs_human_review": true,
+    "notes": "No appendix normalization found; coefficient-level linear equations require technical appendix review; Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "eight_sections_en": "passed",
+    "f_number_counts_match": "passed",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "Technical appendix not available as local normalization; coefficient-level linear equations are implementation_cross_check and need source review.",
+    "Exact firm-specific-capital chi mapping in inflation slope is not extracted from paper Markdown.",
+    "MMB implementation warns monetary-policy-shock responses are wrong because variables are not predetermined."
+  ]
+}

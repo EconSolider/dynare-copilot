@@ -1,0 +1,49 @@
+{
+  "model_id": "NK_KRS12",
+  "status": "needs_review",
+  "changed_paths": [
+    "mmb-paper-derivations/derivations/NK_KRS12/NK_KRS12_derivation.en.md",
+    "mmb-paper-derivations/derivations/NK_KRS12/NK_KRS12_derivation.zh.md",
+    "mmb-paper-derivations/derivations/NK_KRS12/source_manifest.json",
+    "mmb-paper-derivations/derivations/NK_KRS12/extraction_notes.md",
+    "mmb-paper-derivations/derivations/NK_KRS12/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_KRS12",
+    "Task": "Monetary and macroprudential policy rules in a model with house price booms",
+    "Paper": "Kannan, Rabanal and Scott (2012), Monetary and macroprudential policy rules in a model with house price booms",
+    "Year": "2012",
+    "ModelType": "New Keynesian housing DSGE, log-linear",
+    "Economy": "United States calibration",
+    "Category": "Monetary and macroprudential policy; housing; credit frictions",
+    "KeyFeatures": "Savers and borrowers; durable and nondurable sectors; sticky prices; endogenous lending spread; credit-growth Taylor rule; macroprudential instrument",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_krs12__monetary_and_macroprudential_policy_rules_in_a_model_with_house_price_bo__fb846d59/full.md",
+    "RawPDF": "raw/mmb_papers/Monetary and macroprudential policy rules in a model with house price booms.pdf",
+    "DOI": "10.1515/1935-1690.2268",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_KRS12",
+    "paper_title": "Monetary and macroprudential policy rules in a model with house price booms",
+    "source_full_md": "raw/mmb_mineru/runs/nk_krs12__monetary_and_macroprudential_policy_rules_in_a_model_with_house_price_bo__fb846d59/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary and macroprudential policy rules in a model with house price booms.pdf",
+    "status": "needs_review",
+    "formula_quality": "mostly_readable_appendix_with_ocr_issues",
+    "steady_state_quality": "linear_model_zero_deviation_steady_state_with_calibrated_level_constants",
+    "needs_human_review": "true",
+    "notes": "Targeted PDF check needed for OCR-damaged durable Phillips curve and Taylor rule factorization. Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed_exit_0_for_path_without_staging; folder_is_untracked_so_no_patch_materialized",
+    "json_tool": "passed_source_manifest_and_worker_report",
+    "eight_sections": "passed_english_and_chinese",
+    "f_number_match": "passed_english_and_chinese_each_reference_F1_through_F29",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "OCR-damaged appendix equation labels and symbols need targeted PDF review.",
+    "Durable Phillips curve paper OCR appears inconsistent with implementation due to possible extra durable TFP term.",
+    "Potential-output auxiliary equations are implementation-side and not fully paper-derived."
+  ]
+}

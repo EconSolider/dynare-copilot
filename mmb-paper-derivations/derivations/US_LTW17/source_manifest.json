@@ -1,0 +1,176 @@
+{
+  "model_id": "US_LTW17",
+  "status": "needs_review",
+  "paper_title": "Clearing Up the Fiscal Multiplier Morass",
+  "authors": "Eric M. Leeper; Nora Traum; Todd B. Walker",
+  "year": "2017",
+  "journal_or_series": "American Economic Review 2017, 107(8): 2409-2454",
+  "doi": "10.1257/aer.20111196",
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "primary_source_title": "Clearing Up the Fiscal Multiplier Morass",
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "primary_run_id": "f1cc32b3-a1c8-4473-bab4-edca5aaeb37e",
+    "alternate_run_ids": [
+      "a9ef5398-12f6-46fd-ac1a-ab3f92b52596"
+    ],
+    "title_author_sniff": {
+      "method": "first 80 Markdown lines",
+      "matched_title": true,
+      "matched_authors": true
+    }
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+      "exists": true,
+      "sha256": "803461672f26448eb361eeaf77e94c100adb9589a806083ed2d79308dd163979"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+      "exists": true,
+      "sha256": "28b826775d47cf15c74382e000184452e43834f666189ee8bd202d259e1e797e"
+    },
+    {
+      "role": "appendix_normalization",
+      "path": "docs/mmb_appendix_full_normalizations/US_LTW17.md",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "role": "implementation_cross_check",
+      "path": ".agents/skills/dynare-copilot/references/examples/US_LTW17_rep.mod",
+      "exists": true,
+      "sha256": "7c0367078d48d2be242e3d120d7319697157bd73d6aca85135fecac2237633c9",
+      "source_use": "implementation_cross_check_only"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/US_LTW17/US_LTW17_derivation.en.md",
+      "exists": true,
+      "sha256": "fcdaccbf1dc11cd00a87e3f3c414266552d69934d98285f4f9f7ff923825f957"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/US_LTW17/US_LTW17_derivation.zh.md",
+      "exists": true,
+      "sha256": "1e0ce6d623c8b429e19aec3624c299b18ae73c5dc58afe56e428df0a39be3c4b"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/US_LTW17/source_manifest.json",
+      "exists": true,
+      "sha256": null
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/US_LTW17/extraction_notes.md",
+      "exists": true,
+      "sha256": "22b462aea06de7c20016f135b15e53d672e273d4d74d04d9061c5b88b617f235"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/US_LTW17/worker_report.json",
+      "exists": true,
+      "sha256": "23bb00df6e004079f3f7c34f959c8f1bfa55b03594dffe02279a0d3a3b047462"
+    }
+  ],
+  "formula_quality": {
+    "overall": "needs_review",
+    "source_stated_equations": [
+      "F1",
+      "F2",
+      "F3",
+      "F8",
+      "F16",
+      "F17",
+      "F18",
+      "F21",
+      "F22",
+      "F36",
+      "F37",
+      "F38",
+      "F39",
+      "F40",
+      "F41",
+      "F42",
+      "F43",
+      "F44",
+      "F45",
+      "F46",
+      "F47",
+      "F48",
+      "F49"
+    ],
+    "ocr_or_appendix_review_needed": [
+      "F4",
+      "F5",
+      "F9",
+      "F11",
+      "F12",
+      "F15",
+      "F20"
+    ],
+    "implementation_cross_check_only": [
+      "F6",
+      "F7",
+      "F10",
+      "F13",
+      "F14",
+      "F19",
+      "F23",
+      "F24",
+      "F25",
+      "F26",
+      "F27",
+      "F28",
+      "F29",
+      "F30",
+      "F31",
+      "F32",
+      "F33",
+      "F34",
+      "F35"
+    ]
+  },
+  "catalog_cross_reference": {
+    "catalog_csv_updated": false,
+    "status_csv_updated": false,
+    "reason": "User explicitly requested no shared CSV edits."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "notes": "No Dynare run was executed."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "US_LTW17",
+    "paper_title": "Clearing Up the Fiscal Multiplier Morass",
+    "authors": "Eric M. Leeper; Nora Traum; Todd B. Walker",
+    "year": "2017",
+    "journal_or_series": "American Economic Review 2017, 107(8): 2409-2454",
+    "doi": "10.1257/aer.20111196",
+    "paper_slug": "us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "f1cc32b3-a1c8-4473-bab4-edca5aaeb37e; a9ef5398-12f6-46fd-ac1a-ab3f92b52596",
+    "primary_source_title": "Clearing Up the Fiscal Multiplier Morass",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

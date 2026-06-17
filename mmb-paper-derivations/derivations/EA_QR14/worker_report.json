@@ -1,0 +1,69 @@
+{
+  "model_id": "EA_QR14",
+  "status": "needs_review",
+  "changed_files": [
+    "mmb-paper-derivations/derivations/EA_QR14/EA_QR14_derivation.en.md",
+    "mmb-paper-derivations/derivations/EA_QR14/EA_QR14_derivation.zh.md",
+    "mmb-paper-derivations/derivations/EA_QR14/source_manifest.json",
+    "mmb-paper-derivations/derivations/EA_QR14/extraction_notes.md",
+    "mmb-paper-derivations/derivations/EA_QR14/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_QR14",
+    "Task": "mmb_derivation",
+    "Paper": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "Year": "2014",
+    "ModelType": "Two-country two-sector estimated New Keynesian DSGE with housing, mortgage default risk, and macroprudential policy",
+    "Economy": "Euro area core and periphery",
+    "Category": "Monetary union; housing; financial frictions; macroprudential policy",
+    "KeyFeatures": "Savers and borrowers; durable housing; domestic and international financial intermediaries; mortgage default thresholds; Calvo pricing; ECB Taylor rule; national macroprudential rules; sectoral preference, technology, risk, premium, and monetary shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu__78d59631/full.md",
+    "RawPDF": "raw/mmb_papers/Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area.pdf",
+    "DOI": "10.5089/9781484333693.001",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_QR14",
+    "paper_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "source_full_md": "raw/mmb_mineru/runs/ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu__78d59631/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area.pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_needs_review",
+    "steady_state_quality": "linearized_zero_deviation_steady_state; nonlinear implementation constants only cross-checked",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation from MinerU Markdown Appendix 2; mortgage default derivative equations and Taylor-rule coefficient need PDF-level source review; no Dynare runtime validation."
+  },
+  "validation": [
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/EA_QR14/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool mmb-paper-derivations/derivations/EA_QR14/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has exact eight required sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number occurrence counts match",
+      "status": "passed",
+      "english_f_count": 84,
+      "chinese_f_count": 84,
+      "unique_f_numbers": 52
+    },
+    {
+      "check": "git diff --check -- mmb-paper-derivations/derivations/EA_QR14",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "Mortgage default derivative and intermediary participation equations should be checked against the PDF.",
+    "Taylor-rule output-growth coefficient should be checked against the PDF because the OCR/source line appears inconsistent.",
+    "Nonlinear steady state was not reconstructed from the paper.",
+    "Raw PDF body was not read by default; only existence and hash were recorded.",
+    "Dynare/runtime validation was not performed."
+  ]
+}

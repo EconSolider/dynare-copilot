@@ -1,0 +1,156 @@
+{
+  "model_id": "NK_GK13",
+  "status": "completed_needs_review",
+  "paper": {
+    "title": "Qe 1 vs. 2 vs. 3. . . : A framework for analyzing large-scale asset purchases as a monetary policy tool",
+    "primary_source_title": "A framework for analyzing large-scale asset purchases as a monetary policy tool",
+    "authors": [
+      "Gertler, Mark",
+      "Karadi, Peter"
+    ],
+    "year": 2013,
+    "journal_or_series": "International Journal of Central Banking 9(1), pp. 5-53",
+    "doi": ""
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=NK_GK13",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 0.9133,
+    "model_title_match_score": 0.9133,
+    "model_match_notes": "primary source title differs from model title; review variant mapping"
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_gk13__qe_1_vs_2_vs_3_a_framework_for_analyzing_large_scale_asset_purchases_as__77fee003/full.md",
+      "sha256": "e8fbc4b00b3f7a492897fac934edfd30e6865eb9075371c4b1ddf27f17274140",
+      "mineru_run_id": "77fee003-da75-47f6-9694-b53639b36ead",
+      "used_for": "paper_side_derivation"
+    },
+    "alternate_mineru_run_ids": [
+      "ba1c32ee-65ff-4cd8-9371-619bbe7a043a"
+    ],
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A framework for analyzing large-scale asset purchases as a monetary policy tool.pdf",
+      "sha256": "335f36ca102fa7d51fd9ed24557d6be3bd48888ef8bbab604363a07cd9a39b12",
+      "exists_checked": true,
+      "body_read": false,
+      "used_for": "provenance_only"
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_GK13_rep.mod",
+      "sha256": "7223f94b3f0c7fb3fb3f1a80e498edf77957096442b7fcc737e705850135d414",
+      "used_for": [
+        "variable_coverage",
+        "shock_names",
+        "timing_clues",
+        "linearized_implementation_form"
+      ],
+      "not_used_as_paper_source": true
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_GK13/NK_GK13_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_GK13/NK_GK13_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_GK13/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_GK13/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_GK13/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "catalog_csv": "mmb-paper-derivations/derivations/catalog.csv",
+    "status_csv": "mmb-paper-derivations/derivations/status.csv",
+    "shared_indexes_updated": false,
+    "reason": "User explicitly restricted ownership to mmb-paper-derivations/derivations/NK_GK13/ and requested no shared index edits."
+  },
+  "derivation_checks": {
+    "english_sections": 8,
+    "equation_number_range": "F1-F47",
+    "model_form": "nonlinear paper equations; MMB implementation cross-check is linearized around logged steady states",
+    "uncertain_equations_marked_needs_review": true,
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed"
+    }
+  },
+  "created_by": {
+    "agent": "Codex",
+    "date": "2026-06-17"
+  },
+  "paper_title": "Qe 1 vs. 2 vs. 3. . . : A framework for analyzing large-scale asset purchases as a monetary policy tool",
+  "authors": "Gertler, Mark; Karadi, Peter ",
+  "year": "2013",
+  "journal_or_series": "International Journal of Central Banking 9(1), pp. 5-53",
+  "doi": "",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_GK13",
+    "paper_title": "Qe 1 vs. 2 vs. 3. . . : A framework for analyzing large-scale asset purchases as a monetary policy tool",
+    "authors": "Gertler, Mark; Karadi, Peter ",
+    "year": "2013",
+    "journal_or_series": "International Journal of Central Banking 9(1), pp. 5-53",
+    "doi": "",
+    "paper_slug": "nk_gk13__qe_1_vs_2_vs_3_a_framework_for_analyzing_large_scale_asset_purchases_as",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "0.9133",
+    "mineru_run_ids": "77fee003-da75-47f6-9694-b53639b36ead; ba1c32ee-65ff-4cd8-9371-619bbe7a043a",
+    "primary_source_title": "A framework for analyzing large-scale asset purchases as a monetary policy tool",
+    "model_title_match_score": "0.9133",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gk13__qe_1_vs_2_vs_3_a_framework_for_analyzing_large_scale_asset_purchases_as__77fee003/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A framework for analyzing large-scale asset purchases as a monetary policy tool.pdf",
+    "model_match_notes": "primary source title differs from model title; review variant mapping"
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_gk13__qe_1_vs_2_vs_3_a_framework_for_analyzing_large_scale_asset_purchases_as__77fee003/full.md",
+      "exists": true,
+      "sha256": "e8fbc4b00b3f7a492897fac934edfd30e6865eb9075371c4b1ddf27f17274140"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/A framework for analyzing large-scale asset purchases as a monetary policy tool.pdf",
+      "exists": true,
+      "sha256": "335f36ca102fa7d51fd9ed24557d6be3bd48888ef8bbab604363a07cd9a39b12"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GK13/NK_GK13_derivation.en.md",
+      "exists": true,
+      "sha256": "b6049e0f0550b6c3343576b196fb164d7c5f8e98bb0537b4ad4c84dcbd8e7c2e"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GK13/NK_GK13_derivation.zh.md",
+      "exists": true,
+      "sha256": "ef874c9305fe2094cefa67207fdd95a1dc2f013e15270a5a82b39346f68a1d9f"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_GK13/source_manifest.json",
+      "exists": true,
+      "sha256": "5d8e92f875fdbe8126511638c5405887b457319173647d7c9a0c2034898de1f7"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_GK13/extraction_notes.md",
+      "exists": true,
+      "sha256": "770bb3b480807d23575abd3de5fc33ab37a8556e764e23ccb97a795196105ba4"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_GK13/worker_report.json",
+      "exists": true,
+      "sha256": "eccc7ab4ff771ceccc1570f964e983d09d836b59cb2ff1b7d3e9c081ec85e0f8"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

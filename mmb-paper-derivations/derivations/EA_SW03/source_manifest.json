@@ -1,0 +1,176 @@
+{
+  "model_id": "EA_SW03",
+  "status": "needs_review",
+  "created_at": "2026-06-17",
+  "paper": {
+    "title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "authors": [
+      "Frank Smets",
+      "Rafael Wouters"
+    ],
+    "year": 2003,
+    "journal_or_series": "Journal of the European Economic Association 1(5), pp. 1123-1175",
+    "doi": "10.1162/154247603770383415"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "model_title_match_score": 1.0,
+    "mineru_run_ids": [
+      "244ad381-274c-4050-99e1-38d38ebaabf7",
+      "22b8bb79-81e8-4a35-b7c0-41aec144b83d"
+    ],
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar__244ad381/full.md",
+      "sha256": "c79c3f623e967ef997d9d836abf1f44ea774f7c47bd75fc27a2aa6fc05824388",
+      "mineru_run_id": "244ad381-274c-4050-99e1-38d38ebaabf7",
+      "title_sniff": "AN ESTIMATED DYNAMIC STOCHASTIC GENERAL EQUILIBRIUM MODEL OF THE EURO AREA",
+      "authors_sniff": [
+        "Frank Smets",
+        "Raf Wouters"
+      ],
+      "match_assessment": "primary source title/authors match expected model_index row"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/An estimated dynamic stochastic general equilibrium model of the euro area.pdf",
+      "sha256": "4a7969dd16207fb35c810c020801f9cc27f99ddf9d4f2da2b8d57a4bdfec7152",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_SW03_rep.mod",
+      "sha256": "58145d997a26a0082caae465b42a275b292dc2eb8e78684f54b4a503168a9a87",
+      "used_for": [
+        "model(linear) confirmation",
+        "variable names",
+        "shock names",
+        "capital timing",
+        "MMB policy rule/reporting variables"
+      ],
+      "not_used_as": "paper-side mathematical source"
+    }
+  },
+  "source_index_issue": null,
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/EA_SW03/EA_SW03_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/EA_SW03/EA_SW03_derivation.zh.md",
+    "extraction_notes": "mmb-paper-derivations/derivations/EA_SW03/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/EA_SW03/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "MinerU OCR visibly corrupts the productivity shock text around the production function and some shock-process notation.",
+      "Investment adjustment-cost FOC was split across displays and is marked needs_review.",
+      "Linearized system equations (28)-(36) were extractable but should be source-level checked against PDF before review promotion."
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "reason": "not assigned; derivation-only archive pass"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "EA_SW03",
+    "Task": "mmb_derivation",
+    "Paper": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "Year": "2003",
+    "ModelType": "linearized estimated medium-scale New Keynesian DSGE",
+    "Economy": "Euro area",
+    "Category": "estimated DSGE; sticky prices and wages",
+    "KeyFeatures": "external habit; investment adjustment costs; variable capital utilization; Calvo price/wage setting with indexation; ten structural shocks; generalized Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar__244ad381/full.md",
+    "RawPDF": "raw/mmb_papers/An estimated dynamic stochastic general equilibrium model of the euro area.pdf",
+    "DOI": "10.1162/154247603770383415",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "EA_SW03",
+    "paper_title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "source_full_md": "raw/mmb_mineru/runs/ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar__244ad381/full.md",
+    "raw_pdf_path": "raw/mmb_papers/An estimated dynamic stochastic general equilibrium model of the euro area.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_linearized",
+    "needs_human_review": true,
+    "notes": "First-pass extraction; OCR issues in shock notation and investment FOC; no runtime validation."
+  },
+  "paper_title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+  "authors": "Smets, Frank; Wouters, Rafael",
+  "year": "2003",
+  "journal_or_series": "Journal of the European Economic Association 1(5), pp. 1123-1175",
+  "doi": "10.1162/154247603770383415",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "EA_SW03",
+    "paper_title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "authors": "Smets, Frank; Wouters, Rafael",
+    "year": "2003",
+    "journal_or_series": "Journal of the European Economic Association 1(5), pp. 1123-1175",
+    "doi": "10.1162/154247603770383415",
+    "paper_slug": "ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "244ad381-274c-4050-99e1-38d38ebaabf7; 22b8bb79-81e8-4a35-b7c0-41aec144b83d",
+    "primary_source_title": "An estimated dynamic stochastic general equilibrium model of the euro area",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar__244ad381/full.md",
+    "raw_pdf_path": "raw/mmb_papers/An estimated dynamic stochastic general equilibrium model of the euro area.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_sw03__an_estimated_dynamic_stochastic_general_equilibrium_model_of_the_euro_ar__244ad381/full.md",
+      "exists": true,
+      "sha256": "c79c3f623e967ef997d9d836abf1f44ea774f7c47bd75fc27a2aa6fc05824388"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/An estimated dynamic stochastic general equilibrium model of the euro area.pdf",
+      "exists": true,
+      "sha256": "4a7969dd16207fb35c810c020801f9cc27f99ddf9d4f2da2b8d57a4bdfec7152"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_SW03/EA_SW03_derivation.en.md",
+      "exists": true,
+      "sha256": "c61a8a492d1c193d16ebf0f464b3fd6ce6e3abecf4a52f6ef03322337cd020c4"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/EA_SW03/EA_SW03_derivation.zh.md",
+      "exists": true,
+      "sha256": "ce29ae14ccdf84b17b37115bfa1762650302543e5e071e12a26352d11567c8de"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/EA_SW03/source_manifest.json",
+      "exists": true,
+      "sha256": "1a4b7f8453e2043e97bcd5e8b6871f0cbc2c1d4808d6495419778e29b46db006"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/EA_SW03/extraction_notes.md",
+      "exists": true,
+      "sha256": "0e9669b7b35a92894559c635a570dd571599ba6867d22b01e78f10c152839159"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/EA_SW03/worker_report.json",
+      "exists": true,
+      "sha256": "c95592f90c3128949e3b0edbcf2a76df2822455c77fac947740cd82c28fc895c"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

@@ -1,0 +1,88 @@
+{
+  "model_id": "US_LWY13",
+  "status": "needs_review",
+  "paper": {
+    "title": "Fiscal foresight and information flows",
+    "authors": [
+      "Leeper, Eric M.",
+      "Walker, Todd B.",
+      "Yang, S.-C. Susan"
+    ],
+    "year": 2013,
+    "journal_or_series": "Econometrica 81 (3), 1115-1145",
+    "doi": "10.3982/ecta8337"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_LWY13",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "Fiscal foresight and information flows",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_lwy13__fiscal_foresight_and_information_flows__08be5b79/full.md",
+      "sha256": "1f38cd03ab5c83b0a94506ba2a35b9b8408bde0fee879b99910c34457c13a099",
+      "exists": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Fiscal foresight and information flows.pdf",
+      "sha256": "193702e55f74c02ef9793c9c28467b325fe45d7dd433601c61b5317a95fa1a24",
+      "exists": true,
+      "opened_for_formula_check": false,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_LWY13.md",
+      "sha256": null,
+      "exists": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_LWY13_rep.mod",
+      "sha256": "d8800f8f72e23f2c0ea73f61651ad121f357dc7a295e8e266955957f4fa9ced9",
+      "exists": true,
+      "used_as": "implementation_cross_check",
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "08be5b79-79b4-4766-9f0f-a6041e440287"
+    ],
+    "paper_slug": "us_lwy13__fiscal_foresight_and_information_flows"
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/US_LWY13/US_LWY13_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/US_LWY13/US_LWY13_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/US_LWY13/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/US_LWY13/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/US_LWY13/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Primary Markdown contains the analytical model equations and the fiscal information-flow rules.",
+      "The full NK model is described at block level in the paper-side Markdown; detailed NK equations are not fully printed there.",
+      "No PDF body was opened; raw PDF existence was checked only for provenance.",
+      "Implementation cross-check confirms model(linear), variable names, shock names, timing conventions, and equation coverage, but was not treated as paper-side mathematical evidence."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only; user explicitly said not to run Dynare."
+  },
+  "catalog_cross_reference": {
+    "catalog_csv_edited": false,
+    "status_csv_edited": false,
+    "reason": "User assigned only the model folder and explicitly prohibited editing shared catalog.csv or status.csv."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

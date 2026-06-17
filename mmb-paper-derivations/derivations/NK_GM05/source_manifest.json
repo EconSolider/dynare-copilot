@@ -1,0 +1,151 @@
+{
+  "model_id": "NK_GM05",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Monetary policy and exchange rate volatility in a small open economy",
+    "authors": [
+      "Gali, Jordi",
+      "Monacelli, Tommaso"
+    ],
+    "year": 2005,
+    "journal_or_series": "Review of Economic Studies 72, pp. 707-734",
+    "doi": "10.1111/j.1467-937x.2005.00349.x"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_GM05",
+    "paper_slug": "nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy__6f92413a/full.md",
+      "sha256": "91f5ec0fee2daf606f596c2b319a88dd1f07d105d3ff97a30329ccadc2b40b0a",
+      "mineru_run_id": "6f92413a-db30-4472-9653-722aeb4c5a62",
+      "source_role": "paper_side_primary",
+      "read_status": "read"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Monetary policy and exchange rate volatility in a small open economy.pdf",
+      "sha256": "e070cb02e2d1f74adc08e47528ff6ad6c712f2d3288c47dd47cb3a4aea932de2",
+      "exists": true,
+      "read_status": "not_read_body",
+      "source_role": "paper_side_provenance"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_GM05.md",
+      "exists": false,
+      "source_role": "not_available"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_GM05_rep.mod",
+      "sha256": "6203fbb22a4ce197dba9d6e2aa9f40eea0429fc0f5f974712e32ca6ec94b2e53",
+      "exists": true,
+      "read_status": "read",
+      "source_role": "implementation_cross_check_only"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.en.md",
+    "chinese_derivation": "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.zh.md",
+    "source_manifest": "mmb-paper-derivations/derivations/NK_GM05/source_manifest.json",
+    "extraction_notes": "mmb-paper-derivations/derivations/NK_GM05/extraction_notes.md",
+    "worker_report": "mmb-paper-derivations/derivations/NK_GM05/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "local_catalog_row_written": false,
+    "local_status_row_written": false,
+    "reason": "User explicitly restricted ownership to mmb-paper-derivations/derivations/NK_GM05 and prohibited shared indexes."
+  },
+  "formula_extraction": {
+    "model_form": "log_linear_model_linear",
+    "f_equation_count": 32,
+    "english_f_numbers": 32,
+    "chinese_f_numbers": 32,
+    "formula_quality": "draft_extracted_with_needs_review_for_ocr_fragments",
+    "needs_human_review": true
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed",
+    "notes": "No Dynare run was requested or executed; BK and residual checks are deferred."
+  },
+  "created_at": "2026-06-17",
+  "created_by": "codex",
+  "paper_title": "Monetary policy and exchange rate volatility in a small open economy",
+  "authors": "Gali, Jordí; Monacelli, Tommaso",
+  "year": "2005",
+  "journal_or_series": "Review of Economic Studies 72, pp. 707-734",
+  "doi": "10.1111/j.1467-937x.2005.00349.x",
+  "status": "completed_first_pass_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_GM05",
+    "paper_title": "Monetary policy and exchange rate volatility in a small open economy",
+    "authors": "Gali, Jordí; Monacelli, Tommaso",
+    "year": "2005",
+    "journal_or_series": "Review of Economic Studies 72, pp. 707-734",
+    "doi": "10.1111/j.1467-937x.2005.00349.x",
+    "paper_slug": "nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "6f92413a-db30-4472-9653-722aeb4c5a62",
+    "primary_source_title": "Monetary policy and exchange rate volatility in a small open economy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy__6f92413a/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary policy and exchange rate volatility in a small open economy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_gm05_nk_gmas25cpi_nk_gmas25ppi__monetary_policy_and_exchange_rate_volatility_in_a_small_open_economy__6f92413a/full.md",
+      "exists": true,
+      "sha256": "91f5ec0fee2daf606f596c2b319a88dd1f07d105d3ff97a30329ccadc2b40b0a"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Monetary policy and exchange rate volatility in a small open economy.pdf",
+      "exists": true,
+      "sha256": "e070cb02e2d1f74adc08e47528ff6ad6c712f2d3288c47dd47cb3a4aea932de2"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.en.md",
+      "exists": true,
+      "sha256": "2f9e7d2ee118bba2f37ce403df14981aa5a8204c1ab26f46988f49a94142408e"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "mmb-paper-derivations/derivations/NK_GM05/NK_GM05_derivation.zh.md",
+      "exists": true,
+      "sha256": "5afc7d3272cf28be23b6211f9ea429e9caacd896080cbc4c583378a9cf6d10ac"
+    },
+    {
+      "role": "source_manifest",
+      "path": "mmb-paper-derivations/derivations/NK_GM05/source_manifest.json",
+      "exists": true,
+      "sha256": "8eecbc63c2bc84305b2127302b57800ba1e4ac8e12d0903c34280b5fa763e35a"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "mmb-paper-derivations/derivations/NK_GM05/extraction_notes.md",
+      "exists": true,
+      "sha256": "b0600495271a4fe3edde0bf1a764213035dafbc47452992b97ccb84d5ac2d7d8"
+    },
+    {
+      "role": "worker_report",
+      "path": "mmb-paper-derivations/derivations/NK_GM05/worker_report.json",
+      "exists": true,
+      "sha256": "042782e0dcb60f8dcb1dfeb7f56e42106c63700874af8aaf560cb18cc8ba4af9"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}
