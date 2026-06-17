@@ -1,0 +1,66 @@
+{
+  "model_id": "US_VGMP15",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_VGMP15/US_VGMP15_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_VGMP15/US_VGMP15_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_VGMP15/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_VGMP15/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_VGMP15/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_VGMP15",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "The effects of oil price shocks in a new-Keynesian framework with capital accumulation",
+    "Year": "2015",
+    "ModelType": "log-linearized New Keynesian oil-shock model with capital accumulation",
+    "Economy": "United States",
+    "Category": "energy; New Keynesian; capital accumulation",
+    "KeyFeatures": "imported oil in consumption and production; exogenous real oil and capital prices; capital accumulation; Calvo pricing; Taylor rule; GDP net of oil imports",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_vgmp15__the_effects_of_oil_price_shocks_in_a_new_keynesian_framework_with_capita__b2b0e207/full.md",
+    "RawPDF": "raw/mmb_papers/The effects of oil price shocks in a new-Keynesian framework with capital accumulation.pdf",
+    "DOI": "10.1016/j.enpol.2015.04.016",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_VGMP15",
+    "paper_title": "The effects of oil price shocks in a new-Keynesian framework with capital accumulation",
+    "source_full_md": "raw/mmb_mineru/runs/us_vgmp15__the_effects_of_oil_price_shocks_in_a_new_keynesian_framework_with_capita__b2b0e207/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The effects of oil price shocks in a new-Keynesian framework with capital accumulation.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_source_only",
+    "needs_human_review": "true",
+    "notes": "First-pass extraction from MinerU Markdown; online appendix not locally normalized; raw PDF existence checked but PDF body not opened; no implementation cross-check; Dynare not run."
+  },
+  "validation": [
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool data/model_archive/mmb_derivations/US_VGMP15/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool data/model_archive/mmb_derivations/US_VGMP15/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "check English derivation has all eight required sections",
+      "status": "passed"
+    },
+    {
+      "command": "check English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "101 total F-number references in each file; 23 unique equation numbers, F1-F23"
+    }
+  ],
+  "unresolved_issues": [
+    "Online appendix is needed for exact log-linear model, Calvo pricing, price-markup shock, and full steady-state equations.",
+    "Several normalized FOCs are marked needs_review because they are derived from source primitives rather than copied from the missing appendix.",
+    "No implementation cross-check file exists for US_VGMP15.",
+    "Runtime validation was intentionally not performed."
+  ]
+}

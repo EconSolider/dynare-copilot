@@ -1,0 +1,69 @@
+{
+  "model_id": "NK_CGG02",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_CGG02/NK_CGG02_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_CGG02/NK_CGG02_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_CGG02/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_CGG02/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_CGG02/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "NK_CGG02",
+    "Task": "Derivation extraction",
+    "Paper": "A simple framework for international monetary policy analysis",
+    "Year": "2002",
+    "ModelType": "Two-country open-economy New Keynesian, linearized",
+    "Economy": "Home and foreign economies",
+    "Category": "Open economy monetary policy",
+    "KeyFeatures": "Sticky prices; complete risk sharing; terms of trade; domestic and foreign Phillips curves; Nash monetary policy",
+    "DateAdded": "2026-06-16",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "RawPDF": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "DOI": "10.3386/w8870",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "NK_CGG02",
+    "paper_title": "A simple framework for international monetary policy analysis",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cgg02_nk_cgg02al__a_simple_framework_for_international_monetary_policy_analysis__8ffaf5fd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A simple framework for international monetary policy analysis.pdf",
+    "status": "needs_review",
+    "formula_quality": "main equations readable; policy and pricing OCR uncertainties remain",
+    "steady_state_quality": "linearized zero steady state documented",
+    "needs_human_review": true,
+    "notes": "PDF exists but was not opened; no Dynare run; .mod used only as implementation_cross_check."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/NK_CGG02/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/NK_CGG02/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has all eight required sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": {
+        "english_f_count": 79,
+        "chinese_f_count": 79,
+        "highest_unique_f_number": "F36"
+      }
+    }
+  ],
+  "unresolved_issues": [
+    "Verify reset-price objective and Nash interest-rule coefficient against PDF or publisher source.",
+    "Decide whether cooperative-policy equations need a separate archive variant.",
+    "Local DOI field is NBER DOI while paper citation is Journal of Monetary Economics 2002."
+  ]
+}

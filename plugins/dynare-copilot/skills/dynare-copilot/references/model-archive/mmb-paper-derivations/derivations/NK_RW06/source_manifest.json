@@ -1,0 +1,145 @@
+{
+  "model_id": "NK_RW06",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Optimal monetary policy with the cost channel",
+    "authors": [
+      "Frederico Ravenna",
+      "Carl E. Walsh"
+    ],
+    "year": 2006,
+    "journal": "Journal of Monetary Economics 53(2), pp. 199-216",
+    "doi": "10.1016/j.jmoneco.2005.01.004"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "NK_RW06",
+    "source_slug": "nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel",
+    "source_status": "matched",
+    "model_title_match_score": 1.0,
+    "mineru_run_ids": [
+      "59aa85a1-ddfa-45df-b7f4-00309f693c33"
+    ],
+    "primary_source_title": "Optimal monetary policy with the cost channel",
+    "primary_source_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel__59aa85a1/full.md",
+      "sha256": "783cea04b8b29a9e66167541bf43d38142e3afffc6669e22ff9fed4c38a07541",
+      "exists": true,
+      "title_author_sniff": "Title and authors match the NK_RW06 model_index row."
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Optimal monetary policy with the cost channel.pdf",
+      "sha256": "5b09d9500652343f6e1d3474f3b8fb1222bf48a2c9ec7ff6b8c680747d2d218c",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_RW06.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_RW06_rep.mod",
+      "sha256": "629ab4fa833a5c61af49ada7e1b3b19c72a832c69ae200895f70c566c8a17dac",
+      "exists": true,
+      "used_as": "implementation_cross_check_only",
+      "dynare_run": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_RW06/NK_RW06_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_RW06/NK_RW06_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_RW06/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_RW06/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_RW06/worker_report.json"
+  },
+  "extraction": {
+    "status": "needs_review",
+    "formula_quality": "draft_extracted_from_mineru_markdown",
+    "steady_state_quality": "linear_model_zero_steady_state; nonlinear steady-state relation recorded from source",
+    "model_form": "model(linear) for MMB implementation; broader paper derivation is log-linear",
+    "runtime_validation": "not_performed",
+    "dynare_run": false,
+    "source_index_issue": null
+  },
+  "paper_title": "Optimal monetary policy with the cost channel",
+  "authors": "Ravenna, Frederico; Walsh, Carl ",
+  "year": "2006",
+  "journal_or_series": "Journal of Monetary Economics 53(2), pp. 199-216",
+  "doi": "10.1016/j.jmoneco.2005.01.004",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_RW06",
+    "paper_title": "Optimal monetary policy with the cost channel",
+    "authors": "Ravenna, Frederico; Walsh, Carl ",
+    "year": "2006",
+    "journal_or_series": "Journal of Monetary Economics 53(2), pp. 199-216",
+    "doi": "10.1016/j.jmoneco.2005.01.004",
+    "paper_slug": "nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "59aa85a1-ddfa-45df-b7f4-00309f693c33",
+    "primary_source_title": "Optimal monetary policy with the cost channel",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel__59aa85a1/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal monetary policy with the cost channel.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel__59aa85a1/full.md",
+      "exists": true,
+      "sha256": "783cea04b8b29a9e66167541bf43d38142e3afffc6669e22ff9fed4c38a07541"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Optimal monetary policy with the cost channel.pdf",
+      "exists": true,
+      "sha256": "5b09d9500652343f6e1d3474f3b8fb1222bf48a2c9ec7ff6b8c680747d2d218c"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_RW06/NK_RW06_derivation.en.md",
+      "exists": true,
+      "sha256": "6fa859e49aac15d8ad29614f6cc06b9fa7f81472df4d823eeabfdcf493a84f44"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_RW06/NK_RW06_derivation.zh.md",
+      "exists": true,
+      "sha256": "05e1ea2d458deef4b5e271c56f7e98797e67527a10e26bdbe13fca9ce5dad951"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_RW06/source_manifest.json",
+      "exists": true,
+      "sha256": "aa6153170772dc32fc25e9c354b7eb9753e95a14ed428d5aa2e91071a8d53a08"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_RW06/extraction_notes.md",
+      "exists": true,
+      "sha256": "97882bcfb8ba8672699235ab2ef1e80f0fbd457e918129f4310a7219e7e1c933"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_RW06/worker_report.json",
+      "exists": true,
+      "sha256": "48b00686433d2d82c3b1eaef441343d347eb0f811cb24fc1d777fd764eafcf65"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "model_id": "UK_SM11",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/UK_SM11/UK_SM11_derivation.en.md",
+    "data/model_archive/mmb_derivations/UK_SM11/UK_SM11_derivation.zh.md",
+    "data/model_archive/mmb_derivations/UK_SM11/source_manifest.json",
+    "data/model_archive/mmb_derivations/UK_SM11/extraction_notes.md",
+    "data/model_archive/mmb_derivations/UK_SM11/worker_report.json"
+  ],
+  "status": "needs_review",
+  "proposed_catalog_row": {
+    "ModelID": "UK_SM11",
+    "Task": "estimated_uk_energy_dsge_log_linear_derivation",
+    "Paper": "An estimated DSGE model of energy, costs and inflation in the United Kingdom",
+    "Year": "2011",
+    "ModelType": "Log-linear estimated DSGE, small open economy",
+    "Economy": "United Kingdom",
+    "Category": "Energy; New Keynesian; Small Open Economy",
+    "KeyFeatures": "Three consumption goods; petrol and utilities; sectoral NKPCs; habit formation; capital adjustment costs; variable utilization; working-capital cost channel; UIP; Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/uk_sm11__an_estimated_dsge_model_of_energy_costs_and_inflation_in_the_united_king__84b3b0b8/full.md",
+    "RawPDF": "raw/mmb_papers/An estimated DSGE model of energy, costs and inflation in the United Kingdom.pdf",
+    "DOI": "10.2139/ssrn.1898065",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "UK_SM11",
+    "paper_title": "An estimated DSGE model of energy, costs and inflation in the United Kingdom",
+    "source_full_md": "raw/mmb_mineru/runs/uk_sm11__an_estimated_dsge_model_of_energy_costs_and_inflation_in_the_united_king__84b3b0b8/full.md",
+    "raw_pdf_path": "raw/mmb_papers/An estimated DSGE model of energy, costs and inflation in the United Kingdom.pdf",
+    "status": "needs_review",
+    "formula_quality": "draft_ocr_extracted_needs_pdf_review",
+    "steady_state_quality": "log_linear_zero_steady_state_with_calibrated_ratios",
+    "needs_human_review": "true",
+    "notes": "Paper prints log-linear equilibrium conditions and cites technical appendix for primitive derivation; no Dynare run performed."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "english_eight_sections": "passed",
+    "f_number_count_match": "passed",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "Primitive nonlinear optimization problems require Harrison et al. (2011) technical appendix.",
+    "OCR-sensitive formula checks remain for capital accumulation, wage Phillips curve, import-price Phillips curve, and foreign shock notation.",
+    "Taylor-rule output-gap notation requires source-level review against PDF/appendix."
+  ]
+}

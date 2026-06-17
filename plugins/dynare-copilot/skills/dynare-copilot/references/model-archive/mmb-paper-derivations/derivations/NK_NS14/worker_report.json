@@ -1,0 +1,72 @@
+{
+  "model_id": "NK_NS14",
+  "owned_directory": "data/model_archive/mmb_derivations/NK_NS14",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_NS14/NK_NS14_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_NS14/NK_NS14_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_NS14/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_NS14/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_NS14/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_NS14",
+    "Task": "mmb_derivation",
+    "Paper": "Fiscal stimulus in a monetary union: Evidence from US regions",
+    "Year": "2014",
+    "ModelType": "Two-region open-economy New Keynesian monetary-union model, model(linear)",
+    "Economy": "monetary union; home and foreign regions",
+    "Category": "fiscal multiplier; open economy; monetary union",
+    "KeyFeatures": "regional government-spending shocks; complete markets Backus-Smith risk sharing; home bias; Calvo pricing; variable capital and investment adjustment; common Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_ns14__fiscal_stimulus_in_a_monetary_union_evidence_from_us_regions__de79b39b/full.md",
+    "RawPDF": "raw/mmb_papers/Fiscal stimulus in a monetary union- Evidence from US regions.pdf",
+    "DOI": "10.1257/aer.104.3.753",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_NS14",
+    "paper_title": "Fiscal stimulus in a monetary union: Evidence from US regions",
+    "source_full_md": "raw/mmb_mineru/runs/nk_ns14__fiscal_stimulus_in_a_monetary_union_evidence_from_us_regions__de79b39b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Fiscal stimulus in a monetary union- Evidence from US regions.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation; online appendix/variable-capital investment equations need targeted source review; runtime validation not performed."
+  },
+  "validations": {
+    "git_diff_check": {
+      "command": "git diff --check -- data/model_archive/mmb_derivations/NK_NS14; for f in data/model_archive/mmb_derivations/NK_NS14/*; do git diff --check --no-index /dev/null \"$f\"; done",
+      "status": "passed"
+    },
+    "json_validation": {
+      "command": "python3 -m json.tool source_manifest.json && python3 -m json.tool worker_report.json",
+      "status": "passed"
+    },
+    "eight_section_check": {
+      "status": "passed",
+      "english_missing_sections": [],
+      "chinese_missing_sections": []
+    },
+    "f_number_count_check": {
+      "status": "passed",
+      "english_unique_f_numbers": 26,
+      "chinese_unique_f_numbers": 26,
+      "english_f_number_occurrences": 26,
+      "chinese_f_number_occurrences": 26,
+      "expected_unique_sequence": "F1-F26"
+    }
+  },
+  "commit": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "reason": "User explicitly instructed not to stage, commit, or push."
+  },
+  "unresolved_issues": [
+    "Investment FOCs and reduced-form coefficient formulas should be checked against online appendices F/G or a targeted PDF/source appendix.",
+    "No Dynare runtime validation was performed.",
+    "Shared catalog.csv and status.csv were intentionally not edited."
+  ]
+}

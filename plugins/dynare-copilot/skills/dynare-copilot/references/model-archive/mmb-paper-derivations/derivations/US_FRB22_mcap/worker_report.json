@@ -1,0 +1,52 @@
+{
+  "model_id": "US_FRB22_mcap",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/US_FRB22_mcap/US_FRB22_mcap_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mcap/US_FRB22_mcap_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mcap/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FRB22_mcap/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mcap/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_FRB22_mcap",
+    "Task": "US_FRB22_mcap_derivation",
+    "Paper": "LINVER: The Linear Version of FRB/US",
+    "Year": "2022",
+    "ModelType": "Linearized macroeconometric model",
+    "Economy": "United States",
+    "Category": "Estimated US model",
+    "KeyFeatures": "LINVER; FRB/US; financial-market model-consistent expectations; VAR expectations elsewhere; ELB; policy-rule simulations",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+    "RawPDF": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+    "DOI": "10.17016/feds.2022.053",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_FRB22_mcap",
+    "paper_title": "LINVER: The Linear Version of FRB/US",
+    "source_full_md": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+    "raw_pdf_path": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "Paper is an overview/simulation-method source and does not expose the full LINVER equation system; MMB implementation used only as cross-check; Dynare not run."
+  },
+  "validation": {
+    "dynare_run": "not_performed",
+    "commands_to_run": [
+      "git diff --check",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_FRB22_mcap/source_manifest.json >/dev/null",
+      "python3 - <<'PY' ... archive_entry_checks_ok ... PY",
+      "python3 - <<'PY' ... compare English and Chinese F-number counts ... PY"
+    ]
+  },
+  "unresolved_issues": [
+    "Full source-level equation extraction requires official LINVER package/manual or FRB/US documentation.",
+    "Policy-rule formulas with ELB/threshold constraints need targeted formula checking because Markdown OCR has placeholders.",
+    "Exact baseline vector and variable-specific scaling were not reconstructed.",
+    "Variant-specific expectation differences should be reconciled against official Modelbase/LINVER documentation before promotion."
+  ]
+}

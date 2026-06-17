@@ -1,0 +1,150 @@
+{
+  "model_id": "US_VMDno",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "(Un)anticipated Monetary Policy in a DSGE Model with a Shadow Banking System - Normal times",
+    "source_title_sniffed": "(Un)anticipated Monetary Policy in a DSGE Model with a Shadow Banking System",
+    "authors": [
+      "Fabio Verona",
+      "Manuel M. F. Martins",
+      "Ines Drumond"
+    ],
+    "year": 2013,
+    "journal_or_series": "International Journal of Central Banking 9 (3), pp. 78-124",
+    "doi": "10.2139/ssrn.2256278"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_VMDno",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "primary_source_title": "(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times",
+    "model_match_notes": "",
+    "mineru_run_ids": [
+      "9ba7c6c3-ab5d-4369-ab19-763c4740a11e",
+      "a9995bf1-0984-4f77-863c-f3b8b24b1142"
+    ]
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys__9ba7c6c3/full.md",
+      "sha256": "6b90c03196c936318510ef9da800bf4f6a878fcb8a32ead168ecb5a0b6a70775",
+      "mineru_run_id": "9ba7c6c3-ab5d-4369-ab19-763c4740a11e",
+      "title_author_sniff": "First 80 Markdown lines match expected title and authors.",
+      "match_score": 1.0
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times.pdf",
+      "sha256": "c93c6b8083bd94d209acb93ca405aeb5217b4727281e82929a9d0cce44d479d9",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_VMDno.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_VMDno_rep.mod",
+      "sha256": "4f7070f4644f0ea9a77a303644ad25a53427d09b952da89fc2e4b9c95387a63e",
+      "exists": true,
+      "used_for": [
+        "variable names",
+        "normal-times alpha2 shutoff",
+        "parallel flexible-price block",
+        "timing hints",
+        "policy shock name"
+      ],
+      "not_used_as_paper_source": true
+    }
+  },
+  "source_index_issue": null,
+  "formula_quality": "needs_review",
+  "steady_state_quality": "needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "reason": "Runtime validation was explicitly out of scope for this worker task."
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_VMDno/US_VMDno_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_VMDno/US_VMDno_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_VMDno/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_VMDno/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_VMDno/worker_report.json"
+  },
+  "created_by": "Codex worker using mmb-model-archive-builder skill",
+  "created_date": "2026-06-17",
+  "paper_title": "(Un)anticipated monetary policy in a dsge model with a shadow\nbanking system - Normal times",
+  "authors": "Verona, Fabio; Martins, Manuel M. F.; Drumond, Ines",
+  "year": "2013",
+  "journal_or_series": "International Journal of Central Banking 9 (3), pp. 78-124",
+  "doi": "10.2139/ssrn.2256278",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "US_VMDno",
+    "paper_title": "(Un)anticipated monetary policy in a dsge model with a shadow\nbanking system - Normal times",
+    "authors": "Verona, Fabio; Martins, Manuel M. F.; Drumond, Ines",
+    "year": "2013",
+    "journal_or_series": "International Journal of Central Banking 9 (3), pp. 78-124",
+    "doi": "10.2139/ssrn.2256278",
+    "paper_slug": "us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "9ba7c6c3-ab5d-4369-ab19-763c4740a11e; a9995bf1-0984-4f77-863c-f3b8b24b1142",
+    "primary_source_title": "(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys__9ba7c6c3/full.md",
+    "raw_pdf_path": "raw/mmb_papers/(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys__9ba7c6c3/full.md",
+      "exists": true,
+      "sha256": "6b90c03196c936318510ef9da800bf4f6a878fcb8a32ead168ecb5a0b6a70775"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times.pdf",
+      "exists": true,
+      "sha256": "c93c6b8083bd94d209acb93ca405aeb5217b4727281e82929a9d0cce44d479d9"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/US_VMDno/US_VMDno_derivation.en.md",
+      "exists": true,
+      "sha256": "eab821b7042129b41428900c2edddc05b15be7d36f643fbe4dfd23a992a43d0d"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/US_VMDno/US_VMDno_derivation.zh.md",
+      "exists": true,
+      "sha256": "1acbefa73100a027ef16075e266b10a95dfe302c38eaece26ef13e4452254e11"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/US_VMDno/source_manifest.json",
+      "exists": true,
+      "sha256": "8fda81d90a46498be5fb354e748fad02813cf715dec2d1ad94a555e96f292f17"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/US_VMDno/extraction_notes.md",
+      "exists": true,
+      "sha256": "03dd164327ca8e3ca1c351b2341146defb6538fe1d693759e677e30f72373212"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/US_VMDno/worker_report.json",
+      "exists": true,
+      "sha256": "815cf0b8e72c3828e1cdbf5dc46ade0cb22cbddb6d3581fffd3d576ec6da5bc0"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

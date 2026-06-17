@@ -1,0 +1,78 @@
+{
+  "model_id": "US_BR13",
+  "title": "Why are the 2000s so different from the 1970s?",
+  "authors": [
+    "Olivier Blanchard",
+    "Marianna Riggi"
+  ],
+  "year": 2013,
+  "doi": "",
+  "journal_or_series": "Journal of the European Economic Association, 11(5), 1032-1052",
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_number": 106,
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_br13__why_are_the_2000s_so_different_from_the_1970s__5227bf28/full.md",
+      "sha256": "44a804d5a66e5742d08a64021a93092b21a55ee778f5e37daf1cc102416051bc",
+      "mineru_run_id": "5227bf28-1ed1-42e5-9235-36552bd5505b",
+      "primary_source_title": "Why are the 2000s so different from the 1970s?",
+      "title_sniff_result": "Header matches Blanchard and Riggi paper; title match score is 1.0."
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Why are the 2000s so different from the 1970s?.pdf",
+      "sha256": "c3c0548db524bc175933dceb894bed353ad7cc42bdffecc8a78d278d9b0cbcec",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_BR13.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_BR13_rep.mod",
+      "exists": false,
+      "used": false,
+      "notes": "No local example .mod file exists; no Dynare run was performed."
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_BR13/US_BR13_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_BR13/US_BR13_derivation.zh.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_BR13/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_BR13/worker_report.json"
+  },
+  "model_characterization": {
+    "form": "log-linear",
+    "economy": "United States",
+    "category": "New Keynesian oil shock model",
+    "key_features": [
+      "oil in production and consumption",
+      "habit formation",
+      "real wage rigidity",
+      "Calvo price rigidity",
+      "imperfect monetary-policy credibility",
+      "minimum-distance estimation to SVAR IRFs"
+    ],
+    "benchmark_equation_count": 18
+  },
+  "quality": {
+    "status": "needs_review",
+    "formula_quality": "draft_extracted",
+    "steady_state_quality": "log_linear_zero_steady_state",
+    "needs_human_review": true,
+    "runtime_validation": {
+      "performed": false,
+      "tool": null,
+      "notes": "User explicitly said not to run Dynare; entry is derivation-only."
+    }
+  },
+  "source_index_issue": null,
+  "created_date": "2026-06-17"
+}

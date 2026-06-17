@@ -1,0 +1,123 @@
+{
+  "model_id": "EA_QR14",
+  "status": "needs_review",
+  "paper_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+  "authors": "Quint, Dominic; Rabanal, Pau",
+  "year": "2014",
+  "journal_or_series": "International Journal of Central Banking 10 (2), pp. 169-236",
+  "doi": "10.5089/9781484333693.001",
+  "mineru": {
+    "run_id": "78d59631-1509-497c-b15f-d57584562569",
+    "match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu__78d59631/full.md",
+      "exists": true,
+      "sha256": "9581575b48d74538960ceff7d7fbf78272a6b718f82327237b0d87d78f3ca384"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area.pdf",
+      "exists": true,
+      "sha256": "f203285b43f44464e5a46feab17db716d7930d316eeff2e47e9f18290396884b"
+    }
+  ],
+  "source_sniff": {
+    "method": "first 80 Markdown lines",
+    "expected_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "observed_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "expected_authors": "Quint, Dominic; Rabanal, Pau",
+    "observed_authors": "Dominic Quinta and Pau Rabanalb",
+    "mismatch": false,
+    "notes": "Observed author line has OCR footnote artifacts only."
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu__78d59631/full.md",
+      "spans": [
+        "lines 1-80 for title/authors/source sniff",
+        "section 2 for model overview and institutional blocks",
+        "Appendix 2 linearized conditions for equations 28-108",
+        "shock processes at the end of Appendix 2"
+      ]
+    },
+    {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_QR14_rep.mod",
+      "spans": [
+        "variable, shock, and parameter declarations",
+        "model block equation comments and nonlinear counterparts",
+        "initval block for steady-state implementation cross-check"
+      ],
+      "used_as": "implementation_cross_check"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/EA_QR14/EA_QR14_derivation.en.md",
+      "exists": true,
+      "sha256": "6117251c491a190dc28b5bd3cae99c6196b61e39298c21fc278dfe566cee7a6c"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/EA_QR14/EA_QR14_derivation.zh.md",
+      "exists": true,
+      "sha256": "7516d268dac50dd1bb46f6250fae4f59e19469b3f4678dca6985c6c90fa61c4a"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/EA_QR14/source_manifest.json",
+      "exists": true,
+      "sha256": "f1e4037b558e664b89438bb79723995b69ae7b3d0516c7efb137f0cb057040ea"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/EA_QR14/extraction_notes.md",
+      "exists": true,
+      "sha256": "edeb630b0920082d2389ce2d123ff5bbd916f18ec784ebed123c0ef960782939"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/EA_QR14/worker_report.json",
+      "exists": true,
+      "sha256": "236db9aa252f6d9b6129b70409d746f4e81c93d43e0acd67788ef0ffcc97795f"
+    }
+  ],
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_edited": false,
+    "shared_status_edited": false
+  },
+  "formula_quality": "first_pass_needs_review",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only; no Dynare command was run."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "EA_QR14",
+    "paper_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "authors": "Quint, Dominic; Rabanal, Pau",
+    "year": "2014",
+    "journal_or_series": "International Journal of Central Banking 10 (2), pp. 169-236",
+    "doi": "10.5089/9781484333693.001",
+    "paper_slug": "ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "78d59631-1509-497c-b15f-d57584562569",
+    "primary_source_title": "Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_qr14__monetary_and_macroprudential_policy_in_an_estimated_dsge_model_of_the_eu__78d59631/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Monetary and Macroprudential Policy in an Estimated DSGE Model of the Euro Area.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

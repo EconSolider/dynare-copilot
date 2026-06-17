@@ -1,0 +1,72 @@
+{
+  "model_id": "US_BKM12",
+  "paper_title": "Reset Price Inflation and the Impact of Monetary Policy Shocks",
+  "authors": [
+    "Mark Bils",
+    "Peter J. Klenow",
+    "Benjamin A. Malin"
+  ],
+  "year": "2012",
+  "journal_or_series": "American Economic Review, 102(6): 2798-2825",
+  "doi": "10.1257/aer.102.6.2798",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "model_index_row": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "source_csv_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_BKM12",
+    "paper_slug": "us_bkm12__reset_price_inflation_and_the_impact_of_monetary_policy_shocks",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "f65547b5-e14b-4dbf-ac7e-9efb5ba7f228"
+    ],
+    "primary_source_title": "Reset Price Inflation and the Impact of Monetary Policy Shocks",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_bkm12__reset_price_inflation_and_the_impact_of_monetary_policy_shocks__f65547b5/full.md",
+      "sha256": "23d47d1e1abe0ae3a475de6ded76daf4f773997f4d4a991687018a6b5648ff19",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Reset Price Inflation and the Impact of Monetary Policy Shocks.pdf",
+      "sha256": "c3bd56b8c1e703b9ccb95b94f305f626246f5e0731d1a2e8e9dcb833f359238e",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_BKM12.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "not available"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_BKM12_rep.mod",
+      "sha256": "0bfafa5d6b1b803449b1b26158d2c1a74e2ccb1ee7dcf7fb2643a1c452836029",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not a source for paper-side derivation"
+    }
+  },
+  "catalog_cross_reference": {
+    "path": ".agents/skills/dynare-copilot/references/catalog.csv",
+    "row_model_id": "US_BKM12_rep",
+    "category": "2. Estimated DSGE Benchmarks (Smets-Wouters Type)",
+    "model_type": "Medium-Scale New Keynesian Bayesian DSGE (Smets-Wouters framework, Linear)"
+  },
+  "archive_files": {
+    "derivation_en": "data/model_archive/mmb_derivations/US_BKM12/US_BKM12_derivation.en.md",
+    "derivation_zh": "data/model_archive/mmb_derivations/US_BKM12/US_BKM12_derivation.zh.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_BKM12/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_BKM12/worker_report.json"
+  },
+  "copyright_boundary": "The derivation summarizes model structure, equations, and measurement objects. It does not copy long prose from the paper.",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current request explicitly disallowed running Dynare and committing or pushing."
+  }
+}

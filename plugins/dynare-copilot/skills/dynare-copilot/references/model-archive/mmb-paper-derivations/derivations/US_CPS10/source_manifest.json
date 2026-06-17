@@ -1,0 +1,68 @@
+{
+  "model_id": "US_CPS10",
+  "title": "Inflation-gap persistence in the us",
+  "authors": "Cogley, Timothy; Primiceri, Giorgio E.; Sargent, Thomas J.",
+  "year": 2010,
+  "doi": "10.1257/mac.2.1.43",
+  "journal_or_series": "American Economic Journal: Macroeconomics 2, pp. 43-66",
+  "source_index": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "mineru_index_path": "raw/mmb_mineru/index.csv",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "primary_source_title": "Inflation-gap persistence in the us"
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_cps10__inflation_gap_persistence_in_the_us__1f4da37a/full.md",
+      "sha256": "6389f05d33fe8572294e24ee79f693fce61dfa669e4acaca9f11f2ae17fd768f",
+      "mineru_run_id": "1f4da37a-8561-42b9-b0b5-1edf5edbf8fb",
+      "title_sniff": "Inflation-Gap Persistence in the US",
+      "used_sections": [
+        "Section V.A The Model",
+        "Section V.B Model Solution and Observation Equation",
+        "Tables 2-3",
+        "Section V.F A Unit Root in the Target Inflation"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Inflation-gap persistence in the us.pdf",
+      "sha256": "954556f0d13294387e3b1173422671a25399bac99a46a492ecaadf827cfe7166",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": null,
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_CPS10_rep.mod",
+      "sha256": "75804f8d9327f35818e7888a26615f61a87331049767789a118dcf6f63984ec1",
+      "used_as_source_type": "implementation_cross_check_only",
+      "runtime_executed": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_CPS10/US_CPS10_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_CPS10/US_CPS10_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_CPS10/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_CPS10/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_CPS10/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Paper prints primitives and solution approach, not the full Rep-MMB log-linear equation block.",
+      "Equation (21) in MinerU Markdown appears to omit the lag on the inflation target state; implementation uses the lagged target process.",
+      "The linear equilibrium equations are documented as implementation cross-check evidence."
+    ]
+  },
+  "runtime_validation": {
+    "status": "not_performed",
+    "dynare_run": false,
+    "reason": "User explicitly instructed not to run Dynare."
+  }
+}

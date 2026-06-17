@@ -1,0 +1,55 @@
+{
+  "model_id": "US_LTW17gz",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_LTW17gz/US_LTW17gz_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_LTW17gz/US_LTW17gz_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_LTW17gz/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_LTW17gz/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_LTW17gz/worker_report.json"
+  ],
+  "ownership_scope": "data/model_archive/mmb_derivations/US_LTW17gz/",
+  "shared_indexes_edited": false,
+  "dynare_run": false,
+  "english_first": true,
+  "chinese_second": true,
+  "implementation_cross_check_only": true,
+  "proposed_catalog_csv_row": {
+    "ModelID": "US_LTW17gz",
+    "Task": "derivation_extraction",
+    "Paper": "Clearing Up the Fiscal Multiplier Morass",
+    "Year": "2017",
+    "ModelType": "Estimated US model",
+    "Economy": "United States",
+    "Category": "Monetary-fiscal DSGE",
+    "KeyFeatures": "government spending in utility; long-term nominal debt; fiscal transfer response variant; sticky prices and wages; capital utilization; investment adjustment costs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+    "RawPDF": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+    "DOI": "10.1257/aer.20111196",
+    "Status": "needs_review"
+  },
+  "proposed_status_csv_row": {
+    "model_id": "US_LTW17gz",
+    "paper_title": "Clearing Up the Fiscal Multiplier Morass",
+    "source_full_md": "raw/mmb_mineru/runs/us_ltw17_us_ltw17gz_us_ltw17nu_us_ltw17rot__clearing_up_the_fiscal_multiplier_morass__f1cc32b3/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Clearing Up the Fiscal Multiplier Morass.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "First-pass derivation; paper OCR damaged for some formulas; implementation used only as cross-check; Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/US_LTW17gz",
+    "json_tool_source_manifest": "passed: python3 -m json.tool data/model_archive/mmb_derivations/US_LTW17gz/source_manifest.json",
+    "eight_sections_english": "passed: English derivation contains sections 1 through 8",
+    "f_number_count_match": "passed: English and Chinese each contain 34 unique F-numbers, F1 through F34"
+  },
+  "unresolved_issues": [
+    "Paper Markdown OCR damage in wage indexation and government budget identity.",
+    "Source-level verification against PDF or online appendix still needed.",
+    "Government-consumption shock innovation is present in paper but commented out in checked implementation.",
+    "Steady-state formulas are summarized from calibration text plus implementation cross-check and need source-level review."
+  ]
+}

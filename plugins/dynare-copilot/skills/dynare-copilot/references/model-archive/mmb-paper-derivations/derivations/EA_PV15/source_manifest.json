@@ -1,0 +1,121 @@
+{
+  "model_id": "EA_PV15",
+  "status": "needs_review",
+  "paper_title": "Cross-border banking flows spillovers in the eurozone: Evidence from an estimated DSGE model",
+  "authors": [
+    "Jean-Christophe Poutineau",
+    "Gauthier Vermandel"
+  ],
+  "year": "2015",
+  "journal_or_series": "Journal of Economic Dynamics and Control 51, 378-403",
+  "doi": "10.1016/j.jedc.2014.11.006",
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_pv15__cross_border_banking_flows_spillovers_in_the_eurozone_evidence_from_an_e__e624b564/full.md",
+      "sha256": "4ec1672a85c2be71fe027d419e29e6b8368ffc0a0c74a68f626d6f917413ea13",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model.pdf",
+      "sha256": "8f8f291f437955a9d581f498390dc39c0cd862a4c26f17d9f329af5e70390304",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/EA_PV15.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/EA_PV15_rep.mod",
+      "sha256": "6884e5edd3bb5e588e9bca16e4442d5585a6fd2becc29d65e855724ad7427f07",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "mineru": {
+    "run_id": "e624b564-2ce5-4d2a-bd46-e55027276842",
+    "match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model",
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "sniffed_first_80_lines": true,
+    "sniff_result": "First 80 Markdown lines match the expected title and authors."
+  },
+  "archive_files": {
+    "derivation_en": "data/model_archive/mmb_derivations/EA_PV15/EA_PV15_derivation.en.md",
+    "derivation_zh": "data/model_archive/mmb_derivations/EA_PV15/EA_PV15_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/EA_PV15/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/EA_PV15/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/EA_PV15/worker_report.json"
+  },
+  "extraction": {
+    "language_order": [
+      "English",
+      "Chinese"
+    ],
+    "english_sections_required": 8,
+    "equation_numbering": "continuous F1-F50",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "model_form": "log-linear; implementation_cross_check uses model(linear)",
+    "pdf_body_read": false,
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed",
+      "notes": "No Dynare run was requested or performed."
+    }
+  },
+  "catalog_row": {
+    "ModelID": "EA_PV15",
+    "Task": "mmb_derivation",
+    "Paper": "Cross-border banking flows spillovers in the eurozone: Evidence from an estimated DSGE model",
+    "Year": "2015",
+    "ModelType": "Two-country monetary-union DSGE with cross-border banking flows",
+    "Economy": "Euro area core and periphery",
+    "Category": "Open-economy New Keynesian; banking; financial accelerator",
+    "KeyFeatures": "Cross-border corporate loans; cross-border interbank loans; sticky goods prices; sticky wages; sticky loan rates; financial accelerator; common central bank",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_pv15__cross_border_banking_flows_spillovers_in_the_eurozone_evidence_from_an_e__e624b564/full.md",
+    "RawPDF": "raw/mmb_papers/Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model.pdf",
+    "DOI": "10.1016/j.jedc.2014.11.006",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_PV15",
+    "paper_title": "Cross-border banking flows spillovers in the eurozone: Evidence from an estimated DSGE model",
+    "source_full_md": "raw/mmb_mineru/runs/ea_pv15__cross_border_banking_flows_spillovers_in_the_eurozone_evidence_from_an_e__e624b564/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "First-pass derivation from MinerU Markdown; OCR issues marked needs_review; shared CSVs intentionally not edited."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "EA_PV15",
+    "paper_slug": "ea_pv15__cross_border_banking_flows_spillovers_in_the_eurozone_evidence_from_an_e",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "e624b564-2ce5-4d2a-bd46-e55027276842"
+    ],
+    "primary_source_title": "Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_pv15__cross_border_banking_flows_spillovers_in_the_eurozone_evidence_from_an_e__e624b564/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Cross-border banking flows spillovers in the eurozone- Evidence from an estimated DSGE model.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix.",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  }
+}

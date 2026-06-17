@@ -1,0 +1,143 @@
+{
+  "model_id": "NK_CKL09",
+  "status": "needs_review",
+  "paper": {
+    "title": "The role of labor markets for euro area monetary policy",
+    "authors": "Christoffel, Kai; Kuester, Keith; Linzert, Tobias",
+    "year": 2009,
+    "journal_or_series": "European Economic Review 53(8), pp. 908-936",
+    "doi": "10.1016/j.euroecorev.2009.04.007"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "NK_CKL09",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "model_title_match_score": 1.0,
+    "model_match_notes": "",
+    "primary_source_title": "The role of labor markets for euro area monetary policy"
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/ea_ckl09_nk_ckl09__the_role_of_labor_markets_for_euro_area_monetary_policy__c6a4d4a1/full.md",
+      "sha256": "4c7bd0caeddc3bd96696f15a8b2d9f550bd3f408c526d219daa38203fc928870"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The role of labor markets for euro area monetary policy.pdf",
+      "sha256": "28b5e367177eb94e495818f5e162b592a60a296c521e22e6d27c077ce18b8764",
+      "body_read": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_CKL09_rep.mod",
+      "sha256": "6c451a4a3bab1edb95e585e7f0f66267f4e37d9f3096a1bf256cda03cadea396",
+      "used_as": "implementation_cross_check_only"
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "c6a4d4a1-f4da-4ed7-b63e-ee120ffc2c90"
+    ],
+    "paper_slug": "ea_ckl09_nk_ckl09__the_role_of_labor_markets_for_euro_area_monetary_policy"
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_CKL09/NK_CKL09_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_CKL09/NK_CKL09_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_CKL09/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_CKL09/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_CKL09/worker_report.json"
+  },
+  "extraction": {
+    "model_form": "log-linear model(linear)",
+    "equation_count": 32,
+    "english_f_numbers": 32,
+    "chinese_f_numbers": 32,
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "runtime_validation": {
+      "performed": false,
+      "status": "not_performed"
+    }
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "proposed_status_row_in_worker_report": true,
+    "shared_indexes_edited": false
+  },
+  "paper_title": "The role of labor markets for euro area monetary policy",
+  "authors": "Christoffel, Kai; Kuester, Keith; Linzert, Tobias",
+  "year": "2009",
+  "journal_or_series": "European Economic Review 53(8), pp. 908-936",
+  "doi": "10.1016/j.euroecorev.2009.04.007",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_CKL09",
+    "paper_title": "The role of labor markets for euro area monetary policy",
+    "authors": "Christoffel, Kai; Kuester, Keith; Linzert, Tobias",
+    "year": "2009",
+    "journal_or_series": "European Economic Review 53(8), pp. 908-936",
+    "doi": "10.1016/j.euroecorev.2009.04.007",
+    "paper_slug": "ea_ckl09_nk_ckl09__the_role_of_labor_markets_for_euro_area_monetary_policy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "c6a4d4a1-f4da-4ed7-b63e-ee120ffc2c90",
+    "primary_source_title": "The role of labor markets for euro area monetary policy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/ea_ckl09_nk_ckl09__the_role_of_labor_markets_for_euro_area_monetary_policy__c6a4d4a1/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The role of labor markets for euro area monetary policy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/ea_ckl09_nk_ckl09__the_role_of_labor_markets_for_euro_area_monetary_policy__c6a4d4a1/full.md",
+      "exists": true,
+      "sha256": "4c7bd0caeddc3bd96696f15a8b2d9f550bd3f408c526d219daa38203fc928870"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The role of labor markets for euro area monetary policy.pdf",
+      "exists": true,
+      "sha256": "28b5e367177eb94e495818f5e162b592a60a296c521e22e6d27c077ce18b8764"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_CKL09/NK_CKL09_derivation.en.md",
+      "exists": true,
+      "sha256": "665ea4aa6fa570d36228c258839844f51c4cf1f3b339f0c54d4fe71a6eebf5e3"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_CKL09/NK_CKL09_derivation.zh.md",
+      "exists": true,
+      "sha256": "f86375b6236cafe23d5e1373d335d523c8b726b2414a4faa69aff8550d3222d3"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_CKL09/source_manifest.json",
+      "exists": true,
+      "sha256": "6e5051e6f4e4b74de96f831f0c62cbbb161df3315da99b2cfe362705f3f736a2"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_CKL09/extraction_notes.md",
+      "exists": true,
+      "sha256": "9c706ec39ade37fdcdf0c19cce466fcc47d340937a1227e75061afede6ddabc4"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_CKL09/worker_report.json",
+      "exists": true,
+      "sha256": "a9b1baebe9f7fab337273b74e680390d0ab99d68e8b0c2a94afbd1dc838ff588"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

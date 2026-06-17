@@ -1,0 +1,56 @@
+{
+  "model_id": "GPM6_IMF13",
+  "worker_status": "completed_with_source_index_issue",
+  "proposed_catalog_row": {
+    "ModelID": "GPM6_IMF13",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "A small quarterly projection model of the US economy",
+    "Year": "2013",
+    "ModelType": "semi_structural_projection_model",
+    "Economy": "Six-region GPM implementation; linked paper source supports U.S. SQPM only",
+    "Category": "projection_model",
+    "KeyFeatures": "output gap, inflation, policy rule, unemployment/NAIRU, potential output, bank lending tightening, implementation cross-check has six-region spillovers",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "RawPDF": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "DOI": "10.5089/9781451871364.001",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "GPM6_IMF13",
+    "paper_title": "A small quarterly projection model of the US economy",
+    "source_full_md": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "source_limited_gap_model",
+    "needs_human_review": "true",
+    "notes": "Primary and alternate MinerU runs point to the 2008 U.S. SQPM paper; implementation cross-check identifies GPM6_IMF13 as a 2013 six-region GPM. Source-index repair needed before review."
+  },
+  "changed_files": [
+    "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.en.md",
+    "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.zh.md",
+    "data/model_archive/mmb_derivations/GPM6_IMF13/source_manifest.json",
+    "data/model_archive/mmb_derivations/GPM6_IMF13/extraction_notes.md",
+    "data/model_archive/mmb_derivations/GPM6_IMF13/worker_report.json"
+  ],
+  "validations": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "eight_sections_english": "passed",
+    "f_number_count_match": "passed",
+    "english_f_count_total_mentions": 65,
+    "chinese_f_count_total_mentions": 65,
+    "unique_f_numbers": 16
+  },
+  "runtime_validation": {
+    "performed": false,
+    "reason": "Not assigned."
+  },
+  "unresolved_formula_or_ocr_issues": [
+    "Source-index mismatch prevents source-backed six-region GPM6 derivation.",
+    "OCR prose has defects, but displayed equations 1-15 are readable for first pass.",
+    "Six-region exchange-rate, spillover, long-rate, and regional residual equations are visible only in the implementation cross-check.",
+    "Raw PDF body was not read except existence check, per instructions."
+  ]
+}

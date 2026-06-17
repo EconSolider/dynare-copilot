@@ -1,0 +1,68 @@
+{
+  "model_id": "EA_QUEST3",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/EA_QUEST3/EA_QUEST3_derivation.en.md",
+    "data/model_archive/mmb_derivations/EA_QUEST3/EA_QUEST3_derivation.zh.md",
+    "data/model_archive/mmb_derivations/EA_QUEST3/source_manifest.json",
+    "data/model_archive/mmb_derivations/EA_QUEST3/extraction_notes.md",
+    "data/model_archive/mmb_derivations/EA_QUEST3/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_QUEST3",
+    "Task": "derivation_first_pass",
+    "Paper": "QUEST III: An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+    "Year": "2009",
+    "ModelType": "open-economy estimated DSGE; nonlinear paper model with linearized/log-growth MMB implementation",
+    "Economy": "Euro area",
+    "Category": "Fiscal and monetary policy; open economy; liquidity-constrained households",
+    "KeyFeatures": "nominal and real frictions; liquidity-constrained households; fiscal rules; Taylor rule; trade and current account; stochastic TFP trend",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis__6b625a09/full.md",
+    "RawPDF": "raw/mmb_papers/QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy.pdf",
+    "DOI": "10.1016/j.econmod.2008.06.014",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_QUEST3",
+    "paper_title": "QUEST III: An estimated open-economy DSGE model of the euro area with fiscal and monetary policy",
+    "source_full_md": "raw/mmb_mineru/runs/ea_quest3__quest_iii_an_estimated_open_economy_dsge_model_of_the_euro_area_with_fis__6b625a09/full.md",
+    "raw_pdf_path": "raw/mmb_papers/QUEST III- An estimated open-economy DSGE model of the euro area with fiscal and monetary policy.pdf",
+    "status": "needs_review",
+    "formula_quality": "first-pass OCR extraction with explicit needs_review markers",
+    "steady_state_quality": "partial; balanced-growth and stationary-ratio conventions recorded, appendix recursion deferred",
+    "needs_human_review": "true",
+    "notes": "PDF body not read; .mod used only as implementation_cross_check; shared CSVs not edited."
+  },
+  "validation": [
+    {
+      "check": "json_tool_source_manifest",
+      "status": "passed"
+    },
+    {
+      "check": "json_tool_worker_report",
+      "status": "passed"
+    },
+    {
+      "check": "english_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "english_chinese_f_number_count_match",
+      "status": "passed",
+      "english_count": 130,
+      "chinese_count": 130,
+      "unique_english_count": 50,
+      "unique_chinese_count": 50
+    },
+    {
+      "check": "git_diff_check_owned_folder",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "Source-check OCR-sensitive formulas before review promotion.",
+    "Recover Appendix 1 steady-state details through targeted PDF inspection if needed.",
+    "Map paper nonlinear equations to MMB log-growth implementation before runnable promotion."
+  ]
+}

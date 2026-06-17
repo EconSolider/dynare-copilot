@@ -1,0 +1,47 @@
+{
+  "model_id": "NK_MPT10",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/NK_MPT10/NK_MPT10_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_MPT10/NK_MPT10_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_MPT10/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_MPT10/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_MPT10/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_MPT10",
+    "Task": "Unemployment fiscal multipliers",
+    "Paper": "Monacelli, Perotti, and Trigari (2010), Unemployment fiscal multipliers",
+    "Year": "2010",
+    "ModelType": "New Keynesian search-and-matching model",
+    "Economy": "US",
+    "Category": "Fiscal policy; labor search; unemployment; sticky prices",
+    "KeyFeatures": "Government spending shock; Mortensen-Pissarides matching; Nash bargaining; investment adjustment costs; Calvo pricing; Taylor rule; markup channel",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_mpt10__unemployment_fiscal_multipliers__7b622dc6/full.md",
+    "RawPDF": "raw/mmb_papers/Unemployment fiscal multipliers.pdf",
+    "DOI": "10.1016/j.jmoneco.2010.05.009",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_MPT10",
+    "paper_title": "Unemployment fiscal multipliers",
+    "source_full_md": "raw/mmb_mineru/runs/nk_mpt10__unemployment_fiscal_multipliers__7b622dc6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Unemployment fiscal multipliers.pdf",
+    "status": "needs_review",
+    "formula_quality": "baseline equations source-backed; Calvo recursions need source review",
+    "steady_state_quality": "draft_extracted_from_paper_and_implementation_cross_check",
+    "needs_human_review": true,
+    "notes": "Do not merge automatically without reviewing Calvo price-setting equations and implementation comments on paper equations (22) and (28)."
+  },
+  "validation": {
+    "dynare_run": "not_performed",
+    "reason": "User instructed not to run Dynare.",
+    "commands_to_run": [
+      "git diff --check",
+      "python3 -m json.tool data/model_archive/mmb_derivations/NK_MPT10/source_manifest.json >/dev/null",
+      "python3 - <<'PY'\nfrom pathlib import Path\nimport re\nmodel = \"NK_MPT10\"\nbase = Path(\"data/model_archive/mmb_derivations\") / model\nen = (base / f\"{model}_derivation.en.md\").read_text()\nassert all(f\"## {i}.\" in en for i in range(1, 9))\nassert re.search(r\"\\(F1\\)\", en)\nprint(\"archive_entry_checks_ok\")\nPY",
+      "python3 - <<'PY'\nfrom pathlib import Path\nimport re\nmodel = \"NK_MPT10\"\nbase = Path(\"data/model_archive/mmb_derivations\") / model\nen = (base / f\"{model}_derivation.en.md\").read_text()\nzh = (base / f\"{model}_derivation.zh.md\").read_text()\nassert len(re.findall(r\"\\(F\\d+\\)\", en)) == len(re.findall(r\"\\(F\\d+\\)\", zh))\nprint(\"f_number_counts_match\")\nPY"
+    ]
+  }
+}

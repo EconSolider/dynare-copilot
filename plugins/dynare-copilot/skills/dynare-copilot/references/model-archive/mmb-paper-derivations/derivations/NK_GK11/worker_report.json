@@ -1,0 +1,81 @@
+{
+  "model_id": "NK_GK11",
+  "status": "needs_review",
+  "owned_directory": "data/model_archive/mmb_derivations/NK_GK11",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_GK11/NK_GK11_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_GK11/NK_GK11_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_GK11/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_GK11/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_GK11/worker_report.json"
+  ],
+  "source_row": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_row_number": 63,
+    "paper_title": "A model of unconventional monetary policy",
+    "authors": "Gertler, Mark; Karadi, Peter",
+    "year": "2011",
+    "doi": "10.1016/j.jmoneco.2010.10.004",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+    "mineru_run_ids": [
+      "e6192938-5688-49c7-9621-66ca2478274f",
+      "7766fa43-5b60-4812-9445-88d48b0fe6cf"
+    ],
+    "model_title_match_score": 0.9877
+  },
+  "sources_used": {
+    "model_index_row": true,
+    "primary_full_md_path": true,
+    "raw_pdf_path_exists_checked": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_exists": false,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/NK_GK11_rep.mod"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "NK_GK11",
+    "Task": "A model of unconventional monetary policy",
+    "Paper": "A model of unconventional monetary policy",
+    "Year": "2011",
+    "ModelType": "New Keynesian model with constrained financial intermediaries and credit policy",
+    "Economy": "Closed economy",
+    "Category": "Financial frictions; unconventional monetary policy",
+    "KeyFeatures": "Intermediary leverage constraint; capital quality shock; central bank credit intermediation; Calvo pricing; habit formation; utilization and investment adjustment costs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+    "RawPDF": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+    "DOI": "10.1016/j.jmoneco.2010.10.004",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_GK11",
+    "paper_title": "A model of unconventional monetary policy",
+    "source_full_md": "raw/mmb_mineru/runs/nk_gk09lin_nk_gk11__a_model_of_unconvetional_monetary_policy__e6192938/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A Model of Unconvetional Monetary Policy.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "Main equations extracted from MinerU Markdown; OCR equations and steady-state target solution require human source review before promotion."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/NK_GK11 exited cleanly; files are untracked so direct whitespace scan was also run",
+    "untracked_file_whitespace_check": "passed: no trailing whitespace, CR bytes, or missing final newlines in data/model_archive/mmb_derivations/NK_GK11 files",
+    "json_tool_source_manifest": "passed: python3 -m json.tool data/model_archive/mmb_derivations/NK_GK11/source_manifest.json",
+    "json_tool_worker_report": "passed: python3 -m json.tool data/model_archive/mmb_derivations/NK_GK11/worker_report.json",
+    "eight_section_check": "passed: English and Chinese files contain sections 1-8",
+    "f_number_count_check": "passed: English and Chinese both contain 98 F-number references covering unique labels F1-F43 in the same sequence"
+  },
+  "unresolved_issues": [
+    "Return-to-capital equation needs targeted source review before promotion because MinerU OCR is noisy around the capital-quality and depreciation terms.",
+    "Price-dispersion recursion is represented as an implementation cross-check; source paper directly reports the price-level law.",
+    "Steady-state calibration target solution for lambda, omega, and chi is not fully closed-form in the paper.",
+    "Runtime validation was not performed."
+  ],
+  "shared_indexes": {
+    "catalog_csv_updated": false,
+    "status_csv_updated": false,
+    "reason": "User explicitly forbade staging, committing, pushing, or owning shared indexes."
+  },
+  "commit_or_push": "not_performed_user_explicitly_requested_no_commit_push_or_staging_shared_indexes"
+}

@@ -1,0 +1,71 @@
+{
+  "model_id": "US_SW07",
+  "paper_title": "Shocks and Frictions in US Business Cycles: A Bayesian DSGE Approach",
+  "authors": [
+    "Frank Smets",
+    "Rafael Wouters"
+  ],
+  "year": "2007",
+  "journal_or_series": "The American Economic Review 97(3), pp. 586-606",
+  "doi": "10.1257/aer.97.3.586",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "model_index_row": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "US_SW07",
+    "paper_slug": "us_sw07__shocks_and_frictions_in_us_business_cycles_a_bayesian_dsge_approach",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "5e0f76f1-4e27-42f4-a462-a8450da74291",
+      "48fb6706-35b0-46d6-acb0-146b9a64a287",
+      "0c007cbe-2448-4e05-bdfb-aee686d57575"
+    ],
+    "primary_source_title": "2007-shocks-and-frictions-in-us-business-cycles-a-bayesian-dsge-approach",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_sw07__shocks_and_frictions_in_us_business_cycles_a_bayesian_dsge_approach__5e0f76f1/full.md",
+      "sha256": "9177fc045988456eb5c39752c6c96222ca5f31aca0e7e248233e3bf90fe37a0d",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/2007-shocks-and-frictions-in-us-business-cycles-a-bayesian-dsge-approach.pdf",
+      "sha256": "95824c51e219cb266f099203f237915e2f03abb3710731995a5e94904f71c6d5",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_SW07.md",
+      "sha256": "ace01b013baa6d8d4d48dae7e39e615a5e486ca871949eea2d48a53c7bc3a70d",
+      "exists_at_extraction": true,
+      "source_role": "hand-normalized online-appendix formula inventory"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_SW07_rep.mod",
+      "sha256": "84e8c3c0933a1075a049137b7958f5206f6802a982384edce5e329a53c62cf7e",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not a source for paper-side derivation"
+    }
+  },
+  "catalog_cross_reference": {
+    "path": ".agents/skills/dynare-copilot/references/catalog.csv",
+    "row_model_id": "US_SW07_rep",
+    "category": "2. Estimated DSGE Benchmarks (Smets-Wouters Type)",
+    "model_type": "Medium-scale New Keynesian DSGE (Bayesian estimated) -benchmark model"
+  },
+  "archive_files": {
+    "derivation_zh": "data/model_archive/mmb_derivations/US_SW07/US_SW07_derivation.md",
+    "derivation_en": "data/model_archive/mmb_derivations/US_SW07/US_SW07_derivation.en.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_SW07/extraction_notes.md"
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix.",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  }
+}

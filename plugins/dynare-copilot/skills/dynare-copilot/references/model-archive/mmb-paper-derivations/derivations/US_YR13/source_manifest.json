@@ -1,0 +1,156 @@
+{
+  "model_id": "US_YR13",
+  "status": "needs_review",
+  "paper": {
+    "title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "authors": [
+      "Rychalovska, Yuliya"
+    ],
+    "year": 2016,
+    "journal_or_series": "Journal of Economic Dynamics and Control 73, pp. 259-282",
+    "doi": "10.1016/j.jedc.2016.09.014"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 169,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_YR13",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "235aee23-e4aa-4a58-8e02-dbb3676a7975"
+    ],
+    "primary_source_title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+    "model_match_notes": ""
+  },
+  "source_match_review": {
+    "first_page_sniffed": true,
+    "observed_title": "The implications of financial frictions and imperfect knowledge in the estimated DSGE model of the U.S. economy",
+    "observed_authors": [
+      "Yuliya Rychalovska"
+    ],
+    "matches_expected_title_author": true,
+    "alternate_mineru_runs_inspected": false,
+    "source_index_issue": null
+  },
+  "paper_side_sources_used": [
+    {
+      "role": "main_equation_source",
+      "path": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+      "exists": true,
+      "sha256": "1d5027bd52b75a31f6d6b902e1055794e70d10476e2842c7e98b9fae9c7b5f06",
+      "mineru_run_id": "235aee23-e4aa-4a58-8e02-dbb3676a7975",
+      "usage": "Model overview, financial accelerator equations, capital-goods producer equations, policy rule, resource constraint, learning equations, measurement notes, parameter tables."
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+      "exists": true,
+      "sha256": "32b205b0256399c5be7d7d7422cc3d1b5e9399781d1d712129ebe305b3a82989",
+      "body_opened": false,
+      "usage": "Existence check and provenance only; PDF body was not read."
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_YR13.md",
+    "exists": false,
+    "used": false
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_YR13_rep.mod",
+    "exists": true,
+    "sha256": "d5a5d761941dd46d9f9c183ac5ea19dee9c254d9ba784bc66ae68b25a3409b91",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only to cross-check model(linear), variable names, shock names, annual-inflation identity, posterior-mode parameter names, and steady-state derived-parameter objects. Not used as paper-side mathematical evidence."
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_YR13/US_YR13_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_YR13/US_YR13_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_YR13/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_YR13/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_YR13/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown. Financial-sector equations are directly available, but inherited Smets-Wouters blocks are not fully reprinted in the source paper and several OCR fragments require targeted PDF checks."
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper.",
+  "paper_title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+  "authors": "Rychalovska, Yuliya",
+  "year": "2016",
+  "journal_or_series": "Journal of Economic Dynamics and Control 73, pp. 259-282",
+  "doi": "10.1016/j.jedc.2016.09.014",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "US_YR13",
+    "paper_title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "authors": "Rychalovska, Yuliya",
+    "year": "2016",
+    "journal_or_series": "Journal of Economic Dynamics and Control 73, pp. 259-282",
+    "doi": "10.1016/j.jedc.2016.09.014",
+    "paper_slug": "us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "235aee23-e4aa-4a58-8e02-dbb3676a7975",
+    "primary_source_title": "The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/us_yr13_us_yr13al__the_implications_of_financial_frictions_and_imperfect_knowledge_in_the_e__235aee23/full.md",
+      "exists": true,
+      "sha256": "1d5027bd52b75a31f6d6b902e1055794e70d10476e2842c7e98b9fae9c7b5f06"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The implications of financial frictions and imperfect knowledge in the estimated dsge model of the U.S. economy.pdf",
+      "exists": true,
+      "sha256": "32b205b0256399c5be7d7d7422cc3d1b5e9399781d1d712129ebe305b3a82989"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/US_YR13/US_YR13_derivation.en.md",
+      "exists": true,
+      "sha256": "01308e49f2d0eb1863c86dd628672ff89589206d52c3a541519cf8790f5f55e5"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/US_YR13/US_YR13_derivation.zh.md",
+      "exists": true,
+      "sha256": "92b36f765199580cbc5654d4e9bbfcfee426dcb8283feb537c8628cb021f765d"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/US_YR13/source_manifest.json",
+      "exists": true,
+      "sha256": "ff3c7e4e0a1a2d9001724e69d9c97a191232bf569cafe6245bbc2be88ce83d47"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/US_YR13/extraction_notes.md",
+      "exists": true,
+      "sha256": "c802551e42c7481f7d502b751b900a0cde9565bb1e65f753aa5ebb0f294a1262"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/US_YR13/worker_report.json",
+      "exists": true,
+      "sha256": "1e6b35ee424c22b0eedf90a2260b05215072323895a4db24e395513e6c214604"
+    }
+  ]
+}

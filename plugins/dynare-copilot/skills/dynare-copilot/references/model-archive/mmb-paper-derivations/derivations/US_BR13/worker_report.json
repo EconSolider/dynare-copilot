@@ -1,0 +1,55 @@
+{
+  "model_id": "US_BR13",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/US_BR13/US_BR13_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_BR13/US_BR13_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_BR13/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_BR13/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_BR13/worker_report.json"
+  ],
+  "status": "needs_review",
+  "formula_quality": "draft_extracted",
+  "steady_state_quality": "log_linear_zero_steady_state",
+  "runtime_validation": {
+    "performed": false,
+    "reason": "User instructed not to run Dynare."
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_BR13",
+    "Task": "mmb_derivation",
+    "Paper": "Why are the 2000s so different from the 1970s?",
+    "Year": "2013",
+    "ModelType": "log-linear New Keynesian oil shock model",
+    "Economy": "United States",
+    "Category": "New Keynesian",
+    "KeyFeatures": "Oil in production and consumption; habit formation; real wage rigidity; Calvo price rigidity; imperfect monetary-policy credibility; minimum-distance estimation to SVAR IRFs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_br13__why_are_the_2000s_so_different_from_the_1970s__5227bf28/full.md",
+    "RawPDF": "raw/mmb_papers/Why are the 2000s so different from the 1970s?.pdf",
+    "DOI": "",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_BR13",
+    "paper_title": "Why are the 2000s so different from the 1970s?",
+    "source_full_md": "raw/mmb_mineru/runs/us_br13__why_are_the_2000s_so_different_from_the_1970s__5227bf28/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Why are the 2000s so different from the 1970s?.pdf",
+    "status": "needs_review",
+    "formula_quality": "draft_extracted",
+    "steady_state_quality": "log_linear_zero_steady_state",
+    "needs_human_review": true,
+    "notes": "Online appendix not locally normalized; welfare-relevant output gap and primitive optimization problems need source-level review. Runtime validation not performed."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/US_BR13",
+    "json_tool": "passed: python3 -m json.tool source_manifest.json and worker_report.json",
+    "eight_section_check": "passed: English derivation has sections ## 1. through ## 8. and contains (F1)",
+    "f_number_match_check": "passed: English and Chinese F-number reference counts match; unique benchmark equations are (F1)-(F18)"
+  },
+  "unresolved_issues": [
+    "Online Appendix is referenced by the paper but unavailable as docs/mmb_appendix_full_normalizations/US_BR13.md.",
+    "Precise derivation of welfare-relevant output gap x^f_t needs appendix check.",
+    "Post-1984 sample endpoint differs between VAR discussion and structural estimation paragraph.",
+    "No local US_BR13_rep.mod implementation cross-check file exists."
+  ]
+}

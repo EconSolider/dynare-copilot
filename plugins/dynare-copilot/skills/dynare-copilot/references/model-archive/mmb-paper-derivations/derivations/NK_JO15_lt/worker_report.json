@@ -1,0 +1,43 @@
+{
+  "model_id": "NK_JO15_lt",
+  "status": "completed_first_pass_needs_review",
+  "write_scope": "data/model_archive/mmb_derivations/NK_JO15_lt/",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_JO15_lt/NK_JO15_lt_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_JO15_lt/NK_JO15_lt_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_JO15_lt/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_JO15_lt/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_JO15_lt/worker_report.json"
+  ],
+  "source_inputs": {
+    "model_index_row": "raw/mmb_mineru/model_index.csv:model_id=NK_JO15_lt",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_jo15_ht_nk_jo15_lt__productivity_shocks_and_monetary_policy_in_a_two_country_model__f031feec/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Productivity Shocks and Monetary Policy in a Two-Country Model.pdf",
+    "raw_pdf_exists": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_exists": false,
+    "implementation_cross_check_path": ".agents/skills/dynare-copilot/references/examples/NK_JO15_lt_rep.mod"
+  },
+  "outputs": {
+    "english_first": true,
+    "chinese_second": true,
+    "shared_indexes_edited": false,
+    "runtime_validation_performed": false
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections": "passed",
+    "f_number_parity": "passed",
+    "f_number_count_english": 119,
+    "f_number_count_chinese": 119,
+    "unique_f_numbers": 53,
+    "continuous_f_numbers": true
+  },
+  "unresolved_issues": [
+    "Formula quality remains needs_review because OCR includes malformed equation numbering and corrupted inline notation.",
+    "CPI inflation formula differs between OCR text and appendix/MMB implementation.",
+    "No PDF body read and no Dynare runtime validation performed."
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "model_id": "G2_SIGMA08",
+  "status": "needs_review",
+  "paper": {
+    "title": "Trade adjustment and the composition of trade",
+    "authors": [
+      "Christopher J. Erceg",
+      "Luca Guerrieri",
+      "Christopher J. Gust"
+    ],
+    "year": 2008,
+    "journal_or_series": "Journal of Economic Dynamics and Control 32(8), pp. 2622-2650",
+    "doi": "10.1016/j.jedc.2007.09.015"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "G2_SIGMA08",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Trade adjustment and the composition of trade",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/g2_sigma08__trade_adjustment_and_the_composition_of_trade__2bcd14af/full.md",
+      "sha256": "c6d12a384c64d6cbd58bf913a133e680882d96226b4ab2b434be3823afa34e31",
+      "mineru_run_id": "2bcd14af-41e8-4cab-9837-d3f2fc192679",
+      "role": "paper_side_source"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Trade adjustment and the composition of trade.pdf",
+      "sha256": "acee4bf08b1bb7f273402e5e9560071a6faaa7a740c4dbca36126411d49d6f12",
+      "exists_checked": true,
+      "opened_for_formula_check": false,
+      "role": "provenance_only"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/G2_SIGMA08.md",
+      "exists_checked": true,
+      "available": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/G2_SIGMA08_rep.mod",
+      "sha256": "8e2973e1742d8e1d2fecb3e4dbe589124301cec274c8d84db6d75c39de1b1da5",
+      "used_only_for": [
+        "model(linear) form",
+        "variable coverage",
+        "shock names",
+        "timing conventions",
+        "selected implementation-visible linear equations"
+      ]
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/G2_SIGMA08/G2_SIGMA08_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/G2_SIGMA08/G2_SIGMA08_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/G2_SIGMA08/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/G2_SIGMA08/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/G2_SIGMA08/worker_report.json"
+  },
+  "equation_numbering": {
+    "first_equation": "F1",
+    "last_equation": "F40",
+    "english_count": 40,
+    "chinese_count": 40,
+    "continuous": true
+  },
+  "model_form": {
+    "paper_solution_description": "log-linearized around balanced-growth steady state after detrending",
+    "implementation_form": "model(linear)",
+    "runtime_validation": "not_performed"
+  },
+  "quality_flags": {
+    "formula_quality": "mixed_paper_equations_and_implementation_cross_check",
+    "steady_state_quality": "partial_linear_model_steady_state_only",
+    "needs_human_review": true,
+    "needs_pdf_formula_check": false,
+    "needs_companion_sigma_source_check": true
+  },
+  "created_utc": "2026-06-17T06:09:25Z",
+  "paper_title": "Trade adjustment and the composition of trade",
+  "authors": "Erceg, Christopher; Guerrieri, Luca; Gust, Christopher J.",
+  "year": "2008",
+  "journal_or_series": "Journal of Economic Dynamics and Control 32(8), pp. 2622-2650",
+  "doi": "10.1016/j.jedc.2007.09.015",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "G2_SIGMA08",
+    "paper_title": "Trade adjustment and the composition of trade",
+    "authors": "Erceg, Christopher; Guerrieri, Luca; Gust, Christopher J.",
+    "year": "2008",
+    "journal_or_series": "Journal of Economic Dynamics and Control 32(8), pp. 2622-2650",
+    "doi": "10.1016/j.jedc.2007.09.015",
+    "paper_slug": "g2_sigma08__trade_adjustment_and_the_composition_of_trade",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "2bcd14af-41e8-4cab-9837-d3f2fc192679",
+    "primary_source_title": "Trade adjustment and the composition of trade",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/g2_sigma08__trade_adjustment_and_the_composition_of_trade__2bcd14af/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Trade adjustment and the composition of trade.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/g2_sigma08__trade_adjustment_and_the_composition_of_trade__2bcd14af/full.md",
+      "exists": true,
+      "sha256": "c6d12a384c64d6cbd58bf913a133e680882d96226b4ab2b434be3823afa34e31"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Trade adjustment and the composition of trade.pdf",
+      "exists": true,
+      "sha256": "acee4bf08b1bb7f273402e5e9560071a6faaa7a740c4dbca36126411d49d6f12"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/G2_SIGMA08/G2_SIGMA08_derivation.en.md",
+      "exists": true,
+      "sha256": "a9d9a7d41ebfce1052f0ec6917423511bde50ec125317bcca73529a8c0b3ff2c"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/G2_SIGMA08/G2_SIGMA08_derivation.zh.md",
+      "exists": true,
+      "sha256": "d2ecf6a29793f2d5efe88f282d9f46bb161dbaeb084357afe101cdf610c13e6c"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/G2_SIGMA08/source_manifest.json",
+      "exists": true,
+      "sha256": "e5dcb3fb950585252c68dac086886af185d6e45966041b9299d5f087813116e1"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/G2_SIGMA08/extraction_notes.md",
+      "exists": true,
+      "sha256": "b84674e27443c142818b1913335d01235faf7284d81413af368d4fcaafca1f45"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/G2_SIGMA08/worker_report.json",
+      "exists": true,
+      "sha256": "b5c3b753d94af8bd9bc2f0d75d06c94104813c4e4bb5a996b2c0a5be332e17c6"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

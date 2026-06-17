@@ -1,0 +1,163 @@
+{
+  "model_id": "NK_PSV16",
+  "title": "The price of capital and the financial accelerator",
+  "authors": "Pancrazi, Roberto; Seoane, Hernán D.; Vukotic, Marija",
+  "year": "2016",
+  "journal_or_series": "Economics Letters 149, 86-89",
+  "doi": "10.1016/j.econlet.2016.10.022",
+  "mineru": {
+    "run_id": "a468e7e7-073f-4a72-a489-1ee9eba05671",
+    "match_status": "matched",
+    "match_score": "1.0000",
+    "primary_source_title": "The price of capital and the financial accelerator",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "model_index": {
+      "path": "raw/mmb_mineru/model_index.csv",
+      "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75"
+    },
+    "mineru_index": {
+      "path": "raw/mmb_mineru/index.csv",
+      "sha256": "28059fd98859cc336e9b87cf808d2cd82a155fe1108352bd09a5ec5253b0e120"
+    },
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+      "sha256": "0790dba52b46f00ef3f6e83b43dbf297655a4495bb0829557d1ade30521daeb9",
+      "line_count": 458,
+      "title_author_sniff": "Title and authors on first Markdown page match model_index.csv."
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+      "sha256": "b2057ab6acdfabcc485e88f0947805b9c2fcf50f53bdab4c68631086180fdacf",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": null,
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_PSV16_rep.mod",
+      "sha256": "c56d9e1000886c66ec5960523c21ad383c4704cab17efc4f89831b1b26b2150e",
+      "used_only_as": "implementation_cross_check",
+      "dynare_run_performed": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_PSV16/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_PSV16/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_PSV16/worker_report.json"
+  },
+  "formula_quality": {
+    "overall_status": "needs_review",
+    "source_stated_equations": [
+      "capital demand return equation",
+      "capital-production technology",
+      "capital-producer profit problem",
+      "new-capital price FOC",
+      "old-capital price FOC",
+      "linearized return equation",
+      "linearized old-capital price equation"
+    ],
+    "uncertain_equations": [
+      {
+        "equation": "paper eq. (9) / derivation (F15)",
+        "reason": "Source Markdown has OCR noise around the definition of varphi, and the implementation cross-check has a different sign on investment plus lagged capital timing."
+      }
+    ],
+    "baseline_bgg_equations": "Reconstructed from paper description and implementation_cross_check, not fully paper-derived."
+  },
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row": {
+      "ModelID": "NK_PSV16",
+      "Task": "Financial accelerator with equilibrium price of capital",
+      "Paper": "The price of capital and the financial accelerator",
+      "Year": "2016",
+      "ModelType": "linearized New Keynesian financial accelerator",
+      "Economy": "closed economy",
+      "Category": "financial frictions",
+      "KeyFeatures": "BGG financial accelerator; equilibrium old-capital price; positive depreciation; investment adjustment costs",
+      "DateAdded": "2026-06-17",
+      "SourceFullMD": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+      "RawPDF": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+      "DOI": "10.1016/j.econlet.2016.10.022",
+      "Status": "needs_review"
+    },
+    "shared_catalog_updated": false,
+    "shared_status_updated": false
+  },
+  "paper_title": "The price of capital and the financial accelerator",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_PSV16",
+    "paper_title": "The price of capital and the financial accelerator",
+    "authors": "Pancrazi, Roberto; Seoane, Hernán D.; Vukotic, Marija",
+    "year": "2016",
+    "journal_or_series": "Economics Letters 149, 86-89",
+    "doi": "10.1016/j.econlet.2016.10.022",
+    "paper_slug": "nk_psv16__the_price_of_capital_and_the_financial_accelerator",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "a468e7e7-073f-4a72-a489-1ee9eba05671",
+    "primary_source_title": "The price of capital and the financial accelerator",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+      "exists": true,
+      "sha256": "0790dba52b46f00ef3f6e83b43dbf297655a4495bb0829557d1ade30521daeb9"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+      "exists": true,
+      "sha256": "b2057ab6acdfabcc485e88f0947805b9c2fcf50f53bdab4c68631086180fdacf"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.en.md",
+      "exists": true,
+      "sha256": "c7f9a97fc8486279902546e35061aae87b4d01e64feb18f6807c630e17e5c554"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.zh.md",
+      "exists": true,
+      "sha256": "d6e933ada9187c4e7731c4bd2790ca44ecb4ba3d1a02d439bb851b4e618ce32a"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_PSV16/source_manifest.json",
+      "exists": true,
+      "sha256": "8144372031d7f8c40584086679825159be0a0308d8f6e35d0976c627fff7b792"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_PSV16/extraction_notes.md",
+      "exists": true,
+      "sha256": "dee895e98e3eae8e43c6b038151b14916a3a5f59497b935f143c48a43bbf8a44"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_PSV16/worker_report.json",
+      "exists": true,
+      "sha256": "53dd868e440487d6b9066de7a0d18c8231bf3c8b4f7472f4676c20cc105047f1"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

@@ -1,0 +1,85 @@
+{
+  "model_id": "EA_ALSV06",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/EA_ALSV06/EA_ALSV06_derivation.en.md",
+    "data/model_archive/mmb_derivations/EA_ALSV06/EA_ALSV06_derivation.zh.md",
+    "data/model_archive/mmb_derivations/EA_ALSV06/source_manifest.json",
+    "data/model_archive/mmb_derivations/EA_ALSV06/extraction_notes.md",
+    "data/model_archive/mmb_derivations/EA_ALSV06/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_ALSV06",
+    "Task": "mmb_derivation",
+    "Paper": "Money in an estimated business cycle model of the euro area",
+    "Year": "2006",
+    "ModelType": "linearized estimated sticky-price DSGE with money",
+    "Economy": "Euro area",
+    "Category": "Monetary DSGE",
+    "KeyFeatures": "money in utility, habit formation, money demand, hybrid Phillips curve, augmented Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_alsv06__money_in_an_estimated_business_cycle_model_of_the_euro_area__21baa95d/full.md",
+    "RawPDF": "raw/mmb_papers/Money in an estimated business cycle model of the euro area.pdf",
+    "DOI": "10.1111/j.1468-0297.2006.01088.x",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_ALSV06",
+    "paper_title": "Money in an estimated business cycle model of the euro area",
+    "source_full_md": "raw/mmb_mineru/runs/ea_alsv06__money_in_an_estimated_business_cycle_model_of_the_euro_area__21baa95d/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Money in an estimated business cycle model of the euro area.pdf",
+    "status": "needs_review",
+    "formula_quality": "readable_markdown_needs_pdf_check",
+    "steady_state_quality": "linear_model_zero_deviation_steady_state",
+    "needs_human_review": "true",
+    "notes": "First-pass derivation; PDF body not read; check velocity shock sign convention in money-demand equation."
+  },
+  "validation": [
+    {
+      "check": "raw_pdf_path_exists",
+      "status": "passed"
+    },
+    {
+      "check": "source_sniff_first_80_markdown_lines",
+      "status": "passed",
+      "notes": "Title/authors match except OCR accent artifacts."
+    },
+    {
+      "check": "appendix_normalization",
+      "status": "not_applicable",
+      "notes": "docs/mmb_appendix_full_normalizations/EA_ALSV06.md does not exist."
+    },
+    {
+      "check": "implementation_cross_check",
+      "status": "performed",
+      "notes": "Read .agents/skills/dynare-copilot/references/examples/EA_ALSV06_rep.mod only as implementation cross-check."
+    },
+    {
+      "check": "runtime_validation",
+      "status": "not_performed"
+    },
+    {
+      "check": "json_validation",
+      "status": "passed",
+      "notes": "python3 -m json.tool passed for source_manifest.json and worker_report.json."
+    },
+    {
+      "check": "english_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "english_chinese_f_number_counts_match",
+      "status": "passed",
+      "notes": "Counts matched for F1 through F12."
+    },
+    {
+      "check": "git_diff_check",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "Money-demand velocity-shock sign convention differs between paper OCR equation (16) and the Rep-MMB .mod; requires source-level PDF or author-code review.",
+    "Equations are normalized from MinerU Markdown OCR and should remain needs_review until checked against source PDF.",
+    "No Dynare run was performed."
+  ]
+}

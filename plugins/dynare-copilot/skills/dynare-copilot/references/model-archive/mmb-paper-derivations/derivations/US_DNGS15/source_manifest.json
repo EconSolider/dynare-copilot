@@ -1,0 +1,73 @@
+{
+  "model_id": "US_DNGS15",
+  "status": "needs_review",
+  "paper": {
+    "title": "Inflation in the Great Recession and New Keynesian Models",
+    "authors": [
+      "Marco Del Negro",
+      "Marc P. Giannoni",
+      "Frank Schorfheide"
+    ],
+    "year": 2015,
+    "journal_or_series": "American Economic Journal: Macroeconomics 7(1), pp. 168-196",
+    "doi": "10.1257/mac.20140097"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_key": "model_id=US_DNGS15",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "Infation in the Great recession and New Keynesian models",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": "Index metadata and raw PDF filename spell the title as 'Infation'; the primary Markdown title line spells it 'Inflation'."
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_dngs15_us_dngs15_sw_us_dngs15_swsp_us_dngs15__infation_in_the_great_recession_and_new_keynesian_models__c8e184ab/full.md",
+      "sha256": "bfd43e66408395b5765a1d965343d9e09538ea7487844be973a375275f3b07f0",
+      "title_sniff": "# Inflation in the Great Recession and New Keynesian Models\u2020",
+      "formula_regions_used": [
+        "Section I.A equations (1)-(21)",
+        "Section I.B equations (22)-(27) inspected for fundamental inflation but not included as core equilibrium equations",
+        "Section I.C measurement equations inspected for observables"
+      ]
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Infation in the Great recession and New Keynesian models.pdf",
+      "sha256": "61321a255d611f1c0c0db485ee98862d2e1350bfce989a7fd007db890342a7de",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_DNGS15.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_DNGS15_rep.mod",
+      "sha256": "8ada225b83f0c8227cc56bd334c573b9e5bd9d168862df7d1a56e210cb0e42cb",
+      "used_as": "implementation_cross_check_only",
+      "runtime_validation": "not_performed"
+    }
+  },
+  "mineru": {
+    "run_id": "c8e184ab-3624-4257-9ea5-7ec1cf904fbb"
+  },
+  "outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_DNGS15/US_DNGS15_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_DNGS15/US_DNGS15_derivation.zh.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_DNGS15/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_DNGS15/worker_report.json"
+  },
+  "validation": {
+    "runtime_validation": "not_performed",
+    "dynare_run": false,
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "english_sections_required": 8,
+    "f_number_count_en": 35,
+    "f_number_count_zh": 35
+  }
+}

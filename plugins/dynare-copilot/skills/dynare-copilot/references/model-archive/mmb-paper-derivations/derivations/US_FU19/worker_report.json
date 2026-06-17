@@ -1,0 +1,83 @@
+{
+  "model_id": "US_FU19",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_FU19/US_FU19_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FU19/US_FU19_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FU19/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FU19/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FU19/worker_report.json"
+  ],
+  "ownership": {
+    "owned_path": "data/model_archive/mmb_derivations/US_FU19/",
+    "shared_catalog_csv_edited": false,
+    "shared_status_csv_edited": false,
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "source_order_completed": [
+    ".agents/skills/mmb-model-archive-builder/SKILL.md",
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv row for US_FU19",
+    "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+    "first-page/title sniff of alternate MinerU run 9554deb8",
+    "raw PDF existence check",
+    "appendix normalization absence check",
+    ".agents/skills/dynare-copilot/references/examples/US_FU19_rep.mod as implementation_cross_check"
+  ],
+  "source_manifest_summary": {
+    "primary_full_md": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+    "raw_pdf": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+    "doi": "10.1016/j.red.2019.05.005",
+    "mineru_run_ids": [
+      "efab411e-a8d6-41ce-bb6b-05c19d2bcee8",
+      "9554deb8-9b94-41f0-a478-ad9c637a6e86"
+    ],
+    "appendix_normalization_exists": false,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/US_FU19_rep.mod"
+  },
+  "proposed_catalog_csv_row": {
+    "ModelID": "US_FU19",
+    "Task": "US_FU19_rep",
+    "Paper": "Accounting for Post Crisis Inflation: A Retro Analysis",
+    "Year": "2019",
+    "ModelType": "Medium-scale New Keynesian DSGE (Smets-Wouters style, linearized)",
+    "Economy": "United States",
+    "Category": "Estimated DSGE Benchmarks (Smets-Wouters Type)",
+    "KeyFeatures": "Smets-Wouters, habit formation, Calvo prices and wages, investment adjustment costs, inflation accounting, ZLB surprise-shock treatment",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+    "RawPDF": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+    "DOI": "10.1016/j.red.2019.05.005",
+    "Status": "needs_review"
+  },
+  "proposed_status_csv_row": {
+    "model_id": "US_FU19",
+    "paper_title": "Accounting for Post Crisis Inflation: A Retro Analysis",
+    "source_full_md": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+    "status": "needs_review",
+    "formula_quality": "partial_paper_body_equations_only",
+    "steady_state_quality": "implementation_cross_check_only",
+    "needs_human_review": "true",
+    "notes": "US_FU19 paper body references Smets-Wouters 2007 and online appendix but does not print complete derivation."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "source_manifest_json_tool": "passed",
+    "worker_report_json_tool": "passed",
+    "eight_sections_english": "passed",
+    "f_number_count_match": "passed",
+    "f_number_range": "F1-F34",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "Complete Smets-Wouters source-level equations are not printed in the Fratto-Uhlig paper body.",
+    "No US_FU19 appendix normalization file exists in docs/mmb_appendix_full_normalizations.",
+    "Several equations are inferred from the Smets-Wouters benchmark and cross-checked against the local .mod, so they remain needs_review.",
+    "Runtime validation and Dynare checks were intentionally not run."
+  ]
+}

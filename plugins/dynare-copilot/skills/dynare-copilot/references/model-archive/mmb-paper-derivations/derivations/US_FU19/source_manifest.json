@@ -1,0 +1,115 @@
+{
+  "model_id": "US_FU19",
+  "paper_title": "Accounting for Post Crisis Inflation: A Retro Analysis",
+  "authors": [
+    "Chiara Fratto",
+    "Harald Uhlig"
+  ],
+  "year": "2019",
+  "journal_or_series": "Review of Economic Dynamics",
+  "doi": "10.1016/j.red.2019.05.005",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "model_index_row": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "source_csv_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_FU19",
+    "paper_slug": "us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "efab411e-a8d6-41ce-bb6b-05c19d2bcee8",
+      "9554deb8-9b94-41f0-a478-ad9c637a6e86"
+    ],
+    "primary_source_title": "Accounting for Post Crisis Inflation- A Retro Analysis",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+      "sha256": "ea561aea0f58d57cf220d8bcf943bfe264b3671310b98c1778916a32a1200f2c",
+      "mineru_run_id": "efab411e-a8d6-41ce-bb6b-05c19d2bcee8",
+      "exists": true,
+      "match_role": "primary_paper_markdown"
+    },
+    "alternate_full_md": [
+      {
+        "path": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__9554deb8/full.md",
+        "sha256": "d4c4ca53ff03acf8ad6d2d3da916bb52b89d1b54c2522b671b486b5f6193564f",
+        "mineru_run_id": "9554deb8-9b94-41f0-a478-ad9c637a6e86",
+        "exists": true,
+        "match_role": "alternate_same_title_markdown"
+      }
+    ],
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+      "sha256": "6856eab4d489bf3e7e65a199dabaf49905aceb80b9e09d593c96117b76a023b4",
+      "exists": true,
+      "opened_for_body_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_FU19.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FU19_rep.mod",
+      "sha256": "ebac341b41176360826ef7ac5abdc4074fb8ad5679d94eae30b391d6108883f8",
+      "exists": true,
+      "used_as": "implementation_cross_check_only",
+      "dynare_run": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_FU19/US_FU19_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_FU19/US_FU19_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_FU19/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_FU19/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_FU19/worker_report.json"
+  },
+  "source_quality": {
+    "title_match": "clean",
+    "formula_quality": "partial_paper_body_equations_only",
+    "source_index_issue": null,
+    "uncertainty_status": "needs_review",
+    "notes": [
+      "The paper body states that the benchmark is the original Smets-Wouters (2007) model but does not reproduce the complete model derivation.",
+      "The local .mod file confirms a linear Smets-Wouters style implementation, variable list, shock names, and measurement equations, but is not treated as a paper-side source.",
+      "No appendix normalization exists for US_FU19 in docs/mmb_appendix_full_normalizations."
+    ]
+  },
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "status": "not_performed",
+    "notes": "Dynare was not run by instruction."
+  },
+  "proposed_index_rows": {
+    "catalog_csv": {
+      "ModelID": "US_FU19",
+      "Task": "US_FU19_rep",
+      "Paper": "Accounting for Post Crisis Inflation: A Retro Analysis",
+      "Year": "2019",
+      "ModelType": "Medium-scale New Keynesian DSGE (Smets-Wouters style, linearized)",
+      "Economy": "United States",
+      "Category": "Estimated DSGE Benchmarks (Smets-Wouters Type)",
+      "KeyFeatures": "Smets-Wouters, habit formation, Calvo prices and wages, investment adjustment costs, inflation accounting, ZLB surprise-shock treatment",
+      "DateAdded": "2026-06-17",
+      "SourceFullMD": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+      "RawPDF": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+      "DOI": "10.1016/j.red.2019.05.005",
+      "Status": "needs_review"
+    },
+    "status_csv": {
+      "model_id": "US_FU19",
+      "paper_title": "Accounting for Post Crisis Inflation: A Retro Analysis",
+      "source_full_md": "raw/mmb_mineru/runs/us_fu19__accounting_for_post_crisis_inflation_a_retro_analysis__efab411e/full.md",
+      "raw_pdf_path": "raw/mmb_papers/Accounting for Post Crisis Inflation- A Retro Analysis.pdf",
+      "status": "needs_review",
+      "formula_quality": "partial_paper_body_equations_only",
+      "steady_state_quality": "implementation_cross_check_only",
+      "needs_human_review": "true",
+      "notes": "US_FU19 paper body references Smets-Wouters 2007 and online appendix but does not print complete derivation."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "model_id": "NK_MCN99cr",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_MCN99cr/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_MCN99cr/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_MCN99cr/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_MCN99cr",
+    "Task": "mmb_derivation",
+    "Paper": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "Year": "1999",
+    "ModelType": "model(linear)",
+    "Economy": "United States",
+    "Category": "New Keynesian monetary policy rule evaluation",
+    "KeyFeatures": "optimizing IS relation; money-demand LM relation; Calvo-Rotemberg Phillips curve; output gap/capacity process; Taylor-style interest-rate policy rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st__b43633f6/full.md",
+    "RawPDF": "raw/mmb_papers/Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model.pdf",
+    "DOI": "10.3386/w6599",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_MCN99cr",
+    "paper_title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "source_full_md": "raw/mmb_mineru/runs/nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st__b43633f6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model.pdf",
+    "status": "needs_review",
+    "formula_quality": "readable_first_pass_needs_pdf_review",
+    "steady_state_quality": "linear_model_zero_steady_state_recorded",
+    "needs_human_review": "true",
+    "notes": "Calvo-Rotemberg implementation extracted; PDF formula proofreading and runtime validation deferred; P-bar source variant excluded from active implementation."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "english_eight_sections": "passed",
+    "f_number_count_match": "passed",
+    "dynare_runtime_validation": "not_performed"
+  },
+  "unresolved_issues": [
+    "PDF-level formula proofreading not performed.",
+    "Exact source meaning of model suffix cr inferred from implementation cross-check.",
+    "Paper year differs between NBER cover page and model_index row; proposed catalog row follows model_index year 1999."
+  ]
+}

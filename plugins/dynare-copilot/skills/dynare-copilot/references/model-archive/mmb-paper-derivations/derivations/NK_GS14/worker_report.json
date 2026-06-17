@@ -1,0 +1,49 @@
+{
+  "model_id": "NK_GS14",
+  "worker": "codex-main",
+  "status": "completed_with_needs_review",
+  "write_scope": "data/model_archive/mmb_derivations/NK_GS14",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_GS14/NK_GS14_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_GS14/NK_GS14_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_GS14/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_GS14/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_GS14/worker_report.json"
+  ],
+  "shared_indexes_updated": false,
+  "git_actions": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "reason": "User explicitly prohibited staging, committing, and pushing for this task."
+  },
+  "sources_read": [
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv",
+    "raw/mmb_mineru/runs/nk_gs14__should_monetary_policy_lean_against_the_wind_an_analysis_based_on_a_dsge__0f9b3acb/full.md",
+    ".agents/skills/dynare-copilot/references/examples/NK_GS14_rep.mod"
+  ],
+  "raw_pdf_path_exists": true,
+  "raw_pdf_body_read": false,
+  "appendix_normalization_exists": false,
+  "implementation_cross_check_used": true,
+  "runtime_validation_performed": false,
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "json_tool_worker_report": "passed",
+    "eight_sections": "passed",
+    "english_chinese_f_number_parity": "passed",
+    "english_f_references": 153,
+    "chinese_f_references": 153,
+    "unique_f_numbers": 35
+  },
+  "unresolved_issues": [
+    "Production function capital timing normalized to k_{t-1}; source Appendix A print should receive targeted review.",
+    "Markup/cost-push process is partly from implementation cross-check and should receive source-level review.",
+    "No Dynare runtime validation was performed.",
+    "Analytic steady-state construction remains partial."
+  ]
+}

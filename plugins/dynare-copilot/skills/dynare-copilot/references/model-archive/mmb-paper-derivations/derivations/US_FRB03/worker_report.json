@@ -1,0 +1,59 @@
+{
+  "model_id": "US_FRB03",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/US_FRB03/US_FRB03_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FRB03/US_FRB03_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FRB03/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FRB03/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FRB03/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_FRB03",
+    "Task": "forecast_based_policy_rule_frb_us",
+    "Paper": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "Year": "2003",
+    "ModelType": "linear macroeconometric FRB-US",
+    "Economy": "US",
+    "Category": "Monetary policy; model uncertainty",
+    "KeyFeatures": "Forecast-based Taylor rules; FRB-US cross-model evaluation; interest-rate smoothing; output-gap response",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "RawPDF": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "DOI": "10.1257/000282803322157016",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_FRB03",
+    "paper_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "source_full_md": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "status": "needs_review",
+    "formula_quality": "policy-rule formulas extracted; full FRB-US structural equations not printed in paper",
+    "steady_state_quality": "linearized baseline described; full implementation steady state deferred",
+    "needs_human_review": "true",
+    "notes": "Index author field lists John B. Taylor, but the paper title page lists John C. Williams; shared CSVs were not edited by instruction."
+  },
+  "validation": {
+    "dynare_run_performed": false,
+    "commands": [
+      "git diff --check",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_FRB03/source_manifest.json >/dev/null",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_FRB03/worker_report.json >/dev/null",
+      "python3 - <<'PY'\nfrom pathlib import Path\nimport re\nmodel = 'US_FRB03'\nbase = Path('data/model_archive/mmb_derivations') / model\nen = (base / f'{model}_derivation.en.md').read_text()\nzh = (base / f'{model}_derivation.zh.md').read_text()\nassert all(f'## {i}.' in en for i in range(1, 9))\nassert re.search(r'\\(F1\\)', en)\nassert len(re.findall(r'\\(F\\d+\\)', en)) == len(re.findall(r'\\(F\\d+\\)', zh))\nprint('archive_entry_checks_ok')\nprint('f_number_counts_match')\nPY"
+    ],
+    "results": [
+      "git diff --check passed for data/model_archive/mmb_derivations/US_FRB03",
+      "source_manifest.json parsed successfully",
+      "worker_report.json parsed successfully",
+      "English derivation has all eight required sections",
+      "English and Chinese F-number counts match"
+    ]
+  },
+  "unresolved_issues": [
+    "Full FRB-US structural equations are not printed in the LWW (2003) paper-side Markdown.",
+    "Detailed FRB-US derivation requires FRB-US documentation, not just the MMB .mod implementation.",
+    "Model-index author metadata should be reviewed in a separate shared-index task.",
+    "Runtime validation was explicitly out of scope."
+  ]
+}

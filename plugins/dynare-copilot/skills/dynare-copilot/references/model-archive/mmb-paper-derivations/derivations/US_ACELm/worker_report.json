@@ -1,0 +1,55 @@
+{
+  "model_id": "US_ACELm",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/US_ACELm/US_ACELm_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_ACELm/US_ACELm_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_ACELm/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_ACELm/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_ACELm/worker_report.json"
+  ],
+  "status": "needs_review",
+  "formula_quality": "needs_review",
+  "steady_state_quality": "needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "dynare_run": false
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_ACELm",
+    "Task": "Firm-specific capital, nominal rigidities",
+    "Paper": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle",
+    "Year": "2005",
+    "ModelType": "DSGE, linearized medium-scale New Keynesian",
+    "Economy": "US",
+    "Category": "Nominal rigidities; firm-specific capital",
+    "KeyFeatures": "Firm-specific capital; Calvo prices; Calvo wages; habit formation; money demand; variable utilization; investment adjustment costs; neutral and embodied technology shocks; money-growth policy",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "RawPDF": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "DOI": "10.3386/w11034",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_ACELm",
+    "paper_title": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle",
+    "source_full_md": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "Main paper source lacks full technical-appendix linear system; .mod used only as implementation cross-check; Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool": "passed",
+    "english_eight_sections": "passed",
+    "f_number_counts_match": "passed",
+    "details": "archive_entry_checks_ok; English and Chinese each have 104 F-number mentions and 35 unique F-numbers."
+  },
+  "unresolved_issues": [
+    "Full technical appendix not present in source paths.",
+    "Exact coefficient-level linear equations need source-level verification.",
+    "Transitory neutral technology shock appears in Rep-MMB implementation and needs provenance review."
+  ]
+}

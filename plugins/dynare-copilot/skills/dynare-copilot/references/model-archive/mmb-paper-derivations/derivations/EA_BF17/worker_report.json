@@ -1,0 +1,70 @@
+{
+  "model_id": "EA_BF17",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/EA_BF17/EA_BF17_derivation.en.md",
+    "data/model_archive/mmb_derivations/EA_BF17/EA_BF17_derivation.zh.md",
+    "data/model_archive/mmb_derivations/EA_BF17/source_manifest.json",
+    "data/model_archive/mmb_derivations/EA_BF17/extraction_notes.md",
+    "data/model_archive/mmb_derivations/EA_BF17/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_BF17",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "Money And Monetary Policy In The Eurozone: An Empirical Analysis During Crises",
+    "Year": "2017",
+    "ModelType": "log-linearized New Keynesian DSGE with nonseparable money utility",
+    "Economy": "Euro area",
+    "Category": "monetary; New Keynesian; crisis estimation",
+    "KeyFeatures": "nonseparable consumption-money preferences; money demand; flexible-price output and money; Calvo Phillips curve; smoothed Taylor rule; crisis-window Bayesian estimation",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c__c4e7b84e/full.md",
+    "RawPDF": "raw/mmb_papers/Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises.pdf",
+    "DOI": "10.1017/s1365100515000644",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_BF17",
+    "paper_title": "Money And Monetary Policy In The Eurozone: An Empirical Analysis During Crises",
+    "source_full_md": "raw/mmb_mineru/runs/ea_bf17__money_and_monetary_policy_in_the_eurozone_an_empirical_analysis_during_c__c4e7b84e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Money And Monetary Policy In The Eurozone- An Empirical Analysis During Crises.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_online_appendix_review",
+    "steady_state_quality": "linear_model_zero_deviation_steady_state",
+    "needs_human_review": "true",
+    "notes": "First-pass extraction from MinerU Markdown; model equations rely partly on implementation cross-check because the Online Appendix is absent locally; raw PDF existence checked but PDF body not opened; Dynare not run; shared indexes not edited."
+  },
+  "validation": [
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check --no-index /dev/null for each new file in data/model_archive/mmb_derivations/EA_BF17",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool data/model_archive/mmb_derivations/EA_BF17/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m json.tool data/model_archive/mmb_derivations/EA_BF17/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "command": "check English has all eight required sections",
+      "status": "passed"
+    },
+    {
+      "command": "check English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "22 total F-number references in each file; 11 unique equation numbers, F1-F11"
+    }
+  ],
+  "unresolved_issues": [
+    "Online Appendix model equations are not present in the primary Markdown or a local appendix normalization file.",
+    "Coefficient formulas in the reduced equations require source-level review.",
+    "Taylor-rule money term is described in source prose but commented out in the implementation cross-check.",
+    "Runtime validation was intentionally not performed."
+  ]
+}

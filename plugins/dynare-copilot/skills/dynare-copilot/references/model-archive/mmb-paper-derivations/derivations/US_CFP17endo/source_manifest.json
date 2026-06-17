@@ -1,0 +1,115 @@
+{
+  "model_id": "US_CFP17endo",
+  "status": "needs_review",
+  "paper": {
+    "title": "Targeting long rates in a model with segmented markets",
+    "authors": [
+      "Carlstrom, Charles T.",
+      "Fuerst, Timothy S.",
+      "Paustian, Matthias"
+    ],
+    "year": 2017,
+    "journal_or_series": "American Economic Journal: Macroeconomics 9 (1), 205-42",
+    "doi": "10.1257/mac.20150179"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_CFP17endo",
+    "paper_slug": "us_cfp17endo_us_cfp17exo__targeting_long_rates_in_a_model_with_segmented_markets",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "d8728772-c118-4e20-9cec-bcc6e7b742d5"
+    ],
+    "primary_source_title": "Targeting long rates in a model with segmented markets",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "source_index_issue": null
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_cfp17endo_us_cfp17exo__targeting_long_rates_in_a_model_with_segmented_markets__d8728772/full.md",
+      "sha256": "a4a2bd9a05383e9b3b6da4d075e7b5232fb8d34c8c5f2c6d289915c9ac131d41",
+      "exists": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Targeting long rates in a model with segmented markets.pdf",
+      "sha256": "62897590694e3d4524870df1813a0286a0e14c042f4e5b1adf4896749c170be6",
+      "exists": true,
+      "opened_for_formula_check": false,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_CFP17endo.md",
+      "sha256": null,
+      "exists": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_CFP17endo_rep.mod",
+      "sha256": "ba394a0f3b9fa3bdc2b016dd950bf8098005666c8f358fb6d45a3bd210c030a3",
+      "exists": true,
+      "used_as": "implementation_cross_check",
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "source_sniff": {
+    "method": "first 80 Markdown lines",
+    "expected_title": "Targeting long rates in a model with segmented markets",
+    "observed_title": "Targeting Long Rates in a Model with Segmented Markets",
+    "expected_authors": "Carlstrom, Charles T.; Fuerst, Timothy S.; Paustian, Matthias",
+    "observed_authors": "CHARLES T. CARLSTROM, TIMOTHY S. FUERST, AND MATTHIAS PAUSTIAN",
+    "mismatch": false,
+    "notes": "Title and authors match the model index."
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/us_cfp17endo_us_cfp17exo__targeting_long_rates_in_a_model_with_segmented_markets__d8728772/full.md",
+      "spans": [
+        "abstract and section I model overview",
+        "household equations (1)-(15)",
+        "financial intermediary equations (16)-(27)",
+        "firm, capital producer, and policy equations (28)-(35)",
+        "log-linearized model equations (36)-(64)",
+        "calibration discussion for beta, alpha, delta, markup, term premium, leverage, duration, and FI balance-sheet share",
+        "appendix D FI value-function equations (A28)-(A40)"
+      ]
+    },
+    {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_CFP17endo_rep.mod",
+      "spans": [
+        "variable and shock declarations",
+        "linearized model block",
+        "endogenous policy closure term_prem = 0 and term_premf = 0",
+        "capital timing and flexible-price counterpart conventions"
+      ],
+      "used_as": "implementation_cross_check"
+    }
+  ],
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_CFP17endo/US_CFP17endo_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_CFP17endo/US_CFP17endo_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_CFP17endo/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_CFP17endo/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_CFP17endo/worker_report.json"
+  },
+  "catalog_cross_reference": {
+    "proposed_catalog_row_in_worker_report": true,
+    "shared_catalog_edited": false,
+    "shared_status_edited": false
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown; no PDF body or online appendix source-level formula check was performed. OCR normalization around net-worth/leverage notation should be reviewed."
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only; user explicitly said not to run Dynare."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations and avoids copying long prose from the paper."
+}

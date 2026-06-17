@@ -1,0 +1,86 @@
+{
+  "model_id": "US_BB18",
+  "status": "needs_review",
+  "paper": {
+    "title": "Oil supply shocks and the U.S. economy: An estimated DSGE model",
+    "authors": "Balke, N.; Brown, S.",
+    "year": 2018,
+    "doi": "10.1016/j.enpol.2018.02.027",
+    "journal_or_series": "Energy Policy, Volume 116, Pages 357-372"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_number": 104,
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "paper_slug": "us_bb18__oil_supply_shocks_and_the_u_s_economy_an_estimated_dsge_model",
+    "primary_source_title": "Oil supply shocks and the U.S. economy- An estimated DSGE model",
+    "mineru_run_ids": [
+      "fb6c41df-3d98-4b31-8b03-8163ae00a837"
+    ]
+  },
+  "primary_source": {
+    "full_md_path": "raw/mmb_mineru/runs/us_bb18__oil_supply_shocks_and_the_u_s_economy_an_estimated_dsge_model__fb6c41df/full.md",
+    "full_md_sha256": "d1ef65c6692f3c7ce04e1ee6aad297592ce270ba6f686918b4475784bde1c385",
+    "raw_pdf_path": "raw/mmb_papers/Oil supply shocks and the U.S. economy- An estimated DSGE model.pdf",
+    "raw_pdf_exists": true,
+    "raw_pdf_sha256": "75c8ad5e3e59918d0f658893f8eade3233f827b5e017dee781a0682a503a2c46",
+    "mineru_run_id": "fb6c41df-3d98-4b31-8b03-8163ae00a837",
+    "mineru_source_title": "Oil supply shocks and the U.S. economy: An estimated DSGE model",
+    "image_count": 111,
+    "full_md_bytes": 112638
+  },
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_BB18.md",
+    "exists": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_BB18_rep.mod",
+    "exists": true,
+    "sha256": "c35fff133268895e677ec59a6f7e7f471f74f7c1840fd9949945efbe88b433e9",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only to compare variable coverage, timing conventions, model(linear) form, shock names, and implementation scaling. It was not used as paper-side mathematical authority and Dynare was not run."
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_BB18/US_BB18_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_BB18/US_BB18_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_BB18/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_BB18/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_BB18/worker_report.json"
+  },
+  "source_spans_used": [
+    {
+      "path": "raw/mmb_mineru/runs/us_bb18__oil_supply_shocks_and_the_u_s_economy_an_estimated_dsge_model__fb6c41df/full.md",
+      "spans": [
+        "title, abstract, and introduction at top of Markdown",
+        "Section 2 model overview and feature list",
+        "Section 2.1 household utility, consumption, labor, wage rigidity, durable services, budget, and adjustment costs",
+        "Section 2.2 final goods and transportation production",
+        "Section 2.3 intermediate goods production and price adjustment",
+        "Sections 2.4-2.5 capital-services and domestic oil production blocks",
+        "Section 2.6 monetary-policy rule, Euler equation, and stochastic discount factor",
+        "Section 2.7 market-clearing equations and GDP identities",
+        "Sections 2.8-2.9 ROW equations and optimal oil/efficiency conditions",
+        "Section 3 estimation, shocks, observables, calibrated shares, and steady-state targets"
+      ]
+    }
+  ],
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only. User explicitly requested not to run Dynare."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "The paper-side Markdown contains the main structural equations, but some OCR expressions are malformed and the full log-linear implementation equations are not printed as a compact paper-side appendix. Several equations are marked needs_review."
+  },
+  "copyright_boundary": "The derivation extracts model structure and equations and avoids copying long prose from the paper.",
+  "created_by": "codex",
+  "created_date": "2026-06-17",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17"
+}

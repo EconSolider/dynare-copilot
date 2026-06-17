@@ -1,0 +1,47 @@
+{
+  "model_id": "G3_CW03",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/G3_CW03/G3_CW03_derivation.en.md",
+    "data/model_archive/mmb_derivations/G3_CW03/G3_CW03_derivation.zh.md",
+    "data/model_archive/mmb_derivations/G3_CW03/source_manifest.json",
+    "data/model_archive/mmb_derivations/G3_CW03/extraction_notes.md",
+    "data/model_archive/mmb_derivations/G3_CW03/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "G3_CW03",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "Inflation dynamics and international linkages: A model of the United States, the Euro Area and Japan",
+    "Year": "2003",
+    "ModelType": "linear rational-expectations semi-structural three-country model",
+    "Economy": "United States; euro area; Japan",
+    "Category": "Open-economy monetary policy; multi-country semi-structural model",
+    "KeyFeatures": "staggered contracts; Taylor contracts; Fuhrer-Moore contracts; output-gap demand equations; term structure; real exchange rates; UIP; policy rules",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/g3_cw03__inflation_dynamics_and_international_linkages_a_model_of_the_united_stat__b76bbb9e/full.md",
+    "RawPDF": "raw/mmb_papers/Inflation dynamics and international linkages- A model of the United States, the Euro Area and Japan.pdf",
+    "DOI": "10.17016/ifdp.2002.0745",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "G3_CW03",
+    "paper_title": "Inflation dynamics and international linkages: A model of the United States, the Euro Area and Japan",
+    "source_full_md": "raw/mmb_mineru/runs/g3_cw03__inflation_dynamics_and_international_linkages_a_model_of_the_united_stat__b76bbb9e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Inflation dynamics and international linkages- A model of the United States, the Euro Area and Japan.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review; first-pass extraction from MinerU Markdown plus implementation cross-check",
+    "steady_state_quality": "linearized_steady_state_zero_or_normalized",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation. Source title matched; raw PDF exists but body not read. Policy shock declaration and exact contract-equation normalization need review. Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool_source_manifest": "passed",
+    "english_eight_sections": "passed",
+    "f_number_count_match": "passed; English count 50, Chinese count 50 including repeated references"
+  },
+  "runtime_validation": {
+    "performed": false,
+    "status": "not_performed"
+  }
+}

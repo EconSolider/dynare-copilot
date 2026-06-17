@@ -1,0 +1,152 @@
+{
+  "model_id": "NK_MCN99cr",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "authors": [
+      "McCallum, Bennett",
+      "Nelson, Edward"
+    ],
+    "year": 1999,
+    "journal_or_series": "Taylor, J. B. (Ed.), Monetary Policy Rules, pp. 15-56",
+    "doi": "10.3386/w6599"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_number_including_header": 83,
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st__b43633f6/full.md",
+      "sha256": "df5dc47f3d5c05310961cc9ff8cb65bf4130fc3a3c8b9d0f3b5d62110baa92e8",
+      "mineru_run_id": "b43633f6-1141-457a-af12-8edc3db54f79",
+      "sniffed_title_matches": true,
+      "formula_quality": "readable_first_pass_needs_pdf_review"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model.pdf",
+      "sha256": "ca8ae773f0c22ac1736ff56cd2e6877b1185dcfe55a650acdf02cd8587db6cca",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_MCN99cr.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_MCN99cr_rep.mod",
+      "sha256": "cc6add948df9440354ca633b80294d913284d617300a17f8e70766aef7b2e8d9",
+      "exists": true,
+      "used_as": "implementation_cross_check_only",
+      "runtime_validation": "not_performed"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_MCN99cr/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_MCN99cr/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_MCN99cr/worker_report.json"
+  },
+  "model_characterization": {
+    "model_form": "model(linear)",
+    "active_variant": "Calvo-Rotemberg price adjustment",
+    "excluded_source_variant": "P-bar price adjustment",
+    "economy": "United States",
+    "category": "New Keynesian monetary policy rule evaluation",
+    "key_features": [
+      "optimizing IS relation",
+      "money-demand LM relation",
+      "Calvo-Rotemberg Phillips curve",
+      "capacity-output/output-gap process",
+      "Taylor-style interest-rate policy rule"
+    ]
+  },
+  "validation": {
+    "dynare_runtime_validation": "not_performed",
+    "document_validation": "passed_current_turn_checks",
+    "status_reason": "First-pass extraction from MinerU Markdown and implementation cross-check; PDF formula proofreading and runtime validation deferred."
+  },
+  "paper_title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+  "authors": "McCallum, Bennett; Nelson, Edward",
+  "year": "1999",
+  "journal_or_series": "Taylor, J. B. (Ed.), Monetary Policy Rules, pp. 15-56",
+  "doi": "10.3386/w6599",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_MCN99cr",
+    "paper_title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "authors": "McCallum, Bennett; Nelson, Edward",
+    "year": "1999",
+    "journal_or_series": "Taylor, J. B. (Ed.), Monetary Policy Rules, pp. 15-56",
+    "doi": "10.3386/w6599",
+    "paper_slug": "nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "b43633f6-1141-457a-af12-8edc3db54f79",
+    "primary_source_title": "Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st__b43633f6/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_mcn99cr__performance_of_operational_policy_rules_in_an_estimated_semiclassical_st__b43633f6/full.md",
+      "exists": true,
+      "sha256": "df5dc47f3d5c05310961cc9ff8cb65bf4130fc3a3c8b9d0f3b5d62110baa92e8"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Performance of Operational Policy Rules in an Estimated Semiclassical Structural Model.pdf",
+      "exists": true,
+      "sha256": "ca8ae773f0c22ac1736ff56cd2e6877b1185dcfe55a650acdf02cd8587db6cca"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.en.md",
+      "exists": true,
+      "sha256": "f54dd9507920d317f82e3305bddd646c918d7d24388287baeae56e41a89ab766"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_MCN99cr/NK_MCN99cr_derivation.zh.md",
+      "exists": true,
+      "sha256": "7fca97cb17afb9412d81d020791828d49d86782b7caf2961158c6b25724ee8a4"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_MCN99cr/source_manifest.json",
+      "exists": true,
+      "sha256": "6032b101cfe531a52e39b0ba9c3d71cd00e9d063b76abc0ca167216f7cb8f8d3"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_MCN99cr/extraction_notes.md",
+      "exists": true,
+      "sha256": "7ebb98f8287282425178fa4835cdb6c16d9fda25b4b1c93195071013bd3f5fb4"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_MCN99cr/worker_report.json",
+      "exists": true,
+      "sha256": "8f6a914a8b0d326fb592bc6151b49074d1e4e851edab6b9d068e789b3b82a347"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "model_id": "EA_CW05fm",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/EA_CW05fm/EA_CW05fm_derivation.en.md",
+    "data/model_archive/mmb_derivations/EA_CW05fm/EA_CW05fm_derivation.zh.md",
+    "data/model_archive/mmb_derivations/EA_CW05fm/source_manifest.json",
+    "data/model_archive/mmb_derivations/EA_CW05fm/extraction_notes.md",
+    "data/model_archive/mmb_derivations/EA_CW05fm/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EA_CW05fm",
+    "Task": "derivation_extraction",
+    "Paper": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "Year": "2005",
+    "ModelType": "linear rational-expectations small euro-area model",
+    "Economy": "Euro area",
+    "Category": "overlapping wage contracts; monetary policy",
+    "KeyFeatures": "Relative real wage contracting variant; output gap IS equation; Taylor-type policy rule; expectations-hypothesis term structure",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+    "RawPDF": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+    "DOI": "10.1016/j.euroecorev.2003.05.001",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EA_CW05fm",
+    "paper_title": "A small estimated euro area model with rational expectations and nominal rigidities",
+    "source_full_md": "raw/mmb_mineru/runs/ea_cw05fm_ea_cw05ta__a_small_estimated_euro_area_model_with_rational_expectations_and_nominal__61e070cd/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small estimated euro area model with rational expectations and nominal rigidities.pdf",
+    "status": "needs_review",
+    "formula_quality": "core equations extracted from Markdown; RW versus RW-S implementation alignment needs review",
+    "steady_state_quality": "linear gap/rate steady state recorded; runtime validation not performed",
+    "needs_human_review": "true",
+    "notes": "No shared catalog/status files edited. PDF body not read; raw PDF existence and hash recorded."
+  },
+  "validation": [
+    {
+      "name": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "name": "json validation",
+      "status": "passed"
+    },
+    {
+      "name": "English eight sections",
+      "status": "passed"
+    },
+    {
+      "name": "English/Chinese F-number counts match",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "The paper distinguishes RW, RW-C, RW-S, and NW. The implementation comments identify EA_CW05fm as relative real wage contracting, but parameter values match the paper's RW-S column; variant label needs human review.",
+    "The exact algebra from paper contract-price notation to Rep-MMB auxiliary variables was not fully re-derived.",
+    "No Dynare runtime validation was performed."
+  ]
+}

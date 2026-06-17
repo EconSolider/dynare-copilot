@@ -1,0 +1,62 @@
+{
+  "model_id": "US_FV10",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_FV10/US_FV10_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FV10/US_FV10_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FV10/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FV10/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FV10/worker_report.json"
+  ],
+  "source_reading": {
+    "skill": ".agents/skills/mmb-model-archive-builder/SKILL.md",
+    "task_contract": ".agents/skills/mmb-model-archive-builder/references/subagent-task-template.md",
+    "build_plan": "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    "style": ".agents/skills/dynare-copilot/references/derivation-style.md",
+    "example": ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "model_index": "raw/mmb_mineru/model_index.csv",
+    "primary_full_md": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+    "raw_pdf": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+    "appendix_normalization": null,
+    "implementation_cross_check": ".agents/skills/dynare-copilot/references/examples/US_FV10_rep.mod"
+  },
+  "proposed_catalog_row": {
+    "ModelID": "US_FV10",
+    "Task": "Derive the Fernandez-Villaverde (2010) benchmark estimated US DSGE model",
+    "Paper": "The Econometrics of DSGE Models",
+    "Year": "2010",
+    "ModelType": "Estimated medium-scale New Keynesian DSGE",
+    "Economy": "United States",
+    "Category": "New Keynesian; Bayesian estimation; real and nominal rigidities",
+    "KeyFeatures": "External habits; investment adjustment costs; variable utilization; Calvo wage and price setting with indexation; neutral and investment-specific technology trends; Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+    "RawPDF": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+    "DOI": "10.1007/s13209-009-0014-7",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_FV10",
+    "paper_title": "The Econometrics of DSGE Models",
+    "source_full_md": "raw/mmb_mineru/runs/us_fv10__the_econometrics_of_dsge_models__99400522/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Econometrics of DSGE Models.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": true,
+    "notes": "First-pass extraction; do not merge until human source review of marked equations."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check --no-index found no whitespace errors in new US_FV10 files",
+    "json_tool_source_manifest": "passed: python3 -m json.tool source_manifest.json",
+    "eight_section_check": "passed: English derivation contains sections 1 through 8",
+    "f_number_count_match": "passed: English and Chinese derivations both contain 33 unique F-numbers",
+    "dynare_runtime": "not_performed"
+  },
+  "unresolved_issues": [
+    "Habit FOC has an OCR ambiguity in one repeated equation.",
+    "Composite trend formula has nearby OCR artifact.",
+    "Investment-specific technology and preference/labor-disutility processes need paper-side spot checks or FV-RR 2006 source review.",
+    "Closed-form steady-state algorithm is not fully available in the 2010 Markdown extraction."
+  ]
+}

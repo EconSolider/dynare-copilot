@@ -1,0 +1,196 @@
+{
+  "model_id": "NK_LWW03",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "authors": "Levin, Andrew; Wieland, Volker; Williams, John C.",
+    "year": "2003",
+    "journal_or_series": "American Economic Review 93 (3), pp. 622-645",
+    "doi": "10.1257/000282803322157016"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "NK_LWW03",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+      "sha256": "e5513fdab74b53e9df2748adb850be6c6a4781bcf2aee6419603e04e9341646e",
+      "mineru_run_id": "c97e3d2f-7a9e-4264-94c8-b3429b587455",
+      "title_sniff": "matches expected title and authors in first 80 Markdown lines"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+      "sha256": "87d166c1f8657fe8c868dda87861c0145ca5545859777c4d113307caf8797ae3",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_LWW03.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_LWW03_rep.mod",
+      "sha256": "29694758b5cff10d24051609bfec5486ca15d5b5cc1c584f3d04c93086ff8805",
+      "role": "implementation_cross_check_only",
+      "dynare_run_performed": false,
+      "observed_form": "model(linear)",
+      "observed_endogenous": [
+        "ygap",
+        "pdot",
+        "rff",
+        "rstar",
+        "drff",
+        "pdotsh"
+      ],
+      "observed_exogenous": [
+        "rstar_",
+        "pdotsh_"
+      ],
+      "observed_policy_rule": "rff = 1.5*pdot"
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_LWW03/NK_LWW03_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_LWW03/NK_LWW03_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_LWW03/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_LWW03/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_LWW03/worker_report.json"
+  },
+  "equation_inventory": {
+    "f_count": 9,
+    "form": "linearized / model(linear)",
+    "source_equations": [
+      "paper equation (1): general forecast-based rule",
+      "paper equation (2): forward-looking Phillips curve",
+      "paper equation (3): expectational IS curve",
+      "paper equation (7): benchmark forecast-based rule"
+    ],
+    "implementation_cross_check_equations": [
+      "rff = 1.5*pdot",
+      "drff = rff - rff(-1)",
+      "rstar = rhorstar*rstar(-1)+ rstar_",
+      "pdotsh = rhopish*pdotsh(-1) + pdotsh_"
+    ]
+  },
+  "quality": {
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "runtime_validation_status": "not_performed",
+    "source_index_issue": null,
+    "notes": [
+      "The paper gives reduced-form optimizing AD-AS equations but not full primitive optimization problems in the extracted Markdown.",
+      "The MMB implementation uses a current-inflation Taylor-style policy rule rather than the paper's forecast-based benchmark rule.",
+      "The raw PDF exists but was not opened because the Markdown equations were legible for this first-pass extraction."
+    ]
+  },
+  "proposed_catalog_row": {
+    "ModelID": "NK_LWW03",
+    "Task": "Derive linearized optimizing AD-AS model and policy-rule variant",
+    "Paper": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "Year": "2003",
+    "ModelType": "Linearized New Keynesian optimizing AD-AS",
+    "Economy": "United States / generic closed economy",
+    "Category": "New Keynesian; monetary policy rules",
+    "KeyFeatures": "Forward-looking Phillips curve; expectational IS curve; natural-rate shock; inflation shock; forecast-based policy-rule class; MMB current-inflation rule variant",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "RawPDF": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "DOI": "10.1257/000282803322157016",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_LWW03",
+    "paper_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "source_full_md": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "notes": "Reduced-form equations are legible; primitive optimization problems and paper-vs-MMB policy-rule distinction need review."
+  },
+  "paper_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+  "authors": "Levin, Andrew; Wieland, Volker; Williams, John C.",
+  "year": "2003",
+  "journal_or_series": "American Economic Review 93 (3), pp. 622-645",
+  "doi": "10.1257/000282803322157016",
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_LWW03",
+    "paper_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "authors": "Levin, Andrew; Wieland, Volker; Williams, John C.",
+    "year": "2003",
+    "journal_or_series": "American Economic Review 93 (3), pp. 622-645",
+    "doi": "10.1257/000282803322157016",
+    "paper_slug": "nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "c97e3d2f-7a9e-4264-94c8-b3429b587455",
+    "primary_source_title": "The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+      "exists": true,
+      "sha256": "e5513fdab74b53e9df2748adb850be6c6a4781bcf2aee6419603e04e9341646e"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+      "exists": true,
+      "sha256": "87d166c1f8657fe8c868dda87861c0145ca5545859777c4d113307caf8797ae3"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_LWW03/NK_LWW03_derivation.en.md",
+      "exists": true,
+      "sha256": "91e7bc907881a23277bc81730f11e5551de2f91e2b1728f296ab032d24fec1da"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_LWW03/NK_LWW03_derivation.zh.md",
+      "exists": true,
+      "sha256": "037f32b4941f70f3310d0a3cce382f40336e0d67bb86d6821776375edaba60e5"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_LWW03/source_manifest.json",
+      "exists": true,
+      "sha256": "a133e96339dd7ce4a9393a9344a9be6bd16e40748239fe95def2f6cdda9ff689"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_LWW03/extraction_notes.md",
+      "exists": true,
+      "sha256": "cbefe1c3739b75430ee6afc20d83310c7ef8ca158874b778e72179e850a8e4ed"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_LWW03/worker_report.json",
+      "exists": true,
+      "sha256": "e90957a5dfbf404af692d0f8df89f63d24167e429dfbe667e71e39dc29e6c0b5"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper.",
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  }
+}

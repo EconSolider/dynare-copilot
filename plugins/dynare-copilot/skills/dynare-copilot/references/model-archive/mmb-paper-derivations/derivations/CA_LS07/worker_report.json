@@ -1,0 +1,64 @@
+{
+  "model_id": "CA_LS07",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/CA_LS07/CA_LS07_derivation.en.md",
+    "data/model_archive/mmb_derivations/CA_LS07/CA_LS07_derivation.zh.md",
+    "data/model_archive/mmb_derivations/CA_LS07/source_manifest.json",
+    "data/model_archive/mmb_derivations/CA_LS07/extraction_notes.md",
+    "data/model_archive/mmb_derivations/CA_LS07/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "CA_LS07",
+    "Task": "mmb_derivation",
+    "Paper": "Do central banks respond to exchange rate movements? A structural investigation",
+    "Year": "2007",
+    "ModelType": "linear small-open-economy New Keynesian DSGE",
+    "Economy": "Canada",
+    "Category": "Open economy monetary policy",
+    "KeyFeatures": "open-economy IS curve; open-economy Phillips curve; Taylor rule with exchange-rate depreciation response; exogenous terms-of-trade growth",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ca_ls07__do_central_banks_respond_to_exchange_rate_movements_a_structural_investi__075fd116/full.md",
+    "RawPDF": "raw/mmb_papers/Do central banks respond to exchange rate movements? A structural investigation.pdf",
+    "DOI": "10.1016/j.jmoneco.2006.01.009",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "CA_LS07",
+    "paper_title": "Do central banks respond to exchange rate movements? A structural investigation",
+    "source_full_md": "raw/mmb_mineru/runs/ca_ls07__do_central_banks_respond_to_exchange_rate_movements_a_structural_investi__075fd116/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Do central banks respond to exchange rate movements? A structural investigation.pdf",
+    "status": "needs_review",
+    "formula_quality": "legible MinerU Markdown, not PDF-audited",
+    "steady_state_quality": "linear model, zero steady state recorded",
+    "needs_human_review": "true",
+    "notes": "Reduced-form SOE NK equations extracted; primitive optimization problems and PDF-level formula audit deferred."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "check": "python3 -m json.tool source_manifest.json",
+      "result": "passed"
+    },
+    {
+      "check": "python3 -m json.tool worker_report.json",
+      "result": "passed"
+    },
+    {
+      "check": "English eight required sections",
+      "result": "passed"
+    },
+    {
+      "check": "English/Chinese F-number count parity",
+      "result": "passed; both files contain 32 F-number references and unique equations F1-F12"
+    }
+  ],
+  "unresolved_issues": [
+    "Formula audit against the PDF body or author code remains deferred.",
+    "Primitive optimization problems are not printed in the source Markdown.",
+    "Dynare runtime validation was not performed."
+  ]
+}

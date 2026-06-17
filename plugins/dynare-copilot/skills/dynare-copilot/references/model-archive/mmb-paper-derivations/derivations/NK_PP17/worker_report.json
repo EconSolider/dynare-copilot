@@ -1,0 +1,50 @@
+{
+  "model_id": "NK_PP17",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/NK_PP17/NK_PP17_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_PP17/NK_PP17_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_PP17/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_PP17/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_PP17/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_PP17",
+    "Task": "Coordinating monetary and macroprudential policies",
+    "Paper": "De Paoli and Paustian (2017), Coordinating monetary and macroprudential policies",
+    "Year": "2017",
+    "ModelType": "New Keynesian financial-frictions model, model(linear)",
+    "Economy": "Closed economy",
+    "Category": "Monetary policy and macroprudential policy",
+    "KeyFeatures": "Rotemberg sticky prices; Gertler-Karadi-style bank moral hazard; working-capital cost channel; macroprudential funding subsidy; optimal policy games",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_pp17__coordinating_monetary_and_macroprudential_policies__7a9fb3e4/full.md",
+    "RawPDF": "raw/mmb_papers/Coordinating monetary and macroprudential policies.pdf",
+    "DOI": "10.1111/jmcb.12381",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_PP17",
+    "paper_title": "Coordinating monetary and macroprudential policies",
+    "source_full_md": "raw/mmb_mineru/runs/nk_pp17__coordinating_monetary_and_macroprudential_policies__7a9fb3e4/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Coordinating monetary and macroprudential policies.pdf",
+    "status": "needs_review",
+    "formula_quality": "OCR mostly usable but equation (24) tag and several definition fragments need source-level review",
+    "steady_state_quality": "linear model steady state documented as zero deviations; calibration discrepancy noted",
+    "needs_human_review": "true",
+    "notes": "No Dynare run; .mod used only as implementation_cross_check; shared catalog/status not edited."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool": "passed",
+    "english_sections": "passed",
+    "f_number_match": "passed",
+    "dynare_run": "not_performed_by_instruction"
+  },
+  "unresolved_issues": [
+    "Equation (24) OCR tag spacing and several math/prose fragments need PDF-level formula review.",
+    "Rotemberg adjustment cost differs between paper text and Rep-MMB implementation.",
+    "Alternative liquidity-requirement instrument was not promoted into the baseline equation set.",
+    "Runtime validation deferred by instruction."
+  ],
+  "status": "needs_review"
+}

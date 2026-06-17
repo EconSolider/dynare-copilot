@@ -1,0 +1,160 @@
+{
+  "model_id": "GPM6_IMF13",
+  "archive_status": "needs_review",
+  "formula_quality": "needs_review",
+  "steady_state_quality": "source_limited_gap_model",
+  "runtime_validation": {
+    "performed": false,
+    "reason": "Dynare runtime validation was not assigned for this first-pass archive extraction."
+  },
+  "catalog_cross_reference": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_id": "GPM6_IMF13",
+    "paper_title": "A small quarterly projection model of the US economy",
+    "authors": "Carabenciov, Ioan; Freedman, Charles; Garcia-Saltos, Roberto; Laxton, Douglas; Kamenik, Ondrej; Manchev, Petar",
+    "year": "2013",
+    "journal_or_series": "IMF Working Paper 08/278",
+    "doi": "10.5089/9781451871364.001",
+    "paper_slug": "gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "source_index_issue": {
+    "present": true,
+    "severity": "high",
+    "summary": "The primary Markdown and the alternate MinerU run both open as the 2008 U.S. small quarterly projection model paper. The local implementation cross-check identifies GPM6_IMF13 as a 2013 six-region Global Projection Model.",
+    "primary_sniff": {
+      "title": "A Small Quarterly Projection Model of the US Economy",
+      "authors": "Ioan Carabenciov, Igor Ermolaev, Charles Freedman, Michel Juillard, Ondra Kamenik, Dmitry Korshunov, and Douglas Laxton",
+      "date": "December 2008"
+    },
+    "alternate_mineru_runs_inspected": [
+      {
+        "run_id": "86500816-7954-4f67-b157-79058ffc0fde",
+        "full_md_path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__86500816/full.md",
+        "finding": "Same source title: A small quarterly projection model of the US economy; not an unambiguous 2013 GPM6 paper source."
+      }
+    ]
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+      "sha256": "678667ba943ffde92ce650faae292b6e348886ea2fc504ab20b9cf1544b987d6",
+      "mineru_run_id": "a2e8676b-943b-4810-bcb5-d716951a7fa4",
+      "exists": true,
+      "match_score": "1.0000",
+      "source_role": "paper_side_primary_but_source_limited"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+      "sha256": "fca7f36de0799f0fb9fe8996c5f08bf73a2855b8e8a602f341644786115863d5",
+      "exists": true,
+      "read_body": false,
+      "source_role": "provenance_only"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/GPM6_IMF13.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/GPM6_IMF13_rep.mod",
+      "sha256": "dcd8ac67de08e9cb6c1616f32da7b02f70fc3fa1a8f6618a90edcdeab2c4935d",
+      "exists": true,
+      "source_role": "implementation_cross_check_only",
+      "summary": "Identifies GPM6_IMF13 as GPM6 with regions EA6, EU, JA, LA6, RC6, and US; confirms six-region variable coverage but is not treated as paper-side formula provenance."
+    }
+  },
+  "outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/GPM6_IMF13/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/GPM6_IMF13/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/GPM6_IMF13/worker_report.json"
+  },
+  "equation_numbering": {
+    "first": "F1",
+    "last": "F16",
+    "count": 16,
+    "english_chinese_counts_match": true
+  },
+  "deferred_issues": [
+    "Correct GPM6_IMF13 paper-side source for the 2013 six-region Global Projection Model.",
+    "Verify whether the six-region .mod equations are fully documented in a separate GPM6 paper or author package.",
+    "Check OCR math against the raw PDF only after source ownership is repaired.",
+    "Runtime validation deferred; Dynare was not run."
+  ],
+  "paper_title": "A small quarterly projection model of the US economy",
+  "authors": "Carabenciov, Ioan; Freedman, Charles; Garcia-Saltos, Roberto; Laxton, Douglas; Kamenik, Ondrej; Manchev, Petar",
+  "year": "2013",
+  "journal_or_series": "IMF Working Paper 08/278",
+  "doi": "10.5089/9781451871364.001",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "GPM6_IMF13",
+    "paper_title": "A small quarterly projection model of the US economy",
+    "authors": "Carabenciov, Ioan; Freedman, Charles; Garcia-Saltos, Roberto; Laxton, Douglas; Kamenik, Ondrej; Manchev, Petar",
+    "year": "2013",
+    "journal_or_series": "IMF Working Paper 08/278",
+    "doi": "10.5089/9781451871364.001",
+    "paper_slug": "gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "a2e8676b-943b-4810-bcb5-d716951a7fa4; 86500816-7954-4f67-b157-79058ffc0fde",
+    "primary_source_title": "A small quarterly projection model of the US economy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+      "exists": true,
+      "sha256": "678667ba943ffde92ce650faae292b6e348886ea2fc504ab20b9cf1544b987d6"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+      "exists": true,
+      "sha256": "fca7f36de0799f0fb9fe8996c5f08bf73a2855b8e8a602f341644786115863d5"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.en.md",
+      "exists": true,
+      "sha256": "c62a5cde2f1793195680983687bf7dab23bd531b8725e37c015d96d1f697fd0c"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/GPM6_IMF13/GPM6_IMF13_derivation.zh.md",
+      "exists": true,
+      "sha256": "e32540baf8e8c6c5da6ef183ac9fa4e48660e9720d3349f63bf2e95c6eb84565"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/GPM6_IMF13/source_manifest.json",
+      "exists": true,
+      "sha256": "a310d2d6941bdfe5da2e116bd359dc5344966496a2d09795b07ea27ae8c12974"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/GPM6_IMF13/extraction_notes.md",
+      "exists": true,
+      "sha256": "abae04235d052e75d9f90c61276ff8c0c7aec4be0809a2d697193a82d17f1db1"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/GPM6_IMF13/worker_report.json",
+      "exists": true,
+      "sha256": "a3ad1fdb081ab5b1efb9b93ec156292680d25d4905fe961be8c01e946e3c3a2b"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

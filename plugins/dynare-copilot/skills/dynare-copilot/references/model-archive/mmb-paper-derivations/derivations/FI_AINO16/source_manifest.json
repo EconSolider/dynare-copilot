@@ -1,0 +1,154 @@
+{
+  "model_id": "FI_AINO16",
+  "archive_status": "needs_review",
+  "formula_quality": "first_pass_ocr_needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "reason": "User explicitly said not to run Dynare unless assigned by main agent."
+  },
+  "paper": {
+    "title_index": "The AINO II model",
+    "title_source_header": "The Aino 2.0 model",
+    "authors": [
+      "Kilponen, Juha",
+      "Orjasniemi, Seppo",
+      "Ripatti, Antti",
+      "Verona, Fabio"
+    ],
+    "year": 2016,
+    "journal_or_series": "Bank of Finland Research Discussion Paper 16/2016",
+    "doi": "10.2139/ssrn.2795479",
+    "source_url_observed": "https://hdl.handle.net/10419/212354"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "bb68ecab-6ac6-443c-b8df-371121110c49"
+    ],
+    "primary_source_title": "The AINO II model",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/fi_aino16__the_aino_ii_model__bb68ecab/full.md",
+      "sha256": "48ac07f2a234438d59c81631101eef7683875f7cab44a0796dc6dd1f4c31b656",
+      "mineru_run_id": "bb68ecab-6ac6-443c-b8df-371121110c49",
+      "exists": true,
+      "first_page_sniff": {
+        "expected_authors_found": true,
+        "expected_title_found": true,
+        "observed_title": "The Aino 2.0 model",
+        "source_index_issue": "title_normalization_only: index says The AINO II model; source header says The Aino 2.0 model"
+      }
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The AINO II model.pdf",
+      "sha256": "110a93ec5e6b1b954a8e84e16c40ea4ac75d2ecbf3bb67591bc1f97c75f9eae1",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/FI_AINO16.md",
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/FI_AINO16_rep.mod",
+      "sha256": "9ae1a00ada5a07b22662c1c837cf86a895a4fa15cb0963b83e22696f3d0f8fad",
+      "exists": true,
+      "used_as": "implementation_cross_check_only",
+      "model_form_observed": "model(linear)"
+    }
+  },
+  "outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/FI_AINO16/FI_AINO16_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/FI_AINO16/FI_AINO16_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/FI_AINO16/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/FI_AINO16/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/FI_AINO16/worker_report.json"
+  },
+  "audit": {
+    "source_index_issue": "No alternate MinerU run inspected because the row has a single run id and the primary Markdown header unambiguously matches expected authors/title family.",
+    "known_formula_uncertainties": [
+      "OCR corrupts some markup and foreign/euro asset symbols in the household and import blocks.",
+      "Full appendix/state-space equation list was not exhaustively reconstructed.",
+      "Analytic steady-state equations were cross-checked against implementation auxiliaries but not source-level verified against the PDF body."
+    ],
+    "created_at": "2026-06-17"
+  },
+  "paper_title": "The AINO II model",
+  "authors": "Kilponen, Juha; Orjasniemi, Seppo; Ripatti, Antti; Verona, Fabio",
+  "year": "2016",
+  "journal_or_series": "Bank of Finland Research Discussion Paper 16/2016",
+  "doi": "10.2139/ssrn.2795479",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "FI_AINO16",
+    "paper_title": "The AINO II model",
+    "authors": "Kilponen, Juha; Orjasniemi, Seppo; Ripatti, Antti; Verona, Fabio",
+    "year": "2016",
+    "journal_or_series": "Bank of Finland Research Discussion Paper 16/2016",
+    "doi": "10.2139/ssrn.2795479",
+    "paper_slug": "fi_aino16__the_aino_ii_model",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "bb68ecab-6ac6-443c-b8df-371121110c49",
+    "primary_source_title": "The AINO II model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/fi_aino16__the_aino_ii_model__bb68ecab/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The AINO II model.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/fi_aino16__the_aino_ii_model__bb68ecab/full.md",
+      "exists": true,
+      "sha256": "48ac07f2a234438d59c81631101eef7683875f7cab44a0796dc6dd1f4c31b656"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/The AINO II model.pdf",
+      "exists": true,
+      "sha256": "110a93ec5e6b1b954a8e84e16c40ea4ac75d2ecbf3bb67591bc1f97c75f9eae1"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/FI_AINO16/FI_AINO16_derivation.en.md",
+      "exists": true,
+      "sha256": "aa069508a4358afb5fd7f4326fe3393ddc9070b7a65e3be28b0c6bdbc4cbd727"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/FI_AINO16/FI_AINO16_derivation.zh.md",
+      "exists": true,
+      "sha256": "5c4e6e3167fd05e8e7b1b88a9f8554f80a36e46940f72bfb658198c666650ab6"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/FI_AINO16/source_manifest.json",
+      "exists": true,
+      "sha256": "9706f2871a73e679f099b46b6ca5c067c516e4aa4e35c4251aea64bdd6175d6e"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/FI_AINO16/extraction_notes.md",
+      "exists": true,
+      "sha256": "0cff7718c587645736dc92c9c29d338ccfde8e4fc4c4c5725c17bce551d55541"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/FI_AINO16/worker_report.json",
+      "exists": true,
+      "sha256": "fa26c4aa1e95879c7e30e7944060f2565163482c9eae9d17a91a4add44ac4a4e"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

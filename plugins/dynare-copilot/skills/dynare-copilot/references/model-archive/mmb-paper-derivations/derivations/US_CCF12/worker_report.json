@@ -1,0 +1,55 @@
+{
+  "model_id": "US_CCF12",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_CCF12/US_CCF12_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_CCF12/US_CCF12_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_CCF12/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_CCF12/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_CCF12/worker_report.json"
+  ],
+  "status": "needs_review",
+  "proposed_catalog_row": {
+    "ModelID": "US_CCF12",
+    "Task": "mmb_derivation",
+    "Paper": "The Macroeconomic Effects of Large-scale Asset Purchase Programmes",
+    "Year": "2012",
+    "ModelType": "Estimated medium-scale NK DSGE with segmented bond markets; model(linear)",
+    "Economy": "US",
+    "Category": "Estimated US model",
+    "KeyFeatures": "LSAP; long-term bonds; market segmentation; transaction-cost risk premium; ZLB commitment experiments",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_ccf12__the_macroeconomic_effects_of_large_scale_asset_purchase_programmes__2865b07c/full.md",
+    "RawPDF": "raw/mmb_papers/The Macroeconomic Effects of Large-scale Asset Purchase Programmes.pdf",
+    "DOI": "10.1111/j.1468-0297.2012.02549.x",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_CCF12",
+    "paper_title": "The Macroeconomic Effects of Large-scale Asset Purchase Programmes",
+    "source_full_md": "raw/mmb_mineru/runs/us_ccf12__the_macroeconomic_effects_of_large_scale_asset_purchase_programmes__2865b07c/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Macroeconomic Effects of Large-scale Asset Purchase Programmes.pdf",
+    "status": "needs_review",
+    "formula_quality": "partial_paper_body_extraction",
+    "steady_state_quality": "needs_review_missing_online_appendix_c",
+    "needs_human_review": "true",
+    "notes": "Paper body available; online technical appendix with normalized equations, steady state, and log-linear approximation missing from current source set."
+  },
+  "validation": {
+    "dynare_run": false,
+    "commands_run": [
+      "git diff --check",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_CCF12/source_manifest.json >/dev/null",
+      "python3 - <<'PY' ... eight-section and F-number checks ... PY"
+    ],
+    "results": [
+      "git diff --check passed for data/model_archive/mmb_derivations/US_CCF12",
+      "source_manifest.json and worker_report.json parsed successfully as JSON",
+      "English and Chinese derivations both contain eight sections and matching F-number coverage from F1 through F24"
+    ]
+  },
+  "unresolved_formula_issues": [
+    "Online Technical Appendix C steady-state derivation absent.",
+    "Online Technical Appendix D full log-linear equation system absent.",
+    "Calvo wage and price recursive equations are marked needs_review."
+  ]
+}

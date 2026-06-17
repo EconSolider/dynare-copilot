@@ -1,0 +1,140 @@
+{
+  "model_id": "US_FRB22_mceall",
+  "status": "needs_review",
+  "formula_quality": "needs_review",
+  "steady_state_quality": "needs_review",
+  "runtime_validation": {
+    "performed": false,
+    "tool": null,
+    "notes": "Dynare was not run. Runtime validation is deferred by task instruction."
+  },
+  "source_metadata": {
+    "paper_title": "LINVER: The Linear Version of FRB/US",
+    "authors": "Brayton, Flint; Reifschneider, David",
+    "year": "2022",
+    "journal_or_series": "Finance and Economics Discussion Series 2022-053",
+    "doi": "10.17016/feds.2022.053",
+    "primary_source_title": "LINVER- The Linear Version of FRB:US",
+    "model_title_match_score": 1.0,
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "mineru_run_ids": [
+      "a8780356-98b8-4931-bad6-3b2c5b4b2f0c"
+    ],
+    "model_match_notes": ""
+  },
+  "catalog_cross_reference": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_row_number": 133,
+    "shared_source_model_ids": [
+      "US_FRB22_mcap",
+      "US_FRB22_mcapwp",
+      "US_FRB22_mceall",
+      "US_FRB22_var"
+    ],
+    "proposed_catalog_row": {
+      "ModelID": "US_FRB22_mceall",
+      "Task": "US_FRB22_mceall",
+      "Paper": "LINVER: The Linear Version of FRB/US",
+      "Year": "2022",
+      "ModelType": "Large-scale linearized macroeconometric model",
+      "Economy": "United States",
+      "Category": "Large Official Policy Models",
+      "KeyFeatures": "LINVER 2022 vintage; all expectations model-consistent variant; ELB simulation support; fiscal stabilization mechanism",
+      "DateAdded": "2026-06-17",
+      "SourceFullMD": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+      "RawPDF": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+      "DOI": "10.17016/feds.2022.053",
+      "Status": "needs_review"
+    },
+    "proposed_status_row": {
+      "model_id": "US_FRB22_mceall",
+      "paper_title": "LINVER: The Linear Version of FRB/US",
+      "source_full_md": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+      "raw_pdf_path": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+      "status": "needs_review",
+      "formula_quality": "needs_review",
+      "steady_state_quality": "needs_review",
+      "needs_human_review": "true",
+      "notes": "Paper is descriptive and lacks complete source-level equation appendix; .mod used only as implementation_cross_check; Dynare not run."
+    }
+  },
+  "sources": [
+    {
+      "role": "source_index",
+      "path": "raw/mmb_mineru/model_index.csv",
+      "exists": true,
+      "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75"
+    },
+    {
+      "role": "primary_full_markdown",
+      "path": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+      "exists": true,
+      "sha256": "94fc2096ecf74503f049e115d7ab9c711779fe43e8dc16d48be8e00bc421cf90",
+      "title_sniff": "LINVER: The Linear Version of FRB/US",
+      "first_page_title_author_check": "matched"
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+      "exists": true,
+      "sha256": "2c3d2a3676009014d835500ac80648754d66dface28b5f90d6f110710386ec92",
+      "opened": false,
+      "notes": "Existence and hash checked; PDF body not opened because Markdown was sufficient for title/provenance and no targeted formula check was attempted."
+    },
+    {
+      "role": "appendix_normalization",
+      "path": "docs/mmb_appendix_full_normalizations/US_FRB22_mceall.md",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "role": "skill_example_mod",
+      "path": ".agents/skills/dynare-copilot/references/examples/US_FRB22_mceall_rep.mod",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "role": "implementation_cross_check",
+      "path": "raw/mmb/mmci-cli/models/US_FRB22_mceall/US_FRB22_mceall.mod",
+      "exists": true,
+      "sha256": "1a1c1a40fb64f23130d16b3474c521ad55e9f9422a0fec7d641bbecad30e54b7",
+      "used_for": [
+        "variant label",
+        "variable groups",
+        "shock names",
+        "policy-rule implementation",
+        "timing/leads/lags cross-check"
+      ],
+      "not_used_for": "paper-side source equations"
+    },
+    {
+      "role": "implementation_cross_check",
+      "path": "raw/mmb/mmci-cli/models/US_FRB22_mceall/US_FRB22_mceall.json",
+      "exists": true,
+      "sha256": "d92a7cbda19836b86ba7a36dcedf02a5b47baf4e2ccc6d6a22e79583df4b10ce",
+      "used_for": [
+        "model metadata",
+        "shock list",
+        "variable list",
+        "capability rule names"
+      ],
+      "not_used_for": "paper-side source equations"
+    }
+  ],
+  "archive_outputs": [
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/US_FRB22_mceall_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/US_FRB22_mceall_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/worker_report.json"
+  ],
+  "source_index_issue": null,
+  "review_flags": [
+    "needs_review: source paper does not publish full FRB/US/LINVER equation system",
+    "needs_review: no model-specific appendix normalization file exists",
+    "needs_review: exact transformation offsets and baseline values require official LINVER package data",
+    "deferred_runtime_validation: Dynare not run"
+  ],
+  "created_utc": "2026-06-17T00:00:00Z"
+}

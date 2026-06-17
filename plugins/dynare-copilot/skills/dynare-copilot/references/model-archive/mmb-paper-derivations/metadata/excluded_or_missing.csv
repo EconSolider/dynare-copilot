@@ -1,0 +1,10 @@
+model_id,paper_title,year,doi,mineru_match_status,primary_full_md_repo_relpath,raw_pdf_repo_relpath,reason
+G7_TAY93,Macroeconomic Policy in a World Economy,2009,10.5771/9780815716686-191,missing,,,missing_source_markdown_and_pdf_in_model_index
+NK_IR04,Money's Role in the Monetary Business Cycle,2004,10.1353/mcb.2005.0010,missing,,,missing_source_markdown_and_pdf_in_model_index
+NK_IR04AL,Money's role in the monetary business cycle,2004,10.1353/mcb.2005.0010,missing,,,missing_source_markdown_and_pdf_in_model_index
+US_FRB08,Documentation of linearized FRB/US,2008,,missing,,,missing_source_markdown_and_pdf_in_model_index
+US_FRB08mx,Documentation of linearized FRB/US,2008,,missing,,,missing_source_markdown_and_pdf_in_model_index
+US_KS15,Monetary Policy and the Transaction Role of Money in the US,2015,10.1111/ecoj.12151,missing,,,missing_source_markdown_and_pdf_in_model_index
+US_OW98,Price stability and monetary policy effectiveness when nominal interest rates are bounded at zero,1998,10.17016/feds.1998.35,missing,,,missing_source_markdown_and_pdf_in_model_index
+US_VMDop,"(Un)anticipated monetary policy in a dsge model with a shadow
+banking system - Optimistic times",2013,10.2139/ssrn.2256278,matched,raw/mmb_mineru/runs/us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys__9ba7c6c3/full.md,raw/mmb_papers/(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times.pdf,no_complete_bilingual_derivation_entry

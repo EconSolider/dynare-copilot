@@ -1,0 +1,82 @@
+[
+  {
+    "model_id": "G7_TAY93",
+    "paper_title": "Macroeconomic Policy in a World Economy",
+    "year": "2009",
+    "doi": "10.5771/9780815716686-191",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "NK_IR04",
+    "paper_title": "Money's Role in the Monetary Business Cycle",
+    "year": "2004",
+    "doi": "10.1353/mcb.2005.0010",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "NK_IR04AL",
+    "paper_title": "Money's role in the monetary business cycle",
+    "year": "2004",
+    "doi": "10.1353/mcb.2005.0010",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "US_FRB08",
+    "paper_title": "Documentation of linearized FRB/US",
+    "year": "2008",
+    "doi": "",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "US_FRB08mx",
+    "paper_title": "Documentation of linearized FRB/US",
+    "year": "2008",
+    "doi": "",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "US_KS15",
+    "paper_title": "Monetary Policy and the Transaction Role of Money in the US",
+    "year": "2015",
+    "doi": "10.1111/ecoj.12151",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "US_OW98",
+    "paper_title": "Price stability and monetary policy effectiveness when nominal interest rates are bounded at zero",
+    "year": "1998",
+    "doi": "10.17016/feds.1998.35",
+    "mineru_match_status": "missing",
+    "primary_full_md_repo_relpath": "",
+    "raw_pdf_repo_relpath": "",
+    "reason": "missing_source_markdown_and_pdf_in_model_index"
+  },
+  {
+    "model_id": "US_VMDop",
+    "paper_title": "(Un)anticipated monetary policy in a dsge model with a shadow\nbanking system - Optimistic times",
+    "year": "2013",
+    "doi": "10.2139/ssrn.2256278",
+    "mineru_match_status": "matched",
+    "primary_full_md_repo_relpath": "raw/mmb_mineru/runs/us_vmdno_us_vmdop__un_anticipated_monetary_policy_in_a_dsge_model_with_a_shadow_banking_sys__9ba7c6c3/full.md",
+    "raw_pdf_repo_relpath": "raw/mmb_papers/(Un)anticipated monetary policy in a dsge model with a shadow banking system - Normal times.pdf",
+    "reason": "no_complete_bilingual_derivation_entry"
+  }
+]

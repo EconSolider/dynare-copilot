@@ -1,0 +1,65 @@
+{
+  "model_id": "NK_RW06AL",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_RW06AL/NK_RW06AL_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_RW06AL/NK_RW06AL_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_RW06AL/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_RW06AL/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_RW06AL/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "NK_RW06AL",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "Optimal monetary policy with the cost channel",
+    "Year": "2006",
+    "ModelType": "linearized New Keynesian cost-channel model under adaptive learning implementation",
+    "Economy": "United States / calibrated New Keynesian model",
+    "Category": "monetary policy; cost channel; adaptive learning",
+    "KeyFeatures": "Working-capital wage-bill cost channel; Calvo prices; welfare output gap; IS curve; cost-channel Phillips curve; adaptive-learning MMB policy-rule implementation",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel__59aa85a1/full.md",
+    "RawPDF": "raw/mmb_papers/Optimal monetary policy with the cost channel.pdf",
+    "DOI": "10.1016/j.jmoneco.2005.01.004",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "NK_RW06AL",
+    "paper_title": "Optimal monetary policy with the cost channel",
+    "source_full_md": "raw/mmb_mineru/runs/nk_rw06_nk_rw06al__optimal_monetary_policy_with_the_cost_channel__59aa85a1/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal monetary policy with the cost channel.pdf",
+    "status": "needs_review",
+    "formula_quality": "core policy equations usable from Markdown and implementation cross-check; welfare appendix unavailable locally",
+    "steady_state_quality": "linear model steady state documented; nonlinear flexible-price and efficient output steady states summarized",
+    "needs_human_review": true,
+    "notes": "Primary Markdown matches expected title/authors. Raw PDF exists but body was not read. No appendix normalization. Dynare not run by user request."
+  },
+  "validation": [
+    {
+      "check": "git diff --check -- data/model_archive/mmb_derivations/NK_RW06AL",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/NK_RW06AL/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/NK_RW06AL/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation contains the eight required section headings",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number sequences match",
+      "status": "passed",
+      "details": "52 total F-number references in each file; 30 unique equation numbers."
+    }
+  ],
+  "unresolved_issues": [
+    "Welfare approximation details should be checked against the original PDF or unavailable appendix before review status improves.",
+    "Adaptive-learning behavior is from MMB implementation metadata only and was not runtime-validated.",
+    "Shared catalog.csv and status.csv were not edited by instruction."
+  ]
+}

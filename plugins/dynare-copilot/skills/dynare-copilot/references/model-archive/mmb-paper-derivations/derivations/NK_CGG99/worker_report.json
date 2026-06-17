@@ -1,0 +1,56 @@
+{
+  "model_id": "NK_CGG99",
+  "owned_directory": "data/model_archive/mmb_derivations/NK_CGG99",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_CGG99/NK_CGG99_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_CGG99/NK_CGG99_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_CGG99/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_CGG99/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_CGG99/worker_report.json"
+  ],
+  "shared_indexes": {
+    "catalog_csv_edited": false,
+    "status_csv_edited": false,
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "proposed_catalog_row": {
+    "ModelID": "NK_CGG99",
+    "Task": "monetary policy analysis",
+    "Paper": "The Science of Monetary Policy: A New Keynesian Perspective",
+    "Year": "1999",
+    "ModelType": "New Keynesian, hybrid log-linear",
+    "Economy": "United States / closed economy policy model",
+    "Category": "Monetary policy",
+    "KeyFeatures": "hybrid IS curve; hybrid New Keynesian Phillips curve; expected-inflation interest-rate rule; interest-rate smoothing",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cgg99_nk_cgg99al__the_science_of_monetary_policy_a_new_keynesian_perspective__d3d8dd41/full.md",
+    "RawPDF": "raw/mmb_papers/The Science of Monetary Policy- A New Keynesian Perspective.pdf",
+    "DOI": "10.1257/jel.37.4.1661",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_CGG99",
+    "paper_title": "The Science of Monetary Policy: A New Keynesian Perspective",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cgg99_nk_cgg99al__the_science_of_monetary_policy_a_new_keynesian_perspective__d3d8dd41/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Science of Monetary Policy- A New Keynesian Perspective.pdf",
+    "status": "needs_review",
+    "formula_quality": "core Markdown equations readable; OCR Greek-letter noise remains",
+    "steady_state_quality": "linear model zero steady state documented",
+    "needs_human_review": true,
+    "notes": "MMB implementation maps paper to Section 6 hybrid variant and Section 7 Volcker-Greenspan forward-looking policy rule; calibration mapping needs review."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/NK_CGG99",
+    "json_validation": "passed: source_manifest.json and worker_report.json parse with python3 -m json.tool",
+    "eight_section_check": "passed: English and Chinese derivations contain sections 1 through 8",
+    "f_number_count_check": "passed: English and Chinese both contain unique F1-F6 and 15 total F-number occurrences"
+  },
+  "unresolved_issues": [
+    "Confirm source status of theta=0.44 and phi=0.48 calibration values.",
+    "Confirm policy-rule output coefficient division by 4 as implementation normalization.",
+    "Runtime validation was not performed."
+  ]
+}

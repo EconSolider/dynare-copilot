@@ -1,0 +1,96 @@
+{
+  "model_id": "CL_MS07",
+  "paper_title": "The Chilean business cycles through the lens of a stochastic general equilibrium model",
+  "authors": [
+    "Medina, Juan Pablo",
+    "Soto, Claudio"
+  ],
+  "year": "2007",
+  "doi": "",
+  "journal_or_series": "Central Bank of Chile Working Papers 457",
+  "source_match": {
+    "model_index_path": "raw/mmb_mineru/model_index.csv",
+    "model_index_sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "The Chilean business cycles through the lens of a stochastic general equilibrium model",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": "",
+    "title_author_sniff": "First page/first 80 Markdown lines show Central Bank of Chile Working Paper 457, the expected title, and Juan Pablo Medina and Claudio Soto."
+  },
+  "source_files": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/cl_ms07__the_chilean_business_cycles_through_the_lens_of_a_stochastic_general_equ__ba200544/full.md",
+      "sha256": "53dd5b8e2c0357bb61a983ce13f67be6038bacbeda284b19d8e2ff49d9d6b78f",
+      "exists_at_extraction": true,
+      "source_role": "published full-text OCR Markdown"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The Chilean business cycles through the lens of a stochastic general equilibrium model.pdf",
+      "sha256": "61a5118ff69dbc00c90a2c0f9c93ce1c9845439e54c5dfb4ed04ada71bd144df",
+      "exists_at_extraction": true,
+      "source_role": "manually downloaded source PDF; body not opened by default"
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/CL_MS07.md",
+      "sha256": null,
+      "exists_at_extraction": false,
+      "source_role": "hand-normalized online-appendix formula inventory when present"
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/CL_MS07_rep.mod",
+      "sha256": "00aceed3ba4ea74f314f8ad21e19120047274069d3305b77a2d6a662c9601017",
+      "exists_at_extraction": true,
+      "source_role": "MMB implementation cross-check only; not paper-side mathematical source"
+    }
+  },
+  "archive_files": {
+    "derivation_en": "data/model_archive/mmb_derivations/CL_MS07/CL_MS07_derivation.en.md",
+    "derivation_zh": "data/model_archive/mmb_derivations/CL_MS07/CL_MS07_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/CL_MS07/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/CL_MS07/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/CL_MS07/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Markdown includes a full log-linearized appendix, but several equation labels and long fiscal/external-account equations show OCR line wrapping or damaged tokens.",
+      "Equations F24, F26, and F38 are intentionally abbreviated and marked needs_review.",
+      "PDF body was not opened because Markdown was sufficient for a useful first-pass archive entry."
+    ]
+  },
+  "model_form": "model(linear)",
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "catalog_cross_reference": {
+    "proposed_model_id": "CL_MS07",
+    "proposed_task": "replicate_mmb_model",
+    "proposed_model_type": "Estimated open-economy New Keynesian DSGE, log-linear",
+    "proposed_economy": "Chile",
+    "proposed_category": "Open economy; commodity exporter; fiscal rule",
+    "proposed_status": "needs_review"
+  },
+  "created_utc": "2026-06-17T05:08:50Z",
+  "status": "needs_review",
+  "archive_entry_created": "2026-06-17T05:08:50Z",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "source_csv": "raw/mmb_mineru/model_index.csv",
+    "model_id": "CL_MS07",
+    "paper_slug": "cl_ms07__the_chilean_business_cycles_through_the_lens_of_a_stochastic_general_equ",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "ba200544-f03b-40fa-9701-e329f23df158"
+    ],
+    "primary_source_title": "The Chilean business cycles through the lens of a stochastic general equilibrium model",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/cl_ms07__the_chilean_business_cycles_through_the_lens_of_a_stochastic_general_equ__ba200544/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Chilean business cycles through the lens of a stochastic general equilibrium model.pdf",
+    "model_match_notes": ""
+  },
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper or appendix."
+}

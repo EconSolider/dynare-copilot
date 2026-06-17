@@ -1,0 +1,71 @@
+{
+  "model_id": "NK_GHP16",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_GHP16/NK_GHP16_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_GHP16/NK_GHP16_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_GHP16/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_GHP16/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_GHP16/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "NK_GHP16",
+    "Task": "Derivation extraction",
+    "Paper": "Housework and Fiscal Expansions",
+    "Year": "2016",
+    "ModelType": "New Keynesian DSGE with home production, Calvo prices, capital accumulation, and government spending shocks",
+    "Economy": "United States calibration",
+    "Category": "Fiscal policy; home production",
+    "KeyFeatures": "Housework/home goods; market and home capital; KPR preferences; Calvo pricing; production subsidy; government spending AR(1); Taylor rule",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_ghp16__housework_and_fiscal_expansions__abf81d2a/full.md",
+    "RawPDF": "raw/mmb_papers/Housework and Fiscal Expansions.pdf",
+    "DOI": "10.1016/j.jmoneco.2016.04.003",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "NK_GHP16",
+    "paper_title": "Housework and Fiscal Expansions",
+    "source_full_md": "raw/mmb_mineru/runs/nk_ghp16__housework_and_fiscal_expansions__abf81d2a/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Housework and Fiscal Expansions.pdf",
+    "status": "needs_review",
+    "formula_quality": "main model equations available; calvo auxiliary recursions marked needs_review",
+    "steady_state_quality": "source-backed first pass; no runtime validation",
+    "needs_human_review": "true",
+    "notes": "Primary Markdown contains the model equations and steady-state calibration; example .mod used only as implementation cross-check."
+  },
+  "validation": [
+    {
+      "check": "source_manifest_json",
+      "status": "passed"
+    },
+    {
+      "check": "worker_report_json",
+      "status": "passed"
+    },
+    {
+      "check": "english_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "chinese_eight_sections",
+      "status": "passed"
+    },
+    {
+      "check": "english_chinese_f_number_counts_match",
+      "status": "passed",
+      "details": "English and Chinese each contain 108 F-number references, with identical ordered F-number sequences and unique equations F1-F25."
+    },
+    {
+      "check": "git_diff_check",
+      "status": "passed"
+    }
+  ],
+  "unresolved_issues": [
+    "Calvo auxiliary recursions need source-level appendix or targeted PDF review.",
+    "Implementation tax/subsidy wedge `taup` needs reconciliation with the paper's production subsidy `tau`.",
+    "The MMB Taylor rule is a restricted implementation of the paper's more general rule.",
+    "Capital adjustment cost algebra should be targeted-checked before runnable replication work.",
+    "No Dynare runtime validation was performed."
+  ]
+}

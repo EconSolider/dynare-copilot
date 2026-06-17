@@ -1,0 +1,65 @@
+{
+  "model_id": "HK_FP13",
+  "status": "needs_review",
+  "owned_directory": "data/model_archive/mmb_derivations/HK_FP13",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/HK_FP13/HK_FP13_derivation.en.md",
+    "data/model_archive/mmb_derivations/HK_FP13/HK_FP13_derivation.zh.md",
+    "data/model_archive/mmb_derivations/HK_FP13/source_manifest.json",
+    "data/model_archive/mmb_derivations/HK_FP13/extraction_notes.md",
+    "data/model_archive/mmb_derivations/HK_FP13/worker_report.json"
+  ],
+  "shared_indexes": {
+    "edited_catalog_csv": false,
+    "edited_status_csv": false,
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "proposed_catalog_row": {
+    "ModelID": "HK_FP13",
+    "Task": "mmb_derivation",
+    "Paper": "Housing prices and the business cycle: An empirical application to Hong Kong",
+    "Year": "2013",
+    "ModelType": "Open-economy housing DSGE, model(linear)",
+    "Economy": "Hong Kong",
+    "Category": "Housing; collateral constraint; small open economy",
+    "KeyFeatures": "Borrowers and savers; housing in utility; LTV collateral constraint; two sectors; currency-board peg; hybrid Calvo pricing",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/hk_fp13__housing_prices_and_the_business_cycle_an_empirical_application_to_hong_k__d766767f/full.md",
+    "RawPDF": "raw/mmb_papers/Housing prices and the business cycle- An empirical application to Hong Kong.pdf",
+    "DOI": "10.1016/j.jhe.2012.11.001",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "HK_FP13",
+    "paper_title": "Housing prices and the business cycle: An empirical application to Hong Kong",
+    "source_full_md": "raw/mmb_mineru/runs/hk_fp13__housing_prices_and_the_business_cycle_an_empirical_application_to_hong_k__d766767f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Housing prices and the business cycle- An empirical application to Hong Kong.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "implementation_linear_steady_state_only",
+    "needs_human_review": "true",
+    "notes": "First-pass bilingual derivation; OCR-fragile Euler equations need PDF formula review; runtime validation not performed."
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_validation": "passed",
+    "eight_section_check": "passed",
+    "f_number_count_check": "passed",
+    "details": {
+      "english_f_reference_count": 78,
+      "chinese_f_reference_count": 78,
+      "english_unique_f_numbers": 29,
+      "chinese_unique_f_numbers": 29,
+      "f_sequence": "F1-F29",
+      "new_file_whitespace_check": "passed"
+    }
+  },
+  "unresolved_issues": [
+    "Borrower and saver housing Euler equations need targeted PDF review due to OCR ambiguity.",
+    "Saver foreign-bond Euler equation has malformed OCR exchange-rate notation.",
+    "Steady-state derivation is limited to the linear implementation and calibration constants.",
+    "Runtime validation deferred."
+  ]
+}

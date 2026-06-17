@@ -1,0 +1,38 @@
+{
+  "model_id": "NK_FNL23",
+  "status": "completed_needs_review",
+  "owned_paths": [
+    "data/model_archive/mmb_derivations/NK_FNL23/NK_FNL23_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_FNL23/NK_FNL23_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_FNL23/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_FNL23/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_FNL23/worker_report.json"
+  ],
+  "shared_indexes_touched": false,
+  "sources_used": {
+    "model_index_row": true,
+    "primary_full_md_path": true,
+    "raw_pdf_path_exists_checked": true,
+    "raw_pdf_body_read": false,
+    "appendix_normalization_used": false,
+    "implementation_cross_check_used": true
+  },
+  "artifacts": {
+    "english_derivation": "drafted",
+    "chinese_derivation": "drafted",
+    "source_manifest": "drafted",
+    "extraction_notes": "drafted"
+  },
+  "validation": {
+    "git_diff_check": "passed",
+    "json_tool": "passed",
+    "eight_sections": "passed",
+    "f_number_parity": "passed",
+    "notes": "Both English and Chinese derivations define exactly F1 through F31. A naive all-reference count includes prose cross-references in the steady-state section, so parity was checked on equation-definition bullets."
+  },
+  "unresolved_issues": [
+    "Appendix OCR needs targeted review for the central-bank balance-sheet equation.",
+    "Appendix OCR needs targeted review for brown bond market-clearing time subscripts.",
+    "Runtime validation was not performed."
+  ]
+}

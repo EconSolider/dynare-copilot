@@ -1,0 +1,67 @@
+{
+  "model_id": "US_ACELswm",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_ACELswm/US_ACELswm_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_ACELswm/US_ACELswm_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_ACELswm/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_ACELswm/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_ACELswm/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "US_ACELswm",
+    "Task": "mmb_derivation_archive",
+    "Paper": "Firm-specific capital, nominal rigidities",
+    "Year": "2005",
+    "ModelType": "Estimated linearized medium-scale New Keynesian model with firm-specific capital, sticky wages, sticky prices, money demand, variable utilization, and investment adjustment costs",
+    "Economy": "US",
+    "Category": "Nominal rigidities",
+    "KeyFeatures": "ACEL firm-specific capital; sticky wages; sticky prices; habit formation; money demand and transactions costs; neutral and embodied technology shocks; monetary policy money-growth rule; flexible-price comparison block",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "RawPDF": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "DOI": "10.3386/w11034",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "US_ACELswm",
+    "paper_title": "Firm-specific capital, nominal rigidities",
+    "source_full_md": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "implementation_cross_checked_needs_source_review",
+    "needs_human_review": "true",
+    "notes": "Clean source-title match, but no normalized technical appendix is available. Linear technical-appendix equations were cross-checked against US_ACELswm_rep.mod only and require source-level verification."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "status": "passed",
+      "details": "No output. Note: files are untracked because the task explicitly said not to stage."
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/US_ACELswm/source_manifest.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/US_ACELswm/worker_report.json >/dev/null",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has all eight required sections and a visible (F1) label",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese visible F-number counts match",
+      "status": "passed",
+      "details": "English count 54; Chinese count 54. Equations use LaTeX tag labels F1 through F53."
+    }
+  ],
+  "unresolved_issues": [
+    "Full technical-appendix equation source is not present as a normalized Markdown file.",
+    "Firm-specific-capital mapping from structural parameters to the inflation slope chi needs source-level review.",
+    "MMB implementation includes an extra transitory technology shock and warns technology-shock IRFs are unreliable because variables are predetermined.",
+    "Dynare runtime validation was not performed."
+  ]
+}

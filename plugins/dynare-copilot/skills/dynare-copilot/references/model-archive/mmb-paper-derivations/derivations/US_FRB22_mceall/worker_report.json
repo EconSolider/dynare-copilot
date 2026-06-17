@@ -1,0 +1,65 @@
+{
+  "model_id": "US_FRB22_mceall",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/US_FRB22_mceall_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/US_FRB22_mceall_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_FRB22_mceall/worker_report.json"
+  ],
+  "source_order_completed": [
+    ".agents/skills/mmb-model-archive-builder/SKILL.md",
+    ".agents/skills/mmb-model-archive-builder/references/subagent-task-template.md",
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv row for US_FRB22_mceall",
+    "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+    "raw PDF existence check",
+    "appendix normalization existence check",
+    "skill example .mod existence check",
+    "raw/mmb/mmci-cli/models/US_FRB22_mceall/US_FRB22_mceall.mod as implementation_cross_check",
+    "raw/mmb/mmci-cli/models/US_FRB22_mceall/US_FRB22_mceall.json as implementation_cross_check"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_FRB22_mceall",
+    "Task": "US_FRB22_mceall",
+    "Paper": "LINVER: The Linear Version of FRB/US",
+    "Year": "2022",
+    "ModelType": "Large-scale linearized macroeconometric model",
+    "Economy": "United States",
+    "Category": "Large Official Policy Models",
+    "KeyFeatures": "LINVER 2022 vintage; all expectations model-consistent variant; ELB simulation support; fiscal stabilization mechanism",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+    "RawPDF": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+    "DOI": "10.17016/feds.2022.053",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_FRB22_mceall",
+    "paper_title": "LINVER: The Linear Version of FRB/US",
+    "source_full_md": "raw/mmb_mineru/runs/us_frb22_mcap_us_frb22_mcapwp_us_frb22_mceall_us__linver_the_linear_version_of_frb_us__a8780356/full.md",
+    "raw_pdf_path": "raw/mmb_papers/LINVER- The Linear Version of FRB:US.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "needs_review",
+    "needs_human_review": "true",
+    "notes": "Paper is descriptive and lacks complete source-level equation appendix; .mod used only as implementation_cross_check; Dynare not run."
+  },
+  "validation": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/US_FRB22_mceall",
+    "source_manifest_json_tool": "passed: python3 -m json.tool data/model_archive/mmb_derivations/US_FRB22_mceall/source_manifest.json",
+    "english_eight_sections": "passed: English derivation contains sections 1 through 8 and (F1)",
+    "f_number_counts_match": "passed: English and Chinese F-number sequences match; 49 F-number references counted in each file",
+    "worker_report_json_tool": "passed: python3 -m json.tool data/model_archive/mmb_derivations/US_FRB22_mceall/worker_report.json",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_formula_ocr_issues": [
+    "The source Markdown has enough title/provenance and selected formulas, but no complete source-level model equation appendix.",
+    "Full FRB/US/LINVER equation extraction requires official LINVER package documentation or code.",
+    "MMB implementation variables and equations are used only as implementation_cross_check."
+  ],
+  "notes": "Shared catalog.csv and status.csv were intentionally not edited."
+}

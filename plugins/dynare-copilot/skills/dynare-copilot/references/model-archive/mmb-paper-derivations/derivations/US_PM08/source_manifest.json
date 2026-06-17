@@ -1,0 +1,96 @@
+{
+  "model_id": "US_PM08",
+  "status": "needs_review",
+  "paper": {
+    "title": "A small quarterly projection model of the US economy",
+    "authors": [
+      "Carabenciov, Ioan",
+      "Ermolaev, Igor",
+      "Freedman, Charles",
+      "Juillard, Michel",
+      "Kamenik, Ondrej",
+      "Korshunov, Dmitry",
+      "Laxton, Douglas"
+    ],
+    "year": 2008,
+    "journal_or_series": "IMF Working Paper 08/278",
+    "doi": "10.5089/9781451871364.001"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "line": 157,
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "a2e8676b-943b-4810-bcb5-d716951a7fa4",
+      "86500816-7954-4f67-b157-79058ffc0fde"
+    ],
+    "primary_source_title": "A small quarterly projection model of the US economy",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+    "model_match_notes": ""
+  },
+  "source_index_issue": null,
+  "paper_side_sources_used": [
+    {
+      "role": "main_equation_source",
+      "path": "raw/mmb_mineru/runs/gpm6_imf13_us_pm08_us_pm08fl__a_small_quarterly_projection_model_of_the_us_economy__a2e8676b/full.md",
+      "exists": true,
+      "sha256": "678667ba943ffde92ce650faae292b6e348886ea2fc504ab20b9cf1544b987d6",
+      "mineru_run_id": "a2e8676b-943b-4810-bcb5-d716951a7fa4",
+      "source_title_observed": "A Small Quarterly Projection Model of the US Economy",
+      "source_authors_observed": "Ioan Carabenciov; Igor Ermolaev; Charles Freedman; Michel Juillard; Ondra Kamenik; Dmitry Korshunov; Douglas Laxton",
+      "usage": "Model overview, observable definitions, behavioral equations, stochastic processes, financial-real linkage equations, and appendix/table context."
+    },
+    {
+      "role": "raw_pdf_provenance_and_targeted_formula_check",
+      "path": "raw/mmb_papers/A small quarterly projection model of the US economy.pdf",
+      "exists": true,
+      "sha256": "fca7f36de0799f0fb9fe8996c5f08bf73a2855b8e8a602f341644786115863d5",
+      "body_opened": true,
+      "usage": "Existence check and targeted pdftotext checks for pages containing equations 1-15, especially output-gap, inflation, policy-rule, Okun, BLT, and BLT distributed-lag equations."
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_PM08.md",
+    "exists": false,
+    "used": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_PM08_rep.mod",
+    "exists": true,
+    "sha256": "963a85fa7a9582237dd2556d0cd45837f755a0a3c6de67c0a79ebca9a25ad6f3",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only to compare stationary model(linear) form, variable names, shock names, BLT distributed-lag implementation, reporting expectation variables, and parameter names. Not used as paper-side mathematical evidence."
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_PM08/US_PM08_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_PM08/US_PM08_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_PM08/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_PM08/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_PM08/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only. User explicitly requested no Dynare run."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "First-pass extraction from MinerU Markdown with targeted PDF text checks. OCR/text extraction ambiguity remains for some bars, epsilons, and trend terms."
+  },
+  "catalog_cross_reference": {
+    "proposed_model_id": "US_PM08",
+    "task": "mmb_derivation_archive",
+    "model_type": "Estimated small quarterly projection model; linear stationary gap form with financial-real linkages",
+    "economy": "US",
+    "category": "Semi-structural projection model",
+    "key_features": "GPM-style small quarterly projection model; output gap; inflation; unemployment gap; Taylor rule; equilibrium real rate; BLT financial-real linkage; Bayesian estimation"
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper."
+}

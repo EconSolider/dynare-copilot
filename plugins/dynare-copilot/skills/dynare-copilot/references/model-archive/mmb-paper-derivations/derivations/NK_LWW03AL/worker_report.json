@@ -1,0 +1,58 @@
+{
+  "model_id": "NK_LWW03AL",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/NK_LWW03AL/NK_LWW03AL_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_LWW03AL/NK_LWW03AL_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_LWW03AL/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_LWW03AL/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_LWW03AL/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_LWW03AL",
+    "Task": "mmb_derivation",
+    "Paper": "The performance of forecast-based monetary policy rules under model uncertainty",
+    "Year": "2003",
+    "ModelType": "Linearized New Keynesian optimizing AD-AS model with adaptive-learning implementation metadata",
+    "Economy": "United States",
+    "Category": "Adaptive learning model",
+    "KeyFeatures": "IS curve; Phillips curve; natural real-rate shock; cost-push shock; forecast-based monetary policy rules; adaptive-learning MMB variant",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "RawPDF": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "DOI": "10.1257/000282803322157016",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_LWW03AL",
+    "paper_title": "The performance of forecast-based monetary policy rules under model uncertainty",
+    "source_full_md": "raw/mmb_mineru/runs/nk_lww03_nk_lww03al_us_frb03__the_performance_of_forecast_based_monetary_policy_rules_under_model_unce__c97e3d2f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The Performance of Forecast-Based Monetary Policy Rules under Model Uncertainty.pdf",
+    "status": "needs_review",
+    "formula_quality": "core printed equations legible; private optimization primitives and AL law not printed",
+    "steady_state_quality": "linearized gap steady state documented; adaptive-learning initialization deferred",
+    "needs_human_review": "true",
+    "notes": "Shared catalog.csv and status.csv were not edited by instruction. The AL-specific variant is identified from MMB implementation metadata only."
+  },
+  "validation": {
+    "commands": [
+      "git diff --check -- data/model_archive/mmb_derivations/NK_LWW03AL",
+      "python3 -m json.tool data/model_archive/mmb_derivations/NK_LWW03AL/source_manifest.json >/dev/null",
+      "python3 -m json.tool data/model_archive/mmb_derivations/NK_LWW03AL/worker_report.json >/dev/null",
+      "python3 - <<'PY'\nfrom pathlib import Path\nimport re\nmodel = 'NK_LWW03AL'\nbase = Path('data/model_archive/mmb_derivations') / model\nen = (base / f'{model}_derivation.en.md').read_text()\nzh = (base / f'{model}_derivation.zh.md').read_text()\nassert all(f'## {i}.' in en for i in range(1, 9))\nassert re.search(r'\\(F1\\)', en)\nassert len(re.findall(r'\\(F\\d+\\)', en)) == len(re.findall(r'\\(F\\d+\\)', zh))\nprint('archive_entry_checks_ok')\nprint('f_number_counts_match')\nPY"
+    ],
+    "results": [
+      "git diff --check passed for data/model_archive/mmb_derivations/NK_LWW03AL",
+      "source_manifest.json parsed successfully with python3 -m json.tool",
+      "worker_report.json parsed successfully with python3 -m json.tool",
+      "English derivation contains all eight required sections and (F1)",
+      "English and Chinese F-number counts match at 65 regex matches each"
+    ]
+  },
+  "unresolved_issues": [
+    "Paper-side Markdown does not print household and firm optimization primitives behind the two-equation optimizing AD-AS system.",
+    "Paper-side Markdown does not derive the adaptive-learning law for NK_LWW03AL.",
+    "Exact MMB policy-rule coefficient vector mapping and adaptive-learning initialization should be reviewed against Modelbase documentation before promotion.",
+    "Runtime validation was not performed and Dynare was not run."
+  ]
+}

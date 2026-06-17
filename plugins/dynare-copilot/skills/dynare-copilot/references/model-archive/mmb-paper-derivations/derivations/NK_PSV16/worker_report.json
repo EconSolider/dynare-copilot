@@ -1,0 +1,50 @@
+{
+  "model_id": "NK_PSV16",
+  "status": "needs_review",
+  "changed_paths": [
+    "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_PSV16/NK_PSV16_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_PSV16/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_PSV16/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_PSV16/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_PSV16",
+    "Task": "Financial accelerator with equilibrium price of capital",
+    "Paper": "The price of capital and the financial accelerator",
+    "Year": "2016",
+    "ModelType": "linearized New Keynesian financial accelerator",
+    "Economy": "closed economy",
+    "Category": "financial frictions",
+    "KeyFeatures": "BGG financial accelerator; equilibrium old-capital price; positive depreciation; investment adjustment costs",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+    "RawPDF": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+    "DOI": "10.1016/j.econlet.2016.10.022",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_PSV16",
+    "paper_title": "The price of capital and the financial accelerator",
+    "source_full_md": "raw/mmb_mineru/runs/nk_psv16__the_price_of_capital_and_the_financial_accelerator__a468e7e7/full.md",
+    "raw_pdf_path": "raw/mmb_papers/The price of capital and the financial accelerator.pdf",
+    "status": "needs_review",
+    "formula_quality": "paper capital-price equations extracted; BGG baseline reconstructed from implementation_cross_check; equation (9) needs source review",
+    "steady_state_quality": "linearized zero steady state recorded; nonlinear BGG steady-state derivation deferred",
+    "needs_human_review": "true",
+    "notes": "Shared catalog.csv and status.csv were not edited by instruction."
+  },
+  "validation": {
+    "git_diff_check": "passed for data/model_archive/mmb_derivations/NK_PSV16",
+    "source_manifest_json_tool": "passed",
+    "worker_report_json_tool": "passed",
+    "english_eight_sections": "passed",
+    "f_number_count_match": "passed; English and Chinese both have 92 total F-number references and 18 unique F-number labels",
+    "dynare_run": "not_performed"
+  },
+  "unresolved_issues": [
+    "Paper equation (9) sign/timing differs from implementation_cross_check and needs source-level review.",
+    "Baseline BGG household, Calvo, policy, and entrepreneur equations are implementation cross-check material, not fully derived in the PSV16 paper.",
+    "Runtime validation was not performed by instruction."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "model_id": "NK_ST13",
+  "status": "completed_needs_review",
+  "paper": {
+    "title": "Inside money in general equilibrium: Does it matter for monetary policy?",
+    "authors": "Stracca, Livio",
+    "year": 2013,
+    "journal": "Macroeconomic Dynamics 17 (3), 563-590",
+    "doi": "10.1017/s1365100511000368"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "row_model_id": "NK_ST13",
+    "source_slug": "nk_st13__inside_money_in_general_equilibrium_does_it_matter_for_monetary_policy",
+    "source_status": "matched",
+    "source_match_score": 1.0,
+    "mineru_run_ids": [
+      "147ef95e-e1de-4687-81af-2d62c23c52e2"
+    ],
+    "primary_source_title": "Inside money in general equilibrium- Does it matter for monetary policy?",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/nk_st13__inside_money_in_general_equilibrium_does_it_matter_for_monetary_policy__147ef95e/full.md",
+      "sha256": "4e45bbac5a03fd528aaed113ed8c79410cc79eb5cbe022753a14e7df49e0658e",
+      "mineru_run_id": "147ef95e-e1de-4687-81af-2d62c23c52e2",
+      "title_sniff": "INSIDE MONEY IN GENERAL EQUILIBRIUM: DOES IT MATTER FOR MONETARY POLICY?",
+      "title_match": "matched"
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/Inside money in general equilibrium- Does it matter for monetary policy?.pdf",
+      "sha256": "c61fae0225f66a0d71caf161e22b5477b1b73fec2dcdeb715de9a165fd880fe5",
+      "exists": true,
+      "body_read": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/NK_ST13.md",
+      "exists": false,
+      "sha256": null
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/NK_ST13_rep.mod",
+      "sha256": "95e5ab76c459a0f43e36c80df4bbc53de96f62671426fe74a474df89f956d0d6",
+      "used_as": "implementation_cross_check",
+      "dynare_run": false
+    }
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_ST13/NK_ST13_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_ST13/NK_ST13_derivation.zh.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_ST13/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_ST13/worker_report.json"
+  },
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "Household deposit FOC sign on xi differs between paper OCR and Rep-MMB implementation comment.",
+      "Firm marginal-cost expression combines labor and capital relationships and should be checked against the PDF before promotion.",
+      "Appendix equation A.5 contains an apparent OCR/source typo with trailing '= 0'."
+    ]
+  },
+  "created_at": "2026-06-17",
+  "paper_title": "Inside money in general equilibrium: Does it matter for monetary policy?",
+  "authors": "Stracca, Livio",
+  "year": "2013",
+  "journal_or_series": "Macroeconomic Dynamics 17 (3), 563-590",
+  "doi": "10.1017/s1365100511000368",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_ST13",
+    "paper_title": "Inside money in general equilibrium: Does it matter for monetary policy?",
+    "authors": "Stracca, Livio",
+    "year": "2013",
+    "journal_or_series": "Macroeconomic Dynamics 17 (3), 563-590",
+    "doi": "10.1017/s1365100511000368",
+    "paper_slug": "nk_st13__inside_money_in_general_equilibrium_does_it_matter_for_monetary_policy",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "147ef95e-e1de-4687-81af-2d62c23c52e2",
+    "primary_source_title": "Inside money in general equilibrium- Does it matter for monetary policy?",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_st13__inside_money_in_general_equilibrium_does_it_matter_for_monetary_policy__147ef95e/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Inside money in general equilibrium- Does it matter for monetary policy?.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_st13__inside_money_in_general_equilibrium_does_it_matter_for_monetary_policy__147ef95e/full.md",
+      "exists": true,
+      "sha256": "4e45bbac5a03fd528aaed113ed8c79410cc79eb5cbe022753a14e7df49e0658e"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/Inside money in general equilibrium- Does it matter for monetary policy?.pdf",
+      "exists": true,
+      "sha256": "c61fae0225f66a0d71caf161e22b5477b1b73fec2dcdeb715de9a165fd880fe5"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_ST13/NK_ST13_derivation.en.md",
+      "exists": true,
+      "sha256": "6e275544f14041b8d4789a57f4e44f6f558d1ad3f05b43b65973ba2b81b466f9"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_ST13/NK_ST13_derivation.zh.md",
+      "exists": true,
+      "sha256": "731ed05d3a4f844ab480b1bbeb64cf94004ab0c258b6cd32ed2e167ed41ccd61"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_ST13/source_manifest.json",
+      "exists": true,
+      "sha256": "b8f4836f024c0f5c1f812a233b564c567f7d07a57922d65d56885667ef61de9d"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_ST13/extraction_notes.md",
+      "exists": true,
+      "sha256": "d8a3fd89d6f63ea575563690fdded58572e886414cf9ab9bc8cf41c8f4264ba9"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_ST13/worker_report.json",
+      "exists": true,
+      "sha256": "d3f459b8a106cdcabe3da7ad6401bf718b9e29aad126166ddc0a0dfb18e47898"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

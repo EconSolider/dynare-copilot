@@ -1,0 +1,72 @@
+{
+  "model_id": "NK_CFP10",
+  "owned_directory": "data/model_archive/mmb_derivations/NK_CFP10",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_CFP10/NK_CFP10_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_CFP10/NK_CFP10_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_CFP10/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_CFP10/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_CFP10/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "NK_CFP10",
+    "Task": "mmb_derivation",
+    "Paper": "Optimal monetary policy in a model with agency costs",
+    "Year": "2010",
+    "ModelType": "New Keynesian agency-cost model, model(linear)",
+    "Economy": "closed economy",
+    "Category": "financial frictions; optimal monetary policy",
+    "KeyFeatures": "collateral constraint on constrained labor input; endogenous credit distortion; Rotemberg Phillips curve; net-worth shocks; Taylor rule closure",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs__381a62e0/full.md",
+    "RawPDF": "raw/mmb_papers/Optimal monetary policy in a model with agency costs.pdf",
+    "DOI": "10.1111/j.1538-4616.2010.00329.x",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "NK_CFP10",
+    "paper_title": "Optimal monetary policy in a model with agency costs",
+    "source_full_md": "raw/mmb_mineru/runs/nk_cfp10__optimal_monetary_policy_in_a_model_with_agency_costs__381a62e0/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Optimal monetary policy in a model with agency costs.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "draft_extracted",
+    "needs_human_review": true,
+    "notes": "First-pass bilingual derivation; F12 and appendix OCR formulas need targeted PDF review; runtime validation not performed."
+  },
+  "validations": {
+    "git_diff_check": {
+      "command": "git diff --check -- data/model_archive/mmb_derivations/NK_CFP10",
+      "status": "passed"
+    },
+    "json_validation": {
+      "command": "python3 -m json.tool source_manifest.json && python3 -m json.tool worker_report.json",
+      "status": "passed"
+    },
+    "eight_section_check": {
+      "status": "passed",
+      "english_missing_sections": [],
+      "chinese_missing_sections": []
+    },
+    "f_number_count_check": {
+      "status": "passed",
+      "english_unique_f_numbers": 26,
+      "chinese_unique_f_numbers": 26,
+      "english_f_number_occurrences": 110,
+      "chinese_f_number_occurrences": 110,
+      "expected_unique_sequence": "F1-F26"
+    }
+  },
+  "commit": {
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "reason": "User explicitly reserved staging, commit, and push for the main agent."
+  },
+  "unresolved_issues": [
+    "Equation (F12) should be checked against the PDF because MinerU OCR of appendix equation A4 appears inconsistent.",
+    "The full optimal-policy targeting criterion is not included as part of the simulation model equation set.",
+    "No Dynare runtime validation was performed."
+  ]
+}

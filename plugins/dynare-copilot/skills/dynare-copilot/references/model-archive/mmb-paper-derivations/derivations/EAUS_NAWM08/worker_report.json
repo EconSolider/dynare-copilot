@@ -1,0 +1,66 @@
+{
+  "model_id": "EAUS_NAWM08",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/EAUS_NAWM08/EAUS_NAWM08_derivation.en.md",
+    "data/model_archive/mmb_derivations/EAUS_NAWM08/EAUS_NAWM08_derivation.zh.md",
+    "data/model_archive/mmb_derivations/EAUS_NAWM08/source_manifest.json",
+    "data/model_archive/mmb_derivations/EAUS_NAWM08/extraction_notes.md",
+    "data/model_archive/mmb_derivations/EAUS_NAWM08/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "EAUS_NAWM08",
+    "Task": "mmb_model_archive_derivation",
+    "Paper": "Tax reform and labour-market performance in the euro area: A simulation-based analysis using the New Area-Wide Model",
+    "Year": "2008",
+    "ModelType": "nonlinear two-country New Area-Wide Model DSGE",
+    "Economy": "Euro area and United States",
+    "Category": "open-economy monetary DSGE with fiscal tax wedges",
+    "KeyFeatures": "two-country NAWM; limited asset-market participation; Calvo wages and prices; local-currency pricing; import adjustment costs; fiscal tax wedges; government debt rule; Taylor rule; international bond risk premium",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/eaus_nawm08__tax_reform_and_labour_market_performance_in_the_euro_area_a_simulation_b__5c5819cc/full.md",
+    "RawPDF": "raw/mmb_papers/Tax reform and labour-market performance in the euro area- A simulation-based analysis using the New Area-Wide Model.pdf",
+    "DOI": "10.1016/j.jedc.2007.09.007",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "EAUS_NAWM08",
+    "paper_title": "Tax reform and labour-market performance in the euro area: A simulation-based analysis using the New Area-Wide Model",
+    "source_full_md": "raw/mmb_mineru/runs/eaus_nawm08__tax_reform_and_labour_market_performance_in_the_euro_area_a_simulation_b__5c5819cc/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Tax reform and labour-market performance in the euro area- A simulation-based analysis using the New Area-Wide Model.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "calibrated_steady_state_ratios_recorded; analytic_steady_state_not_reconstructed",
+    "needs_human_review": true,
+    "notes": "First-pass extraction from MinerU Markdown; raw PDF existence checked but PDF body not opened; appendix normalization absent; implementation file used only as cross-check; Dynare not run."
+  },
+  "validation": [
+    {
+      "check": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/EAUS_NAWM08/source_manifest.json",
+      "status": "passed"
+    },
+    {
+      "check": "python3 -m json.tool data/model_archive/mmb_derivations/EAUS_NAWM08/worker_report.json",
+      "status": "passed"
+    },
+    {
+      "check": "English derivation has all eight required sections",
+      "status": "passed"
+    },
+    {
+      "check": "English and Chinese F-number counts match",
+      "status": "passed",
+      "details": "English F references: 94; Chinese F references: 94; unique F numbers in each: 39."
+    }
+  ],
+  "unresolved_issues": [
+    "No appendix normalization exists for EAUS_NAWM08.",
+    "Several compact/OCR-damaged formulas need source-level review before code generation.",
+    "Government-budget timing and imported-input gamma-dagger terms should be audited against PDF or a cleaner source.",
+    "Dynare runtime validation was not performed."
+  ]
+}

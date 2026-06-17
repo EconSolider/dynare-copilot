@@ -1,0 +1,49 @@
+{
+  "model_id": "NK_KM16",
+  "status": "needs_review",
+  "write_scope": "data/model_archive/mmb_derivations/NK_KM16/",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/NK_KM16/NK_KM16_derivation.en.md",
+    "data/model_archive/mmb_derivations/NK_KM16/NK_KM16_derivation.zh.md",
+    "data/model_archive/mmb_derivations/NK_KM16/source_manifest.json",
+    "data/model_archive/mmb_derivations/NK_KM16/extraction_notes.md",
+    "data/model_archive/mmb_derivations/NK_KM16/worker_report.json"
+  ],
+  "sources_read": [
+    "docs/MODEL_ARCHIVE_BUILD_PLAN.md",
+    ".agents/skills/dynare-copilot/references/derivation-style.md",
+    ".agents/skills/dynare-copilot/references/model-archive/bgg_financial/bgg_financial_derivation.md",
+    "raw/mmb_mineru/model_index.csv",
+    "raw/mmb_mineru/index.csv",
+    "raw/mmb_mineru/runs/nk_km16__public_debt_and_changing_inflation_targets__e715ef78/full.md",
+    ".agents/skills/dynare-copilot/references/examples/NK_KM16_rep.mod"
+  ],
+  "raw_pdf": {
+    "path": "raw/mmb_papers/Public Debt and Changing Inflation Targets.pdf",
+    "exists_checked": true,
+    "body_read": false
+  },
+  "appendix_normalization": {
+    "exists": false,
+    "path": "docs/mmb_appendix_full_normalizations/NK_KM16.md"
+  },
+  "implementation_cross_check": {
+    "performed": true,
+    "path": ".agents/skills/dynare-copilot/references/examples/NK_KM16_rep.mod",
+    "used_as": "implementation_cross_check_only"
+  },
+  "validations": {
+    "git_diff_check": "passed: git diff --check -- data/model_archive/mmb_derivations/NK_KM16",
+    "json_tool_source_manifest": "passed: python3 -m json.tool source_manifest.json",
+    "json_tool_worker_report": "passed: python3 -m json.tool worker_report.json",
+    "eight_sections_english": "passed: ## 1. through ## 8. present and (F1) found",
+    "f_number_parity": "passed: English and Chinese F-number sequences match; 83 total references and 26 unique labels in each file"
+  },
+  "unresolved_issues": [
+    "Long-term bond Euler equation should be PDF-checked before review status is upgraded.",
+    "Kalman gain algebra was not fully transcribed due to OCR compression.",
+    "No Dynare runtime validation was performed.",
+    "Shared catalog/status indexes were not edited by user instruction."
+  ],
+  "completed_utc": "2026-06-17"
+}

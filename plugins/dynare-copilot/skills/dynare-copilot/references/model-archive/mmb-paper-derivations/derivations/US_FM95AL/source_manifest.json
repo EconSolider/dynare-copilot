@@ -1,0 +1,75 @@
+{
+  "model_id": "US_FM95AL",
+  "archive_status": "needs_review",
+  "paper": {
+    "title": "Inflation persistence",
+    "authors": [
+      "Jeff Fuhrer",
+      "George Moore"
+    ],
+    "year": 1995,
+    "journal_or_series": "The Quarterly Journal of Economics 110(1), pp. 127-159",
+    "doi": "10.2307/2118513",
+    "stable_url": "https://www.jstor.org/stable/2118513"
+  },
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "mineru_match_status": "matched",
+    "mineru_match_score": 1.0,
+    "primary_source_title": "Inflation persistence",
+    "model_title_match_score": 1.0,
+    "model_match_notes": ""
+  },
+  "mineru_source": {
+    "run_id": "c66e898c-8e86-47ef-ad55-d92881987961",
+    "full_md_path": "raw/mmb_mineru/runs/us_fm95_us_fm95al__inflation_persistence__c66e898c/full.md",
+    "full_md_sha256": "6cd7781898404dd3999cad825dd26ab8a932157dc7610eb59e10430e08696a82",
+    "title_author_sniff": {
+      "title_seen": "Inflation Persistence",
+      "authors_seen": "Jeff Fuhrer and George Moore",
+      "source_seen": "The Quarterly Journal of Economics, Feb., 1995, Vol. 110, No. 1, pp. 127-159"
+    }
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/Inflation persistence.pdf",
+    "exists": true,
+    "sha256": "a78b871a4f08de379c8b95789faee3ceee52888ef1adae75bba338e5bd75b414",
+    "opened_for_formula_check": false
+  },
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_FM95AL.md",
+    "exists": false
+  },
+  "implementation_cross_check": {
+    "path": "raw/mmb/mmci-cli/models/US_FM95AL/US_FM95AL.mod",
+    "exists": true,
+    "sha256": "2e5a0b33e5478e3ac3c202c23f50d5f1f1c8a49718774f4522a774987bcfe65b",
+    "dynare_run_performed": false,
+    "observations": [
+      "The implementation is declared as model(linear).",
+      "Variables include p, x, ytilde, ypsilon, infl, rho, f and modelbase aliases.",
+      "Shocks include epsilon_p, epsilon_y, and the MMB policy shock interest_.",
+      "The implementation uses f0-f3 contract weights and a relative real contract-price index z = x - p."
+    ]
+  },
+  "outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_FM95AL/US_FM95AL_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_FM95AL/US_FM95AL_derivation.zh.md",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_FM95AL/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_FM95AL/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "main_contract_equations_legible": true,
+    "uncertain_items": [
+      "Exact coefficient mapping from the paper's reduced-form VAR/bill-rate block to the MMB policy-rule interface is implementation-side and needs review.",
+      "The archive records the appendix alternative p-bar specification for coverage, but the main derivation uses the paper's preferred p_t relative-contracting specification."
+    ]
+  },
+  "runtime_validation": {
+    "status": "not_performed",
+    "dynare_executed": false,
+    "reason": "User explicitly requested not to run Dynare; archive task is derivation extraction only."
+  }
+}

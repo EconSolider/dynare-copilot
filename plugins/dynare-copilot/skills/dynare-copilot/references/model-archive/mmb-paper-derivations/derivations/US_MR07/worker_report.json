@@ -1,0 +1,58 @@
+{
+  "model_id": "US_MR07",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/US_MR07/US_MR07_derivation.en.md",
+    "data/model_archive/mmb_derivations/US_MR07/US_MR07_derivation.zh.md",
+    "data/model_archive/mmb_derivations/US_MR07/source_manifest.json",
+    "data/model_archive/mmb_derivations/US_MR07/extraction_notes.md",
+    "data/model_archive/mmb_derivations/US_MR07/worker_report.json"
+  ],
+  "proposed_catalog_row": {
+    "ModelID": "US_MR07",
+    "Task": "mmb_derivation",
+    "Paper": "Sticky information in general equilibrium.",
+    "Year": "2007",
+    "ModelType": "log-linear sticky-information DSGE",
+    "Economy": "United States",
+    "Category": "sticky information / monetary DSGE",
+    "KeyFeatures": "sticky information for consumers, workers, and firms; Taylor rule; no capital accumulation; five structural shocks",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/us_mr07__sticky_information_in_general_equilibrium__3f559c99/full.md",
+    "RawPDF": "raw/mmb_papers/Sticky information in general equilibrium..pdf",
+    "DOI": "10.1162/jeea.2007.5.2-3.603",
+    "Status": "needs_review"
+  },
+  "proposed_status_row": {
+    "model_id": "US_MR07",
+    "paper_title": "Sticky information in general equilibrium.",
+    "source_full_md": "raw/mmb_mineru/runs/us_mr07__sticky_information_in_general_equilibrium__3f559c99/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Sticky information in general equilibrium..pdf",
+    "status": "needs_review",
+    "formula_quality": "first_pass_markdown_reduced_form_equations_legible_appendix_missing",
+    "steady_state_quality": "linear_zero_steady_state_recorded",
+    "needs_human_review": "true",
+    "notes": "Journal-body Markdown gives five reduced-form equations; appendix-level optimization problems and coefficient recursions need source review."
+  },
+  "validation": {
+    "dynare_run": "not_performed",
+    "commands": [
+      "git diff --check -- data/model_archive/mmb_derivations/US_MR07",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_MR07/source_manifest.json >/dev/null",
+      "python3 -m json.tool data/model_archive/mmb_derivations/US_MR07/worker_report.json >/dev/null",
+      "python3 - <<'PY' ... eight-section and F-number checks ... PY"
+    ],
+    "results": [
+      "git diff --check passed",
+      "source_manifest.json valid JSON",
+      "worker_report.json valid JSON",
+      "archive_entry_checks_ok; English and Chinese F-number mention counts match at 62 each; unique F-number set is F1-F13"
+    ]
+  },
+  "unresolved_issues": [
+    "Appendix-level primitive optimization problems and equilibrium definitions are not available in the required Markdown source.",
+    "Long real interest rate equation has OCR noise around exact index notation.",
+    "Natural-output formula and finite-lag implementation details are cross-checked from .mod only and need source-level review.",
+    "Productivity-growth AR(1) versus productivity-level second-order implementation mapping needs appendix/source review."
+  ]
+}

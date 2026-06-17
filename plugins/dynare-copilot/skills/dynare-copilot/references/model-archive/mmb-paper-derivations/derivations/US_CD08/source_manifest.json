@@ -1,0 +1,78 @@
+{
+  "model_id": "US_CD08",
+  "status": "needs_review",
+  "paper": {
+    "title": "The financial accelerator in an estimated New Keynesian model",
+    "authors": [
+      "Christensen, Ian",
+      "Dib, Ali"
+    ],
+    "year": 2008,
+    "journal_or_series": "Review of Economic Dynamics 11(1), pp. 155-178",
+    "doi": "10.1016/j.red.2007.04.006"
+  },
+  "model_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_CD08",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "The financial accelerator in an estimated New Keynesian model",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "sources": {
+    "primary_full_md": {
+      "path": "raw/mmb_mineru/runs/us_cd08__the_financial_accelerator_in_an_estimated_new_keynesian_model__a324933c/full.md",
+      "sha256": "c2cbea0ca0bb74b11f46f8d4ccba233671deefb898559200a2b8d277bce7df35",
+      "exists": true
+    },
+    "raw_pdf": {
+      "path": "raw/mmb_papers/The financial accelerator in an estimated New Keynesian model.pdf",
+      "sha256": "fc384ad564b37c3b452c7a5c41f6e8cb3c72e5bcfc53cd52df7d89158a1ca6a4",
+      "exists": true,
+      "opened_for_formula_check": false
+    },
+    "appendix_normalization": {
+      "path": "docs/mmb_appendix_full_normalizations/US_CD08.md",
+      "sha256": null,
+      "exists": false
+    },
+    "implementation_cross_check": {
+      "path": ".agents/skills/dynare-copilot/references/examples/US_CD08_rep.mod",
+      "sha256": "2617fa221b9bdb9fa62c8d4e3bc52b012abdc2792cd74f3ca84d3f2c6b06077f",
+      "exists": true,
+      "used_as": "implementation_cross_check"
+    }
+  },
+  "mineru": {
+    "run_ids": [
+      "a324933c-651a-412e-ae68-97c765d22004"
+    ],
+    "paper_slug": "us_cd08__the_financial_accelerator_in_an_estimated_new_keynesian_model"
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_CD08/US_CD08_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_CD08/US_CD08_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_CD08/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_CD08/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_CD08/worker_report.json"
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "notes": [
+      "The primary OCR Markdown contains the model section, Appendix A nonlinear equilibrium, Appendix B steady-state equilibrium, and Appendix C log-linearized equilibrium.",
+      "The raw PDF path was checked for existence but the PDF body was not opened for formula-level review.",
+      "The implementation cross-check confirms model(linear), variables, shock names, and capital timing, but was not treated as paper-side mathematical evidence.",
+      "The paper and implementation use shifted capital timing conventions; this is recorded in the derivation rather than normalized away."
+    ]
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current phase is private derivation extraction only."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper."
+}

@@ -1,0 +1,85 @@
+{
+  "model_id": "US_ACELswm",
+  "status": "needs_review",
+  "paper": {
+    "title": "Firm-specific capital, nominal rigidities",
+    "authors": [
+      "Altig, David",
+      "Christiano, Lawrence J.",
+      "Eichenbaum, Martin",
+      "Linde, Jesper"
+    ],
+    "year": "2005",
+    "journal_or_series": "CEPR Discussion Papers 4858",
+    "doi": "10.3386/w11034"
+  },
+  "model_index_row": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "sha256": "3cb50a56b94b56284cc2516ffdfdf4da2becc337d20e9aa56e2f065e0823ca75",
+    "model_id": "US_ACELswm",
+    "paper_slug": "us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": [
+      "e0fac58f-0dfb-476b-b2df-8712e57d9ce4"
+    ],
+    "primary_source_title": "Firm-specific capital, nominal rigidities",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+    "model_match_notes": ""
+  },
+  "paper_side_sources_used": [
+    {
+      "role": "main_equation_source",
+      "path": "raw/mmb_mineru/runs/us_acelm_us_acelswm_us_acelswt_us_acelt__firm_specific_capital_nominal_rigidities__e0fac58f/full.md",
+      "exists": true,
+      "sha256": "076ad1ff4d2146c511b4feabae5490d12292e7ee485f953b8320dfd9751542c7",
+      "mineru_run_id": "e0fac58f-0dfb-476b-b2df-8712e57d9ce4",
+      "source_title_observed": "Firm-Specific Capital, Nominal Rigidities and the Business Cycle",
+      "source_authors_observed": "David Altig; Lawrence J. Christiano; Martin Eichenbaum; Jesper Linde",
+      "usage": "Model overview, nonlinear primitives, timing, shock processes, market clearing, reduced inflation equation, and steady-state calibration discussion."
+    },
+    {
+      "role": "raw_pdf_provenance",
+      "path": "raw/mmb_papers/Firm-specific capital, nominal rigidities.pdf",
+      "exists": true,
+      "sha256": "b418270ebc5f8698a2a1d2562d236ccdefe30fb4ee04561a1287a8872c205618",
+      "body_opened": false,
+      "usage": "Existence and provenance only; PDF body was not read by default."
+    }
+  ],
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/US_ACELswm.md",
+    "exists": false,
+    "used": false,
+    "sha256": null
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/US_ACELswm_rep.mod",
+    "exists": true,
+    "sha256": "60138c44bb14b6326a2a234e5268d82b81182536dac80afe43d71222fb9866a6",
+    "used_as": "implementation_cross_check",
+    "notes": "Used only for variable coverage, linear model form, timing auxiliaries, flexible-price block, calibration constants, shock names, and technical-appendix equation labels. Not used as paper-side mathematical evidence."
+  },
+  "source_index_issue": null,
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/US_ACELswm/US_ACELswm_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/US_ACELswm/US_ACELswm_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/US_ACELswm/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/US_ACELswm/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/US_ACELswm/worker_report.json"
+  },
+  "runtime_validation": {
+    "dynare_run_performed": false,
+    "promotion_to_skill_archive": false,
+    "notes": "Current task explicitly forbids running Dynare and asks for private derivation extraction only."
+  },
+  "formula_quality": {
+    "status": "needs_review",
+    "reason": "The paper-side Markdown does not include the full technical appendix linear equilibrium system. Technical-appendix equations were cross-checked against the MMB implementation and require source-level review."
+  },
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "copyright_boundary": "The derivation summarizes model structure and equations. It does not copy long prose from the paper."
+}

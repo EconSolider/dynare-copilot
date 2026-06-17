@@ -1,0 +1,132 @@
+{
+  "model_id": "NK_MI14",
+  "paper_title": "A Theory of Countercyclical Government Multiplier",
+  "authors": "Michaillat, Pascal",
+  "year": "2014",
+  "journal_or_series": "American Economic Journal: Macroeconomics, 6(1): 190-217",
+  "doi": "10.1257/mac.6.1.190",
+  "source_index": {
+    "path": "raw/mmb_mineru/model_index.csv",
+    "model_id": "NK_MI14",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "primary_source_title": "A Theory of Countercyclical Government Multiplier",
+    "model_title_match_score": "1.0000",
+    "model_match_notes": ""
+  },
+  "mineru": {
+    "run_ids": [
+      "afea0443-0728-45fc-b048-6add939d19ec",
+      "ee399d61-9d94-4794-ba44-4a43691caddf"
+    ],
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_mi14__a_theory_of_countercyclical_government_multiplier__afea0443/full.md",
+    "primary_full_md_sha256": "12f20f4cf79c2cfd2f9690330fad0a399689722df75b41670d53a3a399a69f02",
+    "alternate_full_md_paths": [
+      {
+        "path": "raw/mmb_mineru/runs/nk_mi14__a_theory_of_countercyclical_government_multiplier__ee399d61/full.md",
+        "sha256": "f2071f08f3a78bed5dc3fec1f3760bcb4176a768d34cd4a84387c162983bf7ca",
+        "title_sniff": "A Theory of Countercyclical Government Multiplier"
+      }
+    ],
+    "formula_quality": "good first-pass extraction; one unsymmetrized price FOC marked needs_review"
+  },
+  "raw_pdf": {
+    "path": "raw/mmb_papers/A Theory of Countercyclical Government Multiplier.pdf",
+    "exists": true,
+    "sha256": "d285848775ca0c0e0ce7ebc7cd5fdfbf8bce3446bc07014c711e647997921b51",
+    "body_read": false,
+    "body_read_reason": "Not opened by default; Markdown source was sufficient for first-pass dynamic-equation extraction except for deferred targeted checks."
+  },
+  "appendix_normalization": {
+    "path": "docs/mmb_appendix_full_normalizations/NK_MI14.md",
+    "exists": false
+  },
+  "implementation_cross_check": {
+    "path": ".agents/skills/dynare-copilot/references/examples/NK_MI14_rep.mod",
+    "exists": true,
+    "sha256": "2ab863fbb7e722d45f3e8e80050619040c4b22d7d69396dd41446821c8035752",
+    "use_scope": "implementation_cross_check_only",
+    "notes": [
+      "Used to cross-check endogenous variable names, shock names, calibration values, nonlinear form, and the public-hiring shock representation.",
+      "Not treated as paper-side mathematical evidence and not run in Dynare."
+    ]
+  },
+  "archive_outputs": {
+    "english_derivation": "data/model_archive/mmb_derivations/NK_MI14/NK_MI14_derivation.en.md",
+    "chinese_derivation": "data/model_archive/mmb_derivations/NK_MI14/NK_MI14_derivation.zh.md",
+    "source_manifest": "data/model_archive/mmb_derivations/NK_MI14/source_manifest.json",
+    "extraction_notes": "data/model_archive/mmb_derivations/NK_MI14/extraction_notes.md",
+    "worker_report": "data/model_archive/mmb_derivations/NK_MI14/worker_report.json"
+  },
+  "runtime_validation": {
+    "performed": false,
+    "notes": "Not performed in first-pass archive extraction."
+  },
+  "status": "completed_needs_review",
+  "archive_entry_created": "2026-06-17",
+  "archive_entry_updated": "2026-06-17",
+  "model_index_row_normalized": {
+    "model_id": "NK_MI14",
+    "paper_title": "A Theory of Countercyclical Government Multiplier",
+    "authors": "Michaillat, Pascal",
+    "year": "2014",
+    "journal_or_series": "American Economic Journal: Macroeconomics, 6(1): 190-217",
+    "doi": "10.1257/mac.6.1.190",
+    "paper_slug": "nk_mi14__a_theory_of_countercyclical_government_multiplier",
+    "mineru_match_status": "matched",
+    "mineru_match_score": "1.0000",
+    "mineru_run_ids": "afea0443-0728-45fc-b048-6add939d19ec; ee399d61-9d94-4794-ba44-4a43691caddf",
+    "primary_source_title": "A Theory of Countercyclical Government Multiplier",
+    "model_title_match_score": "1.0000",
+    "primary_full_md_path": "raw/mmb_mineru/runs/nk_mi14__a_theory_of_countercyclical_government_multiplier__afea0443/full.md",
+    "raw_pdf_path": "raw/mmb_papers/A Theory of Countercyclical Government Multiplier.pdf",
+    "model_match_notes": ""
+  },
+  "source_files": [
+    {
+      "role": "primary_full_md",
+      "path": "raw/mmb_mineru/runs/nk_mi14__a_theory_of_countercyclical_government_multiplier__afea0443/full.md",
+      "exists": true,
+      "sha256": "12f20f4cf79c2cfd2f9690330fad0a399689722df75b41670d53a3a399a69f02"
+    },
+    {
+      "role": "raw_pdf",
+      "path": "raw/mmb_papers/A Theory of Countercyclical Government Multiplier.pdf",
+      "exists": true,
+      "sha256": "d285848775ca0c0e0ce7ebc7cd5fdfbf8bce3446bc07014c711e647997921b51"
+    }
+  ],
+  "archive_files": [
+    {
+      "role": "english_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_MI14/NK_MI14_derivation.en.md",
+      "exists": true,
+      "sha256": "08f92b6f426f18d78d2dc8289502ee212928028b7e8d9eac02812f695406cb22"
+    },
+    {
+      "role": "chinese_derivation",
+      "path": "data/model_archive/mmb_derivations/NK_MI14/NK_MI14_derivation.zh.md",
+      "exists": true,
+      "sha256": "87f81fcc8ebdb321404feb2010ff05bd5c3d008b4155b8bca4b4e836c99e5bb6"
+    },
+    {
+      "role": "source_manifest",
+      "path": "data/model_archive/mmb_derivations/NK_MI14/source_manifest.json",
+      "exists": true,
+      "sha256": "4b635a47dd4e16185288f978dc5546af96b316e2c60bb8475d6aa218134e356e"
+    },
+    {
+      "role": "extraction_notes",
+      "path": "data/model_archive/mmb_derivations/NK_MI14/extraction_notes.md",
+      "exists": true,
+      "sha256": "fc99ab70b2d0d2f88c491fd943cc352df30ca79d1ea7a2b1cfaaec617de8a8ef"
+    },
+    {
+      "role": "worker_report",
+      "path": "data/model_archive/mmb_derivations/NK_MI14/worker_report.json",
+      "exists": true,
+      "sha256": "570aec42aa247ae22d805a115141668a8f29b5e7e639a0ec95148b08d158dcbf"
+    }
+  ],
+  "copyright_boundary": "Derived notes and equations only; no long prose copied from paper."
+}

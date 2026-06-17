@@ -1,0 +1,62 @@
+{
+  "model_id": "CA_BMZ12",
+  "status": "needs_review",
+  "changed_files": [
+    "data/model_archive/mmb_derivations/CA_BMZ12/CA_BMZ12_derivation.en.md",
+    "data/model_archive/mmb_derivations/CA_BMZ12/CA_BMZ12_derivation.zh.md",
+    "data/model_archive/mmb_derivations/CA_BMZ12/source_manifest.json",
+    "data/model_archive/mmb_derivations/CA_BMZ12/extraction_notes.md",
+    "data/model_archive/mmb_derivations/CA_BMZ12/worker_report.json"
+  ],
+  "catalog_row": {
+    "ModelID": "CA_BMZ12",
+    "Task": "mmb_derivation",
+    "Paper": "Macroprudential rules and monetary policy when financial frictions matter",
+    "Year": "2012",
+    "ModelType": "Nonlinear DSGE with financial frictions and macroprudential policy",
+    "Economy": "Canada",
+    "Category": "Monetary policy; macroprudential policy; financial accelerator",
+    "KeyFeatures": "BGG-style financial accelerator; nominal debt contracts; external finance premium; credit-growth augmented Taylor rule; macroprudential premium rule; Calvo pricing",
+    "DateAdded": "2026-06-17",
+    "SourceFullMD": "raw/mmb_mineru/runs/ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte__aa2f7a66/full.md",
+    "RawPDF": "raw/mmb_papers/Macroprudential rules and monetary policy when financial frictions matter.pdf",
+    "DOI": "10.1016/j.econmod.2015.06.012",
+    "Status": "needs_review"
+  },
+  "status_row": {
+    "model_id": "CA_BMZ12",
+    "paper_title": "Macroprudential rules and monetary policy when financial frictions matter",
+    "source_full_md": "raw/mmb_mineru/runs/ca_bmz12__macroprudential_rules_and_monetary_policy_when_financial_frictions_matte__aa2f7a66/full.md",
+    "raw_pdf_path": "raw/mmb_papers/Macroprudential rules and monetary policy when financial frictions matter.pdf",
+    "status": "needs_review",
+    "formula_quality": "needs_review",
+    "steady_state_quality": "partial_from_paper_and_implementation_cross_check",
+    "needs_human_review": "true",
+    "notes": "First-pass derivation from MinerU Markdown; PDF not opened; Calvo and net-worth formulas need targeted review."
+  },
+  "validation": [
+    {
+      "check": "source_order_followed",
+      "status": "passed"
+    },
+    {
+      "check": "raw_pdf_path_exists",
+      "status": "passed"
+    },
+    {
+      "check": "appendix_normalization",
+      "status": "not_present"
+    },
+    {
+      "check": "dynare_run",
+      "status": "not_performed"
+    }
+  ],
+  "unresolved_issues": [
+    "Retailer FOC and stochastic discount factor OCR require targeted PDF check.",
+    "Entrepreneur net-worth wage-income term in Eqs. (18)-(19) requires targeted PDF check.",
+    "Steady-state block remains partial and should be reviewed against source/implementation before promotion.",
+    "Flexible-price comparison block in Rep-MMB implementation is not fully represented as a separate source-derived subsystem.",
+    "Year convention should be resolved between working paper year 2012 and article publication year 2015."
+  ]
+}
