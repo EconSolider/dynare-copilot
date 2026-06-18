@@ -154,7 +154,7 @@ $$
 由于实现模型是对数线性的，扣除确定性均值或趋势后的稳态偏离为零：
 
 $$
-\bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^*=\bar r-r^*=\overline{ygap}=0.
+\bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^{\ast}=\bar r-r^{\ast}=\overline{ygap}=0.
 $$
 
 实现交叉检查单独设置平稳常数：

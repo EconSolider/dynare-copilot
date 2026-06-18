@@ -35,7 +35,7 @@ c_t =
 \left(R_t-E_t[\pi_{t+1}]+b_t\right)
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t)
 +\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
-+\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_*l_*}{c_*}
++\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_\astl_\ast}{c_\ast}
 \left(l_t-E_t[l_{t+1}]\right).
 $$
 
@@ -50,9 +50,9 @@ $$
 - **(F3) 资本积累**：
 $$
 \bar{k}_t=
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
 $$
 
 - **(F4) 有效资本服务**：
@@ -119,8 +119,8 @@ $$
 - **(F13) 名义资本回报**：
 $$
 \tilde{R}_t^k-\pi_t=
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k.
 $$
 
@@ -134,7 +134,7 @@ n_t={}&
 +\zeta_{n,n}n_{t-1} \\
 &-\frac{\zeta_{n,\sigma_\omega}}{\zeta_{sp,\sigma_\omega}}
 \tilde{\sigma}_{\omega,t-1}
--\gamma_*\frac{v_*}{n_*}z_t.
+-\gamma_\ast\frac{v_\ast}{n_\ast}z_t.
 \end{aligned}
 $$
 
@@ -148,8 +148,8 @@ $$
 
 - **(F16) 资源约束**：
 $$
-y_t=g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+y_t=g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal{I}\{\rho_z<1\}\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
@@ -157,7 +157,7 @@ $$
 $$
 \begin{aligned}
 R_t={}&\rho_R R_{t-1}
-+(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\right) \\
++(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\right) \\
 &+\psi_3\left((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\right)+r_t^m.
 \end{aligned}
 $$
@@ -203,7 +203,7 @@ $$
 
 - **(F24) 时变通胀目标**：
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*+\sigma_{\pi^*}\varepsilon_{\pi^*,t}.
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
 - **(F25) 贴现率楔子**：
@@ -231,9 +231,9 @@ $$
 
 由于档案来源是对数线性系统，(F1)-(F28) 中的模型变量都是相对非随机稳态的偏离。因此：
 
-- 内生对数偏离稳态为零：$c=l=R=\pi=q^k=i=r^k=\bar{k}=n=y=k=u=mc=w=w^h=z=\tilde{z}=\mu=\tilde{\sigma}_\omega=\lambda_f=\lambda_w=g=b=r^m=\pi^*=0$；
+- 内生对数偏离稳态为零：$c=l=R=\pi=q^k=i=r^k=\bar{k}=n=y=k=u=mc=w=w^h=z=\tilde{z}=\mu=\tilde{\sigma}_\omega=\lambda_f=\lambda_w=g=b=r^m=\pi^{\ast}=0$；
 - 弹性价格/工资对应变量的偏离稳态同样为零：$c^f=l^f=q^{k,f}=i^f=r^{k,f}=y^f=k^f=u^f=\bar{k}^f=w^f=r^f=0$；
-- 非零稳态水平以参数形式进入，包括 $\gamma$、$r_*$、$r_*^k$、$c_*$、$w_*$、$l_*$、$k_*$、$\bar{k}_*$、$i_*$、$y_*$、$g_*$、$v_*$ 和 $n_*$。
+- 非零稳态水平以参数形式进入，包括 $\gamma$、$r_\ast$、$r_\ast^k$、$c_\ast$、$w_\ast$、$l_\ast$、$k_\ast$、$\bar{k}_\ast$、$i_\ast$、$y_\ast$、$g_\ast$、$v_\ast$ 和 $n_\ast$。
 
 `needs_review`：论文将稳态公式指向 Del Negro and Schorfheide (2013) 的技术附录。本档案条目没有引入该外部附录，因此原始稳态推导留待后续处理。
 

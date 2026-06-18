@@ -136,7 +136,7 @@ For Japan, the source and implementation set the second and third output-gap lag
 $$
 is_{j,t}=(1-\rho_j)(\bar{r}_{l,j}+\pi4_{j,t})
 +\rho_j is_{j,t-1}
-+\alpha_j(\pi4_{j,t}-\pi^\*_{j})
++\alpha_j(\pi4_{j,t}-\pi^{\ast}_{j})
 +\beta_j q_{j,t}.
 $$
 
@@ -257,7 +257,7 @@ In the implementation cross-check, `delta0_j = 0`, so $\bar{r}_{l,j}=0$ for all 
 6. Set policy targets to zero in deviation form:
 
 $$
-\pi^\*_j=0.
+\pi^{\ast}_j=0.
 $$
 
 7. In steady state, `is_j`, `il_j`, and `rl_j` equal their normalized values implied by the policy rule, term structure, and real-rate definition. With the implementation's zero inflation target and zero equilibrium long real rate, these rates are zero in model units.

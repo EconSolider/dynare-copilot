@@ -67,8 +67,8 @@ $$
 Retailer $z$ faces CES demand and chooses a reset price when allowed to reprice:
 
 $$
-\max_{P_t^*}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
-\Lambda_{t,k}\frac{P_t^*-P_{t+k}^w}{P_{t+k}}Y_{t+k}^*(z)
+\max_{P_t^{\ast}}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
+\Lambda_{t,k}\frac{P_t^{\ast}-P_{t+k}^w}{P_{t+k}}Y_{t+k}^{\ast}(z)
 \right],
 $$
 
@@ -219,14 +219,14 @@ $$
 
 $$
 \sum_{k=0}^{\infty}\theta^kE_{t-1}\left\{
-\Lambda_{t,k}\left(\frac{P_t^*}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^*(z)
-\left[\frac{P_t^*}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
+\Lambda_{t,k}\left(\frac{P_t^{\ast}}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^{\ast}(z)
+\left[\frac{P_t^{\ast}}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
 $$
 
 - **(F23) Aggregate price index evolution**:
 
 $$
-P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^*)^{1-\epsilon}\right]^{1/(1-\epsilon)}.
+P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^{\ast})^{1-\epsilon}\right]^{1/(1-\epsilon)}.
 $$
 
 - **(F24) Log-linear resource constraint**:
@@ -442,7 +442,7 @@ $$
 | Endogenous | $R_t^n$, `rn` | gross nominal return / policy instrument | (F3), (F40), (F41) |
 | Endogenous | $\pi_t$, `pi` | inflation | (F32), (F41) |
 | Endogenous | $\bar{\omega}_t$, `omega_bar` | default cutoff | (F4), (F7), (F16), (F20), (F38) |
-| Endogenous | $P_t^*$, `pstar` | Calvo reset price | (F22), (F23) |
+| Endogenous | $P_t^{\ast}$, `pstar` | Calvo reset price | (F22), (F23) |
 | Endogenous | $Y_t(z)$, `yz` | retailer-level demand/output | (F21) |
 | Exogenous | $a_t$, `a` | technology log-deviation | (F30), (F43) |
 | Exogenous | $g_t$, `g` | government-spending log-deviation | (F24), (F42) |

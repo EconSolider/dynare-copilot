@@ -29,9 +29,9 @@ $$
 在同质资本表述中，中间品厂商 \(i\) 使用资本服务和劳动生产：
 
 $$
-y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^*,
+y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
-z_t^*=\Upsilon_t^{\alpha/(1-\alpha)}z_t.
+z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t.
 $$
 
 厂商在竞争性要素市场租用资本和劳动，并必须按总利率 \(R_t\) 预先融资工资账单。价格设定服从 Calvo 摩擦，不能重优化价格的厂商按下式指数化：
@@ -110,7 +110,7 @@ $$
 家庭以概率 \(1-\xi_w\) 重优化工资；否则：
 
 $$
-W_{j,t}=\pi_{t-1}\mu_{z^*}W_{j,t-1}.
+W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
 $$
 
 ## 3. First-Order Conditions
@@ -119,19 +119,19 @@ $$
 
 - **(F1) 资本欧拉方程，粘性价格块，needs_review**：
 $$
-\lambda_{z^*,t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
+\lambda_{z^{\ast},t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
 +\frac{\tilde\rho}{\tilde\rho+1-\delta}\tilde\rho_{t+1}
--\lambda_{z^*,t}-\tilde\mu_t
+-\lambda_{z^{\ast},t}-\tilde\mu_t
 =\mu_{z,t+1}+\frac{1}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F2) 投资欧拉方程，粘性价格块，needs_review**：
 $$
--\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
-+\kappa(\mu_{z^*}\mu_\Upsilon)^2(1+\beta)i_t
--\kappa(\mu_{z^*}\mu_\Upsilon)^2i_{t-1}
-=\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2\left(\mu_{z,t+1}+\frac{\mu_{\Upsilon,t+1}}{1-\alpha}\right)
--\kappa(\mu_{z^*}\mu_\Upsilon)^2\left(\mu_{z,t}+\frac{\mu_{\Upsilon,t}}{1-\alpha}\right).
+-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
++\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)i_t
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2i_{t-1}
+=\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\left(\mu_{z,t+1}+\frac{\mu_{\Upsilon,t+1}}{1-\alpha}\right)
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\left(\mu_{z,t}+\frac{\mu_{\Upsilon,t}}{1-\alpha}\right).
 $$
 
 - **(F3) 资本影子租金，粘性价格块，needs_review**：
@@ -145,7 +145,7 @@ $$
 
 - **(F4) 资本演化，粘性价格块**：
 $$
-(\mu_{z^*}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^*}\bar k_t
+(\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^{\ast}}\bar k_t
 +(1-\delta)\bar k_{t-1}
 =(1-\delta)\mu_{z,t}+\frac{1-\delta}{1-\alpha}\mu_{\Upsilon,t}.
 $$
@@ -172,11 +172,11 @@ $$
 - **(F8) 带习惯和流动性服务的消费欧拉方程，needs_review**：
 $$
 \begin{aligned}
-&-\beta b\left(\frac{1}{\mu_{z^*}c-bc}\right)^2\mu_{z^*}c\,c_{t+1}
-+A_c c_t+\lambda_{z^*}(1+\eta+\eta'V)\lambda_{z^*,t}\\
-&-\lambda_{z^*}(2+\sigma_\eta)\eta'V q_t
--\left(\frac{1}{c(1-b/\mu_{z^*})}\right)^2\frac{bc}{\mu_{z^*}}c_{t-1}\\
-&=\beta b\left(\frac{1}{\mu_{z^*}c-bc}\right)^2\mu_{z^*}c
+&-\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c\,c_{t+1}
++A_c c_t+\lambda_{z^{\ast}}(1+\eta+\eta'V)\lambda_{z^{\ast},t}\\
+&-\lambda_{z^{\ast}}(2+\sigma_\eta)\eta'V q_t
+-\left(\frac{1}{c(1-b/\mu_{z^{\ast}})}\right)^2\frac{bc}{\mu_{z^{\ast}}}c_{t-1}\\
+&=\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c
 \left(\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}\right)
 -B_c\left(\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}\right).
 \end{aligned}
@@ -184,14 +184,14 @@ $$
 
 - **(F9) 货币基础一阶条件**：
 $$
-\lambda_{z^*,t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^*,t}
+\lambda_{z^{\ast},t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^{\ast},t}
 =\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F10) 工资一阶条件，needs_review**：
 $$
 \eta_2\tilde w_{t+1}+\eta_5\pi_{t+1}
-+\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^*,t}
++\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^{\ast},t}
 +\eta_0\tilde w_{t-1}+\bar\eta_3\pi_{t-1}
 =-\eta_8\left(\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}\right)
 -\eta_7^\mu\left(\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}\right).
@@ -202,7 +202,7 @@ $$
 \frac{1}{\sigma_a}\tilde\rho_t=u_t.
 $$
 
-`US_ACELt` 中的弹性价格块用弹性价格变量 \((c_t^f,\tilde w_t^f,\lambda_{z^*,t}^f,\ldots)\) 重复资本、投资、租金、资本积累、边际成本、货币需求、消费欧拉、货币基础、工资、生产和利用率条件。其价格块设定 \(s_t^f=0\)，货币增长过程固定为 \(x_t^f=0\)。这些重复方程用于定义实现中的自然产出和产出缺口，本档案在变量表中记录，而不作为额外论文侧 FOC 重新编号。
+`US_ACELt` 中的弹性价格块用弹性价格变量 \((c_t^f,\tilde w_t^f,\lambda_{z^{\ast},t}^f,\ldots)\) 重复资本、投资、租金、资本积累、边际成本、货币需求、消费欧拉、货币基础、工资、生产和利用率条件。其价格块设定 \(s_t^f=0\)，货币增长过程固定为 \(x_t^f=0\)。这些重复方程用于定义实现中的自然产出和产出缺口，本档案在变量表中记录，而不作为额外论文侧 FOC 重新编号。
 
 ## 4. Market Clearing & Identities
 
@@ -220,9 +220,9 @@ $$
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)c_t
-+\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^*}}\right)\bar k\,i_t
++\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,i_t
 -(\tilde y+\phi)(1-\alpha)h_t-\eta'c^2q^{-1}q_t\\
-&+\left(\frac{\tilde\rho\bar k}{\mu_{z^*}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)u_t
+&+\left(\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)u_t
 -(\tilde y+\phi)\alpha\bar k_{t-1}
 +(\tilde y+\phi)\alpha\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\mu_{\Upsilon,t}
@@ -245,7 +245,7 @@ $$
 - **(F17) 生产函数，实现线性形式，needs_review**：
 $$
 (\tilde y+\phi)(1-\alpha)h_t-\tilde y\,\tilde y_t
-+\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^*}\mu_\Upsilon}\right)u_t
++\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)u_t
 +(\tilde y+\phi)\alpha\bar k_{t-1}
 =(\tilde y+\phi)\alpha\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\mu_{\Upsilon,t}
@@ -303,7 +303,7 @@ $$
 
 - **(F24) 平衡增长技术复合项**：
 $$
-\mu_{z^*,t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
+\mu_{z^{\ast},t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 - **(F25) 货币增长分解，论文形式**：
@@ -339,13 +339,13 @@ $$
 1. 设定校准的增长、偏好和技术参数 \(\alpha,\beta,\delta,b,\lambda_f,\lambda_w,\mu_\Upsilon,\mu_z,\nu,\psi_L,\sigma_L,x,V,\eta\)。
 2. 计算平衡增长技术：
 $$
-\mu_{z^*}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
+\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
 $$
 3. 计算租金回报和名义利率：
 $$
-\tilde\rho=\frac{\mu_\Upsilon\mu_{z^*}}{\beta}-(1-\delta),\qquad
-\pi=\frac{x}{\mu_{z^*}},\qquad
-R=\frac{\pi\mu_{z^*}}{\beta}.
+\tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),\qquad
+\pi=\frac{x}{\mu_{z^{\ast}}},\qquad
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
 4. 参数化交易成本：
 $$
@@ -361,11 +361,11 @@ $$
 $$
 \tilde w=\frac{1-\alpha}{R_\nu}s\left(\frac{\tilde\rho}{\alpha s}\right)^{\alpha/(\alpha-1)},
 \qquad
-\frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^*}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
+\frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
 $$
 7. 对共享水平，弹性价格稳态等于粘性价格稳态；在线性模型中弹性价格偏离为零。
 
-\(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^*}\) 的完整代数按 MMB 实现给出；在任何可运行提升之前，应与原始技术附录重新核对。运行验证记录为未执行。
+\(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^{\ast}}\) 的完整代数按 MMB 实现给出；在任何可运行提升之前，应与原始技术附录重新核对。运行验证记录为未执行。
 
 ## 7. Timing & Form Conventions
 
@@ -382,7 +382,7 @@ $$
 |---|---|---|---|
 | Endogenous | `c_t`, `cf_t` | 粘性/弹性价格消费偏离 | (F8), (F13), flexible block |
 | Endogenous | `wtilde_t`, `wtildef_t` | 缩放实际工资 | (F3), (F6), (F10), (F15) |
-| Endogenous | `lambda_zstar_t`, `lambda_zstarf_t` | 由 \(z^*\) 缩放的边际效用/影子价值 | (F1), (F8), (F9) |
+| Endogenous | `lambda_zstar_t`, `lambda_zstarf_t` | 由 \(z^{\ast}\) 缩放的边际效用/影子价值 | (F1), (F8), (F9) |
 | Endogenous | `m_t`, `mf_t` | 货币余额 | (F15), (F16) |
 | Endogenous | `pi_t`, `pif_t` | 通胀偏离 | (F5), (F9), (F16), (F21) |
 | Endogenous | `x_t`, `xf_t` | 货币增长/政策过程 | (F16), (F25)-(F28) |

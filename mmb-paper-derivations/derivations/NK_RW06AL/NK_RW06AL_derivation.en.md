@@ -173,7 +173,7 @@ $$
 - **(F12) Welfare output gap and loss**:
 
 $$
-L_t=\pi_t^2+\lambda(\hat Y_t-\hat Y_t^e-z^*)^2,
+L_t=\pi_t^2+\lambda(\hat Y_t-\hat Y_t^e-z^{\ast})^2,
 $$
 
 with
@@ -185,14 +185,14 @@ $$
 - **(F13) Constant-interest flexible output reference**:
 
 $$
-\hat Y_t^*=\frac{(1+\eta)\hat A_t-\sigma\hat\gamma_t+\hat\xi_t}{\sigma+\eta}.
+\hat Y_t^{\ast}=\frac{(1+\eta)\hat A_t-\sigma\hat\gamma_t+\hat\xi_t}{\sigma+\eta}.
 $$
 
 - **(F14) Cost-channel marginal cost in terms of $x_t$**:
 
 $$
 \hat\varphi_t=(\sigma+\eta)x_t+\hat R_t,\qquad
-x_t\equiv \hat Y_t-\hat Y_t^*.
+x_t\equiv \hat Y_t-\hat Y_t^{\ast}.
 $$
 
 - **(F15) Policy-model IS curve**:
@@ -356,7 +356,7 @@ Runtime validation, Blanchard-Kahn checks, and adaptive-learning solution checks
 - **Timing**: the compact MMB model is forward-looking and linear. The IS curve uses $x_{t+1}$ and $\pi_{t+1}$ expectations; the Phillips curve uses expected inflation.
 - **Stocks**: the paper model used here abstracts from capital, so there is no capital-in-production timing convention to resolve.
 - **Interest rate notation**: the paper's $R_t$ is the gross nominal interest rate; in the linearized equations $\hat R_t$ is the deviation of the nominal interest rate. The MMB `.mod` variable `R` is the linear deviation used in the compact equations.
-- **Output gap**: $x_t=\hat Y_t-\hat Y_t^*$ is the gap from the flexible-price output level under a constant-interest policy, not necessarily the gap from the efficient output level.
+- **Output gap**: $x_t=\hat Y_t-\hat Y_t^{\ast}$ is the gap from the flexible-price output level under a constant-interest policy, not necessarily the gap from the efficient output level.
 - **Adaptive learning**: `NK_RW06AL` adds adaptive-learning metadata (`AL_Info`) and restricts the policy-rule lead/lag structure. This is implementation metadata, not a separate paper-side optimization problem.
 - **Form**: `model(linear)`; all steady-state deviations are zero in the `.mod` model block.
 
@@ -364,7 +364,7 @@ Runtime validation, Blanchard-Kahn checks, and adaptive-learning solution checks
 
 | Category | Symbol / ASCII name | Meaning | Determined by |
 |---|---|---|---|
-| Endogenous | $x_t$ / `x` | Output gap relative to $\hat Y_t^*$ | (F15), policy rule |
+| Endogenous | $x_t$ / `x` | Output gap relative to $\hat Y_t^{\ast}$ | (F15), policy rule |
 | Endogenous | $\pi_t$ / `pi` | Inflation deviation | (F16) |
 | Endogenous | $\hat R_t$ / `R` | Nominal interest-rate deviation | policy rule / (F30) |
 | Reporting endogenous | `interest` | Annualized interest rate | (F23), policy rule |

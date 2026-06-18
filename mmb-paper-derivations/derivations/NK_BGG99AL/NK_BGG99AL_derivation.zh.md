@@ -67,8 +67,8 @@ $$
 零售商 $z$ 面临 CES 需求，并在可调价时选择重置价格：
 
 $$
-\max_{P_t^*}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
-\Lambda_{t,k}\frac{P_t^*-P_{t+k}^w}{P_{t+k}}Y_{t+k}^*(z)
+\max_{P_t^{\ast}}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
+\Lambda_{t,k}\frac{P_t^{\ast}-P_{t+k}^w}{P_{t+k}}Y_{t+k}^{\ast}(z)
 \right],
 $$
 
@@ -219,14 +219,14 @@ $$
 
 $$
 \sum_{k=0}^{\infty}\theta^kE_{t-1}\left\{
-\Lambda_{t,k}\left(\frac{P_t^*}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^*(z)
-\left[\frac{P_t^*}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
+\Lambda_{t,k}\left(\frac{P_t^{\ast}}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^{\ast}(z)
+\left[\frac{P_t^{\ast}}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
 $$
 
 - **(F23) 总价格指数演化**：
 
 $$
-P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^*)^{1-\epsilon}\right]^{1/(1-\epsilon)}.
+P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^{\ast})^{1-\epsilon}\right]^{1/(1-\epsilon)}.
 $$
 
 - **(F24) 对数线性资源约束**：
@@ -442,7 +442,7 @@ $$
 | 内生 | $R_t^n$, `rn` | 总名义回报 / 政策工具 | (F3), (F40), (F41) |
 | 内生 | $\pi_t$, `pi` | 通胀 | (F32), (F41) |
 | 内生 | $\bar{\omega}_t$, `omega_bar` | 违约阈值 | (F4), (F7), (F16), (F20), (F38) |
-| 内生 | $P_t^*$, `pstar` | Calvo 重置价格 | (F22), (F23) |
+| 内生 | $P_t^{\ast}$, `pstar` | Calvo 重置价格 | (F22), (F23) |
 | 内生 | $Y_t(z)$, `yz` | 零售商层面的需求/产出 | (F21) |
 | 外生 | $a_t$, `a` | 技术对数偏离 | (F30), (F43) |
 | 外生 | $g_t$, `g` | 政府支出对数偏离 | (F24), (F42) |

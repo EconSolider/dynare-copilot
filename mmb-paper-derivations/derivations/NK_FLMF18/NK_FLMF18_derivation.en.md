@@ -63,13 +63,13 @@ $$
 The dominant exporter produces the commodity using final goods bought from the importing region:
 
 $$
-\mathfrak{M}_t=Z_t I_t^{*,D}.
+\mathfrak{M}_t=Z_t I_t^{\ast,D}.
 $$
 
 Its household consumes final goods and owns the exporting firm. The period real profit expression is:
 
 $$
-\frac{\Gamma_t^{*,D}}{P_{Y,t}}=Q_t^{1/(1-\gamma)}\mathfrak{M}_t-I_t^{*,D}.
+\frac{\Gamma_t^{\ast,D}}{P_{Y,t}}=Q_t^{1/(1-\gamma)}\mathfrak{M}_t-I_t^{\ast,D}.
 $$
 
 The dominant exporter chooses commodity output, taking importer macro variables and fringe supply as given:
@@ -302,7 +302,7 @@ $$
 **(F33) World final-goods market clearing**
 
 $$
-Y_t=C_{Y,t}+C_t^{*,D}+I_t^{*,D}+C_t^{*,F}+I_t^{*,F}.
+Y_t=C_{Y,t}+C_t^{\ast,D}+I_t^{\ast,D}+C_t^{\ast,F}+I_t^{\ast,F}.
 $$
 
 **(F34) Natural output gap**
@@ -393,6 +393,26 @@ Given $(\alpha,\gamma,\Omega Z/Y,\mu,Z)$, solve the above system for $(\Psi,Q,P_
 $$
 \Pi=1,\qquad MC=\frac{1}{\mu},\qquad \Delta=1.
 $$
+
+The remaining steady-state ratios are:
+
+$$
+\frac{C}{Y}=\frac{P_Y}{P}-\frac{\alpha}{\mu}.
+$$
+
+$$
+L=\left[\frac{(1-\alpha)/\mu}{C/Y}\right]^{1/(1-\nu)}.
+$$
+
+$$
+Y=\left[A\left(\frac{\alpha}{\mu}\frac{1}{Q}\right)^\alpha\right]^{1/(1-\alpha)}L.
+$$
+
+Baseline calibration in the paper/MMB implementation includes:
+
+| Parameter | Value | Role |
+|---|---:|---|
+| $\Pi$, $MC$, $\Delta$ | $1$, $1/\mu$, $1$ | normalized steady-state values |
 
 The remaining steady-state ratios are:
 

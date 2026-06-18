@@ -19,7 +19,7 @@
 比例为 $1-\omega$ 的家庭可以交易国内和外国债券，并获得劳动收入、企业分红和工会分红。其选择消费、劳动和债券持有：
 
 $$
-\max_{\{C_{u,t},N^h_{u,t},B_{u,t},B^*_{u,t}\}}
+\max_{\{C_{u,t},N^h_{u,t},B_{u,t},B^{\ast}_{u,t}\}}
 E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 \frac{C_{u,t}^{1-\sigma}-1}{1-\sigma}
@@ -30,9 +30,9 @@ $$
 约束为名义预算约束：
 
 $$
-W_t^h N^h_{u,t}+R_{t-1}B_{u,t-1}+\mathcal{E}_t\bar R^*B^*_{u,t-1}
+W_t^h N^h_{u,t}+R_{t-1}B_{u,t-1}+\mathcal{E}_t\bar R^{\ast}B^{\ast}_{u,t-1}
 +DIV^F_{u,t}+DIV^L_{u,t}
-=P_tC_{u,t}+B_{u,t}+\mathcal{E}_tB^*_{u,t}+T_{u,t}+P_t\mathcal{T}_u.
+=P_tC_{u,t}+B_{u,t}+\mathcal{E}_tB^{\ast}_{u,t}+T_{u,t}+P_t\mathcal{T}_u.
 \tag{F1}
 $$
 
@@ -99,7 +99,7 @@ $$
 
 ### 2.6 能源进口商、出口需求与零售商
 
-能源进口商以 $P_t^{E,*}$ 购买外国能源品，并在国内销售。国内非能源品的出口需求取决于其外币价格。零售商把最终品转化为国内消费品和出口品；抽取到的模型摘要中没有额外优化楔子。
+能源进口商以 $P_t^{E,\ast}$ 购买外国能源品，并在国内销售。国内非能源品的出口需求取决于其外币价格。零售商把最终品转化为国内消费品和出口品；抽取到的模型摘要中没有额外优化楔子。
 
 ## 3. First-Order Conditions / 一阶条件
 
@@ -212,16 +212,16 @@ $$
 **(F18) 进口能源一价定律**：
 
 $$
-p_t^E=Q_tp_t^{E,*}.
+p_t^E=Q_tp_t^{E,\ast}.
 \tag{F18}
 $$
 
 **(F19) 出口需求**：
 
 $$
-X_t=\kappa^*
-\left(\frac{P_t^{EXP}}{P_{ss}^{X*}}\right)^{-\zeta^*}
-Y_{ss}^*.
+X_t=\kappa^{\ast}
+\left(\frac{P_t^{EXP}}{P_{ss}^{X\ast}}\right)^{-\zeta^{\ast}}
+Y_{ss}^{\ast}.
 \tag{F19}
 $$
 
@@ -237,8 +237,8 @@ $$
 **(F21) 出口、国内能源价格和 UIP 恒等式**：
 
 $$
-\hat x_t=\zeta^*\hat q_t,\qquad
-\hat p_t^E=\hat p_t^{E,*}+\hat q_t,\qquad
+\hat x_t=\zeta^{\ast}\hat q_t,\qquad
+\hat p_t^E=\hat p_t^{E,\ast}+\hat q_t,\qquad
 \hat q_t=E_t[\hat q_{t+1}]-\left(\hat r_t-E_t[\hat\pi_{t+1}]\right).
 \tag{F21}
 $$
@@ -266,7 +266,7 @@ $$
 \left(\hat r_{t+k}-\hat\pi_{t+k+1}\right)
 -\omega\frac{C_{ss}}{Z_{ss}}\hat\gamma_t
 +\psi_{ez}\alpha_{ez}(\hat p_t^E-\hat w_t)
-+\frac{X_{ss}}{Z_{ss}}\zeta^*\hat q_t
++\frac{X_{ss}}{Z_{ss}}\zeta^{\ast}\hat q_t
 -\hat\varepsilon_t^{TFP}.
 \tag{F23}
 $$
@@ -275,7 +275,7 @@ $$
 
 $$
 \Gamma_t=\Gamma_t^{inc}
-+\frac{\mathcal E_t(\bar R^*-1)B^*_{u,t-1}-\mathcal E_t\Delta B^*_{u,t}}
++\frac{\mathcal E_t(\bar R^{\ast}-1)B^{\ast}_{u,t-1}-\mathcal E_t\Delta B^{\ast}_{u,t}}
 {INC_{c,t}}.
 \tag{F24}
 $$
@@ -357,7 +357,7 @@ $$
 **(F31) 外国能源价格水平**：
 
 $$
-p_t^{E,*}=(p_{ss}^{E,*})^{1-\rho_E}(p_{t-1}^{E,*})^{\rho_E}\varepsilon_t^E.
+p_t^{E,\ast}=(p_{ss}^{E,\ast})^{1-\rho_E}(p_{t-1}^{E,\ast})^{\rho_E}\varepsilon_t^E.
 \tag{F31}
 $$
 
@@ -400,7 +400,7 @@ $$
 \omega=0.25,\quad
 \psi_{ez}=0.15,\quad
 \alpha_{ez}=0.05,\quad
-\zeta^*=0.35.
+\zeta^{\ast}=0.35.
 \tag{F35}
 $$
 
@@ -450,6 +450,6 @@ $$
 | 参数 | $\phi_z$ / `phi_z` | Calvo 价格不重设概率 | (F7), (F12), (F14), (F33) |
 | 参数 | $\phi_w$ / `phi_w` | Calvo 工资不重设概率 | (F13), (F33) |
 | 参数 | $\theta_R,\theta_\pi,\theta_Y$ | Taylor 规则系数 | (F22), (F33) |
-| 参数 | $\zeta^*$ / `zeta_star` | 出口需求弹性 | (F19), (F21), (F23), (F35) |
+| 参数 | $\zeta^{\ast}$ / `zeta_star` | 出口需求弹性 | (F19), (F21), (F23), (F35) |
 | 参数 | $\rho_{TFP},\rho_{\mathcal M_z},\rho_E$ | 冲击持续性参数 | (F28), (F29), (F31), (F34) |
 | 参数 | $\varsigma_{TFP},\varsigma_{\mathcal M_z},\varsigma_E$ | 冲击标准差 | (F28)-(F30), (F34) |

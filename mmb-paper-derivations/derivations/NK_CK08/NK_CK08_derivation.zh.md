@@ -51,11 +51,11 @@ $$
 y_{j,t}=y_{j,t}^{L,d},
 $$
 
-能够重新定价的企业选择 $P^*_{t}$ 以最大化：
+能够重新定价的企业选择 $P^{\ast}_{t}$ 以最大化：
 
 $$
 E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
-\left[\frac{P^*_t}{P_{t+s}}-mc_{t+s}\right]y_{j,t+s}.
+\left[\frac{P^{\ast}_t}{P_{t+s}}-mc_{t+s}\right]y_{j,t+s}.
 $$
 
 ### 2.3 劳动品企业、匹配和工资谈判
@@ -79,7 +79,7 @@ $$
 $$
 
 $$
-J_t(W_{i,t})=\Psi_t^L(W_{i,t})+(1-\vartheta)E_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_{i,t})+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
+J_t(W_{i,t})=\Psi_t^L(W_{i,t})+(1-\vartheta)E_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_{i,t})+(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 重置工资满足：
@@ -93,7 +93,7 @@ $$
 自由进入使职位空缺价值为零：
 
 $$
-\kappa=q_tE_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_t)+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
+\kappa=q_tE_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_t)+(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 货币当局对名义利率采用 Taylor 型规则，政府通过一次总付税和债务为失业救济、债务服务和外生政府支出融资。
@@ -125,8 +125,8 @@ $$
 
 - **(F5) 工资谈判一阶条件**：
 $$
-\widehat J^*_t+\widehat\delta^W_t=
-\widehat\Delta^*_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
+\widehat J^{\ast}_t+\widehat\delta^W_t=
+\widehat\Delta^{\ast}_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
 $$
 
 - **(F6) right-to-manage 下的工时一阶条件**：
@@ -136,17 +136,17 @@ $$
 
 - **(F7) 总体实际工资演化**：
 $$
-\widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^*_t .
+\widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^{\ast}_t .
 $$
 
 - **(F8) 企业侧边际工资剩余递推式**（`needs_review`，OCR 敏感长式）：
 $$
 \begin{aligned}
 \widehat\delta^F_t={}&[1-\beta(1-\vartheta)\gamma]\left[
--\frac{\alpha}{1-\alpha}\widehat w^*_t+
+-\frac{\alpha}{1-\alpha}\widehat w^{\ast}_t+
 \frac{1}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\beta(1-\vartheta)\gamma E_t\left\{
--\frac{\alpha}{1-\alpha}(\widehat w^*_t-\widehat w^*_{t+1}-\widehat\Pi_{t+1})
+-\frac{\alpha}{1-\alpha}(\widehat w^{\ast}_t-\widehat w^{\ast}_{t+1}-\widehat\Pi_{t+1})
 +\widehat\delta^F_{t+1}+\widehat\lambda_{t+1}-\widehat\lambda_t\right\}.
 \end{aligned}
 $$
@@ -155,15 +155,15 @@ $$
 $$
 \begin{aligned}
 \delta^W\widehat\delta^W_t={}&-\frac{\alpha}{1-\alpha}wh
-\left[-\frac{\alpha}{1-\alpha}\widehat w^*_t+
+\left[-\frac{\alpha}{1-\alpha}\widehat w^{\ast}_t+
 \frac{1}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\frac{1}{1-\alpha}mrsh
-\left[-\frac{1+\varphi}{1-\alpha}\widehat w^*_t-\widehat\lambda_t+
+\left[-\frac{1+\varphi}{1-\alpha}\widehat w^{\ast}_t-\widehat\lambda_t+
 \frac{1+\varphi}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\left(\frac{\alpha}{1-\alpha}\right)^2wh-
 \frac{1+\varphi}{(1-\alpha)^2}mrsh\right]
-E_t\{\widehat w^*_t-\widehat w^*_{t+1}-\widehat\Pi_{t+1}\} \\
+E_t\{\widehat w^{\ast}_t-\widehat w^{\ast}_{t+1}-\widehat\Pi_{t+1}\} \\
 &+\beta(1-\vartheta)\gamma\delta^W
 E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\delta^W_{t+1}\}.
 \end{aligned}
@@ -172,31 +172,31 @@ $$
 - **(F10) 重置工资劳动企业的价值**（`needs_review`）：
 $$
 \begin{aligned}
-J\widehat J^*_t={}&\frac{wh}{\alpha}
-[-\alpha\widehat w^*_t+\widehat{x}^L_t+\widehat z_t] \\
+J\widehat J^{\ast}_t={}&\frac{wh}{\alpha}
+[-\alpha\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w^*_t\} \\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w^{\ast}_t\} \\
 &+\beta(1-\vartheta)J
-E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^*_{t+1}\}.
+E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 \end{aligned}
 $$
 
 - **(F11) 重置工资下的工人剩余**（`needs_review`）：
 $$
 \begin{aligned}
-\Delta\widehat\Delta^*_t={}&\frac{wh}{1-\alpha}
-[-\alpha\widehat w^*_t+\widehat{x}^L_t+\widehat z_t]\\
+\Delta\widehat\Delta^{\ast}_t={}&\frac{wh}{1-\alpha}
+[-\alpha\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t]\\
 &-\frac{mrsh}{1+\varphi}\left[
-\frac{1+\varphi}{1-\alpha}(-\widehat w^*_t+\widehat{x}^L_t+\widehat z_t)
+\frac{1+\varphi}{1-\alpha}(-\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t)
 -\widehat\lambda_t\right] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w^*_t\}\\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w^{\ast}_t\}\\
 &-\frac{\beta\gamma s}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}\\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}\\
 &+\beta(1-\vartheta-s)\Delta
-E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^*_{t+1}\}
+E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^{\ast}_{t+1}\}
 -\beta\Delta s\widehat s_t .
 \end{aligned}
 $$
@@ -205,8 +205,8 @@ $$
 $$
 -\frac{\kappa}{q}\widehat q_t=
 \frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}
-+\beta J E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^*_{t+1}\}.
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}
++\beta J E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -352,10 +352,10 @@ $$
 | 内生变量 | $\widehat{mc}_t$ / `mct` | 边际成本偏离 | (F3), (F4) |
 | 内生变量 | $\widehat{x}^L_t$ / `xLt` | 劳动品价格偏离 | (F4), (F6) |
 | 内生变量 | $\widehat w_t$ / `wt` | 总体实际工资偏离 | (F6), (F7) |
-| 内生变量 | $\widehat w^*_t$ / `wstart` | 新重置工资偏离 | (F5), (F7)-(F11) |
+| 内生变量 | $\widehat w^{\ast}_t$ / `wstart` | 新重置工资偏离 | (F5), (F7)-(F11) |
 | 内生变量 | $\widehat h_t$ / `ht` | 每个工人工时偏离 | (F6), (F19) |
-| 内生变量 | $\widehat J^*_t$ / `Jstart` | 重置工资劳动企业价值 | (F5), (F10), (F12) |
-| 内生变量 | $\widehat\Delta^*_t$ / `Deltastart` | 重置工资下工人剩余 | (F5), (F11) |
+| 内生变量 | $\widehat J^{\ast}_t$ / `Jstart` | 重置工资劳动企业价值 | (F5), (F10), (F12) |
+| 内生变量 | $\widehat\Delta^{\ast}_t$ / `Deltastart` | 重置工资下工人剩余 | (F5), (F11) |
 | 内生变量 | $\widehat\delta^F_t$ / `deltaFt` | 企业侧工资导数 | (F5), (F8) |
 | 内生变量 | $\widehat\delta^W_t$ / `deltaWt` | 工人侧工资导数 | (F5), (F9) |
 | 内生变量 | $\widehat m_t$ / `mt` | 新匹配偏离 | (F13), (F14) |

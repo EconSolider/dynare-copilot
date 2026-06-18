@@ -29,8 +29,8 @@ $$
 企业面临 Calvo 型价格刚性。不能重新优化的企业可按滞后通胀指数化价格，指数化参数为 $\gamma$。论文直接给出所得的新凯恩斯 Phillips 曲线，而不是完整的重设价格问题：
 
 $$
-\max_{P_t^*} \widehat{E}_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}
-\left[P_t^* \prod_{s=1}^{j}\Pi_{t+s-1}^{\gamma}-MC_{t+j}\right]Y_{t+j|t}
+\max_{P_t^{\ast}} \widehat{E}_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}
+\left[P_t^{\ast} \prod_{s=1}^{j}\Pi_{t+s-1}^{\gamma}-MC_{t+j}\right]Y_{t+j|t}
 $$
 
 本地 Markdown 未打印精确的重设价格 FOC；来源中明确给出的均衡条件是简约 Phillips 曲线。`needs_review`：从这个一般重设价格问题到来源中 $\xi_p[\omega x_t+\cdots]$ 系数的映射，在进入 reviewed 状态前需要源级核对。

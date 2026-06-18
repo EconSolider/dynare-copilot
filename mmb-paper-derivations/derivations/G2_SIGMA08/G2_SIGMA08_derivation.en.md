@@ -296,7 +296,7 @@ $$
 
 - **(F24) GDP identity, implementation cross-check**:
 $$
-y_t=s_C c_t+s_I i_t+s_G g_t+s_M(m^*_t-m_t).
+y_t=s_C c_t+s_I i_t+s_G g_t+s_M(m^{\ast}_t-m_t).
 $$
 
 - **(F25) Capital accumulation, implementation cross-check**:
@@ -325,7 +325,7 @@ $$
 - **(F29) Net foreign assets, implementation cross-check**:
 $$
 nfa_t=\frac{1+\bar r}{g_z(1+n)}
-\left[nfa_{t-1}+0.25\,s_M(rp^X_t+m^*_t-rp^M_t-m_t)\right].
+\left[nfa_{t-1}+0.25\,s_M(rp^X_t+m^{\ast}_t-rp^M_t-m_t)\right].
 $$
 
 - **(F30) Real exchange rates, implementation cross-check**:
@@ -362,11 +362,11 @@ $$
 
 - **(F33) Foreign technology growth decomposition, implementation cross-check**:
 $$
-a^*_t=a^*_{t-1}+g^{p,*}_{A,t}+g^{T,*}_{A,t},
+a^{\ast}_t=a^{\ast}_{t-1}+g^{p,\ast}_{A,t}+g^{T,\ast}_{A,t},
 \qquad
-g^{p,*}_{A,t}=\rho^p_A g^{p,*}_{A,t-1}+\varepsilon^{p,*}_{A,t},
+g^{p,\ast}_{A,t}=\rho^p_A g^{p,\ast}_{A,t-1}+\varepsilon^{p,\ast}_{A,t},
 \qquad
-g^{T,*}_{A,t}=\rho^T_A g^{T,*}_{A,t-1}+\varepsilon^{T,*}_{A,t}.
+g^{T,\ast}_{A,t}=\rho^T_A g^{T,\ast}_{A,t-1}+\varepsilon^{T,\ast}_{A,t}.
 $$
 
 - **(F34) Government spending rule, implementation cross-check**:
@@ -436,7 +436,7 @@ The paper states that the model is solved after transforming real variables by d
 For the first-pass archive, the steady-state structure is:
 
 1. Set common deterministic technology growth $g_z=1.0037$ and population growth $n=0.0025$.
-2. Set calibration targets: $s_I=0.25$, $s_G=0.18$, aggregate import share $s_M=0.12$, $\omega_C=0.052$, $\omega_I=0.36$, foreign $\omega^*_C=0.01$, foreign $\omega^*_I=0.07$, $\delta=0.025$, $\beta=0.997$, $\tau_K=0.30$.
+2. Set calibration targets: $s_I=0.25$, $s_G=0.18$, aggregate import share $s_M=0.12$, $\omega_C=0.052$, $\omega_I=0.36$, foreign $\omega^{\ast}_C=0.01$, foreign $\omega^{\ast}_I=0.07$, $\delta=0.025$, $\beta=0.997$, $\tau_K=0.30$.
 3. Compute the steady real interest rate as in the implementation:
 $$
 \bar r=\frac{g_z^\sigma}{\beta}-1.
@@ -475,7 +475,7 @@ Full nonlinear steady-state accounting, including all tax, debt, wage, money, an
 | Endogenous | $\ell_t,wmark_t,mrs_t$ | labor, wage markup, marginal rate of substitution | (F18), (F21), (F26) |
 | Endogenous | $y_t,y^{pot}_t,gap_t$ | output, potential output, output gap | (F24), (F26) |
 | Endogenous | $m^C_t,m^I_t,m_t$ | consumption, investment, and total imports | (F3)-(F5), (F8)-(F12) |
-| Endogenous | $m^*_t$ | foreign imports / home exports | Foreign analogues of (F3)-(F12), (F24) |
+| Endogenous | $m^{\ast}_t$ | foreign imports / home exports | Foreign analogues of (F3)-(F12), (F24) |
 | Endogenous | $\Delta p^Q_t,\Delta p^C_t,\Delta p^M_t,\Delta w_t$ | domestic, consumption, import/export, and wage inflation | (F19)-(F21), (F27) |
 | Endogenous | $r^s_t,r^1_t,i_t$ | policy rate and real short rate | (F22), (F27) |
 | Endogenous | $e_t,rer^C_t,rer^Q_t,nfa_t$ | nominal exchange rate, real exchange rates, net foreign assets | (F28)-(F30) |
@@ -519,4 +519,4 @@ Full nonlinear steady-state accounting, including all tax, debt, wage, money, an
 | $s_I=0.25$, $s_G=0.18$, $s_M=0.12$ | investment, government, and import shares |
 | $\omega_A=0.15$, $\rho_A=2$, $\varphi_{M_A}=10$ | AT trade parameters |
 | $\omega_C=0.052$, $\omega_I=0.36$, $\rho_C=\rho_I=2$, $\varphi_{M_C}=\varphi_{M_I}=10$ | DT trade parameters |
-| $\omega_C^*=0.01$, $\omega_I^*=0.07$ | foreign DT import-share calibration |
+| $\omega_C^{\ast}=0.01$, $\omega_I^{\ast}=0.07$ | foreign DT import-share calibration |

@@ -78,7 +78,7 @@ The paper states that a stable linear model has a unique reduced form without le
 
 - **(F9) Generic inertial Taylor rule used in LINVER research**:
 
-$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^* + \pi_t + \beta_{\pi}(\pi_t-\pi^*) + \gamma_y Y_t\right] + \varepsilon^R_t$$
+$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta_{\pi}(\pi_t-\pi^{\ast}) + \gamma_y Y_t\right] + \varepsilon^R_t$$
 
 The paper presents this rule family as a standard policy-rule characterization used in LINVER studies. OCR in the source has one unreadable phrase near the rule; the rate variable is inferred from context and marked `needs_review`.
 

@@ -43,7 +43,7 @@
 
 - **(F1) 通用惯性货币政策规则**（`needs_review`，因为附近 OCR 文本含占位字符）：
 
-$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^* + \pi_t + \beta(\pi_t-\pi^*) + \gamma Y_t\right]$$
+$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right]$$
 
 - **(F2) LINVER 状态空间表示**（`needs_review`，因为论文陈述了约化形式思想，但没有打印完整矩阵系统）：
 

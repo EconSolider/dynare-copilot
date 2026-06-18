@@ -68,12 +68,12 @@ $$
 
 ### 2.4 零售商
 
-零售商在 Calvo 黏性价格下定价。可以重新定价的零售商选择 $P_{k,t}^*$：
+零售商在 Calvo 黏性价格下定价。可以重新定价的零售商选择 $P_{k,t}^{\ast}$：
 
 **(F5) Retailer Calvo pricing problem**
 $$
-\max_{\{P_{k,t}^*\}} E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
-\left[P_{k,t}^*Y_{k,t+z}-P_{j,t+z}^WXY_{k,t+z}\right],
+\max_{\{P_{k,t}^{\ast}\}} E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
+\left[P_{k,t}^{\ast}Y_{k,t+z}-P_{j,t+z}^WXY_{k,t+z}\right],
 $$
 
 满足：
@@ -82,7 +82,7 @@ $$
 $$
 Y_{k,t+z}
 =
-\left(\frac{P_{k,t}^*}{P_{t+z}}\right)^{-\varepsilon_t^p}Y_{t+z}.
+\left(\frac{P_{k,t}^{\ast}}{P_{t+z}}\right)^{-\varepsilon_t^p}Y_{t+z}.
 $$
 
 ### 2.5 企业家
@@ -235,12 +235,12 @@ P_t^{1-\varepsilon_t^p}
 =
 \theta_R
 \left[\left(\frac{P_{t-1}}{P_{t-2}}\right)^{\gamma_p}P_{t-1}\right]^{1-\varepsilon_t^p}
-+(1-\theta_R)(P_t^*)^{1-\varepsilon_t^p}.
++(1-\theta_R)(P_t^{\ast})^{1-\varepsilon_t^p}.
 $$
 
 **(F23) Retailer optimal reset price, needs_review**
 $$
-\frac{P_t^*}{P_t}
+\frac{P_t^{\ast}}{P_t}
 =
 \left(\frac{\varepsilon_t^p}{\varepsilon_t^p-1}\right)
 \frac{
@@ -538,7 +538,7 @@ $$
 | Endogenous | $\Psi_t^s$ | 储蓄者股票持有 | (F17), (F32) |
 | Endogenous | $\Psi_t^b$ | 借款者股票持有 | (F21), (F32) |
 | Endogenous | $P_t$ | 总价格水平 | (F22) |
-| Endogenous | $P_t^*$ | 重设价格 | (F23) |
+| Endogenous | $P_t^{\ast}$ | 重设价格 | (F23) |
 | Endogenous | $Q_t^k$ | 物质资本价格 | (F26), (F37) |
 | Endogenous | $X_t$ | 零售加成 | (F23), (F24) |
 | Endogenous | $W_t$ | 名义工资 | (F16), (F19), (F24) |

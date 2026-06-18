@@ -32,7 +32,7 @@ $$
 They choose consumption, money, foreign bonds, and state-contingent domestic claims subject to the nominal budget constraint with labor income, profits, taxes, domestic contingent claims, money, and foreign-bond positions. The external premium is a function of aggregate net foreign assets:
 
 $$
-\mathcal B_t^*=\frac{\mathcal E_t B_t^*}{P_{Y,t}Y_t}, \qquad \Theta=\Theta(\mathcal B_t^*).
+\mathcal B_t^{\ast}=\frac{\mathcal E_t B_t^{\ast}}{P_{Y,t}Y_t}, \qquad \Theta=\Theta(\mathcal B_t^{\ast}).
 $$
 
 ### Wage setters
@@ -99,7 +99,7 @@ $$
 - **(F4) Uncovered interest parity**:
 
 $$
-\hat i_t=\hat i_t^*+\varrho\hat{\mathbf b}_t^*+E_t[\Delta\hat e_{t+1}].
+\hat i_t=\hat i_t^{\ast}+\varrho\hat{\mathbf b}_t^{\ast}+E_t[\Delta\hat e_{t+1}].
 $$
 
 - **(F5) Wage/labor supply Phillips condition**:
@@ -202,7 +202,7 @@ $$
 \hat\pi_{F,t}=
 \frac{\beta}{1+\beta\chi_F}E_t\hat\pi_{F,t+1}
 +\frac{\chi_F}{1+\beta\chi_F}\hat\pi_{F,t-1}
-+\frac{\kappa_F}{1+\beta\chi_F}(\widehat{rer}_t+\hat\zeta^*_{F,t}-\widehat{pr}_{F,t}).
++\frac{\kappa_F}{1+\beta\chi_F}(\widehat{rer}_t+\hat\zeta^{\ast}_{F,t}-\widehat{pr}_{F,t}).
 $$
 
 ## 4. Market Clearing & Identities
@@ -264,8 +264,8 @@ $$
 - **(F26) Fiscal net asset position**:
 
 $$
-\frac{\mathcal EB_G^*}{P_YY}\frac{1}{\Theta(1+i^*)}\hat b_{G,t}
-=\frac{1}{(1+\pi^*)(1+g_y)(1+n)}\frac{\mathcal EB_G^*}{P_YY}
+\frac{\mathcal EB_G^{\ast}}{P_YY}\frac{1}{\Theta(1+i^{\ast})}\hat b_{G,t}
+=\frac{1}{(1+\pi^{\ast})(1+g_y)(1+n)}\frac{\mathcal EB_G^{\ast}}{P_YY}
 (\Delta\hat e_t-\hat\pi_{C,t}+\hat b_{G,t-1}-\Delta\widehat{pr}_{Y,t}-\Delta\hat y_t-\hat\zeta_{T,t})
 +\cdots .
 $$
@@ -292,19 +292,19 @@ $$
 - **(F29) Foreign demand for home goods**:
 
 $$
-\widehat y^*_{H,t}=\hat y^*_t-\eta^*\widehat{pr}_{H_F,t}.
+\widehat y^{\ast}_{H,t}=\hat y^{\ast}_t-\eta^{\ast}\widehat{pr}_{H_F,t}.
 $$
 
 - **(F30) Commodity law of one price**:
 
 $$
-\widehat{pr}_{S,t}=\widehat{rer}_t+\widehat{pr}^*_{S,t}.
+\widehat{pr}_{S,t}=\widehat{rer}_t+\widehat{pr}^{\ast}_{S,t}.
 $$
 
 - **(F31) Oil law of one price**:
 
 $$
-\widehat{pr}_{O,t}=\widehat{rer}_t+\widehat{pr}^*_{O,t}.
+\widehat{pr}_{O,t}=\widehat{rer}_t+\widehat{pr}^{\ast}_{O,t}.
 $$
 
 - **(F32) Relative-price laws of motion**:
@@ -315,14 +315,14 @@ $$
 $$
 
 $$
-\hat\pi_{H_F,t}=\widehat{pr}_{H_F,t}-\widehat{pr}_{H_F,t-1}+\hat\pi^*_t, \quad
+\hat\pi_{H_F,t}=\widehat{pr}_{H_F,t}-\widehat{pr}_{H_F,t-1}+\hat\pi^{\ast}_t, \quad
 \hat\pi_{F,t}=\widehat{pr}_{F,t}-\widehat{pr}_{F,t-1}+\hat\pi_{C,t}.
 $$
 
 - **(F33) Nominal exchange-rate depreciation**:
 
 $$
-\Delta\hat e_t=\widehat{rer}_t-\widehat{rer}_{t-1}+\hat\pi_{C,t}-\hat\pi^*_t.
+\Delta\hat e_t=\widehat{rer}_t-\widehat{rer}_{t-1}+\hat\pi_{C,t}-\hat\pi^{\ast}_t.
 $$
 
 - **(F34) Real interest rate**:
@@ -338,7 +338,7 @@ $$
 =\gamma_C\frac{P_CC}{P_YY}\hat c_{H,t}
 +\frac{P_GG}{P_YY}(\hat g_t-\widehat{pr}_{H_D,t}+\widehat{pr}_{Y,t}+\hat y_t)
 +\gamma_I\frac{P_II}{P_YY}\widehat{inv}_{H,t}
-+\frac{P_HY_H^*}{P_YY}\hat y^*_{H,t}.
++\frac{P_HY_H^{\ast}}{P_YY}\hat y^{\ast}_{H,t}.
 $$
 
 - **(F36) Home-good supply**:
@@ -362,9 +362,9 @@ $$
 - **(F38) Balance of payments / net foreign asset position**:
 
 $$
-\frac{(1-\varrho)\mathbf B^*}{(1+i^*)\Theta(\mathbf B^*)}\hat{\mathbf b}_t^*
-=\frac{\mathbf B^*}{(1+i^*)\Theta(\mathbf B^*)}\hat i_t^*
--(1-\chi)\frac{\mathcal EP_S^*Y_S}{P_YY}(\widehat{pr}_{S,t}+\hat y_{S,t}-\widehat{pr}_{Y,t}-\hat y_t)
+\frac{(1-\varrho)\mathbf B^{\ast}}{(1+i^{\ast})\Theta(\mathbf B^{\ast})}\hat{\mathbf b}_t^{\ast}
+=\frac{\mathbf B^{\ast}}{(1+i^{\ast})\Theta(\mathbf B^{\ast})}\hat i_t^{\ast}
+-(1-\chi)\frac{\mathcal EP_S^{\ast}Y_S}{P_YY}(\widehat{pr}_{S,t}+\hat y_{S,t}-\widehat{pr}_{Y,t}-\hat y_t)
 +\cdots .
 $$
 
@@ -373,8 +373,8 @@ $$
 - **(F39) Export and import blocks**:
 
 $$
-\hat x_t=\frac{\mathcal EP_S^*Y_S}{P_XX}\hat y_{S,t}
-+\left(1-\frac{\mathcal EP_S^*Y_S}{P_XX}\right)\hat c^*_{H,t},
+\hat x_t=\frac{\mathcal EP_S^{\ast}Y_S}{P_XX}\hat y_{S,t}
++\left(1-\frac{\mathcal EP_S^{\ast}Y_S}{P_XX}\right)\hat c^{\ast}_{H,t},
 $$
 
 $$
@@ -395,7 +395,7 @@ $$
 with
 
 $$
-\xi\in\{a_H,\zeta_T,y_S,y^*,i^*,\pi^*,\zeta_m,\zeta_L,\zeta_C,\zeta_G,\zeta_I,\zeta_F^*,p_O^*,p_S^*\}.
+\xi\in\{a_H,\zeta_T,y_S,y^{\ast},i^{\ast},\pi^{\ast},\zeta_m,\zeta_L,\zeta_C,\zeta_G,\zeta_I,\zeta_F^{\ast},p_O^{\ast},p_S^{\ast}\}.
 $$
 
 The implementation cross-check lists the corresponding innovations as `eps_ah`, `eps_st`, `eps_ys`, `eps_yF`, `eps_iF`, `eps_piF`, `eps_sh_m`, `eps_sh_w`, `eps_sh_c`, `eps_gex`, `eps_sh_i`, `eps_prfF`, `eps_proF`, and `eps_prsF`.
@@ -443,7 +443,7 @@ Steady-state computational sequence used as an implementation cross-check:
 | Endogenous | `c_hat`, $\hat c_t$ | aggregate consumption | (F3) |
 | Endogenous | `cR`, $\hat c_t^R$ | Ricardian consumption | (F1) |
 | Endogenous | `cNR`, $\hat c_t^{NR}$ | non-Ricardian consumption | (F2) |
-| Endogenous | `bF_hat`, $\hat{\mathbf b}_t^*$ | net foreign assets | (F4), (F38) |
+| Endogenous | `bF_hat`, $\hat{\mathbf b}_t^{\ast}$ | net foreign assets | (F4), (F38) |
 | Endogenous | `i_hat`, $\hat i_t$ | nominal interest rate | (F4), (F28), (F34) |
 | Endogenous | `r_hat`, $\hat r_t$ | real interest rate | (F27), (F34) |
 | Endogenous | `wr_hat` | real wage | (F5), (F12) |

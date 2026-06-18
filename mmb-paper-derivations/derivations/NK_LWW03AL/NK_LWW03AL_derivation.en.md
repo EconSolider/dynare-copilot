@@ -53,7 +53,7 @@ The paper labels this equation as aggregate supply for the optimizing AD-AS mode
 - **(F2) Expectational IS curve / aggregate demand**:
 
 $$
-y_t=E_t y_{t+1}-\sigma\left(i_t-E_t\pi_{t+1}-r_t^*\right).
+y_t=E_t y_{t+1}-\sigma\left(i_t-E_t\pi_{t+1}-r_t^{\ast}\right).
 $$
 
 The policy rate, expected inflation, and natural real rate determine the output gap.
@@ -61,8 +61,8 @@ The policy rate, expected inflation, and natural real rate determine the output 
 - **(F3) Forecast-based policy-rule family**:
 
 $$
-i_t=\rho i_{t-1}+(1-\rho)\left(r^*+E_t\tilde{\pi}_{t+\theta}\right)
-+\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
+i_t=\rho i_{t-1}+(1-\rho)\left(r^{\ast}+E_t\tilde{\pi}_{t+\theta}\right)
++\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 +\beta E_t y_{t+\kappa}.
 $$
 
@@ -98,7 +98,7 @@ $$
 - **(F8) Robust benchmark forecast-based rule**:
 
 $$
-i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right)+0.4\,y_t.
+i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right)+0.4\,y_t.
 $$
 
 - **(F9) Optimizing AD-AS optimized-rule rows from Table 3**:
@@ -149,7 +149,7 @@ The final equality is an MMB interface convention for this small gap model, not 
 - **(F13) Natural real-rate process**:
 
 $$
-r_t^*=\rho_{r^*}r_{t-1}^*+\eta_t^r,\qquad \rho_{r^*}=0.35.
+r_t^{\ast}=\rho_{r^{\ast}}r_{t-1}^{\ast}+\eta_t^r,\qquad \rho_{r^{\ast}}=0.35.
 $$
 
 The paper states that the natural real-rate innovation has standard deviation 3.72.
@@ -183,18 +183,18 @@ $$
 2. Set gap variables and inflation deviations at baseline:
 
 $$
-y_t=0,\qquad \Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^*.
+y_t=0,\qquad \Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^{\ast}.
 $$
 
 3. The natural real-rate process implies:
 
 $$
-r_t^*=0
+r_t^{\ast}=0
 $$
 
 when it is represented as a deviation from its unconditional mean.
 
-4. For the robust benchmark rule, if $y_t=0$ and $\tilde{\pi}_{t+4}=\pi^*$, the rule preserves the inherited nominal-interest-rate baseline:
+4. For the robust benchmark rule, if $y_t=0$ and $\tilde{\pi}_{t+4}=\pi^{\ast}$, the rule preserves the inherited nominal-interest-rate baseline:
 
 $$
 i_t=i_{t-1}.
@@ -203,7 +203,7 @@ $$
 5. For the estimated benchmark rule, the constant and annual-rate units require source-level baseline review:
 
 $$
-i=(1-0.76)^{-1}\left[-0.28+0.60\pi^*+0.21y+0.97\Delta y\right].
+i=(1-0.76)^{-1}\left[-0.28+0.60\pi^{\ast}+0.21y+0.97\Delta y\right].
 $$
 
 The exact adaptive-learning steady-state and initial-belief conventions are deferred because no Dynare run or AL simulation validation was performed.
@@ -229,7 +229,7 @@ The exact adaptive-learning steady-state and initial-belief conventions are defe
 | Endogenous policy rate | $i_t$ / `rff`, `interest` | Short-term nominal interest rate | Paper and implementation | (F2), (F3), (F4), (F8), (F12), (F15) |
 | Endogenous change | $\Delta y_t$ | Change in output gap | Paper and implementation | (F4), (F11) |
 | Endogenous change | $\Delta i_t$ / `drff` | Change in policy rate | Implementation cross-check | (F6) |
-| Exogenous state | $r_t^*$ / `rstar` | Natural real interest rate | Paper and implementation | (F2), (F13) |
+| Exogenous state | $r_t^{\ast}$ / `rstar` | Natural real interest rate | Paper and implementation | (F2), (F13) |
 | Exogenous shock | $\eta_t^r$ / `rstar_` | Natural-rate innovation | Paper and implementation | (F13) |
 | Exogenous shock | $\eta_t^\pi$ / `pdotsh_` | Aggregate-supply / markup innovation | Paper and implementation | (F1), (F14) |
 | Exogenous shock | $\eta_t^i$ / `interest_` | Monetary-policy innovation | Implementation cross-check | (F15) |

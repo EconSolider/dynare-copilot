@@ -257,7 +257,7 @@ $$
 - **(F27) Non-durable goods market clearing**:
 
 $$
-y_t^C=\tau c_{H,t}+\frac{(1-n)(1-\tau^*)}{n}c_{H,t}^*.
+y_t^C=\tau c_{H,t}+\frac{(1-n)(1-\tau^{\ast})}{n}c_{H,t}^{\ast}.
 $$
 
 - **(F28) Durable goods market clearing**:
@@ -287,20 +287,20 @@ $$
 - **(F32) Foreign-country block**:
 
 $$
-\mathcal{E}_t^*=\mathcal{S}\{\text{(F1)--(F31)};\; x_t\mapsto x_t^*,\; \tau\mapsto\tau^*,\; n\mapsto1-n\}.
+\mathcal{E}_t^{\ast}=\mathcal{S}\{\text{(F1)--(F31)};\; x_t\mapsto x_t^{\ast},\; \tau\mapsto\tau^{\ast},\; n\mapsto1-n\}.
 $$
 
 - **(F33) International interest-rate link**:
 
 $$
-r_t^*=r_t+\beta(\kappa_b b_t+\vartheta_t).
+r_t^{\ast}=r_t+\beta(\kappa_b b_t+\vartheta_t).
 $$
 
 - **(F34) Net foreign assets**:
 
 $$
 \lambda b_t=\lambda\frac{1}{\beta}b_{t-1}
-+\frac{(1-n)(1-\tau^*)}{n}(c_{H,t}^*-t_t)
++\frac{(1-n)(1-\tau^{\ast})}{n}(c_{H,t}^{\ast}-t_t)
 -(1-\tau)c_{F,t}.
 $$
 
@@ -320,13 +320,13 @@ $$
 - **(F37) Euro-area CPI inflation**:
 
 $$
-\Delta p_t^{EMU}=n\Delta p_t^C+(1-n)\Delta p_t^{C^*}.
+\Delta p_t^{EMU}=n\Delta p_t^C+(1-n)\Delta p_t^{C^{\ast}}.
 $$
 
 - **(F38) Euro-area output**:
 
 $$
-y_t^{EMU}=ny_t+(1-n)y_t^*.
+y_t^{EMU}=ny_t+(1-n)y_t^{\ast}.
 $$
 
 - **(F39) Home macroprudential rule**:
@@ -338,7 +338,7 @@ $$
 - **(F40) Foreign macroprudential rule**:
 
 $$
-\eta_t^*=\gamma_\eta^*\Upsilon_t^*.
+\eta_t^{\ast}=\gamma_\eta^{\ast}\Upsilon_t^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -352,7 +352,7 @@ $$
 - **(F42) Foreign non-durable preference shock**:
 
 $$
-\xi_t^{C^*}=\rho_{\xi,H}\xi_{t-1}^{C^*}+\varepsilon_t^{\xi,C^*}.
+\xi_t^{C^{\ast}}=\rho_{\xi,H}\xi_{t-1}^{C^{\ast}}+\varepsilon_t^{\xi,C^{\ast}}.
 $$
 
 - **(F43) Home durable preference shock**:
@@ -364,7 +364,7 @@ $$
 - **(F44) Foreign durable preference shock**:
 
 $$
-\xi_t^{D^*}=\rho_{\xi,D}\xi_{t-1}^{D^*}+\varepsilon_t^{\xi,D^*}+\varepsilon_t^{\xi,D,COM}.
+\xi_t^{D^{\ast}}=\rho_{\xi,D}\xi_{t-1}^{D^{\ast}}+\varepsilon_t^{\xi,D^{\ast}}+\varepsilon_t^{\xi,D,COM}.
 $$
 
 - **(F45) Home non-durable technology shock**:
@@ -376,7 +376,7 @@ $$
 - **(F46) Foreign non-durable technology shock**:
 
 $$
-z_t^{C^*}=\rho_{Z,C}z_{t-1}^{C^*}+\varepsilon_t^{Z,C^*}+\varepsilon_t^{Z,C,COM}.
+z_t^{C^{\ast}}=\rho_{Z,C}z_{t-1}^{C^{\ast}}+\varepsilon_t^{Z,C^{\ast}}+\varepsilon_t^{Z,C,COM}.
 $$
 
 - **(F47) Home durable technology shock**:
@@ -388,7 +388,7 @@ $$
 - **(F48) Foreign durable technology shock**:
 
 $$
-z_t^{D^*}=\rho_{Z,D}z_{t-1}^{D^*}+\varepsilon_t^{Z,D^*}.
+z_t^{D^{\ast}}=\rho_{Z,D}z_{t-1}^{D^{\ast}}+\varepsilon_t^{Z,D^{\ast}}.
 $$
 
 - **(F49) Home mortgage-risk shock**:
@@ -400,7 +400,7 @@ $$
 - **(F50) Foreign mortgage-risk shock**:
 
 $$
-\sigma_{\omega,t}^*=(1-\rho_{\sigma\omega})\bar\sigma_\omega+\rho_{\sigma\omega}\sigma_{\omega,t-1}^*+u_{\omega,t}^*.
+\sigma_{\omega,t}^{\ast}=(1-\rho_{\sigma\omega})\bar\sigma_\omega+\rho_{\sigma\omega}\sigma_{\omega,t-1}^{\ast}+u_{\omega,t}^{\ast}.
 $$
 
 - **(F51) International risk-premium shock**:
@@ -445,6 +445,6 @@ Steady-state reconstruction is `needs_review`: the source appendix gives lineari
 | Financial variables | $r,r^L,r^D,\hat{\bar\omega}^a,\hat\omega^p,\eta,F,G$ | Deposit rate, lending/default rates, default thresholds, macroprudential wedge and lognormal functions | (F8)-(F15), (F39)-(F40) |
 | Prices and wages | $q,\Delta p^C,\Delta p^D,\Delta p^H,\Delta p^F,\tilde w^C,\tilde w^D$ | Relative house price, CPI/sectoral inflation, sectoral real wages | (F23)-(F26), (F35), (F37) |
 | Quantities | $c_H,c_F,c^{TOT},y^C,y^D,y,l^{C,TOT},l^{D,TOT}$ | Demand aggregation, production, market clearing and output | (F16)-(F22), (F27)-(F31), (F38) |
-| Open economy | $b,t,r^*,y^*,\Delta p^{C^*}$ | Net foreign assets, terms of trade, foreign policy rate and foreign aggregates | (F32)-(F38) |
-| Exogenous shocks | $\xi^C,\xi^{C^*},\xi^D,\xi^{D^*},z^C,z^{C^*},z^D,z^{D^*},\sigma_\omega,\sigma_\omega^*,\vartheta,\varepsilon^A,\varepsilon^m$ | Preference, technology, risk, international premium, unit-root technology and monetary shocks | (F41)-(F52) |
+| Open economy | $b,t,r^{\ast},y^{\ast},\Delta p^{C^{\ast}}$ | Net foreign assets, terms of trade, foreign policy rate and foreign aggregates | (F32)-(F38) |
+| Exogenous shocks | $\xi^C,\xi^{C^{\ast}},\xi^D,\xi^{D^{\ast}},z^C,z^{C^{\ast}},z^D,z^{D^{\ast}},\sigma_\omega,\sigma_\omega^{\ast},\vartheta,\varepsilon^A,\varepsilon^m$ | Preference, technology, risk, international premium, unit-root technology and monetary shocks | (F41)-(F52) |
 | Parameters | $\beta,\beta^B,\lambda,n,\delta,\varepsilon,\varepsilon^B,\alpha,\tau,\iota_C,\iota_L,\varphi,\psi,\theta_C,\theta_D,\varphi_C,\varphi_D,\kappa_b,\gamma_R,\gamma_\pi,\gamma_y,\gamma_\eta,\mu,\rho_\cdot$ | Discount factors, population shares, adjustment and price parameters, policy coefficients, monitoring cost and persistence terms | all equations |

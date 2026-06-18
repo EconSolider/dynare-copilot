@@ -154,22 +154,22 @@ $$
 $$
 C_t=C_t^i\mathcal{Q}_{i,t}^{1/\sigma}
 \quad\Rightarrow\quad
-c_t=c_t^*+\frac{1}{\sigma}q_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t.
 $$
 
 - **(F6) 用有效贸易条件表示的风险分享关系**：
 $$
-c_t=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F7) 无抛补利率平价**：
 $$
-r_t-r_t^*=E_t\Delta e_{t+1}.
+r_t-r_t^{\ast}=E_t\Delta e_{t+1}.
 $$
 
 - **(F8) 贸易条件差分方程**：
 $$
-s_t=(r_t^*-E_t\pi_{t+1}^*)-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
+s_t=(r_t^{\ast}-E_t\pi_{t+1}^{\ast})-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
 $$
 
 - **(F9) Calvo 最优重设价格条件，对数线性形式**：
@@ -190,12 +190,12 @@ $$
 - **(F11) 由产出、世界产出和生产率表示的实际边际成本**：
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
-+(\sigma-\sigma_\alpha)y_t^*-(1+\varphi)a_t.
++(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F12) 国内自然产出**：
 $$
-\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
 
 其中：
@@ -228,7 +228,7 @@ $$
 - **(F16) 自然实际利率**：
 $$
 \overline{rr}_t=\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
-+\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^*.
++\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F17) 产出缺口形式的动态 IS 方程**：
@@ -262,7 +262,7 @@ $$
 
 - **(F22) 名义汇率与贸易条件恒等式**：
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F23) 实际汇率关系**：
@@ -282,12 +282,12 @@ $$
 
 - **(F26) 世界资源条件**：
 $$
-y_t^*=c_t^*.
+y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F27) 贸易条件与相对产出**：
 $$
-y_t=y_t^*+\frac{1}{\sigma_\alpha}s_t,
+y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 \qquad
 \sigma_\alpha=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
@@ -313,22 +313,22 @@ $$
 
 - **(F31) 校准中使用的世界产出过程**：
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F32) 校准中使用的创新相关系数**：
 $$
-\operatorname{corr}(\varepsilon_t^a,\varepsilon_t^*)=0.3.
+\operatorname{corr}(\varepsilon_t^a,\varepsilon_t^{\ast})=0.3.
 $$
 
-论文的校准示例使用加拿大生产率和美国 GDP 数据估计出 $\rho_a\approx0.66$ 与 $\rho_{y^*}\approx0.86$。这些经验值记录为来源背景，不是运行时验证。
+论文的校准示例使用加拿大生产率和美国 GDP 数据估计出 $\rho_a\approx0.66$ 与 $\rho_{y^{\ast}}\approx0.86$。这些经验值记录为来源背景，不是运行时验证。
 
 ## 6. Steady-State Solution
 
 本归档条目是对数线性 `model(linear)` 表示。确定性对称稳态被归一化，使所有对数偏离为零：
 
 $$
-a=y^*=x=\pi_H=\pi=s=e=q=nx=0.
+a=y^{\ast}=x=\pi_H=\pi=s=e=q=nx=0.
 $$
 
 对称稳态满足 PPP 和单位贸易条件：
@@ -338,7 +338,7 @@ $$
 \qquad
 \mathcal{Q}=1,
 \qquad
-C=C^*=Y=Y^*.
+C=C^{\ast}=Y=Y^{\ast}.
 $$
 
 国内通胀、CPI 通胀和预期贬值在稳态为零：
@@ -379,8 +379,8 @@ $$
 
 ## 7. Timing & Form Conventions
 
-- **时序**：简化模型没有资本存量或其他预定私人存量。在保留水平表示时，状态变量是外生的 $a_t$、$y_t^*$ 以及价格水平/贸易条件对象。
-- **信息集**：预期 $E_t$ 以 $t$ 期信息为条件。前瞻项包括 $E_t\pi_{H,t+1}$、$E_tx_{t+1}$ 和 $E_t\Delta y_{t+1}^*$。
+- **时序**：简化模型没有资本存量或其他预定私人存量。在保留水平表示时，状态变量是外生的 $a_t$、$y_t^{\ast}$ 以及价格水平/贸易条件对象。
+- **信息集**：预期 $E_t$ 以 $t$ 期信息为条件。前瞻项包括 $E_t\pi_{H,t+1}$、$E_tx_{t+1}$ 和 $E_t\Delta y_{t+1}^{\ast}$。
 - **通胀口径**：`NK_GMAS25ppi` 在 Taylor 规则中使用生产者价格/国内通胀 $\pi_{H,t}$。CPI 通胀作为恒等式 $\pi_t=\pi_{H,t}+\alpha\Delta s_t$ 保留，但不是该版本的政策反馈变量。
 - **形式**：围绕对称零通胀稳态的对数线性 `model(linear)`。小写变量表示对数或对数偏离；$\widehat{mc}_t$ 是实际边际成本相对稳态值 $-\mu$ 的偏离。
 - **未阅读原始 PDF 正文**：已检查原始 PDF 路径存在并计算哈希；由于 Markdown 来源足以支持一稿提取，未打开 PDF 正文。
@@ -413,9 +413,9 @@ $$
 | 符号 | 含义 | 过程 |
 |---|---|---|
 | $a_t$ | 国内技术 | (F30) |
-| $y_t^*$ | 世界产出 | (F31) |
+| $y_t^{\ast}$ | 世界产出 | (F31) |
 | $\varepsilon_t^a$ | 国内技术创新 | (F30) |
-| $\varepsilon_t^*$ | 世界产出创新 | (F31) |
+| $\varepsilon_t^{\ast}$ | 世界产出创新 | (F31) |
 
 ### 参数
 
@@ -433,7 +433,7 @@ $$
 | $\kappa_\alpha$ | 开放经济 Phillips 曲线产出缺口斜率 |
 | $\rho$ | 稳态实际利率项，$\beta^{-1}-1$ |
 | $\rho_a$ | 国内技术持续性 |
-| $\rho_{y^*}$ | 世界产出持续性 |
+| $\rho_{y^{\ast}}$ | 世界产出持续性 |
 | $\phi_\pi$ | 国内通胀 Taylor 规则系数 |
 | $\tau$ | 就业补贴 |
 | $\mu$ | 对数期望加价，$\log(\epsilon/(\epsilon-1))$ |

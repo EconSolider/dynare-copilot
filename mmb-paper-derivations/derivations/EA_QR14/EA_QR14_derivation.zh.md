@@ -257,7 +257,7 @@ $$
 - **(F27) 非耐用品市场出清**：
 
 $$
-y_t^C=\tau c_{H,t}+\frac{(1-n)(1-\tau^*)}{n}c_{H,t}^*.
+y_t^C=\tau c_{H,t}+\frac{(1-n)(1-\tau^{\ast})}{n}c_{H,t}^{\ast}.
 $$
 
 - **(F28) 耐用品市场出清**：
@@ -287,20 +287,20 @@ $$
 - **(F32) 外国模块**：
 
 $$
-\mathcal{E}_t^*=\mathcal{S}\{\text{(F1)--(F31)};\; x_t\mapsto x_t^*,\; \tau\mapsto\tau^*,\; n\mapsto1-n\}.
+\mathcal{E}_t^{\ast}=\mathcal{S}\{\text{(F1)--(F31)};\; x_t\mapsto x_t^{\ast},\; \tau\mapsto\tau^{\ast},\; n\mapsto1-n\}.
 $$
 
 - **(F33) 国际利率联系**：
 
 $$
-r_t^*=r_t+\beta(\kappa_b b_t+\vartheta_t).
+r_t^{\ast}=r_t+\beta(\kappa_b b_t+\vartheta_t).
 $$
 
 - **(F34) 净外国资产**：
 
 $$
 \lambda b_t=\lambda\frac{1}{\beta}b_{t-1}
-+\frac{(1-n)(1-\tau^*)}{n}(c_{H,t}^*-t_t)
++\frac{(1-n)(1-\tau^{\ast})}{n}(c_{H,t}^{\ast}-t_t)
 -(1-\tau)c_{F,t}.
 $$
 
@@ -320,13 +320,13 @@ $$
 - **(F37) 欧元区 CPI 通胀**：
 
 $$
-\Delta p_t^{EMU}=n\Delta p_t^C+(1-n)\Delta p_t^{C^*}.
+\Delta p_t^{EMU}=n\Delta p_t^C+(1-n)\Delta p_t^{C^{\ast}}.
 $$
 
 - **(F38) 欧元区产出**：
 
 $$
-y_t^{EMU}=ny_t+(1-n)y_t^*.
+y_t^{EMU}=ny_t+(1-n)y_t^{\ast}.
 $$
 
 - **(F39) 本国宏观审慎规则**：
@@ -338,7 +338,7 @@ $$
 - **(F40) 外国宏观审慎规则**：
 
 $$
-\eta_t^*=\gamma_\eta^*\Upsilon_t^*.
+\eta_t^{\ast}=\gamma_\eta^{\ast}\Upsilon_t^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -352,7 +352,7 @@ $$
 - **(F42) 外国非耐用品偏好冲击**：
 
 $$
-\xi_t^{C^*}=\rho_{\xi,H}\xi_{t-1}^{C^*}+\varepsilon_t^{\xi,C^*}.
+\xi_t^{C^{\ast}}=\rho_{\xi,H}\xi_{t-1}^{C^{\ast}}+\varepsilon_t^{\xi,C^{\ast}}.
 $$
 
 - **(F43) 本国耐用品偏好冲击**：
@@ -364,7 +364,7 @@ $$
 - **(F44) 外国耐用品偏好冲击**：
 
 $$
-\xi_t^{D^*}=\rho_{\xi,D}\xi_{t-1}^{D^*}+\varepsilon_t^{\xi,D^*}+\varepsilon_t^{\xi,D,COM}.
+\xi_t^{D^{\ast}}=\rho_{\xi,D}\xi_{t-1}^{D^{\ast}}+\varepsilon_t^{\xi,D^{\ast}}+\varepsilon_t^{\xi,D,COM}.
 $$
 
 - **(F45) 本国非耐用品技术冲击**：
@@ -376,7 +376,7 @@ $$
 - **(F46) 外国非耐用品技术冲击**：
 
 $$
-z_t^{C^*}=\rho_{Z,C}z_{t-1}^{C^*}+\varepsilon_t^{Z,C^*}+\varepsilon_t^{Z,C,COM}.
+z_t^{C^{\ast}}=\rho_{Z,C}z_{t-1}^{C^{\ast}}+\varepsilon_t^{Z,C^{\ast}}+\varepsilon_t^{Z,C,COM}.
 $$
 
 - **(F47) 本国耐用品技术冲击**：
@@ -388,7 +388,7 @@ $$
 - **(F48) 外国耐用品技术冲击**：
 
 $$
-z_t^{D^*}=\rho_{Z,D}z_{t-1}^{D^*}+\varepsilon_t^{Z,D^*}.
+z_t^{D^{\ast}}=\rho_{Z,D}z_{t-1}^{D^{\ast}}+\varepsilon_t^{Z,D^{\ast}}.
 $$
 
 - **(F49) 本国抵押风险冲击**：
@@ -400,7 +400,7 @@ $$
 - **(F50) 外国抵押风险冲击**：
 
 $$
-\sigma_{\omega,t}^*=(1-\rho_{\sigma\omega})\bar\sigma_\omega+\rho_{\sigma\omega}\sigma_{\omega,t-1}^*+u_{\omega,t}^*.
+\sigma_{\omega,t}^{\ast}=(1-\rho_{\sigma\omega})\bar\sigma_\omega+\rho_{\sigma\omega}\sigma_{\omega,t-1}^{\ast}+u_{\omega,t}^{\ast}.
 $$
 
 - **(F51) 国际风险溢价冲击**：
@@ -445,6 +445,6 @@ $$
 | 金融变量 | $r,r^L,r^D,\hat{\bar\omega}^a,\hat\omega^p,\eta,F,G$ | 存款利率、贷款/违约利率、违约阈值、宏观审慎楔子和对数正态函数 | (F8)-(F15), (F39)-(F40) |
 | 价格和工资 | $q,\Delta p^C,\Delta p^D,\Delta p^H,\Delta p^F,\tilde w^C,\tilde w^D$ | 相对房价、CPI/部门通胀、部门实际工资 | (F23)-(F26), (F35), (F37) |
 | 数量 | $c_H,c_F,c^{TOT},y^C,y^D,y,l^{C,TOT},l^{D,TOT}$ | 需求汇总、生产、市场出清和产出 | (F16)-(F22), (F27)-(F31), (F38) |
-| 开放经济 | $b,t,r^*,y^*,\Delta p^{C^*}$ | 净外国资产、贸易条件、外国政策利率和外国总量 | (F32)-(F38) |
-| 外生冲击 | $\xi^C,\xi^{C^*},\xi^D,\xi^{D^*},z^C,z^{C^*},z^D,z^{D^*},\sigma_\omega,\sigma_\omega^*,\vartheta,\varepsilon^A,\varepsilon^m$ | 偏好、技术、风险、国际溢价、单位根技术和货币政策冲击 | (F41)-(F52) |
+| 开放经济 | $b,t,r^{\ast},y^{\ast},\Delta p^{C^{\ast}}$ | 净外国资产、贸易条件、外国政策利率和外国总量 | (F32)-(F38) |
+| 外生冲击 | $\xi^C,\xi^{C^{\ast}},\xi^D,\xi^{D^{\ast}},z^C,z^{C^{\ast}},z^D,z^{D^{\ast}},\sigma_\omega,\sigma_\omega^{\ast},\vartheta,\varepsilon^A,\varepsilon^m$ | 偏好、技术、风险、国际溢价、单位根技术和货币政策冲击 | (F41)-(F52) |
 | 参数 | $\beta,\beta^B,\lambda,n,\delta,\varepsilon,\varepsilon^B,\alpha,\tau,\iota_C,\iota_L,\varphi,\psi,\theta_C,\theta_D,\varphi_C,\varphi_D,\kappa_b,\gamma_R,\gamma_\pi,\gamma_y,\gamma_\eta,\mu,\rho_\cdot$ | 贴现因子、人口份额、调整与价格参数、政策系数、监督成本和持久性参数 | all equations |

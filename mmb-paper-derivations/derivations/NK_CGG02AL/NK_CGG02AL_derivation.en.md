@@ -119,7 +119,7 @@ $$
 - **(F7) International risk sharing**
 
 $$
-C_t=C_t^*.
+C_t=C_t^{\ast}.
 $$
 
 - **(F8) Final-good demand for variety $f$**
@@ -163,13 +163,13 @@ $$
 - **(F14) Aggregate demand and terms of trade**
 
 $$
-Y_t=k^{-1}C_tS_t^\gamma,\qquad S_t=\frac{Y_t}{Y_t^*}.
+Y_t=k^{-1}C_tS_t^\gamma,\qquad S_t=\frac{Y_t}{Y_t^{\ast}}.
 $$
 
 - **(F15) Consumption as a function of home and foreign output**
 
 $$
-C_t=kY_t^{1-\gamma}(Y_t^*)^\gamma.
+C_t=kY_t^{1-\gamma}(Y_t^{\ast})^\gamma.
 $$
 
 - **(F16) Aggregate production with price dispersion**
@@ -183,7 +183,7 @@ $$
 
 $$
 MC_t=(1-\tau)k^{\sigma-1}(1+\mu_t^w)A_t^{-(1+\phi)}
-Y_t^\kappa(Y_t^*)^{\kappa_0}V_t^\phi.
+Y_t^\kappa(Y_t^{\ast})^{\kappa_0}V_t^\phi.
 $$
 
 - **(F18) Open-economy slope parameters**
@@ -204,7 +204,7 @@ $$
 $$
 \bar{Y}_t=
 \left[
-\frac{k^{1-\sigma}A_t^{1+\phi}(Y_t^*)^{-\kappa_0}}
+\frac{k^{1-\sigma}A_t^{1+\phi}(Y_t^{\ast})^{-\kappa_0}}
 {(1-\tau)(1+\mu^w)(1+\mu^p)}
 \right]^{1/\kappa}.
 $$
@@ -214,10 +214,10 @@ $$
 $$
 \bar{\bar{Y}}_t=
 \left[
-\frac{k^{1-\sigma}A_t^{1+\phi}(\bar{\bar{Y}}_t^*)^{-\kappa_0}}
+\frac{k^{1-\sigma}A_t^{1+\phi}(\bar{\bar{Y}}_t^{\ast})^{-\kappa_0}}
 {(1-\tau)(1+\mu^w)(1+\mu^p)}
 \right]^{1/\kappa}
-=\bar{Y}_t\left(\frac{\bar{\bar{Y}}_t^*}{Y_t^*}\right)^{-\kappa_0/\kappa}.
+=\bar{Y}_t\left(\frac{\bar{\bar{Y}}_t^{\ast}}{Y_t^{\ast}}\right)^{-\kappa_0/\kappa}.
 $$
 
 - **(F22) Log-linear aggregate demand**
@@ -236,7 +236,7 @@ $$
 - **(F24) Log-linear terms of trade**
 
 $$
-s_t=y_t-y_t^*.
+s_t=y_t-y_t^{\ast}.
 $$
 
 - **(F25) Log-linear production**
@@ -261,7 +261,7 @@ $$
 - **(F28) Domestic natural output in log deviations**
 
 $$
-\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^*\right].
+\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^{\ast}\right].
 $$
 
 - **(F29) Home IS equation in the domestic output gap**
@@ -283,13 +283,13 @@ $$
 
 $$
 \overline{rr}_t=\sigma_0E_t\Delta\bar{y}_{t+1}
-+\kappa_0E_t\Delta y_{t+1}^*.
++\kappa_0E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F32) Natural terms of trade relation**
 
 $$
-s_t=(\tilde{y}_t-\tilde{y}_t^*)+(\bar{y}_t-\bar{y}_t^*)=(\tilde{y}_t-\tilde{y}_t^*)+\bar{s}_t.
+s_t=(\tilde{y}_t-\tilde{y}_t^{\ast})+(\bar{y}_t-\bar{y}_t^{\ast})=(\tilde{y}_t-\tilde{y}_t^{\ast})+\bar{s}_t.
 $$
 
 - **(F33) Nash subsidy condition**
@@ -335,7 +335,7 @@ $$
 - **(F39) Cooperative gap definition**
 
 $$
-\tilde{\tilde{y}}_t=\tilde{y}_t-\frac{\kappa_0}{\kappa}\tilde{y}_t^*.
+\tilde{\tilde{y}}_t=\tilde{y}_t-\frac{\kappa_0}{\kappa}\tilde{y}_t^{\ast}.
 $$
 
 - **(F40) Cooperative welfare loss**
@@ -344,8 +344,8 @@ $$
 W_C=-\frac{1}{2}\Lambda E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 (1-\gamma)\left(\pi_t^2+\alpha\tilde{\tilde{y}}_t^2\right)
-+\gamma\left((\pi_t^*)^2+\alpha^*(\tilde{\tilde{y}}_t^*)^2\right)
--2\Phi\tilde{\tilde{y}}_t\tilde{\tilde{y}}_t^*
++\gamma\left((\pi_t^{\ast})^2+\alpha^{\ast}(\tilde{\tilde{y}}_t^{\ast})^2\right)
+-2\Phi\tilde{\tilde{y}}_t\tilde{\tilde{y}}_t^{\ast}
 \right],
 $$
 
@@ -357,35 +357,35 @@ $$
 
 $$
 \pi_t=\beta E_t\pi_{t+1}+\lambda\tilde{\tilde{y}}_t
-+\lambda_0\tilde{\tilde{y}}_t^*+u_t,\qquad \lambda_0=\delta\kappa_0.
++\lambda_0\tilde{\tilde{y}}_t^{\ast}+u_t,\qquad \lambda_0=\delta\kappa_0.
 $$
 
 - **(F42) Cooperative foreign Phillips curve**
 
 $$
-\pi_t^*=\beta E_t\pi_{t+1}^*+\lambda^*\tilde{\tilde{y}}_t^*
-+\lambda_0^*\tilde{\tilde{y}}_t+u_t^*.
+\pi_t^{\ast}=\beta E_t\pi_{t+1}^{\ast}+\lambda^{\ast}\tilde{\tilde{y}}_t^{\ast}
++\lambda_0^{\ast}\tilde{\tilde{y}}_t+u_t^{\ast}.
 $$
 
 - **(F43) Cooperative optimality condition in global gaps**
 
 $$
 \tilde{\tilde{y}}_t=-\xi\pi_t,\qquad
-\tilde{\tilde{y}}_t^*=-\xi\pi_t^*.
+\tilde{\tilde{y}}_t^{\ast}=-\xi\pi_t^{\ast}.
 $$
 
 - **(F44) Cooperative optimality condition in domestic gaps**
 
 $$
-\tilde{y}_t=-\xi\left(\pi_t+\frac{\kappa_0}{\kappa}\pi_t^*\right),\qquad
-\tilde{y}_t^*=-\xi\left(\pi_t^*+\frac{\kappa_0^*}{\kappa^*}\pi_t\right).
+\tilde{y}_t=-\xi\left(\pi_t+\frac{\kappa_0}{\kappa}\pi_t^{\ast}\right),\qquad
+\tilde{y}_t^{\ast}=-\xi\left(\pi_t^{\ast}+\frac{\kappa_0^{\ast}}{\kappa^{\ast}}\pi_t\right).
 $$
 
 - **(F45) Cooperative Taylor-style rule**
 
 $$
 r_t=\overline{rr}_t^d+\vartheta E_t\pi_{t+1}
-+\frac{\kappa_0}{\kappa}(\vartheta-1)E_t\pi_{t+1}^*.
++\frac{\kappa_0}{\kappa}(\vartheta-1)E_t\pi_{t+1}^{\ast}.
 $$
 
 `needs_review`: MinerU OCR renders $\vartheta$ as `9` in Eqs. (61) and (77), and the reduced-form cooperative inflation expression around the paper's Eq. (76) contains unreadable duplicate $\psi$ symbols; those pieces should be checked against the PDF before promotion.
@@ -395,26 +395,26 @@ $$
 - Goods-market clearing, home and foreign:
 
 $$
-(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C_{H,t}^*,\qquad
-\gamma Y_t^*=(1-\gamma)C_{F,t}+\gamma C_{F,t}^*.
+(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C_{H,t}^{\ast},\qquad
+\gamma Y_t^{\ast}=(1-\gamma)C_{F,t}+\gamma C_{F,t}^{\ast}.
 $$
 
 - Complete pass-through and the law of one price imply a unit CPI real exchange rate:
 
 $$
-\frac{E_tP_t^*}{P_t}=1.
+\frac{E_tP_t^{\ast}}{P_t}=1.
 $$
 
 - Balanced trade in each country:
 
 $$
-P_{H,t}Y_t=P_tC_t,\qquad P_{F,t}^*Y_t^*=P_t^*C_t^*.
+P_{H,t}Y_t=P_tC_t,\qquad P_{F,t}^{\ast}Y_t^{\ast}=P_t^{\ast}C_t^{\ast}.
 $$
 
 - Nominal exchange rate identity:
 
 $$
-e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^*.
+e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^{\ast}.
 $$
 
 These identities support the reduced system in (F14), (F15), (F24), and (F32). The foreign economy has symmetric equations with starred variables and population-share substitutions.
@@ -430,13 +430,13 @@ $$
 - **(F47) Foreign cost-push shock**
 
 $$
-u_t^*=\rho u_{t-1}^*+\varepsilon_t^*.
+u_t^{\ast}=\rho u_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F48) Technology shocks**
 
 $$
-a_t \ \text{and}\ a_t^* \ \text{enter natural output through (F28) and its foreign analogue.}
+a_t \ \text{and}\ a_t^{\ast} \ \text{enter natural output through (F28) and its foreign analogue.}
 $$
 
 `needs_review`: the paper gives an explicit AR(1) for cost-push shocks, but the MinerU Markdown does not provide a separate stochastic law for technology; for an implementation, a conventional AR(1) technology process would need to be specified from the MMB code or calibration source rather than inferred from the text alone.
@@ -445,8 +445,8 @@ $$
 
 This archive entry is a log-linear analytical model. The steady state is the deterministic zero-inflation reference point around which lower-case variables are log deviations.
 
-1. Normalize technology and symmetric output levels: $A=A^*=1$ and, under symmetry, $Y=Y^*$, so $S=1$.
-2. Consumption risk sharing and balanced trade imply $C=C^*$ and $Y=k^{-1}CS^\gamma$, hence $C=kY$ when $S=1$.
+1. Normalize technology and symmetric output levels: $A=A^{\ast}=1$ and, under symmetry, $Y=Y^{\ast}$, so $S=1$.
+2. Consumption risk sharing and balanced trade imply $C=C^{\ast}$ and $Y=k^{-1}CS^\gamma$, hence $C=kY$ when $S=1$.
 3. With zero domestic inflation and no price dispersion, all reset prices equal the price index, $V=1$.
 4. The flexible-price markup condition fixes $MC=(1+\mu^p)^{-1}$.
 5. The Nash steady-state subsidy satisfies (F33); the cooperative steady-state subsidy satisfies (F38). These are different steady-state policy distortions and must not be mixed.
@@ -460,7 +460,7 @@ No numeric calibration or Dynare `steady_state_model` has been validated for thi
 - The derivation is in log-linear form. Lower-case variables denote log deviations from steady state, except $r_t$, $\pi_t$, and related interest/inflation variables, which are inflation/rate deviations in the paper's analytical notation.
 - Domestic inflation $\pi_t$ is producer-price inflation, not CPI inflation. Optimal policy targets domestic inflation; the exchange rate adjusts under flexible exchange rates.
 - $\tilde{y}_t$ is the domestic output gap relative to the domestic flexible-price allocation, taking foreign output as given. $\tilde{\tilde{y}}_t$ is the output gap relative to the globally flexible-price cooperative allocation.
-- The terms of trade are $S_t=P_{F,t}/P_{H,t}$ in levels and $s_t=y_t-y_t^*$ in log-linear equilibrium.
+- The terms of trade are $S_t=P_{F,t}/P_{H,t}$ in levels and $s_t=y_t-y_t^{\ast}$ in log-linear equilibrium.
 - There is no capital stock in this model. Production is linear in labor, so no capital timing convention is required.
 - The timing in the IS curve is forward looking: $r_t-E_t\pi_{t+1}$ is the expected real interest-rate term, adjusted by the domestic natural real rate.
 - The policy problem is discretionary, not commitment-based; the central bank takes future expectations as given.
@@ -472,9 +472,9 @@ No numeric calibration or Dynare `steady_state_model` has been validated for thi
 | Symbol | Meaning | Main equations |
 |---|---|---|
 | $C_t,C_{H,t},C_{F,t}$ | home consumption aggregate and components | (F1), (F2), (F15) |
-| $C_t^*$ | foreign consumption aggregate | (F7) and foreign analogue |
-| $Y_t,Y_t^*$ | home and foreign output | (F14), (F16), (F22), (F25) |
-| $N_t,N_t^*$ | labor | (F5), (F6), (F16), (F25) |
+| $C_t^{\ast}$ | foreign consumption aggregate | (F7) and foreign analogue |
+| $Y_t,Y_t^{\ast}$ | home and foreign output | (F14), (F16), (F22), (F25) |
+| $N_t,N_t^{\ast}$ | labor | (F5), (F6), (F16), (F25) |
 | $P_t,P_{H,t},P_{F,t}$ | CPI and producer prices | (F1), (F2), (F9), (F13) |
 | $P^0_{H,t}$ | Calvo reset price | (F11), (F12), (F13) |
 | $S_t,s_t$ | terms of trade | (F14), (F24), (F32) |
@@ -482,19 +482,19 @@ No numeric calibration or Dynare `steady_state_model` has been validated for thi
 | $V_t$ | price dispersion | (F16) |
 | $\bar{Y}_t,\bar{\bar{Y}}_t$ | domestic and global natural output | (F20), (F21), (F28) |
 | $\tilde{y}_t,\tilde{\tilde{y}}_t$ | domestic and cooperative output gaps | (F29), (F30), (F39), (F43), (F44) |
-| $\pi_t,\pi_t^*$ | domestic producer inflation | (F26), (F30), (F41), (F42) |
+| $\pi_t,\pi_t^{\ast}$ | domestic producer inflation | (F26), (F30), (F41), (F42) |
 | $r_t$ | nominal policy rate in log-linear policy system | (F29), (F37), (F45) |
 | $\overline{rr}_t$ | domestic natural real rate | (F31), (F37), (F45) |
 | $e_t$ | nominal exchange rate | Section 4 identity |
-| $u_t,u_t^*$ | cost-push shocks | (F30), (F41), (F42), (F46), (F47) |
-| $a_t,a_t^*$ | technology shocks | (F28), (F48) |
+| $u_t,u_t^{\ast}$ | cost-push shocks | (F30), (F41), (F42), (F46), (F47) |
+| $a_t,a_t^{\ast}$ | technology shocks | (F28), (F48) |
 
 ### Exogenous shocks
 
 | Symbol | Meaning | Source status |
 |---|---|---|
-| $\varepsilon_t,\varepsilon_t^*$ | cost-push innovations | source-stated in (F46), (F47) |
-| $a_t,a_t^*$ | productivity processes | source-stated as technology states, stochastic process needs review |
+| $\varepsilon_t,\varepsilon_t^{\ast}$ | cost-push innovations | source-stated in (F46), (F47) |
+| $a_t,a_t^{\ast}$ | productivity processes | source-stated as technology states, stochastic process needs review |
 
 ### Parameters
 
@@ -512,7 +512,7 @@ No numeric calibration or Dynare `steady_state_model` has been validated for thi
 | $\delta$ | Phillips-curve Calvo coefficient $(1-\theta)(1-\beta\theta)/\theta$ |
 | $\kappa,\kappa_0,\sigma_0$ | open-economy marginal-cost and IS slope composites |
 | $\lambda,\lambda_0$ | Phillips-curve slope and international marginal-cost spillover |
-| $\alpha,\alpha^*$ | welfare weights on home and foreign output gaps |
+| $\alpha,\alpha^{\ast}$ | welfare weights on home and foreign output gaps |
 | $\Lambda,\Phi$ | welfare-loss scale and cooperative cross-gap term |
 | $\rho$ | persistence of cost-push shock |
 | $\psi,\vartheta$ | reduced-form policy coefficients; OCR-sensitive in the source |

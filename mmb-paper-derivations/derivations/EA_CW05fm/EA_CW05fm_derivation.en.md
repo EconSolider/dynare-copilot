@@ -79,7 +79,7 @@ $$\pi_t^{(4)} = p_t - p_{t-4}.$$
 
 **(F10) Taylor-type short nominal interest-rate rule**
 
-$$i_t^s = r^* + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^*\right) + \alpha_q q_t.$$
+$$i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.$$
 
 **(F11) Long nominal interest rate from expectations hypothesis**
 
@@ -91,11 +91,11 @@ $$r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
 
 **(F13) Deterministic steady-state real-rate relation**
 
-$$r^* = -\frac{\delta_0}{\delta_3}.$$
+$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 **(F14) Policy target pins down steady-state inflation**
 
-$$\pi = \pi^*.$$
+$$\pi = \pi^{\ast}.$$
 
 `needs_review`: the Rep-MMB implementation uses a smoothed Gerdesmeier-Roffia-style policy rule for `interest`, with `interest = (0.87^3) interest_{t-1} + (1-0.87^3)1.93 inflation + (1-0.87^3)0.28 outputgap + interest_`. This appears to be implementation-specific relative to the paper's Table 4 Taylor rule.
 
@@ -127,11 +127,11 @@ $$q = 0.$$
 
 **(F19) Long real-rate steady state**
 
-$$r^l = r^* = -\frac{\delta_0}{\delta_3}.$$
+$$r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 **(F20) Inflation steady state**
 
-$$\pi = \pi^*.$$
+$$\pi = \pi^{\ast}.$$
 
 **(F21) Shock steady states**
 
@@ -181,8 +181,8 @@ For a Dynare `model(linear)` implementation, steady states for deviation-style a
 | $\sigma_{\varepsilon_x}$ / `sigma_e_cw` | contract shock scale | paper Table 2; Rep-MMB normalizes to `1.00` and puts variances in `shocks` |
 | $\delta_0,\delta_1,\delta_2,\delta_3$ / `delta0`-`delta3` | aggregate-demand parameters | (F8); Rep-MMB values use the euro-area German-rate row |
 | $\sigma_{\varepsilon_d}$ / `sigma_e_d` | demand shock scale | (F8) |
-| $r^*$ | equilibrium long real rate | (F13), (F19) |
-| $\pi^*$ | inflation target | (F10), (F14), (F20) |
+| $r^{\ast}$ | equilibrium long real rate | (F13), (F19) |
+| $\pi^{\ast}$ | inflation target | (F10), (F14), (F20) |
 | $\alpha_{\pi},\alpha_q$ | policy response coefficients | paper Table 4 policy rule |
 | policy smoothing coefficients | implementation policy-rule coefficients | implementation_cross_check |
 

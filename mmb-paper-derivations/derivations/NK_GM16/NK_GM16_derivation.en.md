@@ -67,7 +67,7 @@ $$
 Complete international financial markets imply a risk-sharing condition linking domestic consumption to world consumption, the real exchange rate, and relative preference shocks. Export demand is an exogenous-demand block rather than an optimizing domestic agent:
 
 $$
-X_t=\nu S_tY_t^*.
+X_t=\nu S_tY_t^{\ast}.
 $$
 
 The foreign block supplies two independent shocks: `z_{1,t}^*`, which moves world output/export demand, and `z_{2,t}^*`, which moves the world real interest rate.
@@ -101,7 +101,7 @@ $$
 - **(F4) Foreign-bond Euler equation / UIP source**:
 
 $$
-1=\beta(1+i_t^*)E_t\left[
+1=\beta(1+i_t^{\ast})E_t\left[
 \left(\frac{C_t}{C_{t+1}}\right)
 \left(\frac{Z_{t+1}}{Z_t}\right)
 \left(\frac{P_t}{P_{t+1}}\right)
@@ -112,13 +112,13 @@ $$
 - **(F5) Log-linear uncovered interest parity**:
 
 $$
-i_t=i_t^*+E_t\{\Delta e_{t+1}\}.
+i_t=i_t^{\ast}+E_t\{\Delta e_{t+1}\}.
 $$
 
 - **(F6) Complete-markets risk sharing**:
 
 $$
-C_t=C_t^*\mathcal{Q}_t\left(\frac{Z_t}{Z_t^*}\right).
+C_t=C_t^{\ast}\mathcal{Q}_t\left(\frac{Z_t}{Z_t^{\ast}}\right).
 $$
 
 - **(F7) Reset wage optimality**:
@@ -188,13 +188,13 @@ $$
 - **(F16) Domestic goods market clearing, log-linearized**:
 
 $$
-y_t=(1-\nu)c_t+\nu(2-\nu)s_t+\nu z_{1,t}^*.
+y_t=(1-\nu)c_t+\nu(2-\nu)s_t+\nu z_{1,t}^{\ast}.
 $$
 
 - **(F17) Risk-sharing demand relation used in the MMB system**:
 
 $$
-c_t=(1-\nu)s_t+z_t-z_{2,t}^*.
+c_t=(1-\nu)s_t+z_t-z_{2,t}^{\ast}.
 $$
 
 - **(F18) Consumption Euler equation, log-linearized**:
@@ -314,13 +314,13 @@ $$
 - **(F36) Foreign export-demand shock**:
 
 $$
-z_{1,t}^*=\rho_1^*z_{1,t-1}^*+\varepsilon_{1,t}^*.
+z_{1,t}^{\ast}=\rho_1^{\ast}z_{1,t-1}^{\ast}+\varepsilon_{1,t}^{\ast}.
 $$
 
 - **(F37) Foreign world-interest-rate shock**:
 
 $$
-z_{2,t}^*=\rho_2^*z_{2,t-1}^*+\varepsilon_{2,t}^*.
+z_{2,t}^{\ast}=\rho_2^{\ast}z_{2,t-1}^{\ast}+\varepsilon_{2,t}^{\ast}.
 $$
 
 - **(F38) Payroll-tax shock, as implemented in MMB with sign chosen for IRFs**:
@@ -332,13 +332,13 @@ $$
 - **(F39) World output relation for export shocks**:
 
 $$
-Y_t^*=Z_{1,t}^*.
+Y_t^{\ast}=Z_{1,t}^{\ast}.
 $$
 
 - **(F40) World interest rate relation**:
 
 $$
-i_t^*=\rho+(1-\rho_2^*)z_{2,t}^*.
+i_t^{\ast}=\rho+(1-\rho_2^{\ast})z_{2,t}^{\ast}.
 $$
 
 ## 6. Steady-State Solution
@@ -346,19 +346,19 @@ $$
 The MMB model is linearized around a zero-inflation symmetric steady state. All log-deviation endogenous variables and exogenous shocks are zero in deterministic steady state:
 
 $$
-y=c=s=z=z_1^*=z_2^*=i=\pi=p=n=a=\tau=\omega=\pi^w=e=0.
+y=c=s=z=z_1^{\ast}=z_2^{\ast}=i=\pi=p=n=a=\tau=\omega=\pi^w=e=0.
 $$
 
 The source paper uses a symmetric steady state with:
 
 $$
-S=1,\qquad C=C^*=Y^*,\qquad X=\nu Y^*,\qquad C_F=\nu C,\qquad Y=C.
+S=1,\qquad C=C^{\ast}=Y^{\ast},\qquad X=\nu Y^{\ast},\qquad C_F=\nu C,\qquad Y=C.
 $$
 
 Natural employment, ignoring constants, is:
 
 $$
-n_t^n=\frac{\nu}{1+\varphi}(z_{1,t}^*+z_{2,t}^*-z_t)-\frac{1}{1+\varphi}\tau_t.
+n_t^n=\frac{\nu}{1+\varphi}(z_{1,t}^{\ast}+z_{2,t}^{\ast}-z_t)-\frac{1}{1+\varphi}\tau_t.
 $$
 
 The natural allocation used to define gaps is:
@@ -368,11 +368,11 @@ y_t^n=a_t+(1-\alpha)n_t^n,
 $$
 
 $$
-s_t^n=a_t-z_t+z_{2,t}^*-\tau_t-(\alpha+\varphi)n_t^n,
+s_t^n=a_t-z_t+z_{2,t}^{\ast}-\tau_t-(\alpha+\varphi)n_t^n,
 $$
 
 $$
-c_t^n=z_t+(1-\nu)s_t^n-z_{2,t}^*,
+c_t^n=z_t+(1-\nu)s_t^n-z_{2,t}^{\ast},
 $$
 
 $$
@@ -414,8 +414,8 @@ The complete-source appendix includes constants involving desired markups in the
 | Endogenous | `ygap`, `cgap`, `sgap`, `wgap`, `ngap` | gaps from natural allocation | (F28)-(F31) |
 | Endogenous | `yn`, `cn`, `sn`, `nn`, `wpn` | natural values | steady-state/natural allocation block |
 | Endogenous | `z`, $z_t$ | domestic preference state | (F34) |
-| Endogenous | `zx1`, $z_{1,t}^*$ | export-demand state | (F36), (F39) |
-| Endogenous | `zx2`, $z_{2,t}^*$ | world-interest-rate state | (F37), (F40) |
+| Endogenous | `zx1`, $z_{1,t}^{\ast}$ | export-demand state | (F36), (F39) |
+| Endogenous | `zx2`, $z_{2,t}^{\ast}$ | world-interest-rate state | (F37), (F40) |
 | Exogenous | `ez`, `ea`, `ezx1`, `ezx2`, `et` | innovations to preference, technology, export, world-rate, and tax processes | (F34)-(F38) |
 | Parameter | `bet`, $\beta$ | discount factor | (F3), (F10), (F15), (F25) |
 | Parameter | `phi`, $\varphi$ | curvature of labor disutility | (F25), natural allocation |

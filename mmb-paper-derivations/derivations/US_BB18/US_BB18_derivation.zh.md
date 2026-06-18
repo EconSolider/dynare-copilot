@@ -297,8 +297,8 @@ $$
 - **(F33) 货币政策规则**：
 
 $$
-R_t=\frac{R_{ss}}{(\pi_{ss}^{*})}\pi_t^{*}
-\left[\left(\frac{\pi_{GDP,t}}{\pi_t^{*}}\right)^{\gamma_\pi}
+R_t=\frac{R_{ss}}{(\pi_{ss}^{\ast})}\pi_t^{\ast}
+\left[\left(\frac{\pi_{GDP,t}}{\pi_t^{\ast}}\right)^{\gamma_\pi}
 \left(\frac{y_{GDP,t}}{y_{GDP,ss}}\right)^{\gamma_y}\right]^{1-\gamma_R}
 \left(\frac{R_{t-1}}{R_{ss}}\right)^{\gamma_R}\varepsilon_{R,t}.
 \tag{F33}
@@ -361,7 +361,7 @@ $$
 
 $$
 row_{s,t}=row_{s,t-1}^{\theta_s}
-\left[\left(\frac{p_{o,t}}{p^*_{f,t}}\right)^{\eta_s}z_{row,t}\right]^{1-\theta_s}.
+\left[\left(\frac{p_{o,t}}{p^{\ast}_{f,t}}\right)^{\eta_s}z_{row,t}\right]^{1-\theta_s}.
 \tag{F39}
 $$
 
@@ -369,7 +369,7 @@ $$
 
 $$
 row_{d,t}=row_{d,t-1}^{\theta_d}
-\left[\left(\frac{p_{o,t}}{p^*_{f,t}}\right)^{\eta_d}
+\left[\left(\frac{p_{o,t}}{p^{\ast}_{f,t}}\right)^{\eta_d}
 y_{row,t}^{\eta_y}z^d_{row,t}\right]^{1-\theta_d}.
 \tag{F40}
 $$
@@ -381,7 +381,7 @@ $$
 \log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
 &=a_{row}(L)\log\left(\frac{y_{row,t-1}}{y_{row,ss}}\right)
 +b_{row}(L)\log\left(\frac{nx_{t-1}}{nx_{ss}}\right)\\
-&\quad +c_{row}(L)\log\left(\frac{p^*_{f,t-1}}{p_{f,t-1}}\right)
+&\quad +c_{row}(L)\log\left(\frac{p^{\ast}_{f,t-1}}{p_{f,t-1}}\right)
 +d_{row}(L)\log\left(\frac{p_{o,t}}{p_{f,t}}\right)
 +e_{row}(L)\log\left(\frac{y_{f,t}}{y_{f,ss}}\right)
 +\varepsilon_{row,t}.
@@ -396,7 +396,7 @@ $$
 \log\left(\frac{nx_t}{nx_{ss}}\right)
 &=a_{nx}(L)\log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
 +b_{nx}(L)\log\left(\frac{nx_{t-1}}{nx_{ss}}\right)
-+c_{nx}(L)\log\left(\frac{p^*_{f,t-1}}{p_{f,t-1}}\right)\\
++c_{nx}(L)\log\left(\frac{p^{\ast}_{f,t-1}}{p_{f,t-1}}\right)\\
 &\quad +d_{nx}(L)\log\left(\frac{p_{o,t}}{p_{f,t}}\right)
 +e_{nx}(L)\log\left(\frac{y_{f,t}}{y_{f,ss}}\right)
 +\varepsilon_{nx,t}.
@@ -408,10 +408,10 @@ $$
 
 $$
 \begin{aligned}
-\log\left(\frac{p^*_{f,t}}{p_{f,t}}\right)
+\log\left(\frac{p^{\ast}_{f,t}}{p_{f,t}}\right)
 &=a_{rer}(L)\log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
 +b_{rer}(L)\log\left(\frac{nx_t}{nx_{ss}}\right)
-+c_{rer}(L)\log\left(\frac{p^*_{f,t-1}}{p_{f,t-1}}\right)\\
++c_{rer}(L)\log\left(\frac{p^{\ast}_{f,t-1}}{p_{f,t-1}}\right)\\
 &\quad +d_{rer}(L)\log\left(\frac{p_{o,t}}{p_{f,t}}\right)
 +e_{rer}(L)\log\left(\frac{y_{f,t}}{y_{f,ss}}\right)
 +\varepsilon_{rer,t}.
@@ -441,7 +441,7 @@ $$
 $$
 nx_{ss}=0,
 \qquad
-\frac{p^*_{f,ss}}{p_{f,ss}}=1.
+\frac{p^{\ast}_{f,ss}}{p_{f,ss}}=1.
 \tag{F46}
 $$
 

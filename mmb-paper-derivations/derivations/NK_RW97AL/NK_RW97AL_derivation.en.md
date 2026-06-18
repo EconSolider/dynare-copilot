@@ -248,9 +248,9 @@ The goods market identity is aggregate demand (F14). There is no investment or c
 The monetary policy feedback rule used to characterize historical policy is
 
 $$
-r_t=r^*
-+\sum_{k=1}^{n_r}\mu_k(r_{t-k}-r^*)
-+\sum_{k=0}^{n_\pi}\phi_k(\pi_{t-k}-\pi^*)
+r_t=r^{\ast}
++\sum_{k=1}^{n_r}\mu_k(r_{t-k}-r^{\ast})
++\sum_{k=0}^{n_\pi}\phi_k(\pi_{t-k}-\pi^{\ast})
 +\sum_{k=0}^{n_y}\theta_k y_{t-k}
 +\epsilon_t.
 \tag{F26}

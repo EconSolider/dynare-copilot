@@ -27,7 +27,7 @@ $$
 Intermediate producers rent effective capital services and hire homogeneous labor:
 
 $$
-Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^* .
+Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^{\ast} .
 $$
 
 Each firm sets its price subject to Calvo frictions. Non-reoptimizing firms index to the target and lagged inflation term:
@@ -70,7 +70,7 @@ $$
 Each household contains all differentiated labor types. Monopoly unions set wages subject to Calvo wage frictions. Non-reoptimizing wages follow:
 
 $$
-W_{it}=(\mu_{z^*,t})^{\iota_\mu}(\mu_{z^*})^{1-\iota_\mu}\tilde{\pi}_{w,t}W_{i,t-1},
+W_{it}=(\mu_{z^{\ast},t})^{\iota_\mu}(\mu_{z^{\ast}})^{1-\iota_\mu}\tilde{\pi}_{w,t}W_{i,t-1},
 \qquad
 \tilde{\pi}_{w,t}=(\pi_t^{target})^{\iota_w}(\pi_{t-1})^{1-\iota_w}.
 $$
@@ -82,10 +82,10 @@ $$
 - **(F1) Reset-price index recursion** (`needs_review`; implementation cross-check Eqn 1):
 
 $$
-p_t^*=
+p_t^{\ast}=
 \left[
 (1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
-+\xi_p\left(\frac{\tilde{\pi}_t}{\pi_t}p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
++\xi_p\left(\frac{\tilde{\pi}_t}{\pi_t}p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
 \right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
 $$
 
@@ -110,10 +110,10 @@ $$
 - **(F4) Scaled output definition** (`needs_review`; source production equation and implementation cross-check auxiliary `yz`):
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_{f,t}/(\lambda_{f,t}-1)}
+Y_{z,t}=(p_t^{\ast})^{\lambda_{f,t}/(\lambda_{f,t}-1)}
 \left[
-\epsilon_t\left(u_t\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}\right)^{\alpha}
-\left(H_t(w_t^*)^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
+\epsilon_t\left(u_t\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}\right)^{\alpha}
+\left(H_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
 -\phi
 \right].
 $$
@@ -128,7 +128,7 @@ $$
 
 $$
 r^k_t=\alpha\epsilon_t
-\left(\frac{\Upsilon\mu_{z^*,t}H_t(w_t^*)^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
+\left(\frac{\Upsilon\mu_{z^{\ast},t}H_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
 $$
 
 - **(F7) Marginal cost** (`needs_review`; implementation cross-check Eqn 11):
@@ -142,8 +142,8 @@ $$
 - **(F8) Capital accumulation** (`needs_review`; source equation 6 and implementation cross-check Eqn 13):
 
 $$
-\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}
-+\left[1-S\left(\zeta_{I,t}\mu_{z^*,t}\Upsilon I_t/I_{t-1}\right)\right]I_t .
+\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}
++\left[1-S\left(\zeta_{I,t}\mu_{z^{\ast},t}\Upsilon I_t/I_{t-1}\right)\right]I_t .
 $$
 
 - **(F9) Risk-free bond Euler equation** (`needs_review`; implementation cross-check Eqn 14):
@@ -151,7 +151,7 @@ $$
 $$
 \zeta_{c,t}\lambda_{z,t}
 =\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^*,t+1}\pi_{t+1}}
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^{\ast},t+1}\pi_{t+1}}
 \left(1+(1-\tau^d)R_t^e\right)
 \right].
 $$
@@ -160,8 +160,8 @@ $$
 
 $$
 (1+\tau^c)\zeta_{c,t}\lambda_{z,t}
-=\frac{\mu_{z^*,t}\zeta_{c,t}}{C_t\mu_{z^*,t}-bC_{t-1}}
--\beta bE_t\left[\frac{\zeta_{c,t+1}}{C_{t+1}\mu_{z^*,t+1}-bC_t}\right].
+=\frac{\mu_{z^{\ast},t}\zeta_{c,t}}{C_t\mu_{z^{\ast},t}-bC_{t-1}}
+-\beta bE_t\left[\frac{\zeta_{c,t+1}}{C_{t+1}\mu_{z^{\ast},t+1}-bC_t}\right].
 $$
 
 - **(F11) No-financial-frictions capital Euler equation** (`needs_review`; paper states this replaces the financial accelerator block; implementation cross-check Eqn 16):
@@ -169,7 +169,7 @@ $$
 $$
 \zeta_{c,t}\lambda_{z,t}
 =\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^*,t+1}\pi_{t+1}}
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^{\ast},t+1}\pi_{t+1}}
 (1+R^k_{t+1})
 \right].
 $$
@@ -189,11 +189,11 @@ $$
 0=-\frac{\zeta_{c,t}\lambda_{z,t}}{\mu_{\Upsilon,t}}
 +\zeta_{c,t}\lambda_{z,t}q_t
 \left[
-1-S_t-S'_t\frac{\zeta_{I,t}\mu_{z^*,t}\Upsilon I_t}{I_{t-1}}
+1-S_t-S'_t\frac{\zeta_{I,t}\mu_{z^{\ast},t}\Upsilon I_t}{I_{t-1}}
 \right]
 +\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S'_{t+1}}{\mu_{z^*,t+1}\Upsilon}
-\left(\frac{\zeta_{I,t+1}\mu_{z^*,t+1}\Upsilon I_{t+1}}{I_t}\right)^2
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S'_{t+1}}{\mu_{z^{\ast},t+1}\Upsilon}
+\left(\frac{\zeta_{I,t+1}\mu_{z^{\ast},t+1}\Upsilon I_{t+1}}{I_t}\right)^2
 \right].
 $$
 
@@ -202,11 +202,11 @@ $$
 - **(F14) Wage reset recursion** (`needs_review`; implementation cross-check Eqn 8):
 
 $$
-w_t^*=
+w_t^{\ast}=
 \left[
 (1-\xi_w)A_{w,t}^{\lambda_w}
 +\xi_w\left(\frac{\tilde{\pi}_{w,t}}{\pi_{w,t}}
-\mu_{z^*}^{1-\iota_\mu}\mu_{z^*,t}^{\iota_\mu}w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}
+\mu_{z^{\ast}}^{1-\iota_\mu}\mu_{z^{\ast},t}^{\iota_\mu}w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}
 \right]^{(1-\lambda_w)/\lambda_w},
 $$
 
@@ -215,18 +215,18 @@ where $A_{w,t}$ is the standard Calvo wage adjustment term implied by the wage a
 - **(F15) Wage auxiliary recursion $F_w$** (`needs_review`; implementation cross-check Eqn 5):
 
 $$
-F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\frac{1-\tau^l}{\lambda_w}
+F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{1-\tau^l}{\lambda_w}
 +\beta\xi_wE_t\left[\mathcal I^F_{w,t+1}F_{w,t+1}\right].
 $$
 
 - **(F16) Wage auxiliary recursion $K_w$** (`needs_review`; implementation cross-check Eqn 6):
 
 $$
-K_{w,t}=\zeta_{c,t}\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}
+K_{w,t}=\zeta_{c,t}\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}
 +\beta\xi_wE_t\left[\mathcal I^K_{w,t+1}K_{w,t+1}\right].
 $$
 
-The indexation kernels $\mathcal I^F_{w,t+1}$ and $\mathcal I^K_{w,t+1}$ depend on wage inflation, target inflation, and $\mu_{z^*,t+1}$; exact normalization remains `needs_review`.
+The indexation kernels $\mathcal I^F_{w,t+1}$ and $\mathcal I^K_{w,t+1}$ depend on wage inflation, target inflation, and $\mu_{z^{\ast},t+1}$; exact normalization remains `needs_review`.
 
 ## 4. Market Clearing & Identities
 
@@ -234,7 +234,7 @@ The indexation kernels $\mathcal I^F_{w,t+1}$ and $\mathcal I^K_{w,t+1}$ depend 
 
 $$
 Y_{z,t}=g_t+C_t+\frac{I_t}{\mu_{\Upsilon,t}}
-+\tau_t^{oil}a(u_t)\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}.
++\tau_t^{oil}a(u_t)\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}.
 $$
 
 - **(F18) Final-output accounting identity** (`needs_review`; implementation cross-check auxiliary `y`):
@@ -248,19 +248,19 @@ $$
 $$
 gdp\_obs_t=
 \frac{C_t+I_t/\mu_{\Upsilon,t}+g_t}{C_{t-1}+I_{t-1}/\mu_{\Upsilon,t-1}+g_{t-1}}
-\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F20) Consumption growth observable identity** (`needs_review`; implementation cross-check observation equation):
 
 $$
-consumption\_obs_t=\frac{C_t}{C_{t-1}}\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+consumption\_obs_t=\frac{C_t}{C_{t-1}}\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F21) Investment growth observable identity** (`needs_review`; implementation cross-check observation equation):
 
 $$
-investment\_obs_t=\frac{I_t}{I_{t-1}}\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+investment\_obs_t=\frac{I_t}{I_{t-1}}\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F22) Relative investment price observable identity** (`needs_review`; implementation cross-check observation equation):
@@ -285,7 +285,7 @@ $$
 =\rho_p\log\left(\frac{R^e_{t-1}}{R^e}\right)
 +\frac{1-\rho_p}{R^e}\left[
 \alpha_\pi\pi\log\left(\frac{\pi_{t+1}}{\pi_t^{target}}\right)
-+\frac{\alpha_{\Delta y}}{4}\mu_{z^*}\log(gdp\_obs_t)
++\frac{\alpha_{\Delta y}}{4}\mu_{z^{\ast}}\log(gdp\_obs_t)
 \right].
 $$
 
@@ -316,13 +316,13 @@ $$
 - **(F29) Persistent growth shock**:
 
 $$
-\log(\mu_{z^*,t}/\mu_{z^*})=\rho_{\mu_z}\log(\mu_{z^*,t-1}/\mu_{z^*})+e_{\mu_z,t}.
+\log(\mu_{z^{\ast},t}/\mu_{z^{\ast}})=\rho_{\mu_z}\log(\mu_{z^{\ast},t-1}/\mu_{z^{\ast}})+e_{\mu_z,t}.
 $$
 
 - **(F30) Inflation target shock**:
 
 $$
-\log(\pi_t^{target}/\pi^{target})=\rho_{\pi^*}\log(\pi_{t-1}^{target}/\pi^{target})+e_{\pi^*,t}.
+\log(\pi_t^{target}/\pi^{target})=\rho_{\pi^{\ast}}\log(\pi_{t-1}^{target}/\pi^{target})+e_{\pi^{\ast},t}.
 $$
 
 - **(F31) Consumption preference shock**:
@@ -344,15 +344,15 @@ The risk shock $\sigma_t$, equity shock $\gamma_t$, credit-spread observable, cr
 The source fixes steady-state growth and calibration targets rather than providing a full hand-solvable `steady_state_model` in the article body. This first-pass entry records the source-backed order:
 
 1. Set normalized shocks at their means:
-   $\epsilon=1$, $\mu_\Upsilon=1$, $\zeta_c=1$, $\zeta_I=1$, $\lambda_f=1.2$, $\pi^{target}=\pi=1.006010795406775$, and $\mu_{z^*}=1.004124413586981$.
+   $\epsilon=1$, $\mu_\Upsilon=1$, $\zeta_c=1$, $\zeta_I=1$, $\lambda_f=1.2$, $\pi^{target}=\pi=1.006010795406775$, and $\mu_{z^{\ast}}=1.004124413586981$.
 2. Fix calibrated parameters:
    $\beta=0.998704208591811$, $\delta=0.025$, $\alpha=0.4$, $\lambda_w=1.05$, $\tau^c=0.047$, $\tau^l=0.241$, $\tau^k=0.32$, $\psi_L=0.7705$.
 3. Normalize utilization and capital price:
-   $u=1$, $q=1$, $p^*=1$, $w^*=1$.
+   $u=1$, $q=1$, $p^{\ast}=1$, $w^{\ast}=1$.
 4. Use the bond Euler equation and inflation target to pin down the steady-state nominal net risk-free rate $R^e$.
 5. Use utilization, rental-rate, marginal-cost, production, and zero-profit fixed-cost conditions to solve $r^k$, $s$, $\bar k$, $H$, $Y_z$, and $\phi$.
 6. Use capital accumulation with $S=0$ and $S'=0$ at the steady state to solve investment:
-   $$I=\left[1-\frac{1-\delta}{\mu_{z^*}\Upsilon}\right]\bar k.$$
+   $$I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.$$
 7. Set government spending so that $g/(C+I)=\eta_g/(1-\eta_g)$, equivalently $g/Y=0.20$ in the calibrated steady state.
 8. Use the resource constraint and consumption FOC to determine $C$, $\lambda_z$, and the wage block auxiliary values $F_w,K_w,F_p,K_p$.
 
@@ -360,7 +360,7 @@ Implementation cross-check steady-state values include $C=1.72001$, $I=1.28368$,
 
 ## 7. Timing & Form Conventions
 
-- $\bar k_t$ is end-of-period raw capital. Production in period $t$ uses $\bar k_{t-1}$ scaled by $\mu_{z^*,t}\Upsilon$ and adjusted by utilization $u_t$.
+- $\bar k_t$ is end-of-period raw capital. Production in period $t$ uses $\bar k_{t-1}$ scaled by $\mu_{z^{\ast},t}\Upsilon$ and adjusted by utilization $u_t$.
 - The no-financial-frictions model uses a household capital Euler equation for $R^k_{t+1}$; it does not include entrepreneurial leverage, default cutoff, credit spread, or net-worth dynamics.
 - Price and wage setting are Calvo with indexation to lagged inflation and the inflation target; wage indexation also uses steady-state and current growth terms.
 - The model is solved as a first-order approximation around a stationary scaled nonlinear equilibrium. Observation equations report growth rates and level deviations consistent with the data transformations.
@@ -380,11 +380,11 @@ Implementation cross-check steady-state values include $C=1.72001$, $I=1.28368$,
 | Endogenous | `Re`, $R_t^e$ | Risk-free policy/bond rate | (F9), (F24) |
 | Endogenous | `pi`, $\pi_t$ | Inflation | (F1)-(F3), (F24) |
 | Endogenous | `pitarget`, $\pi_t^{target}$ | Inflation target | (F30) |
-| Endogenous | `pstar`, $p_t^*$ | Reset-price relative price | (F1) |
+| Endogenous | `pstar`, $p_t^{\ast}$ | Reset-price relative price | (F1) |
 | Endogenous | `Fp`, $F_{p,t}$ | Price-setting auxiliary | (F2) |
 | Endogenous | `s`, $s_t$ | Marginal cost | (F7) |
 | Endogenous | `h`, $H_t$ | Hours / homogeneous labor | (F4), (F15)-(F16) |
-| Endogenous | `wstar`, $w_t^*$ | Reset wage | (F14) |
+| Endogenous | `wstar`, $w_t^{\ast}$ | Reset wage | (F14) |
 | Endogenous | `wtilde`, $\tilde w_t$ | Scaled real wage | (F7), wage block |
 | Endogenous | `Fw`, $F_{w,t}$ | Wage-setting auxiliary | (F15) |
 | Endogenous | `g`, $g_t$ | Government demand | (F26) |
@@ -392,7 +392,7 @@ Implementation cross-check steady-state values include $C=1.72001$, $I=1.28368$,
 | Endogenous | `epsil`, $\epsilon_t$ | Transitory technology level | (F25) |
 | Endogenous | `lambdaf`, $\lambda_{f,t}$ | Price markup shock | (F27) |
 | Endogenous | `muup`, $\mu_{\Upsilon,t}$ | Investment-specific technology | (F28) |
-| Endogenous | `muzstar`, $\mu_{z^*,t}$ | Stationary growth factor | (F29) |
+| Endogenous | `muzstar`, $\mu_{z^{\ast},t}$ | Stationary growth factor | (F29) |
 | Endogenous | `zetac`, $\zeta_{c,t}$ | Consumption preference shifter | (F31) |
 | Endogenous | `zetai`, $\zeta_{I,t}$ | Marginal efficiency of investment | (F32) |
 | Endogenous | `*_obs` | Measurement equations for observables | (F19)-(F23) |

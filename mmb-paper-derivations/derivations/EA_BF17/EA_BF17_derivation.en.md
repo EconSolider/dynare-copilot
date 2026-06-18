@@ -154,7 +154,7 @@ $$
 Because the implemented model is log-linear, steady-state deviations are zero after subtracting deterministic means or trends:
 
 $$
-\bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^*=\bar r-r^*=\overline{ygap}=0.
+\bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^{\ast}=\bar r-r^{\ast}=\overline{ygap}=0.
 $$
 
 The implementation cross-check sets stationary constants separately:

@@ -10,7 +10,7 @@ Provenance: `NK_GM05`, Galí and Monacelli (2005), "Monetary policy and exchange
 - **Source focus**: The paper derives the household/firms model and then uses the log-linear canonical system for policy-regime experiments. The MMB implementation cross-check uses the log-linear `model(linear)` representation.
 - **Agents and blocks**: Representative household, domestic differentiated-good firms, the rest of the world as exogenous to the small economy, and a monetary authority choosing either strict domestic inflation targeting, a domestic-inflation Taylor rule, a CPI-inflation Taylor rule, or an exchange-rate peg.
 - **Form**: Log-linear. Lower-case variables are log deviations or log levels around a symmetric zero-inflation steady state. The MMB example uses `model(linear)`.
-- **Main exogenous drivers**: Domestic productivity $a_t$ and world output $y_t^*$.
+- **Main exogenous drivers**: Domestic productivity $a_t$ and world output $y_t^{\ast}$.
 
 ## 2. Optimization Problems
 
@@ -85,20 +85,20 @@ $$
 - **(F4) International risk sharing**:
 
 $$
-c_t=c_t^*+\frac{1}{\sigma}q_t
-=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t
+=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F5) Uncovered interest parity**:
 
 $$
-r_t-r_t^*=E_t\{\Delta e_{t+1}\}.
+r_t-r_t^{\ast}=E_t\{\Delta e_{t+1}\}.
 $$
 
 - **(F6) Terms-of-trade interest-rate relation**:
 
 $$
-s_t=(r_t^*-E_t\{\pi_{t+1}^*\})-(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
+s_t=(r_t^{\ast}-E_t\{\pi_{t+1}^{\ast}\})-(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
 $$
 
 - **(F7) Aggregate production**:
@@ -124,14 +124,14 @@ $$
 - **(F10) Marginal cost as a function of domestic output**:
 
 $$
-mc_t=-\nu+(\sigma_{\alpha}+\varphi)y_t+(\sigma-\sigma_{\alpha})y_t^*
+mc_t=-\nu+(\sigma_{\alpha}+\varphi)y_t+(\sigma-\sigma_{\alpha})y_t^{\ast}
 -(1+\varphi)a_t.
 $$
 
 - **(F11) Natural output**:
 
 $$
-\overline y_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline y_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 \quad
 \Gamma=\frac{1+\varphi}{\sigma_{\alpha}+\varphi},
 \quad
@@ -163,7 +163,7 @@ $$
 
 $$
 \overline{rr}_t=\rho-\sigma_{\alpha}\Gamma(1-\rho_a)a_t
-+\alpha\sigma_{\alpha}(\Theta+\Psi)E_t\{\Delta y_{t+1}^*\}.
++\alpha\sigma_{\alpha}(\Theta+\Psi)E_t\{\Delta y_{t+1}^{\ast}\}.
 $$
 
 - **(F16) Strict domestic inflation targeting / optimal special case**:
@@ -201,7 +201,7 @@ $$
 - **(F21) Terms of trade definition**:
 
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F22) Effective real exchange rate**:
@@ -221,13 +221,13 @@ $$
 - **(F24) World goods-market clearing**:
 
 $$
-y_t^*=c_t^*.
+y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F25) Output and terms-of-trade relation**:
 
 $$
-y_t=y_t^*+\frac{1}{\sigma_{\alpha}}s_t,
+y_t=y_t^{\ast}+\frac{1}{\sigma_{\alpha}}s_t,
 \qquad
 \sigma_{\alpha}=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
@@ -274,7 +274,7 @@ $$
 - **(F32) World output**:
 
 $$
-y_t^*=\rho_y y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_y y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 The calibration section estimates $\rho_a=0.66$, $\rho_y=0.86$, standard deviations $0.0071$ and $0.0078$, and innovation correlation $0.3$. The MMB example uses shocks `a_` and `ystar_`.
@@ -285,7 +285,7 @@ The derivation is log-linear around a symmetric perfect-foresight steady state. 
 
 1. $A=1$ for the symmetric foreign economies; domestic $A=1$ in the symmetric baseline.
 2. Purchasing power parity holds and $S=1$, so $s=0$ and $q=0$.
-3. Domestic and foreign output coincide, $Y=Y^*$, in the symmetric case.
+3. Domestic and foreign output coincide, $Y=Y^{\ast}$, in the symmetric case.
 4. Zero inflation implies $\pi_H=\pi=0$ and constant domestic and CPI price levels.
 5. The riskless gross real return is pinned down by $\beta$, with $\rho=\beta^{-1}-1$ in the log-linear notation used by the paper.
 6. In the special optimal-policy calibration, $\sigma=\eta=\gamma=1$ and the subsidy satisfies $(1-\tau)(1-\alpha)=1-1/\varepsilon$, making the flexible-price allocation efficient.
@@ -298,7 +298,7 @@ The source gives an Appendix A steady-state argument for uniqueness of the terms
 - Variables are dated at period $t$ and are forward-looking through expectations $E_t\{\cdot\}$.
 - The model contains no capital stock, so there is no capital-in-production timing convention.
 - Domestic price inflation is $\pi_{H,t}=p_{H,t}-p_{H,t-1}$; CPI inflation is $\pi_t=p_t-p_{t-1}$.
-- The terms of trade are $s_t=p_{F,t}-p_{H,t}=e_t+p_t^*-p_{H,t}$, where a higher $s_t$ is a depreciation of the home terms of trade in the paper's convention.
+- The terms of trade are $s_t=p_{F,t}-p_{H,t}=e_t+p_t^{\ast}-p_{H,t}$, where a higher $s_t$ is a depreciation of the home terms of trade in the paper's convention.
 - The MMB example fixes the policy regime to DIT (`pih = 0`) and comments out DITR, CITR, and PEG alternatives. It also sets foreign inflation to zero and omits the UIP equation from the active model block.
 - Runtime validation was not performed; equation-count/BK checks are deferred.
 
@@ -322,10 +322,10 @@ The source gives an Appendix A steady-state argument for uniqueness of the terms
 | Endogenous | $p_t$ / `p` | CPI price level | (F19) |
 | Endogenous | $p_{H,t}$ / `ph` | Domestic price level | (F19), (F21) |
 | Endogenous | $a_t$ / `a` | Domestic productivity | (F31) |
-| Endogenous | $y_t^*$ / `ystar` | World output | (F32) |
-| Endogenous | $\pi_t^*$ / `pistar` | World inflation | MMB sets zero |
+| Endogenous | $y_t^{\ast}$ / `ystar` | World output | (F32) |
+| Endogenous | $\pi_t^{\ast}$ / `pistar` | World inflation | MMB sets zero |
 | Exogenous | $\varepsilon_t^a$ / `a_` | Domestic productivity innovation | (F31) |
-| Exogenous | $\varepsilon_t^*$ / `ystar_` | World-output innovation | (F32) |
+| Exogenous | $\varepsilon_t^{\ast}$ / `ystar_` | World-output innovation | (F32) |
 | Parameter | $\beta$ / `beta` | Discount factor | (F2), (F9), (F13) |
 | Parameter | $\sigma$ / `sigma` | Consumption risk aversion / inverse intertemporal elasticity | (F3), (F4), (F23) |
 | Parameter | $\varphi$ / `varphi` or `tau` in MMB code | Inverse Frisch elasticity | (F1), (F10), (F11) |

@@ -224,7 +224,7 @@ $$
 
 - **(F25) Flexible-economy government budget constraint**:
 $$
-b_{f,t}=R_*\left(\frac{b_{f,t-1}}{\pi_*}+g_t-t_{f,t}\right).
+b_{f,t}=R_\ast\left(\frac{b_{f,t-1}}{\pi_\ast}+g_t-t_{f,t}\right).
 $$
 
 - **(F26) Flexible-economy fiscal rule**:
@@ -251,7 +251,7 @@ $$
 
 - **(F30) Sticky-economy government budget constraint**:
 $$
-b_t=R_*\left(\frac{b_{t-1}}{\pi_*}+g_t-t_t\right).
+b_t=R_\ast\left(\frac{b_{t-1}}{\pi_\ast}+g_t-t_t\right).
 $$
 
 - **(F31) Sticky-economy fiscal rule**:
@@ -353,7 +353,7 @@ The MMB implementation computes the nonzero steady-state ratios and constants be
 
 1. Set quarterly steady inflation and trend growth:
 $$
-\pi_* = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
+\pi_\ast = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
 \gamma = 1+\frac{\bar{\gamma}^{obs}}{100}.
 $$
 
@@ -365,7 +365,7 @@ $$
 
 3. Compute steady nominal and rental returns:
 $$
-R_*=\frac{\pi_*}{\beta\gamma^{-\sigma_c}},\qquad
+R_\ast=\frac{\pi_\ast}{\beta\gamma^{-\sigma_c}},\qquad
 \bar{r}^k=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
 $$
 

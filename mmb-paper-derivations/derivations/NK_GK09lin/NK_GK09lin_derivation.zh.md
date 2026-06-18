@@ -74,9 +74,9 @@ $$
 零售商重新包装中间品，并面临带指数化的 Calvo 定价：
 
 $$
-\max_{P_t^*} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
+\max_{P_t^{\ast}} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}\prod_{k=1}^i(1+\pi_{t+k-1})^{\gamma_p}
+\frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^i(1+\pi_{t+k-1})^{\gamma_p}
 - P_{m,t+i}
 \right]Y_{f,t+i}.
 $$
@@ -240,7 +240,7 @@ $$
 $$
 E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
+\frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -\mu P_{m,t+i}
 \right]Y_{f,t+i}=0.
 $$
@@ -248,7 +248,7 @@ $$
 - **(F26) 价格指数运动方程**：
 
 $$
-P_t=\left[(1-\gamma)(P_t^*)^{1-\varepsilon}
+P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma\left(\Pi_{t-1}^{\gamma_p}P_{t-1}\right)^{1-\varepsilon}\right]^{1/(1-\varepsilon)}.
 $$
 
@@ -285,7 +285,7 @@ $$
 - **(F31) 利率规则**：
 
 $$
-i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^*)\right]
+i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})\right]
 +\rho i_{t-1}+\varepsilon_t.
 $$
 
@@ -366,7 +366,7 @@ $$
 | Endogenous | \(P_{m,t}\), `pm`, `pmn`, `mc` | 相对价格 / 边际成本 | (F19), (F20), (F25) |
 | Endogenous | \(\pi_t\), `pi` | 通胀 | (F26), (F30), (F31) |
 | Endogenous | \(i_t\), `rn` | 净名义政策利率 | (F31) |
-| Endogenous | \(P_t^*\), `pistar` | 最优重置价格 / 重置通胀 | (F25), (F26) |
+| Endogenous | \(P_t^{\ast}\), `pistar` | 最优重置价格 / 重置通胀 | (F25), (F26) |
 | Endogenous | `f`, `f1`, `d` | 实现中的 Calvo 辅助变量和价格分散 | (F25), (F26) |
 | Exogenous | `e_rn` | 货币政策冲击 | (F31) |
 | Exogenous | `e_a` | 技术创新 | (F33) |

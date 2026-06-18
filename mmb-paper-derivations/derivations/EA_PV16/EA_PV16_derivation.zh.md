@@ -30,13 +30,13 @@ $$
 +\frac{P_t^N B_t^{L,H}}{P_t}
 \left[1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2\right]
 +\frac{B_t^S}{(1+i_t)P_t}
-+\frac{e_t B_t^*}{(1+i_t^*)P_t} \\
-&+\frac{\gamma_f}{2}\left(\frac{e_t(B_t^*-\bar B^*)}{P_t}\right)^2
++\frac{e_t B_t^{\ast}}{(1+i_t^{\ast})P_t} \\
+&+\frac{\gamma_f}{2}\left(\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}\right)^2
 -\frac{TR_t}{P_t}
 -\frac{cB_{t-1}^{L,H}}{P_t}
 -\frac{\delta_b P_t^N B_{t-1}^{L,H}}{P_t}
 -\frac{B_{t-1}^S}{P_t}
--\frac{e_tB_{t-1}^*}{P_t} \\
+-\frac{e_tB_{t-1}^{\ast}}{P_t} \\
 &-\frac{(1-t_t^w)W_tN_t^r}{P_t}
 -\left(i_{t-1}^k-(i_{t-1}^k-\delta_k)t_{t-1}^k-\varphi_{t-1}\right)
 \frac{P_t^C}{P_t}K_{t-1}
@@ -44,11 +44,11 @@ $$
 \end{aligned}
 $$
 
-跨境扩展加入外国长期债券持有 \(B_t^{L,H*}\)，以及围绕本国/外国长期债券组合的二次调整成本：
+跨境扩展加入外国长期债券持有 \(B_t^{L,H\ast}\)，以及围绕本国/外国长期债券组合的二次调整成本：
 
 $$
-\frac{e_t P_t^{N*}B_t^{L,H*}}{P_t}
-\left[1+\frac{\gamma_b^*}{2}\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)^2\right].
+\frac{e_t P_t^{N\ast}B_t^{L,H\ast}}{P_t}
+\left[1+\frac{\gamma_b^{\ast}}{2}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)^2\right].
 $$
 
 ### 流动性约束家庭、企业和政府
@@ -81,6 +81,7 @@ $$
 1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2
 -\gamma_b\kappa\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)\frac{B_t^S}{B_t^{L,H}}
 \right]\right\}.
+$$
 
 - **(F3) 外国短期债券欧拉方程**：
 
@@ -88,8 +89,8 @@ $$
 \beta E_t\left(\frac{\lambda_{t+1}}{\lambda_t}\right)
 =E_t\left(\frac{e_t}{e_{t+1}}\frac{P_{t+1}}{P_t}\right)
 \left[
-\frac{1}{1+i_t^*}
-+\gamma_f\frac{e_t(B_t^*-\bar B^*)}{P_t}
+\frac{1}{1+i_t^{\ast}}
++\gamma_f\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}
 \right].
 $$
 
@@ -120,8 +121,8 @@ $$
 +\gamma_b\kappa P_t^N\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)
 =E_t\left(\frac{e_t}{e_{t+1}}\right)
 \left[
-\frac{1}{1+i_t^*}
-+\gamma_f\frac{e_t(B_t^*-\bar B^*)}{P_t}
+\frac{1}{1+i_t^{\ast}}
++\gamma_f\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}
 \right].
 $$
 
@@ -153,8 +154,8 @@ $$
 \left[
 1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2
 -\gamma_b\kappa\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)\frac{B_t^S}{B_t^{L,H}}
-+\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)
-\frac{e_tP_t^{N*}}{P_t^N}
++\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)
+\frac{e_tP_t^{N\ast}}{P_t^N}
 \right].
 $$
 
@@ -162,11 +163,11 @@ $$
 
 $$
 \beta E_t\left(\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}\frac{e_{t+1}}{e_t}\right)
-=E_t\left(\frac{P_t^{N*}}{\delta_b^*P_{t+1}^{N*}+c^*}\right)
+=E_t\left(\frac{P_t^{N\ast}}{\delta_b^{\ast}P_{t+1}^{N\ast}+c^{\ast}}\right)
 \left[
-1+\frac{\gamma_b^*}{2}\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)^2
--\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)
-\frac{B_t^{L,H}}{B_t^{L,H*}}
+1+\frac{\gamma_b^{\ast}}{2}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)^2
+-\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)
+\frac{B_t^{L,H}}{B_t^{L,H\ast}}
 \right].
 $$
 
@@ -236,9 +237,9 @@ $$
 
 $$
 \begin{aligned}
-e_t(B_t^*+P_t^{N*}B_t^{L,H*})-P_t^N B_t^{L,F}
-={}&(1+i_{t-1}^*)e_tB_{t-1}^*
-+(c^*+\delta_b^*P_t^{N*})e_tB_{t-1}^{L,H*} \\
+e_t(B_t^{\ast}+P_t^{N\ast}B_t^{L,H\ast})-P_t^N B_t^{L,F}
+={}&(1+i_{t-1}^{\ast})e_tB_{t-1}^{\ast}
++(c^{\ast}+\delta_b^{\ast}P_t^{N\ast})e_tB_{t-1}^{L,H\ast} \\
 &-(c+\delta_bP_t^N)e_tB_{t-1}^{L,F}
 +P_t^X X_t-P_t^M M_t.
 \end{aligned}
@@ -289,14 +290,14 @@ $$
 在跨境扩展中，来源报告：
 
 $$
-\gamma_b=0.0001,\qquad \gamma_b^*=0.0013.
+\gamma_b=0.0001,\qquad \gamma_b^{\ast}=0.0013.
 $$
 
 实现交叉检查的稳态值包括 `EA_deltabl=0.975`、`EA_gamb=0.0005`、`EA_sbl=0.5`、`EA_kbl=1`、`EA_pbl=1`、`EA_bl=EA_bs=1.20388124742112` 和 `EA_blcb=0`。这些值只作为实现交叉检查记录。完整 QUEST 模型的稳态推导未包含在论文 Markdown 中，仍为 `needs_review`。
 
 ## 7. 时序与形式约定
 
-长期债券支付递减的息票流。第 \(t\) 期新发行债券价格为 \(P_t^N\)；第 \(t-1\) 期发行的债券价格为 \(P_t^O\)，并近似等于 \(\delta_bP_t^N\)。中央银行持有量 \(B_t^{L,CB}\)、私人长期债券持有量 \(B_t^{L,H}\)、短期债券 \(B_t^S\)、资本 \(K_t\) 和外国资产 \(B_t^*\) 都是存量变量。在家庭预算中，第 \(t\) 期购买作为当期资金用途出现，而继承存量及息票/折旧本金支付带有 \(t-1\) 滞后。
+长期债券支付递减的息票流。第 \(t\) 期新发行债券价格为 \(P_t^N\)；第 \(t-1\) 期发行的债券价格为 \(P_t^O\)，并近似等于 \(\delta_bP_t^N\)。中央银行持有量 \(B_t^{L,CB}\)、私人长期债券持有量 \(B_t^{L,H}\)、短期债券 \(B_t^S\)、资本 \(K_t\) 和外国资产 \(B_t^{\ast}\) 都是存量变量。在家庭预算中，第 \(t\) 期购买作为当期资金用途出现，而继承存量及息票/折旧本金支付带有 \(t-1\) 滞后。
 
 模型是非线性的。实现交叉检查使用水平值、比率、通胀率和一阶差分辅助变量；它不是手工对数线性化的 `model(linear)` 文件。论文模拟中的 QE 是与 ECB 2015 年公告相匹配的外生资产负债表路径，并在 ZLB 区间冻结短期利率。
 
@@ -313,7 +314,7 @@ $$
 | 内生变量 | \(B_t^{L,CB}\), `EA_blcb` | 中央银行持有的长期债券 | (F17), (F19), (F22) |
 | 内生变量 | \(P_t^N\), `EA_pbl` | 长期债券价格 | (F12)-(F14), (F18), (F19) |
 | 内生变量 | \(M_t\), `ea_m` | 流动性 / 货币 | (F19) |
-| 内生变量 | \(B_t^*\), `ea_bw` | 外国短期资产头寸 | (F3), (F21) |
+| 内生变量 | \(B_t^{\ast}\), `ea_bw` | 外国短期资产头寸 | (F3), (F21) |
 | 内生变量 | \(e_t\), `ea_e` | 名义汇率 | (F3), (F7), (F10), (F11), (F21) |
 | 内生变量 | \(K_t\), `ea_k` | 私人资本存量 | (F4), (F8) |
 | 内生变量 | \(i_t\), `ea_inom` | 短期名义利率 | (F1), (F7)-(F9), (F23) |
@@ -322,10 +323,10 @@ $$
 | 外生冲击 | \(\varepsilon_t^m\), `ea_eps_m` | 货币政策冲击 | (F23) |
 | 参数 | \(\beta,\theta\), `ea_theta` | 贴现 / 实现中的贴现参数 | (F1)-(F4), (F10), (F11) |
 | 参数 | \(\gamma_b\), `EA_gamb` | 国内长短债组合调整成本 | (F1), (F2), (F7)-(F10) |
-| 参数 | \(\gamma_b^*\) | 本国/外国长期债券调整成本 | (F10), (F11) |
+| 参数 | \(\gamma_b^{\ast}\) | 本国/外国长期债券调整成本 | (F10), (F11) |
 | 参数 | \(\gamma_f\) | 外国资产头寸调整成本 | (F3), (F7) |
-| 参数 | \(\kappa,\kappa^*\), `EA_kbl` | 目标资产比率参数 | (F1), (F2), (F7), (F10), (F11) |
-| 参数 | \(\delta_b,\delta_b^*\), `EA_deltabl` | 长期债券息票折旧率 | (F12)-(F14), (F18), (F21) |
+| 参数 | \(\kappa,\kappa^{\ast}\), `EA_kbl` | 目标资产比率参数 | (F1), (F2), (F7), (F10), (F11) |
+| 参数 | \(\delta_b,\delta_b^{\ast}\), `EA_deltabl` | 长期债券息票折旧率 | (F12)-(F14), (F18), (F21) |
 | 参数 | \(s^L\), `EA_sbl` | 政府债务中的长期债券份额 | (F16) |
 | 参数 | \(\rho_{qe},\tau_{qe}\), `EA_rhoqe`, `EA_tqe` | QE 购买持续性和响应 | (F22) |
 

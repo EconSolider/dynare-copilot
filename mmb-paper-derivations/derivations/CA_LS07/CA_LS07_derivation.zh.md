@@ -32,7 +32,7 @@ y_t = E_t y_{t+1}
 - \left[\tau + \alpha(2-\alpha)(1-\tau)\right]\left(R_t - E_t\pi_{t+1}\right)
 - \rho_z z_t
 - \alpha\left[\tau + \alpha(2-\alpha)(1-\tau)\right]E_t\Delta q_{t+1}
-+ \alpha(2-\alpha)\frac{1-\tau}{\tau}E_t\Delta y^*_{t+1}.
++ \alpha(2-\alpha)\frac{1-\tau}{\tau}E_t\Delta y^{\ast}_{t+1}.
 $$
 
 - **(F2) 开放经济 Phillips 曲线**，来自最优价格设定：
@@ -59,19 +59,19 @@ $$
 - **(F4) 无名义刚性时的潜在产出**：
 
 $$
-\bar y_t = -\alpha(2-\alpha)\frac{1-\tau}{\tau}y^*_t.
+\bar y_t = -\alpha(2-\alpha)\frac{1-\tau}{\tau}y^{\ast}_t.
 $$
 
 - **(F5) CPI / 相对 PPP 恒等式**：
 
 $$
-\pi_t = \Delta e_t + (1-\alpha)\Delta q_t + \pi^*_t.
+\pi_t = \Delta e_t + (1-\alpha)\Delta q_t + \pi^{\ast}_t.
 $$
 
 - **(F6) 实现中使用的世界产出增长恒等式**：
 
 $$
-\Delta y^*_t = y^*_t-y^*_{t-1}.
+\Delta y^{\ast}_t = y^{\ast}_t-y^{\ast}_{t-1}.
 $$
 
 - **(F7) 年化 CPI 通胀报告恒等式**：
@@ -89,7 +89,7 @@ $$
 论文中的完全结构性贸易条件市场出清关系为：
 
 $$
-\left[\tau+\alpha(2-\alpha)(1-\tau)\right]\Delta q_t = \Delta y^*_t-\Delta y_t.
+\left[\tau+\alpha(2-\alpha)(1-\tau)\right]\Delta q_t = \Delta y^{\ast}_t-\Delta y_t.
 $$
 
 估计和复制模型不把该式作为均衡条件；它被外生过程 (F9) 替代。这个排除既由来源说明，也由实现交叉检查确认。
@@ -111,13 +111,13 @@ $$
 - **(F11) 世界产出冲击**：
 
 $$
-y^*_t = \rho_{y^*}y^*_{t-1}+\varepsilon^{y^*}_t.
+y^{\ast}_t = \rho_{y^{\ast}}y^{\ast}_{t-1}+\varepsilon^{y^{\ast}}_t.
 $$
 
 - **(F12) 世界通胀冲击**：
 
 $$
-\pi^*_t = \rho_{\pi^*}\pi^*_{t-1}+\varepsilon^{\pi^*}_t.
+\pi^{\ast}_t = \rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+\varepsilon^{\pi^{\ast}}_t.
 $$
 
 政策冲击 `\varepsilon^R_t` 进入 (F3) 的规则。实现交叉检查中的五个创新名称为 `epsR`、`epsq`、`epsy_star`、`epspi_star` 和 `epsz`。
@@ -127,7 +127,7 @@ $$
 因为 `CA_LS07` 是 `model(linear)` 实现，模型变量是围绕稳态的偏离或增长率偏离。因此 Dynare 稳态中所有内生变量为零：
 
 $$
-y=R=\pi=z=\Delta q=\Delta y^*=y^*=\bar y=\Delta e=\pi^*=\mathrm{inflationq}=\mathrm{interest}=0.
+y=R=\pi=z=\Delta q=\Delta y^{\ast}=y^{\ast}=\bar y=\Delta e=\pi^{\ast}=\mathrm{inflationq}=\mathrm{interest}=0.
 $$
 
 贴现因子由年化稳态实际利率参数化：
@@ -158,11 +158,11 @@ $$
 | $\pi_t$ | `pi` | CPI 通胀偏离 | (F2), (F5) |
 | $z_t$ | `z` | 技术增长过程 | (F10) |
 | $\Delta q_t$ | `deltaq` | 贸易条件增长 | (F9) |
-| $\Delta y^*_t$ | `deltay_star` | 世界产出增长 | (F6) |
+| $\Delta y^{\ast}_t$ | `deltay_star` | 世界产出增长 | (F6) |
 | $\bar y_t$ | `y_bar` | 无名义刚性时的潜在产出 | (F4) |
-| $y^*_t$ | `y_star` | 世界产出 | (F11) |
+| $y^{\ast}_t$ | `y_star` | 世界产出 | (F11) |
 | $\Delta e_t$ | `deltae` | 名义汇率贬值 | (F5) |
-| $\pi^*_t$ | `pi_star` | 世界通胀 / PPP 偏离冲击 | (F12) |
+| $\pi^{\ast}_t$ | `pi_star` | 世界通胀 / PPP 偏离冲击 | (F12) |
 | $\mathrm{inflationq}_t$ | `inflationq` | 年化 CPI 通胀报告变量 | (F7) |
 | $\mathrm{interest}_t$ | `interest` | 年化名义利率报告变量 | (F8) |
 
@@ -172,8 +172,8 @@ $$
 |---|---|---|
 | $\varepsilon^R_t$ | `epsR` | 货币政策冲击 |
 | $\varepsilon_{q,t}$ | `epsq` | 贸易条件增长冲击 |
-| $\varepsilon^{y^*}_t$ | `epsy_star` | 世界产出冲击 |
-| $\varepsilon^{\pi^*}_t$ | `epspi_star` | 世界通胀冲击 |
+| $\varepsilon^{y^{\ast}}_t$ | `epsy_star` | 世界产出冲击 |
+| $\varepsilon^{\pi^{\ast}}_t$ | `epspi_star` | 世界通胀冲击 |
 | $\varepsilon^z_t$ | `epsz` | 技术增长冲击 |
 
 ### 参数
@@ -191,5 +191,5 @@ $$
 | $\psi_2$ | `psi2` | 对产出的政策反应；0.23 |
 | $\psi_3$ | `psi3` | 对名义贬值的政策反应；0.14 |
 | $\rho_q$ | `rhoq` | 贸易条件增长持久性；0.31 |
-| $\rho_{y^*}$ | `rhoy_star` | 世界产出持久性；0.97 |
-| $\rho_{\pi^*}$ | `rhopi_star` | 世界通胀持久性；0.46 |
+| $\rho_{y^{\ast}}$ | `rhoy_star` | 世界产出持久性；0.97 |
+| $\rho_{\pi^{\ast}}$ | `rhopi_star` | 世界通胀持久性；0.46 |

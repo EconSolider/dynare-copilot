@@ -68,8 +68,8 @@ $$
 \frac{R_t}{R} =
 \left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
-\left(\frac{\bar\pi_{4,t}}{(\pi_t^*)^4}\right)^{\varphi_\pi/4}
-\left(\frac{Y_t}{Y_t^*}\right)^{\varphi_Y}
+\left(\frac{\bar\pi_{4,t}}{(\pi_t^{\ast})^4}\right)^{\varphi_\pi/4}
+\left(\frac{Y_t}{Y_t^{\ast}}\right)^{\varphi_Y}
 \right]^{1-\rho_R}
 e^{\varepsilon_{R,t}}.
 $$
@@ -92,7 +92,7 @@ $$
 - **(F2) Flexible-price real wage gap normalization**:
 
 $$
-w^*_t=0.
+w^{\ast}_t=0.
 $$
 
 - **(F3) Marginal utility and output with habit**:
@@ -109,12 +109,12 @@ $$
 - **(F4) Flexible-price counterpart of marginal utility and output**:
 
 $$
-(g-h\beta)(g-h)\lambda^*_t
+(g-h\beta)(g-h)\lambda^{\ast}_t
 -(g-h\beta\rho_b)(g-h)b_t
 -(\beta h g\rho_z-hg)z_t
-(g^2+\beta h^2)y^*_t
--\beta hg\,y^*_{t+1}
-=gh\,y^*_{t-1}.
+(g^2+\beta h^2)y^{\ast}_t
+-\beta hg\,y^{\ast}_{t+1}
+=gh\,y^{\ast}_{t-1}.
 $$
 
 - **(F5) Euler equation**:
@@ -126,7 +126,7 @@ $$
 - **(F6) Flexible-price Euler equation**:
 
 $$
-\lambda^*_t-R^*_t-\lambda^*_{t+1}+\rho_z z_t=0.
+\lambda^{\ast}_t-R^{\ast}_t-\lambda^{\ast}_{t+1}+\rho_z z_t=0.
 $$
 
 - **(F7) Labor supply / real wage relation**:
@@ -138,7 +138,7 @@ $$
 - **(F8) Flexible-price labor supply / real wage relation**:
 
 $$
-w^*_t-b_t-\nu y^*_t+\lambda^*_t=0.
+w^{\ast}_t-b_t-\nu y^{\ast}_t+\lambda^{\ast}_t=0.
 $$
 
 ## 4. Market Clearing & Identities
@@ -147,9 +147,9 @@ $$
 
 $$
 R_t-(1-\rho_R)\frac{\varphi_\pi}{4}p_t
-+(1-\rho_R)\varphi_\pi\pi^*_t
++(1-\rho_R)\varphi_\pi\pi^{\ast}_t
 -(1-\rho_R)\varphi_y y_t
-+(1-\rho_R)\varphi_y y^*_t
++(1-\rho_R)\varphi_y y^{\ast}_t
 =\rho_R R_{t-1}
 +(1-\rho_R)\frac{\varphi_\pi}{4}(p_{t-1}+p_{t-2}+p_{t-3})
 +\varepsilon_{R,t}.
@@ -158,7 +158,7 @@ $$
 - **(F10) Inflation gap definition**:
 
 $$
-\text{inflgap}_t=p_t-\pi^*_t.
+\text{inflgap}_t=p_t-\pi^{\ast}_t.
 $$
 
 - **(F11) Ex-post real interest rate definition**:
@@ -170,7 +170,7 @@ $$
 - **(F12) Output gap definition**:
 
 $$
-\text{outpgap}_t=y_t-y^*_t.
+\text{outpgap}_t=y_t-y^{\ast}_t.
 $$
 
 ## 5. Exogenous Processes
@@ -190,10 +190,10 @@ $$
 - **(F15) Inflation-target process**:
 
 $$
-\pi^*_t=\rho_{\pi^*}\pi^*_{t-1}+\varepsilon_{\pi^*,t}.
+\pi^{\ast}_t=\rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+\varepsilon_{\pi^{\ast},t}.
 $$
 
-Paper OCR note: equation (21) in the MinerU Markdown repeats $\log\pi_t^*$ on both sides; the intended persistent target process uses the lagged target, matching the Rep-MMB implementation and the surrounding paper discussion. This normalization is marked `needs_review`.
+Paper OCR note: equation (21) in the MinerU Markdown repeats $\log\pi_t^{\ast}$ on both sides; the intended persistent target process uses the lagged target, matching the Rep-MMB implementation and the surrounding paper discussion. This normalization is marked `needs_review`.
 
 - **(F16) Preference shock**:
 
@@ -206,8 +206,8 @@ $$
 Because the archive target is the Rep-MMB linear implementation, the steady state of all model variables in the `model(linear)` block is zero:
 
 $$
-\bar p=\bar y=\bar\lambda=\bar w=\bar R=\bar z=\bar\lambda^p=\bar\pi^*
-=\bar b=\bar y^*=\bar\lambda^*=\bar w^*=\bar R^*
+\bar p=\bar y=\bar\lambda=\bar w=\bar R=\bar z=\bar\lambda^p=\bar\pi^{\ast}
+=\bar b=\bar y^{\ast}=\bar\lambda^{\ast}=\bar w^{\ast}=\bar R^{\ast}
 =\overline{\text{inflgap}}=\overline{\text{realR}}=\overline{\text{outpgap}}=0.
 $$
 
@@ -227,7 +227,7 @@ The MMB calibration uses `gamma100/100` for $\gamma$ and `pss100/100` for the qu
 - **Timing**: forward-looking variables appear as $p_{t+1}$, $y_{t+1}$, $\lambda_{t+1}$, and flexible-price counterparts. The policy rule contains $R_{t-1}$ and four-quarter inflation terms $p_t,p_{t-1},p_{t-2},p_{t-3}$.
 - **Stock variables**: the paper's DSGE section has no capital stock. Bonds enter the household budget, but the log-linear MMB implementation has no explicit bond-state equation.
 - **Trend scaling**: because technology has a unit root, consumption, output, and real wages are scaled by technology before log-linearization.
-- **Inflation target**: the target is highly persistent, with $\rho_{\pi^*}=0.995$ in the baseline.
+- **Inflation target**: the target is highly persistent, with $\rho_{\pi^{\ast}}=0.995$ in the baseline.
 - **Runtime validation**: not performed; Dynare was not run.
 
 ## 8. Variable & Parameter Reference Table
@@ -253,12 +253,12 @@ The MMB calibration uses `gamma100/100` for $\gamma$ and `pss100/100` for the qu
 | Exogenous shock | `Rs` | Monetary-policy innovation $\varepsilon_{R,t}$ | (F9) |
 | Exogenous shock | `zs` | Technology-growth innovation $\varepsilon_{z,t}$ | (F13) |
 | Exogenous shock | `lambddaps` | Desired-markup innovation $\varepsilon_{\lambda^p,t}$ | (F14) |
-| Exogenous shock | `pits` | Inflation-target innovation $\varepsilon_{\pi^*,t}$ | (F15) |
+| Exogenous shock | `pits` | Inflation-target innovation $\varepsilon_{\pi^{\ast},t}$ | (F15) |
 | Exogenous shock | `bs` | Preference innovation $\varepsilon_{b,t}$ | (F16) |
 | Parameter | `niu` / $\nu$ | Inverse Frisch elasticity; calibrated at 2 | - |
 | Parameter | `lambddapss` / $\bar\lambda^p$ | Steady-state markup parameter; calibrated at 0.1 | - |
 | Parameter | `iotap` / $\iota_p$ | Price-indexation coefficient in implemented Phillips curve; default 0 | - |
-| Parameter | `rhopit` / $\rho_{\pi^*}$ | Inflation-target persistence; baseline 0.995 | (F15) |
+| Parameter | `rhopit` / $\rho_{\pi^{\ast}}$ | Inflation-target persistence; baseline 0.995 | (F15) |
 | Parameter | `gamma100`, `gamma` | Technology growth estimate and quarterly value | - |
 | Parameter | `pss100` | Steady-state inflation estimate | - |
 | Parameter | `Fbeta`, `betta` | Discount-rate estimate and discount factor | (F1), (F3)-(F6) |

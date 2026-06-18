@@ -381,7 +381,7 @@ $$
 $$
 R_t-1=(1-\rho_i)\left[
 R-1+\psi_{\pi}(\log\Pi_t-\log\Pi)
-+\psi_y(\log GDP_t-\log GDP_t^*)
++\psi_y(\log GDP_t-\log GDP_t^{\ast})
 \right]
 +\rho_i(R_{t-1}-1)+e_t^i.
 $$
@@ -428,7 +428,7 @@ $$
 **(F45) Price-dispersion recursion**
 
 $$
-S_t=(1-\xi^P)\left(\frac{\Pi_t}{\Pi_t^*}\right)^{\varepsilon}
+S_t=(1-\xi^P)\left(\frac{\Pi_t}{\Pi_t^{\ast}}\right)^{\varepsilon}
 +\xi^P\left(\frac{\Pi_t}{\Pi_{t-1}^{\gamma_P}\Pi^{1-\gamma_P}}\right)^{\varepsilon}S_{t-1}.
 $$
 

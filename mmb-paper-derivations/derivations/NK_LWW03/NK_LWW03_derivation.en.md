@@ -40,7 +40,7 @@ Current inflation depends on expected next-period inflation, the output gap, and
 - **(F2) Expectational IS curve / aggregate demand**:
 
 $$
-y_t = E_t y_{t+1} - \sigma\left(i_t - E_t \pi_{t+1} - r_t^*\right).
+y_t = E_t y_{t+1} - \sigma\left(i_t - E_t \pi_{t+1} - r_t^{\ast}\right).
 $$
 
 The output gap falls when the short nominal rate exceeds expected inflation plus the natural real interest rate.
@@ -50,8 +50,8 @@ The output gap falls when the short nominal rate exceeds expected inflation plus
 $$
 i_t =
 \rho i_{t-1}
-+ (1-\rho)\left(r^* + E_t\tilde{\pi}_{t+\theta}\right)
-+ \alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
++ (1-\rho)\left(r^{\ast} + E_t\tilde{\pi}_{t+\theta}\right)
++ \alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 + \beta E_t y_{t+\kappa}.
 $$
 
@@ -60,7 +60,7 @@ Here `theta` is the inflation forecast horizon and `kappa` is the output-gap for
 - **(F4) Source benchmark forecast-based rule**:
 
 $$
-i_t = 1.0\,i_{t-1} + 0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right) + 0.4\,y_t.
+i_t = 1.0\,i_{t-1} + 0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right) + 0.4\,y_t.
 $$
 
 This is the paper's benchmark rule for robust performance across the five models. `implementation_cross_check`: the MMB `NK_LWW03_rep.mod` does not implement this exact forecast-based rule; it instead uses the simple current-inflation rule in (F5).
@@ -96,7 +96,7 @@ $$
 - **(F8) Natural real-rate process**:
 
 $$
-r_t^* = \rho_r r_{t-1}^* + \eta^r_t.
+r_t^{\ast} = \rho_r r_{t-1}^{\ast} + \eta^r_t.
 $$
 
 The paper calibrates the autocorrelation of `rstar` to 0.35 and the innovation standard deviation to 3.72 in annualized percentage-point units. The `.mod` cross-check uses `rhorstar = 0.35`.
@@ -115,7 +115,7 @@ Because the model is linearized in gap / deviation form, the deterministic stead
 
 $$
 \bar{y}=0,\qquad \bar{\pi}=0,\qquad \bar{i}=0,\qquad \overline{\Delta i}=0,
-\qquad \bar{r}^*=0,\qquad \bar{\varepsilon}=0.
+\qquad \bar{r}^{\ast}=0,\qquad \bar{\varepsilon}=0.
 $$
 
 For the MMB implementation cross-check:
@@ -145,7 +145,7 @@ Runtime validation was not performed.
 | Endogenous | `pdot`, $\pi_t$ | Inflation rate | (F1), (F2), (F3), (F4), (F5) |
 | Endogenous | `rff`, $i_t$ | Short-term nominal policy rate / federal funds rate | (F2), (F3), (F4), (F5) |
 | Endogenous | `drff`, $\Delta i_t$ | Change in the policy rate | (F7) |
-| Endogenous / exogenous state | `rstar`, $r_t^*$ | Natural real interest rate | (F2), (F8) |
+| Endogenous / exogenous state | `rstar`, $r_t^{\ast}$ | Natural real interest rate | (F2), (F8) |
 | Endogenous / exogenous state | `pdotsh`, $\varepsilon_t$ | Inflation / aggregate-supply disturbance | (F1), (F9) |
 | Exogenous innovation | `rstar_`, $\eta^r_t$ | Natural-rate innovation | (F8) |
 | Exogenous innovation | `pdotsh_`, $\eta^\pi_t$ | Inflation-shock innovation | (F9) |

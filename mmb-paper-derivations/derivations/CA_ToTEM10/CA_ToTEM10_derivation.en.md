@@ -50,9 +50,9 @@ $$
 Households have market power in labour supply because labour skills are imperfect substitutes. Nominal wage contracts are staggered and last about six quarters on average:
 
 $$
-\max_{W^*_t} E_t\sum_{j=0}^{\infty}(\beta \theta_w)^j
+\max_{W^{\ast}_t} E_t\sum_{j=0}^{\infty}(\beta \theta_w)^j
 \Lambda_{t,t+j}\left[
-W^*_t N_{t+j|t}-P^c_{t+j} MRS^N_{t+j}N_{t+j|t}
+W^{\ast}_t N_{t+j|t}-P^c_{t+j} MRS^N_{t+j}N_{t+j|t}
 \right] .
 $$
 

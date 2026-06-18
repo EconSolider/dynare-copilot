@@ -181,20 +181,20 @@ $$
 - **(F6) 工资递归的定价侧**：
 
 $$
-f^1_t=\frac{\eta-1}{\eta}(w_t^*)^{1-\eta}\lambda_t w_t^\eta l^d_t
+f^1_t=\frac{\eta-1}{\eta}(w_t^{\ast})^{1-\eta}\lambda_t w_t^\eta l^d_t
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{1-\eta}
-\left(\frac{w^*_{t+1}}{w^*_t}\right)^{\eta-1}f^1_{t+1}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\right)^{\eta-1}f^1_{t+1}
 \right].
 $$
 
 - **(F7) 工资递归的劳动负效用侧**：
 
 $$
-f^2_t=\psi d_t\varphi_t\left(\frac{w_t}{w_t^*}\right)^{\eta(1+\vartheta)}(l^d_t)^{1+\vartheta}
+f^2_t=\psi d_t\varphi_t\left(\frac{w_t}{w_t^{\ast}}\right)^{\eta(1+\vartheta)}(l^d_t)^{1+\vartheta}
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{-\eta(1+\vartheta)}
-\left(\frac{w^*_{t+1}}{w^*_t}\right)^{\eta(1+\vartheta)}f^2_{t+1}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\right)^{\eta(1+\vartheta)}f^2_{t+1}
 \right].
 $$
 
@@ -231,10 +231,10 @@ $$
 - **(F12) Calvo 价格递归 2**：
 
 $$
-g^2_t=\lambda_t\Pi^*_t y^d_t+
+g^2_t=\lambda_t\Pi^{\ast}_t y^d_t+
 \beta\theta_p E_t\left[
 \left(\frac{\Pi_t^\chi}{\Pi_{t+1}}\right)^{1-\varepsilon}
-\left(\frac{\Pi^*_t}{\Pi^*_{t+1}}\right)g^2_{t+1}
+\left(\frac{\Pi^{\ast}_t}{\Pi^{\ast}_{t+1}}\right)g^2_{t+1}
 \right].
 $$
 
@@ -270,7 +270,7 @@ $$
 $$
 w_t^{1-\eta}=
 \theta_w\left(\frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{1-\eta}w_{t-1}^{1-\eta}
-+(1-\theta_w)(w_t^*)^{1-\eta}.
++(1-\theta_w)(w_t^{\ast})^{1-\eta}.
 $$
 
 - **(F18) 最终品对中间品的需求**：
@@ -289,7 +289,7 @@ $$
 
 $$
 1=\theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{1-\varepsilon}
-+(1-\theta_p)(\Pi^*_t)^{1-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{1-\varepsilon}.
 $$
 
 - **(F21) Taylor 规则**：
@@ -328,7 +328,7 @@ $$
 $$
 v^p_t=
 \theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{-\varepsilon}v^p_{t-1}
-+(1-\theta_p)(\Pi^*_t)^{-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{-\varepsilon}.
 $$
 
 - **(F26) 工资离散项**：
@@ -336,7 +336,7 @@ $$
 $$
 v^w_t=
 \theta_w\left(\frac{w_{t-1}}{w_t}\frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{-\eta}v^w_{t-1}
-+(1-\theta_w)(\Pi^{*w}_t)^{-\eta}.
++(1-\theta_w)(\Pi^{\astw}_t)^{-\eta}.
 $$
 
 - **(F27) 复合随机趋势**（`needs_review`：OCR 在正文中包含一个重复的指数片段；公式按相邻展示方程和 `.mod` 交叉检查重构）：
@@ -452,13 +452,13 @@ $$
 | 内生 | `k`, $k_t$ | 资本存量 | (F14), (F23) |
 | 内生 | `f`, $f^1_t/f^2_t$ | 工资递归辅助变量 | (F6)-(F8) |
 | 内生 | `w`, $w_t$ | 实际工资 | (F16), (F17) |
-| 内生 | `wstar`, $w^*_t$ | 重置实际工资 | (F6)-(F8), (F17) |
-| 内生 | `PIstarw`, $\Pi^{*w}_t$ | 最优工资通胀 / 重置工资比 | (F7), (F26) |
+| 内生 | `wstar`, $w^{\ast}_t$ | 重置实际工资 | (F6)-(F8), (F17) |
+| 内生 | `PIstarw`, $\Pi^{\astw}_t$ | 最优工资通胀 / 重置工资比 | (F7), (F26) |
 | 内生 | `yd`, $y^d_t$ | 总需求 / 需求产出 | (F11), (F12), (F18), (F21), (F22) |
 | 内生 | `mc`, $mc_t$ | 实际边际成本 | (F10), (F11) |
 | 内生 | `g1`, $g^1_t$ | 价格设定递归 1 | (F11), (F13) |
 | 内生 | `g2`, $g^2_t$ | 价格设定递归 2 | (F12), (F13) |
-| 内生 | `PIstar`, $\Pi^*_t$ | 重置价格通胀 | (F12), (F20), (F25) |
+| 内生 | `PIstar`, $\Pi^{\ast}_t$ | 重置价格通胀 | (F12), (F20), (F25) |
 | 内生 | `vp`, $v^p_t$ | 价格离散项 | (F23), (F25) |
 | 内生 | `vw`, $v^w_t$ | 工资离散项 | (F24), (F26) |
 | 内生 | `ld`, $l^d_t$ | 总劳动需求 / 聚合劳动 | (F15), (F24) |

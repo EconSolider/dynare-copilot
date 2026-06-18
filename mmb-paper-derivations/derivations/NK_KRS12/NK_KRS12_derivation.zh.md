@@ -316,7 +316,7 @@ $$
 r_t=\gamma_r r_{t-1}
 +(1-\gamma_r)\left[
 \gamma_\pi \Delta p_{t-1}^C
-+\gamma_y(y_{t-1}-y_{t-1}^*)
++\gamma_y(y_{t-1}-y_{t-1}^{\ast})
 +\gamma_b(b_{t-1}^B-b_{t-2}^B+\Delta p_{t-1}^C)
 \right].
 $$
@@ -345,7 +345,7 @@ $$
 
 $$
 \bar q=\bar c=\bar i=\bar \mu=\bar d=\bar r=\bar b=\bar p^C=\bar p^D
-=\bar y=\bar y^*=\bar a^C=\bar \xi^D=\bar v=0.
+=\bar y=\bar y^{\ast}=\bar a^C=\bar \xi^D=\bar v=0.
 $$
 
 线性方程中的水平稳态常数由校准给定，而不是在本归档条目中求解。实现交叉检查给出：
@@ -371,7 +371,7 @@ $$
 - 借款者债务 $b_t^B$ 是当期选择的存量；借款者预算成本包含滞后债务和滞后贷款利率。
 - 政策规则对滞后 CPI 通胀、滞后产出缺口和滞后名义信贷增长作出反应。
 - 用于实现交叉检查的 `.mod` 文件是 augmented Taylor plus macroprudential regime。论文中的其他政策制度令 $\gamma_b=0$ 和/或 $\tau=0$，或优化这些系数。
-- 潜在产出 $y_t^*$ 在论文中定义为价格灵活、无金融约束且主体同质时的 GDP 动态。MMB 实现提供 `yCstar`、`yDstar` 和 `dstar` 的辅助规律；这些属于实现细节和交叉检查证据，而不是论文侧推导方程。
+- 潜在产出 $y_t^{\ast}$ 在论文中定义为价格灵活、无金融约束且主体同质时的 GDP 动态。MMB 实现提供 `yCstar`、`yDstar` 和 `dstar` 的辅助规律；这些属于实现细节和交叉检查证据，而不是论文侧推导方程。
 
 ## 8. Variable & Parameter Reference Table
 
@@ -406,9 +406,9 @@ $$
 | `v` | $v_t$ | 金融冲击状态 | (F29) |
 | `lCtot`, `lDtot` | $l_t^{C,tot},l_t^{D,tot}$ | 分部门总劳动 | (F22), (F23) |
 | `y` | $y_t$ | 总 GDP | (F26) |
-| `ystar` | $y_t^*$ | 潜在产出 | policy-rule input |
+| `ystar` | $y_t^{\ast}$ | 潜在产出 | policy-rule input |
 | `yC`, `yD` | $y_t^C,y_t^D$ | 分部门产出 | (F14), (F15), (F18), (F19) |
-| `yCstar`, `yDstar`, `dstar` | $y_t^{C,*},y_t^{D,*},d_t^*$ | 潜在产出辅助变量 | implementation cross-check |
+| `yCstar`, `yDstar`, `dstar` | $y_t^{C,\ast},y_t^{D,\ast},d_t^{\ast}$ | 潜在产出辅助变量 | implementation cross-check |
 | `deltabB` | $\Delta b_t^B$ | 名义信贷增长 | (F25) |
 
 ### 外生冲击

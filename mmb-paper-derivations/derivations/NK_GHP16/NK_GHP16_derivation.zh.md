@@ -183,7 +183,7 @@ $$
 论文给出 Calvo 利润问题，但没有给出紧凑的递归实现。MMB 实现使用辅助变量：
 
 $$
-\frac{P_t^*}{P_t}=\frac{x_{1,t}}{x_{2,t}}.
+\frac{P_t^{\ast}}{P_t}=\frac{x_{1,t}}{x_{2,t}}.
 $$
 
 **(F16) Calvo 分子递归，implementation_cross_check，needs_review**
@@ -202,13 +202,13 @@ $$
 **(F18) 价格指数关系**
 
 $$
-1=\theta\Pi_t^{\varepsilon-1}+(1-\theta)\left(\frac{P_t^*}{P_t}\right)^{1-\varepsilon}.
+1=\theta\Pi_t^{\varepsilon-1}+(1-\theta)\left(\frac{P_t^{\ast}}{P_t}\right)^{1-\varepsilon}.
 $$
 
 **(F19) 价格离散度**
 
 $$
-\Delta_t=(1-\theta)\left(\frac{P_t^*}{P_t}\right)^{-\varepsilon}+\theta\Pi_t^{\varepsilon}\Delta_{t-1}.
+\Delta_t=(1-\theta)\left(\frac{P_t^{\ast}}{P_t}\right)^{-\varepsilon}+\theta\Pi_t^{\varepsilon}\Delta_{t-1}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -352,7 +352,7 @@ $$
 | 内生 | $R_t$ / `r` | 论文记号中扣除 1 的名义政策利率 | (F11), (F25) |
 | 内生 | $\lambda_t$ / `lambda` | 市场消费边际效用 | (F5), (F10), (F11) |
 | 内生 | $\Pi_t$ / `infl` | 总通胀 | (F11), (F18), (F19), (F25) |
-| 内生 | $P_t^*/P_t$ / `inflstar` | 最优重设相对价格 | (F15), (F18), (F19) |
+| 内生 | $P_t^{\ast}/P_t$ / `inflstar` | 最优重设相对价格 | (F15), (F18), (F19) |
 | 内生 | $x_{1,t}$ / `x_1` | Calvo 分子辅助变量 | (F16) |
 | 内生 | $x_{2,t}$ / `x_2` | Calvo 分母辅助变量 | (F17) |
 | 内生 | $RMC_t$ / `RMC` | 实际边际成本 | (F14), (F16) |

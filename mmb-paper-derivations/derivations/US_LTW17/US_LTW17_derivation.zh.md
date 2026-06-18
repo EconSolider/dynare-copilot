@@ -65,7 +65,7 @@ $$
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\left(C_t^{*S}(j)-\theta \tilde{C}_{t-1}^{*S}\right)
+\log\left(C_t^{\astS}(j)-\theta \tilde{C}_{t-1}^{\astS}\right)
 -\frac{(L_t^S(j))^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -73,7 +73,7 @@ $$
 其中
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
 储蓄家庭选择消费、名义私人债券、长期政府债券、投资、资本利用率和资本积累，并受到名义预算约束、资本运动方程和利用成本约束。来源 Markdown 给出了预算约束和资本积累方程；下方若干 FOC 标记为 `needs_review`，因为本地来源没有提供清晰的附录推导。
@@ -126,9 +126,9 @@ $$
 
 $$
 \lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a
-+\frac{e^\gamma}{e^\gamma-\theta}c_t^*
++\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast}
 -u_t^b+\frac{\bar{\tau}^C}{1+\bar{\tau}^C}\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}.
 $$
 
 - **(F6) 长期实际利率**：
@@ -147,7 +147,7 @@ $$
 - **(F8) 进入效用的消费**：
 
 $$
-c_t^*-\frac{\bar{C}^S}{\bar{C}^S+\alpha_G\bar{G}}c_t^S
+c_t^{\ast}-\frac{\bar{C}^S}{\bar{C}^S+\alpha_G\bar{G}}c_t^S
 -\frac{\alpha_G\bar{G}}{\bar{C}^S+\alpha_G\bar{G}}g_t=0.
 $$
 
@@ -496,7 +496,7 @@ $$
 | 内生 | `kbar` / \(\bar{k}_t\) | 物质资本 | (F14) |
 | 内生 | `lambda` / \(\lambda_t\) | 财富边际效用 | (F5), (F9) |
 | 内生 | `Pb` / \(P_t^B\) | 长期债券价格 | (F19), (F20) |
-| 内生 | `cstar` / \(c_t^*\) | 进入效用的消费 | (F8) |
+| 内生 | `cstar` / \(c_t^{\ast}\) | 进入效用的消费 | (F8) |
 | 内生 | `piL`, `rL` | 长期通胀和实际利率 | (F6), (F7) |
 | 内生 | `S`, `rb`, `Tk`, `Tl`, `Tc` | 盈余、债券回报、税收收入 | (F23)-(F27) |
 | 可观测 | `cobs`, `iobs`, `gcobs`, `wobs`, `bobs`, `Robs`, `Piobs`, `Lobs` | 测量方程 | (F28)-(F35) |

@@ -19,7 +19,7 @@ The paper is not a micro-founded DSGE model with household, firm, capital, or go
 The policy authority is represented by simple interest-rate feedback rules rather than by a solved Ramsey or discretionary optimization problem. The general activist rule family is:
 
 $$
-R_t-R_t^*=\gamma(\pi_t^a-\pi^*)+\delta y_t.
+R_t-R_t^{\ast}=\gamma(\pi_t^a-\pi^{\ast})+\delta y_t.
 $$
 
 The information problem enters because the policymaker observes real-time measures $\tilde{\pi}_t^a$ and $\tilde{y}_t$, not final-data values. The paper evaluates the macroeconomic performance implied by those rule choices; it does not derive private-agent FOCs.
@@ -53,13 +53,13 @@ The OCR source prints the second coefficient superscript in (9) as $\nu$ rather 
 - **(F3) Neutral nominal rate identity**:
 
 $$
-R_t^* = r^*+\pi_t^a.
+R_t^{\ast} = r^{\ast}+\pi_t^a.
 $$
 
 - **(F4) General activist policy rule**:
 
 $$
-R_t-R_t^*=\gamma(\pi_t^a-\pi^*)+\delta y_t.
+R_t-R_t^{\ast}=\gamma(\pi_t^a-\pi^{\ast})+\delta y_t.
 $$
 
 - **(F5) Taylor rule**:
@@ -85,17 +85,17 @@ $$
 - **(F8) Real-time implementable policy rule**:
 
 $$
-R_t-\tilde{R}_t^*
-=\gamma(\tilde{\pi}_t^a-\pi^*)+\delta\tilde{y}_t,
+R_t-\tilde{R}_t^{\ast}
+=\gamma(\tilde{\pi}_t^a-\pi^{\ast})+\delta\tilde{y}_t,
 \qquad
-\tilde{R}_t^* \equiv r^*+\tilde{\pi}_t^a.
+\tilde{R}_t^{\ast} \equiv r^{\ast}+\tilde{\pi}_t^a.
 $$
 
 - **(F9) Equivalent true-data expression of the real-time rule**:
 
 $$
-R_t-R_t^*
-=\gamma(\pi_t^a-\pi^*)+\delta y_t
+R_t-R_t^{\ast}
+=\gamma(\pi_t^a-\pi^{\ast})+\delta y_t
 -\big((1+\gamma)x_t+\delta z_t\big).
 $$
 
@@ -190,7 +190,7 @@ $$
 \bar{f}=2+\bar{\pi}^a+0.5(\bar{\pi}^a-2)+0.5\bar{y}.
 $$
 
-With the paper's benchmark target values $r^*=2$ and $\pi^*=2$, the Taylor-rule steady policy rate is $\bar{R}=4$ when $\bar{y}=0$ and $\bar{\pi}^a=2$. In the Rep-MMB implementation, `model(linear)` is used even though constants appear in the output and policy equations; the exact implementation steady-state convention is therefore `needs_review` until checked against the intended MMB preprocessing/runtime behavior.
+With the paper's benchmark target values $r^{\ast}=2$ and $\pi^{\ast}=2$, the Taylor-rule steady policy rate is $\bar{R}=4$ when $\bar{y}=0$ and $\bar{\pi}^a=2$. In the Rep-MMB implementation, `model(linear)` is used even though constants appear in the output and policy equations; the exact implementation steady-state convention is therefore `needs_review` until checked against the intended MMB preprocessing/runtime behavior.
 
 Runtime validation status: not performed; Dynare was not run.
 
@@ -210,8 +210,8 @@ Runtime validation status: not performed; Dynare was not run.
 | Endogenous | $y_t$ / `y` | Output gap | (F1) |
 | Endogenous | $\pi_t$ / `pi` | Quarterly inflation | (F2) |
 | Endogenous | $f_t$ or $R_t$ / `f` | Federal funds rate / policy instrument | (F5), implementation selected rule |
-| Policy concept | $R_t^*$ | Neutral nominal interest rate | (F3) |
-| Policy concept | $\tilde{R}_t^*$ | Real-time neutral nominal interest rate | (F8) |
+| Policy concept | $R_t^{\ast}$ | Neutral nominal interest rate | (F3) |
+| Policy concept | $\tilde{R}_t^{\ast}$ | Real-time neutral nominal interest rate | (F8) |
 | Observed real-time variable | $\tilde{\pi}_t^a$ | Policymaker's real-time annual inflation measure | (F7) |
 | Observed real-time variable | $\tilde{y}_t$ | Policymaker's real-time output-gap measure | (F7) |
 | Measurement error | $x_t$ | Annual-inflation measurement noise | (F7), (F9) |
@@ -227,5 +227,5 @@ Runtime validation status: not performed; Dynare was not run.
 | Parameter | $a_i^y$ / `ay0`-`ay4` | Output-gap coefficients in inflation equation | - |
 | Policy coefficient | $\gamma$ | Inflation response in general rule | - |
 | Policy coefficient | $\delta$ | Output-gap response in general rule | - |
-| Policy target | $\pi^*$ | Inflation target, `2` in Taylor parameterization | - |
-| Policy parameter | $r^*$ | Natural real rate, `2` in Taylor parameterization | - |
+| Policy target | $\pi^{\ast}$ | Inflation target, `2` in Taylor parameterization | - |
+| Policy parameter | $r^{\ast}$ | Natural real rate, `2` in Taylor parameterization | - |

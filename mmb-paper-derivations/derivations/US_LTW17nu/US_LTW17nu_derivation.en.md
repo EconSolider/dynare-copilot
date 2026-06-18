@@ -60,7 +60,7 @@ Saver household $j$ maximizes:
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\big(C_t^{*S}(j)-\theta \widetilde C_{t-1}^{*S}\big)
+\log\big(C_t^{\astS}(j)-\theta \widetilde C_{t-1}^{\astS}\big)
 -\frac{(L_t^S(j))^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -68,10 +68,10 @@ $$
 with composite consumption:
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
-For `US_LTW17nu`, `implementation_cross_check` sets $\alpha_G=0$, so $C_t^{*S}=C_t^S$. The nominal budget constraint is:
+For `US_LTW17nu`, `implementation_cross_check` sets $\alpha_G=0$, so $C_t^{\astS}=C_t^S$. The nominal budget constraint is:
 
 $$
 \begin{aligned}
@@ -141,9 +141,9 @@ $$
 - **(F6) Saver marginal utility of wealth**:
 
 $$
-\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^*
+\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
 -u_t^b+\frac{\bar\tau^C}{1+\bar\tau^C}\hat\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^{\ast}.
 $$
 
 - **(F7) Long-run real interest rate and bond price**:
@@ -162,7 +162,7 @@ $$
 - **(F9) Consumption in utility, `nu` variant**:
 
 $$
-\hat c_t^*-\hat c_t^S=0,\qquad \alpha_G=0.
+\hat c_t^{\ast}-\hat c_t^S=0,\qquad \alpha_G=0.
 $$
 
 - **(F10) Saver Euler equation**:
@@ -418,7 +418,7 @@ $$
 $$
 
 4. Set real marginal cost $\overline{mc}=1/(1+\eta^p)$ and recover $\bar W$, $\bar K/\bar L$, $\bar Y/\bar L$, $\bar I/\bar L$, and aggregate consumption per labor unit from production, investment, and resource constraints.
-5. For `US_LTW17nu`, set $\alpha_G=0$, $\mu=0`, and $\theta=0.8` from implementation cross-check. Then $C^{*S}=C^S$ in steady state.
+5. For `US_LTW17nu`, set $\alpha_G=0$, $\mu=0`, and $\theta=0.8` from implementation cross-check. Then $C^{\astS}=C^S$ in steady state.
 6. Recover labor from the saver intratemporal condition and scale level variables by $\bar L$.
 7. Compute tax revenues, primary surplus, transfers, debt, and government consumption from the fiscal steady-state ratios.
 

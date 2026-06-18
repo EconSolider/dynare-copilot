@@ -42,12 +42,12 @@ No private-sector FOCs are recoverable from the paper-side Markdown for the full
 - **(F1) Forecast-based policy-rule family**:
 
 $$
-i_t=\rho i_{t-1}+(1-\rho)\left(r^*+E_t\tilde{\pi}_{t+\theta}\right)
-+\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
+i_t=\rho i_{t-1}+(1-\rho)\left(r^{\ast}+E_t\tilde{\pi}_{t+\theta}\right)
++\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 +\beta E_t y_{t+\kappa}.
 $$
 
-Here $i_t$ is the short-term nominal interest rate, $\tilde{\pi}_t$ is the four-quarter average inflation rate, $y_t$ is the output gap, $r^*$ is the unconditional mean short-term real interest rate, and $\pi^*$ is the inflation target.
+Here $i_t$ is the short-term nominal interest rate, $\tilde{\pi}_t$ is the four-quarter average inflation rate, $y_t$ is the output gap, $r^{\ast}$ is the unconditional mean short-term real interest rate, and $\pi^{\ast}$ is the inflation target.
 
 - **(F2) Benchmark estimated federal funds rule**:
 
@@ -80,7 +80,7 @@ $$
 - **(F6) Robust benchmark forecast-based rule**:
 
 $$
-i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right)+0.4\,y_t.
+i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right)+0.4\,y_t.
 $$
 
 This is the paper's simple robust benchmark rule, calibrated to be close to the average-loss optimum for $\lambda=1/3$.
@@ -170,11 +170,11 @@ The paper notes exceptions for term-premium shocks in some financial variables i
 - **(F16) Trend inflation and equilibrium real-rate persistence in the implementation**:
 
 $$
-\pi^*_t=\rho_{\pi^*}\pi^*_{t-1}+(1-\rho_{\pi^*})\bar{\pi}^*_t,\qquad
-r^*_t=\rho_{r^*}r^*_{t-1}+(1-\rho_{r^*})(i_t-\pi_t)+\text{optional gap term}.
+\pi^{\ast}_t=\rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+(1-\rho_{\pi^{\ast}})\bar{\pi}^{\ast}_t,\qquad
+r^{\ast}_t=\rho_{r^{\ast}}r^{\ast}_{t-1}+(1-\rho_{r^{\ast}})(i_t-\pi_t)+\text{optional gap term}.
 $$
 
-This condition is `implementation_cross_check` only. The paper-side benchmark rule uses constant $r^*$ and $\pi^*$ notation, while the `.mod` includes persistent `pitarg`, `ptr`, `rstar`, and `rtr` blocks.
+This condition is `implementation_cross_check` only. The paper-side benchmark rule uses constant $r^{\ast}$ and $\pi^{\ast}$ notation, while the `.mod` includes persistent `pitarg`, `ptr`, `rstar`, and `rtr` blocks.
 
 ## 6. Steady-State Solution
 
@@ -189,19 +189,19 @@ $$
 2. Set gap variables to their baseline values:
 
 $$
-y_t=\Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^*,\qquad i_t=r^*+\pi^*.
+y_t=\Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^{\ast},\qquad i_t=r^{\ast}+\pi^{\ast}.
 $$
 
 3. For the benchmark rule (F2), the intercept and historical-data units imply that the numerical steady state must be checked against the original FRB-US baseline and the paper's annual-rate convention:
 
 $$
-i=(1-0.76)^{-1}\left[-0.28+0.60\pi^*+0.21y+0.97\Delta y\right].
+i=(1-0.76)^{-1}\left[-0.28+0.60\pi^{\ast}+0.21y+0.97\Delta y\right].
 $$
 
-4. For the robust benchmark rule (F6), if $y_t=0$ and $\tilde{\pi}_{t+4}=\pi^*$, the rule preserves the inherited steady nominal interest rate:
+4. For the robust benchmark rule (F6), if $y_t=0$ and $\tilde{\pi}_{t+4}=\pi^{\ast}$, the rule preserves the inherited steady nominal interest rate:
 
 $$
-i_t=i_{t-1}=r^*+\pi^*.
+i_t=i_{t-1}=r^{\ast}+\pi^{\ast}.
 $$
 
 5. For `.mod` implementation variables, use the Rep-MMB calibration and linear model baseline. Exact steady-state constants for all FRB-US internal variables are deferred to a source-level review of the FRB-US documentation and implementation files; no Dynare `steady` check was run.
@@ -226,8 +226,8 @@ $$
 | Endogenous macro variable | $y_t$ / `outputgap`, `xgap2` | Output gap | Paper and implementation | (F1), (F2), (F9), (F10) |
 | Endogenous macro variable | $\Delta y_t$ | Change in output gap | Paper | (F2), (F10) |
 | Endogenous aggregate | $Y_t$ / `output`, `xgdp` | Output / real GDP aggregate | Implementation cross-check | (F12) |
-| Policy target | $\pi^*$ / `pitarg`, `ptr` | Inflation target / trend inflation | Paper and implementation | (F1), (F6), (F16) |
-| Policy baseline | $r^*$ / `rstar`, `rtr` | Unconditional mean short-term real rate | Paper and implementation | (F1), (F16) |
+| Policy target | $\pi^{\ast}$ / `pitarg`, `ptr` | Inflation target / trend inflation | Paper and implementation | (F1), (F6), (F16) |
+| Policy baseline | $r^{\ast}$ / `rstar`, `rtr` | Unconditional mean short-term real rate | Paper and implementation | (F1), (F16) |
 | Expectation object | $E_t\tilde{\pi}_{t+\theta}$ | Inflation forecast used in the policy rule | Paper | (F1), (F11) |
 | Expectation object | $E_t y_{t+\kappa}$ | Output-gap forecast used in the policy rule | Paper | (F1), (F11) |
 | Exogenous shock | $\varepsilon^i_t$ / `interest_` | Monetary-policy innovation | Implementation cross-check | (F13) |

@@ -226,7 +226,7 @@ $$
 
 - **(F30) Private output absorption**:
 $$
-Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{*,tot}+I_{A,t}^{*,tot}).
+Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot}).
 $$
 
 - **(F31) Total GDP definition**:
@@ -266,7 +266,7 @@ $$
 - **(F37) Home current account / net foreign asset identity** (`needs_review`: verify price-deflator convention against PDF before code generation):
 $$
 d_t=\frac{R_{t-1}^{ecb}\exp[-\psi_d(d_{t-1}-\bar d)/Y_{t-1}]}{\pi_{A,t}}d_{t-1}
-+\frac{1-\omega}{\omega}(C_{A,t}^{*,tot}+I_{A,t}^{*,tot})
++\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot})
 -p_{B,t}(C_{B,t}^{tot}+I_{B,t}^{tot}).
 $$
 
@@ -301,9 +301,9 @@ $$
 \left(\frac{R_{t-1}^{ecb}}{\bar R^{ecb}}\right)^{\rho_i}
 \left[
 \left(\frac{\pi_t}{\bar\pi}\right)^{\omega\phi_\pi}
-\left(\frac{\pi_t^*}{\bar\pi^*}\right)^{(1-\omega)\phi_\pi}
+\left(\frac{\pi_t^{\ast}}{\bar\pi^{\ast}}\right)^{(1-\omega)\phi_\pi}
 \left(\frac{Y_t^{tot}}{Y_{t-1}^{tot}}\right)^{\omega\phi_y}
-\left(\frac{Y_t^{*,tot}}{Y_{t-1}^{*,tot}}\right)^{(1-\omega)\phi_y}
+\left(\frac{Y_t^{\ast,tot}}{Y_{t-1}^{\ast,tot}}\right)^{(1-\omega)\phi_y}
 \right]^{1-\rho_i}\exp(\varepsilon_t^i).
 $$
 

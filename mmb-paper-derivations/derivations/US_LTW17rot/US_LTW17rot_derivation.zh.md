@@ -38,7 +38,7 @@ $$MC_t=(1-\alpha)^{\alpha-1}\alpha^{-\alpha}(R_t^k)^\alpha W_t^{1-\alpha}A_t^{-1
 能够重设价格的厂商最大化：
 
 $$E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
-\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^*(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}$$
+\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}$$
 
 (F5) 中利润括号前的加号来自 OCR 文本，但很可能应理解为贴现因子与利润项相乘；需要对照 PDF 复核。
 
@@ -60,11 +60,11 @@ $$W_t(l)=W_{t-1}(l)\big(\pi_{t-1}e^{u^a_{t-1}}\big)^{\chi_w}(\pi e^\gamma)^{1-\c
 
 储蓄者家庭 \(j\) 最大化：
 
-$$E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{*S}(j)-\theta\widetilde C_{t-1}^{*S}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}$$
+$$E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{\astS}(j)-\theta\widetilde C_{t-1}^{\astS}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}$$
 
 进入效用的复合消费为：
 
-$$C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}$$
+$$C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}$$
 
 储蓄者名义预算约束为：
 
@@ -96,8 +96,8 @@ $$P_t(1+\tau_t^C)C_t^N(j)=(1-\tau_t^L)\int_0^1 W_t(l)L_t^N(j,l)\,dl+P_tZ_t^N(j) 
 
 **(F15) 储蓄者财富边际效用，对数线性 implementation_cross_check**：
 
-$$\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^* -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}c_{t-1}^*$$
+$$\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast} -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
+=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}$$
 
 **(F16) 储蓄者欧拉方程，对数线性 implementation_cross_check**：
 
@@ -235,7 +235,7 @@ u_t^p=\rho_pu_{t-1}^p+\epsilon_t^p \tag{(F37)}$$
 | 内生 | `cs`, \(C_t^S\) | 储蓄者消费 | F9-F12, F15-F16 |
 | 内生 | `cn`, \(C_t^N\) | 非储蓄者消费 | F14 |
 | 内生 | `c`, \(C_t\) | 总消费 | F22 |
-| 内生 | `cstar`, \(C_t^*\) | 进入效用的消费 | F10 |
+| 内生 | `cstar`, \(C_t^{\ast}\) | 进入效用的消费 | F10 |
 | 内生 | `R` | 名义利率偏离 | F31 |
 | 内生 | `r` | 实际利率偏离 | F29 |
 | 内生 | `i`, \(I_t\) | 投资 | F12, F19, F23 |

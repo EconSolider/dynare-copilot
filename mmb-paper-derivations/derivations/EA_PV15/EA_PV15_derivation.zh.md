@@ -59,14 +59,14 @@ $$
 
 ### 2.3 设置黏性贷款利率的银行
 
-代表性全国银行体系在 Calvo 黏性下设置差异化企业贷款利率。获得重新定价机会的银行选择 $R_{i,t}^{L*}(b)$：
+代表性全国银行体系在 Calvo 黏性下设置差异化企业贷款利率。获得重新定价机会的银行选择 $R_{i,t}^{L\ast}(b)$：
 
 **(F5) 贷款利率重设问题（`needs_review`）**：
 $$
-\max_{\{R_{i,t}^{L*}(b)\}}
+\max_{\{R_{i,t}^{L\ast}(b)\}}
 E_t\sum_{\tau=0}^{\infty}(\theta_i^L\beta)^\tau
 \frac{\lambda_{i,t+\tau}^{c}}{\lambda_{i,t}^{c}}\eta_{i,t+1+\tau}
-\left[(1-\tau^L)R_{i,t}^{L*}(b)\Xi_{i,t,\tau}^{L}-MC_{i,t+\tau}^{L}\right]
+\left[(1-\tau^L)R_{i,t}^{L\ast}(b)\Xi_{i,t,\tau}^{L}-MC_{i,t+\tau}^{L}\right]
 L_{i,t+1+\tau}(b).
 $$
 
@@ -310,7 +310,7 @@ $$
 
 **(F34) 黏性价格重设条件（`needs_review`）**：
 $$
-P_{i,t}^{*}=
+P_{i,t}^{\ast}=
 \frac{\epsilon_p}{(\epsilon_p-1)(1-\tau^y)}
 \frac{
 E_t\sum_{\tau=0}^{\infty}(\theta_i^p\beta)^\tau
@@ -382,14 +382,14 @@ $$
 $$
 P_{i,t}^{1-\epsilon_p}
 =\theta_i^p(P_{i,t-1}\pi_{i,t-1}^{\xi_i^p})^{1-\epsilon_p}
-+(1-\theta_i^p)(P_{i,t}^{*})^{1-\epsilon_p}.
++(1-\theta_i^p)(P_{i,t}^{\ast})^{1-\epsilon_p}.
 $$
 
 **(F42) 工资指数聚合**：
 $$
 W_{i,t}^{1/(1-\mu_{i,t}^{w})}
 =\theta_i^w\left[W_{i,t-1}(\pi_{i,t-1}^{C})^{\xi_i^w}\right]^{1/(1-\mu_{i,t}^{w})}
-+(1-\theta_i^w)(W_{i,t}^{*})^{1/(1-\mu_{i,t}^{w})}.
++(1-\theta_i^w)(W_{i,t}^{\ast})^{1/(1-\mu_{i,t}^{w})}.
 $$
 
 **(F43) 企业信贷市场出清**：

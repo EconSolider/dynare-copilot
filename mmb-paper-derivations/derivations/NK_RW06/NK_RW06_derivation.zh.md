@@ -122,7 +122,7 @@ $$
 - **(F8) 固定利率潜在产出**：
 
 $$
-\hat{Y}_t^* =
+\hat{Y}_t^{\ast} =
 \frac{(1+\eta)\hat{A}_t-\sigma\hat{\gamma}_t+\hat{\xi}_t}
 {\sigma+\eta}.
 $$
@@ -130,7 +130,7 @@ $$
 - **(F9) 产出缺口定义**：
 
 $$
-x_t \equiv \hat{Y}_t-\hat{Y}_t^*.
+x_t \equiv \hat{Y}_t-\hat{Y}_t^{\ast}.
 $$
 
 - **(F10) 福利缺口关系**：
@@ -138,7 +138,7 @@ $$
 $$
 \hat{Y}_t-\hat{Y}_t^e =
 x_t-\frac{1}{\sigma+\eta}\hat{\gamma}_t,
-\qquad \text{when } z^*=0.
+\qquad \text{when } z^{\ast}=0.
 $$
 
 ## 4. Market Clearing & Identities
@@ -270,11 +270,11 @@ $$
 \right]^{1/(\sigma+\eta)}
 $$
 
-在福利分析中，来源通过补贴将平均效率扭曲设为零，使得 $z^*=0$，并用 (F10) 表示福利缺口。`needs_review`：论文引用一个附录给出二阶福利推导；本地没有 `NK_RW06` 的附录归一化文件。
+在福利分析中，来源通过补贴将平均效率扭曲设为零，使得 $z^{\ast}=0$，并用 (F10) 表示福利缺口。`needs_review`：论文引用一个附录给出二阶福利推导；本地没有 `NK_RW06` 的附录归一化文件。
 
 ## 7. Timing & Form Conventions
 
-- 本归档条目是线性/对数线性的；带帽变量是围绕稳态的偏离，而 `x_t` 是相对于 $\hat{Y}_t^*$ 的产出缺口。
+- 本归档条目是线性/对数线性的；带帽变量是围绕稳态的偏离，而 `x_t` 是相对于 $\hat{Y}_t^{\ast}$ 的产出缺口。
 - 菲利普斯曲线中的名义利率是当期政策利率偏离 $\hat{R}_t$。
 - 通胀通过 $E_t\pi_{t+1}$ 前瞻。
 - IS 方程使用 $E_t x_{t+1}$ 和 $E_t\pi_{t+1}$；复合冲击 `u_t` 按 (F21) 汇总生产率、偏好和财政创新。
@@ -291,7 +291,7 @@ $$
 | Exogenous | $u_t$ / `u` | 复合需求扰动 | (F21)；MMB 中实现为一个外生冲击 |
 | Auxiliary/source concept | $\hat{Y}_t^f$ | 灵活价格产出 | (F6) |
 | Auxiliary/source concept | $\hat{Y}_t^e$ | 有效率产出 | (F7) |
-| Auxiliary/source concept | $\hat{Y}_t^*$ | 固定利率潜在产出 | (F8) |
+| Auxiliary/source concept | $\hat{Y}_t^{\ast}$ | 固定利率潜在产出 | (F8) |
 | Auxiliary/source concept | $\hat{A}_t$ | 生产率冲击 | (F21), (F22) |
 | Auxiliary/source concept | $\hat{\xi}_t$ | 偏好/口味冲击 | (F21) |
 | Auxiliary/source concept | $\hat{\gamma}_t$ | 消费/产出份额，即财政需求份额的反向指标 | (F14), (F21), (F23) |

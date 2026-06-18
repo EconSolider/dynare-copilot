@@ -29,9 +29,9 @@ It chooses intermediate inputs to minimize cost subject to the aggregator.
 In the homogeneous-capital presentation, intermediate firm \(i\) produces with capital services and labor:
 
 $$
-y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^*,
+y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
-z_t^*=\Upsilon_t^{\alpha/(1-\alpha)}z_t.
+z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t.
 $$
 
 Firms rent capital and labor in competitive factor markets and must finance the wage bill in advance at the gross rate \(R_t\). Price setting follows Calvo frictions with indexation for non-reoptimizing prices:
@@ -110,7 +110,7 @@ $$
 Households reoptimize wages with probability \(1-\xi_w\); otherwise:
 
 $$
-W_{j,t}=\pi_{t-1}\mu_{z^*}W_{j,t-1}.
+W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
 $$
 
 ## 3. First-Order Conditions
@@ -119,19 +119,19 @@ The paper states the equilibrium in terms of a linear approximation around the n
 
 - **(F1) Capital Euler equation, sticky-price block, needs_review**:
 $$
-\lambda_{z^*,t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
+\lambda_{z^{\ast},t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
 +\frac{\tilde\rho}{\tilde\rho+1-\delta}\tilde\rho_{t+1}
--\lambda_{z^*,t}-\tilde\mu_t
+-\lambda_{z^{\ast},t}-\tilde\mu_t
 =\mu_{z,t+1}+\frac{1}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F2) Investment Euler equation, sticky-price block, needs_review**:
 $$
--\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
-+\kappa(\mu_{z^*}\mu_\Upsilon)^2(1+\beta)i_t
--\kappa(\mu_{z^*}\mu_\Upsilon)^2i_{t-1}
-=\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2\left(\mu_{z,t+1}+\frac{\mu_{\Upsilon,t+1}}{1-\alpha}\right)
--\kappa(\mu_{z^*}\mu_\Upsilon)^2\left(\mu_{z,t}+\frac{\mu_{\Upsilon,t}}{1-\alpha}\right).
+-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
++\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)i_t
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2i_{t-1}
+=\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\left(\mu_{z,t+1}+\frac{\mu_{\Upsilon,t+1}}{1-\alpha}\right)
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\left(\mu_{z,t}+\frac{\mu_{\Upsilon,t}}{1-\alpha}\right).
 $$
 
 - **(F3) Shadow rental rate on capital, sticky-price block, needs_review**:
@@ -145,7 +145,7 @@ $$
 
 - **(F4) Capital evolution, sticky-price block**:
 $$
-(\mu_{z^*}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^*}\bar k_t
+(\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^{\ast}}\bar k_t
 +(1-\delta)\bar k_{t-1}
 =(1-\delta)\mu_{z,t}+\frac{1-\delta}{1-\alpha}\mu_{\Upsilon,t}.
 $$
@@ -172,11 +172,11 @@ $$
 - **(F8) Consumption Euler equation with habit and liquidity services, needs_review**:
 $$
 \begin{aligned}
-&-\beta b\left(\frac{1}{\mu_{z^*}c-bc}\right)^2\mu_{z^*}c\,c_{t+1}
-+A_c c_t+\lambda_{z^*}(1+\eta+\eta'V)\lambda_{z^*,t}\\
-&-\lambda_{z^*}(2+\sigma_\eta)\eta'V q_t
--\left(\frac{1}{c(1-b/\mu_{z^*})}\right)^2\frac{bc}{\mu_{z^*}}c_{t-1}\\
-&=\beta b\left(\frac{1}{\mu_{z^*}c-bc}\right)^2\mu_{z^*}c
+&-\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c\,c_{t+1}
++A_c c_t+\lambda_{z^{\ast}}(1+\eta+\eta'V)\lambda_{z^{\ast},t}\\
+&-\lambda_{z^{\ast}}(2+\sigma_\eta)\eta'V q_t
+-\left(\frac{1}{c(1-b/\mu_{z^{\ast}})}\right)^2\frac{bc}{\mu_{z^{\ast}}}c_{t-1}\\
+&=\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c
 \left(\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}\right)
 -B_c\left(\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}\right).
 \end{aligned}
@@ -184,14 +184,14 @@ $$
 
 - **(F9) Monetary-base FOC**:
 $$
-\lambda_{z^*,t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^*,t}
+\lambda_{z^{\ast},t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^{\ast},t}
 =\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F10) Wage FOC, needs_review**:
 $$
 \eta_2\tilde w_{t+1}+\eta_5\pi_{t+1}
-+\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^*,t}
++\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^{\ast},t}
 +\eta_0\tilde w_{t-1}+\bar\eta_3\pi_{t-1}
 =-\eta_8\left(\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}\right)
 -\eta_7^\mu\left(\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}\right).
@@ -202,7 +202,7 @@ $$
 \frac{1}{\sigma_a}\tilde\rho_t=u_t.
 $$
 
-The flexible-price block in `US_ACELt` repeats the capital, investment, rental-rate, capital-accumulation, marginal-cost, money-demand, consumption-Euler, monetary-base, wage, production, and utilization conditions with flexible-price variables \((c_t^f,\tilde w_t^f,\lambda_{z^*,t}^f,\ldots)\). Its price block sets \(s_t^f=0\), and its money-growth process is fixed at \(x_t^f=0\). Those duplicate equations are used to define the natural-output/output-gap counterpart in the implementation and are recorded in the variable table rather than re-numbered as separate paper-side FOCs.
+The flexible-price block in `US_ACELt` repeats the capital, investment, rental-rate, capital-accumulation, marginal-cost, money-demand, consumption-Euler, monetary-base, wage, production, and utilization conditions with flexible-price variables \((c_t^f,\tilde w_t^f,\lambda_{z^{\ast},t}^f,\ldots)\). Its price block sets \(s_t^f=0\), and its money-growth process is fixed at \(x_t^f=0\). Those duplicate equations are used to define the natural-output/output-gap counterpart in the implementation and are recorded in the variable table rather than re-numbered as separate paper-side FOCs.
 
 ## 4. Market Clearing & Identities
 
@@ -220,9 +220,9 @@ $$
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)c_t
-+\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^*}}\right)\bar k\,i_t
++\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,i_t
 -(\tilde y+\phi)(1-\alpha)h_t-\eta'c^2q^{-1}q_t\\
-&+\left(\frac{\tilde\rho\bar k}{\mu_{z^*}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)u_t
+&+\left(\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)u_t
 -(\tilde y+\phi)\alpha\bar k_{t-1}
 +(\tilde y+\phi)\alpha\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\mu_{\Upsilon,t}
@@ -245,7 +245,7 @@ $$
 - **(F17) Production function, implementation linear form, needs_review**:
 $$
 (\tilde y+\phi)(1-\alpha)h_t-\tilde y\,\tilde y_t
-+\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^*}\mu_\Upsilon}\right)u_t
++\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)u_t
 +(\tilde y+\phi)\alpha\bar k_{t-1}
 =(\tilde y+\phi)\alpha\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\mu_{\Upsilon,t}
@@ -303,7 +303,7 @@ $$
 
 - **(F24) Balanced-growth technology composite**:
 $$
-\mu_{z^*,t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
+\mu_{z^{\ast},t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 - **(F25) Monetary growth decomposition, paper form**:
@@ -339,13 +339,13 @@ The paper works with a balanced-growth path. Let steady-state variables omit tim
 1. Set calibrated growth and preference/technology parameters \(\alpha,\beta,\delta,b,\lambda_f,\lambda_w,\mu_\Upsilon,\mu_z,\nu,\psi_L,\sigma_L,x,V,\eta\).
 2. Compute balanced-growth technology:
 $$
-\mu_{z^*}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
+\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
 $$
 3. Compute rental return and nominal rate:
 $$
-\tilde\rho=\frac{\mu_\Upsilon\mu_{z^*}}{\beta}-(1-\delta),\qquad
-\pi=\frac{x}{\mu_{z^*}},\qquad
-R=\frac{\pi\mu_{z^*}}{\beta}.
+\tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),\qquad
+\pi=\frac{x}{\mu_{z^{\ast}}},\qquad
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
 4. Parameterize transaction costs:
 $$
@@ -361,11 +361,11 @@ $$
 $$
 \tilde w=\frac{1-\alpha}{R_\nu}s\left(\frac{\tilde\rho}{\alpha s}\right)^{\alpha/(\alpha-1)},
 \qquad
-\frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^*}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
+\frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
 $$
 7. Set flexible-price steady states equal to sticky-price steady states for shared levels; flexible-price deviations are zero in the linear model.
 
-The full algebra for \(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^*}\) follows the MMB implementation and should be rechecked against the original technical appendix before any runnable promotion. Runtime validation is recorded as not performed.
+The full algebra for \(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^{\ast}}\) follows the MMB implementation and should be rechecked against the original technical appendix before any runnable promotion. Runtime validation is recorded as not performed.
 
 ## 7. Timing & Form Conventions
 
@@ -382,7 +382,7 @@ The full algebra for \(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^*}\) follows th
 |---|---|---|---|
 | Endogenous | `c_t`, `cf_t` | sticky/flexible consumption deviation | (F8), (F13), flexible block |
 | Endogenous | `wtilde_t`, `wtildef_t` | scaled real wage | (F3), (F6), (F10), (F15) |
-| Endogenous | `lambda_zstar_t`, `lambda_zstarf_t` | marginal utility/shadow value scaled by \(z^*\) | (F1), (F8), (F9) |
+| Endogenous | `lambda_zstar_t`, `lambda_zstarf_t` | marginal utility/shadow value scaled by \(z^{\ast}\) | (F1), (F8), (F9) |
 | Endogenous | `m_t`, `mf_t` | money balances | (F15), (F16) |
 | Endogenous | `pi_t`, `pif_t` | inflation deviation | (F5), (F9), (F16), (F21) |
 | Endogenous | `x_t`, `xf_t` | money growth / policy process | (F16), (F25)-(F28) |

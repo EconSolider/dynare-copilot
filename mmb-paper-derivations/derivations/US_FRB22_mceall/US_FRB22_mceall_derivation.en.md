@@ -22,10 +22,10 @@ The LINVER paper does not present household, firm, government, or financial-sect
 
 **(F1) Generic inertial policy rule from the paper**:
 $$
-R_t = \alpha R_{t-1} + (1-\alpha)\left[r^\* + \pi_t + \beta(\pi_t-\pi^\*) + \gamma Y_t\right].
+R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right].
 $$
 
-Here $R_t$ is the nominal federal funds rate, $r^\*$ the neutral real rate, $\pi_t$ inflation, $\pi^\*$ the inflation target, and $Y_t$ the output gap. This is source-stated as a generic characterization used in optimal-rule studies, not necessarily the exact MMB policy equation.
+Here $R_t$ is the nominal federal funds rate, $r^{\ast}$ the neutral real rate, $\pi_t$ inflation, $\pi^{\ast}$ the inflation target, and $Y_t$ the output gap. This is source-stated as a generic characterization used in optimal-rule studies, not necessarily the exact MMB policy equation.
 
 - **Fiscal stabilization mechanism**: the appendix describes an emergency fiscal stabilization variable used when ELB simulations would otherwise produce severe downturns.
 
@@ -170,9 +170,9 @@ for variables represented as linear deviations around the LINVER baseline/evalua
 
 **(F18) Inflation and interest baseline targets**:
 $$
-\pi_t = \pi^\* + \tilde{\pi}_t,
+\pi_t = \pi^{\ast} + \tilde{\pi}_t,
 \qquad
-i_t = i^\* + \tilde{i}_t.
+i_t = i^{\ast} + \tilde{i}_t.
 $$
 
 The paper discusses simulations under alternative neutral nominal federal funds rates, such as 2, 3, and 4 percent, and a zero ELB. These are scenario assumptions, not a single source-stated steady state.

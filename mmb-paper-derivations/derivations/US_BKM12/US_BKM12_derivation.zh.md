@@ -11,7 +11,7 @@
 - 频率与样本：双月频模型，针对现代 1989/1990-2009 样本估计，并与 CPI Research Database 的重置价格统计量比较。
 - 主体：最终品聚合器、差异化中间品厂商、代表性家庭、工资设定型劳动联盟、财政当局和中央银行。
 - 主要摩擦：外部习惯、投资调整成本、可变资本利用率、Calvo 价格和工资、Kimball 商品/劳动曲率、工资黏性、货币政策平滑，以及七个结构冲击。
-- 重置价格层：论文从调价商品和 Calvo 时序构造经验与模型一致的重置通胀 $\pi^*_t$；该测度对象是本档案条目的核心，即使它不是标准 DSGE 优化条件。
+- 重置价格层：论文从调价商品和 Calvo 时序构造经验与模型一致的重置通胀 $\pi^{\ast}_t$；该测度对象是本档案条目的核心，即使它不是标准 DSGE 优化条件。
 
 ## 2. Optimization Problems
 
@@ -92,8 +92,8 @@ $$
 
 $$
 q_{f,t}=-rr_{f,t}+b_t\frac{\sigma_c(1+h/\gamma)}{1-h/\gamma}
-+\frac{r^k_*}{r^k_*+1-\delta}E_tr^k_{f,t+1}
-+\frac{1-\delta}{r^k_*+1-\delta}E_tq_{f,t+1}.
++\frac{r^k_\ast}{r^k_\ast+1-\delta}E_tr^k_{f,t+1}
++\frac{1-\delta}{r^k_\ast+1-\delta}E_tq_{f,t+1}.
 $$
 
 **(F7) 弹性消费 Euler 方程**
@@ -108,7 +108,7 @@ $$
 **(F8) 弹性资源约束**
 
 $$
-y_{f,t}=c_yc_{f,t}+i_yi_{f,t}+g_t+r^k_*k_yz_{f,t}.
+y_{f,t}=c_yc_{f,t}+i_yi_{f,t}+g_t+r^k_\astk_yz_{f,t}.
 $$
 
 **(F9) 弹性生产函数**
@@ -165,8 +165,8 @@ $$
 
 $$
 q_t=-r_t+E_t\pi_{t+1}+b_t\frac{\sigma_c(1+h/\gamma)}{1-h/\gamma}
-+\frac{r^k_*}{r^k_*+1-\delta}E_tr^k_{t+1}
-+\frac{1-\delta}{r^k_*+1-\delta}E_tq_{t+1}.
++\frac{r^k_\ast}{r^k_\ast+1-\delta}E_tr^k_{t+1}
++\frac{1-\delta}{r^k_\ast+1-\delta}E_tq_{t+1}.
 $$
 
 **(F18) 黏性消费 Euler 方程**
@@ -181,7 +181,7 @@ $$
 **(F19) 黏性资源约束**
 
 $$
-y_t=c_yc_t+i_yi_t+g_t+r^k_*k_yz_t.
+y_t=c_yc_t+i_yi_t+g_t+r^k_\astk_yz_t.
 $$
 
 **(F20) 黏性生产函数**
@@ -251,21 +251,21 @@ $$
 
 **(F27) 重置价格通胀统计量**
 
-对商品 $i$，令 $I_{i,t}$ 表示价格是否变化，$p^*_{i,t}$ 表示重置价格。论文定义：
+对商品 $i$，令 $I_{i,t}$ 表示价格是否变化，$p^{\ast}_{i,t}$ 表示重置价格。论文定义：
 
 $$
-p^*_{i,t}=
+p^{\ast}_{i,t}=
 \begin{cases}
 p_{i,t}, & p_{i,t}\ne p_{i,t-1},\\
-p^*_{i,t-1}+\pi^*_t, & p_{i,t}=p_{i,t-1},
+p^{\ast}_{i,t-1}+\pi^{\ast}_t, & p_{i,t}=p_{i,t-1},
 \end{cases}
 $$
 
 以及总重置通胀：
 
 $$
-\pi^*_t=
-\frac{\sum_i\omega_{i,t}(p_{i,t}-p^*_{i,t-1})I_{i,t}}
+\pi^{\ast}_t=
+\frac{\sum_i\omega_{i,t}(p_{i,t}-p^{\ast}_{i,t-1})I_{i,t}}
 {\sum_i\omega_{i,t}I_{i,t}}.
 $$
 
@@ -274,7 +274,7 @@ $$
 在调价频率为 $\lambda$ 的 Calvo 时序下，重置价格统计量满足：
 
 $$
-\pi^*_t=\frac{\pi_t-(1-\lambda)\pi_{t-1}}{\lambda}.
+\pi^{\ast}_t=\frac{\pi_t-(1-\lambda)\pi_{t-1}}{\lambda}.
 $$
 
 **(F29) Calvo 重置/实际波动率比率**
@@ -282,7 +282,7 @@ $$
 论文使用以下含义检验时间依赖定价：
 
 $$
-\frac{\sigma_{\pi^*}}{\sigma_{\pi}}
+\frac{\sigma_{\pi^{\ast}}}{\sigma_{\pi}}
 =\sqrt{1+\frac{2(1-\rho)(1-\lambda)}{\lambda^2}}.
 $$
 
@@ -375,7 +375,7 @@ $$
 - 资本时序：生产使用预定的装配资本服务，$k_t=kp_{t-1}+z_t$，装配资本法则决定 $kp_t$。
 - 政策规则：名义利率响应通胀和相对于弹性价格产出的产出缺口。
 - 价格设定：论文的重置价格分析要求非调价价格不做名义价格指数化；精确 implementation 对齐标记为 `needs_review`。
-- 重置通胀：$\pi^*_t$ 是从调价价格构造的测度/统计对象，而不是独立优化主体的一阶条件。
+- 重置通胀：$\pi^{\ast}_t$ 是从调价价格构造的测度/统计对象，而不是独立优化主体的一阶条件。
 - 运行验证：未执行；没有运行 Dynare。
 
 ## 8. Variable & Parameter Reference Table
@@ -410,7 +410,7 @@ $$
 | Endogenous | `a`, `b`, `g`, `qs`, `ms`, `spinf`, `sw` | 冲击状态 | (F30)-(F36) |
 | Endogenous | `epinfma`, `ewma` | implementation 中的 MA 辅助变量 | (F35), (F36) |
 | Exogenous | `ea`, `eb`, `eg`, `eqs`, `em`, `epinf`, `ew` | 结构创新 | (F30)-(F36) |
-| Measurement | $\pi^*_t$ | 重置价格通胀统计量 | (F27), (F28), (F29) |
+| Measurement | $\pi^{\ast}_t$ | 重置价格通胀统计量 | (F27), (F28), (F29) |
 | Parameter | `cbeta`, $\beta$ | 贴现因子 | (F5)-(F7), (F16)-(F18), Section 6 |
 | Parameter | `cgamma`, $\gamma$ | 趋势增长 | (F5)-(F7), (F16)-(F18), Section 6 |
 | Parameter | `csigma`, $\sigma_c$ | 消费曲率 | (F6), (F7), (F10), (F17), (F18), (F22) |

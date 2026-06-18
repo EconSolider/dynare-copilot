@@ -256,7 +256,7 @@ $$
 $$
 \sum_{i=0}^{\infty}\gamma^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}-\mu P_{m,t+i}
+\frac{P_t^{\ast}}{P_{t+i}}-\mu P_{m,t+i}
 \right]Y_{f,t+i}=0,
 \qquad
 \mu=\frac{1}{1-1/\varepsilon}.
@@ -264,7 +264,7 @@ $$
 
 - **(F30) 价格指数演化**：
 $$
-P_t=\left[(1-\gamma)(P_t^*)^{1-\varepsilon}
+P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma(P_{t-1})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
 $$
 
@@ -279,7 +279,7 @@ $$
 
 - **(F32) Taylor 规则**：
 $$
-i_t=i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^*)+\epsilon_t.
+i_t=i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})+\epsilon_t.
 $$
 
 - **(F33) Fisher 关系**：
@@ -425,7 +425,7 @@ $$
 | 内生 | $I_t$ / `I` | 投资 | (F26), (F27), (F36) |
 | 内生 | $Z_t$ / `Z` | 单位资本利润流 | (F25) |
 | 内生 | $P_{mt}$ / `Pm` | 中间品相对价格 / markup 倒数 | (F24), (F25), (F29) |
-| 内生 | $P_t^*$ / `inflstar` | Calvo 重定价/通胀对象 | (F29), (F30) |
+| 内生 | $P_t^{\ast}$ / `inflstar` | Calvo 重定价/通胀对象 | (F29), (F30) |
 | 内生 | $\pi_t,i_t$ / `infl`, `ir` | 通胀和名义利率 | (F32), (F33) |
 | 外生 | $A_t$ / `a` | TFP | (F42) |
 | 外生 | $\xi_t$ / `ksi` | 资本质量扰动 | (F43) |

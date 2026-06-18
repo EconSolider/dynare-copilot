@@ -88,7 +88,7 @@ The paper derives discretionary optimal policy from a quadratic welfare approxim
 $$
 r_t = \phi_\pi \pi_t + \varepsilon^r_t,
 \qquad
-r_t^* = \phi_\pi \pi_t^* + \varepsilon^{r,*}_t.
+r_t^{\ast} = \phi_\pi \pi_t^{\ast} + \varepsilon^{r,\ast}_t.
 $$
 
 ## 3. First-Order Conditions
@@ -132,7 +132,7 @@ $$
 - **(F6) International risk-sharing condition**:
 
 $$
-C_t=C_t^*.
+C_t=C_t^{\ast}.
 $$
 
 - **(F7) Real marginal cost**:
@@ -223,19 +223,19 @@ The source line prints the coefficient before expected inflation as an OCR-like 
 - **(F18) Home-goods market clearing**:
 
 $$
-(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C^*_{H,t}.
+(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C^{\ast}_{H,t}.
 $$
 
 - **(F19) Foreign-goods market clearing**:
 
 $$
-\gamma Y_t^*=(1-\gamma)C_{F,t}+\gamma C^*_{F,t}.
+\gamma Y_t^{\ast}=(1-\gamma)C_{F,t}+\gamma C^{\ast}_{F,t}.
 $$
 
 - **(F20) CPI-based real exchange rate under the law of one price**:
 
 $$
-\frac{\varepsilon_t P_t^*}{P_t}=1.
+\frac{\varepsilon_t P_t^{\ast}}{P_t}=1.
 $$
 
 - **(F21) Balanced trade in the home country**:
@@ -247,7 +247,7 @@ $$
 - **(F22) Balanced trade in the foreign country**:
 
 $$
-P^*_{F,t}Y_t^*=P_t^* C_t^*.
+P^{\ast}_{F,t}Y_t^{\ast}=P_t^{\ast} C_t^{\ast}.
 $$
 
 - **(F23) Aggregate demand and terms of trade**:
@@ -255,13 +255,13 @@ $$
 $$
 Y_t=k^{-1}C_t S_t^\gamma,
 \qquad
-S_t=\frac{Y_t}{Y_t^*}.
+S_t=\frac{Y_t}{Y_t^{\ast}}.
 $$
 
 - **(F24) Consumption as a function of home and foreign output**:
 
 $$
-C_t=kY_t^{1-\gamma}(Y_t^*)^\gamma.
+C_t=kY_t^{1-\gamma}(Y_t^{\ast})^\gamma.
 $$
 
 - **(F25) Aggregate production with price dispersion**:
@@ -276,7 +276,7 @@ $$
 
 $$
 MC_t=(1-\tau)k^{\sigma-1}(1+\mu_t^w)
-A_t^{-(1+\phi)}Y_t^\kappa(Y_t^*)^{\kappa_0}V_t^\phi.
+A_t^{-(1+\phi)}Y_t^\kappa(Y_t^{\ast})^{\kappa_0}V_t^\phi.
 $$
 
 - **(F27) Open-economy marginal-cost elasticities**:
@@ -290,14 +290,14 @@ $$
 - **(F28) Domestic natural output**:
 
 $$
-\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^*\right].
+\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^{\ast}\right].
 $$
 
 - **(F29) Natural real interest rate**:
 
 $$
 \overline{rr}_t=\sigma_0E_t\{\Delta\bar{y}_{t+1}\}
-+\kappa_0E_t\{\Delta y^*_{t+1}\},
++\kappa_0E_t\{\Delta y^{\ast}_{t+1}\},
 \qquad
 \sigma_0=\sigma-\kappa_0.
 $$
@@ -305,14 +305,14 @@ $$
 - **(F30) Terms of trade in log deviations**:
 
 $$
-s_t=y_t-y_t^*
-=\left(\tilde{y}_t-\tilde{y}_t^*\right)+\left(\bar{y}_t-\bar{y}_t^*\right).
+s_t=y_t-y_t^{\ast}
+=\left(\tilde{y}_t-\tilde{y}_t^{\ast}\right)+\left(\bar{y}_t-\bar{y}_t^{\ast}\right).
 $$
 
 - **(F31) Nominal exchange-rate identity**:
 
 $$
-e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^*.
+e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -332,24 +332,24 @@ $$
 - **(F34) Foreign technology process used in the implementation cross-check**:
 
 $$
-a_t^*=\rho_a a_{t-1}^*+\varepsilon^{a,*}_t.
+a_t^{\ast}=\rho_a a_{t-1}^{\ast}+\varepsilon^{a,\ast}_t.
 $$
 
 - **(F35) Foreign cost-push process used in the implementation cross-check**:
 
 $$
-u_t^*=\rho_u u_{t-1}^*+\varepsilon_t^{u,*}.
+u_t^{\ast}=\rho_u u_{t-1}^{\ast}+\varepsilon_t^{u,\ast}.
 $$
 
 - **(F36) Foreign-output process/shock in the implementation cross-check**:
 
 $$
-\tilde{y}_t^*
-=E_t\{\tilde{y}_{t+1}^*\}
+\tilde{y}_t^{\ast}
+=E_t\{\tilde{y}_{t+1}^{\ast}\}
 -\sigma_0^{-1}\left[
-r_t^*-E_t\{\pi^*_{t+1}\}-\overline{rr}_t^*
+r_t^{\ast}-E_t\{\pi^{\ast}_{t+1}\}-\overline{rr}_t^{\ast}
 \right]
-+\varepsilon_t^{y,*}.
++\varepsilon_t^{y,\ast}.
 $$
 
 The paper gives the symmetric foreign block analytically. The extra foreign-output innovation is present in `NK_CGG02_rep.mod` and is therefore recorded only as `implementation_cross_check`.
@@ -365,7 +365,7 @@ $$
 and analogously for starred foreign variables. The deterministic gross steady-state objects underlying the linearization satisfy:
 
 $$
-S=1,\qquad C=C^*,\qquad \Pi=\Pi^*=1,\qquad V=1.
+S=1,\qquad C=C^{\ast},\qquad \Pi=\Pi^{\ast}=1,\qquad V=1.
 $$
 
 Open-economy parameter composites used by the linear block are:
@@ -402,20 +402,20 @@ In the checked implementation cross-check, the calibration is `beta=0.99`, `rhoa
 | Endogenous | $\overline{rr}_t$ / `rr` | Domestic natural real rate | (F29) |
 | Endogenous | $u_t$ / `u` | Domestic cost-push shock state | (F32) |
 | Endogenous | $a_t$ / `a` | Domestic technology state | (F33) |
-| Endogenous | $\tilde{y}_t^*$ / `ytildestar` | Foreign output gap | (F36) |
-| Endogenous | $\bar{y}_t^*$ / `ybarstar` | Foreign natural output | foreign analogue of (F28) |
-| Endogenous | $y_t^*$ / `ystar` | Foreign output log deviation | (F36), foreign block |
-| Endogenous | $\pi_t^*$ / `infstar` | Foreign inflation | foreign analogue of (F13) |
-| Endogenous | $r_t^*$ / `rstar` | Foreign nominal interest rate | foreign Taylor rule |
-| Endogenous | $\overline{rr}_t^*$ / `rrstar` | Foreign natural real rate | foreign analogue of (F29) |
-| Endogenous | $u_t^*$ / `ustar` | Foreign cost-push shock state | (F35) |
-| Endogenous | $a_t^*$ / `astar` | Foreign technology state | (F34) |
+| Endogenous | $\tilde{y}_t^{\ast}$ / `ytildestar` | Foreign output gap | (F36) |
+| Endogenous | $\bar{y}_t^{\ast}$ / `ybarstar` | Foreign natural output | foreign analogue of (F28) |
+| Endogenous | $y_t^{\ast}$ / `ystar` | Foreign output log deviation | (F36), foreign block |
+| Endogenous | $\pi_t^{\ast}$ / `infstar` | Foreign inflation | foreign analogue of (F13) |
+| Endogenous | $r_t^{\ast}$ / `rstar` | Foreign nominal interest rate | foreign Taylor rule |
+| Endogenous | $\overline{rr}_t^{\ast}$ / `rrstar` | Foreign natural real rate | foreign analogue of (F29) |
+| Endogenous | $u_t^{\ast}$ / `ustar` | Foreign cost-push shock state | (F35) |
+| Endogenous | $a_t^{\ast}$ / `astar` | Foreign technology state | (F34) |
 | Exogenous | $\varepsilon_t^u$ / `inf_` | Domestic cost-push innovation | (F32) |
 | Exogenous | $\varepsilon_t^a$ / `a_` | Domestic technology innovation | (F33) |
-| Exogenous | $\varepsilon_t^{u,*}$ / `infstar_` | Foreign cost-push innovation | (F35) |
-| Exogenous | $\varepsilon_t^{y,*}$ / `ystar_` | Foreign output/IS innovation in cross-check | (F36) |
-| Exogenous | $\varepsilon_t^{a,*}$ / `astar_` | Foreign technology innovation | (F34) |
-| Exogenous | $\varepsilon_t^{r,*}$ / `rstar_` | Foreign interest-rate-rule innovation | foreign Taylor rule |
+| Exogenous | $\varepsilon_t^{u,\ast}$ / `infstar_` | Foreign cost-push innovation | (F35) |
+| Exogenous | $\varepsilon_t^{y,\ast}$ / `ystar_` | Foreign output/IS innovation in cross-check | (F36) |
+| Exogenous | $\varepsilon_t^{a,\ast}$ / `astar_` | Foreign technology innovation | (F34) |
+| Exogenous | $\varepsilon_t^{r,\ast}$ / `rstar_` | Foreign interest-rate-rule innovation | foreign Taylor rule |
 | Exogenous | $\varepsilon_t^r$ / `interest_` | Domestic interest-rate-rule innovation | domestic Taylor rule |
 | Parameter | $\beta$ / `beta` | Discount factor | (F4), (F10) |
 | Parameter | $\sigma$ / `sigma` | Inverse intertemporal elasticity / CRRA coefficient | (F4), (F27) |

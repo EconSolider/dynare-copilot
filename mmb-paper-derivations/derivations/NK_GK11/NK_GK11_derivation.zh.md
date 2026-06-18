@@ -91,9 +91,9 @@ $$
 零售商 `f` 在 Calvo 粘性和滞后通胀指数化下选择重设价格：
 
 $$
-\max_{P_t^*} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
+\max_{P_t^{\ast}} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
+\frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -P_{m,t+i}
 \right]Y_{f,t+i}.
 $$
@@ -293,7 +293,7 @@ $$
 $$
 E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
+\frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -\mu P_{m,t+i}
 \right]Y_{f,t+i}=0,\qquad
 \mu=\frac{1}{1-1/\varepsilon}.
@@ -302,7 +302,7 @@ $$
 - **(F30) 价格水平运动方程**：
 
 $$
-P_t=\left[(1-\gamma)(P_t^*)^{1-\varepsilon}
+P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma\left(\Pi_{t-1}^{\gamma_p}P_{t-1}\right)^{1-\varepsilon}\right]^{1/(1-\varepsilon)}.
 $$
 
@@ -355,7 +355,7 @@ $$
 - **(F38) Taylor 规则**：
 
 $$
-i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^*)\right]
+i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})\right]
 +\rho i_{t-1}+\varepsilon^i_t.
 $$
 

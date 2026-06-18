@@ -44,9 +44,9 @@ $$
 Intermediate firm $i$ produces with neutral technology, embodied technology scaling, and fixed costs:
 
 $$
-y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^\*,
+y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
-z_t^\*=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
+z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
 \tag{F4}
 $$
 
@@ -138,7 +138,7 @@ $$
 With probability $1-\xi_w$ the household reoptimizes its wage; otherwise:
 
 $$
-W_{j,t}=\pi_{t-1}\mu_{z^\*}W_{j,t-1}.
+W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
 \tag{F14}
 $$
 
@@ -171,10 +171,10 @@ The MMB implementation labels the sticky-price block equations as technical-appe
 **(F17) Capital Euler equation (`needs_review`, implementation_cross_check):**
 
 $$
-\hat\lambda_{z^\*,t+1}
+\hat\lambda_{z^{\ast},t+1}
 \frac{1-\delta}{\tilde\rho+1-\delta}\hat{\tilde\mu}_{t+1}
 \frac{\tilde\rho}{\tilde\rho+1-\delta}\hat{\tilde\rho}_{t+1}
--\hat\lambda_{z^\*,t}-\hat{\tilde\mu}_t
+-\hat\lambda_{z^{\ast},t}-\hat{\tilde\mu}_t
 =\hat\mu_{z,t+1}+\frac{1}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 \tag{F17}
 $$
@@ -183,14 +183,14 @@ $$
 
 $$
 \begin{aligned}
-&-\beta\kappa(\mu_{z^\*}\mu_\Upsilon)^2\hat i_{t+1}
+&-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t+1}
 -\hat{\tilde\mu}_{t-1|t}
-+\kappa(\mu_{z^\*}\mu_\Upsilon)^2(1+\beta)\hat i_t
--\kappa(\mu_{z^\*}\mu_\Upsilon)^2\hat i_{t-1}\\
-&=\beta\kappa(\mu_{z^\*}\mu_\Upsilon)^2\hat\mu_{z,t+1}
-+\frac{\beta\kappa(\mu_{z^\*}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t+1}
--\kappa(\mu_{z^\*}\mu_\Upsilon)^2\hat\mu_{z,t}
--\frac{\kappa(\mu_{z^\*}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
++\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)\hat i_t
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t-1}\\
+&=\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat\mu_{z,t+1}
++\frac{\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t+1}
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat\mu_{z,t}
+-\frac{\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \end{aligned}
 \tag{F18}
 $$
@@ -215,8 +215,8 @@ $$
 **(F20) Capital evolution (`needs_review`, implementation_cross_check):**
 
 $$
-(\mu_{z^\*}\mu_\Upsilon-(1-\delta))\hat i_{t-1|t}
--\mu_\Upsilon\mu_{z^\*}\hat{\bar k}_{t+1}
+(\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))\hat i_{t-1|t}
+-\mu_\Upsilon\mu_{z^{\ast}}\hat{\bar k}_{t+1}
 +(1-\delta)\hat{\bar k}_{t}
 =(1-\delta)\hat\mu_{z,t}
 +\frac{1-\delta}{1-\alpha}\hat\mu_{\Upsilon,t}.
@@ -257,19 +257,19 @@ $$
 **(F24) Consumption Euler equation (`needs_review`, implementation_cross_check):**
 
 $$
-\mathcal A_c E_t\hat c_{t+1}+\mathcal B_c\hat c_t+\mathcal C_c\hat\lambda_{z^\*,t}
+\mathcal A_c E_t\hat c_{t+1}+\mathcal B_c\hat c_t+\mathcal C_c\hat\lambda_{z^{\ast},t}
 \mathcal D_c\hat q_t+\mathcal E_c\hat c_{t-1}
 =\mathcal F_cE_t\hat\mu_{z,t+1}+\mathcal G_cE_t\hat\mu_{\Upsilon,t+1}
 \mathcal H_c\hat\mu_{z,t}+\mathcal J_c\hat\mu_{\Upsilon,t}.
 \tag{F24}
 $$
 
-The coefficients $\mathcal A_c,\ldots,\mathcal J_c$ are functions of $(\beta,b,\mu_{z^\*},c,\lambda_{z^\*},\eta,\eta',V,\alpha)$ as in the implementation cross-check; this compact form is marked `needs_review`.
+The coefficients $\mathcal A_c,\ldots,\mathcal J_c$ are functions of $(\beta,b,\mu_{z^{\ast}},c,\lambda_{z^{\ast}},\eta,\eta',V,\alpha)$ as in the implementation cross-check; this compact form is marked `needs_review`.
 
 **(F25) Monetary-base first-order condition (`needs_review`, implementation_cross_check):**
 
 $$
-\hat\lambda_{z^\*,t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^\*,t}
+\hat\lambda_{z^{\ast},t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^{\ast},t}
 =\hat\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 \tag{F25}
 $$
@@ -280,7 +280,7 @@ $$
 \begin{aligned}
 \eta_2\hat{\tilde w}_{t+1}+\eta_4\hat\pi_{t+1}
 +\eta_1\hat{\tilde w}_{t}+\eta_3\hat\pi_t
-+\eta_5\hat h_t+\eta_6\hat\lambda_{z^\*,t}
++\eta_5\hat h_t+\eta_6\hat\lambda_{z^{\ast},t}
 +\eta_0\hat{\tilde w}_{t-1}+\bar\eta_3\hat\pi_{t-1}\\
 =-\eta_8\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}
 -\eta_8\hat\mu_{z,t+1}
@@ -295,7 +295,7 @@ $$
 The paper-side steady-state nominal return and money FOC are:
 
 $$
-R=\frac{\pi\mu_{z^\*}}{\beta}.
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 \tag{F27}
 $$
 
@@ -351,10 +351,10 @@ The linear resource constraint used in the implementation cross-check is:
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)\hat c_{t-1|t}
-+\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^\*}}\right)\bar k\,\hat i_{t-1|t}
++\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,\hat i_{t-1|t}
 -(\tilde y+\phi)(1-\alpha)\hat h_t
 -\eta'c^2/q\,\hat q_t\\
-&+\left(\frac{\tilde\rho\bar k}{\mu_{z^\*}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)\hat u_{t-1|t}
+&+\left(\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)\hat u_{t-1|t}
 -(\tilde y+\phi)\alpha\hat{\bar k}_t
 +(\tilde y+\phi)\alpha\hat\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
@@ -376,7 +376,7 @@ The linearized production function is:
 $$
 \begin{aligned}
 (\tilde y+\phi)(1-\alpha)\hat h_t-\tilde y\hat{\tilde y}_t
-+\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^\*}\mu_\Upsilon}\right)\hat u_{t-1|t}
++\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)\hat u_{t-1|t}
 +(\tilde y+\phi)\alpha\hat{\bar k}_t\\
 =(\tilde y+\phi)\alpha\hat\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
@@ -451,16 +451,16 @@ $$
 Because `US_ACELswm` is implemented as `model(linear)`, the dynamic equations are written for deviations around the balanced-growth steady state; the linearized steady states of hatted variables are zero. The nonstochastic levels used for scaling are:
 
 $$
-\mu_{z^\*}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z .
+\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z .
 \tag{F45}
 $$
 
 $$
-\tilde\rho=\frac{\mu_\Upsilon\mu_{z^\*}}{\beta}-(1-\delta),
+\tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),
 \qquad
-\pi=\frac{x}{\mu_{z^\*}},
+\pi=\frac{x}{\mu_{z^{\ast}}},
 \qquad
-R=\frac{\pi\mu_{z^\*}}{\beta}.
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 \tag{F46}
 $$
 
@@ -491,7 +491,7 @@ $$
 \frac{h}{\bar k}
 =\left[
 \frac{\tilde\rho}
-{\alpha s(\mu_{z^\*}\mu_\Upsilon)^{1-\alpha}}
+{\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}
 \right]^{1/(1-\alpha)} .
 \tag{F49}
 $$
@@ -502,11 +502,11 @@ $$
 \bar k=
 \left[
 \frac{(1+\eta)\tilde w}{\psi_L(h/\bar k)^{\sigma_L}}
-\frac{\mu_{z^\*}-b\beta}{\lambda_w(\mu_{z^\*}-b)(1+\eta+\eta'V)}
+\frac{\mu_{z^{\ast}}-b\beta}{\lambda_w(\mu_{z^{\ast}}-b)(1+\eta+\eta'V)}
 \bigg/
 \left(
-\frac{1}{\lambda_f}(\mu_{z^\*}\mu_\Upsilon)^{-\alpha}(h/\bar k)^{1-\alpha}
--\left[1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^\*}}\right]
+\frac{1}{\lambda_f}(\mu_{z^{\ast}}\mu_\Upsilon)^{-\alpha}(h/\bar k)^{1-\alpha}
+-\left[1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right]
 \right)
 \right]^{1/(1+\sigma_L)} .
 \tag{F50}
@@ -515,24 +515,24 @@ $$
 $$
 h=(h/\bar k)\bar k,\qquad
 c=\bar k^{-\sigma_L}\frac{\tilde w}{\psi_L(h/\bar k)^{\sigma_L}}
-\frac{\mu_{z^\*}-\beta b}{\lambda_w(\mu_{z^\*}-b)(1+\eta+\eta'V)} .
+\frac{\mu_{z^{\ast}}-\beta b}{\lambda_w(\mu_{z^{\ast}}-b)(1+\eta+\eta'V)} .
 \tag{F51}
 $$
 
 $$
 m=\frac{\nu\tilde w h+q}{x},
 \qquad
-\tilde y=\frac{\tilde\rho\bar k}{\mu_\Upsilon\mu_{z^\*}}+\tilde w R_\nu h,
+\tilde y=\frac{\tilde\rho\bar k}{\mu_\Upsilon\mu_{z^{\ast}}}+\tilde w R_\nu h,
 \qquad
 \phi=\tilde y(\lambda_f-1).
 \tag{F52}
 $$
 
 $$
-i=\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^\*}}\right)\bar k,
+i=\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k,
 \qquad
-\lambda_{z^\*}=
-\frac{\mu_{z^\*}-b\beta}{\mu_{z^\*}c-bc}
+\lambda_{z^{\ast}}=
+\frac{\mu_{z^{\ast}}-b\beta}{\mu_{z^{\ast}}c-bc}
 \frac{1}{1+\eta+\eta'V}.
 \tag{F53}
 $$

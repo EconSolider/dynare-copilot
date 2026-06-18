@@ -102,9 +102,9 @@ $$
 $$
 \widehat{k}_t
 =
-\left(1-\frac{i_*}{\bar{k}_*}\right)\widehat{k}_{t-1}
-+\frac{i_*}{\bar{k}_*}\widehat{i}_t
-+\frac{i_*}{\bar{k}_*}(1+\bar{\beta}\gamma)\gamma^2 S''\widehat{q}_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)\widehat{k}_{t-1}
++\frac{i_\ast}{\bar{k}_\ast}\widehat{i}_t
++\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''\widehat{q}_t.
 $$
 
 - **(F4) 利用率选择**：
@@ -262,10 +262,10 @@ $$
 $$
 \widehat{y}_t
 =
-\frac{(\bar{R}^K-1+\tau)k_*}{y_*}\widehat{u}_t
+\frac{(\bar{R}^K-1+\tau)k_\ast}{y_\ast}\widehat{u}_t
 +\widehat{\mu}^{bank}_t
-+\frac{c_*}{y_*}\widehat{c}_t
-+\frac{i_*}{y_*}\widehat{i}_t
++\frac{c_\ast}{y_\ast}\widehat{c}_t
++\frac{i_\ast}{y_\ast}\widehat{i}_t
 +\widehat{g}_t.
 $$
 
@@ -274,7 +274,7 @@ $$
 $$
 \widehat{\mu}^{bank}_t
 =
-\frac{k_*}{y_*}(\bar{R}^K-\bar{R})
+\frac{k_\ast}{y_\ast}(\bar{R}^K-\bar{R})
 \left(1-\frac{\bar{N}}{\bar{K}}\right)
 (\widehat{R}^K_t+\widehat{Q}_{t-1}+\widehat{k}_t).
 $$
@@ -371,11 +371,11 @@ $$
 来源报告了以下稳态对象或关系：
 
 1. 确定性趋势为 $\gamma$，且 $\bar{\beta}=\beta/\gamma^{\sigma_c}$。
-2. 测量方程中的稳态名义利率为 $\bar{r}=100(\bar{\gamma}^{\sigma_c}II_*/\beta-1)`.
+2. 测量方程中的稳态名义利率为 $\bar{r}=100(\bar{\gamma}^{\sigma_c}II_\ast/\beta-1)`.
 3. 决定稳态杠杆和溢价动态的金融摩擦参数为 $\bar{K}/\bar{N}$、$\varkappa$ 和 $el$。
 4. 学习模型从与 REE 一致的初始信念开始。在初始稳态处，学习 ALM 与 RE 解一致；后续动态来自信念更新。
 
-Needs review：论文没有打印消费、劳动、工资、边际成本、价格和工资加成模块的完整 Smets-Wouters 稳态构造，也没有打印完整的校准/估计稳态比例 $c_*/y_*$、$i_*/y_*$、$k_*/y_*$。
+Needs review：论文没有打印消费、劳动、工资、边际成本、价格和工资加成模块的完整 Smets-Wouters 稳态构造，也没有打印完整的校准/估计稳态比例 $c_\ast/y_\ast$、$i_\ast/y_\ast$、$k_\ast/y_\ast$。
 
 ## 7. Timing & Form Conventions
 

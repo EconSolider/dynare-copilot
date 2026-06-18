@@ -156,7 +156,7 @@ $$
 
 $$
 i_t=(1-\lambda_i)
-\left[\lambda_\pi(\pi_t-\pi^*)+\lambda_x(y_t-y_t^f)+M_{k,t}\right]
+\left[\lambda_\pi(\pi_t-\pi^{\ast})+\lambda_x(y_t-y_t^f)+M_{k,t}\right]
 +\lambda_i i_{t-1}+\varepsilon_t^i.
 $$
 
@@ -294,7 +294,7 @@ Steady-state quality is `needs_review`: the derivation records the linear system
 | Parameter | `li1`, $\lambda_i$ | interest-rate smoothing | (F8) |
 | Parameter | `li2`, $\lambda_\pi$ | inflation response | (F8) |
 | Parameter | `li3`, $\lambda_x$ | output-gap response | (F8) |
-| Parameter | `cible`, $\pi^*$ | inflation target | (F8) |
+| Parameter | `cible`, $\pi^{\ast}$ | inflation target | (F8) |
 | Parameter | `rhoa1`, `rhon1`, `rhop1`, `rhoi1`, `rhou1` | AR(1) persistence parameters | (F10)-(F14) |
 | Parameter | `vel0`, $\zeta$ | velocity mean | (F9) |
 | Parameter | `vel1`, $\lambda_s$ | velocity shock loading | (F9) |

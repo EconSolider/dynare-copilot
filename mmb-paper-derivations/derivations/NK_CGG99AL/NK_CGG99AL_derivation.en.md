@@ -24,7 +24,7 @@ This primitive problem is an interpretation of the paper's stated Euler-equation
 
 The paper describes monopolistically competitive firms that choose a nominal price when allowed to reset, subject to Calvo-style restrictions on future adjustment opportunities. It does not spell out the full reset-price objective in primitive notation. A source-consistent generic problem is:
 
-$$\max_{P_t^\*} E_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}\left[P_t^\*Y_{t+j|t}-P_{t+j}MC_{t+j}Y_{t+j|t}\right],$$
+$$\max_{P_t^{\ast}} E_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}\left[P_t^{\ast}Y_{t+j|t}-P_{t+j}MC_{t+j}Y_{t+j|t}\right],$$
 
 subject to the demand schedule for the firm's differentiated good. This generic reset-price problem is marked `needs_review` because the article uses it only to motivate the log-linear Phillips curve.
 

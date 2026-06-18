@@ -24,7 +24,7 @@ $$\max_{\{C_t,B_t\}} E_0 \sum_{t=0}^{\infty}\beta^t U(C_t) \quad\text{s.t.}\quad
 
 论文描述了垄断竞争企业：当企业有机会重新定价时选择名义价格，并受到未来调价机会的 Calvo 式限制。论文没有用原始符号完整写出重定价目标。与来源一致的通用问题为：
 
-$$\max_{P_t^\*} E_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}\left[P_t^\*Y_{t+j|t}-P_{t+j}MC_{t+j}Y_{t+j|t}\right],$$
+$$\max_{P_t^{\ast}} E_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}\left[P_t^{\ast}Y_{t+j|t}-P_{t+j}MC_{t+j}Y_{t+j|t}\right],$$
 
 并受企业差异化产品需求曲线约束。这个通用重定价问题标记为 `needs_review`，因为文章只用它来引出对数线性 Phillips 曲线。
 

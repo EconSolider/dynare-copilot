@@ -72,10 +72,10 @@ $$
 Y_t(j)=K_t(j)^{\alpha}N_t(j)^{1-\alpha}.
 $$
 
-在 Calvo 不调价概率 $\theta$ 下，重设价格的厂商选择 $P_t^*$ 以最大化受需求约束的预期贴现利润：
+在 Calvo 不调价概率 $\theta$ 下，重设价格的厂商选择 $P_t^{\ast}$ 以最大化受需求约束的预期贴现利润：
 
 $$
-\max_{P_t^*} E_t\sum_{k=0}^{\infty}\theta^k \Lambda_{t,t+k}Y_{t+k}(j)\left(\frac{P_t^*}{P_{t+k}}-MC_{t+k}\right).
+\max_{P_t^{\ast}} E_t\sum_{k=0}^{\infty}\theta^k \Lambda_{t,t+k}Y_{t+k}(j)\left(\frac{P_t^{\ast}}{P_{t+k}}-MC_{t+k}\right).
 $$
 
 ### 2.4 货币与财政当局

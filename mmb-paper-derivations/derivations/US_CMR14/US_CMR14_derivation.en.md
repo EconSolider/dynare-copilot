@@ -29,8 +29,8 @@ Intermediate firm $j$ rents effective capital services and homogeneous labor:
 $$
 Y_{jt}=
 \begin{cases}
-\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}-\Phi z_t^*,&
-\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}>\Phi z_t^*,\\
+\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}-\Phi z_t^{\ast},&
+\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}>\Phi z_t^{\ast},\\
 0,&\text{otherwise},
 \end{cases}
 \qquad 0<\alpha<1.
@@ -109,7 +109,7 @@ $$
 
 $$
 r_t^k=\alpha\epsilon_t
-\left(\frac{\Upsilon\mu_{z,t}^*h_t(w_t^*)^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
+\left(\frac{\Upsilon\mu_{z,t}^{\ast}h_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
 $$
 
 - **(F3) Marginal cost** (`needs_review`; implementation cross-check only for stationary scaling):
@@ -121,8 +121,8 @@ $$
 - **(F4) Price-index recursion for reset price** (`needs_review`; paper states Calvo/indexation, formula checked against `.mod` only):
 
 $$
-p_t^*=\left[(1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
-\xi_p\left(\frac{\tilde\pi_t}{\pi_t}p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
+p_t^{\ast}=\left[(1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
+\xi_p\left(\frac{\tilde\pi_t}{\pi_t}p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
 $$
 
 - **(F5) Price auxiliary recursion $F_p$** (`needs_review`; implementation cross-check):
@@ -142,10 +142,10 @@ $$
 - **(F7) Stationary output definition** (`needs_review`; source production equation plus implementation scaling):
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_f/(\lambda_f-1)}
+Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 \left[
-\epsilon_t\left(\frac{u_t\bar k_{t-1}}{\mu_{z,t}^*\Upsilon}\right)^\alpha
-\left(h_t(w_t^*)^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
+\epsilon_t\left(\frac{u_t\bar k_{t-1}}{\mu_{z,t}^{\ast}\Upsilon}\right)^\alpha
+\left(h_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
 -\phi
 \right].
 $$
@@ -153,21 +153,21 @@ $$
 - **(F8) Wage reset index** (`needs_review`; paper states Calvo wage setup, implementation cross-check supplies recursion):
 
 $$
-w_t^*=\left[(1-\xi_w)A_{w,t}^{\lambda_w}
-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\iota_\mu}(\mu_{z^*,t})^{\iota_\mu}w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
+w_t^{\ast}=\left[(1-\xi_w)A_{w,t}^{\lambda_w}
+\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\iota_\mu}(\mu_{z^{\ast},t})^{\iota_\mu}w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F9) Wage auxiliary recursion $F_w$** (`needs_review`; implementation cross-check):
 
 $$
-F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^*)^{\lambda_w/(\lambda_w-1)}h_t\frac{1-\tau^l}{\lambda_w}
+F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}h_t\frac{1-\tau^l}{\lambda_w}
 \beta\xi_wE_t[\mathcal I^F_{w,t+1}F_{w,t+1}].
 $$
 
 - **(F10) Wage auxiliary recursion $K_w$** (`needs_review`; implementation cross-check):
 
 $$
-K_{w,t}=\zeta_{c,t}\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}h_t\right]^{1+\sigma_L}
+K_{w,t}=\zeta_{c,t}\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}h_t\right]^{1+\sigma_L}
 \beta\xi_wE_t[\mathcal I^K_{w,t+1}K_{w,t+1}].
 $$
 
@@ -177,15 +177,15 @@ $$
 
 $$
 (1+\tau^c)\zeta_{c,t}\lambda_{z,t}
-=\frac{\mu_{z,t}^*\zeta_{c,t}}{c_t\mu_{z,t}^*-bc_{t-1}}
--b\beta E_t\left[\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^*-bc_t}\right].
+=\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
+-b\beta E_t\left[\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right].
 $$
 
 - **(F12) One-period bond Euler equation** (`needs_review`; source budget equation 8 and `.mod`):
 
 $$
 \zeta_{c,t}\lambda_{z,t}
-=\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z,t+1}^*\pi_{t+1}}\left(1+(1-\tau^d)R_t^e\right)\right].
+=\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\left(1+(1-\tau^d)R_t^e\right)\right].
 $$
 
 - **(F13) Capital utilization condition** (`needs_review`; source utilization cost function):
@@ -206,8 +206,8 @@ $$
 - **(F15) Capital accumulation** (`needs_review`; source equation 6, stationary scaling from implementation):
 
 $$
-\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z,t}^*\Upsilon}
-+\left[1-S\left(\zeta_{I,t}\mu_{z,t}^*\Upsilon I_t/I_{t-1}\right)\right]I_t .
+\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z,t}^{\ast}\Upsilon}
++\left[1-S\left(\zeta_{I,t}\mu_{z,t}^{\ast}\Upsilon I_t/I_{t-1}\right)\right]I_t .
 $$
 
 - **(F16) Investment FOC / supply price of capital** (`needs_review`; source adjustment-cost function and `.mod`):
@@ -215,7 +215,7 @@ $$
 $$
 0=-\frac{\zeta_{c,t}\lambda_{z,t}}{\mu_{\Upsilon,t}}
 +\zeta_{c,t}\lambda_{z,t}q_t\left[1-S_t-S_t'x_t\right]
-+\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S_{t+1}'x_{t+1}^2}{\mu_{z,t+1}^*\Upsilon}\right].
++\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S_{t+1}'x_{t+1}^2}{\mu_{z,t+1}^{\ast}\Upsilon}\right].
 $$
 
 **Financial contract**
@@ -312,7 +312,7 @@ $$
 - **(F30) Government consumption scaling** (source equation 19):
 
 $$
-G_t=z_t^*g_t.
+G_t=z_t^{\ast}g_t.
 $$
 
 - **(F31) Long-term nominal bond measurement relation** (source Section ID):
@@ -345,8 +345,8 @@ $$
 $$
 R_t-R=\rho_p(R_{t-1}-R)
 +(1-\rho_p)\left[
-\alpha_\pi(\pi_{t+1}-\pi_t^*)
-+\alpha_{\Delta y}\frac{1}{4}(g_{y,t}-\mu_{z^*})
+\alpha_\pi(\pi_{t+1}-\pi_t^{\ast})
++\alpha_{\Delta y}\frac{1}{4}(g_{y,t}-\mu_{z^{\ast}})
 \right]
 +\frac{1}{400}\varepsilon_t^p.
 $$
@@ -363,7 +363,7 @@ Other exogenous processes in the estimated model are first-order AR processes fo
 
 The source is an estimated, growing-economy model. A full numerical steady-state reconstruction is deferred. Source-backed steady-state restrictions and targets are:
 
-1. The model is stationary after scaling by $z_t^*$, where the balanced-growth object combines neutral technology growth and investment-specific growth.
+1. The model is stationary after scaling by $z_t^{\ast}$, where the balanced-growth object combines neutral technology growth and investment-specific growth.
 2. Investment adjustment satisfies $S(x)=S'(x)=0$ at steady state, and utilization is normalized so that $u=1$.
 3. The calibrated quarterly parameters include $\beta=0.9987$, $\delta=0.025$, $\alpha=0.40$, $\lambda_f=1.20$, $\lambda_w=1.05$, $\psi_L=0.7705$, $\tau^c=0.05$, $\tau^k=0.32$, $\tau^l=0.24$, $1-\gamma=1-0.985$, and $W^e=0.005$.
 4. The government-spending-to-GDP ratio target is $\eta_g=0.20$.

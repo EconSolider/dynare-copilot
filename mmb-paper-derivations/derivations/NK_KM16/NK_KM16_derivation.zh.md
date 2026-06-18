@@ -48,7 +48,7 @@ $$
 Y_t(z)=A N_t(z).
 $$
 
-以 Calvo 概率 `theta`，厂商不能重设价格。未重设的价格按实际或感知的通胀目标指数化。能够重设价格的厂商选择 \(P_t^*(z)\)，在需求和指数化规则约束下最大化预期贴现利润。
+以 Calvo 概率 `theta`，厂商不能重设价格。未重设的价格按实际或感知的通胀目标指数化。能够重设价格的厂商选择 \(P_t^{\ast}(z)\)，在需求和指数化规则约束下最大化预期贴现利润。
 
 ### 财政与货币当局
 
@@ -110,7 +110,7 @@ $$
 - **(F8) 相对重设价格**：
 
 $$
-\frac{P_t^*}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
+\frac{P_t^{\ast}}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
 $$
 
 - **(F9) Calvo 分子递推式**：
@@ -119,7 +119,7 @@ $$
 \mathcal{Z}_{1,t}
 =\lambda_t mc_t C_t
 +\theta\beta E_t\left[
-\left(\frac{\pi_{t+1}}{\pi_{t+1}^*}\right)^{-\epsilon}
+\left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{-\epsilon}
 \mathcal{Z}_{1,t+1}
 \right].
 $$
@@ -130,7 +130,7 @@ $$
 \mathcal{Z}_{2,t}
 =\lambda_t C_t
 +\theta\beta E_t\left[
-\left(\frac{\pi_{t+1}}{\pi_{t+1}^*}\right)^{1-\epsilon}
+\left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{1-\epsilon}
 \mathcal{Z}_{2,t+1}
 \right].
 $$
@@ -158,7 +158,7 @@ $$
 - **(F14) 总价格指数**：
 
 $$
-1=\theta(\pi_t^*)^{1-\epsilon}\pi_t^{-(1-\epsilon)}
+1=\theta(\pi_t^{\ast})^{1-\epsilon}\pi_t^{-(1-\epsilon)}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{1-\epsilon}.
@@ -188,8 +188,8 @@ $$
 $$
 i_t=\rho_i i_{t-1}
 +(1-\rho_i)\left[
-i+\hat{\pi}_t^*
-+\phi_{\pi}(\hat{\pi}_t-\hat{\pi}_t^*)
+i+\hat{\pi}_t^{\ast}
++\phi_{\pi}(\hat{\pi}_t-\hat{\pi}_t^{\ast})
 +\phi_y(\hat{Y}_t-\hat{Y}_t^n)
 \right]
 +\eta_t.
@@ -211,7 +211,7 @@ $$
 
 $$
 \Delta_{p,t}
-=\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^*}\right)^{\epsilon}
+=\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^{\ast}}\right)^{\epsilon}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{-\epsilon}.
@@ -222,20 +222,20 @@ $$
 - **(F22) 通胀目标过程**：
 
 $$
-\hat{\pi}_t^*=\rho_{\pi}\hat{\pi}_{t-1}^*+\eta_t^{\pi}.
+\hat{\pi}_t^{\ast}=\rho_{\pi}\hat{\pi}_{t-1}^{\ast}+\eta_t^{\pi}.
 $$
 
 - **(F23) 不完全信息下的货币政策信号**：
 
 $$
-\varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^*+\eta_t.
+\varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^{\ast}+\eta_t.
 $$
 
 - **(F24) 感知通胀目标更新**（`needs_review`：OCR 可读，但周边状态空间记号被压缩）：
 
 $$
-\tilde{E}_t\hat{\pi}_t^*
-=\tilde{E}_{t-1}\hat{\pi}_t^*
+\tilde{E}_t\hat{\pi}_t^{\ast}
+=\tilde{E}_{t-1}\hat{\pi}_t^{\ast}
 +\frac{k}{\rho_{\pi}}
 \left(\varepsilon_t^{\pi}-\tilde{E}_{t-1}\varepsilon_t^{\pi}\right).
 $$
@@ -246,14 +246,14 @@ $$
 \tilde{E}_t\eta_t
 =\varepsilon_t^{\pi}
 -(1-\rho_i)(1-\phi_{\pi})
-\tilde{E}_{t-1}\hat{\pi}_t^*.
+\tilde{E}_{t-1}\hat{\pi}_t^{\ast}.
 $$
 
 - **(F26) Kalman 滤波下的预测**：
 
 $$
 \begin{bmatrix}
-\tilde{E}_t\hat{\pi}_{t+i}^*\\
+\tilde{E}_t\hat{\pi}_{t+i}^{\ast}\\
 \tilde{E}_t\eta_{t+i}
 \end{bmatrix}
 =
@@ -262,7 +262,7 @@ $$
 0 & 0
 \end{bmatrix}^{i}
 \begin{bmatrix}
-\tilde{E}_t\hat{\pi}_{t}^*\\
+\tilde{E}_t\hat{\pi}_{t}^{\ast}\\
 \tilde{E}_t\eta_t
 \end{bmatrix}.
 $$
@@ -273,7 +273,7 @@ $$
 
 论文校准季度稳态，并从线性化系统求解动态。MMB 交叉检查文件给出了与论文校准一致的显式稳态赋值：
 
-1. 将稳态通胀设为目标，\(\pi=\pi^*=1.005\)，且 \(R=1/\beta\)。
+1. 将稳态通胀设为目标，\(\pi=\pi^{\ast}=1.005\)，且 \(R=1/\beta\)。
 2. 短期名义利率满足 \(i=R\pi-1\)。
 3. 将工时标准化为 \(N=1/3\)。在粘性价格模块中，20% 加成给出 \(w=mc=1/1.2\)；产出为 \(Y=N/\Delta_p\)，且 \(\Delta_p=1\)。
 4. 政府支出为 \(g=0.2Y\)，消费为 \(C=Y-g\)，长期公共债务为 \(b^L=0.5Y\)。
@@ -289,7 +289,7 @@ $$
 
 - **债务存量时点**：\(B_t^L\) 和 \(b_t^L\) 是期末存量，已经包含 \((1-\alpha)B_{t-1}^L\) 的存续部分和新发行 \(B_t^{L,n}\)。政府预算支付 \(t-1\) 期债务的赎回和利息，实际形式中除以当期通胀。
 - **长期债券定价**：\(i_t^{L,n}\) 是新发行随机债券的利率。\(i_t^L\) 是存量长期债务的平均利率，并随存续债务存量递推。
-- **价格设定**：未重设价格在完全信息下按 \(\pi_t^*\) 指数化，在不完全信息下按感知通胀目标指数化。
+- **价格设定**：未重设价格在完全信息下按 \(\pi_t^{\ast}\) 指数化，在不完全信息下按感知通胀目标指数化。
 - **自然与粘性模块**：MMB 实现包含用于产出缺口政策规则的灵活价格自然模块和粘性价格模块；论文均衡描述在 Taylor 规则中列出 \(Y_t^n\)，但没有在第二节完整重述自然模块方程。
 - **模型形式**：论文侧均衡为求解而线性化；实现交叉检查使用非线性水平方程和一阶 Dynare 模拟。
 

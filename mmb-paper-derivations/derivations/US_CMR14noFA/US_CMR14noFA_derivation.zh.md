@@ -27,7 +27,7 @@ $$
 中间品生产者租用有效资本服务并雇用同质劳动：
 
 $$
-Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^* .
+Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^{\ast} .
 $$
 
 企业在 Calvo 摩擦下设定价格。未重新定价的企业按目标通胀和滞后通胀指数化：
@@ -70,7 +70,7 @@ $$
 每个家庭包含所有差异化劳动类型。垄断工会在 Calvo 工资摩擦下设定工资。未重新设定的工资满足：
 
 $$
-W_{it}=(\mu_{z^*,t})^{\iota_\mu}(\mu_{z^*})^{1-\iota_\mu}\tilde{\pi}_{w,t}W_{i,t-1},
+W_{it}=(\mu_{z^{\ast},t})^{\iota_\mu}(\mu_{z^{\ast}})^{1-\iota_\mu}\tilde{\pi}_{w,t}W_{i,t-1},
 \qquad
 \tilde{\pi}_{w,t}=(\pi_t^{target})^{\iota_w}(\pi_{t-1})^{1-\iota_w}.
 $$
@@ -82,10 +82,10 @@ $$
 - **(F1) 重设价格指数递推**（`needs_review`；实现交叉检查 Eqn 1）：
 
 $$
-p_t^*=
+p_t^{\ast}=
 \left[
 (1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
-+\xi_p\left(\frac{\tilde{\pi}_t}{\pi_t}p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
++\xi_p\left(\frac{\tilde{\pi}_t}{\pi_t}p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
 \right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
 $$
 
@@ -110,10 +110,10 @@ $$
 - **(F4) 平稳化产出定义**（`needs_review`；来源生产函数与实现交叉检查辅助变量 `yz`）：
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_{f,t}/(\lambda_{f,t}-1)}
+Y_{z,t}=(p_t^{\ast})^{\lambda_{f,t}/(\lambda_{f,t}-1)}
 \left[
-\epsilon_t\left(u_t\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}\right)^{\alpha}
-\left(H_t(w_t^*)^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
+\epsilon_t\left(u_t\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}\right)^{\alpha}
+\left(H_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
 -\phi
 \right].
 $$
@@ -128,7 +128,7 @@ $$
 
 $$
 r^k_t=\alpha\epsilon_t
-\left(\frac{\Upsilon\mu_{z^*,t}H_t(w_t^*)^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
+\left(\frac{\Upsilon\mu_{z^{\ast},t}H_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
 $$
 
 - **(F7) 边际成本**（`needs_review`；实现交叉检查 Eqn 11）：
@@ -142,8 +142,8 @@ $$
 - **(F8) 资本积累**（`needs_review`；来源方程 6 与实现交叉检查 Eqn 13）：
 
 $$
-\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}
-+\left[1-S\left(\zeta_{I,t}\mu_{z^*,t}\Upsilon I_t/I_{t-1}\right)\right]I_t .
+\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}
++\left[1-S\left(\zeta_{I,t}\mu_{z^{\ast},t}\Upsilon I_t/I_{t-1}\right)\right]I_t .
 $$
 
 - **(F9) 无风险债券 Euler 方程**（`needs_review`；实现交叉检查 Eqn 14）：
@@ -151,7 +151,7 @@ $$
 $$
 \zeta_{c,t}\lambda_{z,t}
 =\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^*,t+1}\pi_{t+1}}
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^{\ast},t+1}\pi_{t+1}}
 \left(1+(1-\tau^d)R_t^e\right)
 \right].
 $$
@@ -160,8 +160,8 @@ $$
 
 $$
 (1+\tau^c)\zeta_{c,t}\lambda_{z,t}
-=\frac{\mu_{z^*,t}\zeta_{c,t}}{C_t\mu_{z^*,t}-bC_{t-1}}
--\beta bE_t\left[\frac{\zeta_{c,t+1}}{C_{t+1}\mu_{z^*,t+1}-bC_t}\right].
+=\frac{\mu_{z^{\ast},t}\zeta_{c,t}}{C_t\mu_{z^{\ast},t}-bC_{t-1}}
+-\beta bE_t\left[\frac{\zeta_{c,t+1}}{C_{t+1}\mu_{z^{\ast},t+1}-bC_t}\right].
 $$
 
 - **(F11) 无金融摩擦资本 Euler 方程**（`needs_review`；论文说明该式替代金融加速器块；实现交叉检查 Eqn 16）：
@@ -169,7 +169,7 @@ $$
 $$
 \zeta_{c,t}\lambda_{z,t}
 =\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^*,t+1}\pi_{t+1}}
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z^{\ast},t+1}\pi_{t+1}}
 (1+R^k_{t+1})
 \right].
 $$
@@ -189,11 +189,11 @@ $$
 0=-\frac{\zeta_{c,t}\lambda_{z,t}}{\mu_{\Upsilon,t}}
 +\zeta_{c,t}\lambda_{z,t}q_t
 \left[
-1-S_t-S'_t\frac{\zeta_{I,t}\mu_{z^*,t}\Upsilon I_t}{I_{t-1}}
+1-S_t-S'_t\frac{\zeta_{I,t}\mu_{z^{\ast},t}\Upsilon I_t}{I_{t-1}}
 \right]
 +\beta E_t\left[
-\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S'_{t+1}}{\mu_{z^*,t+1}\Upsilon}
-\left(\frac{\zeta_{I,t+1}\mu_{z^*,t+1}\Upsilon I_{t+1}}{I_t}\right)^2
+\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S'_{t+1}}{\mu_{z^{\ast},t+1}\Upsilon}
+\left(\frac{\zeta_{I,t+1}\mu_{z^{\ast},t+1}\Upsilon I_{t+1}}{I_t}\right)^2
 \right].
 $$
 
@@ -202,11 +202,11 @@ $$
 - **(F14) 重设工资递推**（`needs_review`；实现交叉检查 Eqn 8）：
 
 $$
-w_t^*=
+w_t^{\ast}=
 \left[
 (1-\xi_w)A_{w,t}^{\lambda_w}
 +\xi_w\left(\frac{\tilde{\pi}_{w,t}}{\pi_{w,t}}
-\mu_{z^*}^{1-\iota_\mu}\mu_{z^*,t}^{\iota_\mu}w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}
+\mu_{z^{\ast}}^{1-\iota_\mu}\mu_{z^{\ast},t}^{\iota_\mu}w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}
 \right]^{(1-\lambda_w)/\lambda_w},
 $$
 
@@ -215,18 +215,18 @@ $$
 - **(F15) 工资辅助变量 $F_w$ 递推**（`needs_review`；实现交叉检查 Eqn 5）：
 
 $$
-F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\frac{1-\tau^l}{\lambda_w}
+F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{1-\tau^l}{\lambda_w}
 +\beta\xi_wE_t\left[\mathcal I^F_{w,t+1}F_{w,t+1}\right].
 $$
 
 - **(F16) 工资辅助变量 $K_w$ 递推**（`needs_review`；实现交叉检查 Eqn 6）：
 
 $$
-K_{w,t}=\zeta_{c,t}\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}
+K_{w,t}=\zeta_{c,t}\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}
 +\beta\xi_wE_t\left[\mathcal I^K_{w,t+1}K_{w,t+1}\right].
 $$
 
-指数化核 $\mathcal I^F_{w,t+1}$ 和 $\mathcal I^K_{w,t+1}$ 依赖工资通胀、目标通胀和 $\mu_{z^*,t+1}$；精确归一化仍为 `needs_review`。
+指数化核 $\mathcal I^F_{w,t+1}$ 和 $\mathcal I^K_{w,t+1}$ 依赖工资通胀、目标通胀和 $\mu_{z^{\ast},t+1}$；精确归一化仍为 `needs_review`。
 
 ## 4. Market Clearing & Identities
 
@@ -234,7 +234,7 @@ $$
 
 $$
 Y_{z,t}=g_t+C_t+\frac{I_t}{\mu_{\Upsilon,t}}
-+\tau_t^{oil}a(u_t)\frac{\bar k_{t-1}}{\mu_{z^*,t}\Upsilon}.
++\tau_t^{oil}a(u_t)\frac{\bar k_{t-1}}{\mu_{z^{\ast},t}\Upsilon}.
 $$
 
 - **(F18) 最终产出会计恒等式**（`needs_review`；实现交叉检查辅助变量 `y`）：
@@ -248,19 +248,19 @@ $$
 $$
 gdp\_obs_t=
 \frac{C_t+I_t/\mu_{\Upsilon,t}+g_t}{C_{t-1}+I_{t-1}/\mu_{\Upsilon,t-1}+g_{t-1}}
-\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F20) 消费增长观测恒等式**（`needs_review`；实现交叉检查观测方程）：
 
 $$
-consumption\_obs_t=\frac{C_t}{C_{t-1}}\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+consumption\_obs_t=\frac{C_t}{C_{t-1}}\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F21) 投资增长观测恒等式**（`needs_review`；实现交叉检查观测方程）：
 
 $$
-investment\_obs_t=\frac{I_t}{I_{t-1}}\frac{\mu_{z^*,t}}{\mu_{z^*}} .
+investment\_obs_t=\frac{I_t}{I_{t-1}}\frac{\mu_{z^{\ast},t}}{\mu_{z^{\ast}}} .
 $$
 
 - **(F22) 相对投资品价格观测恒等式**（`needs_review`；实现交叉检查观测方程）：
@@ -285,7 +285,7 @@ $$
 =\rho_p\log\left(\frac{R^e_{t-1}}{R^e}\right)
 +\frac{1-\rho_p}{R^e}\left[
 \alpha_\pi\pi\log\left(\frac{\pi_{t+1}}{\pi_t^{target}}\right)
-+\frac{\alpha_{\Delta y}}{4}\mu_{z^*}\log(gdp\_obs_t)
++\frac{\alpha_{\Delta y}}{4}\mu_{z^{\ast}}\log(gdp\_obs_t)
 \right].
 $$
 
@@ -316,13 +316,13 @@ $$
 - **(F29) 持久增长冲击**：
 
 $$
-\log(\mu_{z^*,t}/\mu_{z^*})=\rho_{\mu_z}\log(\mu_{z^*,t-1}/\mu_{z^*})+e_{\mu_z,t}.
+\log(\mu_{z^{\ast},t}/\mu_{z^{\ast}})=\rho_{\mu_z}\log(\mu_{z^{\ast},t-1}/\mu_{z^{\ast}})+e_{\mu_z,t}.
 $$
 
 - **(F30) 通胀目标冲击**：
 
 $$
-\log(\pi_t^{target}/\pi^{target})=\rho_{\pi^*}\log(\pi_{t-1}^{target}/\pi^{target})+e_{\pi^*,t}.
+\log(\pi_t^{target}/\pi^{target})=\rho_{\pi^{\ast}}\log(\pi_{t-1}^{target}/\pi^{target})+e_{\pi^{\ast},t}.
 $$
 
 - **(F31) 消费偏好冲击**：
@@ -344,15 +344,15 @@ $$
 论文正文给出稳态增长和校准目标，而不是完整可手工求解的 `steady_state_model`。本一阶段条目记录有来源支撑的顺序：
 
 1. 将归一化冲击设在均值：
-   $\epsilon=1$, $\mu_\Upsilon=1$, $\zeta_c=1$, $\zeta_I=1$, $\lambda_f=1.2$, $\pi^{target}=\pi=1.006010795406775$, $\mu_{z^*}=1.004124413586981$。
+   $\epsilon=1$, $\mu_\Upsilon=1$, $\zeta_c=1$, $\zeta_I=1$, $\lambda_f=1.2$, $\pi^{target}=\pi=1.006010795406775$, $\mu_{z^{\ast}}=1.004124413586981$。
 2. 固定校准参数：
    $\beta=0.998704208591811$, $\delta=0.025$, $\alpha=0.4$, $\lambda_w=1.05$, $\tau^c=0.047$, $\tau^l=0.241$, $\tau^k=0.32$, $\psi_L=0.7705$。
 3. 归一化利用率和资本价格：
-   $u=1$, $q=1$, $p^*=1$, $w^*=1$。
+   $u=1$, $q=1$, $p^{\ast}=1$, $w^{\ast}=1$。
 4. 用债券 Euler 方程和通胀目标确定稳态名义净无风险利率 $R^e$。
 5. 用利用率、租金率、边际成本、生产和零利润固定成本条件求解 $r^k$, $s$, $\bar k$, $H$, $Y_z$, $\phi$。
 6. 在稳态 $S=0$ 且 $S'=0$ 时，由资本积累求投资：
-   $$I=\left[1-\frac{1-\delta}{\mu_{z^*}\Upsilon}\right]\bar k.$$
+   $$I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.$$
 7. 设定政府支出使 $g/(C+I)=\eta_g/(1-\eta_g)$，等价于校准稳态中的 $g/Y=0.20$。
 8. 用资源约束和消费 FOC 确定 $C$, $\lambda_z$ 以及工资和价格块辅助变量 $F_w,K_w,F_p,K_p$。
 
@@ -360,7 +360,7 @@ $$
 
 ## 7. Timing & Form Conventions
 
-- $\bar k_t$ 是期末原始资本。第 $t$ 期生产使用按 $\mu_{z^*,t}\Upsilon$ 缩放并由利用率 $u_t$ 调整后的 $\bar k_{t-1}$。
+- $\bar k_t$ 是期末原始资本。第 $t$ 期生产使用按 $\mu_{z^{\ast},t}\Upsilon$ 缩放并由利用率 $u_t$ 调整后的 $\bar k_{t-1}$。
 - 无金融摩擦模型使用关于 $R^k_{t+1}$ 的家庭资本 Euler 方程；不包含企业家杠杆、违约阈值、信用利差或净值动态。
 - 价格和工资设定均为 Calvo，并对滞后通胀和通胀目标指数化；工资指数化还使用稳态和当期增长项。
 - 模型围绕平稳化非线性均衡进行一阶近似。观测方程按照数据变换报告增长率和水平偏离。
@@ -380,11 +380,11 @@ $$
 | 内生 | `Re`, $R_t^e$ | 无风险政策/债券利率 | (F9), (F24) |
 | 内生 | `pi`, $\pi_t$ | 通胀 | (F1)-(F3), (F24) |
 | 内生 | `pitarget`, $\pi_t^{target}$ | 通胀目标 | (F30) |
-| 内生 | `pstar`, $p_t^*$ | 重设相对价格 | (F1) |
+| 内生 | `pstar`, $p_t^{\ast}$ | 重设相对价格 | (F1) |
 | 内生 | `Fp`, $F_{p,t}$ | 价格设定辅助变量 | (F2) |
 | 内生 | `s`, $s_t$ | 边际成本 | (F7) |
 | 内生 | `h`, $H_t$ | 工时 / 同质劳动 | (F4), (F15)-(F16) |
-| 内生 | `wstar`, $w_t^*$ | 重设工资 | (F14) |
+| 内生 | `wstar`, $w_t^{\ast}$ | 重设工资 | (F14) |
 | 内生 | `wtilde`, $\tilde w_t$ | 平稳化实际工资 | (F7), 工资块 |
 | 内生 | `Fw`, $F_{w,t}$ | 工资设定辅助变量 | (F15) |
 | 内生 | `g`, $g_t$ | 政府需求 | (F26) |
@@ -392,7 +392,7 @@ $$
 | 内生 | `epsil`, $\epsilon_t$ | 暂时性技术水平 | (F25) |
 | 内生 | `lambdaf`, $\lambda_{f,t}$ | 价格加成冲击 | (F27) |
 | 内生 | `muup`, $\mu_{\Upsilon,t}$ | 投资专有技术 | (F28) |
-| 内生 | `muzstar`, $\mu_{z^*,t}$ | 平稳增长因子 | (F29) |
+| 内生 | `muzstar`, $\mu_{z^{\ast},t}$ | 平稳增长因子 | (F29) |
 | 内生 | `zetac`, $\zeta_{c,t}$ | 消费偏好扰动 | (F31) |
 | 内生 | `zetai`, $\zeta_{I,t}$ | 投资边际效率 | (F32) |
 | 内生 | `*_obs` | 观测变量测量方程 | (F19)-(F23) |

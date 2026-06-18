@@ -274,7 +274,7 @@ $$
 
 $$
 \frac{T_t}{P_{Y,t}Y_t}
-=\phi_{B_Y}\left(\frac{B_t}{P_{Y,t}Y_t}-B^*\right).
+=\phi_{B_Y}\left(\frac{B_t}{P_{Y,t}Y_t}-B^{\ast}\right).
 $$
 
 - **(F26) 财政支出份额**：
@@ -301,7 +301,7 @@ $$
 $$
 P_{Y,t}Y_t
 =Q_{C,t}+P_{I,t}Q_{I,t}+P_{H,t}G_t
-+RER_tP_{M,t}^{*}\frac{SIZE^*}{SIZE}IM_t^{*}
++RER_tP_{M,t}^{\ast}\frac{SIZE^{\ast}}{SIZE}IM_t^{\ast}
 -P_{M,t}\left(\frac{IM_{C,t}(1-\Gamma_{IM,C,t})}{\Gamma_{IM,C,t}^{\dagger}}
 +\frac{IM_{I,t}(1-\Gamma_{IM,I,t})}{\Gamma_{IM,I,t}^{\dagger}}\right).
 $$
@@ -333,15 +333,15 @@ $$
 - **(F33) 对外净资产与贸易余额恒等式**（论文侧来源中的精确时序 `needs_review`）：
 
 $$
-TB_t=RER_tP_{M,t}^{*}\frac{SIZE^*}{SIZE}IM_t^{*}-P_{M,t}IM_t,
+TB_t=RER_tP_{M,t}^{\ast}\frac{SIZE^{\ast}}{SIZE}IM_t^{\ast}-P_{M,t}IM_t,
 \quad
-\frac{B_t^F}{R_{t-1}^{*}}=B_{t-1}^F+\frac{TB_{t-1}}{RER_{t-1}}.
+\frac{B_t^F}{R_{t-1}^{\ast}}=B_{t-1}^F+\frac{TB_{t-1}}{RER_{t-1}}.
 $$
 
 - **(F34) 世界外国债券出清**：
 
 $$
-SIZE\cdot B_t^F+SIZE^*\cdot B_t^{F,*}=0.
+SIZE\cdot B_t^F+SIZE^{\ast}\cdot B_t^{F,\ast}=0.
 $$
 
 ## 5. Exogenous Processes
@@ -406,7 +406,7 @@ $$
 $$
 
 $$
-\frac{T}{P_YY}=\phi_{B_Y}\left(\frac{B}{P_YY}-B^*\right).
+\frac{T}{P_YY}=\phi_{B_Y}\left(\frac{B}{P_YY}-B^{\ast}\right).
 $$
 
 实现交叉检查中的美国校准使用 `US_BETA=0.992638`, `US_SIGMA=1`, `US_KAPPA=0.67`, `US_OMEGA=0.2651`, `US_ALPHA=0.30`, `US_DELTA=0.025`, `US_GYBAR=0.16`, `US_TRYBAR=0.079732`, `US_TAUCBAR=0.077`, `US_TAUKBAR=0.184123`, `US_TAUNBAR=0.154`, `US_TAUWHBAR=0.071`, `US_TAUWFBAR=0.071`。这些参数值是实现证据，不是独立的论文侧公式。

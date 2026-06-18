@@ -158,7 +158,7 @@ The coefficients are:
 
 $$
 c_1=\frac{\lambda/\gamma}{1+\lambda/\gamma},\qquad
-c_2=\frac{(\sigma_c-1)(W^h_*L_*/C_*)}{\sigma_c(1+\lambda/\gamma)},\qquad
+c_2=\frac{(\sigma_c-1)(W^h_\astL_\ast/C_\ast)}{\sigma_c(1+\lambda/\gamma)},\qquad
 c_3=\frac{1-\lambda/\gamma}{\sigma_c(1+\lambda/\gamma)}.
 $$
 
@@ -186,7 +186,7 @@ where:
 
 $$
 q_1=\beta\gamma^{-\sigma_c}(1-\delta)
-=\frac{1-\delta}{R^k_*+1-\delta}.
+=\frac{1-\delta}{R^k_\ast+1-\delta}.
 $$
 
 **(F5) Aggregate production function**

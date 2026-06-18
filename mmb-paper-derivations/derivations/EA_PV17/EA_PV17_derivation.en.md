@@ -122,7 +122,7 @@ $$
 \left[
 1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2
 -\gamma_b\kappa\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)\frac{B_t^S}{B_t^{L,H}}
-+\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)\frac{e_tP_t^{N*}}{P_t^N}
++\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)\frac{e_tP_t^{N\ast}}{P_t^N}
 \right].
 $$
 
@@ -130,10 +130,10 @@ $$
 
 $$
 \beta E_t\left(\frac{\lambda_{t+1}P_te_{t+1}}{\lambda_tP_{t+1}e_t}\right)
-=E_t\left(\frac{P_t^{N*}}{\delta_b^*P_{t+1}^{N*}+c^*}\right)
+=E_t\left(\frac{P_t^{N\ast}}{\delta_b^{\ast}P_{t+1}^{N\ast}+c^{\ast}}\right)
 \left[
-1+\frac{\gamma_b^*}{2}\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)^2
--\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)\frac{B_t^{L,H}}{B_t^{L,H*}}
+1+\frac{\gamma_b^{\ast}}{2}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)^2
+-\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)\frac{B_t^{L,H}}{B_t^{L,H\ast}}
 \right].
 $$
 
@@ -142,7 +142,7 @@ $$
 $$
 \beta E_t\left(\frac{\lambda_{t+1}}{\lambda_t}\right)
 =E_t\left(\frac{e_tP_{t+1}}{e_{t+1}P_t}\right)
-\left[\frac{1}{1+i_t^*}+\gamma_f\frac{e_t(B_t^*-\bar{B}^*)}{P_t}\right].
+\left[\frac{1}{1+i_t^{\ast}}+\gamma_f\frac{e_t(B_t^{\ast}-\bar{B}^{\ast})}{P_t}\right].
 $$
 
 **(F11) Capital Euler condition**
@@ -278,19 +278,19 @@ $$
 **(F30) Imports**
 
 $$
-M_t=s_m\left(\frac{e_tP_t^*}{P_t^C}\right)^{-\sigma_m}Z_t.
+M_t=s_m\left(\frac{e_tP_t^{\ast}}{P_t^C}\right)^{-\sigma_m}Z_t.
 $$
 
 **(F31) Exports**
 
 $$
-X_t=s_m^*\left(\frac{P_t}{e_tP_t^{C*}}\right)^{-\sigma_x}Z_t^*.
+X_t=s_m^{\ast}\left(\frac{P_t}{e_tP_t^{C\ast}}\right)^{-\sigma_x}Z_t^{\ast}.
 $$
 
 **(F32) Trade balance**
 
 $$
-TB_t=P_tX_t-e_tP_t^*M_t.
+TB_t=P_tX_t-e_tP_t^{\ast}M_t.
 $$
 
 ## 5. Exogenous Processes
@@ -397,7 +397,7 @@ No Dynare `steady` or `check` run was executed for this archive entry.
 | Parameter | $\delta_k$ / `ea_delta` | Private capital depreciation | 0.015 |
 | Parameter | $\delta_b$ / `EA_deltabl` | Long-bond coupon depreciation | 0.975 |
 | Parameter | $\gamma_b$ / `EA_gamb` | Short-vs-long bond portfolio adjustment cost | 0.00015 approximately |
-| Parameter | $\gamma_b^*$ / `EA_gambd` | Domestic-vs-foreign long-bond adjustment cost | 0.0013 in table |
+| Parameter | $\gamma_b^{\ast}$ / `EA_gambd` | Domestic-vs-foreign long-bond adjustment cost | 0.0013 in table |
 | Parameter | $\gamma_K,\gamma_I$ / `ea_gami`, `ea_gami2` | Capital and investment adjustment costs | 20.0 and 75.0 |
 | Parameter | $\gamma_N,\gamma_P,\gamma_W$ / `ea_gaml`, `ea_gamp`, `ea_gamw` | Labour, price, and wage adjustment costs | Calibration table |
 | Parameter | $s^l$ / `ea_slc` | Liquidity-constrained household share | 0.40 |

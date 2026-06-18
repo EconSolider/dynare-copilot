@@ -224,7 +224,7 @@ $$
 
 - **(F25) 灵活经济政府预算约束**：
 $$
-b_{f,t}=R_*\left(\frac{b_{f,t-1}}{\pi_*}+g_t-t_{f,t}\right).
+b_{f,t}=R_\ast\left(\frac{b_{f,t-1}}{\pi_\ast}+g_t-t_{f,t}\right).
 $$
 
 - **(F26) 灵活经济财政规则**：
@@ -251,7 +251,7 @@ $$
 
 - **(F30) 粘性经济政府预算约束**：
 $$
-b_t=R_*\left(\frac{b_{t-1}}{\pi_*}+g_t-t_t\right).
+b_t=R_\ast\left(\frac{b_{t-1}}{\pi_\ast}+g_t-t_t\right).
 $$
 
 - **(F31) 粘性经济财政规则**：
@@ -353,7 +353,7 @@ MMB 实现在 model 块之前计算非零稳态比率和常数。来源支持的
 
 1. 设定季度稳态通胀和趋势增长：
 $$
-\pi_* = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
+\pi_\ast = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
 \gamma = 1+\frac{\bar{\gamma}^{obs}}{100}.
 $$
 
@@ -365,7 +365,7 @@ $$
 
 3. 计算稳态名义回报和资本租赁回报：
 $$
-R_*=\frac{\pi_*}{\beta\gamma^{-\sigma_c}},\qquad
+R_\ast=\frac{\pi_\ast}{\beta\gamma^{-\sigma_c}},\qquad
 \bar{r}^k=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
 $$
 

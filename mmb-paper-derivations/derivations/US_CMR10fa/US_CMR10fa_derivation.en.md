@@ -27,7 +27,7 @@ $$
 Intermediate producers rent capital services and hire homogeneous labor to produce:
 
 $$
-Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^*
+Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^{\ast}
 $$
 
 when the right side is positive. They face working-capital finance in the baseline paper, but `US_CMR10fa` switches off working-capital financing in the financial-accelerator variant. Price setting follows Calvo adjustment with indexation:
@@ -64,7 +64,7 @@ $$
 Households consume, save, hold assets, and supply differentiated labor. In the full model they receive liquidity services from monetary assets; in this financial-accelerator variant those liquidity terms are set to zero. Wage setting follows Calvo adjustment with wage indexation:
 
 $$
-W_{j,t}=\tilde{\pi}_{w,t}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta W_{j,t-1},
+W_{j,t}=\tilde{\pi}_{w,t}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta W_{j,t-1},
 \qquad
 \tilde{\pi}_{w,t}=(\pi_t^{target})^{\iota_w}(\pi_{t-1})^{1-\iota_w}.
 $$
@@ -83,14 +83,14 @@ $$
 - **(F2) Alternative marginal cost measure** (`needs_review`, source A.2):
 
 $$
-s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^*l_t}{u_tk_t}\right)^{1-\alpha}}.
+s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^{\ast}l_t}{u_tk_t}\right)^{1-\alpha}}.
 $$
 
 - **(F3) Calvo price index recursion for reset price** (`needs_review`, source A.3):
 
 $$
-p_t^*-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
-+\xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
+p_t^{\ast}-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
++\xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
 $$
 
 - **(F4) Price auxiliary recursion $F_p$** (`needs_review`, source A.4):
@@ -110,9 +110,9 @@ $$
 - **(F6) Scaled output definition** (`needs_review`, source A.6):
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_f/(\lambda_f-1)}
-\left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^*}\right)^\alpha
-\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1-\alpha}-\phi\right\}.
+Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
+\left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}\right)^\alpha
+\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1-\alpha}-\phi\right\}.
 $$
 
 **Capital producers and entrepreneurs**
@@ -121,14 +121,14 @@ $$
 
 $$
 E_t\left[\lambda_{z,t}q_tF_{1,t}-\lambda_{z,t}\frac{1}{\mu_{\Upsilon,t}}
-+\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^*\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
++\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
 $$
 
 - **(F8) Capital accumulation** (`needs_review`, source A.8):
 
 $$
-\bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^*\Upsilon}\bar k_t+
-\left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^*\Upsilon}{i_{t-1}}\right)\right]i_t.
+\bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^{\ast}\Upsilon}\bar k_t+
+\left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^{\ast}\Upsilon}{i_{t-1}}\right)\right]i_t.
 $$
 
 - **(F9) Capital utilization** (`needs_review`, source A.9):
@@ -161,7 +161,7 @@ $$
 - **(F13) Net worth law of motion** (`needs_review`, source A.13):
 
 $$
-n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^*}
+n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^{\ast}}
 \left\{(1+R_t^k)\bar k_tq_{t-1}
 -\left[1+R_t^e+
 \frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega_t)(1+R_t^k)\bar k_tq_{t-1}}{\bar k_tq_{t-1}-n_t}\right]
@@ -173,8 +173,8 @@ $$
 - **(F14) Marginal utility of consumption** (`needs_review`, source A.19):
 
 $$
-E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^*\zeta_{c,t}}{c_t\mu_{z,t}^*-bc_{t-1}}
-+b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^*-bc_t}\right\}=0.
+E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
++b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right\}=0.
 $$
 
 - **(F15) Consumption decision** (`needs_review`, liquidity term inactive in `US_CMR10fa`; source A.20):
@@ -186,16 +186,16 @@ $$
 - **(F16) Calvo wage reset index** (`needs_review`, source A.21):
 
 $$
-w_t^*=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
-+\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
+w_t^{\ast}=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
++\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F17) Wage auxiliary recursion $F_w$** (`needs_review`, source A.22):
 
 $$
-E_t\left\{(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
-+\beta\xi_w(\mu_{z^*})^{(1-\vartheta)/(1-\lambda_w)}
-(\mu_{z^*,t+1})^{\vartheta/(1-\lambda_w)-1}
+E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
++\beta\xi_w(\mu_{z^{\ast}})^{(1-\vartheta)/(1-\lambda_w)}
+(\mu_{z^{\ast},t+1})^{\vartheta/(1-\lambda_w)-1}
 \left(\frac{1}{\pi_{w,t+1}}\right)^{\lambda_w/(1-\lambda_w)}
 \frac{\tilde\pi_{w,t+1}^{1/(1-\lambda_w)}}{\pi_{t+1}}F_{w,t+1}-F_{w,t}\right\}=0.
 $$
@@ -203,14 +203,14 @@ $$
 - **(F18) Wage auxiliary recursion $K_w$** (`needs_review`, source A.23):
 
 $$
-E_t\left\{\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
-+\beta\xi_wE_t\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}-K_{w,t}\right\}=0.
+E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
++\beta\xi_wE_t\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}-K_{w,t}\right\}=0.
 $$
 
 - **(F19) Risk-free illiquid asset Euler equation** (`needs_review`, source A.24):
 
 $$
-E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^*\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
+E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
 $$
 
 The source also lists money-choice FOCs A.25-A.27. They are part of the full baseline model but are inactive in `US_CMR10fa` because the financial-accelerator variant eliminates liquidity utility and monetary aggregate choice.
@@ -220,8 +220,8 @@ The source also lists money-choice FOCs A.25-A.27. They are part of the full bas
 - **(F20) Resource constraint** (`needs_review`, source A.30):
 
 $$
-\frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^*}\frac{1}{\pi_t}
-+\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^*}
+\frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^{\ast}}\frac{1}{\pi_t}
++\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}
 +g_t+c_t+\frac{i_t}{\mu_{\Upsilon,t}}
 +\Theta\frac{1-\gamma_t}{\gamma_t}(n_{t+1}-w^e)
 =Y_{z,t}.
@@ -230,7 +230,7 @@ $$
 - **(F21) Total bank loans / credit definition** (`needs_review`, source A.32):
 
 $$
-b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^*\Upsilon}
+b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^{\ast}\Upsilon}
 +(q_t\bar k_{t+1}-n_{t+1}).
 $$
 
@@ -273,13 +273,13 @@ Baseline-only money and reserves identities A.29, A.31, A.34, and A.35 are exclu
 
 $$
 z_t=\mu_{z,t}z_{t-1},\qquad
-\mu_{z^*,t}=\mu_{z,t}\Upsilon^{\alpha/(1-\alpha)}.
+\mu_{z^{\ast},t}=\mu_{z,t}\Upsilon^{\alpha/(1-\alpha)}.
 $$
 
 - **(F27) Government spending scaling** (`needs_review`, source section 2.6):
 
 $$
-G_t=z_t^*g_t.
+G_t=z_t^{\ast}g_t.
 $$
 
 - **(F28) Inflation target process** (`needs_review`, source section 2.9):
@@ -298,7 +298,7 @@ $$
 
 $$
 \hat x_t=\rho_x\hat x_{t-1}+\varepsilon_t^x,\qquad
-x\in\{\mu_{\Upsilon},g,\mu_{z^*},\gamma,\epsilon,\zeta_c,\zeta_i,\tau^{oil},\lambda_f\}.
+x\in\{\mu_{\Upsilon},g,\mu_{z^{\ast}},\gamma,\epsilon,\zeta_c,\zeta_i,\tau^{oil},\lambda_f\}.
 $$
 
 - **(F31) Monetary policy shock** (`needs_review`, source section 2.9):
@@ -314,17 +314,17 @@ The source paper reports that the model is first rewritten in stationary variabl
 - **(F32) Balanced-growth stationarization** (`needs_review`, source Appendix A):
 
 $$
-\bar k_{t+1}=\frac{\bar K_{t+1}}{z_t^*\Upsilon^t},\quad
-i_t=\frac{I_t}{z_t^*\Upsilon^t},\quad
-Y_{z,t}=\frac{Y_t}{z_t^*},\quad
-c_t=\frac{C_t}{z_t^*},\quad
+\bar k_{t+1}=\frac{\bar K_{t+1}}{z_t^{\ast}\Upsilon^t},\quad
+i_t=\frac{I_t}{z_t^{\ast}\Upsilon^t},\quad
+Y_{z,t}=\frac{Y_t}{z_t^{\ast}},\quad
+c_t=\frac{C_t}{z_t^{\ast}},\quad
 q_t=\Upsilon^t\frac{Q_{\bar K',t}}{P_t}.
 $$
 
 - **(F33) Zero steady-state installation cost conditions** (`needs_review`, source section 2.2):
 
 $$
-S(\mu_z^*\Upsilon)=0,\qquad S'(\mu_z^*\Upsilon)=0,\qquad S''>0.
+S(\mu_z^{\ast}\Upsilon)=0,\qquad S'(\mu_z^{\ast}\Upsilon)=0,\qquad S''>0.
 $$
 
 - **(F34) Utilization cost normalization** (`needs_review`, source section 2.3):
@@ -344,7 +344,7 @@ The source tables also report US target ratios including $i/y=0.22$, $c/y=0.58$,
 
 ## 7. Timing & Form Conventions
 
-- The derivation uses the paper's stationary scaled variables: output and consumption scale by $z_t^*$, while capital and investment scale by $z_t^*\Upsilon^t$.
+- The derivation uses the paper's stationary scaled variables: output and consumption scale by $z_t^{\ast}$, while capital and investment scale by $z_t^{\ast}\Upsilon^t$.
 - Capital purchased at the end of period $t$ is $\bar K_{t+1}$; production at date $t$ uses previously installed capital services. The scaled accumulation equation therefore determines $\bar k_{t+1}$ from $\bar k_t$ and $i_t$.
 - Entrepreneurial net worth $n_{t+1}$ is the end-of-period purchasing power used in the time-$t$ capital market and is affected by the financial wealth shock $\gamma_t$ and by credit losses tied to the earlier risk shock realization.
 - The contract cutoff $\bar\omega_{t+1}$ is dated by the period in which the loan payoff is observed; the risk dispersion governing the contract is known when the loan is originated.
@@ -359,7 +359,7 @@ The source tables also report US target ratios including $i/y=0.22$, $c/y=0.58$,
 | Endogenous | $s_t$ / `sU` | Real marginal cost | (F1), (F2) |
 | Endogenous | $r_t^k$ / `rkU` | Rental rate of capital services | (F2), (F9) |
 | Endogenous | $\tilde w_t$ / `wU` | Scaled real wage | (F1), (F17) |
-| Endogenous | $p_t^*$ / `pstarU` | Relative reset price | (F3) |
+| Endogenous | $p_t^{\ast}$ / `pstarU` | Relative reset price | (F3) |
 | Endogenous | $F_{p,t}$ / `FpXU` | Price Calvo auxiliary | (F4) |
 | Endogenous | $K_{p,t}$ | Price Calvo auxiliary | (F5) |
 | Endogenous | $Y_{z,t}$ / `YU` | Scaled output | (F6), (F20) |
@@ -373,7 +373,7 @@ The source tables also report US target ratios including $i/y=0.22$, $c/y=0.58$,
 | Endogenous | $u_{c,t}^z$ / `uzcU` | Scaled marginal utility of consumption | (F14), (F15) |
 | Endogenous | $\lambda_{z,t}$ / `lambdazU` | Scaled household multiplier | (F15), (F19) |
 | Endogenous | $c_t$ / `cU` | Scaled consumption | (F14), (F20) |
-| Endogenous | $w_t^*$ / `wstarU` | Relative reset wage | (F16), (F17), (F18) |
+| Endogenous | $w_t^{\ast}$ / `wstarU` | Relative reset wage | (F16), (F17), (F18) |
 | Endogenous | $F_{w,t}$ / `FwXU` | Wage Calvo auxiliary | (F17) |
 | Endogenous | $K_{w,t}$ | Wage Calvo auxiliary | (F18) |
 | Endogenous | $R_{t+1}^T,R_{t+1}^e$ / `ReXU` | Risk-free / deposit opportunity return | (F11), (F19), (F23) |
@@ -381,7 +381,7 @@ The source tables also report US target ratios including $i/y=0.22$, $c/y=0.58$,
 | Endogenous | $b_t^{Tot}$ / `BU` | Total bank loans / credit | (F21), (F24), (F25) |
 | Endogenous | $P_t^e$ / `PrU` | Average credit spread / premium | (F22), (F24), (F25) |
 | Exogenous shock | $\mu_{\Upsilon,t}$ / `muupU` | Investment-specific technology / relative investment price | (F7), (F20), (F30) |
-| Exogenous shock | $\mu_{z^*,t}$ / `muzstarU` | Persistent balanced-growth shock | (F26), (F30) |
+| Exogenous shock | $\mu_{z^{\ast},t}$ / `muzstarU` | Persistent balanced-growth shock | (F26), (F30) |
 | Exogenous shock | $\gamma_t$ / `gammaU` | Financial wealth / entrepreneur survival shock | (F13), (F30) |
 | Exogenous shock | $\epsilon_t$ / `epsilU` | Transitory technology shock | (F1), (F6), (F30) |
 | Exogenous shock | $\sigma_t$ / `sigmaU` | Entrepreneurial risk shock | (F11), (F29) |

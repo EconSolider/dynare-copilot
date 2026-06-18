@@ -11,7 +11,7 @@
 - Frequency and sample: bimonthly model estimated for the modern 1989/1990-2009 sample and evaluated against CPI Research Database reset-price statistics.
 - Agents: final-good aggregator, differentiated intermediate-goods firms, representative household, wage-setting labor union, fiscal authority, and central bank.
 - Main frictions: external habit, investment adjustment costs, variable capital utilization, Calvo prices and wages, Kimball goods/labor curvature, sticky wages, monetary-policy smoothing, and seven structural shocks.
-- Reset-price layer: the paper constructs empirical and model-consistent reset inflation $\pi^*_t$ from price changers and Calvo timing; this measurement object is central to the archive entry even though it is not a standard DSGE optimization condition.
+- Reset-price layer: the paper constructs empirical and model-consistent reset inflation $\pi^{\ast}_t$ from price changers and Calvo timing; this measurement object is central to the archive entry even though it is not a standard DSGE optimization condition.
 
 ## 2. Optimization Problems
 
@@ -92,8 +92,8 @@ $$
 
 $$
 q_{f,t}=-rr_{f,t}+b_t\frac{\sigma_c(1+h/\gamma)}{1-h/\gamma}
-+\frac{r^k_*}{r^k_*+1-\delta}E_tr^k_{f,t+1}
-+\frac{1-\delta}{r^k_*+1-\delta}E_tq_{f,t+1}.
++\frac{r^k_\ast}{r^k_\ast+1-\delta}E_tr^k_{f,t+1}
++\frac{1-\delta}{r^k_\ast+1-\delta}E_tq_{f,t+1}.
 $$
 
 **(F7) Flexible consumption Euler equation**
@@ -108,7 +108,7 @@ $$
 **(F8) Flexible resource constraint**
 
 $$
-y_{f,t}=c_yc_{f,t}+i_yi_{f,t}+g_t+r^k_*k_yz_{f,t}.
+y_{f,t}=c_yc_{f,t}+i_yi_{f,t}+g_t+r^k_\astk_yz_{f,t}.
 $$
 
 **(F9) Flexible production function**
@@ -165,8 +165,8 @@ $$
 
 $$
 q_t=-r_t+E_t\pi_{t+1}+b_t\frac{\sigma_c(1+h/\gamma)}{1-h/\gamma}
-+\frac{r^k_*}{r^k_*+1-\delta}E_tr^k_{t+1}
-+\frac{1-\delta}{r^k_*+1-\delta}E_tq_{t+1}.
++\frac{r^k_\ast}{r^k_\ast+1-\delta}E_tr^k_{t+1}
++\frac{1-\delta}{r^k_\ast+1-\delta}E_tq_{t+1}.
 $$
 
 **(F18) Sticky consumption Euler equation**
@@ -181,7 +181,7 @@ $$
 **(F19) Sticky resource constraint**
 
 $$
-y_t=c_yc_t+i_yi_t+g_t+r^k_*k_yz_t.
+y_t=c_yc_t+i_yi_t+g_t+r^k_\astk_yz_t.
 $$
 
 **(F20) Sticky production function**
@@ -251,21 +251,21 @@ $$
 
 **(F27) Reset-price inflation statistic**
 
-For item $i$, let $I_{i,t}$ indicate a price change and let $p^*_{i,t}$ be the reset price. The paper defines:
+For item $i$, let $I_{i,t}$ indicate a price change and let $p^{\ast}_{i,t}$ be the reset price. The paper defines:
 
 $$
-p^*_{i,t}=
+p^{\ast}_{i,t}=
 \begin{cases}
 p_{i,t}, & p_{i,t}\ne p_{i,t-1},\\
-p^*_{i,t-1}+\pi^*_t, & p_{i,t}=p_{i,t-1},
+p^{\ast}_{i,t-1}+\pi^{\ast}_t, & p_{i,t}=p_{i,t-1},
 \end{cases}
 $$
 
 and aggregate reset inflation:
 
 $$
-\pi^*_t=
-\frac{\sum_i\omega_{i,t}(p_{i,t}-p^*_{i,t-1})I_{i,t}}
+\pi^{\ast}_t=
+\frac{\sum_i\omega_{i,t}(p_{i,t}-p^{\ast}_{i,t-1})I_{i,t}}
 {\sum_i\omega_{i,t}I_{i,t}}.
 $$
 
@@ -274,7 +274,7 @@ $$
 Under Calvo timing with price-change frequency $\lambda$, the reset-price statistic satisfies:
 
 $$
-\pi^*_t=\frac{\pi_t-(1-\lambda)\pi_{t-1}}{\lambda}.
+\pi^{\ast}_t=\frac{\pi_t-(1-\lambda)\pi_{t-1}}{\lambda}.
 $$
 
 **(F29) Calvo reset-to-actual volatility ratio**
@@ -282,7 +282,7 @@ $$
 The paper uses the following implication to test time-dependent pricing:
 
 $$
-\frac{\sigma_{\pi^*}}{\sigma_{\pi}}
+\frac{\sigma_{\pi^{\ast}}}{\sigma_{\pi}}
 =\sqrt{1+\frac{2(1-\rho)(1-\lambda)}{\lambda^2}}.
 $$
 
@@ -375,7 +375,7 @@ The article body does not provide a complete nonlinear steady-state derivation; 
 - Capital timing: production uses predetermined installed capital services, with $k_t=kp_{t-1}+z_t$ and the installed-capital law determining $kp_t$.
 - Policy rule: the nominal rate responds to inflation and the output gap relative to flexible-price output.
 - Price setting: the paper's reset-price analysis requires no nominal price indexation for nonadjusting prices; exact implementation alignment is `needs_review`.
-- Reset inflation: $\pi^*_t$ is a measurement/statistical object built from changing prices, not a separate optimizing agent's FOC.
+- Reset inflation: $\pi^{\ast}_t$ is a measurement/statistical object built from changing prices, not a separate optimizing agent's FOC.
 - Runtime validation: not performed; no Dynare run was executed.
 
 ## 8. Variable & Parameter Reference Table
@@ -410,7 +410,7 @@ The article body does not provide a complete nonlinear steady-state derivation; 
 | Endogenous | `a`, `b`, `g`, `qs`, `ms`, `spinf`, `sw` | Shock states | (F30)-(F36) |
 | Endogenous | `epinfma`, `ewma` | MA auxiliaries in implementation | (F35), (F36) |
 | Exogenous | `ea`, `eb`, `eg`, `eqs`, `em`, `epinf`, `ew` | Structural innovations | (F30)-(F36) |
-| Measurement | $\pi^*_t$ | Reset-price inflation statistic | (F27), (F28), (F29) |
+| Measurement | $\pi^{\ast}_t$ | Reset-price inflation statistic | (F27), (F28), (F29) |
 | Parameter | `cbeta`, $\beta$ | Discount factor | (F5)-(F7), (F16)-(F18), Section 6 |
 | Parameter | `cgamma`, $\gamma$ | Trend growth | (F5)-(F7), (F16)-(F18), Section 6 |
 | Parameter | `csigma`, $\sigma_c$ | Consumption curvature | (F6), (F7), (F10), (F17), (F18), (F22) |

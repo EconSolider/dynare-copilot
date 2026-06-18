@@ -218,7 +218,7 @@ $$
 - **(F20) Optimal reset price** (`needs_review` for OCR around \(mc\), time subscripts, and discount factor):
 
 $$
-P_t^*=\left(\frac{\varepsilon}{\varepsilon-1}\right)
+P_t^{\ast}=\left(\frac{\varepsilon}{\varepsilon-1}\right)
 \frac{
 E_t\sum_{i=0}^{\infty}\nu^i\Delta_{i,t+i}mc_{t+i}Y_{t+i}
 \left(\frac{1}{P_{t+i}}\right)^{-\varepsilon}
@@ -231,7 +231,7 @@ $$
 - **(F21) Aggregate price index under Calvo adjustment**:
 
 $$
-P_t=\left[\nu P_{t-1}^{1-\varepsilon}+(1-\nu)(P_t^*)^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
+P_t=\left[\nu P_{t-1}^{1-\varepsilon}+(1-\nu)(P_t^{\ast})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -261,7 +261,7 @@ $$
 - **(F25) Price-dispersion law of motion** (`needs_review`: Markdown omits the price ratio inside the integral definition of \(\Gamma_t\)):
 
 $$
-\Gamma_t=(1-\nu)\left(\frac{P_t^*}{P_t}\right)^{-\varepsilon}
+\Gamma_t=(1-\nu)\left(\frac{P_t^{\ast}}{P_t}\right)^{-\varepsilon}
 +\nu \pi_t^\varepsilon \Gamma_{t-1}.
 $$
 
@@ -417,7 +417,7 @@ $$
 | Endogenous | \(\tau_t\) / `taut` | Macroprudential multiplier | (F30), (F31) |
 | Endogenous | \(cg_t\) / `cgn`, `cg` | Nominal credit growth | (F27), (F28), (F31) |
 | Endogenous | \(Y_t\) / `yt` | Final output | (F17), (F22), (F24) |
-| Endogenous | \(P_t,P_t^*,\pi_t\) / `pit`, `pstart` | Aggregate price, reset price, inflation | (F18), (F20), (F21), (F25) |
+| Endogenous | \(P_t,P_t^{\ast},\pi_t\) / `pit`, `pstart` | Aggregate price, reset price, inflation | (F18), (F20), (F21), (F25) |
 | Endogenous | \(mc_t\) / `mct` | Real marginal cost | (F20), markup/return equations |
 | Endogenous | \(\Gamma_t\) / `llt` in paper notation differs from implementation | Price dispersion | (F25) |
 | Exogenous | \(e_t\) / `pref` | Preference shock | (F33) |

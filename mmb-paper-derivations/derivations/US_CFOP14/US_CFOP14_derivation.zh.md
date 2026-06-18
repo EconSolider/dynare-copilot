@@ -239,8 +239,8 @@ $$
 
 $$
 \hat{R}_t=\rho_R\hat{R}_{t-1}
-+(1-\rho_R)\left[\phi_{\pi}\hat{\pi}_t+\phi_x(\hat{x}_t-\hat{x}_t^*)\right]
-+\phi_{dx}\left[(\hat{x}_t-\hat{x}_{t-1})-(\hat{x}_t^*-\hat{x}_{t-1}^*)\right]
++(1-\rho_R)\left[\phi_{\pi}\hat{\pi}_t+\phi_x(\hat{x}_t-\hat{x}_t^{\ast})\right]
++\phi_{dx}\left[(\hat{x}_t-\hat{x}_{t-1})-(\hat{x}_t^{\ast}-\hat{x}_{t-1}^{\ast})\right]
 +\hat{\eta}_{mp,t}.
 $$
 

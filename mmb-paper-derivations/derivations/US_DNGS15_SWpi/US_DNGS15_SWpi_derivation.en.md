@@ -45,7 +45,7 @@ Retail price setters and wage setters face Calvo adjustment frictions with index
 
 ### 2.5 Monetary Authority
 
-The baseline rule reacts to inflation and the output gap relative to the flexible-price/wage counterfactual. The SWpi variant replaces the constant inflation target with a drifting target \(\pi_t^*\); the Rep-MMB cross-check fixes `pist` as a parameter and comments out its shock process, so the time-varying-target law is retained here as paper-side source structure but marked as an implementation difference.
+The baseline rule reacts to inflation and the output gap relative to the flexible-price/wage counterfactual. The SWpi variant replaces the constant inflation target with a drifting target \(\pi_t^{\ast}\); the Rep-MMB cross-check fixes `pist` as a parameter and comments out its shock process, so the time-varying-target law is retained here as paper-side source structure but marked as an implementation difference.
 
 ## 3. First-Order Conditions
 
@@ -71,7 +71,7 @@ c_t ={}& -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t) \\
 &+\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_*l_*}{c_*}(l_t-E_t[l_{t+1}]).
+\frac{w_\astl_\ast}{c_\ast}(l_t-E_t[l_{t+1}]).
 \end{aligned}
 $$
 
@@ -90,16 +90,16 @@ $$
 
 $$
 \bar{k}_t =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
 $$
 
 - **(F6) Riskless-return arbitrage without the full financial-frictions block**:
 
 $$
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^k]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^k]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^k]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^k]
 -q_t^k
 = R_t+b_t-E_t[\pi_{t+1}].
 $$
@@ -140,8 +140,8 @@ $$
 
 $$
 y_t =
-g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal{I}\{\rho_z<1\}\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
@@ -202,7 +202,7 @@ $$
 $$
 R_t =
 \rho_R R_{t-1}
-+(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\big)
++(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
 $$
@@ -210,17 +210,17 @@ $$
 - **(F18) Time-varying inflation target process**:
 
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*+\sigma_{\pi^*}\varepsilon_{\pi^*,t}.
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
-`needs_review`: the Rep-MMB `US_DNGS15_SWpi_rep.mod` uses `pist` as a fixed parameter and comments out the \(\pi_t^*\) shock process, while the paper-side SWpi section defines the process in (F18).
+`needs_review`: the Rep-MMB `US_DNGS15_SWpi_rep.mod` uses `pist` as a fixed parameter and comments out the \(\pi_t^{\ast}\) shock process, while the paper-side SWpi section defines the process in (F18).
 
 - **(F19) Gross nominal return on capital definition used in the implementation cross-check**:
 
 $$
 \tilde{R}_t^k-\pi_t =
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k.
 $$
 
@@ -244,7 +244,7 @@ c_t^f ={}&
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}^f-z_t) \\
 &+\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}^f+z_{t+1}]
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_*l_*}{c_*}(l_t^f-E_t[l_{t+1}^f]).
+\frac{w_\astl_\ast}{c_\ast}(l_t^f-E_t[l_{t+1}^f]).
 \end{aligned}
 $$
 
@@ -263,9 +263,9 @@ $$
 
 $$
 \bar{k}_t^f=
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}^f-z_t)
-+\frac{i_*}{\bar{k}_*}i_t^f
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t^f
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
 $$
 
 - **(F24) Flexible-price/wage effective capital**:
@@ -302,9 +302,9 @@ $$
 - **(F29) Flexible-price/wage resource constraint**:
 
 $$
-y_t^f=g_*g_t+\frac{c_*}{y_*}c_t^f+\frac{i_*}{y_*}i_t^f
-+\frac{r_*^k k_*}{y_*}u_t^f
--g_*\frac{1}{1-\alpha}\tilde{z}_t.
+y_t^f=g_\astg_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
++\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
+-g_\ast\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F30) Flexible-price/wage labor supply / MRS**:
@@ -320,8 +320,8 @@ $$
 
 $$
 q_t^{k,f}=
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^{k,f}]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^{k,f}]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^{k,f}]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^{k,f}]
 -r_t^f
 +\frac{\sigma_c(1+h e^{-\gamma})}{1-h e^{-\gamma}}b_t.
 $$
@@ -393,7 +393,7 @@ $$
 - **Inflation-target convention**:
 
 $$
-\pi=0,\qquad R=0,\qquad \pi^*=0
+\pi=0,\qquad R=0,\qquad \pi^{\ast}=0
 $$
 
 when the target is represented as a deviation from its mean. The Rep-MMB file instead calibrates `pist = 1.0069` and uses `pi - pist` in the policy rule despite `model(linear)`, which should be reviewed before promotion.
@@ -469,7 +469,7 @@ Runtime validation was not performed. No `resid`, `steady`, `check`, or `stoch_s
 | `psi_law` | Innovation to \(\lambda_{w,t}\) |
 | `psi_sigw` | Innovation to \(\sigma_{\omega,t}\), inactive in the cross-check calibration |
 | `psi_g` | Innovation to \(g_t\) |
-| `psi_pist` | Paper-side innovation to \(\pi_t^*\); commented out in the Rep-MMB cross-check |
+| `psi_pist` | Paper-side innovation to \(\pi_t^{\ast}\); commented out in the Rep-MMB cross-check |
 | `psi_rm` | Paper-side monetary-policy residual innovation; commented out in the Rep-MMB cross-check |
 
 ### Parameters

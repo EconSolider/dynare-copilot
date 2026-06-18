@@ -63,13 +63,13 @@ $$
 主导出口者使用从进口地区购买的最终品生产商品：
 
 $$
-\mathfrak{M}_t=Z_t I_t^{*,D}.
+\mathfrak{M}_t=Z_t I_t^{\ast,D}.
 $$
 
 其居民消费最终品并拥有出口企业。每期实际利润表达式为：
 
 $$
-\frac{\Gamma_t^{*,D}}{P_{Y,t}}=Q_t^{1/(1-\gamma)}\mathfrak{M}_t-I_t^{*,D}.
+\frac{\Gamma_t^{\ast,D}}{P_{Y,t}}=Q_t^{1/(1-\gamma)}\mathfrak{M}_t-I_t^{\ast,D}.
 $$
 
 主导出口者在给定进口国宏观变量和边缘供给的情况下选择商品产出：
@@ -302,7 +302,7 @@ $$
 **(F33) 世界最终品市场出清**
 
 $$
-Y_t=C_{Y,t}+C_t^{*,D}+I_t^{*,D}+C_t^{*,F}+I_t^{*,F}.
+Y_t=C_{Y,t}+C_t^{\ast,D}+I_t^{\ast,D}+C_t^{\ast,F}+I_t^{\ast,F}.
 $$
 
 **(F34) 自然产出缺口**
@@ -393,6 +393,26 @@ $$
 $$
 \Pi=1,\qquad MC=\frac{1}{\mu},\qquad \Delta=1.
 $$
+
+其余稳态比率为：
+
+$$
+\frac{C}{Y}=\frac{P_Y}{P}-\frac{\alpha}{\mu}.
+$$
+
+$$
+L=\left[\frac{(1-\alpha)/\mu}{C/Y}\right]^{1/(1-\nu)}.
+$$
+
+$$
+Y=\left[A\left(\frac{\alpha}{\mu}\frac{1}{Q}\right)^\alpha\right]^{1/(1-\alpha)}L.
+$$
+
+论文/MMB 实现中的基准校准包括：
+
+| Parameter | Value | Role |
+|---|---:|---|
+| $\Pi$, $MC$, $\Delta$ | $1$, $1/\mu$, $1$ | normalized steady-state values |
 
 其余稳态比率为：
 

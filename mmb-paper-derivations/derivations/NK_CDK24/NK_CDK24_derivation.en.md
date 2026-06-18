@@ -19,7 +19,7 @@
 A fraction $1-\omega$ of households has access to domestic and foreign bonds and receives labor income plus firm and labor-union dividends. They choose consumption, labor, and bond holdings:
 
 $$
-\max_{\{C_{u,t},N^h_{u,t},B_{u,t},B^*_{u,t}\}}
+\max_{\{C_{u,t},N^h_{u,t},B_{u,t},B^{\ast}_{u,t}\}}
 E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 \frac{C_{u,t}^{1-\sigma}-1}{1-\sigma}
@@ -30,9 +30,9 @@ $$
 subject to the nominal budget constraint:
 
 $$
-W_t^h N^h_{u,t}+R_{t-1}B_{u,t-1}+\mathcal{E}_t\bar R^*B^*_{u,t-1}
+W_t^h N^h_{u,t}+R_{t-1}B_{u,t-1}+\mathcal{E}_t\bar R^{\ast}B^{\ast}_{u,t-1}
 +DIV^F_{u,t}+DIV^L_{u,t}
-=P_tC_{u,t}+B_{u,t}+\mathcal{E}_tB^*_{u,t}+T_{u,t}+P_t\mathcal{T}_u.
+=P_tC_{u,t}+B_{u,t}+\mathcal{E}_tB^{\ast}_{u,t}+T_{u,t}+P_t\mathcal{T}_u.
 \tag{F1}
 $$
 
@@ -99,7 +99,7 @@ $$
 
 ### 2.6 Energy Importers, Export Demand, and Retailers
 
-Energy importers buy the foreign energy good at $P_t^{E,*}$ and sell it domestically. Export demand for domestic non-energy goods depends on the foreign-currency price of domestic goods. Retailers convert final goods into domestic consumption and export goods without adding an optimization wedge in the extracted model summary.
+Energy importers buy the foreign energy good at $P_t^{E,\ast}$ and sell it domestically. Export demand for domestic non-energy goods depends on the foreign-currency price of domestic goods. Retailers convert final goods into domestic consumption and export goods without adding an optimization wedge in the extracted model summary.
 
 ## 3. First-Order Conditions
 
@@ -212,16 +212,16 @@ $$
 **(F18) Imported energy law of one price**:
 
 $$
-p_t^E=Q_tp_t^{E,*}.
+p_t^E=Q_tp_t^{E,\ast}.
 \tag{F18}
 $$
 
 **(F19) Export demand**:
 
 $$
-X_t=\kappa^*
-\left(\frac{P_t^{EXP}}{P_{ss}^{X*}}\right)^{-\zeta^*}
-Y_{ss}^*.
+X_t=\kappa^{\ast}
+\left(\frac{P_t^{EXP}}{P_{ss}^{X\ast}}\right)^{-\zeta^{\ast}}
+Y_{ss}^{\ast}.
 \tag{F19}
 $$
 
@@ -237,8 +237,8 @@ $$
 **(F21) Export, domestic energy price, and UIP identities**:
 
 $$
-\hat x_t=\zeta^*\hat q_t,\qquad
-\hat p_t^E=\hat p_t^{E,*}+\hat q_t,\qquad
+\hat x_t=\zeta^{\ast}\hat q_t,\qquad
+\hat p_t^E=\hat p_t^{E,\ast}+\hat q_t,\qquad
 \hat q_t=E_t[\hat q_{t+1}]-\left(\hat r_t-E_t[\hat\pi_{t+1}]\right).
 \tag{F21}
 $$
@@ -266,7 +266,7 @@ $$
 \left(\hat r_{t+k}-\hat\pi_{t+k+1}\right)
 -\omega\frac{C_{ss}}{Z_{ss}}\hat\gamma_t
 +\psi_{ez}\alpha_{ez}(\hat p_t^E-\hat w_t)
-+\frac{X_{ss}}{Z_{ss}}\zeta^*\hat q_t
++\frac{X_{ss}}{Z_{ss}}\zeta^{\ast}\hat q_t
 -\hat\varepsilon_t^{TFP}.
 \tag{F23}
 $$
@@ -275,7 +275,7 @@ $$
 
 $$
 \Gamma_t=\Gamma_t^{inc}
-+\frac{\mathcal E_t(\bar R^*-1)B^*_{u,t-1}-\mathcal E_t\Delta B^*_{u,t}}
++\frac{\mathcal E_t(\bar R^{\ast}-1)B^{\ast}_{u,t-1}-\mathcal E_t\Delta B^{\ast}_{u,t}}
 {INC_{c,t}}.
 \tag{F24}
 $$
@@ -357,7 +357,7 @@ $$
 **(F31) Foreign energy price level**:
 
 $$
-p_t^{E,*}=(p_{ss}^{E,*})^{1-\rho_E}(p_{t-1}^{E,*})^{\rho_E}\varepsilon_t^E.
+p_t^{E,\ast}=(p_{ss}^{E,\ast})^{1-\rho_E}(p_{t-1}^{E,\ast})^{\rho_E}\varepsilon_t^E.
 \tag{F31}
 $$
 
@@ -400,7 +400,7 @@ $$
 \omega=0.25,\quad
 \psi_{ez}=0.15,\quad
 \alpha_{ez}=0.05,\quad
-\zeta^*=0.35.
+\zeta^{\ast}=0.35.
 \tag{F35}
 $$
 
@@ -450,6 +450,6 @@ $$
 | Parameter | $\phi_z$ / `phi_z` | Calvo price non-reset probability | (F7), (F12), (F14), (F33) |
 | Parameter | $\phi_w$ / `phi_w` | Calvo wage non-reset probability | (F13), (F33) |
 | Parameter | $\theta_R,\theta_\pi,\theta_Y$ | Taylor-rule coefficients | (F22), (F33) |
-| Parameter | $\zeta^*$ / `zeta_star` | Export-demand elasticity | (F19), (F21), (F23), (F35) |
+| Parameter | $\zeta^{\ast}$ / `zeta_star` | Export-demand elasticity | (F19), (F21), (F23), (F35) |
 | Parameter | $\rho_{TFP},\rho_{\mathcal M_z},\rho_E$ | Shock persistence parameters | (F28), (F29), (F31), (F34) |
 | Parameter | $\varsigma_{TFP},\varsigma_{\mathcal M_z},\varsigma_E$ | Shock standard deviations | (F28)-(F30), (F34) |

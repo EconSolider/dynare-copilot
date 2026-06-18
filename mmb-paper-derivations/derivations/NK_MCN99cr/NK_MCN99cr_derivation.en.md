@@ -209,6 +209,24 @@ $$
 i_t = g_k+i_{t-1}+e_{it}.
 $$
 
+The implementation cross-check sets `gk = 0` and includes innovation `e_`; the paper estimates:
+
+$$
+i_t = g_k+i_{t-1}+e_{it}.
+$$
+
+The implementation cross-check sets `gk = 0` and includes innovation `e_`; the paper estimates:
+
+$$
+i_t = g_k+i_{t-1}+e_{it}.
+$$
+
+The implementation cross-check sets `gk = 0` and includes innovation `e_`; the paper estimates:
+
+$$
+i_t = g_k+i_{t-1}+e_{it}.
+$$
+
 The implementation cross-check sets `gk = 0` and includes innovation `e_`; the paper estimates $g_k=0.0073$ for the general model.
 
 - **(F15) Capacity-output process**:
@@ -217,9 +235,81 @@ $$
 \bar y_t = \varsigma+\rho_{\bar y}\bar y_{t-1}+e_{yt}.
 $$
 
+The implementation cross-check sets `stigma = 0`, `rhoybar = 1`, and includes innovation `ey_`; the paper's estimation gives a random-walk capacity process with drift:
+
+$$
+\bar y_t = \varsigma+\rho_{\bar y}\bar y_{t-1}+e_{yt}.
+$$
+
+The implementation cross-check sets `stigma = 0`, `rhoybar = 1`, and includes innovation `ey_`; the paper's estimation gives a random-walk capacity process with drift:
+
+$$
+\bar y_t = \varsigma+\rho_{\bar y}\bar y_{t-1}+e_{yt}.
+$$
+
+The implementation cross-check sets `stigma = 0`, `rhoybar = 1`, and includes innovation `ey_`; the paper's estimation gives a random-walk capacity process with drift:
+
+$$
+\bar y_t = \varsigma+\rho_{\bar y}\bar y_{t-1}+e_{yt}.
+$$
+
 The implementation cross-check sets `stigma = 0`, `rhoybar = 1`, and includes innovation `ey_`; the paper's estimation gives a random-walk capacity process with drift $0.0073$.
 
 - **(F16) Preference-demand shock process**:
+
+$$
+v_t = \rho_v v_{t-1}+e_{vt}.
+$$
+
+- **(F17) Money-demand disturbance process**:
+
+$$
+\eta_t = \rho_{\eta}\eta_{t-1}+u_t .
+$$
+
+- **(F18) Correlated-demand-shock decomposition**:
+
+$$
+e_{vt}=\psi_u u_t+\varepsilon_{vt}.
+$$
+
+The paper reports near-zero residual correlation and sets:
+
+$$
+v_t = \rho_v v_{t-1}+e_{vt}.
+$$
+
+- **(F17) Money-demand disturbance process**:
+
+$$
+\eta_t = \rho_{\eta}\eta_{t-1}+u_t .
+$$
+
+- **(F18) Correlated-demand-shock decomposition**:
+
+$$
+e_{vt}=\psi_u u_t+\varepsilon_{vt}.
+$$
+
+The paper reports near-zero residual correlation and sets:
+
+$$
+v_t = \rho_v v_{t-1}+e_{vt}.
+$$
+
+- **(F17) Money-demand disturbance process**:
+
+$$
+\eta_t = \rho_{\eta}\eta_{t-1}+u_t .
+$$
+
+- **(F18) Correlated-demand-shock decomposition**:
+
+$$
+e_{vt}=\psi_u u_t+\varepsilon_{vt}.
+$$
+
+The paper reports near-zero residual correlation and sets:
 
 $$
 v_t = \rho_v v_{t-1}+e_{vt}.
@@ -251,6 +341,39 @@ The active archive object is linearized, so Dynare steady states for declared va
 6. For the Calvo-Rotemberg slope, use $\beta=0.99$ and $\theta_{c1}=0.30$ in the implementation. The paper motivates $\theta/c_1=0.30$ for the Calvo-Rotemberg simulation variant.
 7. Set exogenous innovations to zero in steady state: $e_{it}=e_{yt}=e_{vt}=u_t=\varepsilon_{vt}=0$.
 8. For the linear state variables in the active `.mod`, use:
+
+$$
+\pi=p=y=R=v=m=i=\eta=\tilde y=\bar y=0 .
+$$
+
+Runtime validation status: `not_performed`. No `resid`, `steady`, `check`, or stochastic simulation was run.
+
+## 7. Timing & Form Conventions
+
+- **Form**: log-linear `model(linear)`. Lower-case variables are log-levels or log deviations; `R` is a quarterly fractional nominal interest-rate deviation in the implemented linear model.
+- **Expectations**: the paper's structural IS and LM equations include:
+
+$$
+\pi=p=y=R=v=m=i=\eta=\tilde y=\bar y=0 .
+$$
+
+Runtime validation status: `not_performed`. No `resid`, `steady`, `check`, or stochastic simulation was run.
+
+## 7. Timing & Form Conventions
+
+- **Form**: log-linear `model(linear)`. Lower-case variables are log-levels or log deviations; `R` is a quarterly fractional nominal interest-rate deviation in the implemented linear model.
+- **Expectations**: the paper's structural IS and LM equations include:
+
+$$
+\pi=p=y=R=v=m=i=\eta=\tilde y=\bar y=0 .
+$$
+
+Runtime validation status: `not_performed`. No `resid`, `steady`, `check`, or stochastic simulation was run.
+
+## 7. Timing & Form Conventions
+
+- **Form**: log-linear `model(linear)`. Lower-case variables are log-levels or log deviations; `R` is a quarterly fractional nominal interest-rate deviation in the implemented linear model.
+- **Expectations**: the paper's structural IS and LM equations include:
 
 $$
 \pi=p=y=R=v=m=i=\eta=\tilde y=\bar y=0 .

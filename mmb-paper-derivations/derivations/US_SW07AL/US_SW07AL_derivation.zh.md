@@ -88,7 +88,7 @@ $$
 $$
 其中
 $$
-q_1=\frac{r^k_*}{r^k_*+(1-\delta)}.
+q_1=\frac{r^k_\ast}{r^k_\ast+(1-\delta)}.
 $$
 
 - **(F4) 带指数化的 Calvo 价格设定**：
@@ -150,10 +150,10 @@ $$
 - **(F10) 总需求等于总供给 / 生产恒等式**：
 $$
 \widehat{y}_t
-=\frac{c_*}{y_*}\widehat{c}_t
-+\frac{i_*}{y_*}\widehat{i}_t
+=\frac{c_\ast}{y_\ast}\widehat{c}_t
++\frac{i_\ast}{y_\ast}\widehat{i}_t
 +\widehat{\varepsilon}^g_t
-+\frac{r^k_*k_*}{y_*}\widehat{u}_t
++\frac{r^k_\astk_\ast}{y_\ast}\widehat{u}_t
 =\Phi_p\left(\alpha\widehat{k}_t+(1-\alpha)\widehat{L}_t+\widehat{\varepsilon}^a_t\right).
 $$
 
@@ -166,8 +166,8 @@ $$
 $$
 其中
 $$
-k_1=1-\frac{i_*}{\bar{k}_*},\qquad
-k_2=\frac{i_*}{\bar{k}_*}(1+\bar{\beta}\gamma)\gamma^2 S''.
+k_1=1-\frac{i_\ast}{\bar{k}_\ast},\qquad
+k_2=\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''.
 $$
 
 - **(F12) 资本服务恒等式**：
@@ -283,16 +283,16 @@ $$
 1. 用确定性劳动增广技术增长对实际量去趋势。
 2. 将平稳实际变量的对数偏离以及通胀/利率偏离在稳态设为零：
 $$
-\widehat{c}_*=\widehat{i}_*=\widehat{y}_*=\widehat{w}_*=\widehat{L}_*
-=\widehat{\pi}_*=\widehat{R}_*=\widehat{Q}^k_*
-=\widehat{r}^k_*=\widehat{u}_*=0.
+\widehat{c}_\ast=\widehat{i}_\ast=\widehat{y}_\ast=\widehat{w}_\ast=\widehat{L}_\ast
+=\widehat{\pi}_\ast=\widehat{R}_\ast=\widehat{Q}^k_\ast
+=\widehat{r}^k_\ast=\widehat{u}_\ast=0.
 $$
 3. 将创新和外生偏离设为零：
 $$
-\widehat{\varepsilon}^a_*=\widehat{\varepsilon}^b_*=\widehat{\varepsilon}^g_*=\widehat{\varepsilon}^q_*=\widehat{\varepsilon}^r_*=\widehat{\varepsilon}^p_*=\widehat{\varepsilon}^w_*=0.
+\widehat{\varepsilon}^a_\ast=\widehat{\varepsilon}^b_\ast=\widehat{\varepsilon}^g_\ast=\widehat{\varepsilon}^q_\ast=\widehat{\varepsilon}^r_\ast=\widehat{\varepsilon}^p_\ast=\widehat{\varepsilon}^w_\ast=0.
 $$
 4. 对学习状态，如果信念由 REE 矩初始化，使用 (F22)。在模型一致信念和零创新下，PLM 给出的稳态预期等于零偏离稳态。
-5. 出现在对数线性系数中的结构稳态比率和校准常数包括 $c_*/y_*$、$i_*/y_*$、$r^k_*k_*/y_*$、$\bar{k}_*$、$r^k_*$、$\bar{\eta}$、$\bar{\beta}$ 和 $\gamma$。论文附录没有给出完整非线性稳态推导；本第一轮档案将这些系数记录为来源陈述输入，并将完整非线性重构标为 `needs_review`。
+5. 出现在对数线性系数中的结构稳态比率和校准常数包括 $c_\ast/y_\ast$、$i_\ast/y_\ast$、$r^k_\astk_\ast/y_\ast$、$\bar{k}_\ast$、$r^k_\ast$、$\bar{\eta}$、$\bar{\beta}$ 和 $\gamma$。论文附录没有给出完整非线性稳态推导；本第一轮档案将这些系数记录为来源陈述输入，并将完整非线性重构标为 `needs_review`。
 
 运行时验证状态：未执行。未运行 Dynare。
 

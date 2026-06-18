@@ -166,13 +166,13 @@ The paper states an exchange-rate peg, $e_t=0$, as the policy objective; the MMB
 - **(F11) Terms-of-trade/output relationship from risk sharing and demand aggregation**:
 
 $$
-s_t=\sigma_{\alpha}(y_t-y_t^*).
+s_t=\sigma_{\alpha}(y_t-y_t^{\ast}).
 $$
 
 - **(F12) Natural output**:
 
 $$
-y_t^n=\Gamma_a a_t-\alpha\Gamma_{y^*}y_t^*.
+y_t^n=\Gamma_a a_t-\alpha\Gamma_{y^{\ast}}y_t^{\ast}.
 $$
 
 - **(F13) Output gap definition**:
@@ -200,8 +200,8 @@ With the peg $e_t=0$, this implies $\Delta s_t=-\pi_{H,t}$.
 $$
 \begin{aligned}
 rr_t^n={}&\rho+\left[\sigma_{\alpha}\rho_a+\Psi-\Gamma_0\right]\Gamma_a a_t \\
-&+\left[\left(\sigma_{\alpha}\rho_{y^*}+\Psi-\Gamma_0\right)\Gamma_{y^*}
-+\Theta\sigma_{\alpha}(\rho_{y^*}-1)\right]\alpha y_t^*.
+&+\left[\left(\sigma_{\alpha}\rho_{y^{\ast}}+\Psi-\Gamma_0\right)\Gamma_{y^{\ast}}
++\Theta\sigma_{\alpha}(\rho_{y^{\ast}}-1)\right]\alpha y_t^{\ast}.
 \end{aligned}
 $$
 
@@ -216,7 +216,7 @@ $$
 - **(F18) Foreign demand**:
 
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^{y^*}.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{y^{\ast}}.
 $$
 
 - **(F19) Stock-price-gap disturbance**:
@@ -237,7 +237,7 @@ The implemented system is linearized around a symmetric zero-inflation steady st
 
 $$
 \bar e=0,\quad \bar s=0,\quad \bar \pi_H=0,\quad \bar \pi=0,\quad
-\bar x=0,\quad \bar{\widehat q}=0,\quad \bar a=0,\quad \bar y^*=0,\quad
+\bar x=0,\quad \bar{\widehat q}=0,\quad \bar a=0,\quad \bar y^{\ast}=0,\quad
 \bar \eta=0,\quad \bar \mu^p=0.
 $$
 
@@ -264,7 +264,7 @@ For the MMB linear implementation, the steady-state values of the modeled deviat
 ## 7. Timing & Form Conventions
 
 - The archive entry is for a `model(linear)` representation.
-- $x_t$, $\widehat q_t$, $r_t$, $rr_t^n$, $\pi_{H,t}$, $s_t$, $e_t$, $y_t$, $y_t^n$, $a_t$, $y_t^*$, and $\eta_t$ are log or percentage deviations from steady state.
+- $x_t$, $\widehat q_t$, $r_t$, $rr_t^n$, $\pi_{H,t}$, $s_t$, $e_t$, $y_t$, $y_t^n$, $a_t$, $y_t^{\ast}$, and $\eta_t$ are log or percentage deviations from steady state.
 - The stock-price gap is $\widehat q_t=q_t-q_t^n$ and the natural stock price satisfies $q_t^n=y_t^n$.
 - The Phillips curve contains one lead and one lag of producer-price inflation.
 - The dynamic IS equation and stock-price-gap equation are forward-looking.
@@ -286,10 +286,10 @@ For the MMB linear implementation, the steady-state values of the modeled deviat
 | Endogenous | `y`, $y_t$ | Domestic output | (F13) |
 | Endogenous | `y_n`, $y_t^n$ | Natural output | (F12) |
 | Endogenous | `a`, $a_t$ | Productivity state | (F17) |
-| Endogenous | `y_stern`, $y_t^*$ | Foreign demand/output | (F18) |
+| Endogenous | `y_stern`, $y_t^{\ast}$ | Foreign demand/output | (F18) |
 | Endogenous | `shock_eta`, $\eta_t$ | Stock-price-gap state | (F19) |
 | Exogenous | `epsa`, $\varepsilon_t^a$ | Productivity innovation | (F17) |
-| Exogenous | `epsy`, $\varepsilon_t^{y^*}$ | Foreign-demand innovation | (F18) |
+| Exogenous | `epsy`, $\varepsilon_t^{y^{\ast}}$ | Foreign-demand innovation | (F18) |
 | Exogenous | `epseta`, $\varepsilon_t^{\eta}$ | Stock-price-gap innovation | (F19) |
 | Exogenous | `mu_p`, $\varepsilon_t^{\mu}$ | Cost-push innovation | (F9), (F20) |
 | Parameter | $\gamma$ | Death probability / wealth-effect parameter | (F5)-(F8) |
@@ -299,9 +299,9 @@ For the MMB linear implementation, the steady-state values of the modeled deviat
 | Parameter | $\beta$, $\tilde\beta$ | Household discount factor / steady-state discount factor | (F2), (F8), (F9) |
 | Parameter | $\epsilon$ | Stock-return risk premium covariance | (F8) |
 | Parameter | $\Psi$ | Wealth-effect coefficient | (F7), (F16) |
-| Parameter | $\Gamma_0,\Gamma_a,\Gamma_{y^*},\Theta$ | Open-economy composite coefficients | (F7), (F12), (F16) |
+| Parameter | $\Gamma_0,\Gamma_a,\Gamma_{y^{\ast}},\Theta$ | Open-economy composite coefficients | (F7), (F12), (F16) |
 | Parameter | $\lambda_q,\kappa_{\alpha},\phi$ | Stock-price and Phillips-curve slopes | (F8), (F9) |
 | Parameter | $\phi_{\pi},\phi_x$ | Interest-rate response coefficients | (F10) |
-| Parameter | $\rho_a,\rho_{y^*},\rho_{\eta}$ | Shock persistence parameters | (F16)-(F19) |
+| Parameter | $\rho_a,\rho_{y^{\ast}},\rho_{\eta}$ | Shock persistence parameters | (F16)-(F19) |
 
 Equation count: 20 numbered conditions, (F1)-(F20). Runtime validation: not performed.

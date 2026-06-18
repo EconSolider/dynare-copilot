@@ -41,7 +41,7 @@ Cost minimization gives a common nominal marginal cost. Price setters face Calvo
 $$
 E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
 \left[
-\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^*(i)Y_{t+s}(i)
+\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)
 -MC_{t+s}Y_{t+s}(i)
 \right].
 $$
@@ -69,7 +69,7 @@ Saver household $j$ has utility over composite consumption and labor:
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\left(C_t^{*S}(j)-\theta\tilde C_{t-1}^{*S}\right)
+\log\left(C_t^{\astS}(j)-\theta\tilde C_{t-1}^{\astS}\right)
 -\frac{\left(L_t^S(j)\right)^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -77,7 +77,7 @@ $$
 where
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
 The saver budget constraint is:
@@ -141,9 +141,9 @@ $$
 - **(F5) Marginal utility of wealth for savers**:
 $$
 \hat\lambda_t+\frac{\theta}{e^\gamma-\theta}\hat u_t^a
-+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^*
++\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
 -\hat u_t^b+\frac{\tau^C}{1+\tau^C}\hat\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^{\ast}.
 $$
 
 - **(F6) Long-run real interest rate and long-bond price relation** (`needs_review`, implementation_cross_check):
@@ -159,7 +159,7 @@ $$
 
 - **(F8) Consumption composite**:
 $$
-\hat c_t^*-\frac{C^S}{C^S+\alpha_G G}\hat c_t^S
+\hat c_t^{\ast}-\frac{C^S}{C^S+\alpha_G G}\hat c_t^S
 -\frac{\alpha_G G}{C^S+\alpha_G G}\hat g_t=0.
 $$
 
@@ -344,7 +344,7 @@ For the log-linear implementation, all hatted endogenous variables have zero ste
 2. Compute after-tax rental return $R^k=(e^\gamma/\beta-1+\delta)/(1-\tau^K)$ and marginal cost $mc=1/(1+\eta_p)$.
 3. Recover the wage, capital-labor ratio, fixed cost per labor unit, output per labor unit, investment per labor unit, and consumption per labor unit from production, zero-profit, and capital-accumulation restrictions.
 4. Use the government budget in steady state to compute transfers, then compute non-saver and saver consumption per labor unit.
-5. Compute composite consumption $C^*=C^S+\alpha_G G$ and solve labor from the saver intratemporal condition.
+5. Compute composite consumption $C^{\ast}=C^S+\alpha_G G$ and solve labor from the saver intratemporal condition.
 6. Scale $C^S,C^N,Y,K,I,Z,B,G$ and tax revenues by steady-state labor.
 
 Steady-state formulas remain `needs_review` until checked against the paper's online appendix or replication documentation.
@@ -365,7 +365,7 @@ Steady-state formulas remain `needs_review` until checked against the paper's on
 | Endogenous | `cs`, $C^S$ | saver consumption | (F5), (F8), (F9), (F18) |
 | Endogenous | `cn`, $C^N$ | non-saver consumption | (F17), (F18) |
 | Endogenous | `c`, $C$ | aggregate consumption | (F18), (F19) |
-| Endogenous | `cstar`, $C^*$ | consumption in utility | (F8) |
+| Endogenous | `cstar`, $C^{\ast}$ | consumption in utility | (F8) |
 | Endogenous | `R`, $R^n$ | nominal policy rate | (F16), (F28) |
 | Endogenous | `r`, $r$ | real rate | (F28) |
 | Endogenous | `i`, $I$ | investment | (F12), (F14), (F19) |

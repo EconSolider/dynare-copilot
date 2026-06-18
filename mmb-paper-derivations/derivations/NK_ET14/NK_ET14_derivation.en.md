@@ -39,17 +39,17 @@ Here $S_{t,t+1}$ is the bank-provided savings device purchased at price $P_t^S$,
 
 ### 2.2 Price-Setting Firms
 
-Each firm has technology $Y_t(i)=A_tL_t(i)^{1/\phi}$. Firms that can reset prices choose $P_t^*(i)$ to maximize discounted profits
+Each firm has technology $Y_t(i)=A_tL_t(i)^{1/\phi}$. Firms that can reset prices choose $P_t^{\ast}(i)$ to maximize discounted profits
 
 $$
-\max_{P_t^*(i)} E_t\sum_{T=t}^{\infty}\alpha^{T-t}M_{t,T}
-\left[P_t^*(i)Y_T(i)-W_TL_T(i)\right]
+\max_{P_t^{\ast}(i)} E_t\sum_{T=t}^{\infty}\alpha^{T-t}M_{t,T}
+\left[P_t^{\ast}(i)Y_T(i)-W_TL_T(i)\right]
 $$
 
 subject to demand
 
 $$
-Y_T(i)=Y_T\left(\frac{P_t^*(i)}{P_T}\right)^{-\theta_t}
+Y_T(i)=Y_T\left(\frac{P_t^{\ast}(i)}{P_T}\right)^{-\theta_t}
 $$
 
 and discount factor

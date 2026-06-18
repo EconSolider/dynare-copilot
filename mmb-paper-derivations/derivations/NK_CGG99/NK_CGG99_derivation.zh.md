@@ -58,7 +58,7 @@ $$
 **(F3) 前瞻性目标利率规则**：
 
 $$
-i^*_t =
+i^{\ast}_t =
 \bar{i}
 + \gamma_{\pi}\big(E_t\pi_{t+1}-\bar{\pi}\big)
 + \gamma_x x_t
@@ -71,7 +71,7 @@ $$
 $$
 i_t =
 \rho_i i_{t-1}
-+ (1-\rho_i)i^*_t
++ (1-\rho_i)i^{\ast}_t
 $$
 
 合并 (F3) 与 (F4) 得到实现中的政策规则

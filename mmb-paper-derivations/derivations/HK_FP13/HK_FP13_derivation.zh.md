@@ -67,7 +67,7 @@ $$
 $$
 C_t^s+P_{D/C,t}I_{D,t}^s-B_{H,t}^s-\mathfrak E_tB_{F,t}^s
 =-R_{t-1}\frac{B_{H,t-1}^s}{\Pi_{C,t}}
--\frac{R_{t-1}^*\mathfrak E_tB_{F,t-1}^s}{\Pi_{C,t}}
+-\frac{R_{t-1}^{\ast}\mathfrak E_tB_{F,t-1}^s}{\Pi_{C,t}}
 +\sum_{j=C,D}\frac{W_{j,t}^sN_{j,t}^s}{P_{C,t}}.
 $$
 
@@ -172,7 +172,7 @@ $$
 \left(\frac{X_{t+1}^s}{X_t^s}\right)^{-\sigma}
 \left(\frac{D_{t+1}^s}{\widetilde C_{t+1}^s}\right)^{\gamma\mathcal E_{t+1}^{D,s}}
 \left(\frac{\widetilde C_t^s}{D_t^s}\right)^{\gamma\mathcal E_t^{D,s}}
-\frac{\mathfrak E_{t+1}}{\mathfrak E_t}\frac{R_t^*}{\Pi_{C,t+1}}
+\frac{\mathfrak E_{t+1}}{\mathfrak E_t}\frac{R_t^{\ast}}{\Pi_{C,t+1}}
 \right].
 $$
 
@@ -204,14 +204,14 @@ $$
 - **(F11) 相对贸易条件恒等式**：
 $$
 (1-\alpha_C)\widehat s_{C,t}-(1-\alpha_D)\widehat s_{D,t}
-=\widehat p_{D/C,t}-\widehat p_{D/C,t}^*.
+=\widehat p_{D/C,t}-\widehat p_{D/C,t}^{\ast}.
 $$
 
 - **(F12) 耐心家庭的国际风险分担条件**：
 $$
-\left(\frac{X_t^s}{X_t^{s,*}}\right)^{-\sigma}
-\left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,*})^{\mathcal E_t^{D,*}}}\right)^\gamma
-\left(\frac{(D_t^s)^{\mathcal E_t^{D,s}}}{(D_t^{s,*})^{\mathcal E_t^{D,*}}}\right)^\gamma
+\left(\frac{X_t^s}{X_t^{s,\ast}}\right)^{-\sigma}
+\left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
+\left(\frac{(D_t^s)^{\mathcal E_t^{D,s}}}{(D_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
 =\mathcal R_t.
 $$
 
@@ -244,13 +244,13 @@ $$
 
 - **(F17) 消费品市场出清，对数线性化**：
 $$
-\widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^*
+\widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^{\ast}
 +\alpha_C\vartheta_C\widehat s_{C,t}+g_t.
 $$
 
 - **(F18) 住房品市场出清，对数线性化**：
 $$
-\widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^*
+\widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^{\ast}
 +\alpha_D\vartheta_D\widehat s_{D,t}+g_t.
 $$
 
@@ -260,7 +260,7 @@ $$
 \frac{P_{D/C}^{-\xi}C}{Y}\widehat y_{C,t}
 +\frac{\delta P_{D/C}^{1-\xi}D}{Y}\widehat y_{D,t}
 +\Xi\widehat p_{D/C,H,t}
--\xi\ln(P_{D/C})(\varepsilon_t^D+\varepsilon_t^{D,*}).
+-\xi\ln(P_{D/C})(\varepsilon_t^D+\varepsilon_t^{D,\ast}).
 $$
 
 - **(F20) 货币发行局固定汇率与贸易条件调整**：
@@ -292,7 +292,7 @@ $$
 - **(F24) 住房偏好冲击**：
 $$
 \epsilon_t^{d,j}=\rho_{d,j}\epsilon_{t-1}^{d,j}+\varepsilon_t^{d,j},
-\qquad j=s,b,*.
+\qquad j=s,b,\ast.
 $$
 
 - **(F25) 政府支出冲击**：
@@ -302,22 +302,22 @@ $$
 
 - **(F26) 外国非耐用品消费需求**：
 $$
-\widehat c_t^*=\rho_{c^*}\widehat c_{t-1}^*+\varepsilon_t^{c^*}.
+\widehat c_t^{\ast}=\rho_{c^{\ast}}\widehat c_{t-1}^{\ast}+\varepsilon_t^{c^{\ast}}.
 $$
 
 - **(F27) 外国住房投资需求**：
 $$
-\widehat i_{D,t}^*=\rho_{d^*}\widehat d_{t-1}^*+\varepsilon_t^{d^*}.
+\widehat i_{D,t}^{\ast}=\rho_{d^{\ast}}\widehat d_{t-1}^{\ast}+\varepsilon_t^{d^{\ast}}.
 $$
 
 - **(F28) 外国住房价格扰动**：
 $$
-\widehat p_{D,t}^*=\rho_{p_D^*}\widehat p_{D,t-1}^*+\varepsilon_t^{p_D^*}.
+\widehat p_{D,t}^{\ast}=\rho_{p_D^{\ast}}\widehat p_{D,t-1}^{\ast}+\varepsilon_t^{p_D^{\ast}}.
 $$
 
 - **(F29) 外国消费价格扰动**：
 $$
-\widehat p_{C,t}^*=\rho_{p_C^*}\widehat p_{C,t-1}^*+\varepsilon_t^{p_C^*}.
+\widehat p_{C,t}^{\ast}=\rho_{p_C^{\ast}}\widehat p_{C,t-1}^{\ast}+\varepsilon_t^{p_C^{\ast}}.
 $$
 
 ## 6. Steady-State Solution
@@ -360,7 +360,7 @@ $$
 | `shock_mu_c`, `shock_mu_d` | 部门加价状态 | (F22) |
 | `LTV` | 贷款价值比状态 | (F23) |
 | `shock_d_b`, `shock_d_s`, `shock_d_stern` | 住房偏好状态 | (F24) |
-| $c^*$, $i_D^*$, $p_C^*$, $p_D^*$, $p_{D/C}^*$ | 外国需求和价格状态 | (F26)-(F29), (F11) |
+| $c^{\ast}$, $i_D^{\ast}$, $p_C^{\ast}$, $p_D^{\ast}$, $p_{D/C}^{\ast}$ | 外国需求和价格状态 | (F26)-(F29), (F11) |
 | $g$ | 政府支出状态 | (F25) |
 
 ### 外生创新

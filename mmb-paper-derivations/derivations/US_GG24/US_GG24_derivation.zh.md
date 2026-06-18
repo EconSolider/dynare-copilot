@@ -69,11 +69,11 @@ $$
 
 ### 2.4 零售企业
 
-零售企业面临 Calvo 定价。能够重新定价的企业选择 $p^*_{jt}$ 和需求 $y_{j,t+i}$ 以最大化预期贴现利润：
+零售企业面临 Calvo 定价。能够重新定价的企业选择 $p^{\ast}_{jt}$ 和需求 $y_{j,t+i}$ 以最大化预期贴现利润：
 
 $$
-\max_{\{p^*_{jt},y_{j,t+i}\}} E_t\left\{\sum_{i=0}^{\infty}\lambda^i
-\Lambda^q_{t,t+i}\left(\frac{p^*_{jt}}{p_{qt}}-p_{w,t+i}\right)y_{j,t+i}\right\},
+\max_{\{p^{\ast}_{jt},y_{j,t+i}\}} E_t\left\{\sum_{i=0}^{\infty}\lambda^i
+\Lambda^q_{t,t+i}\left(\frac{p^{\ast}_{jt}}{p_{qt}}-p_{w,t+i}\right)y_{j,t+i}\right\},
 $$
 
 并满足需求函数
@@ -198,13 +198,13 @@ $$
 
 $$
 E_t\left\{\sum_{i=0}^{\infty}\lambda^i\Lambda^q_{t,t+i}
-\left(\frac{p^*_{jt}}{p_{q,t+i}}-(1+\mu)p_{w,t+i}\right)y_{j,t+i}\right\}=0.
+\left(\frac{p^{\ast}_{jt}}{p_{q,t+i}}-(1+\mu)p_{w,t+i}\right)y_{j,t+i}\right\}=0.
 $$
 
 - **(F16) Calvo 定价下的商品价格指数**：
 
 $$
-p_{qt}=\left((1-\lambda)(p^*_t)^{1-\eta}
+p_{qt}=\left((1-\lambda)(p^{\ast}_t)^{1-\eta}
 +\lambda p_{q,t-1}^{1-\eta}\right)^{1/(1-\eta)}.
 $$
 
@@ -418,7 +418,7 @@ $$
 | 内生 | `H` / $H_t$ | 工人剩余 | (F11) |
 | 内生 | `p_q` / $p_{qt}$ | 最终品价格指数 | (F16) |
 | 内生 | `pi_q` / $\pi_{qt}$ | 核心通胀 | (F17), (F32) |
-| 内生 | `p_star` / $p^*_t$ | 重置价格 | (F15), (F16) |
+| 内生 | `p_star` / $p^{\ast}_t$ | 重置价格 | (F15), (F16) |
 | 内生 | `R_n` / $R^n_t$ | 名义政策利率 | (F1), (F32) |
 | 内生 | `s` / $s_t$ | 消费单位下的相对石油价格 | (F2), (F30) |
 | 内生 | `s_q` / $s_{qt}$ | 最终品单位下的石油价格 | (F8), (F30) |

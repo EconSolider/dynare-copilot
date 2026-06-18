@@ -102,9 +102,9 @@ $$
 $$
 \widehat{k}_t
 =
-\left(1-\frac{i_*}{\bar{k}_*}\right)\widehat{k}_{t-1}
-+\frac{i_*}{\bar{k}_*}\widehat{i}_t
-+\frac{i_*}{\bar{k}_*}(1+\bar{\beta}\gamma)\gamma^2 S''\widehat{q}_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)\widehat{k}_{t-1}
++\frac{i_\ast}{\bar{k}_\ast}\widehat{i}_t
++\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''\widehat{q}_t.
 $$
 
 - **(F4) Utilization choice**:
@@ -262,10 +262,10 @@ $$
 $$
 \widehat{y}_t
 =
-\frac{(\bar{R}^K-1+\tau)k_*}{y_*}\widehat{u}_t
+\frac{(\bar{R}^K-1+\tau)k_\ast}{y_\ast}\widehat{u}_t
 +\widehat{\mu}^{bank}_t
-+\frac{c_*}{y_*}\widehat{c}_t
-+\frac{i_*}{y_*}\widehat{i}_t
++\frac{c_\ast}{y_\ast}\widehat{c}_t
++\frac{i_\ast}{y_\ast}\widehat{i}_t
 +\widehat{g}_t.
 $$
 
@@ -274,7 +274,7 @@ $$
 $$
 \widehat{\mu}^{bank}_t
 =
-\frac{k_*}{y_*}(\bar{R}^K-\bar{R})
+\frac{k_\ast}{y_\ast}(\bar{R}^K-\bar{R})
 \left(1-\frac{\bar{N}}{\bar{K}}\right)
 (\widehat{R}^K_t+\widehat{Q}_{t-1}+\widehat{k}_t).
 $$
@@ -371,11 +371,11 @@ $$
 The source reports these steady-state objects or relationships:
 
 1. The deterministic trend is $\gamma$ and $\bar{\beta}=\beta/\gamma^{\sigma_c}$.
-2. The steady-state nominal interest rate in the measurement equation is $\bar{r}=100(\bar{\gamma}^{\sigma_c}II_*/\beta-1)`.
+2. The steady-state nominal interest rate in the measurement equation is $\bar{r}=100(\bar{\gamma}^{\sigma_c}II_\ast/\beta-1)`.
 3. Financial-friction parameters governing steady-state leverage and premium dynamics are $\bar{K}/\bar{N}$, $\varkappa$, and $el$.
 4. The learning model starts from REE-consistent initial beliefs. At the initial steady state, the learning ALM coincides with the RE solution; subsequent dynamics come from belief updates.
 
-Needs review: the paper does not print the complete Smets-Wouters steady-state construction for consumption, labor, wages, marginal cost, price and wage markup blocks, or the full calibrated/estimated steady-state ratios $c_*/y_*$, $i_*/y_*$, $k_*/y_*$.
+Needs review: the paper does not print the complete Smets-Wouters steady-state construction for consumption, labor, wages, marginal cost, price and wage markup blocks, or the full calibrated/estimated steady-state ratios $c_\ast/y_\ast$, $i_\ast/y_\ast$, $k_\ast/y_\ast$.
 
 ## 7. Timing & Form Conventions
 

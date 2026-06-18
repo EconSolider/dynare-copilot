@@ -135,10 +135,10 @@ $$
 =\left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
 \left(\frac{\pi_t}{\pi}\right)^{\phi_\pi}
-\left(\frac{X_t}{X_t^*}\right)^{\phi_X}
+\left(\frac{X_t}{X_t^{\ast}}\right)^{\phi_X}
 \right]^{1-\rho_R}
 \left[
-\frac{X_t/X_{t-1}}{X_t^*/X_{t-1}^*}
+\frac{X_t/X_{t-1}}{X_t^{\ast}/X_{t-1}^{\ast}}
 \right]^{\phi_{dX}}
 \varepsilon_{mp,t}.
 $$
@@ -303,10 +303,10 @@ $$
 - **(F21) GDP / 产出缺口目标恒等式** needs_review：
 
 $$
-X_t^*=\text{flexible-price/wage counterpart of }X_t.
+X_t^{\ast}=\text{flexible-price/wage counterpart of }X_t.
 $$
 
-Taylor 规则使用 GDP 缺口 $X_t/X_t^*$。论文在政策规则中使用灵活经济对象，实现交叉检查包含对应的星号变量。
+Taylor 规则使用 GDP 缺口 $X_t/X_t^{\ast}$。论文在政策规则中使用灵活经济对象，实现交叉检查包含对应的星号变量。
 
 ## 5. Exogenous Processes
 
@@ -364,10 +364,10 @@ $$
 =\left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
 \left(\frac{\pi_t}{\pi}\right)^{\phi_\pi}
-\left(\frac{X_t}{X_t^*}\right)^{\phi_X}
+\left(\frac{X_t}{X_t^{\ast}}\right)^{\phi_X}
 \right]^{1-\rho_R}
 \left[
-\frac{X_t/X_{t-1}}{X_t^*/X_{t-1}^*}
+\frac{X_t/X_{t-1}}{X_t^{\ast}/X_{t-1}^{\ast}}
 \right]^{\phi_{dX}}
 \varepsilon_{mp,t}.
 $$
@@ -379,7 +379,7 @@ $$
 来源中明确的稳态限制包括：
 
 $$
-\gamma_*=\gamma_z+\frac{\alpha}{1-\alpha}\gamma_\upsilon.
+\gamma_\ast=\gamma_z+\frac{\alpha}{1-\alpha}\gamma_\upsilon.
 $$
 
 $$
@@ -408,7 +408,7 @@ $$
 - **资本时序**：物理安装资本 $\bar K_t$ 是期末存量。$t$ 期生产使用有效资本 $K_t=u_t\bar K_{t-1}$。
 - **投资时序**：$I_t/I_{t-1}$ 进入调整成本，因此滞后投资是资本品生产者问题中的状态。
 - **技术趋势**：中性技术 $A_t$ 和 IST $\Upsilon_t$ 的水平非平稳。平稳转化模型使用增长率 $z_t=\Delta\log A_t$ 和 $\upsilon_t=\Delta\log\Upsilon_t$。
-- **复合趋势**：平衡增长趋势是 $A_t\Upsilon_t^{\alpha/(1-\alpha)}$，稳态增长率为 $\gamma_*$。
+- **复合趋势**：平衡增长趋势是 $A_t\Upsilon_t^{\alpha/(1-\alpha)}$，稳态增长率为 $\gamma_\ast$。
 - **相对价格约定**：在竞争性基准中，$P_{I,t}/P_t=\Upsilon_t^{-1}$。附录 A 说明，当消费品和投资品生产部门都存在黏性价格时，该等式可能失效。
 - **形式**：本归档条目标记为 `model(linear)`，因为论文说明对去趋势模型作对数线性近似，且 Rep-MMB 实现使用 `model(linear)`。
 - **运行时验证**：按指令未执行。
@@ -438,7 +438,7 @@ $$
 | 内生 | $G_t$, `g` | 政府支出 | (F20), (F28) |
 | 内生 | $R_t$, `R` | 名义政策毛利率 | (F10), (F29) |
 | 内生 | $\pi_t$, `p` | 毛通胀 / 线性形式下的对数通胀 | (F5), (F29) |
-| 内生 | $X_t/X_t^*$, `gdp-gap` | 相对灵活经济的 GDP 缺口 | (F21), (F29) |
+| 内生 | $X_t/X_t^{\ast}$, `gdp-gap` | 相对灵活经济的 GDP 缺口 | (F21), (F29) |
 | 外生 | $\varepsilon_{z,t}$, `zs` | 中性技术增长创新 | (F23) |
 | 外生 | $\varepsilon_{\upsilon,t}$, `upsilons` | IST 增长创新 | (F24) |
 | 外生 | $\varepsilon_{\mu,t}$, `mius` | MEI 创新 | (F25) |

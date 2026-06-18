@@ -119,7 +119,7 @@ $$
 - **(F7) 国际风险分担**
 
 $$
-C_t=C_t^*.
+C_t=C_t^{\ast}.
 $$
 
 - **(F8) 最终品对品种 $f$ 的需求**
@@ -163,13 +163,13 @@ $$
 - **(F14) 总需求和贸易条件**
 
 $$
-Y_t=k^{-1}C_tS_t^\gamma,\qquad S_t=\frac{Y_t}{Y_t^*}.
+Y_t=k^{-1}C_tS_t^\gamma,\qquad S_t=\frac{Y_t}{Y_t^{\ast}}.
 $$
 
 - **(F15) 用本国和外国产出表示消费**
 
 $$
-C_t=kY_t^{1-\gamma}(Y_t^*)^\gamma.
+C_t=kY_t^{1-\gamma}(Y_t^{\ast})^\gamma.
 $$
 
 - **(F16) 含价格分散的总生产函数**
@@ -183,7 +183,7 @@ $$
 
 $$
 MC_t=(1-\tau)k^{\sigma-1}(1+\mu_t^w)A_t^{-(1+\phi)}
-Y_t^\kappa(Y_t^*)^{\kappa_0}V_t^\phi.
+Y_t^\kappa(Y_t^{\ast})^{\kappa_0}V_t^\phi.
 $$
 
 - **(F18) 开放经济斜率参数**
@@ -204,7 +204,7 @@ $$
 $$
 \bar{Y}_t=
 \left[
-\frac{k^{1-\sigma}A_t^{1+\phi}(Y_t^*)^{-\kappa_0}}
+\frac{k^{1-\sigma}A_t^{1+\phi}(Y_t^{\ast})^{-\kappa_0}}
 {(1-\tau)(1+\mu^w)(1+\mu^p)}
 \right]^{1/\kappa}.
 $$
@@ -214,10 +214,10 @@ $$
 $$
 \bar{\bar{Y}}_t=
 \left[
-\frac{k^{1-\sigma}A_t^{1+\phi}(\bar{\bar{Y}}_t^*)^{-\kappa_0}}
+\frac{k^{1-\sigma}A_t^{1+\phi}(\bar{\bar{Y}}_t^{\ast})^{-\kappa_0}}
 {(1-\tau)(1+\mu^w)(1+\mu^p)}
 \right]^{1/\kappa}
-=\bar{Y}_t\left(\frac{\bar{\bar{Y}}_t^*}{Y_t^*}\right)^{-\kappa_0/\kappa}.
+=\bar{Y}_t\left(\frac{\bar{\bar{Y}}_t^{\ast}}{Y_t^{\ast}}\right)^{-\kappa_0/\kappa}.
 $$
 
 - **(F22) Log-linear 总需求**
@@ -236,7 +236,7 @@ $$
 - **(F24) Log-linear 贸易条件**
 
 $$
-s_t=y_t-y_t^*.
+s_t=y_t-y_t^{\ast}.
 $$
 
 - **(F25) Log-linear 生产**
@@ -261,7 +261,7 @@ $$
 - **(F28) 对数偏离形式的国内自然产出**
 
 $$
-\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^*\right].
+\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^{\ast}\right].
 $$
 
 - **(F29) 国内产出缺口 IS 方程**
@@ -283,13 +283,13 @@ $$
 
 $$
 \overline{rr}_t=\sigma_0E_t\Delta\bar{y}_{t+1}
-+\kappa_0E_t\Delta y_{t+1}^*.
++\kappa_0E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F32) 自然贸易条件关系**
 
 $$
-s_t=(\tilde{y}_t-\tilde{y}_t^*)+(\bar{y}_t-\bar{y}_t^*)=(\tilde{y}_t-\tilde{y}_t^*)+\bar{s}_t.
+s_t=(\tilde{y}_t-\tilde{y}_t^{\ast})+(\bar{y}_t-\bar{y}_t^{\ast})=(\tilde{y}_t-\tilde{y}_t^{\ast})+\bar{s}_t.
 $$
 
 - **(F33) Nash 补贴条件**
@@ -335,7 +335,7 @@ $$
 - **(F39) 合作缺口定义**
 
 $$
-\tilde{\tilde{y}}_t=\tilde{y}_t-\frac{\kappa_0}{\kappa}\tilde{y}_t^*.
+\tilde{\tilde{y}}_t=\tilde{y}_t-\frac{\kappa_0}{\kappa}\tilde{y}_t^{\ast}.
 $$
 
 - **(F40) 合作福利损失**
@@ -344,8 +344,8 @@ $$
 W_C=-\frac{1}{2}\Lambda E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 (1-\gamma)\left(\pi_t^2+\alpha\tilde{\tilde{y}}_t^2\right)
-+\gamma\left((\pi_t^*)^2+\alpha^*(\tilde{\tilde{y}}_t^*)^2\right)
--2\Phi\tilde{\tilde{y}}_t\tilde{\tilde{y}}_t^*
++\gamma\left((\pi_t^{\ast})^2+\alpha^{\ast}(\tilde{\tilde{y}}_t^{\ast})^2\right)
+-2\Phi\tilde{\tilde{y}}_t\tilde{\tilde{y}}_t^{\ast}
 \right],
 $$
 
@@ -357,35 +357,35 @@ $$
 
 $$
 \pi_t=\beta E_t\pi_{t+1}+\lambda\tilde{\tilde{y}}_t
-+\lambda_0\tilde{\tilde{y}}_t^*+u_t,\qquad \lambda_0=\delta\kappa_0.
++\lambda_0\tilde{\tilde{y}}_t^{\ast}+u_t,\qquad \lambda_0=\delta\kappa_0.
 $$
 
 - **(F42) 合作情形外国 Phillips 曲线**
 
 $$
-\pi_t^*=\beta E_t\pi_{t+1}^*+\lambda^*\tilde{\tilde{y}}_t^*
-+\lambda_0^*\tilde{\tilde{y}}_t+u_t^*.
+\pi_t^{\ast}=\beta E_t\pi_{t+1}^{\ast}+\lambda^{\ast}\tilde{\tilde{y}}_t^{\ast}
++\lambda_0^{\ast}\tilde{\tilde{y}}_t+u_t^{\ast}.
 $$
 
 - **(F43) 以全球缺口表示的合作最优性条件**
 
 $$
 \tilde{\tilde{y}}_t=-\xi\pi_t,\qquad
-\tilde{\tilde{y}}_t^*=-\xi\pi_t^*.
+\tilde{\tilde{y}}_t^{\ast}=-\xi\pi_t^{\ast}.
 $$
 
 - **(F44) 以国内缺口表示的合作最优性条件**
 
 $$
-\tilde{y}_t=-\xi\left(\pi_t+\frac{\kappa_0}{\kappa}\pi_t^*\right),\qquad
-\tilde{y}_t^*=-\xi\left(\pi_t^*+\frac{\kappa_0^*}{\kappa^*}\pi_t\right).
+\tilde{y}_t=-\xi\left(\pi_t+\frac{\kappa_0}{\kappa}\pi_t^{\ast}\right),\qquad
+\tilde{y}_t^{\ast}=-\xi\left(\pi_t^{\ast}+\frac{\kappa_0^{\ast}}{\kappa^{\ast}}\pi_t\right).
 $$
 
 - **(F45) 合作情形 Taylor 型规则**
 
 $$
 r_t=\overline{rr}_t^d+\vartheta E_t\pi_{t+1}
-+\frac{\kappa_0}{\kappa}(\vartheta-1)E_t\pi_{t+1}^*.
++\frac{\kappa_0}{\kappa}(\vartheta-1)E_t\pi_{t+1}^{\ast}.
 $$
 
 `needs_review`：MinerU OCR 在论文 Eq. (61) 和 Eq. (77) 中把 $\vartheta$ 渲染成 `9`；论文 Eq. (76) 附近的合作通胀简约式存在重复且不可辨认的 $\psi$ 符号。这些内容在提升为 reviewed 之前需要对照 PDF。
@@ -395,26 +395,26 @@ $$
 - 本国和外国商品市场出清：
 
 $$
-(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C_{H,t}^*,\qquad
-\gamma Y_t^*=(1-\gamma)C_{F,t}+\gamma C_{F,t}^*.
+(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C_{H,t}^{\ast},\qquad
+\gamma Y_t^{\ast}=(1-\gamma)C_{F,t}+\gamma C_{F,t}^{\ast}.
 $$
 
 - 完全传递和一价定律意味着 CPI 实际汇率为 1：
 
 $$
-\frac{E_tP_t^*}{P_t}=1.
+\frac{E_tP_t^{\ast}}{P_t}=1.
 $$
 
 - 两国贸易平衡：
 
 $$
-P_{H,t}Y_t=P_tC_t,\qquad P_{F,t}^*Y_t^*=P_t^*C_t^*.
+P_{H,t}Y_t=P_tC_t,\qquad P_{F,t}^{\ast}Y_t^{\ast}=P_t^{\ast}C_t^{\ast}.
 $$
 
 - 名义汇率恒等式：
 
 $$
-e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^*.
+e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^{\ast}.
 $$
 
 这些恒等式支撑 (F14)、(F15)、(F24) 和 (F32) 中的简约系统。外国经济有带星号变量和人口权重替换的对称方程。
@@ -430,13 +430,13 @@ $$
 - **(F47) 外国成本推动冲击**
 
 $$
-u_t^*=\rho u_{t-1}^*+\varepsilon_t^*.
+u_t^{\ast}=\rho u_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F48) 技术冲击**
 
 $$
-a_t \ \text{and}\ a_t^* \ \text{enter natural output through (F28) and its foreign analogue.}
+a_t \ \text{and}\ a_t^{\ast} \ \text{enter natural output through (F28) and its foreign analogue.}
 $$
 
 `needs_review`：论文明确给出成本推动冲击的 AR(1)，但 MinerU Markdown 没有为技术状态给出单独随机过程。实现时如果需要技术 AR(1)，应从 MMB 代码或校准来源指定，而不能仅由本文文字推断。
@@ -445,8 +445,8 @@ $$
 
 本档案条目是 log-linear 解析模型。稳态是小写变量围绕其取对数偏离的确定性零通胀参考点。
 
-1. 归一化技术和对称产出水平：$A=A^*=1$，在对称稳态下 $Y=Y^*$，因此 $S=1$。
-2. 消费风险分担和贸易平衡意味着 $C=C^*$ 且 $Y=k^{-1}CS^\gamma$，因此 $S=1$ 时 $C=kY$。
+1. 归一化技术和对称产出水平：$A=A^{\ast}=1$，在对称稳态下 $Y=Y^{\ast}$，因此 $S=1$。
+2. 消费风险分担和贸易平衡意味着 $C=C^{\ast}$ 且 $Y=k^{-1}CS^\gamma$，因此 $S=1$ 时 $C=kY$。
 3. 零国内通胀且无价格分散时，所有重置价格等于价格指数，$V=1$。
 4. 灵活价格加成条件给定 $MC=(1+\mu^p)^{-1}$。
 5. Nash 稳态补贴满足 (F33)；合作稳态补贴满足 (F38)。这是两个不同的稳态政策扭曲，不能混用。
@@ -460,7 +460,7 @@ $$
 - 本推导为 log-linear 形式。小写变量表示相对稳态的对数偏离；但 $r_t$、$\pi_t$ 和相关利率/通胀变量沿用论文解析记号，为通胀或利率偏离。
 - 国内通胀 $\pi_t$ 是生产者价格通胀，不是 CPI 通胀。最优政策瞄准国内通胀；汇率在浮动汇率制度下调整。
 - $\tilde{y}_t$ 是相对国内灵活价格配置的国内产出缺口，该配置把外国产出视为给定。$\tilde{\tilde{y}}_t$ 是相对全球灵活价格合作配置的产出缺口。
-- 贸易条件水平定义为 $S_t=P_{F,t}/P_{H,t}$，log-linear 均衡中 $s_t=y_t-y_t^*$。
+- 贸易条件水平定义为 $S_t=P_{F,t}/P_{H,t}$，log-linear 均衡中 $s_t=y_t-y_t^{\ast}$。
 - 本模型没有资本存量。生产对劳动线性，因此不需要资本时序约定。
 - IS 曲线是前瞻的：$r_t-E_t\pi_{t+1}$ 是预期实际利率项，并由国内自然实际利率调整。
 - 政策问题是相机抉择，而非承诺；央行把未来预期视为给定。
@@ -472,9 +472,9 @@ $$
 | 符号 | 含义 | 主要方程 |
 |---|---|---|
 | $C_t,C_{H,t},C_{F,t}$ | 本国消费总量及分项 | (F1), (F2), (F15) |
-| $C_t^*$ | 外国消费总量 | (F7) 和外国对称式 |
-| $Y_t,Y_t^*$ | 本国和外国产出 | (F14), (F16), (F22), (F25) |
-| $N_t,N_t^*$ | 劳动 | (F5), (F6), (F16), (F25) |
+| $C_t^{\ast}$ | 外国消费总量 | (F7) 和外国对称式 |
+| $Y_t,Y_t^{\ast}$ | 本国和外国产出 | (F14), (F16), (F22), (F25) |
+| $N_t,N_t^{\ast}$ | 劳动 | (F5), (F6), (F16), (F25) |
 | $P_t,P_{H,t},P_{F,t}$ | CPI 和生产者价格 | (F1), (F2), (F9), (F13) |
 | $P^0_{H,t}$ | Calvo 重置价格 | (F11), (F12), (F13) |
 | $S_t,s_t$ | 贸易条件 | (F14), (F24), (F32) |
@@ -482,19 +482,19 @@ $$
 | $V_t$ | 价格分散 | (F16) |
 | $\bar{Y}_t,\bar{\bar{Y}}_t$ | 国内和全球自然产出 | (F20), (F21), (F28) |
 | $\tilde{y}_t,\tilde{\tilde{y}}_t$ | 国内和合作产出缺口 | (F29), (F30), (F39), (F43), (F44) |
-| $\pi_t,\pi_t^*$ | 国内生产者通胀 | (F26), (F30), (F41), (F42) |
+| $\pi_t,\pi_t^{\ast}$ | 国内生产者通胀 | (F26), (F30), (F41), (F42) |
 | $r_t$ | log-linear 政策系统中的名义政策利率 | (F29), (F37), (F45) |
 | $\overline{rr}_t$ | 国内自然实际利率 | (F31), (F37), (F45) |
 | $e_t$ | 名义汇率 | 第 4 节恒等式 |
-| $u_t,u_t^*$ | 成本推动冲击 | (F30), (F41), (F42), (F46), (F47) |
-| $a_t,a_t^*$ | 技术冲击 | (F28), (F48) |
+| $u_t,u_t^{\ast}$ | 成本推动冲击 | (F30), (F41), (F42), (F46), (F47) |
+| $a_t,a_t^{\ast}$ | 技术冲击 | (F28), (F48) |
 
 ### 外生冲击
 
 | 符号 | 含义 | 来源状态 |
 |---|---|---|
-| $\varepsilon_t,\varepsilon_t^*$ | 成本推动创新 | 来源在 (F46), (F47) 中明示 |
-| $a_t,a_t^*$ | 生产率过程 | 技术状态由来源明示，随机过程需要复核 |
+| $\varepsilon_t,\varepsilon_t^{\ast}$ | 成本推动创新 | 来源在 (F46), (F47) 中明示 |
+| $a_t,a_t^{\ast}$ | 生产率过程 | 技术状态由来源明示，随机过程需要复核 |
 
 ### 参数
 
@@ -512,7 +512,7 @@ $$
 | $\delta$ | Phillips 曲线 Calvo 系数 $(1-\theta)(1-\beta\theta)/\theta$ |
 | $\kappa,\kappa_0,\sigma_0$ | 开放经济边际成本和 IS 斜率组合参数 |
 | $\lambda,\lambda_0$ | Phillips 曲线斜率和国际边际成本溢出 |
-| $\alpha,\alpha^*$ | 本国和外国福利损失中的产出缺口权重 |
+| $\alpha,\alpha^{\ast}$ | 本国和外国福利损失中的产出缺口权重 |
 | $\Lambda,\Phi$ | 福利损失尺度和合作交叉缺口项 |
 | $\rho$ | 成本推动冲击持续性 |
 | $\psi,\vartheta$ | 简约政策系数；来源 OCR 敏感 |

@@ -58,7 +58,7 @@ The source-stated baseline is nested at `needs_review`: $\theta=0$ and $\phi=0$ 
 **(F3) Forward-looking desired interest-rate rule**:
 
 $$
-i^*_t =
+i^{\ast}_t =
 \bar{i}
 + \gamma_{\pi}\big(E_t\pi_{t+1}-\bar{\pi}\big)
 + \gamma_x x_t
@@ -71,7 +71,7 @@ The paper reports the Volcker-Greenspan estimates $\gamma_{\pi}=2.15$, $\gamma_x
 $$
 i_t =
 \rho_i i_{t-1}
-+ (1-\rho_i)i^*_t
++ (1-\rho_i)i^{\ast}_t
 $$
 
 Combining (F3) and (F4) gives the implemented policy rule

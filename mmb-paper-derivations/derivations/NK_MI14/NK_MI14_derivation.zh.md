@@ -255,8 +255,8 @@ $$
 **(F27) 一次性公共就业干预路径**：
 
 $$
-g_1^*=\hat{g}_1+\Delta g,\qquad
-g_t^*-(1-s)g_{t-1}^*=s\bar{g}\quad\text{for }t\ge 2.
+g_1^{\ast}=\hat{g}_1+\Delta g,\qquad
+g_t^{\ast}-(1-s)g_{t-1}^{\ast}=s\bar{g}\quad\text{for }t\ge 2.
 $$
 
 MMB 实现交叉检查将该政策表示为外生公共招聘冲击 `hireg` 和内生存量 `gendo`。

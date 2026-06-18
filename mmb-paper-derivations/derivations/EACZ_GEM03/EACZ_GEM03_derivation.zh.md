@@ -136,7 +136,7 @@ $$
 
 - **(F9) 原材料一价定律**：
 $$
-P_{MO,t}^*=\frac{P_{QO,t}}{\mathcal E_t}.
+P_{MO,t}^{\ast}=\frac{P_{QO,t}}{\mathcal E_t}.
 $$
 
 - **(F10) 非贸易品价格调整成本**：
@@ -154,7 +154,7 @@ $$
 $$
 \bar p_t(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta}{\theta-1}P_{N,t},
 \qquad
-\mathcal E_t\bar p_t^*(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta^*}{\theta-1}\mathcal E_tP_{N,t}^*.
+\mathcal E_t\bar p_t^{\ast}(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta^{\ast}}{\theta-1}\mathcal E_tP_{N,t}^{\ast}.
 $$
 
 - **(F13) 随机贴现因子 / 定价核**：
@@ -171,15 +171,15 @@ $$
 
 - **(F15) 风险调整的未抛补利率平价**：
 $$
-1=(1+i_{t+1}^*)(1-\Gamma_{B,t+1})
+1=(1+i_{t+1}^{\ast})(1-\Gamma_{B,t+1})
 E_t\left(D_{t,t+1}\frac{\mathcal E_{t+1}}{\mathcal E_t}\right).
 $$
 
 - **(F16) 外币债券中介楔子**：
 $$
 \Gamma_{B,t+1}=\phi_{B1}
-\frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^*/P_t\right)-1}
-{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^*/P_t\right)+1}
+\frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)-1}
+{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)+1}
 +Z_{B,t}.
 $$
 
@@ -204,7 +204,7 @@ $$
 - **(F20) 家庭横截条件**：
 $$
 \lim_{\tau\to\infty}E_tD_{t,\tau}
-\left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^*)(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^*(j)\right]=0.
+\left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^{\ast})(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^{\ast}(j)\right]=0.
 $$
 
 - **(F21) 政府预算约束**：
@@ -228,7 +228,7 @@ $$
 $$
 \int_0^s T_{O,t}^S(o)\,do
 =\int_0^s Q_{O,t}^D(n)\,dn+\int_0^s Q_{O,t}^D(h)\,dh
-+\int_s^1 M_{O,t}^{D*}(n^*)\,dn^*+\int_s^1 M_{O,t}^{D*}(f)\,df.
++\int_s^1 M_{O,t}^{D\ast}(n^{\ast})\,dn^{\ast}+\int_s^1 M_{O,t}^{D\ast}(f)\,df.
 $$
 
 - **(F24) 非贸易品市场出清**：
@@ -238,7 +238,7 @@ $$
 
 - **(F25) 贸易品市场出清**：
 $$
-T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{*D}(h,x^*)\,dx^*.
+T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{\astD}(h,x^{\ast})\,dx^{\ast}.
 $$
 
 - **(F26) 最终品资源约束**：
@@ -264,7 +264,7 @@ $$
 - **(F30) 资产市场出清**：
 $$
 \int_0^sB_t(j)\,dj=0,\qquad
-\int_0^sB_t^*(j)\,dj+\int_s^1B_t^*(j^*)\,dj^*=0.
+\int_0^sB_t^{\ast}(j)\,dj+\int_s^1B_t^{\ast}(j^{\ast})\,dj^{\ast}=0.
 $$
 `needs_review`：MinerU 将 Eq. (46) 的两个资产出清方程合并；这里按上下文拆分。
 
@@ -322,7 +322,7 @@ $$
 
 - **(F39) 净外国资产的无中介稳态**：
 $$
-B_H^*=0,\qquad \Gamma_B=0.
+B_H^{\ast}=0,\qquad \Gamma_B=0.
 $$
 
 - **(F40) 资本租金稳态限制**：
@@ -342,8 +342,8 @@ $$
 
 - **(F43) 核心校准值**：
 $$
-s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^*=6,\quad
-\phi=\phi^*=4,\quad \delta=\delta^*=0.025.
+s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^{\ast}=6,\quad
+\phi=\phi^{\ast}=4,\quad \delta=\delta^{\ast}=0.025.
 $$
 
 来源还记录了 Home 进口份额、Home/Foreign 开放度权重、材料/投入份额、分销参数、习惯持久性 $b=0.95$、跨期替代参数 $\sigma=1/3$ 和劳动负效用曲率 $\zeta=2.5$ 等稳态目标。实现交叉检查包含数值 `initval`，但这里不将其提升为论文侧推导证据。
@@ -352,7 +352,7 @@ $$
 
 - 周期为季度。
 - 存量：论文写作 $K_{t+1}=(1-\delta)K_t+\Psi_tK_t$；Rep-MMB 代码写为 `K = K(-1)*(1-delta)+PSI(-1)*K(-1)`，所以第 $t$ 期生产使用预定资本。
-- 债券：短期名义利率 $i_t$ 和 $i_t^*$ 在第 $t$ 期期初支付，并在 $t-1$ 已知；Euler 方程使用在 $t$ 选择的 $i_{t+1}$。
+- 债券：短期名义利率 $i_t$ 和 $i_t^{\ast}$ 在第 $t$ 期期初支付，并在 $t-1$ 已知；Euler 方程使用在 $t$ 选择的 $i_{t+1}$。
 - 汇率：$\mathcal E_t$ 为每单位 Foreign 货币对应的 Home 货币。贬值进入风险调整 UIP 条件。
 - 国家记号：论文中 Home 不加星号、Foreign 加星号。实现中小型 Home 经济用 `H`，大型 Foreign 经济用 `F`。
 - 模型形式：非线性均衡条件用于求稳态，再线性化进行随机政策分析。MMB 实现没有声明 `model(linear)`。
@@ -383,7 +383,7 @@ $$
 | $W$, `REALWH`, `REALWF` | 工资 | (F5), (F19), (F41) |
 | $R$, `REALRH`, `REALRF` | 资本租金率 | (F6), (F7), (F40) |
 | $i$, `RNOMH`, `RNOMF` | 名义政策利率 | (F14), (F22), (F38) |
-| $B^*$, `REALBH`, `REALBF` | 外币债券头寸 | (F15), (F16), (F30), (F32) |
+| $B^{\ast}$, `REALBH`, `REALBF` | 外币债券头寸 | (F15), (F16), (F30), (F32) |
 | $\mathcal E$, `REALEX` | 名义/实际汇率块 | (F9), (F15), (F32) |
 | $GDP$, `GDPH`, `GDPF` | GDP 核算对象 | (F31), (F32) |
 | $\Pi_4$, `PIE4H`, `PIE4F` | 年通胀 | (F22), (F38) |

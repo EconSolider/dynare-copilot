@@ -20,10 +20,10 @@
 $$
 \max_{\{C_t,N_t,M_t,B_t\}} E_0 \sum_{t=0}^{\infty}\beta^t a_t
 \left[
-\Psi\left(C_t^*,\frac{M_t}{e_t P_t}\right)
+\Psi\left(C_t^{\ast},\frac{M_t}{e_t P_t}\right)
 - \frac{N_t^{1+\varphi}}{1+\varphi}
 \right],
-\qquad C_t^*=\frac{C_t}{C_{t-1}^{h}} .
+\qquad C_t^{\ast}=\frac{C_t}{C_{t-1}^{h}} .
 $$
 
 期间预算约束为：

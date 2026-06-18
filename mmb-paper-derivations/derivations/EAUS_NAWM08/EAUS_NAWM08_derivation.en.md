@@ -427,7 +427,7 @@ $$
 - **(F37) World foreign-bond clearing**:
 
 $$
-sB_t^F+(1-s)B_t^{F,*}=0.
+sB_t^F+(1-s)B_t^{F,\ast}=0.
 $$
 
 ## 5. Exogenous Processes

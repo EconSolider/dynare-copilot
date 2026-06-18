@@ -10,7 +10,7 @@
 - **来源重点**：论文先推导家庭和企业模型，再使用对数线性 canonical system 做政策制度实验。MMB 实现交叉检查使用对数线性的 `model(linear)` 表示。
 - **主体与模块**：代表性家庭、国内差异化产品企业、对小国经济外生的世界经济，以及选择严格国内通胀目标、国内通胀 Taylor 规则、CPI 通胀 Taylor 规则或汇率盯住的货币当局。
 - **形式**：对数线性。小写变量是围绕对称零通胀稳态的对数偏离或对数水平。MMB 示例使用 `model(linear)`。
-- **主要外生驱动**：国内生产率 $a_t$ 和世界产出 $y_t^*$。
+- **主要外生驱动**：国内生产率 $a_t$ 和世界产出 $y_t^{\ast}$。
 
 ## 2. Optimization Problems
 
@@ -85,20 +85,20 @@ $$
 - **(F4) 国际风险分担**：
 
 $$
-c_t=c_t^*+\frac{1}{\sigma}q_t
-=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t
+=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F5) 无抛补利率平价**：
 
 $$
-r_t-r_t^*=E_t\{\Delta e_{t+1}\}.
+r_t-r_t^{\ast}=E_t\{\Delta e_{t+1}\}.
 $$
 
 - **(F6) 贸易条件与利差关系**：
 
 $$
-s_t=(r_t^*-E_t\{\pi_{t+1}^*\})-(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
+s_t=(r_t^{\ast}-E_t\{\pi_{t+1}^{\ast}\})-(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
 $$
 
 - **(F7) 总量生产**：
@@ -124,14 +124,14 @@ $$
 - **(F10) 边际成本作为国内产出的函数**：
 
 $$
-mc_t=-\nu+(\sigma_{\alpha}+\varphi)y_t+(\sigma-\sigma_{\alpha})y_t^*
+mc_t=-\nu+(\sigma_{\alpha}+\varphi)y_t+(\sigma-\sigma_{\alpha})y_t^{\ast}
 -(1+\varphi)a_t.
 $$
 
 - **(F11) 自然产出**：
 
 $$
-\overline y_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline y_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 \quad
 \Gamma=\frac{1+\varphi}{\sigma_{\alpha}+\varphi},
 \quad
@@ -163,7 +163,7 @@ $$
 
 $$
 \overline{rr}_t=\rho-\sigma_{\alpha}\Gamma(1-\rho_a)a_t
-+\alpha\sigma_{\alpha}(\Theta+\Psi)E_t\{\Delta y_{t+1}^*\}.
++\alpha\sigma_{\alpha}(\Theta+\Psi)E_t\{\Delta y_{t+1}^{\ast}\}.
 $$
 
 - **(F16) 严格国内通胀目标 / 最优特殊情形**：
@@ -201,7 +201,7 @@ $$
 - **(F21) 贸易条件定义**：
 
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F22) 有效实际汇率**：
@@ -221,13 +221,13 @@ $$
 - **(F24) 世界商品市场出清**：
 
 $$
-y_t^*=c_t^*.
+y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F25) 产出与贸易条件关系**：
 
 $$
-y_t=y_t^*+\frac{1}{\sigma_{\alpha}}s_t,
+y_t=y_t^{\ast}+\frac{1}{\sigma_{\alpha}}s_t,
 \qquad
 \sigma_{\alpha}=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
@@ -274,7 +274,7 @@ $$
 - **(F32) 世界产出**：
 
 $$
-y_t^*=\rho_y y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_y y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 校准部分估计 $\rho_a=0.66$、$\rho_y=0.86$，标准差为 $0.0071$ 和 $0.0078$，创新相关系数为 $0.3$。MMB 示例使用冲击 `a_` 和 `ystar_`。
@@ -285,7 +285,7 @@ $$
 
 1. 对称外国经济的 $A=1$；对称基准下国内 $A=1$。
 2. 购买力平价成立且 $S=1$，因此 $s=0$、$q=0$。
-3. 在对称情形下，国内和国外产出相等，$Y=Y^*$。
+3. 在对称情形下，国内和国外产出相等，$Y=Y^{\ast}$。
 4. 零通胀意味着 $\pi_H=\pi=0$，国内价格水平和 CPI 价格水平为常数。
 5. 无风险实际总回报由 $\beta$ 决定；论文对数线性记号中 $\rho=\beta^{-1}-1$。
 6. 在最优政策的特殊校准下，$\sigma=\eta=\gamma=1$，补贴满足 $(1-\tau)(1-\alpha)=1-1/\varepsilon$，使灵活价格配置有效率。
@@ -298,7 +298,7 @@ $$
 - 变量以 $t$ 期计时，并通过期望 $E_t\{\cdot\}$ 体现前瞻性。
 - 模型不含资本存量，因此没有资本投入生产的时序约定。
 - 国内价格通胀为 $\pi_{H,t}=p_{H,t}-p_{H,t-1}$；CPI 通胀为 $\pi_t=p_t-p_{t-1}$。
-- 贸易条件为 $s_t=p_{F,t}-p_{H,t}=e_t+p_t^*-p_{H,t}$；在论文约定中，更高的 $s_t$ 表示本国贸易条件贬值。
+- 贸易条件为 $s_t=p_{F,t}-p_{H,t}=e_t+p_t^{\ast}-p_{H,t}$；在论文约定中，更高的 $s_t$ 表示本国贸易条件贬值。
 - MMB 示例将政策制度固定为 DIT（`pih = 0`），并注释掉 DITR、CITR 和 PEG 替代规则。它还把外国通胀设为零，并未在活动模型块中包含 UIP 方程。
 - 未执行运行时验证；方程数和 BK 检查留待以后处理。
 
@@ -322,10 +322,10 @@ $$
 | Endogenous | $p_t$ / `p` | CPI 价格水平 | (F19) |
 | Endogenous | $p_{H,t}$ / `ph` | 国内价格水平 | (F19), (F21) |
 | Endogenous | $a_t$ / `a` | 国内生产率 | (F31) |
-| Endogenous | $y_t^*$ / `ystar` | 世界产出 | (F32) |
-| Endogenous | $\pi_t^*$ / `pistar` | 世界通胀 | MMB sets zero |
+| Endogenous | $y_t^{\ast}$ / `ystar` | 世界产出 | (F32) |
+| Endogenous | $\pi_t^{\ast}$ / `pistar` | 世界通胀 | MMB sets zero |
 | Exogenous | $\varepsilon_t^a$ / `a_` | 国内生产率创新 | (F31) |
-| Exogenous | $\varepsilon_t^*$ / `ystar_` | 世界产出创新 | (F32) |
+| Exogenous | $\varepsilon_t^{\ast}$ / `ystar_` | 世界产出创新 | (F32) |
 | Parameter | $\beta$ / `beta` | 贴现因子 | (F2), (F9), (F13) |
 | Parameter | $\sigma$ / `sigma` | 消费风险厌恶 / 跨期替代弹性倒数 | (F3), (F4), (F23) |
 | Parameter | $\varphi$ / `varphi` or `tau` in MMB code | Frisch 弹性倒数 | (F1), (F10), (F11) |

@@ -135,10 +135,10 @@ $$
 =\left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
 \left(\frac{\pi_t}{\pi}\right)^{\phi_\pi}
-\left(\frac{X_t}{X_t^*}\right)^{\phi_X}
+\left(\frac{X_t}{X_t^{\ast}}\right)^{\phi_X}
 \right]^{1-\rho_R}
 \left[
-\frac{X_t/X_{t-1}}{X_t^*/X_{t-1}^*}
+\frac{X_t/X_{t-1}}{X_t^{\ast}/X_{t-1}^{\ast}}
 \right]^{\phi_{dX}}
 \varepsilon_{mp,t}.
 $$
@@ -303,10 +303,10 @@ $$
 - **(F21) GDP/output-gap target identity** needs_review:
 
 $$
-X_t^*=\text{flexible-price/wage counterpart of }X_t.
+X_t^{\ast}=\text{flexible-price/wage counterpart of }X_t.
 $$
 
-The Taylor rule refers to the GDP gap $X_t/X_t^*$. The paper uses the flexible-economy object in the policy rule, while the implementation cross-check includes starred variables for the flexible counterpart.
+The Taylor rule refers to the GDP gap $X_t/X_t^{\ast}$. The paper uses the flexible-economy object in the policy rule, while the implementation cross-check includes starred variables for the flexible counterpart.
 
 ## 5. Exogenous Processes
 
@@ -364,10 +364,10 @@ $$
 =\left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
 \left(\frac{\pi_t}{\pi}\right)^{\phi_\pi}
-\left(\frac{X_t}{X_t^*}\right)^{\phi_X}
+\left(\frac{X_t}{X_t^{\ast}}\right)^{\phi_X}
 \right]^{1-\rho_R}
 \left[
-\frac{X_t/X_{t-1}}{X_t^*/X_{t-1}^*}
+\frac{X_t/X_{t-1}}{X_t^{\ast}/X_{t-1}^{\ast}}
 \right]^{\phi_{dX}}
 \varepsilon_{mp,t}.
 $$
@@ -379,7 +379,7 @@ The paper solves the model by detrending nonstationary variables, computing the 
 Known steady-state restrictions from the source:
 
 $$
-\gamma_*=\gamma_z+\frac{\alpha}{1-\alpha}\gamma_\upsilon.
+\gamma_\ast=\gamma_z+\frac{\alpha}{1-\alpha}\gamma_\upsilon.
 $$
 
 $$
@@ -408,7 +408,7 @@ The implementation cross-check computes a linear-model steady state internally w
 - **Capital timing**: Physical installed capital $\bar K_t$ is a period-end stock. Production at $t$ uses effective capital $K_t=u_t\bar K_{t-1}$.
 - **Investment timing**: $I_t/I_{t-1}$ enters adjustment costs, so lagged investment is a state for the capital-producer problem.
 - **Technology trends**: Neutral technology $A_t$ and IST $\Upsilon_t$ are nonstationary in levels. The stationary transformed model uses growth rates $z_t=\Delta\log A_t$ and $\upsilon_t=\Delta\log\Upsilon_t$.
-- **Composite trend**: The balanced-growth trend is $A_t\Upsilon_t^{\alpha/(1-\alpha)}$ with steady growth $\gamma_*$.
+- **Composite trend**: The balanced-growth trend is $A_t\Upsilon_t^{\alpha/(1-\alpha)}$ with steady growth $\gamma_\ast$.
 - **Relative price convention**: In the competitive baseline, $P_{I,t}/P_t=\Upsilon_t^{-1}$. Appendix A shows this equality can fail with sticky prices in both consumption and investment production sectors.
 - **Form**: The archive entry is classified as `model(linear)` because the paper says the detrended model is log-linearly approximated and the Rep-MMB implementation uses `model(linear)`.
 - **Runtime validation**: Not performed by instruction.
@@ -438,7 +438,7 @@ The implementation cross-check computes a linear-model steady state internally w
 | Endogenous | $G_t$, `g` | Government spending | (F20), (F28) |
 | Endogenous | $R_t$, `R` | Gross nominal policy rate | (F10), (F29) |
 | Endogenous | $\pi_t$, `p` | Gross inflation / log inflation in linear form | (F5), (F29) |
-| Endogenous | $X_t/X_t^*$, `gdp-gap` | GDP gap relative to flexible counterpart | (F21), (F29) |
+| Endogenous | $X_t/X_t^{\ast}$, `gdp-gap` | GDP gap relative to flexible counterpart | (F21), (F29) |
 | Exogenous | $\varepsilon_{z,t}$, `zs` | Neutral technology growth innovation | (F23) |
 | Exogenous | $\varepsilon_{\upsilon,t}$, `upsilons` | IST growth innovation | (F24) |
 | Exogenous | $\varepsilon_{\mu,t}$, `mius` | MEI innovation | (F25) |

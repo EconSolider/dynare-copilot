@@ -187,11 +187,11 @@ $$
 \hat r^n_t ={}&
 \phi_m\hat r^n_{t-1}
 +(1-\phi_m)\left[
-r_\pi\pi_{t-1}+r_y(\hat y_{t-1}-\hat y^*_{t-1})
+r_\pi\pi_{t-1}+r_y(\hat y_{t-1}-\hat y^{\ast}_{t-1})
 \right] \\
 &+ r_{\Delta\pi}(\pi_t-\pi_{t-1})
 + r_{\Delta y}\left[
-\hat y_t-\hat y^*_t-(\hat y_{t-1}-\hat y^*_{t-1})
+\hat y_t-\hat y^{\ast}_t-(\hat y_{t-1}-\hat y^{\ast}_{t-1})
 \right]
 + u^{ru}_t .
 \end{aligned}

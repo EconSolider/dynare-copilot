@@ -173,7 +173,7 @@ $$
 - **(F12) 福利产出缺口与损失函数**：
 
 $$
-L_t=\pi_t^2+\lambda(\hat Y_t-\hat Y_t^e-z^*)^2,
+L_t=\pi_t^2+\lambda(\hat Y_t-\hat Y_t^e-z^{\ast})^2,
 $$
 
 其中
@@ -185,14 +185,14 @@ $$
 - **(F13) 固定利率下的弹性产出参考值**：
 
 $$
-\hat Y_t^*=\frac{(1+\eta)\hat A_t-\sigma\hat\gamma_t+\hat\xi_t}{\sigma+\eta}.
+\hat Y_t^{\ast}=\frac{(1+\eta)\hat A_t-\sigma\hat\gamma_t+\hat\xi_t}{\sigma+\eta}.
 $$
 
 - **(F14) 用 $x_t$ 表示的成本渠道边际成本**：
 
 $$
 \hat\varphi_t=(\sigma+\eta)x_t+\hat R_t,\qquad
-x_t\equiv \hat Y_t-\hat Y_t^*.
+x_t\equiv \hat Y_t-\hat Y_t^{\ast}.
 $$
 
 - **(F15) 政策模型 IS 曲线**：
@@ -356,7 +356,7 @@ $$
 - **时序**：紧凑 MMB 模型是前瞻线性模型。IS 曲线使用 $x_{t+1}$ 和 $\pi_{t+1}$ 的期望；Phillips 曲线使用预期通胀。
 - **存量**：此处使用的论文模型没有资本，因此不存在资本进入生产的时序约定需要解决。
 - **利率记号**：论文中的 $R_t$ 是名义总利率；在线性化方程中 $\hat R_t$ 是名义利率偏离。MMB `.mod` 变量 `R` 是紧凑方程中的线性偏离。
-- **产出缺口**：$x_t=\hat Y_t-\hat Y_t^*$ 是相对于固定利率政策下弹性价格产出的缺口，不一定是相对于有效产出的缺口。
+- **产出缺口**：$x_t=\hat Y_t-\hat Y_t^{\ast}$ 是相对于固定利率政策下弹性价格产出的缺口，不一定是相对于有效产出的缺口。
 - **自适应学习**：`NK_RW06AL` 增加了自适应学习元数据（`AL_Info`）并限制政策规则的超前/滞后结构。这是实现元数据，不是独立的论文侧最优化问题。
 - **形式**：`model(linear)`；`.mod` 模型块中的所有稳态偏离均为零。
 
@@ -364,7 +364,7 @@ $$
 
 | 类别 | 符号 / ASCII 名 | 含义 | 由哪条方程决定 |
 |---|---|---|---|
-| 内生 | $x_t$ / `x` | 相对于 $\hat Y_t^*$ 的产出缺口 | (F15), policy rule |
+| 内生 | $x_t$ / `x` | 相对于 $\hat Y_t^{\ast}$ 的产出缺口 | (F15), policy rule |
 | 内生 | $\pi_t$ / `pi` | 通胀偏离 | (F16) |
 | 内生 | $\hat R_t$ / `R` | 名义利率偏离 | policy rule / (F30) |
 | 报告内生 | `interest` | 年化利率 | (F23), policy rule |

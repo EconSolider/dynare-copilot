@@ -88,7 +88,7 @@ $$
 $$
 with
 $$
-q_1=\frac{r^k_*}{r^k_*+(1-\delta)}.
+q_1=\frac{r^k_\ast}{r^k_\ast+(1-\delta)}.
 $$
 
 - **(F4) Price-setting under Calvo pricing with indexation**:
@@ -150,10 +150,10 @@ $$
 - **(F10) Aggregate demand equals aggregate supply / production identity**:
 $$
 \widehat{y}_t
-=\frac{c_*}{y_*}\widehat{c}_t
-+\frac{i_*}{y_*}\widehat{i}_t
+=\frac{c_\ast}{y_\ast}\widehat{c}_t
++\frac{i_\ast}{y_\ast}\widehat{i}_t
 +\widehat{\varepsilon}^g_t
-+\frac{r^k_*k_*}{y_*}\widehat{u}_t
++\frac{r^k_\astk_\ast}{y_\ast}\widehat{u}_t
 =\Phi_p\left(\alpha\widehat{k}_t+(1-\alpha)\widehat{L}_t+\widehat{\varepsilon}^a_t\right).
 $$
 
@@ -166,8 +166,8 @@ $$
 $$
 with
 $$
-k_1=1-\frac{i_*}{\bar{k}_*},\qquad
-k_2=\frac{i_*}{\bar{k}_*}(1+\bar{\beta}\gamma)\gamma^2 S''.
+k_1=1-\frac{i_\ast}{\bar{k}_\ast},\qquad
+k_2=\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''.
 $$
 
 - **(F12) Capital services identity**:
@@ -283,16 +283,16 @@ The Appendix B equations are log-linear around the stationary steady state of de
 1. Detrend real quantities by deterministic labor-augmenting technological growth.
 2. Normalize log deviations of stationary real variables and inflation/rate deviations to zero at the steady state:
 $$
-\widehat{c}_*=\widehat{i}_*=\widehat{y}_*=\widehat{w}_*=\widehat{L}_*
-=\widehat{\pi}_*=\widehat{R}_*=\widehat{Q}^k_*
-=\widehat{r}^k_*=\widehat{u}_*=0.
+\widehat{c}_\ast=\widehat{i}_\ast=\widehat{y}_\ast=\widehat{w}_\ast=\widehat{L}_\ast
+=\widehat{\pi}_\ast=\widehat{R}_\ast=\widehat{Q}^k_\ast
+=\widehat{r}^k_\ast=\widehat{u}_\ast=0.
 $$
 3. Set innovations and exogenous deviations to zero:
 $$
-\widehat{\varepsilon}^a_*=\widehat{\varepsilon}^b_*=\widehat{\varepsilon}^g_*=\widehat{\varepsilon}^q_*=\widehat{\varepsilon}^r_*=\widehat{\varepsilon}^p_*=\widehat{\varepsilon}^w_*=0.
+\widehat{\varepsilon}^a_\ast=\widehat{\varepsilon}^b_\ast=\widehat{\varepsilon}^g_\ast=\widehat{\varepsilon}^q_\ast=\widehat{\varepsilon}^r_\ast=\widehat{\varepsilon}^p_\ast=\widehat{\varepsilon}^w_\ast=0.
 $$
 4. For the learning state, if beliefs are initialized from an REE moment matrix, use (F22). Under model-consistent beliefs and zero innovations, the PLM produces steady expectations equal to the zero-deviation steady state.
-5. Structural steady-state ratios and calibrated constants appearing in the log-linear coefficients include $c_*/y_*$, $i_*/y_*$, $r^k_*k_*/y_*$, $\bar{k}_*$, $r^k_*$, $\bar{\eta}$, $\bar{\beta}$, and $\gamma$. The paper appendix does not provide a complete nonlinear steady-state derivation; this first-pass archive records those coefficients as source-stated inputs and marks full nonlinear reconstruction as `needs_review`.
+5. Structural steady-state ratios and calibrated constants appearing in the log-linear coefficients include $c_\ast/y_\ast$, $i_\ast/y_\ast$, $r^k_\astk_\ast/y_\ast$, $\bar{k}_\ast$, $r^k_\ast$, $\bar{\eta}$, $\bar{\beta}$, and $\gamma$. The paper appendix does not provide a complete nonlinear steady-state derivation; this first-pass archive records those coefficients as source-stated inputs and marks full nonlinear reconstruction as `needs_review`.
 
 Runtime validation status: not performed. Dynare was not run.
 

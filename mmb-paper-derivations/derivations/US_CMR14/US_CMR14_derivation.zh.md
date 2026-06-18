@@ -29,8 +29,8 @@ $$
 $$
 Y_{jt}=
 \begin{cases}
-\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}-\Phi z_t^*,&
-\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}>\Phi z_t^*,\\
+\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}-\Phi z_t^{\ast},&
+\epsilon_tK_{jt}^{\alpha}(z_tl_{jt})^{1-\alpha}>\Phi z_t^{\ast},\\
 0,&\text{otherwise},
 \end{cases}
 \qquad 0<\alpha<1.
@@ -109,7 +109,7 @@ $$
 
 $$
 r_t^k=\alpha\epsilon_t
-\left(\frac{\Upsilon\mu_{z,t}^*h_t(w_t^*)^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
+\left(\frac{\Upsilon\mu_{z,t}^{\ast}h_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}}{u_t\bar k_{t-1}}\right)^{1-\alpha}s_t .
 $$
 
 - **(F3) 边际成本**（`needs_review`；仅用实现交叉检查确认缩放）：
@@ -121,8 +121,8 @@ $$
 - **(F4) 重设价格的价格指数递推**（`needs_review`；论文给出 Calvo/指数化，公式仅与 `.mod` 交叉检查）：
 
 $$
-p_t^*=\left[(1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
-\xi_p\left(\frac{\tilde\pi_t}{\pi_t}p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
+p_t^{\ast}=\left[(1-\xi_p)\left(\frac{K_{p,t}}{F_{p,t}}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}
+\xi_p\left(\frac{\tilde\pi_t}{\pi_t}p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}} .
 $$
 
 - **(F5) 价格辅助变量 $F_p$ 递推**（`needs_review`；实现交叉检查）：
@@ -142,10 +142,10 @@ $$
 - **(F7) 稳定化产出定义**（`needs_review`；源生产方程加实现缩放）：
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_f/(\lambda_f-1)}
+Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 \left[
-\epsilon_t\left(\frac{u_t\bar k_{t-1}}{\mu_{z,t}^*\Upsilon}\right)^\alpha
-\left(h_t(w_t^*)^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
+\epsilon_t\left(\frac{u_t\bar k_{t-1}}{\mu_{z,t}^{\ast}\Upsilon}\right)^\alpha
+\left(h_t(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}\right)^{1-\alpha}
 -\phi
 \right].
 $$
@@ -153,21 +153,21 @@ $$
 - **(F8) 重设工资指数**（`needs_review`；论文给出 Calvo 工资设定，实现交叉检查提供递推）：
 
 $$
-w_t^*=\left[(1-\xi_w)A_{w,t}^{\lambda_w}
-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\iota_\mu}(\mu_{z^*,t})^{\iota_\mu}w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
+w_t^{\ast}=\left[(1-\xi_w)A_{w,t}^{\lambda_w}
+\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\iota_\mu}(\mu_{z^{\ast},t})^{\iota_\mu}w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F9) 工资辅助变量 $F_w$ 递推**（`needs_review`；实现交叉检查）：
 
 $$
-F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^*)^{\lambda_w/(\lambda_w-1)}h_t\frac{1-\tau^l}{\lambda_w}
+F_{w,t}=\zeta_{c,t}\lambda_{z,t}(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}h_t\frac{1-\tau^l}{\lambda_w}
 \beta\xi_wE_t[\mathcal I^F_{w,t+1}F_{w,t+1}].
 $$
 
 - **(F10) 工资辅助变量 $K_w$ 递推**（`needs_review`；实现交叉检查）：
 
 $$
-K_{w,t}=\zeta_{c,t}\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}h_t\right]^{1+\sigma_L}
+K_{w,t}=\zeta_{c,t}\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}h_t\right]^{1+\sigma_L}
 \beta\xi_wE_t[\mathcal I^K_{w,t+1}K_{w,t+1}].
 $$
 
@@ -177,15 +177,15 @@ $$
 
 $$
 (1+\tau^c)\zeta_{c,t}\lambda_{z,t}
-=\frac{\mu_{z,t}^*\zeta_{c,t}}{c_t\mu_{z,t}^*-bc_{t-1}}
--b\beta E_t\left[\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^*-bc_t}\right].
+=\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
+-b\beta E_t\left[\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right].
 $$
 
 - **(F12) 一期债券欧拉方程**（`needs_review`；源预算方程 8 和 `.mod`）：
 
 $$
 \zeta_{c,t}\lambda_{z,t}
-=\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z,t+1}^*\pi_{t+1}}\left(1+(1-\tau^d)R_t^e\right)\right].
+=\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\left(1+(1-\tau^d)R_t^e\right)\right].
 $$
 
 - **(F13) 资本利用率条件**（`needs_review`；源利用率成本函数）：
@@ -206,8 +206,8 @@ $$
 - **(F15) 资本积累**（`needs_review`；源方程 6，稳定化缩放来自实现）：
 
 $$
-\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z,t}^*\Upsilon}
-+\left[1-S\left(\zeta_{I,t}\mu_{z,t}^*\Upsilon I_t/I_{t-1}\right)\right]I_t .
+\bar k_t=(1-\delta)\frac{\bar k_{t-1}}{\mu_{z,t}^{\ast}\Upsilon}
++\left[1-S\left(\zeta_{I,t}\mu_{z,t}^{\ast}\Upsilon I_t/I_{t-1}\right)\right]I_t .
 $$
 
 - **(F16) 投资 FOC / 资本供给价格**（`needs_review`；源调整成本函数和 `.mod`）：
@@ -215,7 +215,7 @@ $$
 $$
 0=-\frac{\zeta_{c,t}\lambda_{z,t}}{\mu_{\Upsilon,t}}
 +\zeta_{c,t}\lambda_{z,t}q_t\left[1-S_t-S_t'x_t\right]
-+\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S_{t+1}'x_{t+1}^2}{\mu_{z,t+1}^*\Upsilon}\right].
++\beta E_t\left[\frac{\zeta_{c,t+1}\lambda_{z,t+1}q_{t+1}S_{t+1}'x_{t+1}^2}{\mu_{z,t+1}^{\ast}\Upsilon}\right].
 $$
 
 **金融合约**
@@ -312,7 +312,7 @@ $$
 - **(F30) 政府消费缩放**（源方程 19）：
 
 $$
-G_t=z_t^*g_t.
+G_t=z_t^{\ast}g_t.
 $$
 
 - **(F31) 长期名义债券测度关系**（源 Section ID）：
@@ -345,8 +345,8 @@ $$
 $$
 R_t-R=\rho_p(R_{t-1}-R)
 +(1-\rho_p)\left[
-\alpha_\pi(\pi_{t+1}-\pi_t^*)
-+\alpha_{\Delta y}\frac{1}{4}(g_{y,t}-\mu_{z^*})
+\alpha_\pi(\pi_{t+1}-\pi_t^{\ast})
++\alpha_{\Delta y}\frac{1}{4}(g_{y,t}-\mu_{z^{\ast}})
 \right]
 +\frac{1}{400}\varepsilon_t^p.
 $$
@@ -363,7 +363,7 @@ $$
 
 来源模型是带增长的估计模型。完整数值稳态重构留待后续。源支持的稳态限制和目标如下：
 
-1. 模型在按 $z_t^*$ 缩放后平稳；该平衡增长对象结合了中性技术增长和投资品特定增长。
+1. 模型在按 $z_t^{\ast}$ 缩放后平稳；该平衡增长对象结合了中性技术增长和投资品特定增长。
 2. 投资调整在稳态满足 $S(x)=S'(x)=0$，利用率归一化为 $u=1$。
 3. 季度校准参数包括 $\beta=0.9987$、$\delta=0.025$、$\alpha=0.40$、$\lambda_f=1.20$、$\lambda_w=1.05$、$\psi_L=0.7705$、$\tau^c=0.05$、$\tau^k=0.32$、$\tau^l=0.24$、$1-\gamma=1-0.985$ 和 $W^e=0.005$。
 4. 政府支出与 GDP 比率目标为 $\eta_g=0.20$。

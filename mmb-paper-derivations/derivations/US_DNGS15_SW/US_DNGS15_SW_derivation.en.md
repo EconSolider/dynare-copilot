@@ -59,7 +59,7 @@ c_t =
 \left(R_t-E_t[\pi_{t+1}]+b_t\right)
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t)
 +\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
-+\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_*l_*}{c_*}
++\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_\astl_\ast}{c_\ast}
 \left(l_t-E_t[l_{t+1}]\right)
 $$
 
@@ -79,16 +79,16 @@ $$
 
 $$
 \bar{k}_t =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar\beta)\mu_t
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar\beta)\mu_t
 $$
 
 **(F5) Baseline SW no-financial-friction capital arbitrage condition**:
 
 $$
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^k]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^k]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^k]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^k]
 -q_t^k
 =R_t+b_t-E_t[\pi_{t+1}]
 $$
@@ -171,8 +171,8 @@ This is the source-side financial-spread condition with leverage sensitivity sup
 $$
 \tilde R_t^k-\pi_t
 =
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k
 $$
 
@@ -190,8 +190,8 @@ $$
 
 $$
 y_t=
-g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal I\{\rho_z<1\}\frac{1}{1-\alpha}\tilde z_t
 $$
 
@@ -255,7 +255,7 @@ $$
 
 $$
 R_t=\rho_R R_{t-1}
-+(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\right)
++(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\right)
 +\psi_3\left((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\right)
 +r_t^m
 $$
@@ -269,7 +269,7 @@ $$
 **(F27) Time-varying inflation target**:
 
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*+\sigma_{\pi^*}\varepsilon_{\pi^*,t}
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}
 $$
 
 **(F28) Financial-risk/spread shock, needs_review for this variant**:
@@ -286,14 +286,14 @@ In `US_DNGS15_SW_rep.mod`, the corresponding `sigw` innovation has zero standard
 Because the model is linearized around the nonstochastic steady state, the dynamic variables in Sections 3-5 have zero steady-state log deviations:
 
 $$
-c=i=y=l=k=\bar{k}=u=mc=w=w^h=\pi=q^k=r^k=R=b=\mu=g=\lambda_f=\lambda_w=r^m=\pi^*=\tilde\sigma_\omega=0
+c=i=y=l=k=\bar{k}=u=mc=w=w^h=\pi=q^k=r^k=R=b=\mu=g=\lambda_f=\lambda_w=r^m=\pi^{\ast}=\tilde\sigma_\omega=0
 $$
 
 Steady-state constants are not solved from the Markdown body in this first pass. The paper states that steady-state formulas are provided in the technical appendix of Del Negro and Schorfheide (2013), and the online appendix is not present as a local normalization file for this model. The implementation cross-check records calibrated/implicit steady-state values such as:
 
 $$
-\gamma=0.0037,\quad R_*=1.0069,\quad r_*^k=0.0319,\quad
-c_*=0.4796,\quad y_*=0.7102,\quad i_*=0.1028,\quad \bar{k}_*=3.5897
+\gamma=0.0037,\quad R_\ast=1.0069,\quad r_\ast^k=0.0319,\quad
+c_\ast=0.4796,\quad y_\ast=0.7102,\quad i_\ast=0.1028,\quad \bar{k}_\ast=3.5897
 $$
 
 These values are `implementation_cross_check`, not paper-side derivation evidence.
@@ -336,7 +336,7 @@ These values are `implementation_cross_check`, not paper-side derivation evidenc
 | Endogenous | `g` / $g_t$ | Government spending | (F20) |
 | Endogenous | `b` / $b_t$ | Intertemporal preference wedge | (F21) |
 | Endogenous | `rm` / $r_t^m$ | Monetary policy residual | (F26) |
-| Endogenous | `pist` / $\pi_t^*$ | Time-varying inflation target | (F27) |
+| Endogenous | `pist` / $\pi_t^{\ast}$ | Time-varying inflation target | (F27) |
 | Endogenous | flexible-price variables | $c_t^f,\ldots,y_t^f$ | Parallel no-nominal-rigidity system | (F18), (F25) |
 | Exogenous | `psi_b` | Preference-wedge innovation | (F21) |
 | Exogenous | `psi_mu` | MEI innovation | (F22) |
@@ -359,6 +359,6 @@ These values are `implementation_cross_check`, not paper-side derivation evidenc
 | Parameter | `psi1`, `psi2`, `psi3`, `rho` | Policy rule coefficients | (F25) |
 | Parameter | `sigmac` / $\sigma_c$ | Relative risk aversion | (F2) |
 | Parameter | `rho_*`, `eta_*`, `sigma_*` | Shock persistence, MA, and scale parameters | (F19)-(F28) |
-| Parameter | starred steady-state constants | $c_*,i_*,y_*,\bar{k}_*,r_*^k,\gamma$ | (F2)-(F16) |
+| Parameter | starred steady-state constants | $c_\ast,i_\ast,y_\ast,\bar{k}_\ast,r_\ast^k,\gamma$ | (F2)-(F16) |
 
 Status: `needs_review`. The core SW log-linear equations are readable in the MinerU Markdown; the exact `US_DNGS15_SW` boundary relative to SWFF/SWSP variants and the technical-appendix steady state should be checked before review upgrade.

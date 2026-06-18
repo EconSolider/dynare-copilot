@@ -88,8 +88,8 @@ $$
 and choose an optimal reset price under Calvo rigidity:
 
 $$
-\max_{P_t^*}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
-\Lambda_{t,k}\frac{P_t^*-P_{t+k}^w}{P_{t+k}}Y_{t+k}^*(z)
+\max_{P_t^{\ast}}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
+\Lambda_{t,k}\frac{P_t^{\ast}-P_{t+k}^w}{P_{t+k}}Y_{t+k}^{\ast}(z)
 \right].
 $$
 
@@ -185,14 +185,14 @@ $$
 
 $$
 \sum_{k=0}^{\infty}\theta^kE_{t-1}\left\{
-\Lambda_{t,k}\left(\frac{P_t^*}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^*(z)
-\left[\frac{P_t^*}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
+\Lambda_{t,k}\left(\frac{P_t^{\ast}}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^{\ast}(z)
+\left[\frac{P_t^{\ast}}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
 $$
 
 - **(F16) Aggregate price index under Calvo pricing**:
 
 $$
-P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^*)^{1-\epsilon}\right]^{1/(1-\epsilon)}.
+P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^{\ast})^{1-\epsilon}\right]^{1/(1-\epsilon)}.
 $$
 
 ## 4. Market Clearing & Identities

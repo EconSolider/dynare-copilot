@@ -55,7 +55,7 @@ c_t =
 + \frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t)
 + \frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
 + \frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_* l_*}{c_*}(l_t-E_t[l_{t+1}]).
+\frac{w_\ast l_\ast}{c_\ast}(l_t-E_t[l_{t+1}]).
 $$
 
 - **(F2) Investment/Tobin's Q condition**:
@@ -69,9 +69,9 @@ $$
 - **(F3) Capital accumulation**:
 $$
 \bar{k}_t =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar\beta)\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar\beta)\mu_t.
 $$
 
 - **(F4) Effective capital rented to firms**:
@@ -102,8 +102,8 @@ $$
 
 - **(F9) Resource constraint**:
 $$
-y_t = g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+y_t = g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal{I}\{\rho_z<1\}\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
@@ -153,7 +153,7 @@ $$
 - **(F14) Time-varying-target monetary policy rule**:
 $$
 R_t = \rho_R R_{t-1}
-+(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\big)
++(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
 $$
@@ -168,8 +168,8 @@ $$
 - **(F16) Entrepreneurial return on capital**:
 $$
 \tilde{R}_t^k-\pi_t =
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k.
 $$
 
@@ -183,7 +183,7 @@ n_t={}&
 +\zeta_{n,n}n_{t-1} \\
 &-\frac{\zeta_{n,\sigma_\omega}}{\zeta_{sp,\sigma_\omega}}
 \tilde{\sigma}_{\omega,t-1}
--\gamma_*\frac{v_*}{n_*}\hat{z}_t.
+-\gamma_\ast\frac{v_\ast}{n_\ast}\hat{z}_t.
 \end{aligned}
 $$
 
@@ -201,7 +201,7 @@ c_t^f =
 +b_t+\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}^f-z_t)
 +\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}^f+z_{t+1}]
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_* l_*}{c_*}(l_t^f-E_t[l_{t+1}^f]).
+\frac{w_\ast l_\ast}{c_\ast}(l_t^f-E_t[l_{t+1}^f]).
 $$
 
 - **(F20) Flexible-price investment/Tobin's Q condition**:
@@ -215,9 +215,9 @@ $$
 - **(F21) Flexible-price capital accumulation**:
 $$
 \bar{k}_t^f =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}^f-z_t)
-+\frac{i_*}{\bar{k}_*}i_t^f
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar\beta)\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t^f
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar\beta)\mu_t.
 $$
 
 - **(F22) Flexible-price production-side identities**:
@@ -234,9 +234,9 @@ y_t^f=\Phi_p\big(\alpha k_t^f+(1-\alpha)l_t^f\big)
 +\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t,
 $$
 $$
-y_t^f=g_*\;g_t+\frac{c_*}{y_*}c_t^f+\frac{i_*}{y_*}i_t^f
-+\frac{r_*^k k_*}{y_*}u_t^f
--g_*\frac{1}{1-\alpha}\tilde{z}_t.
+y_t^f=g_\ast\;g_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
++\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
+-g_\ast\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F24) Flexible-price wage/MRS condition**:
@@ -249,8 +249,8 @@ $$
 - **(F25) Flexible-price arbitrage condition without financial frictions**:
 $$
 q_t^{k,f} =
-\frac{r_*^k}{r_*^k+1-\delta}E_t[r_{t+1}^{k,f}]
-+\frac{1-\delta}{r_*^k+1-\delta}E_t[q_{t+1}^{k,f}]
+\frac{r_\ast^k}{r_\ast^k+1-\delta}E_t[r_{t+1}^{k,f}]
++\frac{1-\delta}{r_\ast^k+1-\delta}E_t[q_{t+1}^{k,f}]
 -r_t^f
 +\frac{\sigma_c(1+h e^{-\gamma})}{1-h e^{-\gamma}}b_t.
 $$
@@ -312,8 +312,8 @@ $$
 
 - **(F35) Time-varying inflation target**:
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*
-+\sigma_{\pi^*}\varepsilon_{\pi^*,t}.
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}
++\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
 ## 6. Steady-State Solution
@@ -321,7 +321,7 @@ $$
 Because the paper presents the model in log deviations from the nonstochastic steady state, all endogenous and exogenous deviation variables in the linear system have zero steady state:
 
 $$
-c=i=l=R=\pi=q^k=r^k=\bar{k}=k=u=mc=w=w^h=y=n=\tilde{R}^k=z=\tilde z=\mu=\lambda_f=\lambda_w=r^m=g=b=\tilde\sigma_\omega=\pi^*=og=0.
+c=i=l=R=\pi=q^k=r^k=\bar{k}=k=u=mc=w=w^h=y=n=\tilde{R}^k=z=\tilde z=\mu=\lambda_f=\lambda_w=r^m=g=b=\tilde\sigma_\omega=\pi^{\ast}=og=0.
 $$
 
 The source states that steady-state formulas are provided in the technical Appendix of Del Negro and Schorfheide (2013), not in this paper. For implementation cross-checking, the MMB `.mod` file uses calibrated steady-state levels such as `zstar`, `rstar`, `rkstar`, `wstar`, `Lstar`, `kstar`, `kbarstar`, `istar`, `ystar`, and `cstar`; these values are recorded as implementation evidence, not as paper-side derivations.
@@ -373,7 +373,7 @@ Deferred `needs_review` steady-state issues:
 | $r_t^m$ | `rm` | monetary policy residual | (F33) |
 | $g_t$ | `g` | government spending deviation | (F28) |
 | $b_t$ | `b` | intertemporal wedge state | (F29) |
-| $\pi_t^*$ | `pist` | time-varying inflation target | (F35) |
+| $\pi_t^{\ast}$ | `pist` | time-varying inflation target | (F35) |
 | $og_t$ | `og` | output gap | (F18) |
 | flexible block | `c_f`, `r_f`, `L_f`, `qk_f`, `i_f`, `rk_f`, `y_f`, `k_f`, `u_f`, `kbar_f`, `w_f` | flexible-price/wage auxiliary economy | (F19)-(F25) |
 

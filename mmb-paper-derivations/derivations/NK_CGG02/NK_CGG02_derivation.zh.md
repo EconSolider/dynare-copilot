@@ -88,7 +88,7 @@ $$
 $$
 r_t = \phi_\pi \pi_t + \varepsilon^r_t,
 \qquad
-r_t^* = \phi_\pi \pi_t^* + \varepsilon^{r,*}_t.
+r_t^{\ast} = \phi_\pi \pi_t^{\ast} + \varepsilon^{r,\ast}_t.
 $$
 
 ## 3. First-Order Conditions
@@ -132,7 +132,7 @@ $$
 - **(F6) 国际风险分担条件**：
 
 $$
-C_t=C_t^*.
+C_t=C_t^{\ast}.
 $$
 
 - **(F7) 实际边际成本**：
@@ -223,19 +223,19 @@ $$
 - **(F18) 本国商品市场出清**：
 
 $$
-(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C^*_{H,t}.
+(1-\gamma)Y_t=(1-\gamma)C_{H,t}+\gamma C^{\ast}_{H,t}.
 $$
 
 - **(F19) 外国商品市场出清**：
 
 $$
-\gamma Y_t^*=(1-\gamma)C_{F,t}+\gamma C^*_{F,t}.
+\gamma Y_t^{\ast}=(1-\gamma)C_{F,t}+\gamma C^{\ast}_{F,t}.
 $$
 
 - **(F20) 购买力平价/一价定律下的 CPI 实际汇率**：
 
 $$
-\frac{\varepsilon_t P_t^*}{P_t}=1.
+\frac{\varepsilon_t P_t^{\ast}}{P_t}=1.
 $$
 
 - **(F21) 本国贸易平衡**：
@@ -247,7 +247,7 @@ $$
 - **(F22) 外国贸易平衡**：
 
 $$
-P^*_{F,t}Y_t^*=P_t^* C_t^*.
+P^{\ast}_{F,t}Y_t^{\ast}=P_t^{\ast} C_t^{\ast}.
 $$
 
 - **(F23) 总需求与贸易条件**：
@@ -255,13 +255,13 @@ $$
 $$
 Y_t=k^{-1}C_t S_t^\gamma,
 \qquad
-S_t=\frac{Y_t}{Y_t^*}.
+S_t=\frac{Y_t}{Y_t^{\ast}}.
 $$
 
 - **(F24) 作为本国和外国产出函数的消费**：
 
 $$
-C_t=kY_t^{1-\gamma}(Y_t^*)^\gamma.
+C_t=kY_t^{1-\gamma}(Y_t^{\ast})^\gamma.
 $$
 
 - **(F25) 含价格离散度的总生产函数**：
@@ -276,7 +276,7 @@ $$
 
 $$
 MC_t=(1-\tau)k^{\sigma-1}(1+\mu_t^w)
-A_t^{-(1+\phi)}Y_t^\kappa(Y_t^*)^{\kappa_0}V_t^\phi.
+A_t^{-(1+\phi)}Y_t^\kappa(Y_t^{\ast})^{\kappa_0}V_t^\phi.
 $$
 
 - **(F27) 开放经济边际成本弹性**：
@@ -290,14 +290,14 @@ $$
 - **(F28) 本国自然产出**：
 
 $$
-\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^*\right].
+\bar{y}_t=\kappa^{-1}\left[(1+\phi)a_t-\kappa_0y_t^{\ast}\right].
 $$
 
 - **(F29) 自然实际利率**：
 
 $$
 \overline{rr}_t=\sigma_0E_t\{\Delta\bar{y}_{t+1}\}
-+\kappa_0E_t\{\Delta y^*_{t+1}\},
++\kappa_0E_t\{\Delta y^{\ast}_{t+1}\},
 \qquad
 \sigma_0=\sigma-\kappa_0.
 $$
@@ -305,14 +305,14 @@ $$
 - **(F30) 对数偏离形式的贸易条件**：
 
 $$
-s_t=y_t-y_t^*
-=\left(\tilde{y}_t-\tilde{y}_t^*\right)+\left(\bar{y}_t-\bar{y}_t^*\right).
+s_t=y_t-y_t^{\ast}
+=\left(\tilde{y}_t-\tilde{y}_t^{\ast}\right)+\left(\bar{y}_t-\bar{y}_t^{\ast}\right).
 $$
 
 - **(F31) 名义汇率恒等式**：
 
 $$
-e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^*.
+e_t=e_{t-1}+s_t-s_{t-1}+\pi_t-\pi_t^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -332,24 +332,24 @@ $$
 - **(F34) 实现交叉检查中使用的外国技术过程**：
 
 $$
-a_t^*=\rho_a a_{t-1}^*+\varepsilon^{a,*}_t.
+a_t^{\ast}=\rho_a a_{t-1}^{\ast}+\varepsilon^{a,\ast}_t.
 $$
 
 - **(F35) 实现交叉检查中使用的外国成本推动过程**：
 
 $$
-u_t^*=\rho_u u_{t-1}^*+\varepsilon_t^{u,*}.
+u_t^{\ast}=\rho_u u_{t-1}^{\ast}+\varepsilon_t^{u,\ast}.
 $$
 
 - **(F36) 实现交叉检查中的外国产出过程/冲击**：
 
 $$
-\tilde{y}_t^*
-=E_t\{\tilde{y}_{t+1}^*\}
+\tilde{y}_t^{\ast}
+=E_t\{\tilde{y}_{t+1}^{\ast}\}
 -\sigma_0^{-1}\left[
-r_t^*-E_t\{\pi^*_{t+1}\}-\overline{rr}_t^*
+r_t^{\ast}-E_t\{\pi^{\ast}_{t+1}\}-\overline{rr}_t^{\ast}
 \right]
-+\varepsilon_t^{y,*}.
++\varepsilon_t^{y,\ast}.
 $$
 
 论文以解析方式给出对称外国模块。额外的外国产出创新存在于 `NK_CGG02_rep.mod`，因此这里只记录为 `implementation_cross_check`。
@@ -365,7 +365,7 @@ $$
 外国星号变量同理。线性化背后的确定性总量稳态满足：
 
 $$
-S=1,\qquad C=C^*,\qquad \Pi=\Pi^*=1,\qquad V=1.
+S=1,\qquad C=C^{\ast},\qquad \Pi=\Pi^{\ast}=1,\qquad V=1.
 $$
 
 线性模块使用的开放经济复合参数为：
@@ -402,20 +402,20 @@ $$
 | 内生 | $\overline{rr}_t$ / `rr` | 本国自然实际利率 | (F29) |
 | 内生 | $u_t$ / `u` | 本国成本推动冲击状态 | (F32) |
 | 内生 | $a_t$ / `a` | 本国技术状态 | (F33) |
-| 内生 | $\tilde{y}_t^*$ / `ytildestar` | 外国产出缺口 | (F36) |
-| 内生 | $\bar{y}_t^*$ / `ybarstar` | 外国自然产出 | (F28) 的外国对应式 |
-| 内生 | $y_t^*$ / `ystar` | 外国产出对数偏离 | (F36), 外国模块 |
-| 内生 | $\pi_t^*$ / `infstar` | 外国通胀 | (F13) 的外国对应式 |
-| 内生 | $r_t^*$ / `rstar` | 外国名义利率 | 外国 Taylor 规则 |
-| 内生 | $\overline{rr}_t^*$ / `rrstar` | 外国自然实际利率 | (F29) 的外国对应式 |
-| 内生 | $u_t^*$ / `ustar` | 外国成本推动冲击状态 | (F35) |
-| 内生 | $a_t^*$ / `astar` | 外国技术状态 | (F34) |
+| 内生 | $\tilde{y}_t^{\ast}$ / `ytildestar` | 外国产出缺口 | (F36) |
+| 内生 | $\bar{y}_t^{\ast}$ / `ybarstar` | 外国自然产出 | (F28) 的外国对应式 |
+| 内生 | $y_t^{\ast}$ / `ystar` | 外国产出对数偏离 | (F36), 外国模块 |
+| 内生 | $\pi_t^{\ast}$ / `infstar` | 外国通胀 | (F13) 的外国对应式 |
+| 内生 | $r_t^{\ast}$ / `rstar` | 外国名义利率 | 外国 Taylor 规则 |
+| 内生 | $\overline{rr}_t^{\ast}$ / `rrstar` | 外国自然实际利率 | (F29) 的外国对应式 |
+| 内生 | $u_t^{\ast}$ / `ustar` | 外国成本推动冲击状态 | (F35) |
+| 内生 | $a_t^{\ast}$ / `astar` | 外国技术状态 | (F34) |
 | 外生 | $\varepsilon_t^u$ / `inf_` | 本国成本推动创新 | (F32) |
 | 外生 | $\varepsilon_t^a$ / `a_` | 本国技术创新 | (F33) |
-| 外生 | $\varepsilon_t^{u,*}$ / `infstar_` | 外国成本推动创新 | (F35) |
-| 外生 | $\varepsilon_t^{y,*}$ / `ystar_` | 交叉检查中的外国产出/IS 创新 | (F36) |
-| 外生 | $\varepsilon_t^{a,*}$ / `astar_` | 外国技术创新 | (F34) |
-| 外生 | $\varepsilon_t^{r,*}$ / `rstar_` | 外国利率规则创新 | 外国 Taylor 规则 |
+| 外生 | $\varepsilon_t^{u,\ast}$ / `infstar_` | 外国成本推动创新 | (F35) |
+| 外生 | $\varepsilon_t^{y,\ast}$ / `ystar_` | 交叉检查中的外国产出/IS 创新 | (F36) |
+| 外生 | $\varepsilon_t^{a,\ast}$ / `astar_` | 外国技术创新 | (F34) |
+| 外生 | $\varepsilon_t^{r,\ast}$ / `rstar_` | 外国利率规则创新 | 外国 Taylor 规则 |
 | 外生 | $\varepsilon_t^r$ / `interest_` | 本国利率规则创新 | 本国 Taylor 规则 |
 | 参数 | $\beta$ / `beta` | 贴现因子 | (F4), (F10) |
 | 参数 | $\sigma$ / `sigma` | 跨期替代弹性倒数 / CRRA 系数 | (F4), (F27) |

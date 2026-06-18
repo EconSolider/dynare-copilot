@@ -41,7 +41,7 @@ $$
 $$
 E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
 \left[
-\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^*(i)Y_{t+s}(i)
+\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)
 -MC_{t+s}Y_{t+s}(i)
 \right].
 $$
@@ -69,7 +69,7 @@ $$
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\left(C_t^{*S}(j)-\theta\tilde C_{t-1}^{*S}\right)
+\log\left(C_t^{\astS}(j)-\theta\tilde C_{t-1}^{\astS}\right)
 -\frac{\left(L_t^S(j)\right)^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -77,7 +77,7 @@ $$
 其中
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
 储蓄者预算约束为：
@@ -141,9 +141,9 @@ $$
 - **(F5) 储蓄者财富边际效用**：
 $$
 \hat\lambda_t+\frac{\theta}{e^\gamma-\theta}\hat u_t^a
-+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^*
++\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
 -\hat u_t^b+\frac{\tau^C}{1+\tau^C}\hat\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^{\ast}.
 $$
 
 - **(F6) 长期实际利率与长期债券价格关系**（`needs_review`, implementation_cross_check）：
@@ -159,7 +159,7 @@ $$
 
 - **(F8) 复合消费**：
 $$
-\hat c_t^*-\frac{C^S}{C^S+\alpha_G G}\hat c_t^S
+\hat c_t^{\ast}-\frac{C^S}{C^S+\alpha_G G}\hat c_t^S
 -\frac{\alpha_G G}{C^S+\alpha_G G}\hat g_t=0.
 $$
 
@@ -344,7 +344,7 @@ $$
 2. 计算税后资本租金回报 $R^k=(e^\gamma/\beta-1+\delta)/(1-\tau^K)$ 和边际成本 $mc=1/(1+\eta_p)$。
 3. 由生产、零利润和资本积累限制反推出工资、资本劳动比、每单位劳动固定成本、每单位劳动产出、每单位劳动投资和每单位劳动消费。
 4. 用稳态政府预算计算转移支付，然后计算非储蓄者和储蓄者的每单位劳动消费。
-5. 计算复合消费 $C^*=C^S+\alpha_G G$，并由储蓄者劳动条件求解劳动。
+5. 计算复合消费 $C^{\ast}=C^S+\alpha_G G$，并由储蓄者劳动条件求解劳动。
 6. 用稳态劳动缩放 $C^S,C^N,Y,K,I,Z,B,G$ 和税收收入。
 
 稳态公式在与论文在线附录或复制文档核对前仍为 `needs_review`。
@@ -365,7 +365,7 @@ $$
 | 内生 | `cs`, $C^S$ | 储蓄者消费 | (F5), (F8), (F9), (F18) |
 | 内生 | `cn`, $C^N$ | 非储蓄者消费 | (F17), (F18) |
 | 内生 | `c`, $C$ | 总消费 | (F18), (F19) |
-| 内生 | `cstar`, $C^*$ | 效用中的消费 | (F8) |
+| 内生 | `cstar`, $C^{\ast}$ | 效用中的消费 | (F8) |
 | 内生 | `R`, $R^n$ | 名义政策利率 | (F16), (F28) |
 | 内生 | `r`, $r$ | 实际利率 | (F28) |
 | 内生 | `i`, $I$ | 投资 | (F12), (F14), (F19) |

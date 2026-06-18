@@ -68,12 +68,12 @@ $$
 
 ### 2.4 Retailers
 
-Retailers set prices under Calvo rigidity. A re-optimizing retailer chooses $P_{k,t}^*$:
+Retailers set prices under Calvo rigidity. A re-optimizing retailer chooses $P_{k,t}^{\ast}$:
 
 **(F5) Retailer Calvo pricing problem**
 $$
-\max_{\{P_{k,t}^*\}} E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
-\left[P_{k,t}^*Y_{k,t+z}-P_{j,t+z}^WXY_{k,t+z}\right],
+\max_{\{P_{k,t}^{\ast}\}} E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
+\left[P_{k,t}^{\ast}Y_{k,t+z}-P_{j,t+z}^WXY_{k,t+z}\right],
 $$
 
 subject to:
@@ -82,7 +82,7 @@ subject to:
 $$
 Y_{k,t+z}
 =
-\left(\frac{P_{k,t}^*}{P_{t+z}}\right)^{-\varepsilon_t^p}Y_{t+z}.
+\left(\frac{P_{k,t}^{\ast}}{P_{t+z}}\right)^{-\varepsilon_t^p}Y_{t+z}.
 $$
 
 ### 2.5 Entrepreneurs
@@ -235,12 +235,12 @@ P_t^{1-\varepsilon_t^p}
 =
 \theta_R
 \left[\left(\frac{P_{t-1}}{P_{t-2}}\right)^{\gamma_p}P_{t-1}\right]^{1-\varepsilon_t^p}
-+(1-\theta_R)(P_t^*)^{1-\varepsilon_t^p}.
++(1-\theta_R)(P_t^{\ast})^{1-\varepsilon_t^p}.
 $$
 
 **(F23) Retailer optimal reset price, needs_review**
 $$
-\frac{P_t^*}{P_t}
+\frac{P_t^{\ast}}{P_t}
 =
 \left(\frac{\varepsilon_t^p}{\varepsilon_t^p-1}\right)
 \frac{
@@ -538,7 +538,7 @@ For source-backed nonlinear restrictions:
 | Endogenous | $\Psi_t^s$ | Saver equity holdings | (F17), (F32) |
 | Endogenous | $\Psi_t^b$ | Borrower equity holdings | (F21), (F32) |
 | Endogenous | $P_t$ | Aggregate price level | (F22) |
-| Endogenous | $P_t^*$ | Reset price | (F23) |
+| Endogenous | $P_t^{\ast}$ | Reset price | (F23) |
 | Endogenous | $Q_t^k$ | Price of physical capital | (F26), (F37) |
 | Endogenous | $X_t$ | Retail markup | (F23), (F24) |
 | Endogenous | $W_t$ | Nominal wage | (F16), (F19), (F24) |

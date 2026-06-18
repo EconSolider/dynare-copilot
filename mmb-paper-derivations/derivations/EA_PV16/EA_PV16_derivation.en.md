@@ -30,13 +30,13 @@ $$
 +\frac{P_t^N B_t^{L,H}}{P_t}
 \left[1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2\right]
 +\frac{B_t^S}{(1+i_t)P_t}
-+\frac{e_t B_t^*}{(1+i_t^*)P_t} \\
-&+\frac{\gamma_f}{2}\left(\frac{e_t(B_t^*-\bar B^*)}{P_t}\right)^2
++\frac{e_t B_t^{\ast}}{(1+i_t^{\ast})P_t} \\
+&+\frac{\gamma_f}{2}\left(\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}\right)^2
 -\frac{TR_t}{P_t}
 -\frac{cB_{t-1}^{L,H}}{P_t}
 -\frac{\delta_b P_t^N B_{t-1}^{L,H}}{P_t}
 -\frac{B_{t-1}^S}{P_t}
--\frac{e_tB_{t-1}^*}{P_t} \\
+-\frac{e_tB_{t-1}^{\ast}}{P_t} \\
 &-\frac{(1-t_t^w)W_tN_t^r}{P_t}
 -\left(i_{t-1}^k-(i_{t-1}^k-\delta_k)t_{t-1}^k-\varphi_{t-1}\right)
 \frac{P_t^C}{P_t}K_{t-1}
@@ -44,11 +44,11 @@ $$
 \end{aligned}
 $$
 
-The cross-border extension adds holdings of foreign long-term bonds \(B_t^{L,H*}\) and a quadratic adjustment cost around the domestic/foreign long-bond mix:
+The cross-border extension adds holdings of foreign long-term bonds \(B_t^{L,H\ast}\) and a quadratic adjustment cost around the domestic/foreign long-bond mix:
 
 $$
-\frac{e_t P_t^{N*}B_t^{L,H*}}{P_t}
-\left[1+\frac{\gamma_b^*}{2}\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)^2\right].
+\frac{e_t P_t^{N\ast}B_t^{L,H\ast}}{P_t}
+\left[1+\frac{\gamma_b^{\ast}}{2}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)^2\right].
 $$
 
 ### Liquidity-constrained household, firms, and government
@@ -81,6 +81,7 @@ $$
 1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2
 -\gamma_b\kappa\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)\frac{B_t^S}{B_t^{L,H}}
 \right]\right\}.
+$$
 
 - **(F3) Foreign short-term bond Euler equation**:
 
@@ -88,8 +89,8 @@ $$
 \beta E_t\left(\frac{\lambda_{t+1}}{\lambda_t}\right)
 =E_t\left(\frac{e_t}{e_{t+1}}\frac{P_{t+1}}{P_t}\right)
 \left[
-\frac{1}{1+i_t^*}
-+\gamma_f\frac{e_t(B_t^*-\bar B^*)}{P_t}
+\frac{1}{1+i_t^{\ast}}
++\gamma_f\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}
 \right].
 $$
 
@@ -120,8 +121,8 @@ $$
 +\gamma_b\kappa P_t^N\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)
 =E_t\left(\frac{e_t}{e_{t+1}}\right)
 \left[
-\frac{1}{1+i_t^*}
-+\gamma_f\frac{e_t(B_t^*-\bar B^*)}{P_t}
+\frac{1}{1+i_t^{\ast}}
++\gamma_f\frac{e_t(B_t^{\ast}-\bar B^{\ast})}{P_t}
 \right].
 $$
 
@@ -153,8 +154,8 @@ $$
 \left[
 1+\frac{\gamma_b}{2}\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)^2
 -\gamma_b\kappa\left(\kappa\frac{B_t^S}{B_t^{L,H}}-1\right)\frac{B_t^S}{B_t^{L,H}}
-+\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)
-\frac{e_tP_t^{N*}}{P_t^N}
++\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)
+\frac{e_tP_t^{N\ast}}{P_t^N}
 \right].
 $$
 
@@ -162,11 +163,11 @@ $$
 
 $$
 \beta E_t\left(\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}\frac{e_{t+1}}{e_t}\right)
-=E_t\left(\frac{P_t^{N*}}{\delta_b^*P_{t+1}^{N*}+c^*}\right)
+=E_t\left(\frac{P_t^{N\ast}}{\delta_b^{\ast}P_{t+1}^{N\ast}+c^{\ast}}\right)
 \left[
-1+\frac{\gamma_b^*}{2}\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)^2
--\gamma_b^*\kappa^*\left(\kappa^*\frac{B_t^{L,H}}{B_t^{L,H*}}-1\right)
-\frac{B_t^{L,H}}{B_t^{L,H*}}
+1+\frac{\gamma_b^{\ast}}{2}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)^2
+-\gamma_b^{\ast}\kappa^{\ast}\left(\kappa^{\ast}\frac{B_t^{L,H}}{B_t^{L,H\ast}}-1\right)
+\frac{B_t^{L,H}}{B_t^{L,H\ast}}
 \right].
 $$
 
@@ -236,9 +237,9 @@ $$
 
 $$
 \begin{aligned}
-e_t(B_t^*+P_t^{N*}B_t^{L,H*})-P_t^N B_t^{L,F}
-={}&(1+i_{t-1}^*)e_tB_{t-1}^*
-+(c^*+\delta_b^*P_t^{N*})e_tB_{t-1}^{L,H*} \\
+e_t(B_t^{\ast}+P_t^{N\ast}B_t^{L,H\ast})-P_t^N B_t^{L,F}
+={}&(1+i_{t-1}^{\ast})e_tB_{t-1}^{\ast}
++(c^{\ast}+\delta_b^{\ast}P_t^{N\ast})e_tB_{t-1}^{L,H\ast} \\
 &-(c+\delta_bP_t^N)e_tB_{t-1}^{L,F}
 +P_t^X X_t-P_t^M M_t.
 \end{aligned}
@@ -289,14 +290,14 @@ $$
 In the cross-border extension, the source reports:
 
 $$
-\gamma_b=0.0001,\qquad \gamma_b^*=0.0013.
+\gamma_b=0.0001,\qquad \gamma_b^{\ast}=0.0013.
 $$
 
 Implementation cross-check steady-state values include `EA_deltabl=0.975`, `EA_gamb=0.0005`, `EA_sbl=0.5`, `EA_kbl=1`, `EA_pbl=1`, `EA_bl=EA_bs=1.20388124742112`, and `EA_blcb=0`. These values are recorded only as implementation cross-checks. A complete steady-state derivation for the full QUEST model is `needs_review` because it is not contained in the paper Markdown.
 
 ## 7. Timing & Form Conventions
 
-Long-term bonds pay a declining coupon stream. A newly issued bond in period \(t\) has price \(P_t^N\); a bond issued in \(t-1\) has price \(P_t^O\) and is approximately \(\delta_bP_t^N\). Central-bank holdings \(B_t^{L,CB}\), private long-bond holdings \(B_t^{L,H}\), short bonds \(B_t^S\), capital \(K_t\), and foreign assets \(B_t^*\) are stock variables. In the household budget, period-\(t\) purchases appear as current uses of funds, while inherited stocks and coupon/depreciated-principal payments appear with \(t-1\) lags.
+Long-term bonds pay a declining coupon stream. A newly issued bond in period \(t\) has price \(P_t^N\); a bond issued in \(t-1\) has price \(P_t^O\) and is approximately \(\delta_bP_t^N\). Central-bank holdings \(B_t^{L,CB}\), private long-bond holdings \(B_t^{L,H}\), short bonds \(B_t^S\), capital \(K_t\), and foreign assets \(B_t^{\ast}\) are stock variables. In the household budget, period-\(t\) purchases appear as current uses of funds, while inherited stocks and coupon/depreciated-principal payments appear with \(t-1\) lags.
 
 The model is nonlinear. The implementation cross-check uses levels, ratios, inflation rates, and first-difference auxiliary variables; it is not a hand log-linear `model(linear)` file. QE in the paper simulations is an exogenous balance-sheet path matching the ECB 2015 announcement, with the short-term rate frozen during the ZLB interval.
 
@@ -313,7 +314,7 @@ The model is nonlinear. The implementation cross-check uses levels, ratios, infl
 | Endogenous | \(B_t^{L,CB}\), `EA_blcb` | Long-term bonds held by central bank | (F17), (F19), (F22) |
 | Endogenous | \(P_t^N\), `EA_pbl` | Price of long-term bond | (F12)-(F14), (F18), (F19) |
 | Endogenous | \(M_t\), `ea_m` | Liquidity / money | (F19) |
-| Endogenous | \(B_t^*\), `ea_bw` | Foreign short-term asset position | (F3), (F21) |
+| Endogenous | \(B_t^{\ast}\), `ea_bw` | Foreign short-term asset position | (F3), (F21) |
 | Endogenous | \(e_t\), `ea_e` | Nominal exchange rate | (F3), (F7), (F10), (F11), (F21) |
 | Endogenous | \(K_t\), `ea_k` | Private capital stock | (F4), (F8) |
 | Endogenous | \(i_t\), `ea_inom` | Short-term nominal interest rate | (F1), (F7)-(F9), (F23) |
@@ -322,10 +323,10 @@ The model is nonlinear. The implementation cross-check uses levels, ratios, infl
 | Exogenous shock | \(\varepsilon_t^m\), `ea_eps_m` | Monetary policy shock | (F23) |
 | Parameters | \(\beta,\theta\), `ea_theta` | Discounting / implementation discount parameter | (F1)-(F4), (F10), (F11) |
 | Parameters | \(\gamma_b\), `EA_gamb` | Domestic long/short bond portfolio adjustment cost | (F1), (F2), (F7)-(F10) |
-| Parameters | \(\gamma_b^*\) | Domestic/foreign long-bond adjustment cost | (F10), (F11) |
+| Parameters | \(\gamma_b^{\ast}\) | Domestic/foreign long-bond adjustment cost | (F10), (F11) |
 | Parameters | \(\gamma_f\) | Foreign asset position adjustment cost | (F3), (F7) |
-| Parameters | \(\kappa,\kappa^*\), `EA_kbl` | Target asset-ratio parameters | (F1), (F2), (F7), (F10), (F11) |
-| Parameters | \(\delta_b,\delta_b^*\), `EA_deltabl` | Long-bond coupon depreciation | (F12)-(F14), (F18), (F21) |
+| Parameters | \(\kappa,\kappa^{\ast}\), `EA_kbl` | Target asset-ratio parameters | (F1), (F2), (F7), (F10), (F11) |
+| Parameters | \(\delta_b,\delta_b^{\ast}\), `EA_deltabl` | Long-bond coupon depreciation | (F12)-(F14), (F18), (F21) |
 | Parameters | \(s^L\), `EA_sbl` | Long-bond share of government debt | (F16) |
 | Parameters | \(\rho_{qe},\tau_{qe}\), `EA_rhoqe`, `EA_tqe` | QE purchase persistence and response | (F22) |
 

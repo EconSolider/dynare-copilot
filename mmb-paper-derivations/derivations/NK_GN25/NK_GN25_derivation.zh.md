@@ -256,7 +256,7 @@ $$
 
 - **(F33) 分析特例中自然失业与有效失业的楔子**：
 $$
-\widehat u_t^n-\widehat u_t^*
+\widehat u_t^n-\widehat u_t^{\ast}
 =\frac{w}{2\kappa}\left(\frac{\zeta\Xi_w}{1-\zeta-\Xi_w}\right)(1+\chi)\widetilde p_{e,t}.
 $$
 
@@ -291,18 +291,18 @@ $$
 $$
 - 有效工资为：
 $$
-w^*=\frac{1}{\nu}+\xi p_e.
+w^{\ast}=\frac{1}{\nu}+\xi p_e.
 $$
 - 来源报告的稳态财政工具为：
 $$
 \tau_y=\frac{1}{\varepsilon},\qquad
-S=\frac{1}{\nu}\ln\left(\frac{w^*-\xi p_e}{\delta-\xi p_e}\right),\qquad
-\tau_z=1-\frac{(1-\alpha)[1-\beta(1-\rho)]}{1-\beta(1-\rho)(1-\alpha f^*)}.
+S=\frac{1}{\nu}\ln\left(\frac{w^{\ast}-\xi p_e}{\delta-\xi p_e}\right),\qquad
+\tau_z=1-\frac{(1-\alpha)[1-\beta(1-\rho)]}{1-\beta(1-\rho)(1-\alpha f^{\ast})}.
 $$
 - 稳态有效找工作率满足：
 $$
-f^*=\left[\frac{1-\tau_z}{\kappa[1-\beta(1-\rho)]}
-\left(\frac{p_g-\gamma_e p_e}{1-\gamma_e}-w^*+S\right)\right]^{\frac{1-\alpha}{\alpha}}.
+f^{\ast}=\left[\frac{1-\tau_z}{\kappa[1-\beta(1-\rho)]}
+\left(\frac{p_g-\gamma_e p_e}{1-\gamma_e}-w^{\ast}+S\right)\right]^{\frac{1-\alpha}{\alpha}}.
 $$
 - 定量校准为季度模型，参数包括 $\beta=0.98$、$\omega_e=0.08$、$\Xi_w=0.11$、$f=0.25$、$u=0.10$、$\rho=0.037$、$\alpha=0.6$、$\chi=0.1$、$\gamma_e=0.04$、$\theta=3/4$ 和 $\varepsilon=4$。
 - 对线性化模型，稳态被规范化为相对约束有效稳态的偏离：带帽变量的水平偏离和带波浪变量的比例偏离在稳态均为零。

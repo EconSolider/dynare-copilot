@@ -38,7 +38,7 @@ $$MC_t=(1-\alpha)^{\alpha-1}\alpha^{-\alpha}(R_t^k)^\alpha W_t^{1-\alpha}A_t^{-1
 Firms that can reset prices maximize:
 
 $$E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
-\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^*(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}$$
+\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}$$
 
 The plus sign before the profit bracket in (F5) follows the OCR text but should likely be read as multiplication of the discount factor and profit term; review against the PDF.
 
@@ -60,11 +60,11 @@ $$W_t(l)=W_{t-1}(l)\big(\pi_{t-1}e^{u^a_{t-1}}\big)^{\chi_w}(\pi e^\gamma)^{1-\c
 
 Saver household \(j\) maximizes:
 
-$$E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{*S}(j)-\theta\widetilde C_{t-1}^{*S}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}$$
+$$E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{\astS}(j)-\theta\widetilde C_{t-1}^{\astS}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}$$
 
 Composite consumption in utility is:
 
-$$C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}$$
+$$C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}$$
 
 The nominal saver budget constraint is:
 
@@ -96,8 +96,8 @@ The source paper does not list every nonlinear FOC in a single appendix block in
 
 **(F15) Saver marginal utility of wealth, log-linear implementation_cross_check**:
 
-$$\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^* -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}c_{t-1}^*$$
+$$\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast} -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
+=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}$$
 
 **(F16) Saver Euler equation, log-linear implementation_cross_check**:
 
@@ -235,7 +235,7 @@ The implementation computes a balanced-growth steady state and then solves a lin
 | Endogenous | `cs`, \(C_t^S\) | Saver consumption | F9-F12, F15-F16 |
 | Endogenous | `cn`, \(C_t^N\) | Non-saver consumption | F14 |
 | Endogenous | `c`, \(C_t\) | Aggregate consumption | F22 |
-| Endogenous | `cstar`, \(C_t^*\) | Consumption entering utility | F10 |
+| Endogenous | `cstar`, \(C_t^{\ast}\) | Consumption entering utility | F10 |
 | Endogenous | `R` | Nominal interest-rate deviation | F31 |
 | Endogenous | `r` | Real interest-rate deviation | F29 |
 | Endogenous | `i`, \(I_t\) | Investment | F12, F19, F23 |

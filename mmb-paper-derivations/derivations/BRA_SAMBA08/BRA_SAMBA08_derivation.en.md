@@ -26,7 +26,7 @@ Main agents and blocks:
 Optimizing household problem:
 
 $$
-\max_{\{C_{j,t},B_{j,t+1},B^*_{j,t+1},K_{j,t+1},I_{j,t}\}}
+\max_{\{C_{j,t},B_{j,t+1},B^{\ast}_{j,t+1},K_{j,t+1},I_{j,t}\}}
 E_0\sum_{t=0}^{\infty}\beta^t u(C_{j,t},N_{j,t})
 $$
 
@@ -83,7 +83,7 @@ $$
 - **(F4) Real exchange rate UIP condition**:
 $$
 q_t=E_tq_{t+1}-(r_t+s_t^B-E_t\pi_{t+1}^C)
-+(r_t^*+s_t^{B^*}-E_t\pi_{t+1}^{C^*})+z_t^Q.
++(r_t^{\ast}+s_t^{B^{\ast}}-E_t\pi_{t+1}^{C^{\ast}})+z_t^Q.
 $$
 
 - **(F5) Shadow value of capital**:
@@ -110,7 +110,7 @@ $$
 
 - **(F8) Country risk premium**:
 $$
-s_t^{B^*}=-\varphi_B^* b_{t+1}^{*y}+\varphi_V^*v_t^*+z_t^{B^*}.
+s_t^{B^{\ast}}=-\varphi_B^{\ast} b_{t+1}^{\asty}+\varphi_V^{\ast}v_t^{\ast}+z_t^{B^{\ast}}.
 $$
 
 - **(F9) Domestic risk premium**:
@@ -149,14 +149,14 @@ $$
 
 - **(F15) Import-price Phillips curve**:
 $$
-\pi_t^M-v_t^M=\lambda_M(q_t+q_t^{M^*}-q_t^M)
+\pi_t^M-v_t^M=\lambda_M(q_t+q_t^{M^{\ast}}-q_t^M)
 +\tilde\beta E_t(\pi_{t+1}^M-v_{t+1}^M).
 $$
 
 - **(F16) Sectoral marginal cost**:
 $$
 mc_t^H=\varpi_Hq_t^D+(1-\varpi_H)\left[
-q_t^M+\varpi_H^*(r_t^*+s_t^{B^*})
+q_t^M+\varpi_H^{\ast}(r_t^{\ast}+s_t^{B^{\ast}})
 +\vartheta_H^M\bigl((m_t^H-y_t^H)-(m_{t-1}^H-y_{t-1}^H)\bigr)-z_t^M
 \right].
 $$
@@ -169,7 +169,7 @@ $$
 - **(F18) Sectoral imported-input demand**:
 $$
 m_t^H=y_t^H-\frac{\epsilon_H}{1+\epsilon_H\vartheta_H^M}
-\left[q_t^M+\varpi_H^*(r_t^*+s_t^{B^*})-mc_t^H\right]
+\left[q_t^M+\varpi_H^{\ast}(r_t^{\ast}+s_t^{B^{\ast}})-mc_t^H\right]
 +\frac{\epsilon_H}{1+\epsilon_H\vartheta_H^M}
 \left[\vartheta_H^M(m_{t-1}^H-y_{t-1}^H)+z_t^M\right].
 $$
@@ -215,19 +215,19 @@ $$
 
 - **(F26) Export-price Phillips curve**:
 $$
-\pi_t^X-v_t^X=\lambda_X(mc_t^X-q_t^{X^*}-q_t)
+\pi_t^X-v_t^X=\lambda_X(mc_t^X-q_t^{X^{\ast}}-q_t)
 +\tilde\beta E_t(\pi_{t+1}^X-v_{t+1}^X)+z_t^{P^X}.
 $$
 
 - **(F27) Export relative-price law of motion**:
 $$
-q_t^{X^*}=q_{t-1}^{X^*}+\pi_t^X-\pi_t^{C^*}.
+q_t^{X^{\ast}}=q_{t-1}^{X^{\ast}}+\pi_t^X-\pi_t^{C^{\ast}}.
 $$
 
 - **(F28) World demand for Brazilian exports**:
 $$
-x_t=y_t^*+\frac{\epsilon^*}{1+\epsilon^*\vartheta^{M^*}}
-\left[\vartheta^{M^*}(x_{t-1}-y_{t-1}^*)-q_t^{X^*}+z_t^{M^*}\right].
+x_t=y_t^{\ast}+\frac{\epsilon^{\ast}}{1+\epsilon^{\ast}\vartheta^{M^{\ast}}}
+\left[\vartheta^{M^{\ast}}(x_{t-1}-y_{t-1}^{\ast})-q_t^{X^{\ast}}+z_t^{M^{\ast}}\right].
 $$
 
 ## 4. Market Clearing & Identities
@@ -249,27 +249,27 @@ $$
 
 - **(F32) External loans-to-GDP ratio**:
 $$
-l_t^{*y}=\sum_{H=C,I,X}\iota_Hs_{M,H}
+l_t^{\asty}=\sum_{H=C,I,X}\iota_Hs_{M,H}
 \left[
-R^*S^{B^*}(r_t^*+s_t^{B^*})
-+(R^*S^{B^*}-1)(q_t^M+m_t^H-q_t^Y-y_t)
+R^{\ast}S^{B^{\ast}}(r_t^{\ast}+s_t^{B^{\ast}})
++(R^{\ast}S^{B^{\ast}}-1)(q_t^M+m_t^H-q_t^Y-y_t)
 \right].
 $$
 
 - **(F33) Net exports-to-GDP ratio**:
 $$
-nx_t^y=s_X(q_t+q_t^{X^*}+x_t)
--s_M(q_t+q_t^{M^*}+m_t)
+nx_t^y=s_X(q_t+q_t^{X^{\ast}}+x_t)
+-s_M(q_t+q_t^{M^{\ast}}+m_t)
 -(s_X-s_M)(q_t^Y+y_t).
 $$
 
 - **(F34) Net foreign assets-to-GDP law of motion**:
 $$
-b_{t+1}^{*y}=\lambda_{B^*}b_t^{*y}
-+R^*S^{B^*}(nx_t^y-l_t^{*y})
-+\tilde B^{*y}(r_t^*+s_t^{B^*})
-+\lambda_{B^*}\tilde B^{*y}
-(y_{t-1}-y_t-\pi_t^Y-z_t^Z+q_t-q_{t-1}+\pi_t^C-\pi_t^*).
+b_{t+1}^{\asty}=\lambda_{B^{\ast}}b_t^{\asty}
++R^{\ast}S^{B^{\ast}}(nx_t^y-l_t^{\asty})
++\tilde B^{\asty}(r_t^{\ast}+s_t^{B^{\ast}})
++\lambda_{B^{\ast}}\tilde B^{\asty}
+(y_{t-1}-y_t-\pi_t^Y-z_t^Z+q_t-q_{t-1}+\pi_t^C-\pi_t^{\ast}).
 $$
 
 - **(F35) Real GDP**:
@@ -279,8 +279,8 @@ $$
 
 - **(F36) Relative GDP deflator**:
 $$
-q_t^Y=s_Gq_t^G+s_Iq_t^I+s_X(q_t+q_t^{X^*})
--s_M(q_t+q_t^{M^*}).
+q_t^Y=s_Gq_t^G+s_Iq_t^I+s_X(q_t+q_t^{X^{\ast}})
+-s_M(q_t+q_t^{M^{\ast}}).
 $$
 
 - **(F37) GDP-deflator inflation**:
@@ -333,33 +333,33 @@ $$
 
 - **(F45) Foreign output**:
 $$
-y_t^*=\rho_{Y^*}y_{t-1}^*+\varepsilon_t^{Y^*}.
+y_t^{\ast}=\rho_{Y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{Y^{\ast}}.
 $$
 
 - **(F46) Foreign import-price process**:
 $$
-q_t^{M^*}=\rho_{Q^{M^*}}q_{t-1}^{M^*}+\varepsilon_t^{Q^{M^*}}.
+q_t^{M^{\ast}}=\rho_{Q^{M^{\ast}}}q_{t-1}^{M^{\ast}}+\varepsilon_t^{Q^{M^{\ast}}}.
 $$
 
 - **(F47) Foreign inflation**:
 $$
-\pi_t^{C^*}=\rho_{\Pi^{C^*}}\pi_{t-1}^{C^*}+\varepsilon_t^{\Pi^{C^*}}.
+\pi_t^{C^{\ast}}=\rho_{\Pi^{C^{\ast}}}\pi_{t-1}^{C^{\ast}}+\varepsilon_t^{\Pi^{C^{\ast}}}.
 $$
 
 - **(F48) Foreign investor risk aversion**:
 $$
-v_t^*=\rho_{V^*}v_{t-1}^*+\varepsilon_t^{V^*}.
+v_t^{\ast}=\rho_{V^{\ast}}v_{t-1}^{\ast}+\varepsilon_t^{V^{\ast}}.
 $$
 
 - **(F49) Foreign interest rate**:
 $$
-r_t^*=\rho_{R^*}r_{t-1}^*+\varepsilon_t^{R^*}.
+r_t^{\ast}=\rho_{R^{\ast}}r_{t-1}^{\ast}+\varepsilon_t^{R^{\ast}}.
 $$
 
 - **(F50) Domestic structural shock processes**:
 $$
 z_t^S=\rho_Sz_{t-1}^S+\varepsilon_t^S,\quad
-S\in\{C,Q,B^*,D,Z,I,M,M^*,W,P,A,P^X,R,G\}.
+S\in\{C,Q,B^{\ast},D,Z,I,M,M^{\ast},W,P,A,P^X,R,G\}.
 $$
 For the paper's estimation specification, $\rho_R=0$ and $\rho_G=0$.
 
@@ -371,7 +371,7 @@ Key price relations:
 
 $$
 MC^C=\frac{\epsilon_C^P-1}{\epsilon_C^P},\qquad
-Q^M=Q^{M^\star}=\frac{\epsilon_M}{\epsilon_M-1}QQ^{M^*}.
+Q^M=Q^{M^\star}=\frac{\epsilon_M}{\epsilon_M-1}QQ^{M^{\ast}}.
 $$
 
 $$
@@ -383,7 +383,7 @@ $$
 $$
 \tilde W=(1-\alpha)(Q^D)^{1/(1-\alpha)}
 \left(\frac{\alpha}{R^K}\right)^{\alpha/(1-\alpha)},\qquad
-S^{B^*}=\frac{R/\bar\Pi^C}{R^*/\Pi^{C^*}}.
+S^{B^{\ast}}=\frac{R/\bar\Pi^C}{R^{\ast}/\Pi^{C^{\ast}}}.
 $$
 
 Allocation relations include exports from foreign demand, government spending from the tax and primary-surplus target, capital accumulation, household consumption aggregation, production input conditions, and imported-input shares. The paper also calibrates steady-state ratios used directly in the linear model, including $s_C,s_I,s_G,s_X,s_M$, debt ratios, inflation target, domestic and foreign gross interest rates, and the country-risk premium.
@@ -394,8 +394,8 @@ Runtime validation: not performed. This entry is a derivation/archive extraction
 
 - Model form: `model(linear)` for the MMB operational implementation. The paper also presents nonlinear and BGP equations.
 - Time unit: quarterly.
-- Linear variables are deviations or log deviations from steady state; ratios to GDP such as $b_t^y,b_{t+1}^{*y},nx_t^y,l_t^{*y}$ are deviations from steady state.
-- In the paper's nonlinear timing convention, flow variables decided in period $t$ are indexed by $t$, while stock variables chosen in $t$ are indexed by $t+1$. Capital holdings $K_t$ and bonds $B_t,B_t^*$ mature from prior choices; $K_{t+1},B_{t+1},B_{t+1}^*$ are chosen at $t$.
+- Linear variables are deviations or log deviations from steady state; ratios to GDP such as $b_t^y,b_{t+1}^{\asty},nx_t^y,l_t^{\asty}$ are deviations from steady state.
+- In the paper's nonlinear timing convention, flow variables decided in period $t$ are indexed by $t$, while stock variables chosen in $t$ are indexed by $t+1$. Capital holdings $K_t$ and bonds $B_t,B_t^{\ast}$ mature from prior choices; $K_{t+1},B_{t+1},B_{t+1}^{\ast}$ are chosen at $t$.
 - The MMB `.mod` maps this to Dynare timing with predetermined capital as `k(-1)` in production and `k` as next-period/installed stock after current investment.
 - CPI inflation is the numeraire inflation; relative-price laws of motion use sectoral inflation minus CPI inflation.
 - OCR issues: equations (A.21), (A.31), and some adjustment-cost derivative terms contain malformed symbols in the MinerU Markdown and are marked `needs_review` for formula-level checking against the PDF if later promotion requires exact nonlinear equations.
@@ -411,7 +411,7 @@ Runtime validation: not performed. This entry is a derivation/archive extraction
 | Endogenous | `qi`, $q_t^K$ | Shadow value of capital / Tobin Q | (F5) |
 | Endogenous | `i`, $i_t$ | Investment | (F6) |
 | Endogenous | `k`, $k_t$ | Capital stock | (F7) |
-| Endogenous | `fii`, $s_t^{B^*}$ | Country risk premium | (F8) |
+| Endogenous | `fii`, $s_t^{B^{\ast}}$ | Country risk premium | (F8) |
 | Endogenous | `wr`, $w_t$ | Real wage | (F10) |
 | Endogenous | `rk`, $r_t^K$ | Rental rate of capital | (F12) |
 | Endogenous | `mc`, $q_t^D$ or marginal cost proxy | Domestic input price / marginal cost | (F13), (F16) |
@@ -420,7 +420,7 @@ Runtime validation: not performed. This entry is a derivation/archive extraction
 | Endogenous | `pi`, $\pi_t^C$ | CPI/free-price inflation proxy in MMB reduction | (F21), (F25) |
 | Endogenous | `x`, $x_t$ | Exports | (F28) |
 | Endogenous | `nxy`, $nx_t^y$ | Net exports-to-GDP ratio | (F33) |
-| Endogenous | `bystar`, $b_{t+1}^{*y}$ | Net foreign assets-to-GDP | (F34) |
+| Endogenous | `bystar`, $b_{t+1}^{\asty}$ | Net foreign assets-to-GDP | (F34) |
 | Endogenous | `y`, $y_t$ | Real GDP | (F35) |
 | Endogenous | `yva`, $y_t^Y$ | Value-added output / GDP measure | (F35)-(F37) |
 | Endogenous | `piva`, $\pi_t^Y$ | GDP-deflator inflation | (F37) |
@@ -431,9 +431,9 @@ Runtime validation: not performed. This entry is a derivation/archive extraction
 | Endogenous | `gy`, fiscal gap | Fiscal rule helper | (F40)-(F43) |
 | Endogenous | `bby`, $b_t^y$ | Government debt-to-GDP ratio | (F44) |
 | Endogenous | `g`, $g_t$ | Government consumption | (F43) |
-| Endogenous | `mstar`, $y_t^*$ or world demand | Foreign demand process | (F45) |
-| Endogenous | `pistar`, $\pi_t^{C^*}$ | Foreign inflation | (F47) |
-| Endogenous | `rstar`, $r_t^*$ | Foreign interest rate | (F49) |
+| Endogenous | `mstar`, $y_t^{\ast}$ or world demand | Foreign demand process | (F45) |
+| Endogenous | `pistar`, $\pi_t^{C^{\ast}}$ | Foreign inflation | (F47) |
+| Endogenous | `rstar`, $r_t^{\ast}$ | Foreign interest rate | (F49) |
 | Exogenous | `c_` | Household preference innovation | (F50) |
 | Exogenous | `n_` | Wage/labor markup innovation | (F50) |
 | Exogenous | `i_` | Investment innovation | (F50) |

@@ -183,7 +183,7 @@ $$
 The paper gives the Calvo profit problem but not the compact recursive implementation. The MMB implementation uses auxiliary variables:
 
 $$
-\frac{P_t^*}{P_t}=\frac{x_{1,t}}{x_{2,t}}.
+\frac{P_t^{\ast}}{P_t}=\frac{x_{1,t}}{x_{2,t}}.
 $$
 
 **(F16) Calvo numerator recursion, implementation_cross_check, needs_review**
@@ -202,13 +202,13 @@ $$
 **(F18) Price-index relation**
 
 $$
-1=\theta\Pi_t^{\varepsilon-1}+(1-\theta)\left(\frac{P_t^*}{P_t}\right)^{1-\varepsilon}.
+1=\theta\Pi_t^{\varepsilon-1}+(1-\theta)\left(\frac{P_t^{\ast}}{P_t}\right)^{1-\varepsilon}.
 $$
 
 **(F19) Price dispersion**
 
 $$
-\Delta_t=(1-\theta)\left(\frac{P_t^*}{P_t}\right)^{-\varepsilon}+\theta\Pi_t^{\varepsilon}\Delta_{t-1}.
+\Delta_t=(1-\theta)\left(\frac{P_t^{\ast}}{P_t}\right)^{-\varepsilon}+\theta\Pi_t^{\varepsilon}\Delta_{t-1}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -352,7 +352,7 @@ The steady-state formulas are source-backed, but the entry remains `needs_review
 | Endogenous | $R_t$ / `r` | nominal policy rate net of one in paper notation | (F11), (F25) |
 | Endogenous | $\lambda_t$ / `lambda` | marginal utility of market consumption | (F5), (F10), (F11) |
 | Endogenous | $\Pi_t$ / `infl` | gross inflation | (F11), (F18), (F19), (F25) |
-| Endogenous | $P_t^*/P_t$ / `inflstar` | optimal reset relative price | (F15), (F18), (F19) |
+| Endogenous | $P_t^{\ast}/P_t$ / `inflstar` | optimal reset relative price | (F15), (F18), (F19) |
 | Endogenous | $x_{1,t}$ / `x_1` | Calvo numerator auxiliary | (F16) |
 | Endogenous | $x_{2,t}$ / `x_2` | Calvo denominator auxiliary | (F17) |
 | Endogenous | $RMC_t$ / `RMC` | real marginal cost | (F14), (F16) |

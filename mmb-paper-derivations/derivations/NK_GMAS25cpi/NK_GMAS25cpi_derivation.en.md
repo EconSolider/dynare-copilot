@@ -100,14 +100,14 @@ $$
 - **(F4) International risk sharing under complete markets**:
 
 $$
-c_t=c_t^*+\frac{1}{\sigma}q_t
-=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t
+=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F5) Uncovered interest parity / terms-of-trade law of motion**:
 
 $$
-s_t=(r_t^*-E_t\{\pi_{t+1}^*\})
+s_t=(r_t^{\ast}-E_t\{\pi_{t+1}^{\ast}\})
 -(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
 $$
 
@@ -121,13 +121,13 @@ $$
 
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
-+(\sigma-\sigma_\alpha)y_t^*-(1+\varphi)a_t.
++(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F8) Domestic natural output**:
 
 $$
-\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
 
 with
@@ -164,7 +164,7 @@ $$
 $$
 \overline{rr}_t
 =\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
-+\alpha\sigma_\alpha(\Theta+\Psi)E_t\{\Delta y_{t+1}^*\}.
++\alpha\sigma_\alpha(\Theta+\Psi)E_t\{\Delta y_{t+1}^{\ast}\}.
 $$
 
 - **(F13) CPI-inflation Taylor rule for `NK_GMAS25cpi`**:
@@ -190,7 +190,7 @@ $$
 - **(F16) Effective terms of trade and the nominal exchange rate**:
 
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F17) Effective real exchange rate**:
@@ -210,7 +210,7 @@ $$
 - **(F19) Output and terms of trade**:
 
 $$
-y_t=y_t^*+\frac{1}{\sigma_\alpha}s_t,\qquad
+y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,\qquad
 \sigma_\alpha=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
 
@@ -237,7 +237,7 @@ $$
 - **(F23) World output process**:
 
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 The numerical section estimates the two AR(1) processes from quarterly Canadian productivity and U.S. GDP data and allows positive contemporaneous correlation between the innovations. The entry does not impose the paper's reported innovation standard deviations as structural derivation requirements.
@@ -247,8 +247,8 @@ The numerical section estimates the two AR(1) processes from quarterly Canadian 
 Because the operative system is log-linear, all stationary lower-case variables are deviations around a symmetric perfect-foresight steady state.
 
 - Set zero-inflation steady state: $\pi_H=\pi=0$.
-- Set PPP/relative-price normalization: $s=q=e=0$ and $p=p_H=p_F=p^*$.
-- Set exogenous deviations: $a=0$ and $y^*=0$.
+- Set PPP/relative-price normalization: $s=q=e=0$ and $p=p_H=p_F=p^{\ast}$.
+- Set exogenous deviations: $a=0$ and $y^{\ast}=0$.
 - Set output at its natural level: $x=0$ and $y=\overline{y}$.
 - Set the steady real rate to the discount-rate constant: $r=\rho=\beta^{-1}-1$ in the paper's log-linear notation.
 - With the special welfare case $\sigma=\eta=\gamma=1$, the source reports $\omega=1$ and the balanced-trade condition $nx_t=0$.
@@ -284,9 +284,9 @@ The constant component $\Omega$ in natural output depends on the markup and subs
 | Endogenous | $\overline{rr}_t$ / `rrbar` | natural real interest rate | (F11), (F12) |
 | Optional endogenous | $nx_t$ / `nx` | net exports share | (F21) |
 | Exogenous | $a_t$ / `a` | domestic productivity | (F22) |
-| Exogenous | $y_t^*$ / `ystar` | world output | (F23) |
+| Exogenous | $y_t^{\ast}$ / `ystar` | world output | (F23) |
 | Shock | $\varepsilon_t^a$ / `eps_a` | domestic productivity innovation | (F22) |
-| Shock | $\varepsilon_t^*$ / `eps_ystar` | world-output innovation | (F23) |
+| Shock | $\varepsilon_t^{\ast}$ / `eps_ystar` | world-output innovation | (F23) |
 | Parameter | $\beta$ / `beta` | discount factor | (F2), (F10) |
 | Parameter | $\sigma$ / `sigma` | inverse intertemporal elasticity / risk aversion | (F1), (F3), (F4) |
 | Parameter | $\varphi$ / `phi_n` | inverse Frisch elasticity | (F1), (F7), (F10) |
@@ -299,7 +299,7 @@ The constant component $\Omega$ in natural output depends on the markup and subs
 | Parameter | $\kappa_\alpha$ / `kappa_alpha` | open-economy Phillips-curve slope | (F10) |
 | Parameter | $\phi_\pi$ / `phi_pi` | CPI inflation response in Taylor rule | (F13) |
 | Parameter | $\rho_a$ / `rho_a` | domestic productivity persistence | (F22) |
-| Parameter | $\rho_{y^*}$ / `rho_ystar` | world output persistence | (F23) |
+| Parameter | $\rho_{y^{\ast}}$ / `rho_ystar` | world output persistence | (F23) |
 | Parameter | $\nu,\mu,\tau$ / `nu`, `mu`, `tau` | subsidy and markup terms | (F6), section 6 |
 
 First-pass equation labels are continuous from (F1) through (F23). The archive keeps `needs_review` because some coefficient definitions around $\Omega$, $\Theta$, and OCR-rendered appendix formulas should be checked against the PDF before promotion.

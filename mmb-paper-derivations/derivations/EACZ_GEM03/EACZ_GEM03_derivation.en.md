@@ -136,7 +136,7 @@ $$
 
 - **(F9) Law of one price for raw materials**:
 $$
-P_{MO,t}^*=\frac{P_{QO,t}}{\mathcal E_t}.
+P_{MO,t}^{\ast}=\frac{P_{QO,t}}{\mathcal E_t}.
 $$
 
 - **(F10) Price-adjustment cost for nontradables**:
@@ -154,7 +154,7 @@ $$
 $$
 \bar p_t(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta}{\theta-1}P_{N,t},
 \qquad
-\mathcal E_t\bar p_t^*(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta^*}{\theta-1}\mathcal E_tP_{N,t}^*.
+\mathcal E_t\bar p_t^{\ast}(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta^{\ast}}{\theta-1}\mathcal E_tP_{N,t}^{\ast}.
 $$
 
 - **(F13) Stochastic discount factor / pricing kernel**:
@@ -171,15 +171,15 @@ $$
 
 - **(F15) Risk-adjusted uncovered interest parity**:
 $$
-1=(1+i_{t+1}^*)(1-\Gamma_{B,t+1})
+1=(1+i_{t+1}^{\ast})(1-\Gamma_{B,t+1})
 E_t\left(D_{t,t+1}\frac{\mathcal E_{t+1}}{\mathcal E_t}\right).
 $$
 
 - **(F16) Foreign-bond intermediation wedge**:
 $$
 \Gamma_{B,t+1}=\phi_{B1}
-\frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^*/P_t\right)-1}
-{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^*/P_t\right)+1}
+\frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)-1}
+{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)+1}
 +Z_{B,t}.
 $$
 
@@ -204,7 +204,7 @@ $$
 - **(F20) Household transversality condition**:
 $$
 \lim_{\tau\to\infty}E_tD_{t,\tau}
-\left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^*)(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^*(j)\right]=0.
+\left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^{\ast})(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^{\ast}(j)\right]=0.
 $$
 
 - **(F21) Government budget constraint**:
@@ -228,7 +228,7 @@ $$
 $$
 \int_0^s T_{O,t}^S(o)\,do
 =\int_0^s Q_{O,t}^D(n)\,dn+\int_0^s Q_{O,t}^D(h)\,dh
-+\int_s^1 M_{O,t}^{D*}(n^*)\,dn^*+\int_s^1 M_{O,t}^{D*}(f)\,df.
++\int_s^1 M_{O,t}^{D\ast}(n^{\ast})\,dn^{\ast}+\int_s^1 M_{O,t}^{D\ast}(f)\,df.
 $$
 
 - **(F24) Nontradable market clearing**:
@@ -238,7 +238,7 @@ $$
 
 - **(F25) Tradable-goods market clearing**:
 $$
-T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{*D}(h,x^*)\,dx^*.
+T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{\astD}(h,x^{\ast})\,dx^{\ast}.
 $$
 
 - **(F26) Final-good resource constraint**:
@@ -264,7 +264,7 @@ $$
 - **(F30) Asset-market clearing**:
 $$
 \int_0^sB_t(j)\,dj=0,\qquad
-\int_0^sB_t^*(j)\,dj+\int_s^1B_t^*(j^*)\,dj^*=0.
+\int_0^sB_t^{\ast}(j)\,dj+\int_s^1B_t^{\ast}(j^{\ast})\,dj^{\ast}=0.
 $$
 `needs_review`: MinerU merged the two asset-clearing equations in Eq. (46); separation follows the surrounding prose.
 
@@ -322,7 +322,7 @@ $$
 
 - **(F39) No-intermediation steady state for net foreign assets**:
 $$
-B_H^*=0,\qquad \Gamma_B=0.
+B_H^{\ast}=0,\qquad \Gamma_B=0.
 $$
 
 - **(F40) Capital rental steady-state restriction**:
@@ -342,8 +342,8 @@ $$
 
 - **(F43) Core calibration values**:
 $$
-s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^*=6,\quad
-\phi=\phi^*=4,\quad \delta=\delta^*=0.025.
+s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^{\ast}=6,\quad
+\phi=\phi^{\ast}=4,\quad \delta=\delta^{\ast}=0.025.
 $$
 
 Additional steady-state targets recorded by the source include Home import shares, Home/Foreign openness weights, material/input shares, distribution parameters, habit persistence $b=0.95$, intertemporal elasticity parameter $\sigma=1/3$, and labor-disutility curvature $\zeta=2.5$. The implementation cross-check includes numeric `initval` values, but these are not promoted here as paper-side derivation evidence.
@@ -352,7 +352,7 @@ Additional steady-state targets recorded by the source include Home import share
 
 - Period is quarterly.
 - Stocks: the paper writes capital as $K_{t+1}=(1-\delta)K_t+\Psi_tK_t$; the Rep-MMB code expresses this as `K = K(-1)*(1-delta)+PSI(-1)*K(-1)`, so production in period $t$ uses predetermined capital.
-- Bonds: short nominal rates $i_t$ and $i_t^*$ are paid at the beginning of period $t$ and known at $t-1$; the Euler equations use $i_{t+1}$ chosen at $t$.
+- Bonds: short nominal rates $i_t$ and $i_t^{\ast}$ are paid at the beginning of period $t$ and known at $t-1$; the Euler equations use $i_{t+1}$ chosen at $t$.
 - Exchange rate: $\mathcal E_t$ is Home currency per unit of Foreign currency. Depreciation enters the risk-adjusted UIP condition.
 - Country notation: paper uses no star for Home and star for Foreign. The implementation uses `H` for the small Home economy and `F` for the large Foreign economy.
 - Model form: nonlinear equilibrium conditions are solved for the steady state and then linearized for stochastic policy analysis. The MMB implementation is not declared `model(linear)`.
@@ -383,7 +383,7 @@ Additional steady-state targets recorded by the source include Home import share
 | $W$, `REALWH`, `REALWF` | wage | (F5), (F19), (F41) |
 | $R$, `REALRH`, `REALRF` | capital rental rate | (F6), (F7), (F40) |
 | $i$, `RNOMH`, `RNOMF` | nominal policy rate | (F14), (F22), (F38) |
-| $B^*$, `REALBH`, `REALBF` | foreign-currency bond position | (F15), (F16), (F30), (F32) |
+| $B^{\ast}$, `REALBH`, `REALBF` | foreign-currency bond position | (F15), (F16), (F30), (F32) |
 | $\mathcal E$, `REALEX` | nominal/real exchange-rate block | (F9), (F15), (F32) |
 | $GDP$, `GDPH`, `GDPF` | GDP accounting object | (F31), (F32) |
 | $\Pi_4$, `PIE4H`, `PIE4F` | annual inflation | (F22), (F38) |

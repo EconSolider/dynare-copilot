@@ -112,8 +112,8 @@ $$
 r_t=(1+r_{t-1})^{\tau_r}
 \left[
 (1+\bar r)
-\left(\frac{\pi_t}{\pi^*}\right)^{\tau_\pi}
-\left(\frac{y_t}{y_t^*}\right)^{\tau_y}
+\left(\frac{\pi_t}{\pi^{\ast}}\right)^{\tau_\pi}
+\left(\frac{y_t}{y_t^{\ast}}\right)^{\tau_y}
 \right]^{1-\tau_r}-1.
 \tag{F10} % (F10)
 $$
@@ -438,7 +438,7 @@ The paper uses a quarterly calibration and local simulations around a symmetric 
 1. Set innovation means to zero: $\varepsilon^A=\varepsilon^D=\varepsilon^f=\varepsilon^R=0$.
 2. Normalize the symmetric equilibrium with $p_i=1$, $c_i=c$, $s_i=s$, and common expected shadow values across ex ante identical firms.
 3. From habit accumulation, $\bar s=\bar c$ when $\bar c$ is constant and $0<\rho<1$.
-4. With zero steady inflation, $\bar\pi=\pi^*$ and Rotemberg adjustment costs vanish.
+4. With zero steady inflation, $\bar\pi=\pi^{\ast}$ and Rotemberg adjustment costs vanish.
 5. The household SDF satisfies the steady Fisher relation $1=\bar m(1+\bar r)/(1+\bar\pi)$.
 6. The financing trigger is $\bar a^E=\bar c(\bar A/\bar w)/(\bar c+\phi)^{1/\alpha}$.
 7. The expected internal-funds wedge is $\bar\xi=1+[\bar\varphi/(1-\bar\varphi)][1-\Phi(\bar z^E)]$ with $\bar z^E=\sigma^{-1}(\log\bar a^E+0.5\sigma^2)$.

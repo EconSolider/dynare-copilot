@@ -226,7 +226,7 @@ $$
 
 - **(F30) 私人产出吸收**：
 $$
-Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{*,tot}+I_{A,t}^{*,tot}).
+Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot}).
 $$
 
 - **(F31) 总 GDP 定义**：
@@ -266,7 +266,7 @@ $$
 - **(F37) 本国经常账户/净国外资产恒等式**（`needs_review`：代码生成前需对照 PDF 核查价格平减约定）：
 $$
 d_t=\frac{R_{t-1}^{ecb}\exp[-\psi_d(d_{t-1}-\bar d)/Y_{t-1}]}{\pi_{A,t}}d_{t-1}
-+\frac{1-\omega}{\omega}(C_{A,t}^{*,tot}+I_{A,t}^{*,tot})
++\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot})
 -p_{B,t}(C_{B,t}^{tot}+I_{B,t}^{tot}).
 $$
 
@@ -301,9 +301,9 @@ $$
 \left(\frac{R_{t-1}^{ecb}}{\bar R^{ecb}}\right)^{\rho_i}
 \left[
 \left(\frac{\pi_t}{\bar\pi}\right)^{\omega\phi_\pi}
-\left(\frac{\pi_t^*}{\bar\pi^*}\right)^{(1-\omega)\phi_\pi}
+\left(\frac{\pi_t^{\ast}}{\bar\pi^{\ast}}\right)^{(1-\omega)\phi_\pi}
 \left(\frac{Y_t^{tot}}{Y_{t-1}^{tot}}\right)^{\omega\phi_y}
-\left(\frac{Y_t^{*,tot}}{Y_{t-1}^{*,tot}}\right)^{(1-\omega)\phi_y}
+\left(\frac{Y_t^{\ast,tot}}{Y_{t-1}^{\ast,tot}}\right)^{(1-\omega)\phi_y}
 \right]^{1-\rho_i}\exp(\varepsilon_t^i).
 $$
 

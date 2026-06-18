@@ -43,7 +43,7 @@ Because the paper-side source does not present primitive optimization problems, 
 
 - **(F1) Generic inertial monetary policy rule** (`needs_review` because OCR uses placeholder characters in nearby text):
 
-$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^* + \pi_t + \beta(\pi_t-\pi^*) + \gamma Y_t\right]$$
+$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right]$$
 
 - **(F2) LINVER state-space representation** (`needs_review` because the paper states the reduced-form idea but does not print a full matrix system):
 

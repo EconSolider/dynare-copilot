@@ -89,7 +89,7 @@ $$
 subject to demand:
 
 $$
-y_{ht}(z)=\left(nC_{Ht}+(1-n)C_{Ht}^{*}+nG_{Ht}\right)
+y_{ht}(z)=\left(nC_{Ht}+(1-n)C_{Ht}^{\ast}+nG_{Ht}\right)
 \left(\frac{p_{ht}(z)}{P_{Ht}}\right)^{-\theta}.
 $$
 
@@ -107,7 +107,7 @@ $$
 
 - **(F2) Complete-markets Backus-Smith condition**:
 $$
-c_t-c_t^*=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^*).
+c_t-c_t^{\ast}=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^{\ast}).
 $$
 
 - **(F3) Home Phillips curve**:
@@ -127,7 +127,7 @@ $$
 
 - **(F6) Foreign CPI inflation aggregator**:
 $$
-\pi_t^*=\phi_H^*\pi_{H,t}+\phi_F^*\pi_{F,t}.
+\pi_t^{\ast}=\phi_H^{\ast}\pi_{H,t}+\phi_F^{\ast}\pi_{F,t}.
 $$
 
 - **(F7) Home production function with predetermined capital**:
@@ -137,7 +137,7 @@ $$
 
 - **(F8) Foreign production function with predetermined capital**:
 $$
-y_t^*=a\,l_t^*+(1-a)k_{t-1}^*.
+y_t^{\ast}=a\,l_t^{\ast}+(1-a)k_{t-1}^{\ast}.
 $$
 
 - **(F9) Home real wage / labor supply relation**:
@@ -147,7 +147,7 @@ $$
 
 - **(F10) Foreign real wage / labor supply relation**:
 $$
-w_t^*=\nu^{-1}l_t^*.
+w_t^{\ast}=\nu^{-1}l_t^{\ast}.
 $$
 
 - **(F11) Home real marginal cost**:
@@ -157,8 +157,8 @@ $$
 
 - **(F12) Foreign real marginal cost**:
 $$
-s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^*p_{H,t}
-=\bar\omega y_t^*-(\bar\omega-\nu^{-1})k_{t-1}^*+q_t.
+s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}
+=\bar\omega y_t^{\ast}-(\bar\omega-\nu^{-1})k_{t-1}^{\ast}+q_t.
 $$
 
 - **(F13) Home capital accumulation**:
@@ -168,7 +168,7 @@ $$
 
 - **(F14) Foreign capital accumulation**:
 $$
-k_t^*=(1-\delta)k_{t-1}^*+\delta i_t^*.
+k_t^{\ast}=(1-\delta)k_{t-1}^{\ast}+\delta i_t^{\ast}.
 $$
 
 - **(F15) Home optimal investment condition** (`needs_review`: sourced from implementation cross-check because the online appendix formulas are not present in the MinerU main-text Markdown):
@@ -184,13 +184,13 @@ $$
 
 - **(F16) Foreign optimal investment condition** (`needs_review`: same source limitation as F15):
 $$
-\sigma_c^{-1}c_t^*-\sigma_c^{-1}E_tc_{t+1}^*
--\sigma_l^{-1}l_t^*+\sigma_l^{-1}E_tl_{t+1}^*
--(1+\beta)\varepsilon_\phi k_t^*
--(1-\beta(1-\delta))\rho_k k_t^*
-+\beta\varepsilon_\phi E_tk_{t+1}^*
-+(1-\beta(1-\delta))\rho_yE_ty_{t+1}^*
-=-\varepsilon_\phi k_{t-1}^*.
+\sigma_c^{-1}c_t^{\ast}-\sigma_c^{-1}E_tc_{t+1}^{\ast}
+-\sigma_l^{-1}l_t^{\ast}+\sigma_l^{-1}E_tl_{t+1}^{\ast}
+-(1+\beta)\varepsilon_\phi k_t^{\ast}
+-(1-\beta(1-\delta))\rho_k k_t^{\ast}
++\beta\varepsilon_\phi E_tk_{t+1}^{\ast}
++(1-\beta(1-\delta))\rho_yE_ty_{t+1}^{\ast}
+=-\varepsilon_\phi k_{t-1}^{\ast}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -198,21 +198,21 @@ $$
 - **(F17) Home resource constraint**:
 $$
 \begin{aligned}
-y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^*\bar C c_t^*
-+\bar I\phi_H i_t+\frac{1-n}{n}\phi_H^*\bar I i_t^* \\
-&-\eta(\bar C+\bar I)\left(\phi_H+\frac{1-n}{n}\phi_H^*\right)p_{H,t}
-+\eta(\bar C+\bar I)\frac{1-n}{n}\phi_H^*q_t+g_t.
+y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
++\bar I\phi_H i_t+\frac{1-n}{n}\phi_H^{\ast}\bar I i_t^{\ast} \\
+&-\eta(\bar C+\bar I)\left(\phi_H+\frac{1-n}{n}\phi_H^{\ast}\right)p_{H,t}
++\eta(\bar C+\bar I)\frac{1-n}{n}\phi_H^{\ast}q_t+g_t.
 \end{aligned}
 $$
 
 - **(F18) Foreign resource constraint**:
 $$
 \begin{aligned}
-y_t^*={}&\phi_F^*\bar C c_t^*+\frac{n}{1-n}\phi_F\bar C c_t
-+\bar I\phi_F^* i_t^*+\frac{n}{1-n}\bar I\phi_F i_t \\
-&+\eta(\bar C+\bar I)\left(\phi_F^*+\frac{n}{1-n}\phi_F\right)
+y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
++\bar I\phi_F^{\ast} i_t^{\ast}+\frac{n}{1-n}\bar I\phi_F i_t \\
+&+\eta(\bar C+\bar I)\left(\phi_F^{\ast}+\frac{n}{1-n}\phi_F\right)
 \frac{\phi_H}{\phi_F}p_{H,t}
-+\eta(\bar C+\bar I)\phi_F^*q_t+g_t^*.
++\eta(\bar C+\bar I)\phi_F^{\ast}q_t+g_t^{\ast}.
 \end{aligned}
 $$
 
@@ -223,7 +223,7 @@ $$
 
 - **(F20) Real exchange-rate identity**:
 $$
-\phi_H^*p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^*p_{H,t}=q_t.
+\phi_H^{\ast}p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}=q_t.
 $$
 
 - **(F21) Home nominal output identity**:
@@ -233,7 +233,7 @@ $$
 
 - **(F22) Foreign nominal output identity**:
 $$
-ny_t^*=y_t^*+p_t^*.
+ny_t^{\ast}=y_t^{\ast}+p_t^{\ast}.
 $$
 
 - **(F23) Home producer price index**:
@@ -243,7 +243,7 @@ $$
 
 - **(F24) Foreign producer price index**:
 $$
-p_t^*=\pi_{F,t}+p_{t-1}^*.
+p_t^{\ast}=\pi_{F,t}+p_{t-1}^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -251,14 +251,14 @@ $$
 - **(F25) Common monetary policy rule**:
 $$
 r_t=\rho_i r_{t-1}+(1-\rho_i)
-\left[\phi_\pi(n\pi_t+(1-n)\pi_t^*)+\phi_y(ny_t+(1-n)y_t^*)
-+\phi_g(ng_t+(1-n)g_t^*)\right]+\varepsilon^r_t.
+\left[\phi_\pi(n\pi_t+(1-n)\pi_t^{\ast})+\phi_y(ny_t+(1-n)y_t^{\ast})
++\phi_g(ng_t+(1-n)g_t^{\ast})\right]+\varepsilon^r_t.
 $$
 
 - **(F26) Government spending processes**:
 $$
 g_t=\rho_G g_{t-1}+\varepsilon^g_t,\qquad
-g_t^*=\rho_G g_{t-1}^*+\varepsilon^{g*}_t.
+g_t^{\ast}=\rho_G g_{t-1}^{\ast}+\varepsilon^{g\ast}_t.
 $$
 
 ## 6. Steady-State Solution
@@ -266,7 +266,7 @@ $$
 Because the MMB model is `model(linear)`, all endogenous variables are deviations from the deterministic steady state and have zero steady state in the Dynare model block:
 
 $$
-\bar c=\bar c^*=\bar r=\bar\pi=\bar\pi^*=\bar y=\bar y^*=\bar g=\bar g^*=0.
+\bar c=\bar c^{\ast}=\bar r=\bar\pi=\bar\pi^{\ast}=\bar y=\bar y^{\ast}=\bar g=\bar g^{\ast}=0.
 $$
 
 The nonzero levels used to construct the linear coefficients are calibrated outside the model block:
@@ -293,8 +293,8 @@ The implementation cross-check computes reduced-form coefficients $\sigma_c$, $\
 ## 7. Timing & Form Conventions
 
 - The archive entry is linear: all variables in F1-F26 are log/percentage deviations from deterministic steady state.
-- Capital is predetermined in production and marginal-cost equations: $k_{t-1}$ and $k_{t-1}^*$ enter F7, F8, F11, and F12.
-- Capital accumulation equations define end-of-period capital $k_t$ and $k_t^*$ from previous capital and current investment.
+- Capital is predetermined in production and marginal-cost equations: $k_{t-1}$ and $k_{t-1}^{\ast}$ enter F7, F8, F11, and F12.
+- Capital accumulation equations define end-of-period capital $k_t$ and $k_t^{\ast}$ from previous capital and current investment.
 - Inflation and price indices use producer-price and CPI aggregators; $p_{H,t}$ is the home relative price used to build the real exchange rate.
 - Complete markets imply the Backus-Smith condition. The incomplete-markets extension in the paper is not the MMB baseline equation set.
 - Runtime validation, Blanchard-Kahn checks, and IRF replication were not performed.
@@ -303,21 +303,21 @@ The implementation cross-check computes reduced-form coefficients $\sigma_c$, $\
 
 | Category | Symbol / MMB name | Meaning | Main equations |
 |---|---|---|---|
-| Endogenous | $c$, $c^*$ / `c`, `cf` | home and foreign consumption | F1, F2, F17, F18 |
+| Endogenous | $c$, $c^{\ast}$ / `c`, `cf` | home and foreign consumption | F1, F2, F17, F18 |
 | Endogenous | $r$ / `r` | common nominal interest-rate deviation | F1, F25 |
-| Endogenous | $\pi$, $\pi^*$ / `pi`, `pif` | home and foreign CPI inflation | F5, F6, F25 |
+| Endogenous | $\pi$, $\pi^{\ast}$ / `pi`, `pif` | home and foreign CPI inflation | F5, F6, F25 |
 | Endogenous | $\pi_H$, $\pi_F$ / `piH`, `piF` | home-good and foreign-good inflation | F3, F4, F23, F24 |
-| Endogenous | $l$, $l^*$ / `l`, `lf` | home and foreign labor | F1, F2, F7, F8, F9, F10 |
+| Endogenous | $l$, $l^{\ast}$ / `l`, `lf` | home and foreign labor | F1, F2, F7, F8, F9, F10 |
 | Endogenous | $p_H$, $q$ / `pH`, `q` | home relative price and real exchange rate | F19, F20 |
-| Endogenous | $p$, $p^*$ / `p`, `pf` | producer price indices | F21, F22, F23, F24 |
+| Endogenous | $p$, $p^{\ast}$ / `p`, `pf` | producer price indices | F21, F22, F23, F24 |
 | Endogenous | $s_H$, $s_F$ / `sH`, `sF` | home and foreign real marginal cost | F3, F4, F11, F12 |
-| Endogenous | $y$, $y^*$ / `y`, `yf` | home and foreign output | F7, F8, F17, F18, F25 |
-| Endogenous | $g$, $g^*$ / `g`, `gf` | home and foreign government spending | F17, F18, F25, F26 |
-| Endogenous | $w$, $w^*$ / `w`, `wf` | home and foreign real wages | F9, F10 |
-| Endogenous | $i$, $i^*$ / `i`, `if` | home and foreign investment | F13, F14, F15, F16 |
-| Endogenous | $k$, $k^*$ / `k`, `kf` | home and foreign capital | F7, F8, F11-F16 |
-| Endogenous | $ny$, $ny^*$ / `ny`, `nyf` | home and foreign nominal output | F21, F22 |
-| Exogenous | $\varepsilon^g$, $\varepsilon^{g*}$ / `eg`, `egf` | government-spending innovations | F26 |
+| Endogenous | $y$, $y^{\ast}$ / `y`, `yf` | home and foreign output | F7, F8, F17, F18, F25 |
+| Endogenous | $g$, $g^{\ast}$ / `g`, `gf` | home and foreign government spending | F17, F18, F25, F26 |
+| Endogenous | $w$, $w^{\ast}$ / `w`, `wf` | home and foreign real wages | F9, F10 |
+| Endogenous | $i$, $i^{\ast}$ / `i`, `if` | home and foreign investment | F13, F14, F15, F16 |
+| Endogenous | $k$, $k^{\ast}$ / `k`, `kf` | home and foreign capital | F7, F8, F11-F16 |
+| Endogenous | $ny$, $ny^{\ast}$ / `ny`, `nyf` | home and foreign nominal output | F21, F22 |
+| Exogenous | $\varepsilon^g$, $\varepsilon^{g\ast}$ / `eg`, `egf` | government-spending innovations | F26 |
 | Exogenous | $\varepsilon^r$ / `er` | monetary-policy innovation | F25 |
 | Parameters | `sigma_c`, `sigma_l`, `beta`, `kappa`, `zeta` | reduced utility and Phillips-curve coefficients | F1-F4 |
 | Parameters | `phiH`, `phiF`, `phiHstar`, `phiFstar`, `eta`, `nn` | home-bias, trade elasticity, and region size | F5, F6, F17, F18, F20 |

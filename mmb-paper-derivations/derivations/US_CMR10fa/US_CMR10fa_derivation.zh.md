@@ -27,7 +27,7 @@ $$
 中间品生产者租用资本服务并雇佣同质劳动，生产函数为：
 
 $$
-Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^*
+Y_{jt}=\epsilon_t K_{jt}^{\alpha}(z_t l_{jt})^{1-\alpha}-\Phi z_t^{\ast}
 $$
 
 当右侧为正时生产。基准论文中企业存在营运资本融资需求，但 `US_CMR10fa` 的金融加速器变体关闭营运资本融资。价格设定采用带指数化的 Calvo 调整：
@@ -64,7 +64,7 @@ $$
 家庭消费、储蓄、持有资产并供给差异化劳动。在完整模型中，家庭从货币资产获得流动性服务；在该金融加速器变体中，这些流动性项设为零。工资设定采用带工资指数化的 Calvo 调整：
 
 $$
-W_{j,t}=\tilde{\pi}_{w,t}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta W_{j,t-1},
+W_{j,t}=\tilde{\pi}_{w,t}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta W_{j,t-1},
 \qquad
 \tilde{\pi}_{w,t}=(\pi_t^{target})^{\iota_w}(\pi_{t-1})^{1-\iota_w}.
 $$
@@ -83,14 +83,14 @@ $$
 - **(F2) 边际成本的另一种度量**（`needs_review`，来源 A.2）：
 
 $$
-s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^*l_t}{u_tk_t}\right)^{1-\alpha}}.
+s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^{\ast}l_t}{u_tk_t}\right)^{1-\alpha}}.
 $$
 
 - **(F3) Calvo 价格重设指数递推**（`needs_review`，来源 A.3）：
 
 $$
-p_t^*-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
-+\xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^*\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
+p_t^{\ast}-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
++\xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
 $$
 
 - **(F4) 价格辅助变量 $F_p$ 递推**（`needs_review`，来源 A.4）：
@@ -110,9 +110,9 @@ $$
 - **(F6) 缩放产出定义**（`needs_review`，来源 A.6）：
 
 $$
-Y_{z,t}=(p_t^*)^{\lambda_f/(\lambda_f-1)}
-\left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^*}\right)^\alpha
-\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1-\alpha}-\phi\right\}.
+Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
+\left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}\right)^\alpha
+\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1-\alpha}-\phi\right\}.
 $$
 
 **资本品生产者和企业家**
@@ -121,14 +121,14 @@ $$
 
 $$
 E_t\left[\lambda_{z,t}q_tF_{1,t}-\lambda_{z,t}\frac{1}{\mu_{\Upsilon,t}}
-+\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^*\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
++\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
 $$
 
 - **(F8) 资本积累**（`needs_review`，来源 A.8）：
 
 $$
-\bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^*\Upsilon}\bar k_t+
-\left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^*\Upsilon}{i_{t-1}}\right)\right]i_t.
+\bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^{\ast}\Upsilon}\bar k_t+
+\left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^{\ast}\Upsilon}{i_{t-1}}\right)\right]i_t.
 $$
 
 - **(F9) 资本利用率**（`needs_review`，来源 A.9）：
@@ -161,7 +161,7 @@ $$
 - **(F13) 净值运动方程**（`needs_review`，来源 A.13）：
 
 $$
-n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^*}
+n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^{\ast}}
 \left\{(1+R_t^k)\bar k_tq_{t-1}
 -\left[1+R_t^e+
 \frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega_t)(1+R_t^k)\bar k_tq_{t-1}}{\bar k_tq_{t-1}-n_t}\right]
@@ -173,8 +173,8 @@ $$
 - **(F14) 消费边际效用**（`needs_review`，来源 A.19）：
 
 $$
-E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^*\zeta_{c,t}}{c_t\mu_{z,t}^*-bc_{t-1}}
-+b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^*-bc_t}\right\}=0.
+E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
++b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right\}=0.
 $$
 
 - **(F15) 消费选择**（`needs_review`，`US_CMR10fa` 中流动性项不活跃；来源 A.20）：
@@ -186,16 +186,16 @@ $$
 - **(F16) Calvo 工资重设指数**（`needs_review`，来源 A.21）：
 
 $$
-w_t^*=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
-+\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t})^\vartheta w_{t-1}^*\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
+w_t^{\ast}=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
++\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F17) 工资辅助变量 $F_w$ 递推**（`needs_review`，来源 A.22）：
 
 $$
-E_t\left\{(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
-+\beta\xi_w(\mu_{z^*})^{(1-\vartheta)/(1-\lambda_w)}
-(\mu_{z^*,t+1})^{\vartheta/(1-\lambda_w)-1}
+E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
++\beta\xi_w(\mu_{z^{\ast}})^{(1-\vartheta)/(1-\lambda_w)}
+(\mu_{z^{\ast},t+1})^{\vartheta/(1-\lambda_w)-1}
 \left(\frac{1}{\pi_{w,t+1}}\right)^{\lambda_w/(1-\lambda_w)}
 \frac{\tilde\pi_{w,t+1}^{1/(1-\lambda_w)}}{\pi_{t+1}}F_{w,t+1}-F_{w,t}\right\}=0.
 $$
@@ -203,14 +203,14 @@ $$
 - **(F18) 工资辅助变量 $K_w$ 递推**（`needs_review`，来源 A.23）：
 
 $$
-E_t\left\{\left[(w_t^*)^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
-+\beta\xi_wE_t\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^*})^{1-\vartheta}(\mu_{z^*,t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}-K_{w,t}\right\}=0.
+E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
++\beta\xi_wE_t\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}-K_{w,t}\right\}=0.
 $$
 
 - **(F19) 无风险非流动资产 Euler 方程**（`needs_review`，来源 A.24）：
 
 $$
-E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^*\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
+E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
 $$
 
 源文献还列出货币选择 FOC A.25-A.27。它们属于完整基准模型，但在 `US_CMR10fa` 中不活跃，因为金融加速器变体取消了流动性效用和货币总量选择。
@@ -220,8 +220,8 @@ $$
 - **(F20) 资源约束**（`needs_review`，来源 A.30）：
 
 $$
-\frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^*}\frac{1}{\pi_t}
-+\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^*}
+\frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^{\ast}}\frac{1}{\pi_t}
++\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}
 +g_t+c_t+\frac{i_t}{\mu_{\Upsilon,t}}
 +\Theta\frac{1-\gamma_t}{\gamma_t}(n_{t+1}-w^e)
 =Y_{z,t}.
@@ -230,7 +230,7 @@ $$
 - **(F21) 总银行贷款/信贷定义**（`needs_review`，来源 A.32）：
 
 $$
-b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^*\Upsilon}
+b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^{\ast}\Upsilon}
 +(q_t\bar k_{t+1}-n_{t+1}).
 $$
 
@@ -273,13 +273,13 @@ $$
 
 $$
 z_t=\mu_{z,t}z_{t-1},\qquad
-\mu_{z^*,t}=\mu_{z,t}\Upsilon^{\alpha/(1-\alpha)}.
+\mu_{z^{\ast},t}=\mu_{z,t}\Upsilon^{\alpha/(1-\alpha)}.
 $$
 
 - **(F27) 政府支出缩放**（`needs_review`，来源 2.6 节）：
 
 $$
-G_t=z_t^*g_t.
+G_t=z_t^{\ast}g_t.
 $$
 
 - **(F28) 通胀目标过程**（`needs_review`，来源 2.9 节）：
@@ -298,7 +298,7 @@ $$
 
 $$
 \hat x_t=\rho_x\hat x_{t-1}+\varepsilon_t^x,\qquad
-x\in\{\mu_{\Upsilon},g,\mu_{z^*},\gamma,\epsilon,\zeta_c,\zeta_i,\tau^{oil},\lambda_f\}.
+x\in\{\mu_{\Upsilon},g,\mu_{z^{\ast}},\gamma,\epsilon,\zeta_c,\zeta_i,\tau^{oil},\lambda_f\}.
 $$
 
 - **(F31) 货币政策冲击**（`needs_review`，来源 2.9 节）：
@@ -314,17 +314,17 @@ $$
 - **(F32) 平衡增长路径平稳化**（`needs_review`，来源 Appendix A）：
 
 $$
-\bar k_{t+1}=\frac{\bar K_{t+1}}{z_t^*\Upsilon^t},\quad
-i_t=\frac{I_t}{z_t^*\Upsilon^t},\quad
-Y_{z,t}=\frac{Y_t}{z_t^*},\quad
-c_t=\frac{C_t}{z_t^*},\quad
+\bar k_{t+1}=\frac{\bar K_{t+1}}{z_t^{\ast}\Upsilon^t},\quad
+i_t=\frac{I_t}{z_t^{\ast}\Upsilon^t},\quad
+Y_{z,t}=\frac{Y_t}{z_t^{\ast}},\quad
+c_t=\frac{C_t}{z_t^{\ast}},\quad
 q_t=\Upsilon^t\frac{Q_{\bar K',t}}{P_t}.
 $$
 
 - **(F33) 零稳态安装成本条件**（`needs_review`，来源 2.2 节）：
 
 $$
-S(\mu_z^*\Upsilon)=0,\qquad S'(\mu_z^*\Upsilon)=0,\qquad S''>0.
+S(\mu_z^{\ast}\Upsilon)=0,\qquad S'(\mu_z^{\ast}\Upsilon)=0,\qquad S''>0.
 $$
 
 - **(F34) 利用率成本归一化**（`needs_review`，来源 2.3 节）：
@@ -344,7 +344,7 @@ $$
 
 ## 7. 时序与形式约定
 
-- 本推导使用论文中的平稳化变量：产出和消费按 $z_t^*$ 缩放，资本和投资按 $z_t^*\Upsilon^t$ 缩放。
+- 本推导使用论文中的平稳化变量：产出和消费按 $z_t^{\ast}$ 缩放，资本和投资按 $z_t^{\ast}\Upsilon^t$ 缩放。
 - 期末 $t$ 购买的资本为 $\bar K_{t+1}$；日期 $t$ 的生产使用此前安装的资本服务。因此，缩放后的资本积累方程用 $\bar k_t$ 和 $i_t$ 决定 $\bar k_{t+1}$。
 - 企业家净值 $n_{t+1}$ 是日期 $t$ 资本市场使用的期末购买力，受金融财富冲击 $\gamma_t$ 以及与较早风险冲击实现相关的信贷损失影响。
 - 合约 cutoff $\bar\omega_{t+1}$ 按贷款清偿观察期标注日期；决定合约的风险离散度在贷款发放时已知。
@@ -359,7 +359,7 @@ $$
 | 内生变量 | $s_t$ / `sU` | 实际边际成本 | (F1), (F2) |
 | 内生变量 | $r_t^k$ / `rkU` | 资本服务租金率 | (F2), (F9) |
 | 内生变量 | $\tilde w_t$ / `wU` | 缩放实际工资 | (F1), (F17) |
-| 内生变量 | $p_t^*$ / `pstarU` | 相对重设价格 | (F3) |
+| 内生变量 | $p_t^{\ast}$ / `pstarU` | 相对重设价格 | (F3) |
 | 内生变量 | $F_{p,t}$ / `FpXU` | 价格 Calvo 辅助变量 | (F4) |
 | 内生变量 | $K_{p,t}$ | 价格 Calvo 辅助变量 | (F5) |
 | 内生变量 | $Y_{z,t}$ / `YU` | 缩放产出 | (F6), (F20) |
@@ -373,7 +373,7 @@ $$
 | 内生变量 | $u_{c,t}^z$ / `uzcU` | 缩放消费边际效用 | (F14), (F15) |
 | 内生变量 | $\lambda_{z,t}$ / `lambdazU` | 缩放家庭乘子 | (F15), (F19) |
 | 内生变量 | $c_t$ / `cU` | 缩放消费 | (F14), (F20) |
-| 内生变量 | $w_t^*$ / `wstarU` | 相对重设工资 | (F16), (F17), (F18) |
+| 内生变量 | $w_t^{\ast}$ / `wstarU` | 相对重设工资 | (F16), (F17), (F18) |
 | 内生变量 | $F_{w,t}$ / `FwXU` | 工资 Calvo 辅助变量 | (F17) |
 | 内生变量 | $K_{w,t}$ | 工资 Calvo 辅助变量 | (F18) |
 | 内生变量 | $R_{t+1}^T,R_{t+1}^e$ / `ReXU` | 无风险/存款机会收益率 | (F11), (F19), (F23) |
@@ -381,7 +381,7 @@ $$
 | 内生变量 | $b_t^{Tot}$ / `BU` | 总银行贷款/信贷 | (F21), (F24), (F25) |
 | 内生变量 | $P_t^e$ / `PrU` | 平均信用利差/溢价 | (F22), (F24), (F25) |
 | 外生冲击 | $\mu_{\Upsilon,t}$ / `muupU` | 投资特定技术/相对投资价格 | (F7), (F20), (F30) |
-| 外生冲击 | $\mu_{z^*,t}$ / `muzstarU` | 持久平衡增长冲击 | (F26), (F30) |
+| 外生冲击 | $\mu_{z^{\ast},t}$ / `muzstarU` | 持久平衡增长冲击 | (F26), (F30) |
 | 外生冲击 | $\gamma_t$ / `gammaU` | 金融财富/企业家生存冲击 | (F13), (F30) |
 | 外生冲击 | $\epsilon_t$ / `epsilU` | 暂时技术冲击 | (F1), (F6), (F30) |
 | 外生冲击 | $\sigma_t$ / `sigmaU` | 企业家风险冲击 | (F11), (F29) |

@@ -94,7 +94,7 @@ needs_review: The OCR/paper notation uses both $\theta$ and parameters later den
 **(F2) Firm desired price / static pricing FOC**:
 
 $$
-p_t^*
+p_t^{\ast}
 =p_t+\frac{\beta(w_t-p_t)+(1-\beta)y_t-a_t}{\beta+\nu(1-\beta)}
 -\frac{\beta\nu_t}{(\nu-1)[\beta+\nu(1-\beta)]}.
 $$
@@ -102,7 +102,7 @@ $$
 **(F3) Household desired wage / labor-supply condition**:
 
 $$
-(\gamma+\psi)(w_t^*-p_t)
+(\gamma+\psi)(w_t^{\ast}-p_t)
 =\gamma(w_t-p_t)+l_t-\psi(y_t-g_t)
 -\frac{\psi\gamma_t}{\gamma-1}.
 $$

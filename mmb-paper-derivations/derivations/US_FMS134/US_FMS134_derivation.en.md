@@ -104,21 +104,21 @@ $$
 
 $$
 \lambda^f_t =
-a_1 c^{*f}_{t+1}-a_2 c^{*f}_t+a_3 c^{*f}_{t-1}
+a_1 c^{\astf}_{t+1}-a_2 c^{\astf}_t+a_3 c^{\astf}_{t-1}
 a_4 e^z_t+a_5 e^b_t .
 $$
 
 - **(F4) Flexible consumption Euler equation** (`needs_review`, `implementation_cross_check`):
 
 $$
-c^{*f}_t=b_1c^{*f}_{t+1}-b_2c^{*f}_{t+2}
-b_3c^{*f}_{t-1}+b_4e^z_t-b_5r^f_t+e^b_t .
+c^{\astf}_t=b_1c^{\astf}_{t+1}-b_2c^{\astf}_{t+2}
+b_3c^{\astf}_{t-1}+b_4e^z_t-b_5r^f_t+e^b_t .
 $$
 
 - **(F5) Flexible consumption services with Edgeworth term**:
 
 $$
-c^{*f}_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c^f_t
+c^{\astf}_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c^f_t
 \frac{\alpha_g g_{ss}}{c_{ss}+\alpha_g g_{ss}}g^f_t .
 $$
 
@@ -193,21 +193,21 @@ $$
 
 $$
 \lambda_t =
-a_1 c^{*}_{t+1}-a_2 c^{*}_t+a_3 c^{*}_{t-1}
+a_1 c^{\ast}_{t+1}-a_2 c^{\ast}_t+a_3 c^{\ast}_{t-1}
 a_4 e^z_t+a_5 e^b_t .
 $$
 
 - **(F17) Sticky consumption Euler equation** (`needs_review`, `implementation_cross_check`):
 
 $$
-c^{*}_t=b_1c^{*}_{t+1}-b_2c^{*}_{t+2}
-b_3c^{*}_{t-1}+b_4e^z_t-b_5(r_t-\pi_{t+1})+e^b_t .
+c^{\ast}_t=b_1c^{\ast}_{t+1}-b_2c^{\ast}_{t+2}
+b_3c^{\ast}_{t-1}+b_4e^z_t-b_5(r_t-\pi_{t+1})+e^b_t .
 $$
 
 - **(F18) Sticky consumption services with Edgeworth term**:
 
 $$
-c^*_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c_t
+c^{\ast}_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c_t
 \frac{\alpha_g g_{ss}}{c_{ss}+\alpha_g g_{ss}}g_t .
 $$
 

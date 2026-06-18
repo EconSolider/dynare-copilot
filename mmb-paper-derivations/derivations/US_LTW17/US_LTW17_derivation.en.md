@@ -65,7 +65,7 @@ Saver household \(j\) values composite consumption and leisure:
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\left(C_t^{*S}(j)-\theta \tilde{C}_{t-1}^{*S}\right)
+\log\left(C_t^{\astS}(j)-\theta \tilde{C}_{t-1}^{\astS}\right)
 -\frac{(L_t^S(j))^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -73,7 +73,7 @@ $$
 where
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
 Savers choose consumption, nominal private bonds, long-term government bonds, investment, capital utilization, and capital accumulation subject to the nominal budget constraint, capital law of motion, and utilization cost. The source Markdown states the budget constraint and capital accumulation equation; several FOCs below are `needs_review` because the local source does not provide a clean appendix derivation.
@@ -126,9 +126,9 @@ $$
 
 $$
 \lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a
-+\frac{e^\gamma}{e^\gamma-\theta}c_t^*
++\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast}
 -u_t^b+\frac{\bar{\tau}^C}{1+\bar{\tau}^C}\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}.
 $$
 
 - **(F6) Long-run real interest rate**:
@@ -147,7 +147,7 @@ $$
 - **(F8) Consumption entering utility**:
 
 $$
-c_t^*-\frac{\bar{C}^S}{\bar{C}^S+\alpha_G\bar{G}}c_t^S
+c_t^{\ast}-\frac{\bar{C}^S}{\bar{C}^S+\alpha_G\bar{G}}c_t^S
 -\frac{\alpha_G\bar{G}}{\bar{C}^S+\alpha_G\bar{G}}g_t=0.
 $$
 
@@ -496,7 +496,7 @@ $$
 | Endogenous | `kbar` / \(\bar{k}_t\) | physical capital | (F14) |
 | Endogenous | `lambda` / \(\lambda_t\) | marginal utility of wealth | (F5), (F9) |
 | Endogenous | `Pb` / \(P_t^B\) | long-bond price | (F19), (F20) |
-| Endogenous | `cstar` / \(c_t^*\) | consumption in utility | (F8) |
+| Endogenous | `cstar` / \(c_t^{\ast}\) | consumption in utility | (F8) |
 | Endogenous | `piL`, `rL` | long-run inflation and real rate | (F6), (F7) |
 | Endogenous | `S`, `rb`, `Tk`, `Tl`, `Tc` | surplus, bond return, tax revenues | (F23)-(F27) |
 | Observables | `cobs`, `iobs`, `gcobs`, `wobs`, `bobs`, `Robs`, `Piobs`, `Lobs` | measurement equations | (F28)-(F35) |

@@ -53,7 +53,7 @@ $$
 - **(F2) 预期 IS 曲线 / 总需求**：
 
 $$
-y_t=E_t y_{t+1}-\sigma\left(i_t-E_t\pi_{t+1}-r_t^*\right).
+y_t=E_t y_{t+1}-\sigma\left(i_t-E_t\pi_{t+1}-r_t^{\ast}\right).
 $$
 
 政策利率、预期通胀和自然实际利率决定产出缺口。
@@ -61,8 +61,8 @@ $$
 - **(F3) 预测型政策规则族**：
 
 $$
-i_t=\rho i_{t-1}+(1-\rho)\left(r^*+E_t\tilde{\pi}_{t+\theta}\right)
-+\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
+i_t=\rho i_{t-1}+(1-\rho)\left(r^{\ast}+E_t\tilde{\pi}_{t+\theta}\right)
++\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 +\beta E_t y_{t+\kappa}.
 $$
 
@@ -98,7 +98,7 @@ $$
 - **(F8) 稳健基准预测型规则**：
 
 $$
-i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right)+0.4\,y_t.
+i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right)+0.4\,y_t.
 $$
 
 - **(F9) 表 3 中优化 AD-AS 的优化规则行**：
@@ -149,7 +149,7 @@ $$
 - **(F13) 自然实际利率过程**：
 
 $$
-r_t^*=\rho_{r^*}r_{t-1}^*+\eta_t^r,\qquad \rho_{r^*}=0.35.
+r_t^{\ast}=\rho_{r^{\ast}}r_{t-1}^{\ast}+\eta_t^r,\qquad \rho_{r^{\ast}}=0.35.
 $$
 
 论文说明自然实际利率创新的标准差为 3.72。
@@ -183,18 +183,18 @@ $$
 2. 将缺口变量和通胀偏离设在基线：
 
 $$
-y_t=0,\qquad \Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^*.
+y_t=0,\qquad \Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^{\ast}.
 $$
 
 3. 自然实际利率过程推出：
 
 $$
-r_t^*=0
+r_t^{\ast}=0
 $$
 
 当它表示为相对无条件均值的偏离时。
 
-4. 对稳健基准规则，如果 $y_t=0$ 且 $\tilde{\pi}_{t+4}=\pi^*$，该规则保持继承的名义利率基线：
+4. 对稳健基准规则，如果 $y_t=0$ 且 $\tilde{\pi}_{t+4}=\pi^{\ast}$，该规则保持继承的名义利率基线：
 
 $$
 i_t=i_{t-1}.
@@ -203,7 +203,7 @@ $$
 5. 对估计的基准规则，常数项和年率单位需要来源层面的基线复核：
 
 $$
-i=(1-0.76)^{-1}\left[-0.28+0.60\pi^*+0.21y+0.97\Delta y\right].
+i=(1-0.76)^{-1}\left[-0.28+0.60\pi^{\ast}+0.21y+0.97\Delta y\right].
 $$
 
 精确的适应性学习稳态和初始信念约定暂缓处理，因为没有执行 Dynare 运行或 AL 模拟验证。
@@ -229,7 +229,7 @@ $$
 | Endogenous policy rate | $i_t$ / `rff`, `interest` | 短期名义利率 | Paper and implementation | (F2), (F3), (F4), (F8), (F12), (F15) |
 | Endogenous change | $\Delta y_t$ | 产出缺口变化 | Paper and implementation | (F4), (F11) |
 | Endogenous change | $\Delta i_t$ / `drff` | 政策利率变化 | Implementation cross-check | (F6) |
-| Exogenous state | $r_t^*$ / `rstar` | 自然实际利率 | Paper and implementation | (F2), (F13) |
+| Exogenous state | $r_t^{\ast}$ / `rstar` | 自然实际利率 | Paper and implementation | (F2), (F13) |
 | Exogenous shock | $\eta_t^r$ / `rstar_` | 自然利率创新 | Paper and implementation | (F13) |
 | Exogenous shock | $\eta_t^\pi$ / `pdotsh_` | 总供给 / 加成创新 | Paper and implementation | (F1), (F14) |
 | Exogenous shock | $\eta_t^i$ / `interest_` | 货币政策创新 | Implementation cross-check | (F15) |

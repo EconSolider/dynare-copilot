@@ -64,7 +64,7 @@ $$
 x_t-p_t
 =\sum_{i=1}^{3}\beta_i\left(x_{t-i}-p_{t-i}\right)
 +\sum_{i=1}^{3}\beta_i E_t\left(x_{t+i}-p_{t+i}\right)
-+\gamma^*\sum_{i=0}^{3} f_i E_t\left(\tilde y_{t+i}\right)+\epsilon^p_t.
++\gamma^{\ast}\sum_{i=0}^{3} f_i E_t\left(\tilde y_{t+i}\right)+\epsilon^p_t.
 $$
 
 - **(F7) Overlap weights in the two-sided representation**:
@@ -73,7 +73,7 @@ $$
 \beta_i=
 \frac{\sum_j f_j f_{i+j}}{1-\sum_j f_j^2},
 \qquad
-\gamma^*=\frac{\gamma}{1-\sum_j f_j^2}.
+\gamma^{\ast}=\frac{\gamma}{1-\sum_j f_j^2}.
 $$
 
 - **(F8) Inflation definition**:
@@ -248,7 +248,7 @@ The Rep-MMB implementation initializes `f` and `rho` using the output-gap equati
 | Parameter | $f_i$ / `f0`-`f3` | contract-weight coefficients | (F1), (F2) |
 | Parameter | $\gamma$ / `gamma` | output-gap effect in contract setting | (F5) |
 | Parameter | $\beta_i$ | overlap weights in two-sided representation | (F6), (F7) |
-| Parameter | $\gamma^*$ | scaled output-gap coefficient | (F6), (F7) |
+| Parameter | $\gamma^{\ast}$ | scaled output-gap coefficient | (F6), (F7) |
 | Parameter | $\delta$ | nesting index: standard vs relative contracts | (F13), (F14) |
 | Parameter | $\alpha_\pi,\alpha_y$ | nominal-output policy-experiment responses | (F18) |
 | Parameter | $\bar\pi$ | inflation target | (F18), (F24) |

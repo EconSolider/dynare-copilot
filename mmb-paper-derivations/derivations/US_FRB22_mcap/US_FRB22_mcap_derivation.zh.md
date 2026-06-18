@@ -78,7 +78,7 @@ $$s_{t+1} = A s_t + B \varepsilon_{t+1}$$
 
 - **(F9) LINVER 研究中使用的通用惯性 Taylor 规则**：
 
-$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^* + \pi_t + \beta_{\pi}(\pi_t-\pi^*) + \gamma_y Y_t\right] + \varepsilon^R_t$$
+$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta_{\pi}(\pi_t-\pi^{\ast}) + \gamma_y Y_t\right] + \varepsilon^R_t$$
 
 论文把这一规则族作为 LINVER 研究中使用的标准政策规则表述。来源 OCR 在规则附近有一个不可读短语；利率变量由语境推断并标记为 `needs_review`。
 

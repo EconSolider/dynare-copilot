@@ -45,7 +45,7 @@ $$
 
 ### 2.5 货币当局
 
-基准规则对通胀和相对于弹性价格/工资反事实的产出缺口作出反应。SWpi 变体用漂移通胀目标 \(\pi_t^*\) 替代常数通胀目标；Rep-MMB 交叉核对文件将 `pist` 固定为参数并注释掉其冲击过程，因此这里保留时变目标定律作为论文侧结构，但标记为实现差异。
+基准规则对通胀和相对于弹性价格/工资反事实的产出缺口作出反应。SWpi 变体用漂移通胀目标 \(\pi_t^{\ast}\) 替代常数通胀目标；Rep-MMB 交叉核对文件将 `pist` 固定为参数并注释掉其冲击过程，因此这里保留时变目标定律作为论文侧结构，但标记为实现差异。
 
 ## 3. First-Order Conditions
 
@@ -71,7 +71,7 @@ c_t ={}& -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t) \\
 &+\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_*l_*}{c_*}(l_t-E_t[l_{t+1}]).
+\frac{w_\astl_\ast}{c_\ast}(l_t-E_t[l_{t+1}]).
 \end{aligned}
 $$
 
@@ -90,16 +90,16 @@ $$
 
 $$
 \bar{k}_t =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
 $$
 
 - **(F6) 不含完整金融摩擦模块的无风险收益套利条件**：
 
 $$
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^k]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^k]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^k]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^k]
 -q_t^k
 = R_t+b_t-E_t[\pi_{t+1}].
 $$
@@ -140,8 +140,8 @@ $$
 
 $$
 y_t =
-g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal{I}\{\rho_z<1\}\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
@@ -202,7 +202,7 @@ $$
 $$
 R_t =
 \rho_R R_{t-1}
-+(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\big)
++(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
 $$
@@ -210,17 +210,17 @@ $$
 - **(F18) 时变通胀目标过程**：
 
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*+\sigma_{\pi^*}\varepsilon_{\pi^*,t}.
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
-`needs_review`：Rep-MMB `US_DNGS15_SWpi_rep.mod` 使用 `pist` 作为固定参数并注释掉 \(\pi_t^*\) 冲击过程，而论文侧 SWpi 小节定义了 (F18) 中的过程。
+`needs_review`：Rep-MMB `US_DNGS15_SWpi_rep.mod` 使用 `pist` 作为固定参数并注释掉 \(\pi_t^{\ast}\) 冲击过程，而论文侧 SWpi 小节定义了 (F18) 中的过程。
 
 - **(F19) 实现交叉核对中使用的资本名义总收益定义**：
 
 $$
 \tilde{R}_t^k-\pi_t =
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k.
 $$
 
@@ -244,7 +244,7 @@ c_t^f ={}&
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}^f-z_t) \\
 &+\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}^f+z_{t+1}]
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
-\frac{w_*l_*}{c_*}(l_t^f-E_t[l_{t+1}^f]).
+\frac{w_\astl_\ast}{c_\ast}(l_t^f-E_t[l_{t+1}^f]).
 \end{aligned}
 $$
 
@@ -263,9 +263,9 @@ $$
 
 $$
 \bar{k}_t^f=
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}^f-z_t)
-+\frac{i_*}{\bar{k}_*}i_t^f
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t^f
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
 $$
 
 - **(F24) 弹性价格/工资实际资本**：
@@ -302,9 +302,9 @@ $$
 - **(F29) 弹性价格/工资资源约束**：
 
 $$
-y_t^f=g_*g_t+\frac{c_*}{y_*}c_t^f+\frac{i_*}{y_*}i_t^f
-+\frac{r_*^k k_*}{y_*}u_t^f
--g_*\frac{1}{1-\alpha}\tilde{z}_t.
+y_t^f=g_\astg_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
++\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
+-g_\ast\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F30) 弹性价格/工资劳动供给 / MRS**：
@@ -320,8 +320,8 @@ $$
 
 $$
 q_t^{k,f}=
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^{k,f}]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^{k,f}]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^{k,f}]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^{k,f}]
 -r_t^f
 +\frac{\sigma_c(1+h e^{-\gamma})}{1-h e^{-\gamma}}b_t.
 $$
@@ -393,7 +393,7 @@ $$
 - **通胀目标约定**：
 
 $$
-\pi=0,\qquad R=0,\qquad \pi^*=0
+\pi=0,\qquad R=0,\qquad \pi^{\ast}=0
 $$
 
 当目标被表示为相对均值的偏离时，上式成立。Rep-MMB 文件则校准 `pist = 1.0069`，并在 `model(linear)` 中使用 `pi - pist`，这一点在升级前应复核。
@@ -469,7 +469,7 @@ Rep-MMB 校准记录了 `zstar`、`rstar`、`rkstar`、`wstar`、`Lstar`、`ksta
 | `psi_law` | \(\lambda_{w,t}\) 的创新 |
 | `psi_sigw` | \(\sigma_{\omega,t}\) 的创新，在交叉核对校准中不活跃 |
 | `psi_g` | \(g_t\) 的创新 |
-| `psi_pist` | 论文侧 \(\pi_t^*\) 创新；在 Rep-MMB 交叉核对文件中被注释 |
+| `psi_pist` | 论文侧 \(\pi_t^{\ast}\) 创新；在 Rep-MMB 交叉核对文件中被注释 |
 | `psi_rm` | 论文侧货币政策残差创新；在 Rep-MMB 交叉核对文件中被注释 |
 
 ### 参数

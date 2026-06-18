@@ -147,10 +147,10 @@ $$
 - **(F6) 工资设定递归，边际收益侧**（`needs_review`，本地无附录代数规范化）：
 
 $$
-f_t=\frac{\eta-1}{\eta}w_t^{*\,1-\eta}\lambda_t w_t^\eta l_t^d
+f_t=\frac{\eta-1}{\eta}w_t^{\ast\,1-\eta}\lambda_t w_t^\eta l_t^d
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{1-\eta}
-\left(\frac{w^*_{t+1}}{w^*_t}\mu_{z,t+1}\right)^{\eta-1}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\mu_{z,t+1}\right)^{\eta-1}
 f_{t+1}
 \right].
 $$
@@ -158,10 +158,10 @@ $$
 - **(F7) 工资设定递归，边际成本侧**（`needs_review`）：
 
 $$
-f_t=\psi d_t\varphi_t(\Pi^*_{w,t})^{-\eta(1+\vartheta)}(l_t^d)^{1+\vartheta}
+f_t=\psi d_t\varphi_t(\Pi^{\ast}_{w,t})^{-\eta(1+\vartheta)}(l_t^d)^{1+\vartheta}
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{-\eta(1+\vartheta)}
-\left(\frac{w^*_{t+1}}{w^*_t}\mu_{z,t+1}\right)^{\eta(1+\vartheta)}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\mu_{z,t+1}\right)^{\eta(1+\vartheta)}
 f_{t+1}
 \right].
 $$
@@ -178,10 +178,10 @@ $$
 - **(F9) 价格设定递归 $g_2$**：
 
 $$
-g_{2t}=\lambda_t\Pi^*_t y_t^d
+g_{2t}=\lambda_t\Pi^{\ast}_t y_t^d
 +\beta\theta_p E_t\left[
 \left(\frac{\Pi_t^{\chi}}{\Pi_{t+1}}\right)^{1-\varepsilon}
-\frac{\Pi^*_t}{\Pi^*_{t+1}}g_{2,t+1}
+\frac{\Pi^{\ast}_t}{\Pi^{\ast}_{t+1}}g_{2,t+1}
 \right].
 $$
 
@@ -211,14 +211,14 @@ $$
 $$
 1=\theta_w\left(\frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{1-\eta}
 \left(\frac{w_{t-1}}{w_t}\mu_{z,t}^{-1}\right)^{1-\eta}
-+(1-\theta_w)(\Pi^*_{w,t})^{1-\eta}.
++(1-\theta_w)(\Pi^{\ast}_{w,t})^{1-\eta}.
 $$
 
 - **(F14) 价格指数演化**：
 
 $$
 1=\theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{1-\varepsilon}
-+(1-\theta_p)(\Pi^*_t)^{1-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{1-\varepsilon}.
 $$
 
 - **(F15) 含漂移系数的 Taylor 规则**：
@@ -258,7 +258,7 @@ $$
 
 $$
 v^p_t=\theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{-\varepsilon}v^p_{t-1}
-+(1-\theta_p)(\Pi^*_t)^{-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{-\varepsilon}.
 $$
 
 - **(F20) 工资分散**：
@@ -266,7 +266,7 @@ $$
 $$
 v^w_t=\theta_w\left(\frac{w_{t-1}}{w_t}\mu_{z,t}^{-1}
 \frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{-\eta}v^w_{t-1}
-+(1-\theta_w)(\Pi^*_{w,t})^{-\eta}.
++(1-\theta_w)(\Pi^{\ast}_{w,t})^{-\eta}.
 $$
 
 - **(F21) 平稳变量下的资本积累**：
@@ -289,7 +289,7 @@ $$
 - **(F23) 最优工资通胀定义**：
 
 $$
-\Pi^*_{w,t}=\frac{w^*_t}{w_t}.
+\Pi^{\ast}_{w,t}=\frac{w^{\ast}_t}{w_t}.
 $$
 
 ## 5. Exogenous Processes
@@ -439,9 +439,9 @@ $$
 | `f` | $f_t$ | 工资设定递归变量 | (F6), (F7) |
 | `ld` | $l_t^d$ | 总劳动需求 | (F11), (F17), (F18) |
 | `w` | $w_t$ | 实际工资 | (F11), (F12), (F13) |
-| `wstar` | $w^*_t$ | 最优重设工资 | (F6), (F23) |
-| `PIstarw` | $\Pi^*_{w,t}$ | 最优工资通胀 | (F7), (F13), (F20), (F23) |
-| `PIstar` | $\Pi^*_t$ | 最优重设价格通胀 | (F9), (F14), (F19) |
+| `wstar` | $w^{\ast}_t$ | 最优重设工资 | (F6), (F23) |
+| `PIstarw` | $\Pi^{\ast}_{w,t}$ | 最优工资通胀 | (F7), (F13), (F20), (F23) |
+| `PIstar` | $\Pi^{\ast}_t$ | 最优重设价格通胀 | (F9), (F14), (F19) |
 | `g1` | $g_{1t}$ | 价格设定递归变量 | (F8), (F10) |
 | `g2` | $g_{2t}$ | 价格设定递归变量 | (F9), (F10) |
 | `yd` | $y_t^d$ | 总需求/产出 | (F15), (F16), (F17), (F36) |

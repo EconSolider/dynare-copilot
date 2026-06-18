@@ -60,7 +60,7 @@ $$
 $$
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
-\log\big(C_t^{*S}(j)-\theta \widetilde C_{t-1}^{*S}\big)
+\log\big(C_t^{\astS}(j)-\theta \widetilde C_{t-1}^{\astS}\big)
 -\frac{(L_t^S(j))^{1+\xi}}{1+\xi}
 \right],
 $$
@@ -68,10 +68,10 @@ $$
 其中复合消费为：
 
 $$
-C_t^{*S}(j)=C_t^S(j)+\alpha_G G_t.
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
 $$
 
-对 `US_LTW17nu`，`implementation_cross_check` 设置 $\alpha_G=0$，所以 $C_t^{*S}=C_t^S$。名义预算约束为：
+对 `US_LTW17nu`，`implementation_cross_check` 设置 $\alpha_G=0$，所以 $C_t^{\astS}=C_t^S$。名义预算约束为：
 
 $$
 \begin{aligned}
@@ -141,9 +141,9 @@ $$
 - **(F6) 储蓄型家庭财富边际效用**：
 
 $$
-\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^*
+\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
 -u_t^b+\frac{\bar\tau^C}{1+\bar\tau^C}\hat\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^*.
+=\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^{\ast}.
 $$
 
 - **(F7) 长期实际利率与债券价格**：
@@ -162,7 +162,7 @@ $$
 - **(F9) 效用中的消费，`nu` 变体**：
 
 $$
-\hat c_t^*-\hat c_t^S=0,\qquad \alpha_G=0.
+\hat c_t^{\ast}-\hat c_t^S=0,\qquad \alpha_G=0.
 $$
 
 - **(F10) 储蓄型家庭 Euler 方程**：

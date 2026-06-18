@@ -42,12 +42,12 @@ $$
 - **(F1) 预测型政策规则族**：
 
 $$
-i_t=\rho i_{t-1}+(1-\rho)\left(r^*+E_t\tilde{\pi}_{t+\theta}\right)
-+\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
+i_t=\rho i_{t-1}+(1-\rho)\left(r^{\ast}+E_t\tilde{\pi}_{t+\theta}\right)
++\alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 +\beta E_t y_{t+\kappa}.
 $$
 
-其中 $i_t$ 是短期名义利率，$\tilde{\pi}_t$ 是四季度平均通胀率，$y_t$ 是产出缺口，$r^*$ 是短期实际利率的无条件均值，$\pi^*$ 是通胀目标。
+其中 $i_t$ 是短期名义利率，$\tilde{\pi}_t$ 是四季度平均通胀率，$y_t$ 是产出缺口，$r^{\ast}$ 是短期实际利率的无条件均值，$\pi^{\ast}$ 是通胀目标。
 
 - **(F2) 估计的联邦基金利率基准规则**：
 
@@ -80,7 +80,7 @@ $$
 - **(F6) 稳健预测型基准规则**：
 
 $$
-i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right)+0.4\,y_t.
+i_t=1.0\,i_{t-1}+0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right)+0.4\,y_t.
 $$
 
 这是论文给出的简单稳健基准规则，其校准接近 $\lambda=1/3$ 时的平均损失最优值。
@@ -170,11 +170,11 @@ $$
 - **(F16) 实现中的趋势通胀和均衡实际利率持久性**：
 
 $$
-\pi^*_t=\rho_{\pi^*}\pi^*_{t-1}+(1-\rho_{\pi^*})\bar{\pi}^*_t,\qquad
-r^*_t=\rho_{r^*}r^*_{t-1}+(1-\rho_{r^*})(i_t-\pi_t)+\text{optional gap term}.
+\pi^{\ast}_t=\rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+(1-\rho_{\pi^{\ast}})\bar{\pi}^{\ast}_t,\qquad
+r^{\ast}_t=\rho_{r^{\ast}}r^{\ast}_{t-1}+(1-\rho_{r^{\ast}})(i_t-\pi_t)+\text{optional gap term}.
 $$
 
-该条件仅为 `implementation_cross_check`。论文侧基准规则使用常数 $r^*$ 和 $\pi^*$ 记号，而 `.mod` 包含持久的 `pitarg`、`ptr`、`rstar` 和 `rtr` 模块。
+该条件仅为 `implementation_cross_check`。论文侧基准规则使用常数 $r^{\ast}$ 和 $\pi^{\ast}$ 记号，而 `.mod` 包含持久的 `pitarg`、`ptr`、`rstar` 和 `rtr` 模块。
 
 ## 6. Steady-State Solution
 
@@ -189,19 +189,19 @@ $$
 2. 将缺口变量设为基线值：
 
 $$
-y_t=\Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^*,\qquad i_t=r^*+\pi^*.
+y_t=\Delta y_t=0,\qquad \pi_t=\tilde{\pi}_t=\pi^{\ast},\qquad i_t=r^{\ast}+\pi^{\ast}.
 $$
 
 3. 对基准规则 (F2)，截距和历史数据单位意味着数值稳态必须对照原 FRB-US 基线和论文年化利率约定检查：
 
 $$
-i=(1-0.76)^{-1}\left[-0.28+0.60\pi^*+0.21y+0.97\Delta y\right].
+i=(1-0.76)^{-1}\left[-0.28+0.60\pi^{\ast}+0.21y+0.97\Delta y\right].
 $$
 
-4. 对稳健基准规则 (F6)，若 $y_t=0$ 且 $\tilde{\pi}_{t+4}=\pi^*$，该规则保持继承的稳态名义利率：
+4. 对稳健基准规则 (F6)，若 $y_t=0$ 且 $\tilde{\pi}_{t+4}=\pi^{\ast}$，该规则保持继承的稳态名义利率：
 
 $$
-i_t=i_{t-1}=r^*+\pi^*.
+i_t=i_{t-1}=r^{\ast}+\pi^{\ast}.
 $$
 
 5. 对 `.mod` 实现变量，应使用 Rep-MMB 校准和线性模型基线。所有 FRB-US 内部变量的精确稳态常数留待对 FRB-US 文档和实现文件进行源级审查；未运行 Dynare `steady` 检查。
@@ -226,8 +226,8 @@ $$
 | Endogenous macro variable | $y_t$ / `outputgap`, `xgap2` | 产出缺口 | Paper and implementation | (F1), (F2), (F9), (F10) |
 | Endogenous macro variable | $\Delta y_t$ | 产出缺口变化 | Paper | (F2), (F10) |
 | Endogenous aggregate | $Y_t$ / `output`, `xgdp` | 产出 / 实际 GDP 加总 | Implementation cross-check | (F12) |
-| Policy target | $\pi^*$ / `pitarg`, `ptr` | 通胀目标 / 趋势通胀 | Paper and implementation | (F1), (F6), (F16) |
-| Policy baseline | $r^*$ / `rstar`, `rtr` | 短期实际利率无条件均值 | Paper and implementation | (F1), (F16) |
+| Policy target | $\pi^{\ast}$ / `pitarg`, `ptr` | 通胀目标 / 趋势通胀 | Paper and implementation | (F1), (F6), (F16) |
+| Policy baseline | $r^{\ast}$ / `rstar`, `rtr` | 短期实际利率无条件均值 | Paper and implementation | (F1), (F16) |
 | Expectation object | $E_t\tilde{\pi}_{t+\theta}$ | 政策规则使用的通胀预测 | Paper | (F1), (F11) |
 | Expectation object | $E_t y_{t+\kappa}$ | 政策规则使用的产出缺口预测 | Paper | (F1), (F11) |
 | Exogenous shock | $\varepsilon^i_t$ / `interest_` | 货币政策创新 | Implementation cross-check | (F13) |

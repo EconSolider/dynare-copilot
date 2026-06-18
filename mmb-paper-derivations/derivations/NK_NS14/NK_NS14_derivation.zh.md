@@ -89,7 +89,7 @@ $$
 并满足需求：
 
 $$
-y_{ht}(z)=\left(nC_{Ht}+(1-n)C_{Ht}^{*}+nG_{Ht}\right)
+y_{ht}(z)=\left(nC_{Ht}+(1-n)C_{Ht}^{\ast}+nG_{Ht}\right)
 \left(\frac{p_{ht}(z)}{P_{Ht}}\right)^{-\theta}.
 $$
 
@@ -107,7 +107,7 @@ $$
 
 - **(F2) 完全市场 Backus-Smith 条件**：
 $$
-c_t-c_t^*=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^*).
+c_t-c_t^{\ast}=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^{\ast}).
 $$
 
 - **(F3) 本地区 Phillips 曲线**：
@@ -127,7 +127,7 @@ $$
 
 - **(F6) 外国 CPI 通胀聚合**：
 $$
-\pi_t^*=\phi_H^*\pi_{H,t}+\phi_F^*\pi_{F,t}.
+\pi_t^{\ast}=\phi_H^{\ast}\pi_{H,t}+\phi_F^{\ast}\pi_{F,t}.
 $$
 
 - **(F7) 含预定资本的本地区生产函数**：
@@ -137,7 +137,7 @@ $$
 
 - **(F8) 含预定资本的外国生产函数**：
 $$
-y_t^*=a\,l_t^*+(1-a)k_{t-1}^*.
+y_t^{\ast}=a\,l_t^{\ast}+(1-a)k_{t-1}^{\ast}.
 $$
 
 - **(F9) 本地区实际工资/劳动供给关系**：
@@ -147,7 +147,7 @@ $$
 
 - **(F10) 外国实际工资/劳动供给关系**：
 $$
-w_t^*=\nu^{-1}l_t^*.
+w_t^{\ast}=\nu^{-1}l_t^{\ast}.
 $$
 
 - **(F11) 本地区实际边际成本**：
@@ -157,8 +157,8 @@ $$
 
 - **(F12) 外国实际边际成本**：
 $$
-s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^*p_{H,t}
-=\bar\omega y_t^*-(\bar\omega-\nu^{-1})k_{t-1}^*+q_t.
+s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}
+=\bar\omega y_t^{\ast}-(\bar\omega-\nu^{-1})k_{t-1}^{\ast}+q_t.
 $$
 
 - **(F13) 本地区资本积累**：
@@ -168,7 +168,7 @@ $$
 
 - **(F14) 外国资本积累**：
 $$
-k_t^*=(1-\delta)k_{t-1}^*+\delta i_t^*.
+k_t^{\ast}=(1-\delta)k_{t-1}^{\ast}+\delta i_t^{\ast}.
 $$
 
 - **(F15) 本地区最优投资条件**（`needs_review`：来自实现交叉检查，因为 MinerU 正文 Markdown 中没有在线附录公式）：
@@ -184,13 +184,13 @@ $$
 
 - **(F16) 外国最优投资条件**（`needs_review`：同 F15 的来源限制）：
 $$
-\sigma_c^{-1}c_t^*-\sigma_c^{-1}E_tc_{t+1}^*
--\sigma_l^{-1}l_t^*+\sigma_l^{-1}E_tl_{t+1}^*
--(1+\beta)\varepsilon_\phi k_t^*
--(1-\beta(1-\delta))\rho_k k_t^*
-+\beta\varepsilon_\phi E_tk_{t+1}^*
-+(1-\beta(1-\delta))\rho_yE_ty_{t+1}^*
-=-\varepsilon_\phi k_{t-1}^*.
+\sigma_c^{-1}c_t^{\ast}-\sigma_c^{-1}E_tc_{t+1}^{\ast}
+-\sigma_l^{-1}l_t^{\ast}+\sigma_l^{-1}E_tl_{t+1}^{\ast}
+-(1+\beta)\varepsilon_\phi k_t^{\ast}
+-(1-\beta(1-\delta))\rho_k k_t^{\ast}
++\beta\varepsilon_\phi E_tk_{t+1}^{\ast}
++(1-\beta(1-\delta))\rho_yE_ty_{t+1}^{\ast}
+=-\varepsilon_\phi k_{t-1}^{\ast}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -198,21 +198,21 @@ $$
 - **(F17) 本地区资源约束**：
 $$
 \begin{aligned}
-y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^*\bar C c_t^*
-+\bar I\phi_H i_t+\frac{1-n}{n}\phi_H^*\bar I i_t^* \\
-&-\eta(\bar C+\bar I)\left(\phi_H+\frac{1-n}{n}\phi_H^*\right)p_{H,t}
-+\eta(\bar C+\bar I)\frac{1-n}{n}\phi_H^*q_t+g_t.
+y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
++\bar I\phi_H i_t+\frac{1-n}{n}\phi_H^{\ast}\bar I i_t^{\ast} \\
+&-\eta(\bar C+\bar I)\left(\phi_H+\frac{1-n}{n}\phi_H^{\ast}\right)p_{H,t}
++\eta(\bar C+\bar I)\frac{1-n}{n}\phi_H^{\ast}q_t+g_t.
 \end{aligned}
 $$
 
 - **(F18) 外国资源约束**：
 $$
 \begin{aligned}
-y_t^*={}&\phi_F^*\bar C c_t^*+\frac{n}{1-n}\phi_F\bar C c_t
-+\bar I\phi_F^* i_t^*+\frac{n}{1-n}\bar I\phi_F i_t \\
-&+\eta(\bar C+\bar I)\left(\phi_F^*+\frac{n}{1-n}\phi_F\right)
+y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
++\bar I\phi_F^{\ast} i_t^{\ast}+\frac{n}{1-n}\bar I\phi_F i_t \\
+&+\eta(\bar C+\bar I)\left(\phi_F^{\ast}+\frac{n}{1-n}\phi_F\right)
 \frac{\phi_H}{\phi_F}p_{H,t}
-+\eta(\bar C+\bar I)\phi_F^*q_t+g_t^*.
++\eta(\bar C+\bar I)\phi_F^{\ast}q_t+g_t^{\ast}.
 \end{aligned}
 $$
 
@@ -223,7 +223,7 @@ $$
 
 - **(F20) 实际汇率恒等式**：
 $$
-\phi_H^*p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^*p_{H,t}=q_t.
+\phi_H^{\ast}p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}=q_t.
 $$
 
 - **(F21) 本地区名义产出恒等式**：
@@ -233,7 +233,7 @@ $$
 
 - **(F22) 外国名义产出恒等式**：
 $$
-ny_t^*=y_t^*+p_t^*.
+ny_t^{\ast}=y_t^{\ast}+p_t^{\ast}.
 $$
 
 - **(F23) 本地区生产者价格指数**：
@@ -243,7 +243,7 @@ $$
 
 - **(F24) 外国生产者价格指数**：
 $$
-p_t^*=\pi_{F,t}+p_{t-1}^*.
+p_t^{\ast}=\pi_{F,t}+p_{t-1}^{\ast}.
 $$
 
 ## 5. Exogenous Processes
@@ -251,14 +251,14 @@ $$
 - **(F25) 共同货币政策规则**：
 $$
 r_t=\rho_i r_{t-1}+(1-\rho_i)
-\left[\phi_\pi(n\pi_t+(1-n)\pi_t^*)+\phi_y(ny_t+(1-n)y_t^*)
-+\phi_g(ng_t+(1-n)g_t^*)\right]+\varepsilon^r_t.
+\left[\phi_\pi(n\pi_t+(1-n)\pi_t^{\ast})+\phi_y(ny_t+(1-n)y_t^{\ast})
++\phi_g(ng_t+(1-n)g_t^{\ast})\right]+\varepsilon^r_t.
 $$
 
 - **(F26) 政府支出过程**：
 $$
 g_t=\rho_G g_{t-1}+\varepsilon^g_t,\qquad
-g_t^*=\rho_G g_{t-1}^*+\varepsilon^{g*}_t.
+g_t^{\ast}=\rho_G g_{t-1}^{\ast}+\varepsilon^{g\ast}_t.
 $$
 
 ## 6. Steady-State Solution
@@ -266,7 +266,7 @@ $$
 因为 MMB 模型是 `model(linear)`，所有内生变量都是相对确定性稳态的偏离，在 Dynare model 块中的稳态为零：
 
 $$
-\bar c=\bar c^*=\bar r=\bar\pi=\bar\pi^*=\bar y=\bar y^*=\bar g=\bar g^*=0.
+\bar c=\bar c^{\ast}=\bar r=\bar\pi=\bar\pi^{\ast}=\bar y=\bar y^{\ast}=\bar g=\bar g^{\ast}=0.
 $$
 
 用于构造线性系数的非零水平在 model 块外校准：
@@ -293,8 +293,8 @@ $$
 ## 7. Timing & Form Conventions
 
 - 本条目为线性形式：F1-F26 中所有变量都是相对确定性稳态的对数/百分比偏离。
-- 资本在生产和边际成本方程中是预定变量：$k_{t-1}$ 和 $k_{t-1}^*$ 出现在 F7、F8、F11 和 F12。
-- 资本积累方程用上一期资本和当期投资定义期末资本 $k_t$ 和 $k_t^*$。
+- 资本在生产和边际成本方程中是预定变量：$k_{t-1}$ 和 $k_{t-1}^{\ast}$ 出现在 F7、F8、F11 和 F12。
+- 资本积累方程用上一期资本和当期投资定义期末资本 $k_t$ 和 $k_t^{\ast}$。
 - 通胀和价格指数同时使用生产者价格和 CPI 聚合；$p_{H,t}$ 是构造实际汇率的本地区相对价格。
 - 完全市场推出 Backus-Smith 条件。论文的不完全市场扩展不是 MMB 基准方程组。
 - 未执行运行验证、Blanchard-Kahn 检查或 IRF 复现。
@@ -303,21 +303,21 @@ $$
 
 | 类别 | 符号 / MMB 名称 | 含义 | 主要方程 |
 |---|---|---|---|
-| 内生 | $c$, $c^*$ / `c`, `cf` | 本地区和外国消费 | F1, F2, F17, F18 |
+| 内生 | $c$, $c^{\ast}$ / `c`, `cf` | 本地区和外国消费 | F1, F2, F17, F18 |
 | 内生 | $r$ / `r` | 共同名义利率偏离 | F1, F25 |
-| 内生 | $\pi$, $\pi^*$ / `pi`, `pif` | 本地区和外国 CPI 通胀 | F5, F6, F25 |
+| 内生 | $\pi$, $\pi^{\ast}$ / `pi`, `pif` | 本地区和外国 CPI 通胀 | F5, F6, F25 |
 | 内生 | $\pi_H$, $\pi_F$ / `piH`, `piF` | 本地产出和外国产出价格通胀 | F3, F4, F23, F24 |
-| 内生 | $l$, $l^*$ / `l`, `lf` | 本地区和外国劳动 | F1, F2, F7, F8, F9, F10 |
+| 内生 | $l$, $l^{\ast}$ / `l`, `lf` | 本地区和外国劳动 | F1, F2, F7, F8, F9, F10 |
 | 内生 | $p_H$, $q$ / `pH`, `q` | 本地区相对价格和实际汇率 | F19, F20 |
-| 内生 | $p$, $p^*$ / `p`, `pf` | 生产者价格指数 | F21, F22, F23, F24 |
+| 内生 | $p$, $p^{\ast}$ / `p`, `pf` | 生产者价格指数 | F21, F22, F23, F24 |
 | 内生 | $s_H$, $s_F$ / `sH`, `sF` | 本地区和外国实际边际成本 | F3, F4, F11, F12 |
-| 内生 | $y$, $y^*$ / `y`, `yf` | 本地区和外国产出 | F7, F8, F17, F18, F25 |
-| 内生 | $g$, $g^*$ / `g`, `gf` | 本地区和外国政府支出 | F17, F18, F25, F26 |
-| 内生 | $w$, $w^*$ / `w`, `wf` | 本地区和外国实际工资 | F9, F10 |
-| 内生 | $i$, $i^*$ / `i`, `if` | 本地区和外国投资 | F13, F14, F15, F16 |
-| 内生 | $k$, $k^*$ / `k`, `kf` | 本地区和外国资本 | F7, F8, F11-F16 |
-| 内生 | $ny$, $ny^*$ / `ny`, `nyf` | 本地区和外国名义产出 | F21, F22 |
-| 外生 | $\varepsilon^g$, $\varepsilon^{g*}$ / `eg`, `egf` | 政府支出创新 | F26 |
+| 内生 | $y$, $y^{\ast}$ / `y`, `yf` | 本地区和外国产出 | F7, F8, F17, F18, F25 |
+| 内生 | $g$, $g^{\ast}$ / `g`, `gf` | 本地区和外国政府支出 | F17, F18, F25, F26 |
+| 内生 | $w$, $w^{\ast}$ / `w`, `wf` | 本地区和外国实际工资 | F9, F10 |
+| 内生 | $i$, $i^{\ast}$ / `i`, `if` | 本地区和外国投资 | F13, F14, F15, F16 |
+| 内生 | $k$, $k^{\ast}$ / `k`, `kf` | 本地区和外国资本 | F7, F8, F11-F16 |
+| 内生 | $ny$, $ny^{\ast}$ / `ny`, `nyf` | 本地区和外国名义产出 | F21, F22 |
+| 外生 | $\varepsilon^g$, $\varepsilon^{g\ast}$ / `eg`, `egf` | 政府支出创新 | F26 |
 | 外生 | $\varepsilon^r$ / `er` | 货币政策创新 | F25 |
 | 参数 | `sigma_c`, `sigma_l`, `beta`, `kappa`, `zeta` | 简化效用和 Phillips 曲线系数 | F1-F4 |
 | 参数 | `phiH`, `phiF`, `phiHstar`, `phiFstar`, `eta`, `nn` | 本地偏好、贸易弹性和地区规模 | F5, F6, F17, F18, F20 |

@@ -69,11 +69,11 @@ where $H_t$ is worker surplus and $J_t$ is the firm value of a filled job. The i
 
 ### 2.4 Retail Firms
 
-Retailers face Calvo pricing. A firm that can reset its price chooses $p^*_{jt}$ and demand $y_{j,t+i}$ to maximize expected discounted profits:
+Retailers face Calvo pricing. A firm that can reset its price chooses $p^{\ast}_{jt}$ and demand $y_{j,t+i}$ to maximize expected discounted profits:
 
 $$
-\max_{\{p^*_{jt},y_{j,t+i}\}} E_t\left\{\sum_{i=0}^{\infty}\lambda^i
-\Lambda^q_{t,t+i}\left(\frac{p^*_{jt}}{p_{qt}}-p_{w,t+i}\right)y_{j,t+i}\right\},
+\max_{\{p^{\ast}_{jt},y_{j,t+i}\}} E_t\left\{\sum_{i=0}^{\infty}\lambda^i
+\Lambda^q_{t,t+i}\left(\frac{p^{\ast}_{jt}}{p_{qt}}-p_{w,t+i}\right)y_{j,t+i}\right\},
 $$
 
 subject to the demand schedule
@@ -198,13 +198,13 @@ $$
 
 $$
 E_t\left\{\sum_{i=0}^{\infty}\lambda^i\Lambda^q_{t,t+i}
-\left(\frac{p^*_{jt}}{p_{q,t+i}}-(1+\mu)p_{w,t+i}\right)y_{j,t+i}\right\}=0.
+\left(\frac{p^{\ast}_{jt}}{p_{q,t+i}}-(1+\mu)p_{w,t+i}\right)y_{j,t+i}\right\}=0.
 $$
 
 - **(F16) Goods price index under Calvo pricing**:
 
 $$
-p_{qt}=\left((1-\lambda)(p^*_t)^{1-\eta}
+p_{qt}=\left((1-\lambda)(p^{\ast}_t)^{1-\eta}
 +\lambda p_{q,t-1}^{1-\eta}\right)^{1/(1-\eta)}.
 $$
 
@@ -418,7 +418,7 @@ The paper reports steady-state targets and parameter restrictions rather than a 
 | Endogenous | `H` / $H_t$ | worker surplus | (F11) |
 | Endogenous | `p_q` / $p_{qt}$ | final-goods price index | (F16) |
 | Endogenous | `pi_q` / $\pi_{qt}$ | core inflation | (F17), (F32) |
-| Endogenous | `p_star` / $p^*_t$ | reset price | (F15), (F16) |
+| Endogenous | `p_star` / $p^{\ast}_t$ | reset price | (F15), (F16) |
 | Endogenous | `R_n` / $R^n_t$ | nominal policy rate | (F1), (F32) |
 | Endogenous | `s` / $s_t$ | relative oil price in consumption units | (F2), (F30) |
 | Endogenous | `s_q` / $s_{qt}$ | oil price in final-good units | (F8), (F30) |

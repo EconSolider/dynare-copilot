@@ -316,7 +316,7 @@ $$
 r_t=\gamma_r r_{t-1}
 +(1-\gamma_r)\left[
 \gamma_\pi \Delta p_{t-1}^C
-+\gamma_y(y_{t-1}-y_{t-1}^*)
++\gamma_y(y_{t-1}-y_{t-1}^{\ast})
 +\gamma_b(b_{t-1}^B-b_{t-2}^B+\Delta p_{t-1}^C)
 \right].
 $$
@@ -345,7 +345,7 @@ Because `NK_KRS12` is represented in `model(linear)` form, the dynamic variables
 
 $$
 \bar q=\bar c=\bar i=\bar \mu=\bar d=\bar r=\bar b=\bar p^C=\bar p^D
-=\bar y=\bar y^*=\bar a^C=\bar \xi^D=\bar v=0.
+=\bar y=\bar y^{\ast}=\bar a^C=\bar \xi^D=\bar v=0.
 $$
 
 The level steady-state constants appearing in the linear equations are calibrated rather than solved in this archive entry. The implementation cross-check reports:
@@ -371,7 +371,7 @@ Runtime validation, residual checks, and Dynare execution were not performed.
 - Borrower debt $b_t^B$ is a stock chosen in the current period; borrower budget costs include lagged debt and lagged lending rates.
 - The policy rule reacts to lagged CPI inflation, lagged output gap, and lagged nominal credit growth.
 - The `.mod` file used for implementation cross-check is the augmented Taylor plus macroprudential regime. Other policy regimes in the paper set $\gamma_b=0$ and/or $\tau=0$, or optimize the coefficients.
-- Potential output $y_t^*$ is defined in the paper as GDP dynamics under flexible prices, no financial constraints, and homogeneous agents. The MMB implementation supplies auxiliary laws for `yCstar`, `yDstar`, and `dstar`; these are implementation details and remain cross-check evidence, not paper-side derivation equations.
+- Potential output $y_t^{\ast}$ is defined in the paper as GDP dynamics under flexible prices, no financial constraints, and homogeneous agents. The MMB implementation supplies auxiliary laws for `yCstar`, `yDstar`, and `dstar`; these are implementation details and remain cross-check evidence, not paper-side derivation equations.
 
 ## 8. Variable & Parameter Reference Table
 
@@ -406,9 +406,9 @@ Runtime validation, residual checks, and Dynare execution were not performed.
 | `v` | $v_t$ | Financial shock state | (F29) |
 | `lCtot`, `lDtot` | $l_t^{C,tot},l_t^{D,tot}$ | Total labor by sector | (F22), (F23) |
 | `y` | $y_t$ | Aggregate GDP | (F26) |
-| `ystar` | $y_t^*$ | Potential output | policy-rule input |
+| `ystar` | $y_t^{\ast}$ | Potential output | policy-rule input |
 | `yC`, `yD` | $y_t^C,y_t^D$ | Sectoral output | (F14), (F15), (F18), (F19) |
-| `yCstar`, `yDstar`, `dstar` | $y_t^{C,*},y_t^{D,*},d_t^*$ | Potential-output auxiliaries | implementation cross-check |
+| `yCstar`, `yDstar`, `dstar` | $y_t^{C,\ast},y_t^{D,\ast},d_t^{\ast}$ | Potential-output auxiliaries | implementation cross-check |
 | `deltabB` | $\Delta b_t^B$ | Nominal credit growth | (F25) |
 
 ### Exogenous Shocks

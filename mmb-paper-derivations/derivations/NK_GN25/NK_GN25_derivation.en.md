@@ -256,7 +256,7 @@ $$
 
 - **(F33) Natural-minus-efficient unemployment wedge, analytical case**:
 $$
-\widehat u_t^n-\widehat u_t^*
+\widehat u_t^n-\widehat u_t^{\ast}
 =\frac{w}{2\kappa}\left(\frac{\zeta\Xi_w}{1-\zeta-\Xi_w}\right)(1+\chi)\widetilde p_{e,t}.
 $$
 
@@ -291,18 +291,18 @@ $$
 $$
 - The efficient wage is:
 $$
-w^*=\frac{1}{\nu}+\xi p_e.
+w^{\ast}=\frac{1}{\nu}+\xi p_e.
 $$
 - The steady-state fiscal instruments reported by the source are:
 $$
 \tau_y=\frac{1}{\varepsilon},\qquad
-S=\frac{1}{\nu}\ln\left(\frac{w^*-\xi p_e}{\delta-\xi p_e}\right),\qquad
-\tau_z=1-\frac{(1-\alpha)[1-\beta(1-\rho)]}{1-\beta(1-\rho)(1-\alpha f^*)}.
+S=\frac{1}{\nu}\ln\left(\frac{w^{\ast}-\xi p_e}{\delta-\xi p_e}\right),\qquad
+\tau_z=1-\frac{(1-\alpha)[1-\beta(1-\rho)]}{1-\beta(1-\rho)(1-\alpha f^{\ast})}.
 $$
 - The steady-state efficient job-finding rate satisfies:
 $$
-f^*=\left[\frac{1-\tau_z}{\kappa[1-\beta(1-\rho)]}
-\left(\frac{p_g-\gamma_e p_e}{1-\gamma_e}-w^*+S\right)\right]^{\frac{1-\alpha}{\alpha}}.
+f^{\ast}=\left[\frac{1-\tau_z}{\kappa[1-\beta(1-\rho)]}
+\left(\frac{p_g-\gamma_e p_e}{1-\gamma_e}-w^{\ast}+S\right)\right]^{\frac{1-\alpha}{\alpha}}.
 $$
 - The quantitative calibration targets a quarterly model with $\beta=0.98$, $\omega_e=0.08$, $\Xi_w=0.11$, $f=0.25$, $u=0.10$, $\rho=0.037$, $\alpha=0.6$, $\chi=0.1$, $\gamma_e=0.04$, $\theta=3/4$, and $\varepsilon=4$.
 - For the linearized model, steady states are normalized as deviations from the constrained-efficient steady state: hatted level deviations and tilded proportional deviations are zero in steady state.

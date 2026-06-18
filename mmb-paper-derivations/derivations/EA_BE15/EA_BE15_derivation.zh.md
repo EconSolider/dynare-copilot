@@ -156,7 +156,7 @@ $$
 
 $$
 i_t=(1-\lambda_i)
-\left[\lambda_\pi(\pi_t-\pi^*)+\lambda_x(y_t-y_t^f)+M_{k,t}\right]
+\left[\lambda_\pi(\pi_t-\pi^{\ast})+\lambda_x(y_t-y_t^f)+M_{k,t}\right]
 +\lambda_i i_{t-1}+\varepsilon_t^i.
 $$
 
@@ -294,7 +294,7 @@ $$
 | 参数 | `li1`, $\lambda_i$ | 利率平滑 | (F8) |
 | 参数 | `li2`, $\lambda_\pi$ | 通胀反应 | (F8) |
 | 参数 | `li3`, $\lambda_x$ | 产出缺口反应 | (F8) |
-| 参数 | `cible`, $\pi^*$ | 通胀目标 | (F8) |
+| 参数 | `cible`, $\pi^{\ast}$ | 通胀目标 | (F8) |
 | 参数 | `rhoa1`, `rhon1`, `rhop1`, `rhoi1`, `rhou1` | AR(1) 持续性参数 | (F10)-(F14) |
 | 参数 | `vel0`, $\zeta$ | 流通速度均值 | (F9) |
 | 参数 | `vel1`, $\lambda_s$ | 流通速度冲击载荷 | (F9) |

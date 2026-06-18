@@ -61,7 +61,7 @@ $$
 y_{j,t}=l^d_{j,t}.
 $$
 
-可以重设价格的企业在 Calvo 价格刚性 $\omega$ 和价格指数化 $\xi_p$ 下选择 $P^*_t$，最大化贴现预期利润：
+可以重设价格的企业在 Calvo 价格刚性 $\omega$ 和价格指数化 $\xi_p$ 下选择 $P^{\ast}_t$，最大化贴现预期利润：
 
 $$
 \max_{P_{j,t}}E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
@@ -83,7 +83,7 @@ $$
 
 $$
 \arg\max_{W_{i,t}}\left[\Delta_t(W_{i,t})\right]^{\eta_t}
-\left[J_t(W_{i,t})\right]^{1-\eta_t}\Rightarrow W_t^* .
+\left[J_t(W_{i,t})\right]^{1-\eta_t}\Rightarrow W_t^{\ast} .
 $$
 
 空缺发布由自由进入决定，因此真实空缺成本等于已填补工作岗位价值的贴现期望。
@@ -114,7 +114,7 @@ $$
 $$
 E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
 \left[
-\frac{P_t^*\left(\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{1-\xi_p}\right)^s}{P_{t+s}}
+\frac{P_t^{\ast}\left(\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{1-\xi_p}\right)^s}{P_{t+s}}
 -\frac{\varepsilon}{\varepsilon-1}mc_{t+s}
 \right]y_{j,t+s}=0.
 $$
@@ -160,7 +160,7 @@ V_t^E(W_{i,t})={}&\frac{W_{i,t}}{P_t}h_{i,t}
 -\kappa^L\frac{h_{i,t}^{1+\varphi}}{(1+\varphi)\lambda_t}\\
 &+E_t\{\beta_{t,t+1}(1-\vartheta_{t+1})
 [\gamma V_{t+1}^E(W_{i,t}\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)V_{t+1}^E(W^*_{t+1})]\}\\
++(1-\gamma)V_{t+1}^E(W^{\ast}_{t+1})]\}\\
 &+E_t\{\beta_{t,t+1}\vartheta_{t+1}U_{t+1}\}.
 \end{aligned}
 $$
@@ -171,7 +171,7 @@ $$
 \begin{aligned}
 U_t={}&b+E_t\{\beta_{t,t+1}s_t[
 \gamma V_{t+1}^E(W_t\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)V_{t+1}^E(W^*_{t+1})]\}\\
++(1-\gamma)V_{t+1}^E(W^{\ast}_{t+1})]\}\\
 &+E_t\{\beta_{t,t+1}(1-s_t)U_{t+1}\}.
 \end{aligned}
 $$
@@ -190,7 +190,7 @@ $$
 J_t(W_{i,t})=\Psi^L_t(W_{i,t})
 +E_t\{\beta_{t,t+1}(1-\vartheta_{t+1})
 [\gamma J_{t+1}(W_{i,t}\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
++(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 **(F10) 劳动品企业当期利润**
@@ -203,15 +203,15 @@ $$
 **(F11) Nash 工资重设条件**
 
 $$
-\eta_t J_t(W_t^*)\,\frac{\partial \Delta_t(W_t^*)}{\partial W_t}
-+(1-\eta_t)\Delta_t(W_t^*)\,\frac{\partial J_t(W_t^*)}{\partial W_t}=0.
+\eta_t J_t(W_t^{\ast})\,\frac{\partial \Delta_t(W_t^{\ast})}{\partial W_t}
++(1-\eta_t)\Delta_t(W_t^{\ast})\,\frac{\partial J_t(W_t^{\ast})}{\partial W_t}=0.
 $$
 
 线性化实现形式：
 
 $$
-\hat{J}^*_t+\hat{\delta}^W_t
-=\hat{\Delta}^*_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t .
+\hat{J}^{\ast}_t+\hat{\delta}^W_t
+=\hat{\Delta}^{\ast}_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t .
 $$
 
 导数记号和线性化方程均需对 Appendix OCR 做 `needs_review` 检查。
@@ -220,7 +220,7 @@ $$
 
 $$
 \hat{w}_t=\gamma(\hat{w}_{t-1}-\hat{\Pi}_t+\xi_w\hat{\Pi}_{t-1})
-+(1-\gamma)\hat{w}^*_t.
++(1-\gamma)\hat{w}^{\ast}_t.
 $$
 
 **(F13) 企业工资导数辅助变量**
@@ -228,11 +228,11 @@ $$
 $$
 \begin{aligned}
 \hat{\delta}^F_t={}&[1-\beta(1-\vartheta)\gamma]
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\beta(1-\vartheta)\gamma E_t\left\{
--\frac{\alpha}{1-\alpha}(\hat{w}^*_t-\hat{\Pi}_{t+1}
-+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1})
+-\frac{\alpha}{1-\alpha}(\hat{w}^{\ast}_t-\hat{\Pi}_{t+1}
++\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1})
 +\hat{\delta}^F_{t+1}
 +\hat{\lambda}_{t+1}-\hat{\lambda}_t
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}
@@ -246,15 +246,15 @@ $$
 \begin{aligned}
 \delta^W\hat{\delta}^W_t={}&
 -\frac{\alpha}{1-\alpha}wh
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\frac{1}{1-\alpha}mrsh
-\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^*_t-\hat{\lambda}_t
+\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^{\ast}_t-\hat{\lambda}_t
 +\frac{1+\varphi}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\left(\frac{\alpha}{1-\alpha}\right)^2wh
 -\frac{1+\varphi}{(1-\alpha)^2}mrsh\right]
-E_t(\hat{w}^*_t-\hat{\Pi}_{t+1}+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1})\\
+E_t(\hat{w}^{\ast}_t-\hat{\Pi}_{t+1}+\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1})\\
 &+\beta(1-\vartheta)\gamma\delta^W
 E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\delta}^W_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}).
@@ -268,7 +268,7 @@ $$
 $$
 \kappa_t=q_tE_t\{\beta_{t,t+1}[
 \gamma J_{t+1}(W_t\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
++(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 线性化形式：
@@ -276,19 +276,19 @@ $$
 $$
 \frac{\kappa}{q}(\hat{\kappa}_t-\hat{q}_t)
 =\frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)
-+\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}).
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)
++\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}).
 $$
 
 **(F16) 重设工资企业价值**
 
 $$
 \begin{aligned}
-J\hat{J}^*_t={}&\frac{wh}{\alpha}(-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)\\
+J\hat{J}^{\ast}_t={}&\frac{wh}{\alpha}(-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta)J
-E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}
+E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}).
 \end{aligned}
 $$
@@ -299,18 +299,18 @@ $$
 
 $$
 \begin{aligned}
-\Delta\hat{\Delta}^*_t={}&
-wh\frac{1}{1-\alpha}(-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)\\
+\Delta\hat{\Delta}^{\ast}_t={}&
+wh\frac{1}{1-\alpha}(-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)\\
 &-\frac{1}{1+\varphi}mrsh
-\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
+\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &-\frac{\beta\gamma s}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta-s)\Delta
-E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^*_{t+1})
+E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^{\ast}_{t+1})
 -\beta\Delta s\hat{s}_t-\beta\Delta\vartheta E_t\hat{\vartheta}_{t+1}.
 \end{aligned}
 $$
@@ -594,7 +594,7 @@ $$
 | 内生 | $\hat{mc}_t$ / `mct` | 边际成本 | (F3), (F4) |
 | 内生 | $\hat{x}^L_t$ / `xLt` | 劳动品真实价格 | (F4), (F5) |
 | 内生 | $\hat{w}_t$ / `wt` | 总量真实工资 | (F5), (F12) |
-| 内生 | $\hat{w}^*_t$ / `wstart` | 重设工资 | (F11)-(F17) |
+| 内生 | $\hat{w}^{\ast}_t$ / `wstart` | 重设工资 | (F11)-(F17) |
 | 内生 | $\hat{h}_t$ / `ht` | 每名工人工时 | (F5), (F25) |
 | 内生 | $\hat{y}_t$ / `yt` | 产出 | (F24), (F25), (F36) |
 | 内生 | $\hat{m}_t$ / `mt` | 匹配 | (F18), (F22) |
@@ -603,8 +603,8 @@ $$
 | 内生 | $\hat{\nu}_t$ / `vt` | 空缺 | (F18), (F20), (F24) |
 | 内生 | $\hat{q}_t$ / `qt` | 空缺填补概率 | (F20), (F15) |
 | 内生 | $\hat{s}_t$ / `st` | 找到工作概率 | (F21), (F17) |
-| 内生 | $\hat{J}^*_t$ / `Jstart` | 重设工资企业价值 | (F11), (F16) |
-| 内生 | $\hat{\Delta}^*_t$ / `Deltastart` | 重设工资工人剩余 | (F11), (F17) |
+| 内生 | $\hat{J}^{\ast}_t$ / `Jstart` | 重设工资企业价值 | (F11), (F16) |
+| 内生 | $\hat{\Delta}^{\ast}_t$ / `Deltastart` | 重设工资工人剩余 | (F11), (F17) |
 | 内生 | $\hat{\delta}^F_t$ / `deltaFt` | 企业工资导数辅助变量 | (F11), (F13) |
 | 内生 | $\hat{\delta}^W_t$ / `deltaWt` | 工人工资导数辅助变量 | (F11), (F14) |
 | 内生 | $\hat{y}^{flex}_t$ and flex variables | 灵活价格/灵活工资对应经济 | (F36) |

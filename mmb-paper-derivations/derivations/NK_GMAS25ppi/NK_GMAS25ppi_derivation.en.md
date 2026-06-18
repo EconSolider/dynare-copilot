@@ -154,22 +154,22 @@ $$
 $$
 C_t=C_t^i\mathcal{Q}_{i,t}^{1/\sigma}
 \quad\Rightarrow\quad
-c_t=c_t^*+\frac{1}{\sigma}q_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t.
 $$
 
 - **(F6) Risk-sharing relation in terms of the effective terms of trade**:
 $$
-c_t=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F7) Uncovered interest parity**:
 $$
-r_t-r_t^*=E_t\Delta e_{t+1}.
+r_t-r_t^{\ast}=E_t\Delta e_{t+1}.
 $$
 
 - **(F8) Terms-of-trade difference equation**:
 $$
-s_t=(r_t^*-E_t\pi_{t+1}^*)-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
+s_t=(r_t^{\ast}-E_t\pi_{t+1}^{\ast})-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
 $$
 
 - **(F9) Calvo optimal reset-price condition, log-linear form**:
@@ -190,12 +190,12 @@ $$
 - **(F11) Real marginal cost as a function of output, world output, and productivity**:
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
-+(\sigma-\sigma_\alpha)y_t^*-(1+\varphi)a_t.
++(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F12) Domestic natural output**:
 $$
-\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
 
 where:
@@ -228,7 +228,7 @@ $$
 - **(F16) Natural real interest rate**:
 $$
 \overline{rr}_t=\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
-+\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^*.
++\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F17) Dynamic IS equation in output-gap form**:
@@ -262,7 +262,7 @@ $$
 
 - **(F22) Nominal exchange-rate and terms-of-trade identity**:
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F23) Real exchange-rate relation**:
@@ -282,12 +282,12 @@ $$
 
 - **(F26) World resource condition**:
 $$
-y_t^*=c_t^*.
+y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F27) Terms of trade and relative output**:
 $$
-y_t=y_t^*+\frac{1}{\sigma_\alpha}s_t,
+y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 \qquad
 \sigma_\alpha=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
@@ -313,22 +313,22 @@ $$
 
 - **(F31) World output process used in calibration**:
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F32) Innovation correlation used in calibration**:
 $$
-\operatorname{corr}(\varepsilon_t^a,\varepsilon_t^*)=0.3.
+\operatorname{corr}(\varepsilon_t^a,\varepsilon_t^{\ast})=0.3.
 $$
 
-The calibrated example in the paper estimates $\rho_a\approx0.66$ and $\rho_{y^*}\approx0.86$ from Canadian productivity and U.S. GDP data. These empirical values are recorded as source context, not as runtime validation.
+The calibrated example in the paper estimates $\rho_a\approx0.66$ and $\rho_{y^{\ast}}\approx0.86$ from Canadian productivity and U.S. GDP data. These empirical values are recorded as source context, not as runtime validation.
 
 ## 6. Steady-State Solution
 
 The archive entry is a log-linear `model(linear)` representation. The deterministic symmetric steady state is normalized so that all logged deviations are zero:
 
 $$
-a=y^*=x=\pi_H=\pi=s=e=q=nx=0.
+a=y^{\ast}=x=\pi_H=\pi=s=e=q=nx=0.
 $$
 
 The symmetric steady state has PPP and unit terms of trade:
@@ -338,7 +338,7 @@ $$
 \qquad
 \mathcal{Q}=1,
 \qquad
-C=C^*=Y=Y^*.
+C=C^{\ast}=Y=Y^{\ast}.
 $$
 
 Domestic inflation, CPI inflation, and expected depreciation are zero in steady state:
@@ -379,8 +379,8 @@ This steady-state and optimal-policy discussion is source-extracted. No numerica
 
 ## 7. Timing & Form Conventions
 
-- **Timing**: the reduced model has no capital stock or other predetermined private stock. The state variables are exogenous $a_t$, $y_t^*$, and price-level/terms-of-trade objects when a level representation is retained.
-- **Information set**: expectations are $E_t$ conditional on period-$t$ information. Forward-looking terms include $E_t\pi_{H,t+1}$, $E_tx_{t+1}$, and $E_t\Delta y_{t+1}^*$.
+- **Timing**: the reduced model has no capital stock or other predetermined private stock. The state variables are exogenous $a_t$, $y_t^{\ast}$, and price-level/terms-of-trade objects when a level representation is retained.
+- **Information set**: expectations are $E_t$ conditional on period-$t$ information. Forward-looking terms include $E_t\pi_{H,t+1}$, $E_tx_{t+1}$, and $E_t\Delta y_{t+1}^{\ast}$.
 - **Inflation measure**: `NK_GMAS25ppi` uses producer-price/domestic inflation $\pi_{H,t}$ in the Taylor rule. CPI inflation is retained as an identity, $\pi_t=\pi_{H,t}+\alpha\Delta s_t$, but is not the policy feedback variable for this variant.
 - **Form**: log-linear `model(linear)` around a symmetric zero-inflation steady state. Lowercase variables denote logs or log deviations; $\widehat{mc}_t$ is real marginal cost relative to its steady-state value $-\mu$.
 - **No raw PDF body review**: the raw PDF path was checked for existence and hashed; the body was not opened because the Markdown source was sufficient for this first-pass extraction.
@@ -413,9 +413,9 @@ This steady-state and optimal-policy discussion is source-extracted. No numerica
 | Symbol | Meaning | Process |
 |---|---|---|
 | $a_t$ | domestic technology | (F30) |
-| $y_t^*$ | world output | (F31) |
+| $y_t^{\ast}$ | world output | (F31) |
 | $\varepsilon_t^a$ | domestic technology innovation | (F30) |
-| $\varepsilon_t^*$ | world-output innovation | (F31) |
+| $\varepsilon_t^{\ast}$ | world-output innovation | (F31) |
 
 ### Parameters
 
@@ -433,7 +433,7 @@ This steady-state and optimal-policy discussion is source-extracted. No numerica
 | $\kappa_\alpha$ | open-economy Phillips-curve output-gap slope |
 | $\rho$ | steady-state real-rate term, $\beta^{-1}-1$ |
 | $\rho_a$ | domestic technology persistence |
-| $\rho_{y^*}$ | world-output persistence |
+| $\rho_{y^{\ast}}$ | world-output persistence |
 | $\phi_\pi$ | domestic-inflation Taylor-rule coefficient |
 | $\tau$ | employment subsidy |
 | $\mu$ | log desired markup, $\log(\epsilon/(\epsilon-1))$ |

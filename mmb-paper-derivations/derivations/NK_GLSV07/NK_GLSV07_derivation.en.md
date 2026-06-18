@@ -72,10 +72,10 @@ $$
 Y_t(j)=K_t(j)^{\alpha}N_t(j)^{1-\alpha}.
 $$
 
-A price-resetting firm chooses $P_t^*$ to maximize expected discounted profits subject to demand under Calvo non-adjustment probability $\theta$:
+A price-resetting firm chooses $P_t^{\ast}$ to maximize expected discounted profits subject to demand under Calvo non-adjustment probability $\theta$:
 
 $$
-\max_{P_t^*} E_t\sum_{k=0}^{\infty}\theta^k \Lambda_{t,t+k}Y_{t+k}(j)\left(\frac{P_t^*}{P_{t+k}}-MC_{t+k}\right).
+\max_{P_t^{\ast}} E_t\sum_{k=0}^{\infty}\theta^k \Lambda_{t,t+k}Y_{t+k}(j)\left(\frac{P_t^{\ast}}{P_{t+k}}-MC_{t+k}\right).
 $$
 
 ### 2.4 Monetary and Fiscal Authorities

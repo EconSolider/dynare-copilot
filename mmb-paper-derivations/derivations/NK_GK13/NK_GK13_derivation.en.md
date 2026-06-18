@@ -256,7 +256,7 @@ $$
 $$
 \sum_{i=0}^{\infty}\gamma^i\Lambda_{t,t+i}
 \left[
-\frac{P_t^*}{P_{t+i}}-\mu P_{m,t+i}
+\frac{P_t^{\ast}}{P_{t+i}}-\mu P_{m,t+i}
 \right]Y_{f,t+i}=0,
 \qquad
 \mu=\frac{1}{1-1/\varepsilon}.
@@ -264,7 +264,7 @@ $$
 
 - **(F30) Price-index evolution**:
 $$
-P_t=\left[(1-\gamma)(P_t^*)^{1-\varepsilon}
+P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma(P_{t-1})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
 $$
 
@@ -279,7 +279,7 @@ $$
 
 - **(F32) Taylor rule**:
 $$
-i_t=i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^*)+\epsilon_t.
+i_t=i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})+\epsilon_t.
 $$
 
 - **(F33) Fisher relation**:
@@ -425,7 +425,7 @@ The paper calibrates a quarterly steady state and then studies linearized dynami
 | Endogenous | $I_t$ / `I` | Investment | (F26), (F27), (F36) |
 | Endogenous | $Z_t$ / `Z` | Profit flow per unit of capital | (F25) |
 | Endogenous | $P_{mt}$ / `Pm` | Relative price of intermediate goods / inverse markup | (F24), (F25), (F29) |
-| Endogenous | $P_t^*$ / `inflstar` | Calvo reset price/inflation object | (F29), (F30) |
+| Endogenous | $P_t^{\ast}$ / `inflstar` | Calvo reset price/inflation object | (F29), (F30) |
 | Endogenous | $\pi_t,i_t$ / `infl`, `ir` | Inflation and nominal interest rate | (F32), (F33) |
 | Exogenous | $A_t$ / `a` | TFP | (F42) |
 | Exogenous | $\xi_t$ / `ksi` | Capital-quality disturbance | (F43) |

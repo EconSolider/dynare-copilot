@@ -218,7 +218,7 @@ $$
 - **(F20) 最优重置价格**（\(mc\)、时间下标和贴现因子附近 OCR `needs_review`）：
 
 $$
-P_t^*=\left(\frac{\varepsilon}{\varepsilon-1}\right)
+P_t^{\ast}=\left(\frac{\varepsilon}{\varepsilon-1}\right)
 \frac{
 E_t\sum_{i=0}^{\infty}\nu^i\Delta_{i,t+i}mc_{t+i}Y_{t+i}
 \left(\frac{1}{P_{t+i}}\right)^{-\varepsilon}
@@ -231,7 +231,7 @@ $$
 - **(F21) Calvo 调价下的总价格指数**：
 
 $$
-P_t=\left[\nu P_{t-1}^{1-\varepsilon}+(1-\nu)(P_t^*)^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
+P_t=\left[\nu P_{t-1}^{1-\varepsilon}+(1-\nu)(P_t^{\ast})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -261,7 +261,7 @@ $$
 - **(F25) 价格分散运动方程**（`needs_review`：Markdown 在 \(\Gamma_t\) 的积分定义中遗漏了价格比）：
 
 $$
-\Gamma_t=(1-\nu)\left(\frac{P_t^*}{P_t}\right)^{-\varepsilon}
+\Gamma_t=(1-\nu)\left(\frac{P_t^{\ast}}{P_t}\right)^{-\varepsilon}
 +\nu \pi_t^\varepsilon \Gamma_{t-1}.
 $$
 
@@ -417,7 +417,7 @@ $$
 | 内生 | \(\tau_t\) / `taut` | 宏观审慎乘子 | (F30), (F31) |
 | 内生 | \(cg_t\) / `cgn`, `cg` | 名义信贷增长 | (F27), (F28), (F31) |
 | 内生 | \(Y_t\) / `yt` | 最终产出 | (F17), (F22), (F24) |
-| 内生 | \(P_t,P_t^*,\pi_t\) / `pit`, `pstart` | 总价格、重置价格、通胀 | (F18), (F20), (F21), (F25) |
+| 内生 | \(P_t,P_t^{\ast},\pi_t\) / `pit`, `pstart` | 总价格、重置价格、通胀 | (F18), (F20), (F21), (F25) |
 | 内生 | \(mc_t\) / `mct` | 实际边际成本 | (F20), 加成/回报方程 |
 | 内生 | \(\Gamma_t\) / 论文符号与实现中的 `llt` 不完全一致 | 价格分散 | (F25) |
 | 外生 | \(e_t\) / `pref` | 偏好冲击 | (F33) |

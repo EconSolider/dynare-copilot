@@ -79,7 +79,7 @@ $$\pi_t^{(4)} = p_t - p_{t-4}.$$
 
 **(F10) Taylor 型短期名义利率规则**
 
-$$i_t^s = r^* + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^*\right) + \alpha_q q_t.$$
+$$i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.$$
 
 **(F11) 由预期假说给出的长期名义利率**
 
@@ -91,11 +91,11 @@ $$r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
 
 **(F13) 确定性稳态实际利率关系**
 
-$$r^* = -\frac{\delta_0}{\delta_3}.$$
+$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 **(F14) 政策目标决定稳态通胀**
 
-$$\pi = \pi^*.$$
+$$\pi = \pi^{\ast}.$$
 
 `needs_review`：Rep-MMB 实现使用带平滑的 Gerdesmeier-Roffia 型 `interest` 规则，即 `interest = (0.87^3) interest_{t-1} + (1-0.87^3)1.93 inflation + (1-0.87^3)0.28 outputgap + interest_`。这相对于论文 Table 4 的 Taylor 规则似乎是实现层面的设定。
 
@@ -127,11 +127,11 @@ $$q = 0.$$
 
 **(F19) 长期实际利率稳态**
 
-$$r^l = r^* = -\frac{\delta_0}{\delta_3}.$$
+$$r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 **(F20) 通胀稳态**
 
-$$\pi = \pi^*.$$
+$$\pi = \pi^{\ast}.$$
 
 **(F21) 冲击稳态**
 
@@ -181,8 +181,8 @@ $$\varepsilon_x = \varepsilon_d = \varepsilon_i = 0.$$
 | $\sigma_{\varepsilon_x}$ / `sigma_e_cw` | 合约冲击尺度 | paper Table 2；Rep-MMB 归一化为 `1.00` 并在 `shocks` 中放方差 |
 | $\delta_0,\delta_1,\delta_2,\delta_3$ / `delta0`-`delta3` | 总需求参数 | (F8)；Rep-MMB 值使用欧元区德国利率行 |
 | $\sigma_{\varepsilon_d}$ / `sigma_e_d` | 需求冲击尺度 | (F8) |
-| $r^*$ | 均衡长期实际利率 | (F13), (F19) |
-| $\pi^*$ | 通胀目标 | (F10), (F14), (F20) |
+| $r^{\ast}$ | 均衡长期实际利率 | (F13), (F19) |
+| $\pi^{\ast}$ | 通胀目标 | (F10), (F14), (F20) |
 | $\alpha_{\pi},\alpha_q$ | 政策响应系数 | paper Table 4 policy rule |
 | policy smoothing coefficients | 实现中的政策规则系数 | implementation_cross_check |
 

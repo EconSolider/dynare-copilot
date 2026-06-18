@@ -122,7 +122,7 @@ $$
 - **(F8) Constant-rate potential output**:
 
 $$
-\hat{Y}_t^* =
+\hat{Y}_t^{\ast} =
 \frac{(1+\eta)\hat{A}_t-\sigma\hat{\gamma}_t+\hat{\xi}_t}
 {\sigma+\eta}.
 $$
@@ -130,7 +130,7 @@ $$
 - **(F9) Output gap definition**:
 
 $$
-x_t \equiv \hat{Y}_t-\hat{Y}_t^*.
+x_t \equiv \hat{Y}_t-\hat{Y}_t^{\ast}.
 $$
 
 - **(F10) Welfare gap relation**:
@@ -138,7 +138,7 @@ $$
 $$
 \hat{Y}_t-\hat{Y}_t^e =
 x_t-\frac{1}{\sigma+\eta}\hat{\gamma}_t,
-\qquad \text{when } z^*=0.
+\qquad \text{when } z^{\ast}=0.
 $$
 
 ## 4. Market Clearing & Identities
@@ -270,11 +270,11 @@ $$
 \right]^{1/(\sigma+\eta)}
 $$
 
-when productivity and taste shocks are at their normalized steady values. For the welfare analysis, the source sets average efficiency distortions to zero through subsidies so that $z^*=0$ and the welfare gap is represented by (F10). `needs_review`: the paper references an appendix for the second-order welfare derivation; no local appendix normalization file exists for `NK_RW06`.
+when productivity and taste shocks are at their normalized steady values. For the welfare analysis, the source sets average efficiency distortions to zero through subsidies so that $z^{\ast}=0$ and the welfare gap is represented by (F10). `needs_review`: the paper references an appendix for the second-order welfare derivation; no local appendix normalization file exists for `NK_RW06`.
 
 ## 7. Timing & Form Conventions
 
-- The archive entry is linear/log-linear; hatted variables are deviations around steady state, while `x_t` is the output gap relative to $\hat{Y}_t^*$.
+- The archive entry is linear/log-linear; hatted variables are deviations around steady state, while `x_t` is the output gap relative to $\hat{Y}_t^{\ast}$.
 - The nominal rate in the Phillips curve is a current-period policy rate deviation, $\hat{R}_t$.
 - Inflation is forward-looking through $E_t\pi_{t+1}$.
 - The IS equation uses $E_t x_{t+1}$ and $E_t\pi_{t+1}$; the composite shock `u_t` summarizes productivity, taste, and fiscal innovations as in (F21).
@@ -291,7 +291,7 @@ when productivity and taste shocks are at their normalized steady values. For th
 | Exogenous | $u_t$ / `u` | Composite demand disturbance | (F21); implemented as one exogenous shock in MMB |
 | Auxiliary/source concept | $\hat{Y}_t^f$ | Flexible-price output | (F6) |
 | Auxiliary/source concept | $\hat{Y}_t^e$ | Efficient output | (F7) |
-| Auxiliary/source concept | $\hat{Y}_t^*$ | Constant-rate potential output | (F8) |
+| Auxiliary/source concept | $\hat{Y}_t^{\ast}$ | Constant-rate potential output | (F8) |
 | Auxiliary/source concept | $\hat{A}_t$ | Productivity shock | (F21), (F22) |
 | Auxiliary/source concept | $\hat{\xi}_t$ | Taste/preference shock | (F21) |
 | Auxiliary/source concept | $\hat{\gamma}_t$ | Consumption/output share, inverse fiscal-demand share | (F14), (F21), (F23) |

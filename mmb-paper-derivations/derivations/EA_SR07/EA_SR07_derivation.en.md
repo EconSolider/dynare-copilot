@@ -108,7 +108,7 @@ $$
 \Phi(a_t,\tilde\phi_t)=
 \exp\left[-\tilde\phi_a(a_t-\bar a)+\tilde\phi_t\right],
 \qquad
-a_t\equiv \frac{S_tB_t^*}{P_tz_t}.
+a_t\equiv \frac{S_tB_t^{\ast}}{P_tz_t}.
 $$
 
 ### Wage Setting
@@ -233,7 +233,7 @@ needs_review: the source OCR around the inflation-target term is imperfect; comp
 
 **(F18) UIP condition with debt-elastic premium**
 $$
-E_t\Delta \hat S_{t+1}-(\hat R_t-\hat R_t^*)-\phi_a\hat a_t+\tilde\phi_t=0 .
+E_t\Delta \hat S_{t+1}-(\hat R_t-\hat R_t^{\ast})-\phi_a\hat a_t+\tilde\phi_t=0 .
 $$
 
 needs_review: the paper states the premium and describes the arbitrage condition but does not print the UIP equation in Section 2; this expression follows the implementation cross-check B10.
@@ -242,9 +242,9 @@ needs_review: the paper states the premium and describes the arbitrage condition
 
 **(F19) Export demand**
 $$
-C_t^x=\left(\frac{P_t^x}{P_t^*}\right)^{-\eta_f}C_t^*,
+C_t^x=\left(\frac{P_t^x}{P_t^{\ast}}\right)^{-\eta_f}C_t^{\ast},
 \qquad
-I_t^x=\left(\frac{P_t^x}{P_t^*}\right)^{-\eta_f}I_t^* .
+I_t^x=\left(\frac{P_t^x}{P_t^{\ast}}\right)^{-\eta_f}I_t^{\ast} .
 $$
 
 **(F20) Relative import/export prices, log-linear implementation form**
@@ -253,7 +253,7 @@ $$
 \quad
 \hat\gamma_{mid,t}=\hat\gamma_{mid,t-1}+\hat\pi_t^{mi}-\hat\pi_t^d,
 \quad
-\hat\gamma_{x*,t}=\hat\gamma_{x*,t-1}+\hat\pi_t^x-\hat\pi_t^* .
+\hat\gamma_{x\ast,t}=\hat\gamma_{x\ast,t-1}+\hat\pi_t^x-\hat\pi_t^{\ast} .
 $$
 
 **(F21) Real exchange rate and export marginal cost identities**
@@ -261,7 +261,7 @@ $$
 \widehat{mc}_{x,t}=\widehat{mc}_{x,t-1}+\hat\pi_t^d-\hat\pi_t^x-\Delta\hat S_t,
 \qquad
 \hat x_t=-\omega_c\gamma_{cmc}^{-(1-\eta_c)}\hat\gamma_{mcd,t}
--\hat\gamma_{x*,t}-\widehat{mc}_{x,t}.
+-\hat\gamma_{x\ast,t}-\widehat{mc}_{x,t}.
 $$
 
 **(F22) CPI inflation**
@@ -282,7 +282,7 @@ $$
 &(1-\omega_c)\gamma_{cd}^{\eta_c}\frac{c}{\bar y}(\hat c_t+\eta_c\hat\gamma_{cd,t})
 +(1-\omega_i)\gamma_{id}^{\eta_i}\frac{i}{\bar y}(\hat i_t+\eta_i\hat\gamma_{id,t})
 +g_r\hat g_t \\
-&\quad+\frac{y^*}{\bar y}(\hat y_t^*-\eta_f\hat\gamma_{x*,t}+\tilde z_t^*)
+&\quad+\frac{y^{\ast}}{\bar y}(\hat y_t^{\ast}-\eta_f\hat\gamma_{x\ast,t}+\tilde z_t^{\ast})
 =\lambda_d\left[\epsilon_t+\alpha(\hat k_t-\hat\mu_{z,t})+(1-\alpha)\hat H_t\right]
 -\frac{(1-\tau_k)r_k\bar k}{\bar y\mu_z}(\hat k_t-\hat{\bar k}_{t-1}) .
 \end{aligned}
@@ -303,7 +303,7 @@ $$
 where
 $$
 \varsigma_t\in\{\mu_{z,t},\epsilon_t,\lambda_t^j,\zeta_t^c,\zeta_t^h,\gamma_t,
-\tilde\phi_t,\varepsilon_{R,t},\hat{\bar\pi}_t^c,\hat z_t^*\},
+\tilde\phi_t,\varepsilon_{R,t},\hat{\bar\pi}_t^c,\hat z_t^{\ast}\},
 \qquad j\in\{d,mc,mi,x\}.
 $$
 
@@ -318,10 +318,10 @@ needs_review: the paper states that fiscal variables follow an identified two-la
 
 **(F27) Foreign VAR block**
 $$
-\hat f_t^*=A_{*,1}\hat f_{t-1}^*+A_{*,2}\hat f_{t-2}^*
-+A_{*,3}\hat f_{t-3}^*+A_{*,4}\hat f_{t-4}^*+B_*\varepsilon_{*,t},
+\hat f_t^{\ast}=A_{\ast,1}\hat f_{t-1}^{\ast}+A_{\ast,2}\hat f_{t-2}^{\ast}
++A_{\ast,3}\hat f_{t-3}^{\ast}+A_{\ast,4}\hat f_{t-4}^{\ast}+B_\ast\varepsilon_{\ast,t},
 \qquad
-\hat f_t^*=(\hat\pi_t^*,\hat y_t^*,\hat R_t^*)' .
+\hat f_t^{\ast}=(\hat\pi_t^{\ast},\hat y_t^{\ast},\hat R_t^{\ast})' .
 $$
 
 needs_review: the paper states that foreign prices, output, and interest rate are exogenous and follow an identified four-lag VAR.

@@ -166,13 +166,13 @@ $$
 - **(F11) 来自风险分担和需求聚合的贸易条件/产出关系**：
 
 $$
-s_t=\sigma_{\alpha}(y_t-y_t^*).
+s_t=\sigma_{\alpha}(y_t-y_t^{\ast}).
 $$
 
 - **(F12) 自然产出**：
 
 $$
-y_t^n=\Gamma_a a_t-\alpha\Gamma_{y^*}y_t^*.
+y_t^n=\Gamma_a a_t-\alpha\Gamma_{y^{\ast}}y_t^{\ast}.
 $$
 
 - **(F13) 产出缺口定义**：
@@ -200,8 +200,8 @@ $$
 $$
 \begin{aligned}
 rr_t^n={}&\rho+\left[\sigma_{\alpha}\rho_a+\Psi-\Gamma_0\right]\Gamma_a a_t \\
-&+\left[\left(\sigma_{\alpha}\rho_{y^*}+\Psi-\Gamma_0\right)\Gamma_{y^*}
-+\Theta\sigma_{\alpha}(\rho_{y^*}-1)\right]\alpha y_t^*.
+&+\left[\left(\sigma_{\alpha}\rho_{y^{\ast}}+\Psi-\Gamma_0\right)\Gamma_{y^{\ast}}
++\Theta\sigma_{\alpha}(\rho_{y^{\ast}}-1)\right]\alpha y_t^{\ast}.
 \end{aligned}
 $$
 
@@ -216,7 +216,7 @@ $$
 - **(F18) 外国需求**：
 
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^{y^*}.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{y^{\ast}}.
 $$
 
 - **(F19) 股票价格缺口扰动**：
@@ -237,7 +237,7 @@ $$
 
 $$
 \bar e=0,\quad \bar s=0,\quad \bar \pi_H=0,\quad \bar \pi=0,\quad
-\bar x=0,\quad \bar{\widehat q}=0,\quad \bar a=0,\quad \bar y^*=0,\quad
+\bar x=0,\quad \bar{\widehat q}=0,\quad \bar a=0,\quad \bar y^{\ast}=0,\quad
 \bar \eta=0,\quad \bar \mu^p=0.
 $$
 
@@ -264,7 +264,7 @@ $$
 ## 7. Timing & Form Conventions
 
 - 本档案条目对应 `model(linear)` 表示。
-- $x_t$、$\widehat q_t$、$r_t$、$rr_t^n$、$\pi_{H,t}$、$s_t$、$e_t$、$y_t$、$y_t^n$、$a_t$、$y_t^*$ 和 $\eta_t$ 是相对稳态的对数或百分比偏离。
+- $x_t$、$\widehat q_t$、$r_t$、$rr_t^n$、$\pi_{H,t}$、$s_t$、$e_t$、$y_t$、$y_t^n$、$a_t$、$y_t^{\ast}$ 和 $\eta_t$ 是相对稳态的对数或百分比偏离。
 - 股票价格缺口为 $\widehat q_t=q_t-q_t^n$，自然股票价格满足 $q_t^n=y_t^n$。
 - Phillips 曲线包含生产者价格通胀的一个前瞻项和一个滞后项。
 - 动态 IS 方程和股票价格缺口方程是前瞻的。
@@ -286,10 +286,10 @@ $$
 | 内生 | `y`, $y_t$ | 本国产出 | (F13) |
 | 内生 | `y_n`, $y_t^n$ | 自然产出 | (F12) |
 | 内生 | `a`, $a_t$ | 生产率状态 | (F17) |
-| 内生 | `y_stern`, $y_t^*$ | 外国需求/产出 | (F18) |
+| 内生 | `y_stern`, $y_t^{\ast}$ | 外国需求/产出 | (F18) |
 | 内生 | `shock_eta`, $\eta_t$ | 股票价格缺口状态 | (F19) |
 | 外生 | `epsa`, $\varepsilon_t^a$ | 生产率创新 | (F17) |
-| 外生 | `epsy`, $\varepsilon_t^{y^*}$ | 外国需求创新 | (F18) |
+| 外生 | `epsy`, $\varepsilon_t^{y^{\ast}}$ | 外国需求创新 | (F18) |
 | 外生 | `epseta`, $\varepsilon_t^{\eta}$ | 股票价格缺口创新 | (F19) |
 | 外生 | `mu_p`, $\varepsilon_t^{\mu}$ | 成本推动创新 | (F9), (F20) |
 | 参数 | $\gamma$ | 死亡概率 / 财富效应参数 | (F5)-(F8) |
@@ -299,9 +299,9 @@ $$
 | 参数 | $\beta$, $\tilde\beta$ | 家庭贴现因子 / 稳态贴现因子 | (F2), (F8), (F9) |
 | 参数 | $\epsilon$ | 股票收益风险溢价协方差 | (F8) |
 | 参数 | $\Psi$ | 财富效应系数 | (F7), (F16) |
-| 参数 | $\Gamma_0,\Gamma_a,\Gamma_{y^*},\Theta$ | 小开放经济复合系数 | (F7), (F12), (F16) |
+| 参数 | $\Gamma_0,\Gamma_a,\Gamma_{y^{\ast}},\Theta$ | 小开放经济复合系数 | (F7), (F12), (F16) |
 | 参数 | $\lambda_q,\kappa_{\alpha},\phi$ | 股票价格和 Phillips 曲线斜率 | (F8), (F9) |
 | 参数 | $\phi_{\pi},\phi_x$ | 利率反应系数 | (F10) |
-| 参数 | $\rho_a,\rho_{y^*},\rho_{\eta}$ | 冲击持续性参数 | (F16)-(F19) |
+| 参数 | $\rho_a,\rho_{y^{\ast}},\rho_{\eta}$ | 冲击持续性参数 | (F16)-(F19) |
 
 方程数：20 个编号条件，(F1)-(F20)。运行验证：未执行。

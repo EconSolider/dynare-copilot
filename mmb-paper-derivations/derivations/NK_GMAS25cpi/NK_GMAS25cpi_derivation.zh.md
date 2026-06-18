@@ -100,14 +100,14 @@ $$
 - **(F4) 完全市场下的国际风险分担**：
 
 $$
-c_t=c_t^*+\frac{1}{\sigma}q_t
-=c_t^*+\frac{1-\alpha}{\sigma}s_t.
+c_t=c_t^{\ast}+\frac{1}{\sigma}q_t
+=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F5) 无抛补利率平价 / 贸易条件运动方程**：
 
 $$
-s_t=(r_t^*-E_t\{\pi_{t+1}^*\})
+s_t=(r_t^{\ast}-E_t\{\pi_{t+1}^{\ast}\})
 -(r_t-E_t\{\pi_{H,t+1}\})+E_t\{s_{t+1}\}.
 $$
 
@@ -121,13 +121,13 @@ $$
 
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
-+(\sigma-\sigma_\alpha)y_t^*-(1+\varphi)a_t.
++(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F8) 国内自然产出**：
 
 $$
-\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^*,
+\overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
 
 其中
@@ -164,7 +164,7 @@ $$
 $$
 \overline{rr}_t
 =\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
-+\alpha\sigma_\alpha(\Theta+\Psi)E_t\{\Delta y_{t+1}^*\}.
++\alpha\sigma_\alpha(\Theta+\Psi)E_t\{\Delta y_{t+1}^{\ast}\}.
 $$
 
 - **(F13) `NK_GMAS25cpi` 的 CPI 通胀泰勒规则**：
@@ -190,7 +190,7 @@ $$
 - **(F16) 有效贸易条件与名义汇率**：
 
 $$
-s_t=e_t+p_t^*-p_{H,t}.
+s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F17) 有效实际汇率**：
@@ -210,7 +210,7 @@ $$
 - **(F19) 产出与贸易条件**：
 
 $$
-y_t=y_t^*+\frac{1}{\sigma_\alpha}s_t,\qquad
+y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,\qquad
 \sigma_\alpha=\frac{\sigma}{(1-\alpha)+\alpha\omega}.
 $$
 
@@ -237,7 +237,7 @@ $$
 - **(F23) 世界产出过程**：
 
 $$
-y_t^*=\rho_{y^*}y_{t-1}^*+\varepsilon_t^*.
+y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 数值部分使用加拿大季度劳动生产率和美国 GDP 数据估计两个 AR(1) 过程，并允许两个创新存在正的同期相关。本条目不把论文报告的创新标准差作为结构推导要求。
@@ -247,8 +247,8 @@ $$
 由于可操作系统是对数线性的，所有平稳小写变量都是围绕对称完全预见稳态的偏离。
 
 - 设定零通胀稳态：$\pi_H=\pi=0$。
-- 设定 PPP/相对价格归一化：$s=q=e=0$ 且 $p=p_H=p_F=p^*$。
-- 设定外生偏离：$a=0$ 且 $y^*=0$。
+- 设定 PPP/相对价格归一化：$s=q=e=0$ 且 $p=p_H=p_F=p^{\ast}$。
+- 设定外生偏离：$a=0$ 且 $y^{\ast}=0$。
 - 设定产出处在自然水平：$x=0$ 且 $y=\overline{y}$。
 - 在论文的对数线性记号中，稳态实际利率常数为：$r=\rho=\beta^{-1}-1$。
 - 在福利分析的特殊情形 $\sigma=\eta=\gamma=1$ 下，来源报告 $\omega=1$ 且平衡贸易条件 $nx_t=0$。
@@ -284,9 +284,9 @@ $$
 | 内生变量 | $\overline{rr}_t$ / `rrbar` | 自然实际利率 | (F11), (F12) |
 | 可选内生变量 | $nx_t$ / `nx` | 净出口占比 | (F21) |
 | 外生变量 | $a_t$ / `a` | 国内生产率 | (F22) |
-| 外生变量 | $y_t^*$ / `ystar` | 世界产出 | (F23) |
+| 外生变量 | $y_t^{\ast}$ / `ystar` | 世界产出 | (F23) |
 | 冲击 | $\varepsilon_t^a$ / `eps_a` | 国内生产率创新 | (F22) |
-| 冲击 | $\varepsilon_t^*$ / `eps_ystar` | 世界产出创新 | (F23) |
+| 冲击 | $\varepsilon_t^{\ast}$ / `eps_ystar` | 世界产出创新 | (F23) |
 | 参数 | $\beta$ / `beta` | 贴现因子 | (F2), (F10) |
 | 参数 | $\sigma$ / `sigma` | 跨期替代弹性倒数 / 风险厌恶 | (F1), (F3), (F4) |
 | 参数 | $\varphi$ / `phi_n` | Frisch 弹性倒数 | (F1), (F7), (F10) |
@@ -299,7 +299,7 @@ $$
 | 参数 | $\kappa_\alpha$ / `kappa_alpha` | 开放经济 Phillips 曲线斜率 | (F10) |
 | 参数 | $\phi_\pi$ / `phi_pi` | 泰勒规则中的 CPI 通胀反应 | (F13) |
 | 参数 | $\rho_a$ / `rho_a` | 国内生产率持续性 | (F22) |
-| 参数 | $\rho_{y^*}$ / `rho_ystar` | 世界产出持续性 | (F23) |
+| 参数 | $\rho_{y^{\ast}}$ / `rho_ystar` | 世界产出持续性 | (F23) |
 | 参数 | $\nu,\mu,\tau$ / `nu`, `mu`, `tau` | 补贴与加成项 | (F6), 第6节 |
 
 一稿方程标签从 (F1) 到 (F23) 连续。由于 $\Omega$、$\Theta$ 和 OCR 渲染的附录公式中的部分系数定义需要在晋升前对照 PDF 检查，本条目保持 `needs_review`。

@@ -61,7 +61,7 @@ $$
 y_{j,t}=l^d_{j,t}.
 $$
 
-A firm that can reset price chooses $P^*_t$ to maximize discounted expected profits under Calvo price rigidity $\omega$ and price indexation $\xi_p$:
+A firm that can reset price chooses $P^{\ast}_t$ to maximize discounted expected profits under Calvo price rigidity $\omega$ and price indexation $\xi_p$:
 
 $$
 \max_{P_{j,t}}E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
@@ -83,7 +83,7 @@ Given an hourly wage, the firm chooses hours under right-to-manage. Wage resette
 
 $$
 \arg\max_{W_{i,t}}\left[\Delta_t(W_{i,t})\right]^{\eta_t}
-\left[J_t(W_{i,t})\right]^{1-\eta_t}\Rightarrow W_t^* .
+\left[J_t(W_{i,t})\right]^{1-\eta_t}\Rightarrow W_t^{\ast} .
 $$
 
 Vacancy posting is governed by free entry, so the real cost of a vacancy equals the discounted expected value of a filled job.
@@ -114,7 +114,7 @@ $$
 $$
 E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
 \left[
-\frac{P_t^*\left(\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{1-\xi_p}\right)^s}{P_{t+s}}
+\frac{P_t^{\ast}\left(\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{1-\xi_p}\right)^s}{P_{t+s}}
 -\frac{\varepsilon}{\varepsilon-1}mc_{t+s}
 \right]y_{j,t+s}=0.
 $$
@@ -160,7 +160,7 @@ V_t^E(W_{i,t})={}&\frac{W_{i,t}}{P_t}h_{i,t}
 -\kappa^L\frac{h_{i,t}^{1+\varphi}}{(1+\varphi)\lambda_t}\\
 &+E_t\{\beta_{t,t+1}(1-\vartheta_{t+1})
 [\gamma V_{t+1}^E(W_{i,t}\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)V_{t+1}^E(W^*_{t+1})]\}\\
++(1-\gamma)V_{t+1}^E(W^{\ast}_{t+1})]\}\\
 &+E_t\{\beta_{t,t+1}\vartheta_{t+1}U_{t+1}\}.
 \end{aligned}
 $$
@@ -171,7 +171,7 @@ $$
 \begin{aligned}
 U_t={}&b+E_t\{\beta_{t,t+1}s_t[
 \gamma V_{t+1}^E(W_t\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)V_{t+1}^E(W^*_{t+1})]\}\\
++(1-\gamma)V_{t+1}^E(W^{\ast}_{t+1})]\}\\
 &+E_t\{\beta_{t,t+1}(1-s_t)U_{t+1}\}.
 \end{aligned}
 $$
@@ -190,7 +190,7 @@ $$
 J_t(W_{i,t})=\Psi^L_t(W_{i,t})
 +E_t\{\beta_{t,t+1}(1-\vartheta_{t+1})
 [\gamma J_{t+1}(W_{i,t}\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
++(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 **(F10) Period profit of a labor-good firm**
@@ -203,15 +203,15 @@ $$
 **(F11) Nash wage reset condition**
 
 $$
-\eta_t J_t(W_t^*)\,\frac{\partial \Delta_t(W_t^*)}{\partial W_t}
-+(1-\eta_t)\Delta_t(W_t^*)\,\frac{\partial J_t(W_t^*)}{\partial W_t}=0.
+\eta_t J_t(W_t^{\ast})\,\frac{\partial \Delta_t(W_t^{\ast})}{\partial W_t}
++(1-\eta_t)\Delta_t(W_t^{\ast})\,\frac{\partial J_t(W_t^{\ast})}{\partial W_t}=0.
 $$
 
 Linearized implementation form:
 
 $$
-\hat{J}^*_t+\hat{\delta}^W_t
-=\hat{\Delta}^*_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t .
+\hat{J}^{\ast}_t+\hat{\delta}^W_t
+=\hat{\Delta}^{\ast}_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t .
 $$
 
 The derivative notation and the linearized equation are `needs_review` against the Appendix OCR.
@@ -220,7 +220,7 @@ The derivative notation and the linearized equation are `needs_review` against t
 
 $$
 \hat{w}_t=\gamma(\hat{w}_{t-1}-\hat{\Pi}_t+\xi_w\hat{\Pi}_{t-1})
-+(1-\gamma)\hat{w}^*_t.
++(1-\gamma)\hat{w}^{\ast}_t.
 $$
 
 **(F13) Firm wage-derivative auxiliary**
@@ -228,11 +228,11 @@ $$
 $$
 \begin{aligned}
 \hat{\delta}^F_t={}&[1-\beta(1-\vartheta)\gamma]
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\beta(1-\vartheta)\gamma E_t\left\{
--\frac{\alpha}{1-\alpha}(\hat{w}^*_t-\hat{\Pi}_{t+1}
-+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1})
+-\frac{\alpha}{1-\alpha}(\hat{w}^{\ast}_t-\hat{\Pi}_{t+1}
++\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1})
 +\hat{\delta}^F_{t+1}
 +\hat{\lambda}_{t+1}-\hat{\lambda}_t
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}
@@ -246,15 +246,15 @@ $$
 \begin{aligned}
 \delta^W\hat{\delta}^W_t={}&
 -\frac{\alpha}{1-\alpha}wh
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\frac{1}{1-\alpha}mrsh
-\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^*_t-\hat{\lambda}_t
+\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^{\ast}_t-\hat{\lambda}_t
 +\frac{1+\varphi}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\left(\frac{\alpha}{1-\alpha}\right)^2wh
 -\frac{1+\varphi}{(1-\alpha)^2}mrsh\right]
-E_t(\hat{w}^*_t-\hat{\Pi}_{t+1}+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1})\\
+E_t(\hat{w}^{\ast}_t-\hat{\Pi}_{t+1}+\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1})\\
 &+\beta(1-\vartheta)\gamma\delta^W
 E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\delta}^W_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}).
@@ -268,7 +268,7 @@ This OCR-derived appendix equation is `needs_review`.
 $$
 \kappa_t=q_tE_t\{\beta_{t,t+1}[
 \gamma J_{t+1}(W_t\Pi_t^{\xi_w}\Pi^{1-\xi_w})
-+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
++(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 Linearized form:
@@ -276,19 +276,19 @@ Linearized form:
 $$
 \frac{\kappa}{q}(\hat{\kappa}_t-\hat{q}_t)
 =\frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)
-+\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}).
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)
++\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}).
 $$
 
 **(F16) Value of reset-wage firm**
 
 $$
 \begin{aligned}
-J\hat{J}^*_t={}&\frac{wh}{\alpha}(-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)\\
+J\hat{J}^{\ast}_t={}&\frac{wh}{\alpha}(-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta)J
-E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}
+E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}).
 \end{aligned}
 $$
@@ -299,18 +299,18 @@ This Appendix OCR equation is `needs_review`.
 
 $$
 \begin{aligned}
-\Delta\hat{\Delta}^*_t={}&
-wh\frac{1}{1-\alpha}(-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)\\
+\Delta\hat{\Delta}^{\ast}_t={}&
+wh\frac{1}{1-\alpha}(-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)\\
 &-\frac{1}{1+\varphi}mrsh
-\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
+\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &-\frac{\beta\gamma s}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta-s)\Delta
-E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^*_{t+1})
+E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^{\ast}_{t+1})
 -\beta\Delta s\hat{s}_t-\beta\Delta\vartheta E_t\hat{\vartheta}_{t+1}.
 \end{aligned}
 $$
@@ -594,7 +594,7 @@ Calibration targets recorded in the paper include $y=1$, $h=1/3$, $u\simeq 0.091
 | Endogenous | $\hat{mc}_t$ / `mct` | marginal cost | (F3), (F4) |
 | Endogenous | $\hat{x}^L_t$ / `xLt` | real price of labor good | (F4), (F5) |
 | Endogenous | $\hat{w}_t$ / `wt` | aggregate real wage | (F5), (F12) |
-| Endogenous | $\hat{w}^*_t$ / `wstart` | reset wage | (F11)-(F17) |
+| Endogenous | $\hat{w}^{\ast}_t$ / `wstart` | reset wage | (F11)-(F17) |
 | Endogenous | $\hat{h}_t$ / `ht` | hours per worker | (F5), (F25) |
 | Endogenous | $\hat{y}_t$ / `yt` | output | (F24), (F25), (F36) |
 | Endogenous | $\hat{m}_t$ / `mt` | matches | (F18), (F22) |
@@ -603,8 +603,8 @@ Calibration targets recorded in the paper include $y=1$, $h=1/3$, $u\simeq 0.091
 | Endogenous | $\hat{\nu}_t$ / `vt` | vacancies | (F18), (F20), (F24) |
 | Endogenous | $\hat{q}_t$ / `qt` | vacancy filling probability | (F20), (F15) |
 | Endogenous | $\hat{s}_t$ / `st` | job finding probability | (F21), (F17) |
-| Endogenous | $\hat{J}^*_t$ / `Jstart` | value of reset-wage firm | (F11), (F16) |
-| Endogenous | $\hat{\Delta}^*_t$ / `Deltastart` | reset-wage worker surplus | (F11), (F17) |
+| Endogenous | $\hat{J}^{\ast}_t$ / `Jstart` | value of reset-wage firm | (F11), (F16) |
+| Endogenous | $\hat{\Delta}^{\ast}_t$ / `Deltastart` | reset-wage worker surplus | (F11), (F17) |
 | Endogenous | $\hat{\delta}^F_t$ / `deltaFt` | firm wage-derivative auxiliary | (F11), (F13) |
 | Endogenous | $\hat{\delta}^W_t$ / `deltaWt` | worker wage-derivative auxiliary | (F11), (F14) |
 | Endogenous | $\hat{y}^{flex}_t$ and flex variables | flexible-price/flexible-wage counterpart | (F36) |

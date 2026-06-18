@@ -29,8 +29,8 @@ subject to the usual intertemporal budget constraint. After log-linearization ar
 Firms face Calvo-style price rigidity. Non-reoptimizing firms may index prices to lagged inflation, governed by indexation parameter $\gamma$. The paper provides the resulting New Keynesian Phillips curve directly rather than the full reset-price problem:
 
 $$
-\max_{P_t^*} \widehat{E}_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}
-\left[P_t^* \prod_{s=1}^{j}\Pi_{t+s-1}^{\gamma}-MC_{t+j}\right]Y_{t+j|t}
+\max_{P_t^{\ast}} \widehat{E}_t \sum_{j=0}^{\infty}(\beta\theta)^j \Lambda_{t,t+j}
+\left[P_t^{\ast} \prod_{s=1}^{j}\Pi_{t+s-1}^{\gamma}-MC_{t+j}\right]Y_{t+j|t}
 $$
 
 The exact reset-price FOC is not printed in the local Markdown; the reduced Phillips curve is the source-stated equilibrium condition. `needs_review`: the mapping from this generic reset-price problem to the source's $\xi_p[\omega x_t+\cdots]$ coefficient should be source-checked before treating the derivation as reviewed.

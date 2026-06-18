@@ -181,20 +181,20 @@ $$
 - **(F6) Wage-recursion pricing side**:
 
 $$
-f^1_t=\frac{\eta-1}{\eta}(w_t^*)^{1-\eta}\lambda_t w_t^\eta l^d_t
+f^1_t=\frac{\eta-1}{\eta}(w_t^{\ast})^{1-\eta}\lambda_t w_t^\eta l^d_t
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{1-\eta}
-\left(\frac{w^*_{t+1}}{w^*_t}\right)^{\eta-1}f^1_{t+1}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\right)^{\eta-1}f^1_{t+1}
 \right].
 $$
 
 - **(F7) Wage-recursion labor-disutility side**:
 
 $$
-f^2_t=\psi d_t\varphi_t\left(\frac{w_t}{w_t^*}\right)^{\eta(1+\vartheta)}(l^d_t)^{1+\vartheta}
+f^2_t=\psi d_t\varphi_t\left(\frac{w_t}{w_t^{\ast}}\right)^{\eta(1+\vartheta)}(l^d_t)^{1+\vartheta}
 +\beta\theta_w E_t\left[
 \left(\frac{\Pi_t^{\chi_w}}{\Pi_{t+1}}\right)^{-\eta(1+\vartheta)}
-\left(\frac{w^*_{t+1}}{w^*_t}\right)^{\eta(1+\vartheta)}f^2_{t+1}
+\left(\frac{w^{\ast}_{t+1}}{w^{\ast}_t}\right)^{\eta(1+\vartheta)}f^2_{t+1}
 \right].
 $$
 
@@ -231,10 +231,10 @@ $$
 - **(F12) Calvo price recursion 2**:
 
 $$
-g^2_t=\lambda_t\Pi^*_t y^d_t+
+g^2_t=\lambda_t\Pi^{\ast}_t y^d_t+
 \beta\theta_p E_t\left[
 \left(\frac{\Pi_t^\chi}{\Pi_{t+1}}\right)^{1-\varepsilon}
-\left(\frac{\Pi^*_t}{\Pi^*_{t+1}}\right)g^2_{t+1}
+\left(\frac{\Pi^{\ast}_t}{\Pi^{\ast}_{t+1}}\right)g^2_{t+1}
 \right].
 $$
 
@@ -270,7 +270,7 @@ $$
 $$
 w_t^{1-\eta}=
 \theta_w\left(\frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{1-\eta}w_{t-1}^{1-\eta}
-+(1-\theta_w)(w_t^*)^{1-\eta}.
++(1-\theta_w)(w_t^{\ast})^{1-\eta}.
 $$
 
 - **(F18) Final-good demand for intermediate goods**:
@@ -289,7 +289,7 @@ $$
 
 $$
 1=\theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{1-\varepsilon}
-+(1-\theta_p)(\Pi^*_t)^{1-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{1-\varepsilon}.
 $$
 
 - **(F21) Taylor rule**:
@@ -328,7 +328,7 @@ $$
 $$
 v^p_t=
 \theta_p\left(\frac{\Pi_{t-1}^{\chi}}{\Pi_t}\right)^{-\varepsilon}v^p_{t-1}
-+(1-\theta_p)(\Pi^*_t)^{-\varepsilon}.
++(1-\theta_p)(\Pi^{\ast}_t)^{-\varepsilon}.
 $$
 
 - **(F26) Wage dispersion**:
@@ -336,7 +336,7 @@ $$
 $$
 v^w_t=
 \theta_w\left(\frac{w_{t-1}}{w_t}\frac{\Pi_{t-1}^{\chi_w}}{\Pi_t}\right)^{-\eta}v^w_{t-1}
-+(1-\theta_w)(\Pi^{*w}_t)^{-\eta}.
++(1-\theta_w)(\Pi^{\astw}_t)^{-\eta}.
 $$
 
 - **(F27) Composite stochastic trend** (`needs_review`: OCR includes a duplicated exponent fragment in the prose; formula is reconstructed from the adjacent displayed equation and `.mod` cross-check):
@@ -452,13 +452,13 @@ Runtime validation: not performed. Dynare was not run.
 | Endogenous | `k`, $k_t$ | capital stock | (F14), (F23) |
 | Endogenous | `f`, $f^1_t/f^2_t$ | wage-recursion auxiliary variables | (F6)-(F8) |
 | Endogenous | `w`, $w_t$ | real wage | (F16), (F17) |
-| Endogenous | `wstar`, $w^*_t$ | reset real wage | (F6)-(F8), (F17) |
-| Endogenous | `PIstarw`, $\Pi^{*w}_t$ | optimal wage inflation/reset wage ratio | (F7), (F26) |
+| Endogenous | `wstar`, $w^{\ast}_t$ | reset real wage | (F6)-(F8), (F17) |
+| Endogenous | `PIstarw`, $\Pi^{\astw}_t$ | optimal wage inflation/reset wage ratio | (F7), (F26) |
 | Endogenous | `yd`, $y^d_t$ | aggregate demand/output demand | (F11), (F12), (F18), (F21), (F22) |
 | Endogenous | `mc`, $mc_t$ | real marginal cost | (F10), (F11) |
 | Endogenous | `g1`, $g^1_t$ | price-setting recursion 1 | (F11), (F13) |
 | Endogenous | `g2`, $g^2_t$ | price-setting recursion 2 | (F12), (F13) |
-| Endogenous | `PIstar`, $\Pi^*_t$ | reset price inflation | (F12), (F20), (F25) |
+| Endogenous | `PIstar`, $\Pi^{\ast}_t$ | reset price inflation | (F12), (F20), (F25) |
 | Endogenous | `vp`, $v^p_t$ | price dispersion | (F23), (F25) |
 | Endogenous | `vw`, $v^w_t$ | wage dispersion | (F24), (F26) |
 | Endogenous | `ld`, $l^d_t$ | aggregate labor demand / packed labor | (F15), (F24) |

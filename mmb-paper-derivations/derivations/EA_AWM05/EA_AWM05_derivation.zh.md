@@ -23,7 +23,7 @@
 中央银行评价通胀偏离目标、产出偏离潜在产出以及名义利率变化：
 
 $$
-\ell_t = (\pi_t-\pi^*)^2 + \lambda (y_t-y_t^*)^2 + \gamma (\Delta r_t)^2,
+\ell_t = (\pi_t-\pi^{\ast})^2 + \lambda (y_t-y_t^{\ast})^2 + \gamma (\Delta r_t)^2,
 \qquad \Delta r_t = r_t-r_{t-1}.
 $$
 
@@ -53,7 +53,7 @@ $$
 
 - **(F1) 政策制定者期间损失**：
 $$
-\ell_t = (\pi_t-\pi^*)^2 + \lambda gap_t^2 + \gamma (r_t-r_{t-1})^2.
+\ell_t = (\pi_t-\pi^{\ast})^2 + \lambda gap_t^2 + \gamma (r_t-r_{t-1})^2.
 $$
 
 - **(F2) 政策评价损失**：
@@ -74,7 +74,7 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 + \sum_{j=1}^{4} b^+_j E_t\pi^q_{t+j} \\
 &+ d_0 y^{gap}_t + \sum_{j=1}^{4} d^-_j y^{gap}_{t-j}
 + \sum_{j=1}^{4} d^+_j E_t y^{gap}_{t+j}
-+ b_\pi \pi^* + b_{rlb}\bar r + \sigma_i \varepsilon^i_t .
++ b_\pi \pi^{\ast} + b_{rlb}\bar r + \sigma_i \varepsilon^i_t .
 \end{aligned}
 $$
 

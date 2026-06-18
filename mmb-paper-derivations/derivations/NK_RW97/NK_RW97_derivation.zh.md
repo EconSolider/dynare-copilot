@@ -206,9 +206,9 @@ $$
 - **(F16) 估计的历史利率反馈规则**：
 
 $$
-r_t=r^*
-+\sum_{k=1}^{n_r}\mu_k(r_{t-k}-r^*)
-+\sum_{k=0}^{n_\pi}\phi_k(\pi_{t-k}-\pi^*)
+r_t=r^{\ast}
++\sum_{k=1}^{n_r}\mu_k(r_{t-k}-r^{\ast})
++\sum_{k=0}^{n_\pi}\phi_k(\pi_{t-k}-\pi^{\ast})
 +\sum_{k=0}^{n_y}\theta_k y_{t-k}
 +\epsilon_t.
 $$

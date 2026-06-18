@@ -48,7 +48,7 @@ $$
 Y_t(z)=A N_t(z).
 $$
 
-With Calvo probability `theta`, a firm cannot reset its price. Non-reset prices are indexed to the actual or perceived inflation target. A resetting firm chooses \(P_t^*(z)\) to maximize expected discounted profits subject to demand and the indexation rule.
+With Calvo probability `theta`, a firm cannot reset its price. Non-reset prices are indexed to the actual or perceived inflation target. A resetting firm chooses \(P_t^{\ast}(z)\) to maximize expected discounted profits subject to demand and the indexation rule.
 
 ### Fiscal and Monetary Authorities
 
@@ -110,7 +110,7 @@ $$
 - **(F8) Relative reset price**:
 
 $$
-\frac{P_t^*}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
+\frac{P_t^{\ast}}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
 $$
 
 - **(F9) Calvo numerator recursion**:
@@ -119,7 +119,7 @@ $$
 \mathcal{Z}_{1,t}
 =\lambda_t mc_t C_t
 +\theta\beta E_t\left[
-\left(\frac{\pi_{t+1}}{\pi_{t+1}^*}\right)^{-\epsilon}
+\left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{-\epsilon}
 \mathcal{Z}_{1,t+1}
 \right].
 $$
@@ -130,7 +130,7 @@ $$
 \mathcal{Z}_{2,t}
 =\lambda_t C_t
 +\theta\beta E_t\left[
-\left(\frac{\pi_{t+1}}{\pi_{t+1}^*}\right)^{1-\epsilon}
+\left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{1-\epsilon}
 \mathcal{Z}_{2,t+1}
 \right].
 $$
@@ -158,7 +158,7 @@ $$
 - **(F14) Aggregate price index**:
 
 $$
-1=\theta(\pi_t^*)^{1-\epsilon}\pi_t^{-(1-\epsilon)}
+1=\theta(\pi_t^{\ast})^{1-\epsilon}\pi_t^{-(1-\epsilon)}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{1-\epsilon}.
@@ -188,8 +188,8 @@ $$
 $$
 i_t=\rho_i i_{t-1}
 +(1-\rho_i)\left[
-i+\hat{\pi}_t^*
-+\phi_{\pi}(\hat{\pi}_t-\hat{\pi}_t^*)
+i+\hat{\pi}_t^{\ast}
++\phi_{\pi}(\hat{\pi}_t-\hat{\pi}_t^{\ast})
 +\phi_y(\hat{Y}_t-\hat{Y}_t^n)
 \right]
 +\eta_t.
@@ -211,7 +211,7 @@ $$
 
 $$
 \Delta_{p,t}
-=\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^*}\right)^{\epsilon}
+=\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^{\ast}}\right)^{\epsilon}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{-\epsilon}.
@@ -222,20 +222,20 @@ $$
 - **(F22) Inflation-target process**:
 
 $$
-\hat{\pi}_t^*=\rho_{\pi}\hat{\pi}_{t-1}^*+\eta_t^{\pi}.
+\hat{\pi}_t^{\ast}=\rho_{\pi}\hat{\pi}_{t-1}^{\ast}+\eta_t^{\pi}.
 $$
 
 - **(F23) Monetary-policy signal under imperfect information**:
 
 $$
-\varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^*+\eta_t.
+\varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^{\ast}+\eta_t.
 $$
 
 - **(F24) Perceived inflation-target update** (`needs_review`: OCR is readable but the surrounding state-space notation is compressed):
 
 $$
-\tilde{E}_t\hat{\pi}_t^*
-=\tilde{E}_{t-1}\hat{\pi}_t^*
+\tilde{E}_t\hat{\pi}_t^{\ast}
+=\tilde{E}_{t-1}\hat{\pi}_t^{\ast}
 +\frac{k}{\rho_{\pi}}
 \left(\varepsilon_t^{\pi}-\tilde{E}_{t-1}\varepsilon_t^{\pi}\right).
 $$
@@ -246,14 +246,14 @@ $$
 \tilde{E}_t\eta_t
 =\varepsilon_t^{\pi}
 -(1-\rho_i)(1-\phi_{\pi})
-\tilde{E}_{t-1}\hat{\pi}_t^*.
+\tilde{E}_{t-1}\hat{\pi}_t^{\ast}.
 $$
 
 - **(F26) Forecasts under the Kalman filter**:
 
 $$
 \begin{bmatrix}
-\tilde{E}_t\hat{\pi}_{t+i}^*\\
+\tilde{E}_t\hat{\pi}_{t+i}^{\ast}\\
 \tilde{E}_t\eta_{t+i}
 \end{bmatrix}
 =
@@ -262,7 +262,7 @@ $$
 0 & 0
 \end{bmatrix}^{i}
 \begin{bmatrix}
-\tilde{E}_t\hat{\pi}_{t}^*\\
+\tilde{E}_t\hat{\pi}_{t}^{\ast}\\
 \tilde{E}_t\eta_t
 \end{bmatrix}.
 $$
@@ -273,7 +273,7 @@ The paper also studies a zero-lower-bound extension with a preference shock, but
 
 The paper calibrates a quarterly steady state and solves the dynamics from a linearized system. The MMB cross-check file provides explicit steady-state assignments consistent with the paper calibration:
 
-1. Set steady-state inflation to the target, \(\pi=\pi^*=1.005\), and \(R=1/\beta\).
+1. Set steady-state inflation to the target, \(\pi=\pi^{\ast}=1.005\), and \(R=1/\beta\).
 2. The short nominal rate satisfies \(i=R\pi-1\).
 3. Normalize hours to \(N=1/3\). With a 20 percent markup, \(w=mc=1/1.2\) in the sticky-price block; output is \(Y=N/\Delta_p\) and \(\Delta_p=1\).
 4. Government spending is \(g=0.2Y\), consumption is \(C=Y-g\), and long-term public debt is \(b^L=0.5Y\).
@@ -289,7 +289,7 @@ Runtime validation of these steady-state assignments was not performed for this 
 
 - **Debt stock timing**: \(B_t^L\) and \(b_t^L\) are end-of-period stocks after survival of \((1-\alpha)B_{t-1}^L\) and new issuance \(B_t^{L,n}\). The government budget pays redemption and interest on \(t-1\) debt, divided by current inflation in real terms.
 - **Long-bond pricing**: \(i_t^{L,n}\) is the rate on newly issued stochastic bonds. \(i_t^L\) is the average rate on outstanding long-term debt and evolves recursively with the surviving stock.
-- **Price setting**: non-reset prices are indexed to \(\pi_t^*\) under full information and to the perceived inflation target under imperfect information.
+- **Price setting**: non-reset prices are indexed to \(\pi_t^{\ast}\) under full information and to the perceived inflation target under imperfect information.
 - **Natural and sticky blocks**: the MMB implementation contains a flexible-price natural block and a sticky-price block for output-gap policy; the paper equilibrium description lists \(Y_t^n\) in the Taylor rule but does not fully restate the natural block equations in Section II.
 - **Model form**: paper-side equilibrium is linearized for solution; implementation cross-check uses nonlinear level equations and first-order Dynare simulation.
 

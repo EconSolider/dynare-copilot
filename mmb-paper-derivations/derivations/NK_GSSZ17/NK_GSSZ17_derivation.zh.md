@@ -112,8 +112,8 @@ $$
 r_t=(1+r_{t-1})^{\tau_r}
 \left[
 (1+\bar r)
-\left(\frac{\pi_t}{\pi^*}\right)^{\tau_\pi}
-\left(\frac{y_t}{y_t^*}\right)^{\tau_y}
+\left(\frac{\pi_t}{\pi^{\ast}}\right)^{\tau_\pi}
+\left(\frac{y_t}{y_t^{\ast}}\right)^{\tau_y}
 \right]^{1-\tau_r}-1.
 \tag{F10} % (F10)
 $$
@@ -438,7 +438,7 @@ $$
 1. 将创新均值设为零：$\varepsilon^A=\varepsilon^D=\varepsilon^f=\varepsilon^R=0$。
 2. 对称均衡归一化为 $p_i=1$、$c_i=c$、$s_i=s$，且事前相同企业具有共同的预期影子价值。
 3. 由习惯积累，在 $\bar c$ 为常数且 $0<\rho<1$ 时，$\bar s=\bar c$。
-4. 稳态通胀为零时，$\bar\pi=\pi^*$，Rotemberg 调整成本为零。
+4. 稳态通胀为零时，$\bar\pi=\pi^{\ast}$，Rotemberg 调整成本为零。
 5. 家庭 SDF 满足稳态 Fisher 关系 $1=\bar m(1+\bar r)/(1+\bar\pi)$。
 6. 融资触发点为 $\bar a^E=\bar c(\bar A/\bar w)/(\bar c+\phi)^{1/\alpha}$。
 7. 预期内部资金楔子为 $\bar\xi=1+[\bar\varphi/(1-\bar\varphi)][1-\Phi(\bar z^E)]$，其中 $\bar z^E=\sigma^{-1}(\log\bar a^E+0.5\sigma^2)$。

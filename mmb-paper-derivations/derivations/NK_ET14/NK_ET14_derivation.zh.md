@@ -39,17 +39,17 @@ $$
 
 ### 2.2 定价企业
 
-每个企业的技术为 $Y_t(i)=A_tL_t(i)^{1/\phi}$。能够重新定价的企业选择 $P_t^*(i)$ 以最大化贴现利润：
+每个企业的技术为 $Y_t(i)=A_tL_t(i)^{1/\phi}$。能够重新定价的企业选择 $P_t^{\ast}(i)$ 以最大化贴现利润：
 
 $$
-\max_{P_t^*(i)} E_t\sum_{T=t}^{\infty}\alpha^{T-t}M_{t,T}
-\left[P_t^*(i)Y_T(i)-W_TL_T(i)\right]
+\max_{P_t^{\ast}(i)} E_t\sum_{T=t}^{\infty}\alpha^{T-t}M_{t,T}
+\left[P_t^{\ast}(i)Y_T(i)-W_TL_T(i)\right]
 $$
 
 需求约束为：
 
 $$
-Y_T(i)=Y_T\left(\frac{P_t^*(i)}{P_T}\right)^{-\theta_t}
+Y_T(i)=Y_T\left(\frac{P_t^{\ast}(i)}{P_T}\right)^{-\theta_t}
 $$
 
 贴现因子为：

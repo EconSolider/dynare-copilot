@@ -255,8 +255,8 @@ unless the government intervention adds public workers.
 **(F27) One-time intervention path for public employment**:
 
 $$
-g_1^*=\hat{g}_1+\Delta g,\qquad
-g_t^*-(1-s)g_{t-1}^*=s\bar{g}\quad\text{for }t\ge 2.
+g_1^{\ast}=\hat{g}_1+\Delta g,\qquad
+g_t^{\ast}-(1-s)g_{t-1}^{\ast}=s\bar{g}\quad\text{for }t\ge 2.
 $$
 
 The MMB implementation cross-check represents this policy with an exogenous public-hiring shock `hireg` and an endogenous stock `gendo`.

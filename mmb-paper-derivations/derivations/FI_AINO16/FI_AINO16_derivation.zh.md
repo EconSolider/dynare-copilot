@@ -79,7 +79,7 @@ $$
 外国进口商在 Calvo 摩擦下选择欧元计价或外币计价价格，并面对 FCP 和 PCP 品种需求。其一般重设价格问题为：
 
 $$
-\max_{\{P_t^{\circ M,j}(k)\}}\sum_{s=0}^{\infty}\zeta_m^sE_t\left[R^*_{t,t+s}\mathcal{D}_{t+s|t}^j(k)\right],
+\max_{\{P_t^{\circ M,j}(k)\}}\sum_{s=0}^{\infty}\zeta_m^sE_t\left[R^{\ast}_{t,t+s}\mathcal{D}_{t+s|t}^j(k)\right],
 \qquad j\in\{FCP,PCP\}. \tag{F9}
 $$
 
@@ -96,10 +96,10 @@ $$
 
 $$
 \begin{aligned}
-(1+\tau_s^C)P_s^CC_{h,s}+P_s^II_{h,s}+B_{h,s+1}+B_{h,s+1}^E+S_sB_{h,s+1}^*
+(1+\tau_s^C)P_s^CC_{h,s}+P_s^II_{h,s}+B_{h,s+1}+B_{h,s+1}^E+S_sB_{h,s+1}^{\ast}
 &=(1-\tau_s^W)W_sH_{h,s}+(1-\tau_s^K)R_s^KK_{h,s}\\
 &\quad+\delta\tau_s^KP_s^IK_{h,s}+\mathcal{D}_{h,s}+R_{s-1}B_{h,s}\\
-&\quad+\Gamma_{A^*}(A_s^*,\zeta_{s-1}^E)(R_{s-1}^EB_{h,s}^E+R_{s-1}^*S_sB_{h,s}^*)\\
+&\quad+\Gamma_{A^{\ast}}(A_s^{\ast},\zeta_{s-1}^E)(R_{s-1}^EB_{h,s}^E+R_{s-1}^{\ast}S_sB_{h,s}^{\ast})\\
 &\quad-\mathcal{TR}_{h,s}+\mathcal{S}_{h,s}.
 \end{aligned} \tag{F11}
 $$
@@ -110,7 +110,7 @@ $$
 K_{h,t+1}=(1-\delta)K_{h,t}+\zeta_t^I F(I_{h,t},I_{h,t-1}). \tag{F12}
 $$
 
-家庭在 Calvo 工资合约下设定差异化工资。重新优化的家庭选择 $W^*_{h,t}$，在劳动需求和指数化约束下最大化折现的税后劳动收入减劳动负效用；这给出工资 Phillips 曲线。
+家庭在 Calvo 工资合约下设定差异化工资。重新优化的家庭选择 $W^{\ast}_{h,t}$，在劳动需求和指数化约束下最大化折现的税后劳动收入减劳动负效用；这给出工资 Phillips 曲线。
 
 ### 资本品生产者和企业家
 
@@ -262,7 +262,7 @@ $$
 
 - **(F34) 净国外资产**：
 $$
-NFA_{t+1}^*=R_t^EB_t^E+R_t^*S_tB_t^*+TB_t. \tag{F34}
+NFA_{t+1}^{\ast}=R_t^EB_t^E+R_t^{\ast}S_tB_t^{\ast}+TB_t. \tag{F34}
 $$
 
 - **(F35) 贸易余额**：

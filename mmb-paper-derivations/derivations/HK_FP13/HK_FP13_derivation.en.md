@@ -67,7 +67,7 @@ Its budget constraint is:
 $$
 C_t^s+P_{D/C,t}I_{D,t}^s-B_{H,t}^s-\mathfrak E_tB_{F,t}^s
 =-R_{t-1}\frac{B_{H,t-1}^s}{\Pi_{C,t}}
--\frac{R_{t-1}^*\mathfrak E_tB_{F,t-1}^s}{\Pi_{C,t}}
+-\frac{R_{t-1}^{\ast}\mathfrak E_tB_{F,t-1}^s}{\Pi_{C,t}}
 +\sum_{j=C,D}\frac{W_{j,t}^sN_{j,t}^s}{P_{C,t}}.
 $$
 
@@ -172,7 +172,7 @@ $$
 \left(\frac{X_{t+1}^s}{X_t^s}\right)^{-\sigma}
 \left(\frac{D_{t+1}^s}{\widetilde C_{t+1}^s}\right)^{\gamma\mathcal E_{t+1}^{D,s}}
 \left(\frac{\widetilde C_t^s}{D_t^s}\right)^{\gamma\mathcal E_t^{D,s}}
-\frac{\mathfrak E_{t+1}}{\mathfrak E_t}\frac{R_t^*}{\Pi_{C,t+1}}
+\frac{\mathfrak E_{t+1}}{\mathfrak E_t}\frac{R_t^{\ast}}{\Pi_{C,t+1}}
 \right].
 $$
 
@@ -204,14 +204,14 @@ $$
 - **(F11) Relative terms-of-trade identity**:
 $$
 (1-\alpha_C)\widehat s_{C,t}-(1-\alpha_D)\widehat s_{D,t}
-=\widehat p_{D/C,t}-\widehat p_{D/C,t}^*.
+=\widehat p_{D/C,t}-\widehat p_{D/C,t}^{\ast}.
 $$
 
 - **(F12) International risk-sharing condition for patient households**:
 $$
-\left(\frac{X_t^s}{X_t^{s,*}}\right)^{-\sigma}
-\left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,*})^{\mathcal E_t^{D,*}}}\right)^\gamma
-\left(\frac{(D_t^s)^{\mathcal E_t^{D,s}}}{(D_t^{s,*})^{\mathcal E_t^{D,*}}}\right)^\gamma
+\left(\frac{X_t^s}{X_t^{s,\ast}}\right)^{-\sigma}
+\left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
+\left(\frac{(D_t^s)^{\mathcal E_t^{D,s}}}{(D_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
 =\mathcal R_t.
 $$
 
@@ -244,13 +244,13 @@ $$
 
 - **(F17) Consumption-goods market clearing, log-linearized**:
 $$
-\widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^*
+\widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^{\ast}
 +\alpha_C\vartheta_C\widehat s_{C,t}+g_t.
 $$
 
 - **(F18) Housing-goods market clearing, log-linearized**:
 $$
-\widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^*
+\widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^{\ast}
 +\alpha_D\vartheta_D\widehat s_{D,t}+g_t.
 $$
 
@@ -260,7 +260,7 @@ $$
 \frac{P_{D/C}^{-\xi}C}{Y}\widehat y_{C,t}
 +\frac{\delta P_{D/C}^{1-\xi}D}{Y}\widehat y_{D,t}
 +\Xi\widehat p_{D/C,H,t}
--\xi\ln(P_{D/C})(\varepsilon_t^D+\varepsilon_t^{D,*}).
+-\xi\ln(P_{D/C})(\varepsilon_t^D+\varepsilon_t^{D,\ast}).
 $$
 
 - **(F20) Currency-board peg and terms-of-trade adjustment**:
@@ -292,7 +292,7 @@ $$
 - **(F24) Housing preference shocks**:
 $$
 \epsilon_t^{d,j}=\rho_{d,j}\epsilon_{t-1}^{d,j}+\varepsilon_t^{d,j},
-\qquad j=s,b,*.
+\qquad j=s,b,\ast.
 $$
 
 - **(F25) Government expenditure shock**:
@@ -302,22 +302,22 @@ $$
 
 - **(F26) Foreign non-durable consumption demand**:
 $$
-\widehat c_t^*=\rho_{c^*}\widehat c_{t-1}^*+\varepsilon_t^{c^*}.
+\widehat c_t^{\ast}=\rho_{c^{\ast}}\widehat c_{t-1}^{\ast}+\varepsilon_t^{c^{\ast}}.
 $$
 
 - **(F27) Foreign housing investment demand**:
 $$
-\widehat i_{D,t}^*=\rho_{d^*}\widehat d_{t-1}^*+\varepsilon_t^{d^*}.
+\widehat i_{D,t}^{\ast}=\rho_{d^{\ast}}\widehat d_{t-1}^{\ast}+\varepsilon_t^{d^{\ast}}.
 $$
 
 - **(F28) Foreign housing-price disturbance**:
 $$
-\widehat p_{D,t}^*=\rho_{p_D^*}\widehat p_{D,t-1}^*+\varepsilon_t^{p_D^*}.
+\widehat p_{D,t}^{\ast}=\rho_{p_D^{\ast}}\widehat p_{D,t-1}^{\ast}+\varepsilon_t^{p_D^{\ast}}.
 $$
 
 - **(F29) Foreign consumption-price disturbance**:
 $$
-\widehat p_{C,t}^*=\rho_{p_C^*}\widehat p_{C,t-1}^*+\varepsilon_t^{p_C^*}.
+\widehat p_{C,t}^{\ast}=\rho_{p_C^{\ast}}\widehat p_{C,t-1}^{\ast}+\varepsilon_t^{p_C^{\ast}}.
 $$
 
 ## 6. Steady-State Solution
@@ -360,7 +360,7 @@ $$
 | `shock_mu_c`, `shock_mu_d` | sectoral mark-up states | (F22) |
 | `LTV` | loan-to-value state | (F23) |
 | `shock_d_b`, `shock_d_s`, `shock_d_stern` | housing preference states | (F24) |
-| $c^*$, $i_D^*$, $p_C^*$, $p_D^*$, $p_{D/C}^*$ | foreign demand and price states | (F26)-(F29), (F11) |
+| $c^{\ast}$, $i_D^{\ast}$, $p_C^{\ast}$, $p_D^{\ast}$, $p_{D/C}^{\ast}$ | foreign demand and price states | (F26)-(F29), (F11) |
 | $g$ | government spending state | (F25) |
 
 ### Exogenous innovations

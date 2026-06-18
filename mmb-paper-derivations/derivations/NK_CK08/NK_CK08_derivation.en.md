@@ -51,11 +51,11 @@ $$
 y_{j,t}=y_{j,t}^{L,d},
 $$
 
-and firms that can reoptimize choose $P^*_{t}$ to maximize:
+and firms that can reoptimize choose $P^{\ast}_{t}$ to maximize:
 
 $$
 E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
-\left[\frac{P^*_t}{P_{t+s}}-mc_{t+s}\right]y_{j,t+s}.
+\left[\frac{P^{\ast}_t}{P_{t+s}}-mc_{t+s}\right]y_{j,t+s}.
 $$
 
 ### 2.3 Labor-good firms, matches, and wage bargaining
@@ -79,7 +79,7 @@ $$
 $$
 
 $$
-J_t(W_{i,t})=\Psi_t^L(W_{i,t})+(1-\vartheta)E_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_{i,t})+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
+J_t(W_{i,t})=\Psi_t^L(W_{i,t})+(1-\vartheta)E_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_{i,t})+(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 The reset wage solves:
@@ -93,7 +93,7 @@ $$
 Free entry sets the value of vacancies to zero:
 
 $$
-\kappa=q_tE_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_t)+(1-\gamma)J_{t+1}(W^*_{t+1})]\}.
+\kappa=q_tE_t\{\beta_{t,t+1}[\gamma J_{t+1}(W_t)+(1-\gamma)J_{t+1}(W^{\ast}_{t+1})]\}.
 $$
 
 The monetary authority follows a Taylor-type rule for the nominal rate, and the government finances unemployment benefits, debt service, and exogenous spending through lump-sum taxes and debt.
@@ -125,8 +125,8 @@ $$
 
 - **(F5) Wage-bargaining FOC**:
 $$
-\widehat J^*_t+\widehat\delta^W_t=
-\widehat\Delta^*_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
+\widehat J^{\ast}_t+\widehat\delta^W_t=
+\widehat\Delta^{\ast}_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
 $$
 
 - **(F6) Hours FOC under right-to-manage**:
@@ -136,17 +136,17 @@ $$
 
 - **(F7) Aggregate real wage evolution**:
 $$
-\widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^*_t .
+\widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^{\ast}_t .
 $$
 
 - **(F8) Firm-side marginal wage-surplus recursion** (`needs_review`, OCR-sensitive long formula):
 $$
 \begin{aligned}
 \widehat\delta^F_t={}&[1-\beta(1-\vartheta)\gamma]\left[
--\frac{\alpha}{1-\alpha}\widehat w^*_t+
+-\frac{\alpha}{1-\alpha}\widehat w^{\ast}_t+
 \frac{1}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\beta(1-\vartheta)\gamma E_t\left\{
--\frac{\alpha}{1-\alpha}(\widehat w^*_t-\widehat w^*_{t+1}-\widehat\Pi_{t+1})
+-\frac{\alpha}{1-\alpha}(\widehat w^{\ast}_t-\widehat w^{\ast}_{t+1}-\widehat\Pi_{t+1})
 +\widehat\delta^F_{t+1}+\widehat\lambda_{t+1}-\widehat\lambda_t\right\}.
 \end{aligned}
 $$
@@ -155,15 +155,15 @@ $$
 $$
 \begin{aligned}
 \delta^W\widehat\delta^W_t={}&-\frac{\alpha}{1-\alpha}wh
-\left[-\frac{\alpha}{1-\alpha}\widehat w^*_t+
+\left[-\frac{\alpha}{1-\alpha}\widehat w^{\ast}_t+
 \frac{1}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\frac{1}{1-\alpha}mrsh
-\left[-\frac{1+\varphi}{1-\alpha}\widehat w^*_t-\widehat\lambda_t+
+\left[-\frac{1+\varphi}{1-\alpha}\widehat w^{\ast}_t-\widehat\lambda_t+
 \frac{1+\varphi}{1-\alpha}(\widehat{x}^L_t+\widehat z_t)\right] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\left(\frac{\alpha}{1-\alpha}\right)^2wh-
 \frac{1+\varphi}{(1-\alpha)^2}mrsh\right]
-E_t\{\widehat w^*_t-\widehat w^*_{t+1}-\widehat\Pi_{t+1}\} \\
+E_t\{\widehat w^{\ast}_t-\widehat w^{\ast}_{t+1}-\widehat\Pi_{t+1}\} \\
 &+\beta(1-\vartheta)\gamma\delta^W
 E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\delta^W_{t+1}\}.
 \end{aligned}
@@ -172,31 +172,31 @@ $$
 - **(F10) Value of a resetting labor firm** (`needs_review`):
 $$
 \begin{aligned}
-J\widehat J^*_t={}&\frac{wh}{\alpha}
-[-\alpha\widehat w^*_t+\widehat{x}^L_t+\widehat z_t] \\
+J\widehat J^{\ast}_t={}&\frac{wh}{\alpha}
+[-\alpha\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w^*_t\} \\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w^{\ast}_t\} \\
 &+\beta(1-\vartheta)J
-E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^*_{t+1}\}.
+E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 \end{aligned}
 $$
 
 - **(F11) Worker surplus at a resetting wage** (`needs_review`):
 $$
 \begin{aligned}
-\Delta\widehat\Delta^*_t={}&\frac{wh}{1-\alpha}
-[-\alpha\widehat w^*_t+\widehat{x}^L_t+\widehat z_t]\\
+\Delta\widehat\Delta^{\ast}_t={}&\frac{wh}{1-\alpha}
+[-\alpha\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t]\\
 &-\frac{mrsh}{1+\varphi}\left[
-\frac{1+\varphi}{1-\alpha}(-\widehat w^*_t+\widehat{x}^L_t+\widehat z_t)
+\frac{1+\varphi}{1-\alpha}(-\widehat w^{\ast}_t+\widehat{x}^L_t+\widehat z_t)
 -\widehat\lambda_t\right] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w^*_t\}\\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w^{\ast}_t\}\\
 &-\frac{\beta\gamma s}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}\\
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}\\
 &+\beta(1-\vartheta-s)\Delta
-E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^*_{t+1}\}
+E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^{\ast}_{t+1}\}
 -\beta\Delta s\widehat s_t .
 \end{aligned}
 $$
@@ -205,8 +205,8 @@ $$
 $$
 -\frac{\kappa}{q}\widehat q_t=
 \frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t\{\widehat w^*_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}
-+\beta J E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^*_{t+1}\}.
+E_t\{\widehat w^{\ast}_{t+1}+\widehat\Pi_{t+1}-\widehat w_t\}
++\beta J E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 $$
 
 ## 4. Market Clearing & Identities
@@ -352,10 +352,10 @@ Calibration targets in the source include $y=1$, $h=1/3$, $u=0.0588$, quarterly 
 | Endogenous | $\widehat{mc}_t$ / `mct` | Marginal cost deviation | (F3), (F4) |
 | Endogenous | $\widehat{x}^L_t$ / `xLt` | Labor-good price deviation | (F4), (F6) |
 | Endogenous | $\widehat w_t$ / `wt` | Aggregate real wage deviation | (F6), (F7) |
-| Endogenous | $\widehat w^*_t$ / `wstart` | Newly reset wage deviation | (F5), (F7)-(F11) |
+| Endogenous | $\widehat w^{\ast}_t$ / `wstart` | Newly reset wage deviation | (F5), (F7)-(F11) |
 | Endogenous | $\widehat h_t$ / `ht` | Hours per worker deviation | (F6), (F19) |
-| Endogenous | $\widehat J^*_t$ / `Jstart` | Value of resetting labor firm | (F5), (F10), (F12) |
-| Endogenous | $\widehat\Delta^*_t$ / `Deltastart` | Worker surplus at reset wage | (F5), (F11) |
+| Endogenous | $\widehat J^{\ast}_t$ / `Jstart` | Value of resetting labor firm | (F5), (F10), (F12) |
+| Endogenous | $\widehat\Delta^{\ast}_t$ / `Deltastart` | Worker surplus at reset wage | (F5), (F11) |
 | Endogenous | $\widehat\delta^F_t$ / `deltaFt` | Firm-side wage derivative | (F5), (F8) |
 | Endogenous | $\widehat\delta^W_t$ / `deltaWt` | Worker-side wage derivative | (F5), (F9) |
 | Endogenous | $\widehat m_t$ / `mt` | New matches deviation | (F13), (F14) |

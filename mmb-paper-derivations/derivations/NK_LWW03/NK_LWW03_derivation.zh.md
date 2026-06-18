@@ -40,7 +40,7 @@ $$
 - **(F2) 预期 IS 曲线 / 总需求**：
 
 $$
-y_t = E_t y_{t+1} - \sigma\left(i_t - E_t \pi_{t+1} - r_t^*\right).
+y_t = E_t y_{t+1} - \sigma\left(i_t - E_t \pi_{t+1} - r_t^{\ast}\right).
 $$
 
 当短期名义利率超过预期通胀加自然实际利率时，产出缺口下降。
@@ -50,8 +50,8 @@ $$
 $$
 i_t =
 \rho i_{t-1}
-+ (1-\rho)\left(r^* + E_t\tilde{\pi}_{t+\theta}\right)
-+ \alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^*\right)
++ (1-\rho)\left(r^{\ast} + E_t\tilde{\pi}_{t+\theta}\right)
++ \alpha\left(E_t\tilde{\pi}_{t+\theta}-\pi^{\ast}\right)
 + \beta E_t y_{t+\kappa}.
 $$
 
@@ -60,7 +60,7 @@ $$
 - **(F4) 来源论文的基准预测型规则**：
 
 $$
-i_t = 1.0\,i_{t-1} + 0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^*\right) + 0.4\,y_t.
+i_t = 1.0\,i_{t-1} + 0.4\,E_t\left(\tilde{\pi}_{t+4}-\pi^{\ast}\right) + 0.4\,y_t.
 $$
 
 这是论文给出的、在五个模型中表现稳健的基准规则。`implementation_cross_check`：MMB 的 `NK_LWW03_rep.mod` 没有实现这条精确的预测型规则；它使用 (F5) 中的简单当前通胀规则。
@@ -96,7 +96,7 @@ $$
 - **(F8) 自然实际利率过程**：
 
 $$
-r_t^* = \rho_r r_{t-1}^* + \eta^r_t.
+r_t^{\ast} = \rho_r r_{t-1}^{\ast} + \eta^r_t.
 $$
 
 论文把 `rstar` 的自相关系数校准为 0.35，创新标准差为 3.72，单位为年化百分点。`.mod` 交叉核对使用 `rhorstar = 0.35`。
@@ -115,7 +115,7 @@ $$
 
 $$
 \bar{y}=0,\qquad \bar{\pi}=0,\qquad \bar{i}=0,\qquad \overline{\Delta i}=0,
-\qquad \bar{r}^*=0,\qquad \bar{\varepsilon}=0.
+\qquad \bar{r}^{\ast}=0,\qquad \bar{\varepsilon}=0.
 $$
 
 对 MMB 实现交叉核对：
@@ -145,7 +145,7 @@ $$
 | 内生变量 | `pdot`, $\pi_t$ | 通胀率 | (F1), (F2), (F3), (F4), (F5) |
 | 内生变量 | `rff`, $i_t$ | 短期名义政策利率 / 联邦基金利率 | (F2), (F3), (F4), (F5) |
 | 内生变量 | `drff`, $\Delta i_t$ | 政策利率变化 | (F7) |
-| 内生 / 外生状态 | `rstar`, $r_t^*$ | 自然实际利率 | (F2), (F8) |
+| 内生 / 外生状态 | `rstar`, $r_t^{\ast}$ | 自然实际利率 | (F2), (F8) |
 | 内生 / 外生状态 | `pdotsh`, $\varepsilon_t$ | 通胀 / 总供给扰动 | (F1), (F9) |
 | 外生创新 | `rstar_`, $\eta^r_t$ | 自然利率创新 | (F8) |
 | 外生创新 | `pdotsh_`, $\eta^\pi_t$ | 通胀冲击创新 | (F9) |

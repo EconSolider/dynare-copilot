@@ -66,7 +66,7 @@ $$q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \s
 
 - **(F9) Taylor-type short-rate rule**:
 
-$$i^s_t = r^* + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^*\right) + \alpha_q q_t + \varepsilon_{i,t}.$$
+$$i^s_t = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t + \varepsilon_{i,t}.$$
 
 The additive monetary-policy shock is from the MMB implementation cross-check; the paper equation lists the deterministic rule without an explicit shock term. Status: `needs_review`.
 
@@ -80,7 +80,7 @@ $$r^l_t = i^l_t - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
 
 - **(F12) Deterministic steady-state real-rate identity**:
 
-$$r^* = -\frac{\delta_0}{\delta_3}.$$
+$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 ## 4. Market Clearing & Identities
 
@@ -88,9 +88,9 @@ This small model is specified in terms of output gaps and inflation/interest-rat
 
 - **(F13) Output-gap normalization**:
 
-$$q_t = y_t-y^*_t.$$
+$$q_t = y_t-y^{\ast}_t.$$
 
-Here $y_t$ is log output and $y^*_t$ is a trend or potential-output measure. The paper uses log-linear trend output gaps for estimation and discusses OECD output-gap comparisons. Status: `needs_review` because the exact MMB data transformation is not rechecked from raw data.
+Here $y_t$ is log output and $y^{\ast}_t$ is a trend or potential-output measure. The paper uses log-linear trend output gaps for estimation and discusses OECD output-gap comparisons. Status: `needs_review` because the exact MMB data transformation is not rechecked from raw data.
 
 - **(F14) Implementation inflation/output/interest aliases**:
 
@@ -128,15 +128,15 @@ $$\bar q=0.$$
 
 3. The policy target pins down inflation:
 
-$$\bar\pi^{(4)}=\pi^*.$$
+$$\bar\pi^{(4)}=\pi^{\ast}.$$
 
 4. The long ex-ante real rate equals the equilibrium real rate:
 
-$$\bar r^l=r^*=-\frac{\delta_0}{\delta_3}.$$
+$$\bar r^l=r^{\ast}=-\frac{\delta_0}{\delta_3}.$$
 
 5. The short and long nominal rates satisfy:
 
-$$\bar i^s=\bar i^l=r^*+\pi^*.$$
+$$\bar i^s=\bar i^l=r^{\ast}+\pi^{\ast}.$$
 
 6. Contract-price levels are not pinned down in absolute level. A normalization such as $\bar p=0$ can be used; then $\bar x=\bar p$ in a zero-gap, constant-inflation representation after detrending. Status: `needs_review` because the archive has not reconstructed the exact level normalization used by the MMB conversion.
 
@@ -185,7 +185,7 @@ $$\bar i^s=\bar i^l=r^*+\pi^*.$$
 | $\delta_0,\delta_1,\delta_2,\delta_3$ / `delta0`-`delta3` | aggregate-demand coefficients | Table 4, Table 5 |
 | $\sigma_{\varepsilon_d}$ / `sigma_e_d` | demand-shock scale | Table 5 |
 | $\alpha_\pi,\alpha_q$ | policy-rule response coefficients | Table 4 |
-| $\pi^*$ | policy inflation target | Table 4 / Section 5 |
-| $r^*$ | equilibrium real rate | (F12) |
+| $\pi^{\ast}$ | policy inflation target | Table 4 / Section 5 |
+| $r^{\ast}$ | equilibrium real rate | (F12) |
 
 First-pass equation count: 17 numbered conditions. Formula fidelity and exact MMB transformation details remain `needs_review`.

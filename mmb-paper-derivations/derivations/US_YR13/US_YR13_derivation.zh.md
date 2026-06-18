@@ -82,9 +82,9 @@ $$
 
 - **(F3) 资本积累**：
 $$
-\hat k_t=\left(1-\frac{i_*}{k_*}\right)\hat k_{t-1}
-+\frac{i_*}{k_*}\hat i_t
-+\frac{i_*}{k_*}(1+\bar\beta\gamma)\gamma^2S''\hat q_t.
+\hat k_t=\left(1-\frac{i_\ast}{k_\ast}\right)\hat k_{t-1}
++\frac{i_\ast}{k_\ast}\hat i_t
++\frac{i_\ast}{k_\ast}(1+\bar\beta\gamma)\gamma^2S''\hat q_t.
 $$
 
 - **(F4) 利用率 FOC**：
@@ -212,17 +212,17 @@ $$
 - **(F21) 资源约束**：
 $$
 \hat y_t
-=\frac{(\bar R^K-1+\tau)k_*}{y_*}\hat u_t
+=\frac{(\bar R^K-1+\tau)k_\ast}{y_\ast}\hat u_t
 +\hat\mu^{bank}_t
-+\frac{c_*}{y_*}\hat c_t
-+\frac{i_*}{y_*}\hat i_t
++\frac{c_\ast}{y_\ast}\hat c_t
++\frac{i_\ast}{y_\ast}\hat i_t
 +\hat g_t.
 $$
 
 - **(F22) 资源约束中的银行利差贡献，needs_review OCR**：
 $$
 \hat\mu^{bank}_t
-=\frac{k_*}{y_*}(\bar R^K-\bar R)\left(1-\frac{\bar N}{\bar K}\right)
+=\frac{k_\ast}{y_\ast}(\bar R^K-\bar R)\left(1-\frac{\bar N}{\bar K}\right)
 (\hat R^K_t+\hat Q_{t-1}+\hat k_t).
 $$
 

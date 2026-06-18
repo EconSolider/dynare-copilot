@@ -45,12 +45,12 @@ y_t=\left(\int_0^1 y_{j,t}^{(\varepsilon-1)/\varepsilon}\,dj\right)^{\varepsilon
 y_{j,t}=\left(\frac{P_{j,t}}{P_t}\right)^{-\varepsilon}y_t.
 $$
 
-批发厂商在 Calvo 摩擦下设定价格。可以重设价格的厂商选择 $P^*_t$ 以最大化贴现预期利润：
+批发厂商在 Calvo 摩擦下设定价格。可以重设价格的厂商选择 $P^{\ast}_t$ 以最大化贴现预期利润：
 
 $$
-\max_{P^*_t} E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
+\max_{P^{\ast}_t} E_t\sum_{s=0}^{\infty}\omega^s\beta_{t,t+s}
 \left[
-\frac{P^*_t\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{(1-\xi_p)s}}{P_{t+s}}
+\frac{P^{\ast}_t\Pi_{t-1,t-1+s}^{\xi_p}\Pi^{(1-\xi_p)s}}{P_{t+s}}
 -mc_{t+s}
 \right]y_{j,t+s}.
 $$
@@ -69,7 +69,7 @@ $$
 x^L_t z_t\alpha h_{i,t}^{\alpha-1}=\frac{W_{i,t}}{P_t}.
 $$
 
-工人与厂商通过 Nash 议价决定重设工资 $W^*_t$：
+工人与厂商通过 Nash 议价决定重设工资 $W^{\ast}_t$：
 
 $$
 \max_{W_{i,t}}\left[\Delta_t(W_{i,t})\right]^{\eta_t}
@@ -85,7 +85,7 @@ $$
 $$
 \kappa_t=q_t E_t\left\{\beta_{t,t+1}\left[
 \gamma J_{t+1}\!\left(W_t\Pi_t^{\xi_w}\Pi^{1-\xi_w}\right)
-+(1-\gamma)J_{t+1}(W^*_{t+1})
++(1-\gamma)J_{t+1}(W^{\ast}_{t+1})
 \right]\right\}.
 $$
 
@@ -155,8 +155,8 @@ $$
 **(F10) 重设工资议价条件**
 
 $$
-\hat{J}^*_t+\hat{\delta}^W_t
-=\hat{\Delta}^*_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t.
+\hat{J}^{\ast}_t+\hat{\delta}^W_t
+=\hat{\Delta}^{\ast}_t+\hat{\delta}^F_t-\frac{1}{1-\eta}\hat{\eta}_t.
 $$
 
 **(F11) Right-to-manage 工时条件**
@@ -170,7 +170,7 @@ $$
 $$
 \hat{w}_t
 =\gamma\left(\hat{w}_{t-1}-\hat{\Pi}_t+\xi_w\hat{\Pi}_{t-1}\right)
-+(1-\gamma)\hat{w}^*_t.
++(1-\gamma)\hat{w}^{\ast}_t.
 $$
 
 **(F13) 厂商剩余导数递归** `needs_review`
@@ -179,11 +179,11 @@ $$
 \begin{aligned}
 \hat{\delta}^F_t
 =&\left[1-\beta(1-\vartheta)\gamma\right]
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right] \\
 &+\beta(1-\vartheta)\gamma E_t\left[
 -\frac{\alpha}{1-\alpha}
-(\hat{w}^*_t+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1}-\hat{\Pi}_{t+1})
+(\hat{w}^{\ast}_t+\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1}-\hat{\Pi}_{t+1})
 +\hat{\delta}^F_{t+1}+\hat{\lambda}_{t+1}-\hat{\lambda}_t
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}
 \right].
@@ -196,16 +196,16 @@ $$
 \begin{aligned}
 \delta^W\hat{\delta}^W_t
 =&-\frac{\alpha}{1-\alpha}wh
-\left[-\frac{\alpha}{1-\alpha}\hat{w}^*_t
+\left[-\frac{\alpha}{1-\alpha}\hat{w}^{\ast}_t
 +\frac{1}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right] \\
 &+\frac{1}{1-\alpha}mrsh
-\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^*_t
+\left[-\frac{1+\varphi}{1-\alpha}\hat{w}^{\ast}_t
 -\hat{\lambda}_t
 +\frac{1+\varphi}{1-\alpha}(\hat{x}^L_t+\hat{z}_t)\right] \\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\left(\frac{\alpha}{1-\alpha}\right)^2wh
 -\frac{1+\varphi}{(1-\alpha)^2}mrsh\right]
-E_t(\hat{w}^*_t+\xi_w\hat{\Pi}_t-\hat{w}^*_{t+1}-\hat{\Pi}_{t+1})\\
+E_t(\hat{w}^{\ast}_t+\xi_w\hat{\Pi}_t-\hat{w}^{\ast}_{t+1}-\hat{\Pi}_{t+1})\\
 &+\beta(1-\vartheta)\gamma\delta^W
 E_t\left[\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\delta}^W_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}\right].
@@ -216,12 +216,12 @@ $$
 
 $$
 \begin{aligned}
-J\hat{J}^*_t
-=&\frac{wh}{\alpha}\left[-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t\right]\\
+J\hat{J}^{\ast}_t
+=&\frac{wh}{\alpha}\left[-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta)J
-E_t\left[\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}
+E_t\left[\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}
 -\frac{\vartheta}{1-\vartheta}\hat{\vartheta}_{t+1}\right].
 \end{aligned}
 $$
@@ -230,18 +230,18 @@ $$
 
 $$
 \begin{aligned}
-\Delta\hat{\Delta}^*_t
-=&\frac{wh}{1-\alpha}\left[-\alpha\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t\right]\\
+\Delta\hat{\Delta}^{\ast}_t
+=&\frac{wh}{1-\alpha}\left[-\alpha\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t\right]\\
 &-\frac{mrsh}{1+\varphi}
-\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^*_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
+\left[\frac{1+\varphi}{1-\alpha}(-\hat{w}^{\ast}_t+\hat{x}^L_t+\hat{z}_t)-\hat{\lambda}_t\right]\\
 &+\frac{\beta(1-\vartheta)\gamma}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^*_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}^{\ast}_t-\xi_w\hat{\Pi}_t)\\
 &-\frac{\beta\gamma s}{1-\beta(1-\vartheta)\gamma}
 \left[\frac{\alpha}{1-\alpha}wh-\frac{1}{1-\alpha}mrsh\right]
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
 &+\beta(1-\vartheta-s)\Delta
-E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^*_{t+1})
+E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{\Delta}^{\ast}_{t+1})
 -\beta\Delta s\hat{s}_t-\beta\Delta\vartheta E_t\hat{\vartheta}_{t+1}.
 \end{aligned}
 $$
@@ -252,8 +252,8 @@ $$
 \begin{aligned}
 \frac{\kappa}{q}(\hat{\kappa}_t-\hat{q}_t)
 =&\frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
-E_t(\hat{w}^*_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
-&+\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^*_{t+1}).
+E_t(\hat{w}^{\ast}_{t+1}+\hat{\Pi}_{t+1}-\hat{w}_t-\xi_w\hat{\Pi}_t)\\
+&+\beta J E_t(\hat{\lambda}_{t+1}-\hat{\lambda}_t+\hat{J}^{\ast}_{t+1}).
 \end{aligned}
 $$
 
@@ -439,11 +439,11 @@ $$
 | 内生变量 | `qt`, $\hat{q}_t$ | 职位填补率 | (F8), (F17) |
 | 内生变量 | `st`, $\hat{s}_t$ | 求职成功率 | (F9), (F16) |
 | 内生变量 | `wt`, $\hat{w}_t$ | 平均实际工资 | (F11), (F12) |
-| 内生变量 | `wstart`, $\hat{w}^*_t$ | 重设工资 | (F10), (F13)-(F16) |
+| 内生变量 | `wstart`, $\hat{w}^{\ast}_t$ | 重设工资 | (F10), (F13)-(F16) |
 | 内生变量 | `deltaFt`, $\hat{\delta}^F_t$ | 厂商剩余导数 | (F10), (F13) |
 | 内生变量 | `deltaWt`, $\hat{\delta}^W_t$ | 工人剩余导数 | (F10), (F14) |
-| 内生变量 | `Jstart`, $\hat{J}^*_t$ | 重设工资厂商价值 | (F10), (F15), (F17) |
-| 内生变量 | `Deltastart`, $\hat{\Delta}^*_t$ | 重设工资下工人剩余 | (F10), (F16) |
+| 内生变量 | `Jstart`, $\hat{J}^{\ast}_t$ | 重设工资厂商价值 | (F10), (F15), (F17) |
+| 内生变量 | `Deltastart`, $\hat{\Delta}^{\ast}_t$ | 重设工资下工人剩余 | (F10), (F16) |
 | 内生变量 | `ht`, $\hat{h}_t$ | 人均工时 | (F11), (F19) |
 | 内生变量 | `yt`, $\hat{y}_t$ | 产出 | (F18), (F19), (F23) |
 | 内生变量 | `yflext`, $\hat{y}^{flex}_t$ | 灵活价格 / 灵活工资产出 | (F23), (F24) |

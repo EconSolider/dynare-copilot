@@ -59,7 +59,7 @@ c_t =
 \left(R_t-E_t[\pi_{t+1}]+b_t\right)
 +\frac{h e^{-\gamma}}{1+h e^{-\gamma}}(c_{t-1}-z_t)
 +\frac{1}{1+h e^{-\gamma}}E_t[c_{t+1}+z_{t+1}]
-+\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_*l_*}{c_*}
++\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}\frac{w_\astl_\ast}{c_\ast}
 \left(l_t-E_t[l_{t+1}]\right)
 $$
 
@@ -79,16 +79,16 @@ $$
 
 $$
 \bar{k}_t =
-\left(1-\frac{i_*}{\bar{k}_*}\right)(\bar{k}_{t-1}-z_t)
-+\frac{i_*}{\bar{k}_*}i_t
-+\frac{i_*}{\bar{k}_*}S''e^{2\gamma}(1+\bar\beta)\mu_t
+\left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
++\frac{i_\ast}{\bar{k}_\ast}i_t
++\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar\beta)\mu_t
 $$
 
 **(F5) 基准 SW 无金融摩擦资本套利条件**：
 
 $$
-\frac{r_*^k}{r_*^k+(1-\delta)}E_t[r_{t+1}^k]
-+\frac{1-\delta}{r_*^k+(1-\delta)}E_t[q_{t+1}^k]
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^k]
++\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^k]
 -q_t^k
 =R_t+b_t-E_t[\pi_{t+1}]
 $$
@@ -171,8 +171,8 @@ $$
 $$
 \tilde R_t^k-\pi_t
 =
-\frac{r_*^k}{r_*^k+(1-\delta)}r_t^k
-+\frac{1-\delta}{r_*^k+(1-\delta)}q_t^k
+\frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
++\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k
 $$
 
@@ -190,8 +190,8 @@ $$
 
 $$
 y_t=
-g_t+\frac{c_*}{y_*}c_t+\frac{i_*}{y_*}i_t
-+\frac{r_*^k k_*}{y_*}u_t
+g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
++\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal I\{\rho_z<1\}\frac{1}{1-\alpha}\tilde z_t
 $$
 
@@ -255,7 +255,7 @@ $$
 
 $$
 R_t=\rho_R R_{t-1}
-+(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^*)+\psi_2(y_t-y_t^f)\right)
++(1-\rho_R)\left(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\right)
 +\psi_3\left((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\right)
 +r_t^m
 $$
@@ -269,7 +269,7 @@ $$
 **(F27) 时变通胀目标**：
 
 $$
-\pi_t^*=\rho_{\pi^*}\pi_{t-1}^*+\sigma_{\pi^*}\varepsilon_{\pi^*,t}
+\pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}
 $$
 
 **(F28) 金融风险/利差冲击，本变体需复核**：
@@ -286,14 +286,14 @@ $$
 由于模型围绕非随机稳态线性化，第 3-5 节动态变量的稳态对数偏离为零：
 
 $$
-c=i=y=l=k=\bar{k}=u=mc=w=w^h=\pi=q^k=r^k=R=b=\mu=g=\lambda_f=\lambda_w=r^m=\pi^*=\tilde\sigma_\omega=0
+c=i=y=l=k=\bar{k}=u=mc=w=w^h=\pi=q^k=r^k=R=b=\mu=g=\lambda_f=\lambda_w=r^m=\pi^{\ast}=\tilde\sigma_\omega=0
 $$
 
 本轮没有从 Markdown 正文求出稳态常数。论文说明稳态公式见 Del Negro and Schorfheide (2013) 技术附录，而本模型没有本地 appendix normalization 文件。实现交叉检查记录了若干校准/隐含稳态值：
 
 $$
-\gamma=0.0037,\quad R_*=1.0069,\quad r_*^k=0.0319,\quad
-c_*=0.4796,\quad y_*=0.7102,\quad i_*=0.1028,\quad \bar{k}_*=3.5897
+\gamma=0.0037,\quad R_\ast=1.0069,\quad r_\ast^k=0.0319,\quad
+c_\ast=0.4796,\quad y_\ast=0.7102,\quad i_\ast=0.1028,\quad \bar{k}_\ast=3.5897
 $$
 
 这些数值属于 `implementation_cross_check`，不是论文侧推导证据。
@@ -336,7 +336,7 @@ $$
 | Endogenous | `g` / $g_t$ | 政府支出 | (F20) |
 | Endogenous | `b` / $b_t$ | 跨期偏好楔子 | (F21) |
 | Endogenous | `rm` / $r_t^m$ | 货币政策残差 | (F26) |
-| Endogenous | `pist` / $\pi_t^*$ | 时变通胀目标 | (F27) |
+| Endogenous | `pist` / $\pi_t^{\ast}$ | 时变通胀目标 | (F27) |
 | Endogenous | flexible-price variables | $c_t^f,\ldots,y_t^f$ | 平行无名义刚性系统 | (F18), (F25) |
 | Exogenous | `psi_b` | 偏好楔子创新 | (F21) |
 | Exogenous | `psi_mu` | MEI 创新 | (F22) |
@@ -359,6 +359,6 @@ $$
 | Parameter | `psi1`, `psi2`, `psi3`, `rho` | 政策规则系数 | (F25) |
 | Parameter | `sigmac` / $\sigma_c$ | 相对风险厌恶 | (F2) |
 | Parameter | `rho_*`, `eta_*`, `sigma_*` | 冲击持久性、MA 和尺度参数 | (F19)-(F28) |
-| Parameter | starred steady-state constants | $c_*,i_*,y_*,\bar{k}_*,r_*^k,\gamma$ | (F2)-(F16) |
+| Parameter | starred steady-state constants | $c_\ast,i_\ast,y_\ast,\bar{k}_\ast,r_\ast^k,\gamma$ | (F2)-(F16) |
 
 状态：`needs_review`。核心 SW 对数线性方程在 MinerU Markdown 中可读；`US_DNGS15_SW` 相对 SWFF/SWSP 变体的边界和技术附录稳态应在升级审核状态前复核。

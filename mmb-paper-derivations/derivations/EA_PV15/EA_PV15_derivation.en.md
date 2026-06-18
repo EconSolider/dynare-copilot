@@ -59,14 +59,14 @@ $$
 
 ### 2.3 Sticky Loan-Rate Setting Banks
 
-The representative national banking system sets differentiated corporate loan rates under Calvo stickiness. A bank allowed to reset chooses $R_{i,t}^{L*}(b)$:
+The representative national banking system sets differentiated corporate loan rates under Calvo stickiness. A bank allowed to reset chooses $R_{i,t}^{L\ast}(b)$:
 
 **(F5) Loan-rate reset problem (`needs_review`)**:
 $$
-\max_{\{R_{i,t}^{L*}(b)\}}
+\max_{\{R_{i,t}^{L\ast}(b)\}}
 E_t\sum_{\tau=0}^{\infty}(\theta_i^L\beta)^\tau
 \frac{\lambda_{i,t+\tau}^{c}}{\lambda_{i,t}^{c}}\eta_{i,t+1+\tau}
-\left[(1-\tau^L)R_{i,t}^{L*}(b)\Xi_{i,t,\tau}^{L}-MC_{i,t+\tau}^{L}\right]
+\left[(1-\tau^L)R_{i,t}^{L\ast}(b)\Xi_{i,t,\tau}^{L}-MC_{i,t+\tau}^{L}\right]
 L_{i,t+1+\tau}(b).
 $$
 
@@ -310,7 +310,7 @@ $$
 
 **(F34) Sticky price reset condition (`needs_review`)**:
 $$
-P_{i,t}^{*}=
+P_{i,t}^{\ast}=
 \frac{\epsilon_p}{(\epsilon_p-1)(1-\tau^y)}
 \frac{
 E_t\sum_{\tau=0}^{\infty}(\theta_i^p\beta)^\tau
@@ -382,14 +382,14 @@ $$
 $$
 P_{i,t}^{1-\epsilon_p}
 =\theta_i^p(P_{i,t-1}\pi_{i,t-1}^{\xi_i^p})^{1-\epsilon_p}
-+(1-\theta_i^p)(P_{i,t}^{*})^{1-\epsilon_p}.
++(1-\theta_i^p)(P_{i,t}^{\ast})^{1-\epsilon_p}.
 $$
 
 **(F42) Wage index aggregation**:
 $$
 W_{i,t}^{1/(1-\mu_{i,t}^{w})}
 =\theta_i^w\left[W_{i,t-1}(\pi_{i,t-1}^{C})^{\xi_i^w}\right]^{1/(1-\mu_{i,t}^{w})}
-+(1-\theta_i^w)(W_{i,t}^{*})^{1/(1-\mu_{i,t}^{w})}.
++(1-\theta_i^w)(W_{i,t}^{\ast})^{1/(1-\mu_{i,t}^{w})}.
 $$
 
 **(F43) Corporate credit market clearing**:

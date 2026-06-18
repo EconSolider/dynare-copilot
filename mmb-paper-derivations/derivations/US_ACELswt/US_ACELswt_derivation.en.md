@@ -30,9 +30,9 @@ It chooses inputs to maximize final-good profit taking all prices as given.
 For the homogeneous-capital benchmark, intermediate producer \(i\) uses:
 
 $$
-y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^*,
+y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
-z_t^*=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
+z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
 $$
 
 The firm sets prices under Calvo frictions. If it cannot re-optimize, it indexes to lagged inflation. Its discounted nominal profit objective is:
@@ -113,7 +113,7 @@ $$
 - **(F6) Steady-state Fisher relation on the balanced-growth path**:
 
 $$
-R=\frac{\pi\mu_{z^*}}{\beta}.
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
 
 - **(F7) Wage-services aggregator**:
@@ -138,7 +138,7 @@ $$
 - **(F10) Wage indexation for non-reoptimizing households**:
 
 $$
-W_{j,t}=\pi_{t-1}\mu_{z^*}W_{j,t-1}.
+W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
 $$
 
 - **(F11) Inflation equation, paper reduced form**:
@@ -158,10 +158,10 @@ The MMB implementation uses the following sticky-price linear restrictions. Thes
 - **(F12) Capital Euler equation** (`implementation_cross_check`, `needs_review` against technical appendix):
 
 $$
-\hat\lambda_{z^*,t+1}
+\hat\lambda_{z^{\ast},t+1}
 +\frac{1-\delta}{\tilde r+1-\delta}\hat{\tilde\mu}_{t+1}
 +\frac{\tilde r}{\tilde r+1-\delta}\hat{\tilde r}_{t+1}
--\hat\lambda_{z^*,t}-\hat{\tilde\mu}_t
+-\hat\lambda_{z^{\ast},t}-\hat{\tilde\mu}_t
 =\hat\mu_{z,t+1}+\frac{1}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 $$
 
@@ -169,13 +169,13 @@ $$
 
 $$
 \begin{aligned}
-&-\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2\hat i_{t+1}-\hat{\tilde\mu}_t
-+\kappa(\mu_{z^*}\mu_\Upsilon)^2(1+\beta)\hat i_t
--\kappa(\mu_{z^*}\mu_\Upsilon)^2\hat i_{t-1} \\
-&=\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2\hat\mu_{z,t+1}
-+\frac{\beta\kappa(\mu_{z^*}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t+1}
--\kappa(\mu_{z^*}\mu_\Upsilon)^2\hat\mu_{z,t}
--\frac{\kappa(\mu_{z^*}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
+&-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t+1}-\hat{\tilde\mu}_t
++\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)\hat i_t
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t-1} \\
+&=\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat\mu_{z,t+1}
++\frac{\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t+1}
+-\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat\mu_{z,t}
+-\frac{\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \end{aligned}
 $$
 
@@ -193,8 +193,8 @@ $$
 - **(F15) Linear capital evolution** (`implementation_cross_check`):
 
 $$
-(\mu_{z^*}\mu_\Upsilon-(1-\delta))\hat i_t
--\mu_\Upsilon\mu_{z^*}\hat{\bar k}_t
+(\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))\hat i_t
+-\mu_\Upsilon\mu_{z^{\ast}}\hat{\bar k}_t
 +(1-\delta)\hat{\bar k}_{t-1}
 =(1-\delta)\hat\mu_{z,t}
 +\frac{1-\delta}{1-\alpha}\hat\mu_{\Upsilon,t}.
@@ -228,7 +228,7 @@ $$
 - **(F19) Linear consumption Euler equation** (`implementation_cross_check`, `needs_review`):
 
 $$
-\text{linear habit Euler restriction in }(\hat c_{t+1},\hat c_t,\hat c_{t-1},\hat\lambda_{z^*,t},\hat q_t,\hat\mu_{z,t+1},\hat\mu_{\Upsilon,t+1},\hat\mu_{z,t},\hat\mu_{\Upsilon,t}).
+\text{linear habit Euler restriction in }(\hat c_{t+1},\hat c_t,\hat c_{t-1},\hat\lambda_{z^{\ast},t},\hat q_t,\hat\mu_{z,t+1},\hat\mu_{\Upsilon,t+1},\hat\mu_{z,t},\hat\mu_{\Upsilon,t}).
 $$
 
 The exact coefficient-level expression is available in the implementation cross-check and should be verified against the technical appendix before promotion.
@@ -236,7 +236,7 @@ The exact coefficient-level expression is available in the implementation cross-
 - **(F20) Monetary-base FOC** (`implementation_cross_check`):
 
 $$
-\hat\lambda_{z^*,t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^*,t}
+\hat\lambda_{z^{\ast},t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^{\ast},t}
 =\hat\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 $$
 
@@ -244,7 +244,7 @@ $$
 
 $$
 \eta_3\hat{\tilde w}_{t+1}+\eta_6\hat\pi_{t+1}
-+\eta_2\hat{\tilde w}_t+\eta_5\hat\pi_t+\eta_7\hat h_t+\eta_8\hat\lambda_{z^*,t}
++\eta_2\hat{\tilde w}_t+\eta_5\hat\pi_t+\eta_7\hat h_t+\eta_8\hat\lambda_{z^{\ast},t}
 +\eta_1\hat{\tilde w}_{t-1}+\eta_4\hat\pi_{t-1}
 =-\eta_{10}\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}-\eta_{10}\hat\mu_{z,t+1}
 -\eta_9\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}-\eta_9\hat\mu_{z,t}.
@@ -261,7 +261,7 @@ $$
 - **(F23) Technology scaling for balanced growth**:
 
 $$
-\mu_{z^*,t}=\mu_{\Upsilon,t}^{\alpha/(1-\alpha)}\mu_{z,t}.
+\mu_{z^{\ast},t}=\mu_{\Upsilon,t}^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 - **(F24) Investment-to-capital transformation, homogeneous capital**:
@@ -293,7 +293,7 @@ $$
 
 $$
 (\tilde y+\phi)(1-\alpha)\hat h_t-\tilde y\hat{\tilde y}_t
-+\left((\tilde y+\phi)\alpha-\frac{\tilde r\bar k}{\mu_{z^*}\mu_\Upsilon}\right)\hat u_t
++\left((\tilde y+\phi)\alpha-\frac{\tilde r\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)\hat u_t
 +(\tilde y+\phi)\alpha\hat{\bar k}_{t-1}
 =(\tilde y+\phi)\alpha\hat\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
@@ -305,9 +305,9 @@ $$
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)\hat c_t
-+\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^*}}\right)\bar k\,\hat i_t
++\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,\hat i_t
 -(\tilde y+\phi)(1-\alpha)\hat h_t-\eta'c^2/q\,\hat q_t \\
-&+\left(\frac{\tilde r\bar k}{\mu_{z^*}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)\hat u_t
+&+\left(\frac{\tilde r\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}-(\tilde y+\phi)\alpha\right)\hat u_t
 -(\tilde y+\phi)\alpha\hat{\bar k}_{t-1}
 +(\tilde y+\phi)\alpha\hat\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
@@ -377,19 +377,19 @@ $$
 
 The source paper describes a non-stochastic steady state on a balanced-growth path. The MMB implementation supplies a concrete steady-state normalization for the linear model:
 
-1. Compute \(\mu_{z^*}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z\).
+1. Compute \(\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z\).
 2. Compute the steady-state capital rental term:
 
 $$
-\tilde r=\frac{\mu_\Upsilon\mu_{z^*}}{\beta}-(1-\delta).
+\tilde r=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta).
 $$
 
 3. Compute steady-state inflation and nominal gross interest:
 
 $$
-\pi=\frac{x}{\mu_{z^*}},
+\pi=\frac{x}{\mu_{z^{\ast}}},
 \qquad
-R=\frac{\pi\mu_{z^*}}{\beta}.
+R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
 
 4. Compute the money-demand transaction-cost slope from velocity:

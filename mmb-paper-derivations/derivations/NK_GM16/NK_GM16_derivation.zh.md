@@ -67,7 +67,7 @@ $$
 完全国际金融市场给出风险共享条件，将国内消费与世界消费、实际汇率和相对偏好冲击相联系。出口需求是外生需求模块，而不是国内优化主体：
 
 $$
-X_t=\nu S_tY_t^*.
+X_t=\nu S_tY_t^{\ast}.
 $$
 
 外国模块给出两个独立冲击：`z_{1,t}^*` 推动世界产出/出口需求，`z_{2,t}^*` 推动世界实际利率。
@@ -101,7 +101,7 @@ $$
 - **(F4) 外币债券欧拉方程 / UIP 来源**：
 
 $$
-1=\beta(1+i_t^*)E_t\left[
+1=\beta(1+i_t^{\ast})E_t\left[
 \left(\frac{C_t}{C_{t+1}}\right)
 \left(\frac{Z_{t+1}}{Z_t}\right)
 \left(\frac{P_t}{P_{t+1}}\right)
@@ -112,13 +112,13 @@ $$
 - **(F5) 对数线性未覆盖利率平价**：
 
 $$
-i_t=i_t^*+E_t\{\Delta e_{t+1}\}.
+i_t=i_t^{\ast}+E_t\{\Delta e_{t+1}\}.
 $$
 
 - **(F6) 完全市场风险共享**：
 
 $$
-C_t=C_t^*\mathcal{Q}_t\left(\frac{Z_t}{Z_t^*}\right).
+C_t=C_t^{\ast}\mathcal{Q}_t\left(\frac{Z_t}{Z_t^{\ast}}\right).
 $$
 
 - **(F7) 重设工资最优性条件**：
@@ -188,13 +188,13 @@ $$
 - **(F16) 国内商品市场出清，对数线性形式**：
 
 $$
-y_t=(1-\nu)c_t+\nu(2-\nu)s_t+\nu z_{1,t}^*.
+y_t=(1-\nu)c_t+\nu(2-\nu)s_t+\nu z_{1,t}^{\ast}.
 $$
 
 - **(F17) MMB 系统使用的风险共享需求关系**：
 
 $$
-c_t=(1-\nu)s_t+z_t-z_{2,t}^*.
+c_t=(1-\nu)s_t+z_t-z_{2,t}^{\ast}.
 $$
 
 - **(F18) 消费欧拉方程，对数线性形式**：
@@ -314,13 +314,13 @@ $$
 - **(F36) 外国出口需求冲击**：
 
 $$
-z_{1,t}^*=\rho_1^*z_{1,t-1}^*+\varepsilon_{1,t}^*.
+z_{1,t}^{\ast}=\rho_1^{\ast}z_{1,t-1}^{\ast}+\varepsilon_{1,t}^{\ast}.
 $$
 
 - **(F37) 外国世界利率冲击**：
 
 $$
-z_{2,t}^*=\rho_2^*z_{2,t-1}^*+\varepsilon_{2,t}^*.
+z_{2,t}^{\ast}=\rho_2^{\ast}z_{2,t-1}^{\ast}+\varepsilon_{2,t}^{\ast}.
 $$
 
 - **(F38) 工资税冲击，MMB 中按 IRF 方向选择符号**：
@@ -332,13 +332,13 @@ $$
 - **(F39) 出口冲击对应的世界产出关系**：
 
 $$
-Y_t^*=Z_{1,t}^*.
+Y_t^{\ast}=Z_{1,t}^{\ast}.
 $$
 
 - **(F40) 世界利率关系**：
 
 $$
-i_t^*=\rho+(1-\rho_2^*)z_{2,t}^*.
+i_t^{\ast}=\rho+(1-\rho_2^{\ast})z_{2,t}^{\ast}.
 $$
 
 ## 6. Steady-State Solution
@@ -346,19 +346,19 @@ $$
 MMB 模型围绕零通胀对称稳态线性化。所有对数偏离内生变量和外生冲击在确定性稳态中为零：
 
 $$
-y=c=s=z=z_1^*=z_2^*=i=\pi=p=n=a=\tau=\omega=\pi^w=e=0.
+y=c=s=z=z_1^{\ast}=z_2^{\ast}=i=\pi=p=n=a=\tau=\omega=\pi^w=e=0.
 $$
 
 源论文采用对称稳态：
 
 $$
-S=1,\qquad C=C^*=Y^*,\qquad X=\nu Y^*,\qquad C_F=\nu C,\qquad Y=C.
+S=1,\qquad C=C^{\ast}=Y^{\ast},\qquad X=\nu Y^{\ast},\qquad C_F=\nu C,\qquad Y=C.
 $$
 
 忽略常数时，自然就业为：
 
 $$
-n_t^n=\frac{\nu}{1+\varphi}(z_{1,t}^*+z_{2,t}^*-z_t)-\frac{1}{1+\varphi}\tau_t.
+n_t^n=\frac{\nu}{1+\varphi}(z_{1,t}^{\ast}+z_{2,t}^{\ast}-z_t)-\frac{1}{1+\varphi}\tau_t.
 $$
 
 用于定义 gap 的自然配置为：
@@ -368,11 +368,11 @@ y_t^n=a_t+(1-\alpha)n_t^n,
 $$
 
 $$
-s_t^n=a_t-z_t+z_{2,t}^*-\tau_t-(\alpha+\varphi)n_t^n,
+s_t^n=a_t-z_t+z_{2,t}^{\ast}-\tau_t-(\alpha+\varphi)n_t^n,
 $$
 
 $$
-c_t^n=z_t+(1-\nu)s_t^n-z_{2,t}^*,
+c_t^n=z_t+(1-\nu)s_t^n-z_{2,t}^{\ast},
 $$
 
 $$
@@ -414,8 +414,8 @@ $$
 | 内生变量 | `ygap`, `cgap`, `sgap`, `wgap`, `ngap` | 相对自然配置的 gap | (F28)-(F31) |
 | 内生变量 | `yn`, `cn`, `sn`, `nn`, `wpn` | 自然值 | 稳态/自然配置模块 |
 | 内生变量 | `z`, $z_t$ | 国内偏好状态 | (F34) |
-| 内生变量 | `zx1`, $z_{1,t}^*$ | 出口需求状态 | (F36), (F39) |
-| 内生变量 | `zx2`, $z_{2,t}^*$ | 世界利率状态 | (F37), (F40) |
+| 内生变量 | `zx1`, $z_{1,t}^{\ast}$ | 出口需求状态 | (F36), (F39) |
+| 内生变量 | `zx2`, $z_{2,t}^{\ast}$ | 世界利率状态 | (F37), (F40) |
 | 外生变量 | `ez`, `ea`, `ezx1`, `ezx2`, `et` | 偏好、技术、出口、世界利率和税收过程创新 | (F34)-(F38) |
 | 参数 | `bet`, $\beta$ | 贴现因子 | (F3), (F10), (F15), (F25) |
 | 参数 | `phi`, $\varphi$ | 劳动负效用曲率 | (F25), natural allocation |
