@@ -20,9 +20,9 @@
 Perfectly competitive final-good firms choose nontradable input basket $N_{N,t}(x)$, domestic tradable basket $Q_t(x)$, and imported tradable basket $M_t(x)$ to minimize input cost subject to a nested CES production function. The paper's OCR for the outer nesting around Eq. (1) is damaged, so the cleaned representation below is marked `needs_review`:
 
 $$
-A_t(x)=\left\{(1-\gamma_t)^{1/\epsilon}N_{N,t}(x)^{1-1/\epsilon}
+A_t(x)=\Bigg\lbrace(1-\gamma_t)^{1/\epsilon}N_{N,t}(x)^{1-1/\epsilon}
 +\gamma_t^{1/\epsilon}\left[\nu^{1/\epsilon_{QM}}Q_t(x)^{1-1/\epsilon_{QM}}
-+(1-\nu)^{1/\epsilon_{QM}}\left(M_t(x)(1-\Gamma_{M,t}(x))\right)^{1-1/\epsilon_{QM}}\right]^{\frac{\epsilon_{QM}}{\epsilon_{QM}-1}\left(1-\frac{1}{\epsilon}\right)}\right\}^{\frac{\epsilon}{\epsilon-1}}.
++(1-\nu)^{1/\epsilon_{QM}}\left(M_t(x)(1-\Gamma_{M,t}(x))\right)^{1-1/\epsilon_{QM}}\right]^{\frac{\epsilon_{QM}}{\epsilon_{QM}-1}\left(1-\frac{1}{\epsilon}\right)}\Bigg\rbrace^{\frac{\epsilon}{\epsilon-1}}.
 \quad \text{needs_review}
 $$
 

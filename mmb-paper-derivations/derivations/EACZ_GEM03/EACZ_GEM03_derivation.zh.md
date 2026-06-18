@@ -20,9 +20,9 @@
 完全竞争的最终品企业选择非贸易品投入篮子 $N_{N,t}(x)$、国内贸易品篮子 $Q_t(x)$ 和进口贸易品篮子 $M_t(x)$，在嵌套 CES 生产函数约束下最小化投入成本。论文 Eq. (1) 的外层嵌套存在 OCR 损坏，所以下面的清理形式标记为 `needs_review`：
 
 $$
-A_t(x)=\left\{(1-\gamma_t)^{1/\epsilon}N_{N,t}(x)^{1-1/\epsilon}
+A_t(x)=\Bigg\lbrace(1-\gamma_t)^{1/\epsilon}N_{N,t}(x)^{1-1/\epsilon}
 +\gamma_t^{1/\epsilon}\left[\nu^{1/\epsilon_{QM}}Q_t(x)^{1-1/\epsilon_{QM}}
-+(1-\nu)^{1/\epsilon_{QM}}\left(M_t(x)(1-\Gamma_{M,t}(x))\right)^{1-1/\epsilon_{QM}}\right]^{\frac{\epsilon_{QM}}{\epsilon_{QM}-1}\left(1-\frac{1}{\epsilon}\right)}\right\}^{\frac{\epsilon}{\epsilon-1}}.
++(1-\nu)^{1/\epsilon_{QM}}\left(M_t(x)(1-\Gamma_{M,t}(x))\right)^{1-1/\epsilon_{QM}}\right]^{\frac{\epsilon_{QM}}{\epsilon_{QM}-1}\left(1-\frac{1}{\epsilon}\right)}\Bigg\rbrace^{\frac{\epsilon}{\epsilon-1}}.
 \quad \text{needs_review}
 $$
 
