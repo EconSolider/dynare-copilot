@@ -112,7 +112,7 @@ After installation, **describe the task directly in Chinese or English** inside 
 
 You can also invoke it manually with `/dynare-copilot:dynare-copilot`.
 
-The skill bundles two reference libraries under `references/` — 149 MMB replication models for economic structure and 89 Pfeifer examples for Dynare syntax — plus your own growing model archive. When asked to build a model it searches these local libraries first, and only falls back to web search for paper-specific details neither covers. See [How It Works](#how-it-works) for the lookup logic, and [Repository Structure](#repository-structure) for what each library contains.
+The skill bundles two reference libraries under `references/` — 149 MMB replication models for economic structure and 89 Pfeifer examples for Dynare syntax — plus a model archive seeded with 161 MMB paper derivations and growing with the runnable models you build. When asked to build a model it searches these local libraries first, and only falls back to web search for paper-specific details neither covers. See [How It Works](#how-it-works) for the lookup logic, and [Repository Structure](#repository-structure) for what each library contains.
 
 ## Supported Tasks
 
@@ -201,12 +201,12 @@ plugins/dynare-copilot/                  # Plugin
       └── references/                # Detail files loaded on demand + model catalogs + plotting & run scripts
           ├── catalog.csv            # Index of 149 MMB replication models (model structure reference)
           ├── catalog-code.csv       # Index of 89 Pfeifer examples: 41 DSGE_mod + 48 Advanced Dynare course (programming logic reference)
-          ├── model-archive-catalog.csv # Index of your accumulated models (grows as you work)
+          ├── model-archive-catalog.csv # Index of the model archive: 161 MMB paper derivations + your accumulated runnable models (a Status column tells them apart)
           ├── known-issues.md       # Real-world bug log (symptom → cause → fix), grows via encode-back
           ├── matlab-workflow.md    # MATLAB-side workflow: decouple solve/plot, cache oo_, multi-model comparison
           ├── examples/              # 149 MMB rep-mmb replication .mod files (named by ModelID)
           ├── examples-code/         # 89 Pfeifer .mod files in 22 subfolders: 41 DSGE_mod + 48 Advanced Dynare course (Dynare_Course/, by chapter)
-          └── model-archive/         # Your archived .mod files and derivation docs, built up over time
+          └── model-archive/         # 161 MMB paper-derivation references (derivation-only, no .mod) + your archived runnable models; per-model subfolders, plus _mmb-provenance/ for source metadata
 paper-candidates/                    # Candidate papers shortlisted for future inclusion (not part of the skill)
 ```
 
@@ -241,11 +241,11 @@ paper-candidates/                    # Candidate papers shortlisted for future i
 | `catalog.csv`               | Index of the 149-model MMB reference library:`ModelID`, paper, authors, journal, model type, economy, category (14 buckets), and key features. Used to answer "how should this economic mechanism be structured?"                                                                                                                      |
 | `catalog-code.csv`          | Index of the 89-example Pfeifer programming library (41 DSGE_mod + 48 *Advanced Dynare* course):`CodeID`, folder, paper, authors, model type, `DynareFeatures` (grep target for commands/blocks), category (11 buckets). Used to answer "how do I write this Dynare block/command?"                                                  |
 | `catalog-lookup.md`         | How to search both catalogs by feature, the category indexes, model archive lookup, and caveats on using reference `.mod` files (linearized vs nonlinear, reference not verbatim copy)                                                                                                                                                 |
-| `model-archive-catalog.csv` | Index of models you've built across sessions; same columns as `catalog.csv` plus a `Task` and `DateAdded` field. Grows automatically at the end of each modeling task.                                                                                                                                                             |
-| `model-archive.md`          | Spec for the personal model archive: directory structure, how to search it, the archiving flow, and fresh-install initialization.                                                                                                                                                                                                        |
+| `model-archive-catalog.csv` | Index of the model archive; same columns as `catalog.csv` plus `Task`, `DateAdded`, and a `Status` field. `Status` distinguishes the 161 `derivation-only (needs_review)` MMB paper derivations (no `.mod` — read for structure, verify against the paper before use) from the `runnable` models you build across sessions (grows automatically at the end of each modeling task).                                                                                                                                                             |
+| `model-archive.md`          | Spec for the model archive: the two entry kinds (runnable vs derivation-only), directory structure, how to search it, the archiving flow, and fresh-install initialization.                                                                                                                                                                                                        |
 | `examples/`                 | The 149 MMB rep-mmb replication `.mod` files (named by `ModelID`). Answers "what's the economic structure?"                                                                                                                                                                                                                          |
 | `examples-code/`            | 89 Pfeifer `.mod` files (and key `.m` helpers) in 22 subfolders: 41 from DSGE_mod + 48 from his *Advanced Dynare* course (under `Dynare_Course/`, organized by chapter). Answers "how is this Dynare feature implemented?" Covers: RBC basics, NK linearized/nonlinear, TANK, estimation (ML/Bayesian/IRF-matching), method of moments, optimal policy, higher-order methods, perfect foresight, OccBin, open economy, welfare, news shocks, forward guidance, identification, forecasting. |
-| `model-archive/`            | Archive of `.mod` files and derivation docs from your past sessions. Consulted automatically on future modeling tasks, ahead of web search.                                                                                                                                                                                            |
+| `model-archive/`            | The model archive, one subfolder per model. Holds 161 MMB paper-derivation references (derivation-only: `*_derivation.en.md` / `.zh.md`, no `.mod`) plus the runnable `.mod`/derivation docs from your past sessions; `_mmb-provenance/` keeps the MMB source metadata. Consulted automatically on future modeling tasks, ahead of web search.                                                                                                                                                                                            |
 
 </details>
 

@@ -5,25 +5,44 @@
 
 ---
 
+## 两类条目（catalog 的 `Status` 列区分）
+
+存档库混装两种条目，靠 `model-archive-catalog.csv` 的 **`Status`** 列区分，检索命中后**先看这一列**：
+
+| `Status` | 内容 | 怎么用 |
+| -------- | ---- | ------ |
+| `runnable` | 历次建模任务沉淀的可复跑模型（含 `.mod` + 稳态/辅助 .m） | 可整夹复制、直接跑 |
+| `derivation-only (needs_review)` | 161 篇 MMB 论文推导（由 `mmb-paper-derivations` 整合）；**只有推导 md，无 `.mod`/无稳态文件**，多为 OCR 首过、未经 Dynare 运行验证 | **只读推导取经济结构**（FOC/时序/机制），落进 Dynare 前对照论文核对，勿当可运行实现 |
+
 ## 目录结构
 
-**每个模型在存档库里有自己的子文件夹**（文件夹名 = ModelID），子文件夹里放该模型**全部运行所需文件**：
+**每个模型在存档库里有自己的子文件夹**（文件夹名 = ModelID）。两类条目的文件构成不同：
 
 ```
 references/
-├── model-archive-catalog.csv        ← 存档库索引（格式同 catalog.csv，可同一 grep 命令搜索）
+├── model-archive-catalog.csv        ← 存档库索引（格式同 catalog.csv + Task/DateAdded/Status 列）
 └── model-archive/
-    └── <ModelID>/                    ← 每个模型一个子文件夹（文件夹名 = ModelID）
-        ├── <ModelID>.mod            ← Dynare 模型文件（必有）
-        ├── <ModelID>_derivation.md  ← 配套推导文件（可选）
-        ├── <ModelID>_steadystate.m  ← 外部稳态文件（稳态写在 .m 里时必存，否则模型跑不出稳态）
-        └── ...                       ← 其余运行所需 .m / 数据：求解 driver、helper 函数、
-                                         params include、IRF-matching 目标函数等
+    ├── <ModelID>/                    ← runnable 条目：装齐全部运行所需文件
+    │   ├── <ModelID>.mod            ← Dynare 模型文件
+    │   ├── <ModelID>_derivation.md  ← 配套推导文件（可选）
+    │   ├── <ModelID>_steadystate.m  ← 外部稳态文件（稳态写在 .m 里时必存）
+    │   └── ...                       ← 求解 driver、helper、params include、IRF-matching 目标函数等
+    ├── <ModelID>/                    ← derivation-only 条目：只有推导 md，无 .mod
+    │   ├── <ModelID>_derivation.en.md / .zh.md   ← 英/中双语推导
+    │   ├── extraction_notes.md       ← 抽取说明
+    │   └── source_manifest.json      ← 论文来源 manifest（私有源 relpath + SHA256，不含全文）
+    └── _mmb-provenance/              ← MMB 整合的来源元数据（下划线开头 = 非模型，检索时跳过）
+        ├── metadata/                 ← model_metadata.csv、source_metadata.csv、sha256_manifest.csv 等
+        └── README.md                 ← 版权边界与快照说明
 ```
 
-**为什么用子文件夹 + 收齐 .m**：扁平存放时（早期做法）一来文件名前缀容易撞、归属不清，二来
-**稳态/系数常常算在 .m 文件里**（外部 `steadystate.m` 反解校准、BGG 的 ζ 系数 fzero、IRF-matching 目标
-函数等）——只存 `.mod + 推导 md` 会让模型**无法复跑**。一个子文件夹装齐 = 未来任务直接整夹复制即可运行。
+**为什么 runnable 用子文件夹 + 收齐 .m**：**稳态/系数常常算在 .m 文件里**（外部 `steadystate.m` 反解校准、
+BGG 的 ζ 系数 fzero、IRF-matching 目标函数等）——只存 `.mod + 推导 md` 会让模型**无法复跑**。
+一个子文件夹装齐 = 未来任务直接整夹复制即可运行。
+
+**为什么收 161 篇 derivation-only**：它们是 MMB 论文的逐方程推导（八节结构），是第1.3步"经济学怎么建模"
+的高密度参照——即便没有 `.mod`，把论文方程的 FOC/时序/校准翻译蓝本现成给到，价值很高；标 `needs_review`
+是诚实提示：当参照而非可信实现。
 
 全新安装时以上文件/目录均不存在，属正常情况——按下方"全新安装"处理。
 
@@ -44,8 +63,10 @@ ls references/model-archive/ | grep -i "swff\|bgg\|hank\|rbc\|nk"
 **全新安装时**：`references/model-archive-catalog.csv` 或 `references/model-archive/` 不存在 → 直接跳过，
 视为无命中，不报错，不尝试读取。
 
-有命中时，进对应子文件夹 `references/model-archive/<ModelID>/`，读其中的 `.mod`（必要时连带
-`<ModelID>_steadystate.m` 等 .m）作补充参照（只取内容/时序/校准，勿照搬形式）。
+有命中时，**先看该行 `Status`**，再进对应子文件夹 `references/model-archive/<ModelID>/`：
+- `runnable`：读其中的 `.mod`（必要时连带 `<ModelID>_steadystate.m` 等 .m）作补充参照（只取内容/时序/校准，勿照搬形式）。
+- `derivation-only (needs_review)`：只有推导 md（无 .mod），读 `<ModelID>_derivation.en.md`（或 `.zh.md`）取
+  FOC 结构、时序约定、机制与校准线索；这些是 OCR 首过、未运行验证，方程落进 Dynare 前务必对照论文核对，勿当可信实现照搬。
 
 ---
 
@@ -93,7 +114,7 @@ cp <工作目录>/run_<ModelID>.m            references/model-archive/<ModelID>/
 
 **c. 初始化 CSV 表头**（全新安装、文件不存在时执行）
 ```
-"ModelID","Task","Paper","Year","ModelType","Economy","Category","KeyFeatures","DateAdded"
+"ModelID","Task","Paper","Year","ModelType","Economy","Category","KeyFeatures","DateAdded","Status"
 ```
 
 **d. 追加 catalog 行**
@@ -111,6 +132,7 @@ cp <工作目录>/run_<ModelID>.m            references/model-archive/<ModelID>/
 | `Category` | 14 类桶之一（见 catalog-lookup.md），如 `3. Financial Accelerator / BGG-type Credit Frictions` |
 | `KeyFeatures` | 自由文本机制标签，供 grep 命中，如 `financial accelerator, Calvo pricing, @#define switch` |
 | `DateAdded` | 存档日期 YYYY-MM-DD |
+| `Status` | `runnable`（本任务产出的可复跑模型，含 .mod）或 `derivation-only (needs_review)`（仅推导参照，无 .mod）。任务归档新模型时填 `runnable` |
 
 **e. 完成报告**
 
@@ -122,6 +144,7 @@ cp <工作目录>/run_<ModelID>.m            references/model-archive/<ModelID>/
 ## 三、格式示例
 
 ```csv
-"ModelID","Task","Paper","Year","ModelType","Economy","Category","KeyFeatures","DateAdded"
-"bgg_financial","BGG 1999 financial accelerator vs frictionless NK; @#define macro switch WITH_FA","Bernanke Gertler Gilchrist 1999","1999","NK nonlinear","Closed economy","3. Financial Accelerator / BGG-type Credit Frictions","financial accelerator, CSV optimal contract, external finance premium, entrepreneur net worth, @#ifndef WITH_FA macro switch, Calvo nonlinear pricing, CEE investment adjustment costs","2026-06-13"
+"ModelID","Task","Paper","Year","ModelType","Economy","Category","KeyFeatures","DateAdded","Status"
+"bgg_financial","BGG 1999 financial accelerator vs frictionless NK; @#define macro switch WITH_FA","Bernanke Gertler Gilchrist 1999","1999","NK nonlinear","Closed economy","3. Financial Accelerator / BGG-type Credit Frictions","financial accelerator, CSV optimal contract, external finance premium, entrepreneur net worth, @#ifndef WITH_FA macro switch, Calvo nonlinear pricing, CEE investment adjustment costs","2026-06-13","runnable"
+"EA_SW03","MMB paper derivation reference (8-section FOC/equilibrium derivation, EN+ZH); no runnable .mod","An Estimated Stochastic Dynamic General Equilibrium Model of the Euro Area","2003","New Keynesian DSGE, medium-scale, Bayesian estimation","Euro Area","2. Estimated DSGE Benchmarks (Smets-Wouters Type)","Calvo prices, Calvo wages, habit formation, investment adj. costs, variable capital util.","2026-06-18","derivation-only (needs_review)"
 ```

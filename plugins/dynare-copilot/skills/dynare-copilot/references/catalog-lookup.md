@@ -165,8 +165,17 @@
 
 ## 用户模型存档库（model-archive-catalog.csv + model-archive/<ModelID>/）
 
-`references/model-archive-catalog.csv` 是历次任务积累的第三层索引，优先级低于两套主库。
-**每个模型在 `references/model-archive/<ModelID>/` 有独立子文件夹**，装齐复跑所需文件
-（`.mod`、推导 md、外部 `steadystate.m`、求解 driver、helper、params include 等）。
-检索时**两条路都走**：grep `model-archive-catalog.csv` 的机制标签，同时 `ls model-archive/` 扫子文件夹名。
+`references/model-archive-catalog.csv` 是积累型的第三层索引，优先级低于两套主库。
+**每个模型在 `references/model-archive/<ModelID>/` 有独立子文件夹**。索引含 `Status` 列，区分两类条目：
+
+- **`runnable`**：历次任务沉淀的可复跑模型，子文件夹装齐复跑所需文件
+  （`.mod`、推导 md、外部 `steadystate.m`、求解 driver、helper、params include 等）。
+- **`derivation-only (needs_review)`**：161 篇 MMB 论文推导（由原 MMB 推导归档整合而来），
+  子文件夹**只有推导 md**（`<ID>_derivation.en.md` / `.zh.md` + 抽取说明/来源 manifest），
+  **没有 `.mod`、没有稳态/运行文件**，且多为 OCR 首过、`needs_review`——当推导参照读、勿当可运行实现，
+  其方程在落进 Dynare 前需对照论文核对。
+
+检索时**两条路都走**：grep `model-archive-catalog.csv` 的机制标签（含 `Status` 区分），
+同时 `ls model-archive/` 扫子文件夹名（下划线开头的目录如 `_mmb-provenance/` 不是模型，跳过）。
+命中后先看该行 `Status`：`runnable` 可整夹复制/直接跑，`derivation-only` 只读推导取经济结构。
 检索方式、字段格式、存档流程详见 `references/model-archive.md`。

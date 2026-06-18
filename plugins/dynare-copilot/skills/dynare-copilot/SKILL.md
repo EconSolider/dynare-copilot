@@ -128,7 +128,7 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
 
 **经济建模参照优先级**（第1.3步，针对"模型结构该怎么设"）：
 ① 本地模型参考库 `references/catalog.csv`（149 篇 MMB/rep-mmb）——首选，论文忠实、时序与校准现成；
-② 用户模型存档库 `references/model-archive-catalog.csv`（历次任务积累，每个模型在 `references/model-archive/<ModelID>/` 独立子文件夹，含 .mod + 稳态/辅助 .m；检索时也 `ls` 扫文件夹名）——①无命中时次选；
+② 用户模型存档库 `references/model-archive-catalog.csv`（每个模型在 `references/model-archive/<ModelID>/` 独立子文件夹；catalog 有 `Status` 列区分两类：`runnable`=可复跑，含 .mod + 稳态/辅助 .m；`derivation-only (needs_review)`=161 篇 MMB 论文推导，仅推导 md、无 .mod、当参照读勿照搬。检索时也 `ls` 扫文件夹名）——①无命中时次选；
 ③ web 检索论文原文——两套本地库均无命中时兜底。
 
 **Dynare 编程逻辑参照优先级**（第1.3步②，针对"这个块/命令怎么写"）：
@@ -201,9 +201,11 @@ description: Write, run, debug, modify, and review Dynare .mod files across the 
            只取语法样板，不要照搬经济结构。
 
         两套均无命中 → 再查用户模型存档库：grep `references/model-archive-catalog.csv` 的机制标签，
-        同时 `ls references/model-archive/` 扫子文件夹名（folder = ModelID，兜底 catalog 漏写）；
-        若文件/目录不存在，直接跳过、不报错；有命中则进 `references/model-archive/<ModelID>/`
-        读其 `.mod`（必要时连带 `<ModelID>_steadystate.m` 等 .m，同样只取内容/时序/校准）。
+        同时 `ls references/model-archive/` 扫子文件夹名（folder = ModelID，兜底 catalog 漏写；
+        `_` 开头目录如 `_mmb-provenance/` 非模型，跳过）；若文件/目录不存在，直接跳过、不报错。
+        命中后**先看该行 `Status`**：`runnable` → 进子文件夹读 `.mod`（必要时连带 `<ModelID>_steadystate.m` 等 .m）；
+        `derivation-only (needs_review)` → 子文件夹只有推导 md（`<ModelID>_derivation.en.md`/`.zh.md`），读它取 FOC/时序/机制，
+        但属 OCR 首过未验证，落 Dynare 前对照论文核对。两类同样只取内容/时序/校准，勿照搬形式。
 
         命中后，第3步 web 检索降为兜底（仅补论文精确校准来源或某条推导细节）。
         **DSGE_mod 已本地化**，不再需要上网找 DSGE_mod——其关键 .mod 已全部在
