@@ -29,6 +29,7 @@
 除特别说明外，所有变量都是相对非随机稳态的对数偏离。令 $\bar{\beta}=\beta e^{(1-\sigma_c)\gamma}$。
 
 - **(F1) 消费欧拉方程**：
+
 $$
 c_t =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
@@ -40,6 +41,7 @@ c_t =
 $$
 
 - **(F2) 投资欧拉 / Tobin's Q 条件**：
+
 $$
 q_t^k=S'' e^{2\gamma}(1+\bar{\beta})
 \left(i_t-\frac{1}{1+\bar{\beta}}(i_{t-1}-z_t)
@@ -48,6 +50,7 @@ q_t^k=S'' e^{2\gamma}(1+\bar{\beta})
 $$
 
 - **(F3) 资本积累**：
+
 $$
 \bar{k}_t=
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
@@ -56,26 +59,31 @@ $$
 $$
 
 - **(F4) 有效资本服务**：
+
 $$
 k_t=u_t-z_t+\bar{k}_{t-1}.
 $$
 
 - **(F5) 资本利用率条件**：
+
 $$
 u_t=\frac{1-\psi}{\psi}r_t^k.
 $$
 
 - **(F6) 实际边际成本**：
+
 $$
 mc_t=w_t+\alpha l_t-\alpha k_t.
 $$
 
 - **(F7) 共同资本劳动比**：
+
 $$
 k_t=w_t-r_t^k+l_t.
 $$
 
 - **(F8) 价格 Phillips 曲线**：
+
 $$
 \pi_t=\kappa mc_t+
 \frac{\iota_p}{1+\iota_p\bar{\beta}}\pi_{t-1}
@@ -84,6 +92,7 @@ $$
 $$
 
 - **(F9) 价格 Phillips 曲线斜率**：
+
 $$
 \kappa=
 \frac{(1-\zeta_p\bar{\beta})(1-\zeta_p)}
@@ -91,6 +100,7 @@ $$
 $$
 
 - **(F10) 工资 Phillips 曲线**：
+
 $$
 \begin{aligned}
 w_t={}&
@@ -105,18 +115,21 @@ w_t={}&
 $$
 
 - **(F11) 家庭边际替代率工资**：
+
 $$
 w_t^h=\frac{1}{1-h e^{-\gamma}}
 (c_t-h e^{-\gamma}c_{t-1}+h e^{-\gamma}z_t)+\nu_l l_t.
 $$
 
 - **(F12) 金融摩擦利差条件**：
+
 $$
 E_t[\tilde{R}_{t+1}^k-R_t]
 =b_t+\zeta_{sp,b}(q_t^k+\bar{k}_t-n_t)+\tilde{\sigma}_{\omega,t}.
 $$
 
 - **(F13) 名义资本回报**：
+
 $$
 \tilde{R}_t^k-\pi_t=
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
@@ -125,6 +138,7 @@ $$
 $$
 
 - **(F14) 企业家净值**：
+
 $$
 \begin{aligned}
 n_t={}&
@@ -141,12 +155,14 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F15) 总生产函数**：
+
 $$
 y_t=\Phi_p(\alpha k_t+(1-\alpha)l_t)
 +\mathcal{I}\{\rho_z<1\}(\Phi_p-1)\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F16) 资源约束**：
+
 $$
 y_t=g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t
@@ -154,6 +170,7 @@ y_t=g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 $$
 
 - **(F17) 时变目标 Taylor 规则**：
+
 $$
 \begin{aligned}
 R_t={}&\rho_R R_{t-1}
@@ -163,31 +180,37 @@ R_t={}&\rho_R R_{t-1}
 $$
 
 - **(F18) 弹性价格/工资对应模型**：
+
 $$
 y_t^f=\mathcal{F}^{flex}(c_t^f,i_t^f,l_t^f,k_t^f,u_t^f,\bar{k}_t^f,w_t^f,r_t^f,q_t^{k,f}; \Theta),
 $$
+
 其中 $\mathcal{F}^{flex}$ 表示 (F1)-(F7)、(F11) 和 (F15)-(F16) 的弹性价格/工资版本。论文通过求解无名义刚性模型定义 $y_t^f$；实现交叉检查文件将其展开为一组平行方程。
 
 ## 5. Exogenous Processes
 
 - **(F19) 去趋势生产率**：
+
 $$
 \tilde{z}_t=\rho_z\tilde{z}_{t-1}+\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F20) 生产率的增长率效应**：
+
 $$
 z_t=\frac{1}{1-\alpha}(\rho_z-1)\tilde{z}_{t-1}
 +\frac{1}{1-\alpha}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F21) 政府支出**：
+
 $$
 g_t=\rho_g g_{t-1}+\sigma_g\varepsilon_{g,t}
 +\eta_{gz}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F22) 价格加成过程**：
+
 $$
 \lambda_{f,t}=\rho_{\lambda_f}\lambda_{f,t-1}
 +\sigma_{\lambda_f}\varepsilon_{\lambda_f,t}
@@ -195,6 +218,7 @@ $$
 $$
 
 - **(F23) 工资加成过程**：
+
 $$
 \lambda_{w,t}=\rho_{\lambda_w}\lambda_{w,t-1}
 +\sigma_{\lambda_w}\varepsilon_{\lambda_w,t}
@@ -202,26 +226,31 @@ $$
 $$
 
 - **(F24) 时变通胀目标**：
+
 $$
 \pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
 - **(F25) 贴现率楔子**：
+
 $$
 b_t=\rho_b b_{t-1}+\sigma_b\varepsilon_{b,t}.
 $$
 
 - **(F26) 投资边际效率**：
+
 $$
 \mu_t=\rho_\mu\mu_{t-1}+\sigma_\mu\varepsilon_{\mu,t}.
 $$
 
 - **(F27) 货币政策残差**：
+
 $$
 r_t^m=\rho_{r^m}r_{t-1}^m+\sigma_{r^m}\varepsilon_{r^m,t}.
 $$
 
 - **(F28) 金融风险/利差冲击**：
+
 $$
 \tilde{\sigma}_{\omega,t}=\rho_{\sigma_\omega}\tilde{\sigma}_{\omega,t-1}
 +\sigma_{\sigma_\omega}\varepsilon_{\sigma_\omega,t}.

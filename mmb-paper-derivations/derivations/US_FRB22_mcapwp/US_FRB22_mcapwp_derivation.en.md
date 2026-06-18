@@ -43,15 +43,21 @@ Because the paper-side source does not present primitive optimization problems, 
 
 - **(F1) Generic inertial monetary policy rule** (`needs_review` because OCR uses placeholder characters in nearby text):
 
-$$R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right]$$
+$$
+R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right]
+$$
 
 - **(F2) LINVER state-space representation** (`needs_review` because the paper states the reduced-form idea but does not print a full matrix system):
 
-$$A_0 x_t + A_1 x_{t-1} + A_f E_t x_{t+1} + B \varepsilon_t = 0$$
+$$
+A_0 x_t + A_1 x_{t-1} + A_f E_t x_{t+1} + B \varepsilon_t = 0
+$$
 
 - **(F3) Reduced form under a stable linear model** (`needs_review`; inferred from the paper's discussion of eliminating leads in the unique reduced form):
 
-$$x_t = H x_{t-1} + G \varepsilon_t$$
+$$
+x_t = H x_{t-1} + G \varepsilon_t
+$$
 
 The local `US_FRB22_mcapwp.mod` contains 274 named equations and a much larger number of assignment/equation lines. Those equations are recorded as `implementation_cross_check` evidence only and are not copied here as paper-side derivations.
 
@@ -61,15 +67,21 @@ The paper does not print a complete set of market-clearing equations. It describ
 
 - **(F4) Federal funds rate change identity** (`implementation_cross_check`; visible in the local `.mod`, not in the paper):
 
-$$\Delta rff_t = rff_t - rff_{t-1}$$
+$$
+\Delta rff_t = rff_t - rff_{t-1}
+$$
 
 - **(F5) Real federal funds rate identity** (`implementation_cross_check`; visible in the local `.mod`, not in the paper):
 
-$$rrff_t = rff_t - \frac{1}{4}\left(picxfe_t + picxfe_{t-1} + picxfe_{t-2} + picxfe_{t-3}\right)$$
+$$
+rrff_t = rff_t - \frac{1}{4}\left(picxfe_t + picxfe_{t-1} + picxfe_{t-2} + picxfe_{t-3}\right)
+$$
 
 - **(F6) Modelbase output and price reporting identities** (`implementation_cross_check`; visible in the local `.mod`, not in the paper):
 
-$$interest_t = rff_t,\qquad inflation_t = pic4_t,\qquad outputgap_t = xgap2_t$$
+$$
+interest_t = rff_t,\qquad inflation_t = pic4_t,\qquad outputgap_t = xgap2_t
+$$
 
 `needs_review`: the paper refers to full FRB/US/LINVER sectors but does not expose the full accounting identities in paper-side mathematical form.
 
@@ -79,15 +91,21 @@ The paper describes stochastic simulations using historical equation residuals, 
 
 - **(F7) Generic linear shock-driven equation residual representation** (`needs_review`; paper-level abstraction, not a printed equation):
 
-$$u_{j,t} = e_{j,t},\qquad e_{j,t}\sim \mathcal{D}_{hist}$$
+$$
+u_{j,t} = e_{j,t},\qquad e_{j,t}\sim \mathcal{D}_{hist}
+$$
 
 - **(F8) State-contingent sampling law** (`needs_review`; summarizes the paper's three-state simulation design):
 
-$$e_t \sim \mathcal{D}(s_t),\qquad s_t\in\{\text{normal},\text{mild slump},\text{severe slump}\}$$
+$$
+e_t \sim \mathcal{D}(s_t),\qquad s_t\in\{\text{normal},\text{mild slump},\text{severe slump}\}
+$$
 
 - **(F9) Fiscal-stabilization impulse mapping** (`needs_review`; paper appendix concept, not a full structural equation):
 
-$$fiscal_t = \kappa_{fs}\,\varepsilon^{fiscal}_t$$
+$$
+fiscal_t = \kappa_{fs}\,\varepsilon^{fiscal}_t
+$$
 
 Implementation cross-check: the local `US_FRB22_mcapwp.json` lists many equation residual shocks plus `interest_` and `fiscal_`; the local `.mod` adds exogenous controls and dummy variables used in the modelbase package.
 
@@ -97,11 +115,15 @@ LINVER is not linearized around a textbook deterministic steady state. The paper
 
 - **(F10) Linearization point definition** (`needs_review`; paper-level normalization):
 
-$$x_t = X_t - \bar X_{2018-2019}\quad\text{or}\quad x_t = \log X_t - \log \bar X_{2018-2019}$$
+$$
+x_t = X_t - \bar X_{2018-2019}\quad\text{or}\quad x_t = \log X_t - \log \bar X_{2018-2019}
+$$
 
 - **(F11) Baseline zero-gap convention for reported gaps** (`needs_review`; simulation convention):
 
-$$\bar{xgap2}=0,\qquad \bar{ugap}=0,\qquad \bar{\pi}^{core}=0\ \text{as deviation from baseline/target}$$
+$$
+\bar{xgap2}=0,\qquad \bar{ugap}=0,\qquad \bar{\pi}^{core}=0\ \text{as deviation from baseline/target}
+$$
 
 There is no `steady_state_model` reconstruction in this first-pass entry. Runtime validation and exact steady-state/baseline replication are deferred.
 

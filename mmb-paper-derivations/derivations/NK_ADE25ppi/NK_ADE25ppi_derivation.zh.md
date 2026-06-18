@@ -75,16 +75,19 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) Home 劳动静态条件**：
+
 $$
 \ell'(H_t)=A_t\,u_{c_h,t}\,E_t\{\Omega_{t,t+1}\}.
 $$
 
 - **(F2) Home 最优进口支出条件**：
+
 $$
 u_{c_h,t}(1+\tau_t)S_t=u_{c_f,t}.
 $$
 
 - **(F3) 以 Home 商品计价的 Home Euler 方程，与 PPI 货币政策结合**：
+
 $$
 E_t\left[
 \frac{\pi_{h,t}^{\mu_\pi}}{\pi_{h,t+1}}
@@ -93,6 +96,7 @@ E_t\left[
 $$
 
 - **(F4) Home 企业定价得到的 Rotemberg Phillips 曲线**：
+
 $$
 E_t\{\Omega_{t,t+1}\}
 =\mathcal{W}_t A_t^{-1}
@@ -101,6 +105,7 @@ E_t\{\Omega_{t,t+1}\}
 $$
 
 - **(F5) 定量模型使用的 Home 边际成本表示** needs_review：
+
 $$
 MC_t=
 \frac{\left(\chi P_t C_t^\sigma L_t^\psi\right)^{1-\alpha}P_{x,t}^{\alpha}}
@@ -108,6 +113,7 @@ MC_t=
 $$
 
 - **(F6) Home 中间品需求条件** needs_review：
+
 $$
 X_t=
 \left(
@@ -117,21 +123,25 @@ X_t=
 $$
 
 - **(F7) Home 生产函数**：
+
 $$
 Y_t=A_tL_t^{1-\alpha}X_t^\alpha.
 $$
 
 - **(F8) Foreign 劳动静态条件** needs_review：
+
 $$
 \ell^{\ast'}(H_t^{\ast})=A_t^{\ast}\,u_{c_f^{\ast},t}^{\ast}\,E_t\{\Omega_{t,t+1}^{\ast}\}.
 $$
 
 - **(F9) Foreign 最优进口支出条件** needs_review：
+
 $$
 u_{c_f^{\ast},t}^{\ast}\frac{1+\tau_t^{\ast}}{S_t}=u_{c_h^{\ast},t}^{\ast}.
 $$
 
 - **(F10) 以 Foreign 商品计价的 Foreign Euler 方程，与 PPI 货币政策结合** needs_review：
+
 $$
 E_t\left[
 \frac{(\pi_{f,t}^{\ast})^{\mu_\pi^{\ast}}}{\pi_{f,t+1}^{\ast}}
@@ -140,6 +150,7 @@ E_t\left[
 $$
 
 - **(F11) Foreign Rotemberg Phillips 曲线** needs_review：
+
 $$
 E_t\{\Omega_{t,t+1}^{\ast}\}
 =\mathcal{W}_t^{\ast}(A_t^{\ast})^{-1}
@@ -148,6 +159,7 @@ E_t\{\Omega_{t,t+1}^{\ast}\}
 $$
 
 - **(F12) Foreign 生产函数**：
+
 $$
 Y_t^{\ast}=A_t^{\ast}(L_t^{\ast})^{1-\alpha}(X_t^{\ast})^\alpha.
 $$
@@ -155,37 +167,44 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) 简单模型中的 Home 商品市场出清**：
+
 $$
 A_tH_t\Phi_t=C_{h,t}+C_{h,t}^{\ast},\qquad
 \Phi_t=1-\frac{\phi}{2}(\pi_{h,t}-1)^2.
 $$
 
 - **(F14) 简单模型中的平衡贸易条件**：
+
 $$
 \bar{A}S_t^\eta=S_tC_{f,t}.
 $$
 
 - **(F15) 定量模型中的 Home 资源约束** needs_review：
+
 $$
 Y_t\left[1-\frac{\phi}{2}(\pi_{h,t}-1)^2\right]=D_t+D_{x,t}^{\ast}.
 $$
 
 - **(F16) 定量模型中的 Foreign 资源约束** needs_review：
+
 $$
 Y_t^{\ast}\left[1-\frac{\phi^{\ast}}{2}(\pi_{f,t}^{\ast}-1)^2\right]=D_t^{\ast}+D_{x,t}.
 $$
 
 - **(F17) Home CPI 和进口价格指数** needs_review：
+
 $$
 P_t=\left[\gamma_h+(1-\gamma_h)\left((1+\tau_t)S_t\right)^{1-\lambda}\right]^{1/(1-\lambda)}.
 $$
 
 - **(F18) Foreign CPI 和进口价格指数** needs_review：
+
 $$
 P_t^{\ast}=\left[\gamma_f+(1-\gamma_f)\left(\frac{1+\tau_t^{\ast}}{S_t}\right)^{1-\lambda}\right]^{1/(1-\lambda)}.
 $$
 
 - **(F19) 净国外资产积累和 UIP 条件** needs_review：
+
 $$
 b_t=\mathcal{B}(b_{t-1},S_t,P_t,P_t^{\ast},D_{x,t},D_{x,t}^{\ast}),\qquad
 E_t\left[\frac{S_{t+1}\Omega_t}{S_t\Omega_t^{\ast}(1+\nu(b_t-\bar{b}))}\right]=1.
@@ -194,22 +213,26 @@ $$
 ## 5. Exogenous Processes
 
 - **(F20) `NK_ADE25ppi` 的 Home PPI 货币政策规则**：
+
 $$
 R_t=\beta^{-1}\left(\frac{\pi_{h,t}}{\bar{\pi}_h}\right)^{\mu_\pi}\exp(e^R_t).
 $$
 
 - **(F21) Foreign PPI 货币政策规则**：
+
 $$
 R_t^{\ast}=\beta^{-1}\left(\frac{\pi_{f,t}^{\ast}}{\bar{\pi}_f^{\ast}}\right)^{\mu_\pi^{\ast}}\exp(e^{R^{\ast}}_t).
 $$
 
 - **(F22) 生产率过程**：
+
 $$
 \log A_t=\rho_a\log A_{t-1}+\varepsilon^A_t,\qquad
 \log A_t^{\ast}=\rho_a^{\ast}\log A_{t-1}^{\ast}+\varepsilon^{A^{\ast}}_t.
 $$
 
 - **(F23) MMB 实现交叉检查中使用的关税和货币冲击**：
+
 $$
 \tau_t=\bar{\tau}+e^T_t,\qquad
 \tau_t^{\ast}=\bar{\tau}^{\ast}+e^{T^{\ast}}_t,\qquad
@@ -228,10 +251,13 @@ $$
 5. 使用稳态企业条件求解边际成本。零通胀且没有销售补贴时，扭曲稳态包含垄断加成扭曲；若有 first-best 补贴，则 $\theta=1$。
 6. 由 (F5)-(F16) 求解劳动、中间品、产出和需求。完整闭式顺序为 needs_review，因为主 Markdown 引用附录 C 方程 (C40)-(C48) 而未列出。
 7. 对简单小国 PPI 情形，论文给出稳态最优关税：
+
 $$
 1+\tau^{ppi}=\frac{\eta}{\eta-1}\frac{1-\theta\Delta_1}{1-\Delta_1},
 $$
+
 其中
+
 $$
 \Delta_1=\frac{A^2u_{c_hc_h}}{\ell''(H)}
 \left(\theta+\frac{\phi}{\mu_\pi\epsilon}\right)<0.
@@ -242,10 +268,12 @@ $$
 - 本推导是非线性的。不要将这些方程视为手工对数线性化。
 - 使用生产者货币定价：黏性价格是国内生产者价格，因此 `ppi` 变体目标为 $\pi_{h,t}$ 和 $\pi_{f,t}^{\ast}$。
 - CPI 通胀与 PPI 通胀的差异来自关税调整贸易条件的变化。对 Home，论文写为
+
 $$
 \pi_{cpi,t}=\pi_{h,t}
 \frac{\mathcal{P}((1+\tau_t)S_t)}{\mathcal{P}((1+\tau_{t-1})S_{t-1})}.
 $$
+
 该公式不是 `NK_ADE25ppi` 的目标，但它识别了配对的 CPI 变体。
 - 债券/净国外资产是状态变量。MMB 实现使用滞后净国外资产和债务弹性 UIP 楔子；精确附录 C 记号为 needs_review。
 - 关税政策是相机抉择的：关税制定者选择当前关税时，将未来政策函数视为给定。

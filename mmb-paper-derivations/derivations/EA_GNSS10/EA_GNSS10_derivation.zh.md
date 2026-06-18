@@ -104,48 +104,57 @@ $$
 ## 3. 一阶条件（FOC）
 
 - **(F1) 耐心家庭消费边际效用**：
+
 $$
 \lambda_t^P=(1-a^P)\varepsilon_t^z(c_t^P-a^P c_{t-1}^P)^{-1}.
 $$
 
 - **(F2) 耐心家庭存款欧拉方程**：
+
 $$
 \lambda_t^P=\beta_P E_t\left[\lambda_{t+1}^P\frac{1+r_t^d}{\pi_{t+1}}\right].
 $$
 
 - **(F3) 耐心家庭住房需求**：
+
 $$
 \frac{\varepsilon_t^h}{h_t^P}-\lambda_t^P q_t^h+\beta_P E_t[\lambda_{t+1}^P q_{t+1}^h]=0.
 $$
 
 - **(F4) 非耐心家庭借款欧拉楔子**：
+
 $$
 \lambda_t^I-\beta_I E_t\left[\lambda_{t+1}^I\frac{1+r_t^{bH}}{\pi_{t+1}}\right]=s_t^I(1+r_t^{bH}).
 $$
 
 - **(F5) 带抵押价值的非耐心家庭住房需求**：
+
 $$
 \frac{\varepsilon_t^h}{h_t^I}-\lambda_t^I q_t^h+\beta_I E_t[\lambda_{t+1}^I q_{t+1}^h]+s_t^I m_t^I E_t[q_{t+1}^h\pi_{t+1}]=0.
 $$
 
 - **(F6) 企业家资本需求**：
+
 $$
 \lambda_t^E q_t^k=s_t^E m_t^E E_t[q_{t+1}^k\pi_{t+1}(1-\delta)]
 +\beta_E E_t\left[\lambda_{t+1}^E\left(q_{t+1}^k(1-\delta)+r_{t+1}^k u_{t+1}-\psi(u_{t+1})\right)\right].
 $$
 
 - **(F7) 企业家信贷需求楔子**：
+
 $$
 \lambda_t^E-s_t^E(1+r_t^{bE})
 =\beta_E E_t\left[\lambda_{t+1}^E\frac{1+r_t^{bE}}{\pi_{t+1}}\right].
 $$
 
 - **(F8) 资本利用率**：
+
 $$
 r_t^k=\psi'(u_t),\qquad \psi(u_t)=\xi_1(u_t-1)+\frac{\xi_2}{2}(u_t-1)^2 .
 $$
 
 - **(F9) 企业家劳动需求**：
+
 $$
 w_t^P=\mu(1-\alpha)\frac{y_t^E}{x_t l_t^{E,P}},
 \qquad
@@ -153,11 +162,13 @@ w_t^I=(1-\mu)(1-\alpha)\frac{y_t^E}{x_t l_t^{E,I}}.
 $$
 
 - **(F10) 批发银行利差和杠杆条件**：
+
 $$
 S_t^W\equiv R_t^b-r_t=-\kappa_{Kb}\left(\frac{K_t^b}{B_t}-\nu^b\right)\left(\frac{K_t^b}{B_t}\right)^2 .
 $$
 
 - **(F11) 黏性零售贷款利率设定**，借款人类型 $s\in\{H,E\}$：
+
 $$
 \begin{aligned}
 0=&1-\varepsilon_t^{bs}+\varepsilon_t^{bs}\frac{R_t^b}{r_t^{bs}}
@@ -170,6 +181,7 @@ $$
 $$
 
 - **(F12) 黏性存款利率设定**：
+
 $$
 \begin{aligned}
 0=&-1+\varepsilon_t^d-\varepsilon_t^d\frac{r_t}{r_t^d}
@@ -182,59 +194,71 @@ $$
 $$
 
 - **(F13) 资本积累和 Tobin's $q$**：
+
 $$
 k_t=(1-\delta)k_{t-1}+\left[1-\frac{\kappa_i}{2}\left(\frac{i_t\varepsilon_t^{qk}}{i_{t-1}}-1\right)^2\right]i_t ,
 $$
+
 以及资本品生产者对应的 $q_t^k$ 一阶条件。OCR/来源方程在提升审查状态前需要公式核对：`needs_review`。
 
 - **(F14) 价格和工资菲利普斯曲线**：
+
 $$
 \text{Rotemberg price FOC and two wage-union FOCs with indexation to lagged and steady-state inflation.}
 $$
+
 论文和实现都包含这些模块，但精确系数归一化需要源级公式审查：`needs_review`。
 
 ## 4. 市场出清与总量恒等式
 
 - **(F15) 家庭抵押约束**：
+
 $$
 (1+r_t^{bH})b_t^I=m_t^I E_t[q_{t+1}^h h_t^I\pi_{t+1}].
 $$
 
 - **(F16) 企业家抵押约束**：
+
 $$
 (1+r_t^{bE})b_t^E=m_t^E E_t[q_{t+1}^k\pi_{t+1}(1-\delta)k_t^E].
 $$
 
 - **(F17) 银行资产负债表和银行资本积累**：
+
 $$
 B_t=B_t^H+B_t^E=D_t+K_t^b,\qquad
 \pi_tK_t^b=(1-\delta^b)K_{t-1}^b+j_{t-1}^b .
 $$
 
 - **(F18) 银行利润**：
+
 $$
 j_t^b=r_t^{bH}b_t^H+r_t^{bE}b_t^E-r_t^d d_t
 -\frac{\kappa_{Kb}}{2}\left(\frac{K_t^b}{B_t}-\nu^b\right)^2K_t^b-Adj_t^B .
 $$
 
 - **(F19) 总量变量**：
+
 $$
 C_t=c_t^P+c_t^I+c_t^E,\qquad
 B_t^H=b_t^I,\qquad B_t^E=b_t^E,\qquad D_t=d_t^P .
 $$
 
 - **(F20) 劳动、住房和资本加总**：
+
 $$
 l_t^{E,P}=l_t^P,\qquad l_t^{E,I}=l_t^I,\qquad
 \bar h=h_t^P+h_t^I,\qquad K_t=k_t^E .
 $$
 
 - **(F21) 商品市场资源约束**：
+
 $$
 y_t=c_t+q_t^k[k_t-(1-\delta)k_{t-1}]+k_{t-1}\psi(u_t)+\delta^b\frac{K_{t-1}^b}{\pi_t}+Adj_t .
 $$
 
 - **(F22) 货币政策规则**：
+
 $$
 (1+r_t)=(1+r)^{1-\phi_R}(1+r_{t-1})^{\phi_R}
 \left(\frac{\pi_t}{\pi}\right)^{\phi_\pi(1-\phi_R)}
@@ -247,6 +271,7 @@ $$
 论文给出持续性冲击的一般 AR(1) 形式：
 
 - **(F23) 一般持续性过程**：
+
 $$
 \varepsilon_t=(1-\rho_\varepsilon)\bar{\varepsilon}+\rho_\varepsilon\varepsilon_{t-1}+\eta_t^\varepsilon .
 $$
@@ -258,21 +283,25 @@ $$
 论文估计的是围绕确定性稳态的对数线性模型。来源中一稿稳态锚点包括：
 
 - **(F24) 贴现和利率锚点**：
+
 $$
 \beta_P=0.9943,\qquad \beta_I=\beta_E=0.975,\qquad \pi=1.
 $$
 
 - **(F25) 抵押和银行锚点**：
+
 $$
 m^I=0.7,\qquad m^E=0.35,\qquad \nu^b=0.09 .
 $$
 
 - **(F26) 生产和折旧锚点**：
+
 $$
 \alpha=0.25,\qquad \delta=0.025,\qquad \phi=1.
 $$
 
 - **(F27) markup/markdown 锚点**：
+
 $$
 \varepsilon^d=-1.46,\qquad \varepsilon^{bH}\approx 2.79,\qquad \varepsilon^{bE}\approx 3.12,\qquad
 \varepsilon^y=6,\qquad \varepsilon^l=5 .

@@ -352,7 +352,11 @@ $$
 4. 用债券 Euler 方程和通胀目标确定稳态名义净无风险利率 $R^e$。
 5. 用利用率、租金率、边际成本、生产和零利润固定成本条件求解 $r^k$, $s$, $\bar k$, $H$, $Y_z$, $\phi$。
 6. 在稳态 $S=0$ 且 $S'=0$ 时，由资本积累求投资：
-   $$I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.$$
+
+   $$
+   I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.
+   $$
+
 7. 设定政府支出使 $g/(C+I)=\eta_g/(1-\eta_g)$，等价于校准稳态中的 $g/Y=0.20$。
 8. 用资源约束和消费 FOC 确定 $C$, $\lambda_z$ 以及工资和价格块辅助变量 $F_w,K_w,F_p,K_p$。
 

@@ -63,6 +63,7 @@ The baseline learning specification is an AR(2) model with a constant for each f
 ## 3. First-Order Conditions
 
 - **(F1) Capital-goods producer FOC for investment adjustment**:
+
 $$
 \varepsilon^i_t Q_t\left(1-S\left(\frac{I_t}{I_{t-1}}\right)\right)
 =1+\varepsilon^i_t Q_tS'\left(\frac{I_t}{I_{t-1}}\right)\frac{I_t}{I_{t-1}}
@@ -74,6 +75,7 @@ S'\left(\frac{I_{t+1}}{I_t}\right)
 $$
 
 - **(F2) Linearized investment equation**:
+
 $$
 \hat i_t=\frac{1}{1+\bar\beta\gamma}
 \left(\hat i_{t-1}+\bar\beta\gamma E_t\hat i_{t+1}
@@ -81,6 +83,7 @@ $$
 $$
 
 - **(F3) Capital accumulation**:
+
 $$
 \hat k_t=\left(1-\frac{i_\ast}{k_\ast}\right)\hat k_{t-1}
 +\frac{i_\ast}{k_\ast}\hat i_t
@@ -88,21 +91,25 @@ $$
 $$
 
 - **(F4) Utilization FOC**:
+
 $$
 r^k_{t+1}=a'(U_{t+1}).
 $$
 
 - **(F5) Linearized capital utilization**:
+
 $$
 \hat u_t=\frac{1-\psi}{\psi}\hat r^k_t.
 $$
 
 - **(F6) Capital services**:
+
 $$
 \hat k^S_{t+1}=\hat u_{t+1}+\hat k_{t+1}.
 $$
 
 - **(F7) Expected return on capital**:
+
 $$
 E_tR^k_{t+1}
 =E_t\left[
@@ -112,6 +119,7 @@ E_tR^k_{t+1}
 $$
 
 - **(F8) Linearized expected return on capital**:
+
 $$
 E_t\hat R^K_{t+1}
 =\frac{1-\tau}{\bar R^K}E_t\hat Q_{t+1}
@@ -120,6 +128,7 @@ E_t\hat R^K_{t+1}
 $$
 
 - **(F9) External finance premium condition**:
+
 $$
 E_tR^k_{t+1}
 =E_t\left[
@@ -128,6 +137,7 @@ s\left(\frac{N_{t+1}}{Q_tK_{t+1}}\right)\varepsilon^b_tR_t
 $$
 
 - **(F10) Linearized external finance premium**:
+
 $$
 E_t\hat R^K_{t+1}
 =-el\left\{E_t\left[\hat N_{t+1}-\hat Q_t-\hat k_{t+1}\right]\right\}
@@ -135,6 +145,7 @@ E_t\hat R^K_{t+1}
 $$
 
 - **(F11) Entrepreneurial net worth law**:
+
 $$
 N_{t+1}
 =\varkappa\left[
@@ -144,6 +155,7 @@ R^K_tQ_{t-1}K_t
 $$
 
 - **(F12) Linearized net worth law**:
+
 $$
 \hat N_{t+1}
 =\varkappa\bar R^K\left[
@@ -153,6 +165,7 @@ $$
 $$
 
 - **(F13) Net worth with premium components**:
+
 $$
 \hat N_{t+1}
 =\varkappa\bar R^K\left[
@@ -164,6 +177,7 @@ $$
 $$
 
 - **(F14) Linearized consumption Euler equation, inherited SW07 block, needs_review**:
+
 $$
 \hat c_t=a_c\hat c_{t-1}+(1-a_c)\,E_t\hat c_{t+1}
 +a_l(\hat l_t-E_t\hat l_{t+1})
@@ -171,6 +185,7 @@ $$
 $$
 
 - **(F15) Production and marginal-cost relation, inherited SW07 block, needs_review**:
+
 $$
 \hat y_t=\Phi\left[\alpha\hat k^S_t+(1-\alpha)\hat l_t+\hat a_t\right],
 \qquad
@@ -178,11 +193,13 @@ $$
 $$
 
 - **(F16) Price Phillips curve, inherited SW07 block, needs_review**:
+
 $$
 \hat\pi_t=b_pE_t\hat\pi_{t+1}+i_p\hat\pi_{t-1}+k_p\hat{mc}_t+\hat\varepsilon^p_t.
 $$
 
 - **(F17) Wage Phillips curve, inherited SW07 block, needs_review**:
+
 $$
 \hat w_t=b_wE_t\hat w_{t+1}+i_w\hat w_{t-1}
 +\chi_w\left(\sigma_l\hat l_t+\hat\lambda_t-\hat w_t\right)
@@ -190,6 +207,7 @@ $$
 $$
 
 - **(F18) Monetary policy rule**:
+
 $$
 \hat R^n_t=\rho_R\hat R^n_{t-1}
 +(1-\rho_R)(r_\pi\hat\pi_t+r_y\widehat{ygap}_t)
@@ -198,11 +216,13 @@ $$
 $$
 
 - **(F19) Output gap approximation**:
+
 $$
 \widehat{ygap}_t=\hat y_t-\hat A_t.
 $$
 
 - **(F20) Fisher relation for real rate**:
+
 $$
 \hat R_t=\hat R^n_t-E_t\hat\pi_{t+1}.
 $$
@@ -210,6 +230,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F21) Resource constraint**:
+
 $$
 \hat y_t
 =\frac{(\bar R^K-1+\tau)k_\ast}{y_\ast}\hat u_t
@@ -220,6 +241,7 @@ $$
 $$
 
 - **(F22) Banking spread contribution in resource constraint, needs_review OCR**:
+
 $$
 \hat\mu^{bank}_t
 =\frac{k_\ast}{y_\ast}(\bar R^K-\bar R)\left(1-\frac{\bar N}{\bar K}\right)
@@ -227,11 +249,13 @@ $$
 $$
 
 - **(F23) Loan-financed capital purchase identity**:
+
 $$
 B_{t+1}=Q_tK_{t+1}-N_{t+1}.
 $$
 
 - **(F24) Annual inflation identity from implementation cross-check**:
+
 $$
 \hat\pi^{(4)}_t=\frac{1}{4}\left(4\hat\pi_t+4\hat\pi_{t-1}+4\hat\pi_{t-2}+4\hat\pi_{t-3}\right).
 $$
@@ -239,46 +263,55 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) Exogenous risk-premium shock**:
+
 $$
 \hat b_t=\rho_b\hat b_{t-1}+\epsilon^b_t.
 $$
 
 - **(F26) Investment-specific technology shock**:
+
 $$
 \hat q_t=\rho_q\hat q_{t-1}+\epsilon^i_t.
 $$
 
 - **(F27) Government spending shock with productivity spillover**:
+
 $$
 \hat g_t=\rho_g\hat g_{t-1}+\rho_{ga}\epsilon^a_t+\epsilon^g_t.
 $$
 
 - **(F28) Productivity shock**:
+
 $$
 \hat a_t=\rho_a\hat a_{t-1}+\epsilon^a_t.
 $$
 
 - **(F29) Price markup shock with moving-average term**:
+
 $$
 \hat\varepsilon^p_t=\rho_p\hat\varepsilon^p_{t-1}+\eta^p_t-\mu_p\eta^p_{t-1}.
 $$
 
 - **(F30) Wage markup shock with moving-average term**:
+
 $$
 \hat\varepsilon^w_t=\rho_w\hat\varepsilon^w_{t-1}+\eta^w_t-\mu_w\eta^w_{t-1}.
 $$
 
 - **(F31) Monetary policy shock**:
+
 $$
 \epsilon^r_t=\eta^r_t.
 $$
 
 - **(F32) Learning perceived law of motion**:
+
 $$
 y^f_{j,t}=\beta_{j,t-1}X_{j,t-1}+u_{j,t}.
 $$
 
 - **(F33) Kalman belief update**:
+
 $$
 \beta_{t/t}=\beta_{t/t-1}+K_t\tilde z_t,
 \qquad
@@ -286,11 +319,13 @@ P_{t/t}=(I-K_tX_{t-1})P_{t/t-1}.
 $$
 
 - **(F34) Belief prediction law**:
+
 $$
 (\beta_t-\bar\beta)=F(\beta_{t-1}-\bar\beta)+v_t.
 $$
 
 - **(F35) Actual law of motion under learning**:
+
 $$
 \begin{bmatrix}y_t\\w_t\end{bmatrix}
 =\mu_t+T_t\begin{bmatrix}y_{t-1}\\w_{t-1}\end{bmatrix}+R_t\epsilon_t.

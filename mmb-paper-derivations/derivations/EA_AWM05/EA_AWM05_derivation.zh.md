@@ -52,21 +52,25 @@ $$
 由于 AWM 私人部门模块是经验模型且大体 backward-looking，来源没有提供家庭或企业的结构 FOC。以下方程因此概括政策最优性目标和 AWM 实现方程。从实现交叉检查取得的方程标为 `needs_review`，因为论文把完整模型清单指向 Fagan et al. (2001) 和 Dieppe-Henry (2004)。
 
 - **(F1) 政策制定者期间损失**：
+
 $$
 \ell_t = (\pi_t-\pi^{\ast})^2 + \lambda gap_t^2 + \gamma (r_t-r_{t-1})^2.
 $$
 
 - **(F2) 政策评价损失**：
+
 $$
 \mathcal{L} = \sigma_\pi^2 + \lambda \sigma_{gap}^2 + \gamma \sigma_{\Delta r}^2.
 $$
 
 - **(F3) 通用简单利率规则**：
+
 $$
 r_t = \rho r_{t-1} + \alpha E_t\pi_{t+\theta} + \beta E_t gap_{t+\kappa}.
 $$
 
 - **(F4) MMB 灵活政策规则，implementation_cross_check，needs_review**：
+
 $$
 \begin{aligned}
 i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
@@ -79,6 +83,7 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 $$
 
 - **(F5) 就业方程，implementation_cross_check，needs_review**：
+
 $$
 \ell^n_t =
 \ell^n_{t-1}
@@ -91,6 +96,7 @@ $$
 $$
 
 - **(F6) 工资方程，implementation_cross_check，needs_review**：
+
 $$
 \Delta w^n_t =
 \Delta lprod_t + \Delta p^c_t - \omega_\pi \pi^c_{t-1}
@@ -102,6 +108,7 @@ $$
 $$
 
 - **(F7) GDP 平减指数通胀，implementation_cross_check，needs_review**：
+
 $$
 \pi^{yfd}_t =
 a_g y^r_{t-1} - a_\pi \pi^{yfd}_{t-1}
@@ -112,6 +119,7 @@ a_g y^r_{t-1} - a_\pi \pi^{yfd}_{t-1}
 $$
 
 - **(F8) 消费者价格通胀，implementation_cross_check，needs_review**：
+
 $$
 \pi^c_t =
 a_4\pi^c_{t-4}
@@ -123,6 +131,7 @@ a_4\pi^c_{t-4}
 $$
 
 - **(F9) 投资比率，implementation_cross_check，needs_review**：
+
 $$
 i^r_t =
 i^r_{t-1}+\Delta y^r_t
@@ -132,6 +141,7 @@ i^r_{t-1}+\Delta y^r_t
 $$
 
 - **(F10) 进口价格通胀，implementation_cross_check，needs_review**：
+
 $$
 \pi^m_t =
 a_m\pi^m_{t-1}
@@ -142,6 +152,7 @@ a_m\pi^m_{t-1}
 $$
 
 - **(F11) 私人消费比率，implementation_cross_check，needs_review**：
+
 $$
 c^r_t =
 c^r_{t-1}-\pi^{pot}_t
@@ -154,6 +165,7 @@ c^r_{t-1}-\pi^{pot}_t
 $$
 
 - **(F12) 长期债券利率，implementation_cross_check，needs_review**：
+
 $$
 \ell^T_t =
 \chi_T \frac{1}{20}\sum_{j=0}^{19} E_t s^n_{t+j}
@@ -165,37 +177,44 @@ $$
 以下条件概括实现交叉检查中可见的模型恒等式。它们为 `needs_review`，因为索引论文只给出高层模型描述，并把完整 AWM 清单引用到其他来源。
 
 - **(F13) 产出缺口定义**：
+
 $$
 gap_t = y^r_t-y^{pot}_t .
 $$
 
 - **(F14) 季度和年化消费者通胀定义**：
+
 $$
 \pi^q_t = 400\,\pi^c_t,\qquad
 \pi^{ann}_t = \pi^c_t+\pi^c_{t-1}+\pi^c_{t-2}+\pi^c_{t-3}.
 $$
 
 - **(F15) 模型恒等式中使用的潜在产出增长过程**：
+
 $$
 \pi^{pot}_t = \beta_B \pi^{pot}_{t-1} + \beta_B(k^s_{t-1}-k^s_{t-2}).
 $$
 
 - **(F16) 由就业得到的失业缺口**：
+
 $$
 urx_t = -\frac{1-\bar U}{\bar U}\ell^n_t .
 $$
 
 - **(F17) 劳动生产率**：
+
 $$
 lprod_t = y^r_t + y^{trend}_t - \ell^n_t .
 $$
 
 - **(F18) 单位劳动成本恒等式**：
+
 $$
 ulc_t = w^i_t-y^{trend}_t-y^r_t,\qquad ulc^T_t=w^n_t-y^{trend}_t .
 $$
 
 - **(F19) 资本存量积累，线性化比率形式**：
+
 $$
 k^s_t =
 \frac{1-\delta}{1+\bar g}k^s_{t-1}
@@ -204,6 +223,7 @@ k^s_t =
 $$
 
 - **(F20) 短期实际利率代理变量**：
+
 $$
 s^r_t =
 \frac{0.25}{100}\left(\frac{1}{1+\bar s/100}\right)^{0.75}s^n_t
@@ -211,6 +231,7 @@ s^r_t =
 $$
 
 - **(F21) 国内需求平减指数汇总**：
+
 $$
 f^d_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_X x^r_t
@@ -218,11 +239,13 @@ f^d_t =
 $$
 
 - **(F22) 贸易余额汇总**：
+
 $$
 tb_t = \omega_X x^n_t + (1-\omega_X)m^n_t .
 $$
 
 - **(F23) 实际 GDP 支出恒等式**：
+
 $$
 y^r_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_{TB}tb_t
@@ -230,11 +253,13 @@ y^r_t =
 $$
 
 - **(F24) 经常账户恒等式**：
+
 $$
 ca_t=\omega_{TB}tb_t+(1-\omega_{TB})nfn_t .
 $$
 
 - **(F25) 净外国资产积累**：
+
 $$
 nfa_t =
 \frac{1}{(1+\bar g)(1+\bar\pi)}(nfa_{t-1}-\pi^{pot}_t-\pi^{yfd}_t)
@@ -242,6 +267,7 @@ nfa_t =
 $$
 
 - **(F26) 私人收入恒等式**：
+
 $$
 y^p_t =
 \omega_Y y^r_t +(1-\omega_Y-\omega_T-\omega_N-\omega_D)g^y_t
@@ -249,12 +275,14 @@ y^p_t =
 $$
 
 - **(F27) 私人财富恒等式**：
+
 $$
 w^l_t =
 \omega_N nfa_t+\omega_K(k^s_t+i^d_t)+(1-\omega_N-\omega_K)g^d_t .
 $$
 
 - **(F28) 政府收入恒等式**：
+
 $$
 g^y_t =
 \omega_{tdn}tdn_t+\omega_{ssn}y^r_t+\omega_{tin}y^r_t+\omega_{ogn}y^r_t
@@ -267,11 +295,13 @@ $$
 实现包含就业、工资、平减指数、投资、贸易、消费、存货、出口、进口、长期利率、短期利率规则和财政支出的显式创新。论文侧文章强调货币政策冲击和固定财政规则，而不是紧凑的 DSGE 冲击列表。
 
 - **(F29) 政策规则中的利率冲击，implementation_cross_check**：
+
 $$
 i_t = \cdots + \sigma_i \varepsilon^i_t .
 $$
 
 - **(F30) 政府消费冲击，implementation_cross_check，needs_review**：
+
 $$
 g^c_t-\bar a_g g^c_{t-1}+\pi^{pot}_t =
 \rho_g(g^c_{t-1}-\bar a_g g^c_{t-2}+\pi^{pot}_{t-1})
@@ -279,6 +309,7 @@ g^c_t-\bar a_g g^c_{t-1}+\pi^{pot}_t =
 $$
 
 - **(F31) 结构残差模块，implementation_cross_check，needs_review**：
+
 $$
 \varepsilon_t =
 \{\varepsilon^\ell_t,\varepsilon^w_t,\varepsilon^{yfd}_t,\varepsilon^c_t,\varepsilon^I_t,
@@ -291,6 +322,7 @@ $$
 MMB 实现声明为 `model(linear)`。因此：
 
 - **(F32) 线性模型稳态**：
+
 $$
 \bar x = 0 \quad \text{for each stationary deviation variable } x_t .
 $$

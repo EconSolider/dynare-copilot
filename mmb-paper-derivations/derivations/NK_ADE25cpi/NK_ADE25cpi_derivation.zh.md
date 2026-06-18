@@ -79,41 +79,49 @@ $$
 ### 家庭与需求
 
 - **(F1) 本国消费价格指数**：
+
 $$
 P_t=\left[\gamma P_{h,t}^{1-\lambda}+(1-\gamma)\left((1+\tau_t)S_tP_{f,t}^{\ast}\right)^{1-\lambda}\right]^{1/(1-\lambda)} .
 $$
 
 - **(F2) 本国对本国品的需求**：
+
 $$
 C_{h,t}=\gamma\left(\frac{P_{h,t}}{P_t}\right)^{-\lambda}C_t .
 $$
 
 - **(F3) 本国对进口品的需求**：
+
 $$
 C_{f,t}=(1-\gamma)\left(\frac{(1+\tau_t)S_tP_{f,t}^{\ast}}{P_t}\right)^{-\lambda}C_t .
 $$
 
 - **(F4) 本币债券的本国家庭 Euler 方程**：
+
 $$
 \beta E_t\left[\frac{R_tP_tC_t^\sigma}{\pi_{h,t+1}P_{t+1}C_{t+1}^\sigma}\right]=1 .
 $$
 
 - **(F5) 本国劳动供给**：
+
 $$
 \chi H_t^\psi C_t^\sigma=\frac{W_t}{P_t}.
 $$
 
 - **(F6) 外国消费价格指数**：
+
 $$
 P_t^{\ast}=\left[\gamma^{\ast}P_{f,t}^{\ast1-\lambda}+(1-\gamma^{\ast})\left(\frac{(1+\tau_t^{\ast})P_{h,t}}{S_t}\right)^{1-\lambda}\right]^{1/(1-\lambda)} .
 $$
 
 - **(F7) 外国家庭 Euler 方程**：
+
 $$
 \beta E_t\left[\frac{R_t^{\ast}P_t^{\ast}C_t^{\ast\sigma}}{\pi_{f,t+1}^{\ast}P_{t+1}^{\ast}C_{t+1}^{\ast\sigma}}\right]=1 .
 $$
 
 - **(F8) 外国劳动供给**：
+
 $$
 \chi H_t^{\ast\psi}C_t^{\ast\sigma}=\frac{W_t^{\ast}}{P_t^{\ast}}.
 $$
@@ -121,41 +129,49 @@ $$
 ### 厂商
 
 - **(F9) 本国中间品价格指数**：
+
 $$
 P_{x,t}=\left[\gamma_xP_{h,t}^{1-\lambda}+(1-\gamma_x)\left((1+\tau_t)S_tP_{f,t}^{\ast}\right)^{1-\lambda}\right]^{1/(1-\lambda)} .
 $$
 
 - **(F10) 本国要素需求**：
+
 $$
 (1-\alpha)MC_tY_t=W_tH_t,\qquad \alpha MC_tY_t=P_{x,t}X_t .
 $$
 
 - **(F11) 本国实际边际成本**：
+
 $$
 MC_t=\frac{W_t^{1-\alpha}P_{x,t}^{\alpha}}{A_t\alpha^\alpha(1-\alpha)^{1-\alpha}P_{h,t}} .
 $$
 
 - **(F12) 本国 Rotemberg Phillips 曲线**：
+
 $$
 \theta+\frac{\phi}{\epsilon}\left[\pi_{h,t}(\pi_{h,t}-1)-E_t\left\{\omega_{t+1}\pi_{h,t+1}(\pi_{h,t+1}-1)\frac{Y_{t+1}}{Y_t}\right\}\right]=MC_t .
 $$
 
 - **(F13) 外国中间品价格指数**：
+
 $$
 P_{x,t}^{\ast}=\left[\gamma_x^{\ast}P_{f,t}^{\ast1-\lambda}+(1-\gamma_x^{\ast})\left(\frac{(1+\tau_t^{\ast})P_{h,t}}{S_t}\right)^{1-\lambda}\right]^{1/(1-\lambda)} .
 $$
 
 - **(F14) 外国 Rotemberg Phillips 曲线**（`needs_review`：附录 OCR 在 reduced display 中交替显示 $MC_t^{\ast}$ 与 $\epsilon MC_t^{\ast}$）：
+
 $$
 \theta+\frac{\phi}{\epsilon}\left[\pi_{f,t}^{\ast}(\pi_{f,t}^{\ast}-1)-E_t\left\{\omega_{t+1}^{\ast}\pi_{f,t+1}^{\ast}(\pi_{f,t+1}^{\ast}-1)\frac{Y_{t+1}^{\ast}}{Y_t^{\ast}}\right\}\right]=MC_t^{\ast} .
 $$
 
 - **(F15) 本国生产函数**：
+
 $$
 Y_t=A_tH_t^{1-\alpha}X_t^\alpha .
 $$
 
 - **(F16) 外国生产函数**：
+
 $$
 Y_t^{\ast}=A_t^{\ast}H_t^{\ast1-\alpha}X_t^{\ast\alpha}.
 $$
@@ -163,33 +179,39 @@ $$
 ### 货币与贸易政策
 
 - **(F17) 本国 CPI 通胀定义**：
+
 $$
 \pi_{cpi,t}=\pi_{h,t}\frac{\mathcal{P}_t}{\mathcal{P}_{t-1}},\qquad
 \mathcal{P}_t=P_t/P_{h,t}.
 $$
 
 - **(F18) 外国 CPI 通胀定义**：
+
 $$
 \pi_{cpi,t}^{\ast}=\pi_{f,t}^{\ast}\frac{\mathcal{P}_t^{\ast}}{\mathcal{P}_{t-1}^{\ast}},\qquad
 \mathcal{P}_t^{\ast}=P_t^{\ast}/P_{f,t}^{\ast} .
 $$
 
 - **(F19) 本国 CPI 目标货币政策规则**：
+
 $$
 R_t=\beta^{-1}\left(\frac{\pi_{cpi,t}}{\Pi_h^{tar}}\right)^{\mu_\pi}\exp(\varepsilon_{R,t}) .
 $$
 
 - **(F20) 外国 CPI 目标货币政策规则**：
+
 $$
 R_t^{\ast}=\beta^{-1}\left(\frac{\pi_{cpi,t}^{\ast}}{\Pi_f^{tar}}\right)^{\mu_\pi^{\ast}}\exp(\varepsilon_{R,t}^{\ast}) .
 $$
 
 - **(F21) MMB 交叉检查中的本国关税过程**：
+
 $$
 \tau_t=\bar{\tau}+e_{\tau,t}.
 $$
 
 - **(F22) MMB 交叉检查中的外国关税过程**：
+
 $$
 \tau_t^{\ast}=\bar{\tau}^{\ast}+e_{\tau,t}^{\ast}.
 $$
@@ -197,48 +219,57 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F23) 含 Rotemberg 资源成本的本国品市场出清**：
+
 $$
 Y_t\left[1-\frac{\phi}{2}(\pi_{h,t}-1)^2\right]=D_t+D_{x,t}^{\ast} .
 $$
 
 - **(F24) 含 Rotemberg 资源成本的外国品市场出清**：
+
 $$
 Y_t^{\ast}\left[1-\frac{\phi}{2}(\pi_{f,t}^{\ast}-1)^2\right]=D_t^{\ast}+D_{x,t}.
 $$
 
 - **(F25) 本国对本国品的吸收**：
+
 $$
 D_t=\gamma\mathcal{P}_t^\lambda(C_t+\Lambda_t)+\gamma_x\mathcal{P}_{x,t}^\lambda X_t .
 $$
 
 - **(F26) 外国对外国品的吸收**：
+
 $$
 D_t^{\ast}=\gamma^{\ast}\mathcal{P}_t^{\ast\lambda}C_t^{\ast}+\gamma_x^{\ast}\mathcal{P}_{x,t}^{\ast\lambda}X_t^{\ast} .
 $$
 
 - **(F27) 本国出口到外国**：
+
 $$
 D_{x,t}^{\ast}=\frac{1-n}{n}\left(\frac{S_t}{1+\tau_t^{\ast}}\right)^\lambda
 \left[(1-\gamma^{\ast})\mathcal{P}_t^{\ast\lambda}C_t^{\ast}+(1-\gamma_x^{\ast})\mathcal{P}_{x,t}^{\ast\lambda}X_t^{\ast}\right].
 $$
 
 - **(F28) 外国出口到本国**：
+
 $$
 D_{x,t}=\frac{n}{1-n}\left(\frac{1}{S_t(1+\tau_t)}\right)^\lambda
 \left[(1-\gamma)\mathcal{P}_t^\lambda(C_t+\Lambda_t)+(1-\gamma_x)\mathcal{P}_{x,t}^\lambda X_t\right].
 $$
 
 - **(F29) 净国外资产市场出清**：
+
 $$
 nb_t+(1-n)\frac{S_tP_t^{\ast}}{P_t}b_t^{\ast}=0 .
 $$
 
 - **(F30) 含组合调整成本的 UIP**：
+
 $$
 E_t\left[\frac{S_{t+1}\omega_{t+1}}{S_t\omega_{t+1}^{\ast}(1+\nu(b_t-\bar{b}))}-1\right]=0 .
 $$
 
 - **(F31) 本国净国外资产积累**：
+
 $$
 b_t-\frac{S_tP_{t-1}}{S_{t-1}P_t\omega_t^{\ast}}b_{t-1}-P_t^{-1}\left(D_{x,t}^{\ast}-\frac{1-n}{n}S_tD_{x,t}\right)=0 .
 $$
@@ -246,21 +277,25 @@ $$
 ## 5. Exogenous Processes
 
 - **(F32) 本国生产率**：
+
 $$
 \log A_t=\rho_a\log A_{t-1}+\varepsilon_{A,t}.
 $$
 
 - **(F33) 外国生产率**：
+
 $$
 \log A_t^{\ast}=\rho_a^{\ast}\log A_{t-1}^{\ast}+\varepsilon_{A,t}^{\ast}.
 $$
 
 - **(F34) 本国货币政策冲击**：
+
 $$
 \varepsilon_{R,t}=\rho_R\varepsilon_{R,t-1}+u_{R,t}.
 $$
 
 - **(F35) 外国货币政策冲击**：
+
 $$
 \varepsilon_{R,t}^{\ast}=\rho_R^{\ast}\varepsilon_{R,t-1}^{\ast}+u_{R,t}^{\ast}.
 $$

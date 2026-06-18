@@ -20,6 +20,7 @@
 存在储蓄型家庭（`s`）和借款型家庭（`b`）。对类型 $\Gamma \in \{b,s\}$，终身目标为：
 
 **(F1) Household utility objective**
+
 $$
 E_0 \sum_{t=0}^{\infty} \beta_\Gamma^t
 \left[
@@ -37,6 +38,7 @@ $$
 储蓄者选择消费、存款、劳动和股票持有量，约束为：
 
 **(F2) Saver budget constraint**
+
 $$
 C_t^s+\frac{D_t^s}{P_t}+\frac{Q_t^\psi}{P_t}\Psi_t^s
 =
@@ -49,6 +51,7 @@ $$
 借款者选择消费、劳动、家庭贷款和股票持有量，约束为：
 
 **(F3) Borrower budget constraint**
+
 $$
 C_t^b+\frac{I_{t-1}^hL_{t-1}^h}{P_t}+\frac{Q_t^\psi}{P_t}\Psi_t^b
 =
@@ -57,6 +60,7 @@ C_t^b+\frac{I_{t-1}^hL_{t-1}^h}{P_t}+\frac{Q_t^\psi}{P_t}\Psi_t^b
 $$
 
 **(F4) Borrower binding collateral constraint**
+
 $$
 I_t^hL_t^h
 =
@@ -71,6 +75,7 @@ $$
 零售商在 Calvo 黏性价格下定价。可以重新定价的零售商选择 $P_{k,t}^{\ast}$：
 
 **(F5) Retailer Calvo pricing problem**
+
 $$
 \max_{\{P_{k,t}^{\ast}\}} E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
 \left[P_{k,t}^{\ast}Y_{k,t+z}-P_{j,t+z}^WXY_{k,t+z}\right],
@@ -79,6 +84,7 @@ $$
 满足：
 
 **(F6) Demand for a differentiated retail good**
+
 $$
 Y_{k,t+z}
 =
@@ -90,16 +96,19 @@ $$
 企业家生产批发品，并选择资本、贷款和劳动：
 
 **(F7) Entrepreneur objective**
+
 $$
 E_0\sum_{t=0}^{\infty}\beta_e^t\Omega_{j,t}^e.
 $$
 
 **(F8) Entrepreneur production technology**
+
 $$
 Y_{j,t}=\xi_{z,t}K_{j,t-1}^{\alpha}H_{j,t}^{1-\alpha}.
 $$
 
 **(F9) Entrepreneur flow of funds**
+
 $$
 \Omega_{j,t}^e
 =
@@ -111,6 +120,7 @@ $$
 $$
 
 **(F10) Capital installation cost**
+
 $$
 Adj_{j,t}^e
 =
@@ -119,6 +129,7 @@ Adj_{j,t}^e
 $$
 
 **(F11) Entrepreneur binding borrowing constraint**
+
 $$
 I_{j,t}^eL_{j,t}^e
 =
@@ -133,6 +144,7 @@ $$
 批发分支选择贷款和存款：
 
 **(F12) Wholesale bank objective**
+
 $$
 E_0\sum_{t=0}^{\infty}\beta_B^t
 \left[
@@ -144,6 +156,7 @@ $$
 满足：
 
 **(F13) Bank balance sheet**
+
 $$
 L_t=K_t^B+D_t.
 $$
@@ -151,6 +164,7 @@ $$
 零售贷款分支选择家庭贷款利率和企业家贷款利率：
 
 **(F14) Retail loan branch objective**
+
 $$
 \max_{\{i_t^h,i_t^e\}} E_0\sum_{t=0}^{\infty}\beta_B^t
 \left[
@@ -165,6 +179,7 @@ $$
 记 $\tilde C_t^\Gamma=C_t^\Gamma-\phi C_{t-1}^\Gamma$，$U_{c,t}^\Gamma=(\tilde C_t^\Gamma)^{-\gamma^\Gamma}$。
 
 **(F15) Saver deposit demand**
+
 $$
 \frac{P_t}{D_t^s}
 =
@@ -174,11 +189,13 @@ U_{c,t+1}^s\frac{I_t^d}{P_{t+1}/P_t}
 $$
 
 **(F16) Saver labor supply**
+
 $$
 \frac{W_t}{P_t}=\frac{(H_t^s)^\eta}{U_{c,t}^s}.
 $$
 
 **(F17) Saver equity demand**
+
 $$
 \xi_{\psi,t}\frac{P_t}{Q_t^\psi\Psi_t^s}
 =
@@ -190,6 +207,7 @@ U_{c,t+1}^s
 $$
 
 **(F18) Saver consumption-based equity pricing relation**
+
 $$
 1=
 \beta_sE_t\left[
@@ -200,6 +218,7 @@ $$
 $$
 
 **(F19) Borrower labor supply**
+
 $$
 (H_t^b)^\eta
 =
@@ -208,6 +227,7 @@ U_{c,t}^b\frac{W_t}{P_t}
 $$
 
 **(F20) Borrower consumption Euler equation**
+
 $$
 U_{c,t}^b
 =
@@ -217,6 +237,7 @@ U_{c,t+1}^b\frac{I_t^h}{P_{t+1}/P_t}
 $$
 
 **(F21) Borrower equity demand**
+
 $$
 \xi_{\psi,t}\frac{P_t}{Q_t^\psi\Psi_t^b}
 =
@@ -230,6 +251,7 @@ U_{c,t}^b
 $$
 
 **(F22) Retail price index**
+
 $$
 P_t^{1-\varepsilon_t^p}
 =
@@ -239,6 +261,7 @@ P_t^{1-\varepsilon_t^p}
 $$
 
 **(F23) Retailer optimal reset price, needs_review**
+
 $$
 \frac{P_t^{\ast}}{P_t}
 =
@@ -253,11 +276,13 @@ E_t\sum_{z=0}^{\infty}\theta_R^z\Lambda_{t,z}
 $$
 
 **(F24) Entrepreneur labor demand**
+
 $$
 \frac{W_t}{P_t}=\frac{(1-\alpha)Y_{j,t}}{H_{j,t}X_{j,t}}.
 $$
 
 **(F25) Entrepreneur loan Euler equation**
+
 $$
 \lambda_{j,t}^e
 =
@@ -266,6 +291,7 @@ $$
 $$
 
 **(F26) Entrepreneur capital demand, needs_review**
+
 $$
 \frac{Q_{j,t}^k}{P_t}
 =
@@ -282,6 +308,7 @@ $$
 $$
 
 **(F27) Wholesale loan-deposit spread**
+
 $$
 i_t^l
 =
@@ -290,6 +317,7 @@ i_t^d-\kappa_k\left(\frac{K_t^B}{L_t}-\tau\right)
 $$
 
 **(F28) Entrepreneur retail loan-rate setting, needs_review**
+
 $$
 0=
 1-\varepsilon_t^e+\varepsilon_t^e\frac{i_t^l}{i_t^e}
@@ -302,6 +330,7 @@ $$
 $$
 
 **(F29) Household retail loan-rate setting, needs_review**
+
 $$
 0=
 1-\varepsilon_t^h+\varepsilon_t^h\frac{i_t^l}{i_t^h}
@@ -316,31 +345,37 @@ $$
 ## 4. Market Clearing & Identities
 
 **(F30) Aggregate production**
+
 $$
 Y_t=\xi_{z,t}K_{t-1}^{\alpha}H_t^{1-\alpha}.
 $$
 
 **(F31) Aggregate resource constraint**
+
 $$
 Y_t=C_t+V_t+\delta_B\frac{K_{t-1}^B}{\Pi_t}.
 $$
 
 **(F32) Equity market clearing**
+
 $$
 \Psi_t^s+\Psi_t^b=\Psi^B+\Psi^e.
 $$
 
 **(F33) Aggregate consumption**
+
 $$
 C_t=C_t^s+C_t^b.
 $$
 
 **(F34) Aggregate loans**
+
 $$
 L_t=L_t^h+L_t^e.
 $$
 
 **(F35) Aggregate labor, needs_review**
+
 $$
 H_t=H_t^h+H_t^e.
 $$
@@ -348,11 +383,13 @@ $$
 附录写为 $H_t^h+H_t^e$，而正文使用储蓄/借款家庭劳动和企业家劳动需求。该加总式应对照 PDF 和实现文件复核。
 
 **(F36) Capital accumulation**
+
 $$
 K_t=(1-\delta_e)K_{t-1}+V_t.
 $$
 
 **(F37) Capital shadow price, needs_review**
+
 $$
 \frac{Q_t^k}{P_t}
 =
@@ -360,21 +397,25 @@ $$
 $$
 
 **(F38) Equity dividend from entrepreneurs**
+
 $$
 \Pi_{\psi,t}^e=r^\psi Q_t^\psi\Psi^e.
 $$
 
 **(F39) Equity dividend from banks**
+
 $$
 \Pi_t^{\psi B}=\phi_\psi\omega_{B,t}.
 $$
 
 **(F40) Aggregate equity dividend, needs_review**
+
 $$
 \Pi_t^\psi=\frac{\Pi_t^{\psi e}}{\Psi^e}+\frac{\Pi_t^{\psi B}}{\Psi^B}.
 $$
 
 **(F41) Household borrowing constraint in equality form**
+
 $$
 L_t^h
 =
@@ -386,6 +427,7 @@ L_t^h
 $$
 
 **(F42) Entrepreneur borrowing constraint in equality form**
+
 $$
 L_t^e
 =
@@ -397,6 +439,7 @@ L_t^e
 $$
 
 **(F43) Bank capital accumulation**
+
 $$
 K_t^B
 =
@@ -406,11 +449,13 @@ K_t^B
 $$
 
 **(F44) Bank balance sheet identity**
+
 $$
 L_t=K_t^B+D_t.
 $$
 
 **(F45) Saver flow of funds**
+
 $$
 C_t^s
 =
@@ -421,6 +466,7 @@ C_t^s
 $$
 
 **(F46) Bank profits**
+
 $$
 \begin{aligned}
 \omega_{B,t}={}&i_t^hL_t^h+i_t^eL_t^e-i_t^dD_t
@@ -432,6 +478,7 @@ $$
 $$
 
 **(F47) Monetary policy rule**
+
 $$
 I_t
 =
@@ -446,16 +493,19 @@ $$
 ## 5. Exogenous Processes
 
 **(F48) Price markup process**
+
 $$
 \varepsilon_t^p=\rho_p\varepsilon_{t-1}^p+\epsilon_{p,t}.
 $$
 
 **(F49) Technology process**
+
 $$
 \xi_{z,t}=\rho_z\xi_{z,t-1}+\epsilon_{z,t}.
 $$
 
 **(F50) Monetary policy shock process, needs_review**
+
 $$
 \xi_{i,t}=\rho_i\xi_{i,t-1}+\epsilon_{i,t}.
 $$
@@ -463,31 +513,37 @@ $$
 附录 A 的 OCR 在该式中显示 $\rho_z$；模型正文和实现文件指向 $\rho_i$。
 
 **(F51) Deposit shock process**
+
 $$
 \xi_{d,t}=\rho_d\xi_{d,t-1}+\epsilon_{d,t}.
 $$
 
 **(F52) Household loan-markup process**
+
 $$
 \varepsilon_t^h=\rho_h\varepsilon_{t-1}^h+\epsilon_{h,t}.
 $$
 
 **(F53) Entrepreneur loan-markup process**
+
 $$
 \varepsilon_t^e=\rho_e\varepsilon_{t-1}^e+\epsilon_{e,t}.
 $$
 
 **(F54) Household LTV process**
+
 $$
 \nu_{h,t}=\rho_{\nu h}\nu_{h,t-1}+\epsilon_{\nu h,t}.
 $$
 
 **(F55) Entrepreneur LTV process**
+
 $$
 \nu_{e,t}=\rho_{\nu e}\nu_{e,t-1}+\epsilon_{\nu e,t}.
 $$
 
 **(F56) Equity demand shock process**
+
 $$
 \xi_{\psi,t}=\rho_{\psi}\xi_{\psi,t-1}+\epsilon_{\psi,t}.
 $$

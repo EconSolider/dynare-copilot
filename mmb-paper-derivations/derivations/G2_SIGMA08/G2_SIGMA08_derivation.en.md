@@ -115,6 +115,7 @@ Households are monopolistic competitors in the labor market. Wage setting follow
 The source paper prints selected structural equations rather than a complete FOC system. The equations below number the paper-extracted conditions and selected implementation-visible linear conditions continuously. Implementation-visible conditions are marked as `implementation_cross_check`.
 
 - **(F1) DT final-goods aggregator**:
+
 $$
 V_t =
 \left(
@@ -125,6 +126,7 @@ V_t =
 $$
 
 - **(F2) DT import-adjustment factor**:
+
 $$
 \varphi_{Vt} =
 1-\frac{\varphi_{M_V}\omega_V}{2}
@@ -134,21 +136,25 @@ $$
 $$
 
 - **(F3) DT consumption-import demand, linearized implementation cross-check**:
+
 $$
 m^C_t = r^C_t + c_t .
 $$
 
 - **(F4) DT investment-import demand, linearized implementation cross-check**:
+
 $$
 m^I_t = r^I_t+i_t .
 $$
 
 - **(F5) DT aggregate imports, implementation cross-check**:
+
 $$
 s_M m_t=s_{MC}s_C m^C_t+s_{MI}s_I m^I_t .
 $$
 
 - **(F6) AT final absorption aggregator**:
+
 $$
 A_t =
 \left(
@@ -159,6 +165,7 @@ A_t =
 $$
 
 - **(F7) AT import-adjustment factor**:
+
 $$
 \varphi_{At} =
 1-\frac{\varphi_{M_A}\omega_A}{2}
@@ -168,6 +175,7 @@ $$
 $$
 
 - **(F8) AT import-demand ratio, paper log-linear equation**:
+
 $$
 \tilde{x}_t =
 -\frac{\varepsilon_A}{1+\varepsilon_A\varphi_{M_A}}\tilde{\psi}_t
@@ -175,6 +183,7 @@ $$
 $$
 
 - **(F9) AT aggregate import demand, paper log-linear equation**:
+
 $$
 \tilde{M}_t =
 \tilde{A}_t
@@ -184,6 +193,7 @@ $$
 $$
 
 - **(F10) DT aggregate import demand, paper log-linear equation**:
+
 $$
 \tilde{M}_t =
 \tilde{A}^{DT}_t
@@ -193,6 +203,7 @@ $$
 $$
 
 - **(F11) DT activity measure**:
+
 $$
 \tilde{A}^{DT}_t =
 \left(\frac{M_C}{M}\right)\tilde{C}_t
@@ -200,6 +211,7 @@ $$
 $$
 
 - **(F12) AT activity measure**:
+
 $$
 \tilde{A}_t =
 \left(\frac{C}{A}\right)\tilde{C}_t
@@ -207,11 +219,13 @@ $$
 $$
 
 - **(F13) FL household Euler equation, implementation cross-check**:
+
 $$
 \lambda^C_t=\lambda^C_{t+1}+r^s_t-\Delta p^C_{t+1}+\varepsilon^\beta_t .
 $$
 
 - **(F14) Habit-adjusted marginal utility, implementation cross-check**:
+
 $$
 \lambda^C_t =
 -\sigma \frac{c^{FL}_t-(\varkappa/g_z)c^{FL}_{t-1}-\xi_C(\varepsilon^C_t+a_t)}
@@ -219,6 +233,7 @@ $$
 $$
 
 - **(F15) Hand-to-mouth consumption rule, implementation cross-check**:
+
 $$
 c^{HM}_t =
 -rp^C_t
@@ -229,6 +244,7 @@ $$
 The exact coefficients $\Omega_y$ and $\Omega_T$ are composite calibration ratios in the Rep-MMB implementation; source-level verification is `needs_review`.
 
 - **(F16) Tobin's Q / investment adjustment condition, implementation cross-check**:
+
 $$
 q_t =
 rp^I_t+\phi_K\frac{\hat{\delta}}{1+n} (i_t-k_{t-1})
@@ -237,6 +253,7 @@ rp^I_t+\phi_K\frac{\hat{\delta}}{1+n} (i_t-k_{t-1})
 $$
 
 - **(F17) Capital valuation equation, implementation cross-check**:
+
 $$
 q_t =
 \frac{1-\delta}{1+\bar r}q_{t+1}
@@ -248,6 +265,7 @@ q_t =
 $$
 
 - **(F18) Labor-market wedge and marginal rate of substitution, implementation cross-check**:
+
 $$
 wmark_t=mrs_t-\zeta^C_t+\frac{1}{1-\tau_L}\tau^L_t,
 \qquad
@@ -255,6 +273,7 @@ mrs_t=\chi s_L\ell_t-\lambda^C_t .
 $$
 
 - **(F19) Domestic-price Phillips curve, implementation cross-check**:
+
 $$
 \Delta p^Q_t =
 \iota_p \Delta p^Q_{t-1}
@@ -263,6 +282,7 @@ $$
 $$
 
 - **(F20) Export-price Phillips curve under local-currency pricing, implementation cross-check**:
+
 $$
 \Delta p^M_t =
 \iota_m \Delta p^M_{t-1}
@@ -271,6 +291,7 @@ $$
 $$
 
 - **(F21) Wage Phillips curve, implementation cross-check**:
+
 $$
 \Delta w_t =
 \iota_w \Delta w_{t-1}
@@ -279,6 +300,7 @@ $$
 $$
 
 - **(F22) Monetary policy rule, paper equation**:
+
 $$
 i_t =
 \gamma_i i_{t-1}+\bar r+\bar{\pi}_t
@@ -290,22 +312,26 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F23) Domestic-good resource constraint, paper equation**:
+
 $$
 Y_{Dt}=C_{Dt}+I_{Dt}+G_t+\phi_{It}.
 $$
 
 - **(F24) GDP identity, implementation cross-check**:
+
 $$
 y_t=s_C c_t+s_I i_t+s_G g_t+s_M(m^{\ast}_t-m_t).
 $$
 
 - **(F25) Capital accumulation, implementation cross-check**:
+
 $$
 \left(1-\frac{1-\delta}{g_z(1+n)}\right)i_t
 =k_t-\frac{1-\delta}{g_z(1+n)}k_{t-1}.
 $$
 
 - **(F26) Production function and flexible-price output, implementation cross-check**:
+
 $$
 (1-q_K)(\ell_t+a_t)=y_t-q_K k_{t-1},
 \qquad
@@ -313,22 +339,26 @@ y^{pot}_t=q_K k_{t-1}+(1-q_K)a_t .
 $$
 
 - **(F27) Fisher real-rate identity, implementation cross-check**:
+
 $$
 r^{1}_t=r^s_t-\Delta p^Q_{t+1}.
 $$
 
 - **(F28) Uncovered interest parity with stationarity premium, implementation cross-check**:
+
 $$
 e_t=e_{t+1}+r^s_{f,t}-r^s_t+risk_t-\phi_b nfa_t .
 $$
 
 - **(F29) Net foreign assets, implementation cross-check**:
+
 $$
 nfa_t=\frac{1+\bar r}{g_z(1+n)}
 \left[nfa_{t-1}+0.25\,s_M(rp^X_t+m^{\ast}_t-rp^M_t-m_t)\right].
 $$
 
 - **(F30) Real exchange rates, implementation cross-check**:
+
 $$
 rer^C_t=e_t+p^C_{f,t}-p^C_t,
 \qquad
@@ -336,6 +366,7 @@ rer^Q_t=e_t+p^Q_{f,t}-p^Q_t .
 $$
 
 - **(F31) Government budget constraint, implementation cross-check**:
+
 $$
 b^G_t =
 \frac{1+\bar r}{g_z(1+n)}b^G_{t-1}
@@ -352,6 +383,7 @@ The displayed budget condition is a compact linearized representation of the imp
 The paper and implementation include persistent home and foreign processes for technology, government spending, inflation target, consumption preference, capital tax, transfers, risk premium, discount factor, import demand, and labor tax wedges. The implementation splits several shocks into permanent and transitory components.
 
 - **(F32) Home technology growth decomposition, implementation cross-check**:
+
 $$
 a_t=a_{t-1}+g^p_{A,t}+g^T_{A,t},
 \qquad
@@ -361,6 +393,7 @@ g^T_{A,t}=\rho^T_A g^T_{A,t-1}+\varepsilon^T_{A,t}.
 $$
 
 - **(F33) Foreign technology growth decomposition, implementation cross-check**:
+
 $$
 a^{\ast}_t=a^{\ast}_{t-1}+g^{p,\ast}_{A,t}+g^{T,\ast}_{A,t},
 \qquad
@@ -370,6 +403,7 @@ g^{T,\ast}_{A,t}=\rho^T_A g^{T,\ast}_{A,t-1}+\varepsilon^{T,\ast}_{A,t}.
 $$
 
 - **(F34) Government spending rule, implementation cross-check**:
+
 $$
 g_t=\mathbb{1}_{switch} y_t+g^p_t+g^T_t,
 \qquad
@@ -379,6 +413,7 @@ g^T_t=\rho^T_G g^T_{t-1}+\varepsilon^T_{G,t}/s_G .
 $$
 
 - **(F35) Inflation target process, implementation cross-check**:
+
 $$
 \pi^{tar}_t=\pi^{tar,p}_t+\pi^{tar,T}_t,
 \qquad
@@ -388,6 +423,7 @@ $$
 $$
 
 - **(F36) Consumption preference shocks, implementation cross-check**:
+
 $$
 \nu^C_t=\nu^{C,p}_t+\nu^{C,T}_t,
 \qquad
@@ -397,6 +433,7 @@ $$
 $$
 
 - **(F37) Capital-tax shocks, implementation cross-check**:
+
 $$
 \tau^K_t=\tau^{K,p}_t+\tau^{K,T}_t,
 \qquad
@@ -406,6 +443,7 @@ $$
 The persistent capital-tax process contains an implementation switch with additional lags; source-level interpretation is `needs_review`.
 
 - **(F38) Risk-premium shock, implementation cross-check**:
+
 $$
 risk_t=risk^p_t+risk^T_t,
 \qquad
@@ -415,6 +453,7 @@ risk^T_t=\rho^T_R risk^T_{t-1}+\varepsilon^T_{R,t}.
 $$
 
 - **(F39) Discount-factor and import-demand shocks, implementation cross-check**:
+
 $$
 \varepsilon^\beta_t=\rho_\beta\varepsilon^\beta_{t-1}-u^\beta_t,
 \qquad
@@ -422,6 +461,7 @@ imp_t=\rho_M imp_{t-1}+u^M_t .
 $$
 
 - **(F40) Labor-tax wedge process, implementation cross-check**:
+
 $$
 \tau^L_t=\rho_L\tau^L_{t-1}+\phi_{d3}b^G_t+\phi_{d4}(b^G_t-b^G_{t-1})
 -u^L_t/s_L .
@@ -438,18 +478,24 @@ For the first-pass archive, the steady-state structure is:
 1. Set common deterministic technology growth $g_z=1.0037$ and population growth $n=0.0025$.
 2. Set calibration targets: $s_I=0.25$, $s_G=0.18$, aggregate import share $s_M=0.12$, $\omega_C=0.052$, $\omega_I=0.36$, foreign $\omega^{\ast}_C=0.01$, foreign $\omega^{\ast}_I=0.07$, $\delta=0.025$, $\beta=0.997$, $\tau_K=0.30$.
 3. Compute the steady real interest rate as in the implementation:
+
 $$
 \bar r=\frac{g_z^\sigma}{\beta}-1.
 $$
+
 4. Compute the steady rental return on capital:
+
 $$
 \bar r_K=\frac{\bar r+\delta-\tau_K\bar{\delta}}{1-\tau_K}.
 $$
+
 5. Compute the import shares and final-use shares:
+
 $$
 s_C=1-s_I-s_G,\qquad
 s_M=s_{MC}s_C+s_{MI}s_I.
 $$
+
 6. For the log-linear implementation, all transformed variables are expressed as deviations from steady state, so the model variables have zero steady-state values in `model(linear)`.
 
 Full nonlinear steady-state accounting, including all tax, debt, wage, money, and foreign-asset levels, is `needs_review` because the paper does not print the full SIGMA steady-state system.

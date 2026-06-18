@@ -40,7 +40,11 @@ x_t =
 $$
 
 In the paper's notation, the interest-elasticity coefficient is positive in
-$$x_t=-\varphi(i_t-E_t\pi_{t+1})+\theta x_{t-1}+(1-\theta)E_t x_{t+1}+g_t.$$
+
+$$
+x_t=-\varphi(i_t-E_t\pi_{t+1})+\theta x_{t-1}+(1-\theta)E_t x_{t+1}+g_t.
+$$
+
 The MMB implementation uses `sigma = -6.25`, so the sign convention is embedded in the calibrated parameter.
 
 **(F2) Hybrid New Keynesian Phillips curve / Calvo price-setting relation**:
@@ -105,7 +109,11 @@ $$
 $$
 
 The source baseline writes AR(1) demand and cost-push processes,
-$$g_t=\mu g_{t-1}+\hat{g}_t,\quad u_t=\rho_u u_{t-1}+\hat{u}_t.$$
+
+$$
+g_t=\mu g_{t-1}+\hat{g}_t,\quad u_t=\rho_u u_{t-1}+\hat{u}_t.
+$$
+
 For the Section 6 hybrid model, the paper explicitly sets these serial-correlation coefficients to zero for simplicity; the MMB file implements shocks as innovations `demand_` and `inflation_`.
 
 ## 6. Steady-State Solution

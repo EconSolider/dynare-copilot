@@ -68,16 +68,19 @@ The paper states that the rest of the model follows the CMR-FA environment: hous
 **Safer LR entrepreneurs and investment banks**
 
 - **(F1) Bond-financed capital acquisition.**
+
 $$
 BI_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}.
 $$
 
 - **(F2) Utilization condition.**
+
 $$
 r_t^{k,LR}=a'\left(u_t^{LR,l}\right).
 $$
 
 - **(F3) Capital Euler equation.**
+
 $$
 Q_{\bar{k}',t}
 =\beta E_t\left\{\left[u_{t+1}^{LR,l}r_{t+1}^{k,LR}-a(u_{t+1}^{LR,l})\right]P_{t+1}
@@ -86,30 +89,35 @@ Q_{\bar{k}',t}
 $$
 
 - **(F4) Entrepreneur demand for funds from underwriter $z$.**
+
 $$
 BI_{t+1}^{LR,l}(z)
 =\left(\frac{1+R_{t+1}^{coupon}(z)}{1+R_{t+1}^{coupon}}\right)^{-\varepsilon_{t+1}^{coupon}}BI_{t+1}^{LR,l}.
 $$
 
 - **(F5) Average coupon-rate index.**
+
 $$
 1+R_{t+1}^{coupon}
 =\left\{\int_0^1\left[1+R_{t+1}^{coupon}(z)\right]^{1-\varepsilon_{t+1}^{coupon}}dz\right\}^{\frac{1}{1-\varepsilon_{t+1}^{coupon}}}.
 $$
 
 - **(F6) Investment-bank markup condition.**
+
 $$
 1+R_{t+1}^{coupon}
 =\frac{\varepsilon_{t+1}^{coupon}}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
 $$
 
 - **(F7) Bond-finance spread.**
+
 $$
 spread_{t+1}\equiv R_{t+1}^{coupon}-R_{t+1}^e
 =\frac{1}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
 $$
 
 - **(F8) Safer-entrepreneur equity value.**
+
 $$
 V_t^{LR,l}
 =\left\{\left[u_t^{LR,l}r_t^{k,LR}-a(u_t^{LR,l})\right]P_t+(1-\delta)Q_{\bar{k}',t}\right\}\bar{K}_t^{LR,l}
@@ -117,6 +125,7 @@ V_t^{LR,l}
 $$
 
 - **(F9) Safer-entrepreneur net worth.**
+
 $$
 N_{t+1}^{LR,l}=\gamma^{LR}V_t^{LR,l}+W_t^{e,LR,l}.
 $$
@@ -124,17 +133,20 @@ $$
 **Normal-times shadow-banking calibration**
 
 - **(F10) Normal-times bond-demand elasticity.**
+
 $$
 \varepsilon_{t+1}^{normal}=\bar{\varepsilon}+\alpha_1\left(Y_t-\bar{Y}\right).
 $$
 
 - **(F11) Normal-times coupon rate.**
+
 $$
 1+R_{t+1}^{coupon,normal}
 =\frac{\varepsilon_{t+1}^{normal}}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
 $$
 
 - **(F12) Normal-times spread.**
+
 $$
 spread_{t+1}^{normal}
 =\frac{1}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
@@ -143,17 +155,21 @@ $$
 **Optimism tier recorded for variant control; inactive in `US_VMDno`**
 
 - **(F13) Optimism process.**
+
 $$
 \chi_t=\rho_\chi\chi_{t-1}+(1-\rho_\chi)\left[\bar{\chi}+\alpha_2\left(N_{t+1}^{LR,l}-N^{LR,l}\right)\right].
 $$
+
 For `US_VMDno`, $\alpha_2=0$, so this tier is not the source of additional optimism dynamics.
 
 - **(F14) Optimistic elasticity.**
+
 $$
 \varepsilon_{t+1}^{optimistic}=\varepsilon_{t+1}^{normal}(1+\chi_t).
 $$
 
 - **(F15) Optimistic coupon rate.**
+
 $$
 1+R_{t+1}^{coupon,optimistic}
 =\frac{\varepsilon_{t+1}^{normal}(1+\chi_t)}{\varepsilon_{t+1}^{normal}(1+\chi_t)-1}(1+R_{t+1}^{e}).
@@ -162,6 +178,7 @@ $$
 **Policy rule and standard model shell**
 
 - **(F16) Taylor-type policy rule outside the fixed-rate experiment.**
+
 $$
 R_t^e
 =\tilde{\rho}R_{t-1}^e
@@ -170,22 +187,27 @@ R_t^e
 $$
 
 - **(F17) Policy-experiment path.**
+
 $$
 R_t^e=R^e-0.01 \quad \text{for } t=1,\ldots,6,
 $$
+
 implemented either with residual unanticipated shocks each period or with a pre-announced anticipated shock sequence.
 
 - **(F18) Household Euler equation, implementation cross-check, needs_review.**
+
 $$
 \lambda_t=\beta E_t\left[\lambda_{t+1}\frac{1+R_t^e}{\pi_{t+1}}\right].
 $$
 
 - **(F19) Habit-adjusted marginal utility, implementation cross-check, needs_review.**
+
 $$
 \lambda_t=(c_t-bc_{t-1})^{-\sigma_c}-b\beta E_t\left[(c_{t+1}-bc_t)^{-\sigma_c}\right].
 $$
 
 - **(F20) Investment adjustment-cost condition, implementation cross-check, needs_review.**
+
 $$
 \lambda_t q_t\left[1-\frac{S''}{2}\left(\frac{i_t}{i_{t-1}}-1\right)^2-S''\frac{i_t}{i_{t-1}}\left(\frac{i_t}{i_{t-1}}-1\right)\right]
 -\lambda_t
@@ -195,16 +217,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F21) CES aggregate capital services.**
+
 $$
 K_t=\left[\eta\left(u_t^{HR,r}\bar{K}_t^{HR,r}\right)^\rho+(1-\eta)\left(u_t^{LR,l}\bar{K}_t^{LR,l}\right)^\rho\right]^{1/\rho}.
 $$
 
 - **(F22) Goods-market resource constraint, implementation cross-check, needs_review.**
+
 $$
 Y_t=G_t+C_t+I_t+a(u_t^{HR})\eta\bar{K}_{t-1}^{HR}+a(u_t^{LR})(1-\eta)\bar{K}_{t-1}^{LR}+monitoring\ costs_t.
 $$
 
 - **(F23) Aggregate bond, bank, and total finance definitions.**
+
 $$
 B_t^{LR}=Q_t\bar{K}_t^{LR}-N_t^{LR},\qquad
 Loans_t^{HR}=Q_t\bar{K}_t^{HR}-N_t^{HR},\qquad
@@ -212,6 +237,7 @@ Finance_t=(1-\eta)B_t^{LR}+\eta Loans_t^{HR}.
 $$
 
 - **(F24) Leverage definitions.**
+
 $$
 lev_t^{LR}=\frac{Q_t\bar{K}_t^{LR}}{N_t^{LR}},\qquad
 lev_t^{HR}=\frac{Q_t\bar{K}_t^{HR}}{N_t^{HR}}.
@@ -220,11 +246,13 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) Monetary-policy innovation.**
+
 $$
 \varepsilon_t^{MP}\sim iid(0,\sigma_{MP}^2).
 $$
 
 - **(F26) Optimism persistence process, inactive in normal-times calibration.**
+
 $$
 \chi_t=\rho_\chi\chi_{t-1}\quad\text{when }\alpha_2=0,\ \bar{\chi}=0.
 $$
@@ -236,17 +264,20 @@ No additional exogenous technology or preference shock process is clearly extrac
 The article reports quarterly calibration and steady-state targets but does not provide a complete source-side steady-state algorithm for the full model. First-pass steady-state quality is therefore `needs_review`.
 
 1. Set zero-inflation/steady policy objects and no optimism:
+
 $$
 \chi=0,\qquad \varepsilon^{normal}=\bar{\varepsilon},\qquad \alpha_2=0\quad(\text{for }US\_VMDno).
 $$
 
 2. Compute the normal-times steady coupon and spread:
+
 $$
 1+R^{coupon}=\frac{\bar{\varepsilon}}{\bar{\varepsilon}-1}(1+R^e),\qquad
 spread=\frac{1}{\bar{\varepsilon}-1}(1+R^e).
 $$
 
 3. Use the reported calibration targets:
+
 $$
 \beta=0.9875,\quad \eta=0.2772,\quad \bar{\varepsilon}=510,\quad \alpha_1=30000,\quad \gamma^{LR}=0.96,\quad \gamma^{HR}=0.97.
 $$

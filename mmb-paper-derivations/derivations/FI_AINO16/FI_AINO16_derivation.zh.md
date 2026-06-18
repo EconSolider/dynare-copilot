@@ -164,6 +164,7 @@ $$
 Rep-MMB 文件实现的是线性化系统。下面列出结构 FOC 或论文报告/对数线性化条件；若干附录级映射仍为 `needs_review`。
 
 - **(F19) CES 中间品生产的名义边际成本**：
+
 $$
 \mathcal{MC}_t=\left[
 \delta_Y^{1/(1+\rho_Y)}\left(\frac{R_t^K}{\Lambda_{k,t}}\right)^{\rho_Y/(1+\rho_Y)}
@@ -172,12 +173,14 @@ $$
 $$
 
 - **(F20) 无工资刚性时的期内劳动供给**：
+
 $$
 \psi_{\Lambda,t}(1-\tau_t^W)\frac{W_{h,t}}{P_t^C\Lambda_{l,t}^P}
 =\lambda_{w,t}H_{h,t}^{\sigma_l}. \tag{F20}
 $$
 
 - **(F21) 资本品生产者/Tobin's Q FOC**：
+
 $$
 \frac{P_t^I}{P_t^C}=
 \frac{P_t^K}{P_t^C}\zeta_t^IF'(I_t^{CGP},I_{t-1}^{CGP})
@@ -186,12 +189,14 @@ $$
 $$
 
 - **(F22) 企业家资本 Euler 方程**：
+
 $$
 P_t^K=\beta E_t\left\{(1-\tau_{t+1}^K)R_{t+1}^K
 +(1-\delta+\delta\tau_{t+1}^K)P_{t+1}^K-r_t^bP_t^K\right\}. \tag{F22}
 $$
 
 - **(F23) 企业家资本 Euler 方程的实际价格形式**：
+
 $$
 Q_t=\frac{\beta}{1+\beta r_t^b}E_t\left[
 (1-\tau_{t+1}^K)\frac{R_{t+1}^K}{P_t^C}
@@ -200,6 +205,7 @@ Q_t=\frac{\beta}{1+\beta r_t^b}E_t\left[
 $$
 
 - **(F24) 批发贷款利差条件**：
+
 $$
 S_t^w\equiv R_t^b-r_t^{FI}
 =-\kappa_{K^b}\left(\frac{K_{t+1}^b}{BL_{t+1}}-v_t^b\right)
@@ -207,6 +213,7 @@ S_t^w\equiv R_t^b-r_t^{FI}
 $$
 
 - **(F25) 零售贷款利率方程，对数线性化**：
+
 $$
 \tilde r_t^b=
 \frac{\varepsilon^b-1}{\varepsilon^b-1+(1+\beta)\kappa_b}\tilde R_t^b
@@ -216,6 +223,7 @@ $$
 $$
 
 - **(F26) 净批发贷款利率，对数线性化**：
+
 $$
 \tilde R_t^b=\tilde R_t-\frac{\kappa_{K^b}}{R^b}(v^b)^3
 \left(\tilde k_{t+1}^b-\tilde{bl}_{t+1}-\tilde v_t^b\right). \tag{F26}
@@ -224,63 +232,75 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F27) 国内中间品市场出清**：
+
 $$
 \int_0^1Y_t(j)\,dj=Y_t^C+Y_t^I+Y_t^X. \tag{F27}
 $$
 
 - **(F28) 价格离散度加总**：
+
 $$
 \int_0^1Y_t(j)\,dj=\Delta_{p,t}Y_t. \tag{F28}
 $$
 
 - **(F29) 出口需求**：
+
 $$
 X_t=\exp(\epsilon_{x,t})\left(\frac{P_t^X}{P_t^W}\right)^{-1/(1+\rho_w)}M_t^W. \tag{F29}
 $$
 
 - **(F30) 进口市场出清**：
+
 $$
 M_t=M_t^C+M_t^I+M_t^X. \tag{F30}
 $$
 
 - **(F31) 最终消费和投资市场出清**：
+
 $$
 C_t=C_t^H=\int_0^1C_{h,t}\,dh,\qquad
 I_t=I_t^H+I_t^G=\int_0^1I_{h,t}\,dh+I_t^G. \tag{F31}
 $$
 
 - **(F32) 国内债券市场出清**：
+
 $$
 B_t=\int_0^1B_{h,t}\,dh=0. \tag{F32}
 $$
 
 - **(F33) 名义总资源约束**：
+
 $$
 P_tY_t=P_t^CC_t^H+P_t^II_t^H+P_tC_t^G+P_t^II_t^G+S_tP_t^XX_t
 -P_t^M(M_t^C+M_t^I+M_t^X). \tag{F33}
 $$
 
 - **(F34) 净国外资产**：
+
 $$
 NFA_{t+1}^{\ast}=R_t^EB_t^E+R_t^{\ast}S_tB_t^{\ast}+TB_t. \tag{F34}
 $$
 
 - **(F35) 贸易余额**：
+
 $$
 TB_t=S_tP_t^XX_t-P_t^M(M_t^C+M_t^I+M_t^X). \tag{F35}
 $$
 
 - **(F36) 贸易条件**：
+
 $$
 ToT_t=\frac{S_tP_t^X}{P_t^M}. \tag{F36}
 $$
 
 - **(F37) 银行资本积累**：
+
 $$
 K_{t+1}^b=(1-\delta^b)\frac{K_t^b}{\varepsilon_t^{Kb}}+J_t^b. \tag{F37}
 $$
 
 - **(F38) 银行利润**：
+
 $$
 J_t^B=r_{t-1}^bBL_t-r_{t-1}^{FI}D_t
 -\frac{\kappa_{K^b}}{2}\left(\frac{K_{t+1}^b}{BL_{t+1}}-v_t^b\right)^2K_{t+1}^b
@@ -292,17 +312,20 @@ $$
 来源和实现包含许多 AR(1) 冲击。下面列表遵循论文的结构类别和 Rep-MMB 冲击名称。
 
 - **(F39) 永久劳动生产率增长**：
+
 $$
 \mu_t=\rho_\mu\mu_{t-1}+\varepsilon_{\mu,t}. \tag{F39}
 $$
 
 - **(F40) 临时生产率移位项**：
+
 $$
 \lambda_{k,t}=\rho_{\lambda k}\lambda_{k,t-1}+\varepsilon_{\lambda k,t},\qquad
 \lambda_{l,t}^T=\rho_{\lambda l}\lambda_{l,t-1}^T+\varepsilon_{\lambda l,t}. \tag{F40}
 $$
 
 - **(F41) 消费和投资技术/偏好移位项**：
+
 $$
 \lambda_{cy,t}=\rho_{cy}\lambda_{cy,t-1}+\varepsilon_{cy,t},\quad
 \lambda_{cm,t}=\rho_{cm}\lambda_{cm,t-1}+\varepsilon_{cm,t},\quad
@@ -310,6 +333,7 @@ $$
 $$
 
 - **(F42) 加成冲击**：
+
 $$
 \upsilon_t=\rho_\upsilon\upsilon_{t-1}+\varepsilon_{\upsilon,t},\quad
 \upsilon_{m,t}=\rho_{\upsilon m}\upsilon_{m,t-1}+\varepsilon_{\upsilon m,t},\quad
@@ -317,6 +341,7 @@ $$
 $$
 
 - **(F43) 需求、财政、外部和金融冲击**：
+
 $$
 zeta_{C,t},\ zeta_{E,t},\ \lambda_{W,t},\ i_t^G,\ h_t^G,\ c_t^{GF},\ p_t^{OIL},\ p_t^{RAW},\ m_t^W,\ \pi_t^W,\ \Delta s_t,\ \epsilon_{b,t},\ \epsilon_{Kb,t},\ r_t^{EUR}
 \quad\text{follow AR(1) or exogenous processes in the linearized system.} \tag{F43}

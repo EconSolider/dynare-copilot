@@ -118,6 +118,7 @@ $$
 The paper states the equilibrium in terms of a linear approximation around the non-stochastic balanced-growth path. The following numbered conditions use the MMB `US_ACELt` implementation only as `implementation_cross_check` for the technical-appendix equation backbone and variable naming; they are not treated as paper-side source text.
 
 - **(F1) Capital Euler equation, sticky-price block, needs_review**:
+
 $$
 \lambda_{z^{\ast},t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
 +\frac{\tilde\rho}{\tilde\rho+1-\delta}\tilde\rho_{t+1}
@@ -126,6 +127,7 @@ $$
 $$
 
 - **(F2) Investment Euler equation, sticky-price block, needs_review**:
+
 $$
 -\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
 +\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)i_t
@@ -135,6 +137,7 @@ $$
 $$
 
 - **(F3) Shadow rental rate on capital, sticky-price block, needs_review**:
+
 $$
 \tilde w_t+\frac{1}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\tilde y_t
 +\frac{\nu R}{\nu R+1-\nu}R_t-\tilde\rho_t-\frac{1}{1-\alpha}u_t
@@ -144,6 +147,7 @@ $$
 $$
 
 - **(F4) Capital evolution, sticky-price block**:
+
 $$
 (\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^{\ast}}\bar k_t
 +(1-\delta)\bar k_{t-1}
@@ -151,11 +155,13 @@ $$
 $$
 
 - **(F5) Inflation equation with reduced-form slope \(\gamma\)**:
+
 $$
 \beta\pi_{t+1}-(1+\beta\varsigma)\pi_t+\gamma s_t=-\varsigma\pi_{t-1}.
 $$
 
 - **(F6) Marginal cost equation, sticky-price block, needs_review**:
+
 $$
 \tilde w_t-s_t+\frac{\alpha}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\tilde y_t
 +\frac{\nu R}{\nu R+1-\nu}R_t-\frac{\alpha}{1-\alpha}u_t
@@ -165,11 +171,13 @@ $$
 $$
 
 - **(F7) Money demand**:
+
 $$
 c_t-q_t=\frac{R}{R-1}\frac{1}{2+\sigma_\eta}R_t.
 $$
 
 - **(F8) Consumption Euler equation with habit and liquidity services, needs_review**:
+
 $$
 \begin{aligned}
 &-\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c\,c_{t+1}
@@ -183,12 +191,14 @@ $$
 $$
 
 - **(F9) Monetary-base FOC**:
+
 $$
 \lambda_{z^{\ast},t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^{\ast},t}
 =\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F10) Wage FOC, needs_review**:
+
 $$
 \eta_2\tilde w_{t+1}+\eta_5\pi_{t+1}
 +\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^{\ast},t}
@@ -198,6 +208,7 @@ $$
 $$
 
 - **(F11) Capital utilization**:
+
 $$
 \frac{1}{\sigma_a}\tilde\rho_t=u_t.
 $$
@@ -207,16 +218,19 @@ The flexible-price block in `US_ACELt` repeats the capital, investment, rental-r
 ## 4. Market Clearing & Identities
 
 - **(F12) Loan-market clearing**:
+
 $$
 W_tH_t=x_tM_t-Q_t.
 $$
 
 - **(F13) Resource constraint, nonlinear paper form**:
+
 $$
 (1+\eta(V_t))C_t+\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right]\leq Y_t.
 $$
 
 - **(F14) Resource constraint, implementation linear form, needs_review**:
+
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)c_t
@@ -231,18 +245,21 @@ $$
 $$
 
 - **(F15) Money-market clearing, implementation linear form**:
+
 $$
 \tilde w_t-\frac{xm}{xm-q}m_t+h_t+\frac{q}{xm-q}q_t
 =\frac{xm}{xm-q}x_t.
 $$
 
 - **(F16) Linking money-base growth to money balances**:
+
 $$
 -m_t-\pi_t+m_{t-1}+x_{t-1}
 =\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}.
 $$
 
 - **(F17) Production function, implementation linear form, needs_review**:
+
 $$
 (\tilde y+\phi)(1-\alpha)h_t-\tilde y\,\tilde y_t
 +\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)u_t
@@ -253,21 +270,25 @@ $$
 $$
 
 - **(F18) Final-good demand for intermediate input**:
+
 $$
 \frac{y_t(i)}{Y_t}=\left(\frac{P_t}{P_t(i)}\right)^{\lambda_f/(\lambda_f-1)}.
 $$
 
 - **(F19) Price index**:
+
 $$
 P_t=\left[\int_0^1P_t(i)^{1/(1-\lambda_f)}\,di\right]^{1-\lambda_f}.
 $$
 
 - **(F20) Aggregate wage index**:
+
 $$
 W_t=\left[\int_0^1W_{j,t}^{1/(1-\lambda_w)}\,dj\right]^{1-\lambda_w}.
 $$
 
 - **(F21) Modelbase interest-rate rule, implementation substitution**:
+
 $$
 \begin{aligned}
 interest_t={}&\sum_{\ell=1}^{4}a_\ell interest_{t-\ell}
@@ -292,42 +313,50 @@ $$
 ## 5. Exogenous Processes
 
 - **(F22) Neutral technology growth**:
+
 $$
 \hat\mu_{z,t}=\rho_{\mu_z}\hat\mu_{z,t-1}+\varepsilon_{\mu_z,t}.
 $$
 
 - **(F23) Capital-embodied technology growth**:
+
 $$
 \hat\mu_{\Upsilon,t}=\rho_{\mu_\Upsilon}\hat\mu_{\Upsilon,t-1}+\varepsilon_{\mu_\Upsilon,t}.
 $$
 
 - **(F24) Balanced-growth technology composite**:
+
 $$
 \mu_{z^{\ast},t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 - **(F25) Monetary growth decomposition, paper form**:
+
 $$
 \hat x_t=\hat x_{z,t}+\hat x_{\Upsilon,t}+\hat x_{M,t}.
 $$
 
 - **(F26) Monetary policy shock process, paper form**:
+
 $$
 \hat x_{M,t}=\rho_{xM}\hat x_{M,t-1}+\varepsilon_{M,t}.
 $$
 
 - **(F27) Monetary response to neutral technology, paper form**:
+
 $$
 \hat x_{z,t}=\rho_{xz}\hat x_{z,t-1}+c_z\varepsilon_{z,t}+c_z^p\varepsilon_{z,t-1}.
 $$
 
 - **(F28) Monetary response to embodied technology, paper form**:
+
 $$
 \hat x_{\Upsilon,t}=\rho_{x\Upsilon}\hat x_{\Upsilon,t-1}
 +c_{\Upsilon}\varepsilon_{\Upsilon,t}+c_{\Upsilon}^p\varepsilon_{\Upsilon,t-1}.
 $$
 
 - **(F29) Additional transitory technology shock in MMB implementation, implementation_cross_check**:
+
 $$
 \epsilon_t=\rho_\epsilon\epsilon_{t-1}+\sigma_\epsilon\varepsilon^\epsilon_t.
 $$
@@ -338,31 +367,41 @@ The paper works with a balanced-growth path. Let steady-state variables omit tim
 
 1. Set calibrated growth and preference/technology parameters \(\alpha,\beta,\delta,b,\lambda_f,\lambda_w,\mu_\Upsilon,\mu_z,\nu,\psi_L,\sigma_L,x,V,\eta\).
 2. Compute balanced-growth technology:
+
 $$
 \mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
 $$
+
 3. Compute rental return and nominal rate:
+
 $$
 \tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),\qquad
 \pi=\frac{x}{\mu_{z^{\ast}}},\qquad
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
+
 4. Parameterize transaction costs:
+
 $$
 \eta'=\frac{R-1}{V^2},\qquad
 \sigma_\eta=\frac{1}{4\epsilon(R-1)}-2.
 $$
+
 5. Compute marginal-cost and working-capital objects:
+
 $$
 s=\frac{1}{\lambda_f},\qquad
 R_\nu=\nu R+1-\nu.
 $$
+
 6. Compute steady wages, capital-hours ratio, capital, hours, consumption, money balances, output, fixed cost, investment, and marginal utility using the implementation formulas:
+
 $$
 \tilde w=\frac{1-\alpha}{R_\nu}s\left(\frac{\tilde\rho}{\alpha s}\right)^{\alpha/(\alpha-1)},
 \qquad
 \frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
 $$
+
 7. Set flexible-price steady states equal to sticky-price steady states for shared levels; flexible-price deviations are zero in the linear model.
 
 The full algebra for \(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^{\ast}}\) follows the MMB implementation and should be rechecked against the original technical appendix before any runnable promotion. Runtime validation is recorded as not performed.

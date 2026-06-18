@@ -60,26 +60,31 @@ Capital suppliers transform investment goods into installed capital subject to i
 ## 3. First-Order Conditions
 
 - **(F1) Marginal utility of consumption**:
+
 $$
 \lambda_t^c = (C_t - h C_{t-1})^{-\sigma_c}.
 $$
 
 - **(F2) Deposit Euler equation**:
+
 $$
 \beta E_t\left[\frac{\lambda_{t+1}^c}{\lambda_t^c}\right] e^{\varepsilon_t^B}(1+r_t)=1.
 $$
 
 - **(F3) Share Euler equation**:
+
 $$
 v_t=(1-\delta)\beta E_t\left[\frac{\lambda_{t+1}^c}{\lambda_t^c}\left(d_{t+1}+v_{t+1}+\theta d_{t+1}^E\right)\right].
 $$
 
 - **(F4) Labor supply**:
+
 $$
 \lambda_t^c w_t^h=\chi H_{jt}^{\sigma_H}.
 $$
 
 - **(F5) Free entry condition**:
+
 $$
 f_E mc_t^E
 =v_t\frac{\partial[(1-AC_t^E)n_t^E]}{\partial n_t^E}e^{\varepsilon_t^E}
@@ -89,6 +94,7 @@ v_{t+1}\frac{\partial(1-AC_{t+1}^E)}{\partial n_t^E}n_{t+1}^E e^{\varepsilon_{t+
 $$
 
 - **(F6) Wage-setting condition**:
+
 $$
 \frac{W_t}{P_t^C}
 =\mu_t^W\frac{W_t^h}{P_t^C}
@@ -99,16 +105,19 @@ AC_t^{W\prime}
 $$
 
 - **(F7) Installed-firm production function**:
+
 $$
 n_tY_t=e^{\varepsilon_t^A}(K_{t+1}^u)^\alpha(H_t^d)^{1-\alpha}.
 $$
 
 - **(F8) Utilized capital**:
+
 $$
 K_{t+1}^u=u_tK_t.
 $$
 
 - **(F9) Real marginal cost**:
+
 $$
 mc_t=\frac{1}{e^{\varepsilon_t^A}}
 \left(\frac{z_t}{\alpha}\right)^\alpha
@@ -116,22 +125,26 @@ mc_t=\frac{1}{e^{\varepsilon_t^A}}
 $$
 
 - **(F10) Cost-minimizing input mix**:
+
 $$
 \alpha H_t^d w_t=(1-\alpha)K_{t+1}^u z_t.
 $$
 
 - **(F11) Relative price markup relation**:
+
 $$
 \rho_t=\mu_t mc_t.
 $$
 
 - **(F12) Time-varying goods markup** (`needs_review`: MinerU OCR around the auxiliary $\Psi_t$ expression is noisy):
+
 $$
 \mu_t=e^{\varepsilon_t^P}
 \frac{\epsilon_P}{(\epsilon_P-1)\left(1-\frac{P_t^C}{P_t}AC_t^P\right)+\kappa_P\Psi_t}.
 $$
 
 - **(F13) Price-adjustment auxiliary term** (`needs_review`):
+
 $$
 \Psi_t =
 \left(\pi_t-[\xi_P\pi_{t-1}+(1-\xi_P)]\right)\pi_t
@@ -144,31 +157,37 @@ $$
 $$
 
 - **(F14) Installed-firm dividends**:
+
 $$
 d_t=(\rho_t-mc_t-AC_t^P)Y_t.
 $$
 
 - **(F15) Startup production technology**:
+
 $$
 n_t^E f_E=e^{\varepsilon_t^A}H_t^E.
 $$
 
 - **(F16) Marginal cost of a new firm**:
+
 $$
 mc_t^E=\frac{w_t}{e^{\varepsilon_t^A}}(1+\gamma r_t^L).
 $$
 
 - **(F17) Entrepreneur balance sheet**:
+
 $$
 L_{t+1}+NW_{t+1}=Q_tK_{t+1}+\gamma W_tH_t^E.
 $$
 
 - **(F18) Default cutoff**:
+
 $$
 \omega_t^C(1+r_t^k)Q_{t-1}K_t=(1+r_{t-1}^L)L_t.
 $$
 
 - **(F19) External finance premium / entrepreneur FOC** (`needs_review`: paper notation mixes $\chi$ and $\varkappa$ in nearby equations):
+
 $$
 \frac{1+E_t r_{t+1}^k}{1+r_t^L}
 =\frac{\kappa-1}{\kappa\bar{\omega}^C}
@@ -178,16 +197,19 @@ $$
 $$
 
 - **(F20) Entrepreneur net-worth law of motion**:
+
 $$
 NW_{t+1}=(1-\delta)(1-\theta)d_t^E+T^E.
 $$
 
 - **(F21) Entrepreneurial dividends**:
+
 $$
 n_td_t^E=\eta_t(\bar{\omega}_t-\omega_t^C)(1+R_t^k)Q_{t-1}K_t e^{\varepsilon_t^N}.
 $$
 
 - **(F22) Marginal cost of loans**:
+
 $$
 1+MC_t^L=(1+R_t)E_t\left[
 \eta_{t+1}+(1-\mu^B)(1-\eta_{t+1})\frac{\omega_{t+1}}{\omega_{t+1}^C}
@@ -195,6 +217,7 @@ $$
 $$
 
 - **(F23) Nominal lending-rate setting**:
+
 $$
 R_t^L=\mu_t^LMC_t^L
 -(\mu_t^L-1)R_t^L
@@ -209,16 +232,19 @@ R_t^L=\mu_t^LMC_t^L
 $$
 
 - **(F24) Real lending rate**:
+
 $$
 1+r_t^L=\frac{1+R_t^L}{E_t\pi_{t+1}^C}.
 $$
 
 - **(F25) Capital accumulation**:
+
 $$
 K_{t+1}=e^{\varepsilon_t^I}(1-AC_t^I)I_t+(1-\delta)K_t.
 $$
 
 - **(F26) Shadow value of installed capital** (`needs_review`: source equation begins with $\varepsilon_t^I q_t$; implementation cross-check uses $e^{\varepsilon_t^I}q_t$):
+
 $$
 \varepsilon_t^I q_t
 =1+e^{\varepsilon_t^I}q_t
@@ -230,11 +256,13 @@ $$
 $$
 
 - **(F27) Utilization condition**:
+
 $$
 z_t=\bar{Z}\exp\left[\frac{\psi}{1-\psi}(u_t-1)\right].
 $$
 
 - **(F28) Return on capital**:
+
 $$
 1+r_t^k=\frac{z_tu_t-\Phi(u_t)+(1-\delta)q_t}{q_{t-1}}.
 $$
@@ -242,6 +270,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F29) Monetary policy rule** (`needs_review`: source uses both $\rho$ and $\rho_R$ in the same equation):
+
 $$
 R_t-\bar{R}
 =\rho(R_{t-1}-\bar{R})
@@ -250,37 +279,44 @@ R_t-\bar{R}
 $$
 
 - **(F30) Fisher equation**:
+
 $$
 1+r_t=\frac{1+R_t}{E_t\pi_{t+1}^C}.
 $$
 
 - **(F31) Aggregate demand / resource constraint**:
+
 $$
 Y_t^d=C_t+I_t+\bar{G}\varepsilon_t^G+\Phi(u_t)K_{t-1}
 +n_tAC_t^PY_t+AC_t^WH_t+AC_t^LL_{t+1}.
 $$
 
 - **(F32) Variety price relation**:
+
 $$
 n_t\rho_t^{1-\epsilon_P}=1.
 $$
 
 - **(F33) Relative-price inflation identity**:
+
 $$
 \frac{\rho_t}{\rho_{t-1}}=\frac{\pi_t}{\pi_t^C}.
 $$
 
 - **(F34) Goods-market equilibrium**:
+
 $$
 n_tY_t=\rho_t^{-\epsilon_P}Y_t^d.
 $$
 
 - **(F35) Labor-market equilibrium**:
+
 $$
 H_t=H_t^d+H_t^E.
 $$
 
 - **(F36) Law of motion for firm varieties** (`needs_review`: paper uses $n_{jt}$ notation in Appendix B; aggregate interpretation follows the model text):
+
 $$
 n_t=(1-\delta)\left[n_{t-1}+e^{\varepsilon_{t-1}^E}(1-AC_{t-1}^E)n_{t-1}^E\right].
 $$
@@ -290,51 +326,61 @@ $$
 The paper estimates shocks to productivity, government spending, preferences, investment, bank markup, net worth, price markup, wage markup, entry, and monetary policy. Appendix B embeds the innovations in the equilibrium equations above rather than listing all shock laws in a separate equation block. The implementation cross-check uses:
 
 - **(F37) Productivity shock**:
+
 $$
 \varepsilon_t^A=\rho_A\varepsilon_{t-1}^A+e_t^A.
 $$
 
 - **(F38) Government spending shock, with productivity innovation spillover in the implementation**:
+
 $$
 \varepsilon_t^G=\rho_G\varepsilon_{t-1}^G+e_t^G+\rho_{AG}e_t^A.
 $$
 
 - **(F39) Preference shock**:
+
 $$
 \varepsilon_t^B=\rho_B\varepsilon_{t-1}^B+e_t^B.
 $$
 
 - **(F40) Investment shock**:
+
 $$
 \varepsilon_t^I=\rho_I\varepsilon_{t-1}^I+e_t^I.
 $$
 
 - **(F41) Bank-markup shock**:
+
 $$
 \varepsilon_t^L=\rho_L\varepsilon_{t-1}^L+e_t^L.
 $$
 
 - **(F42) Net-worth shock**:
+
 $$
 \varepsilon_t^N=\rho_N\varepsilon_{t-1}^N+e_t^N.
 $$
 
 - **(F43) Price-markup shock**:
+
 $$
 \varepsilon_t^P=\rho_P\varepsilon_{t-1}^P+e_t^P-u_Pe_{t-1}^P.
 $$
 
 - **(F44) Wage-markup shock**:
+
 $$
 \varepsilon_t^W=\rho_W\varepsilon_{t-1}^W+e_t^W-u_We_{t-1}^W.
 $$
 
 - **(F45) Entry shock**:
+
 $$
 \varepsilon_t^E=\rho_E\varepsilon_{t-1}^E+e_t^E.
 $$
 
 - **(F46) Monetary-policy shock**:
+
 $$
 \varepsilon_t^R=\rho_R\varepsilon_{t-1}^R+e_t^R.
 $$
@@ -346,47 +392,56 @@ These process equations are marked as `implementation_cross_check` because the p
 The paper provides a constructive steady-state sequence in Appendix B.2. The following equations preserve that sequence while marking OCR issues.
 
 1. Set zero steady-state inflation and compute the real policy rate:
+
 $$
 \bar{\pi}^C=\bar{\pi}=1,\qquad \bar{r}=\bar{R}=\beta^{-1}-1.
 $$
 
 2. Calibrate the steady-state lending rate:
+
 $$
 \bar{R}^L=\bar{r}^L=\left(1+\frac{0.98}{100}\right)\bar{R}-1.
 $$
 
 3. Use the target loan-capital ratio:
+
 $$
 \omega_{\min}=\frac{\bar{L}}{\bar{K}}=0.50,\qquad
 \kappa=\frac{1}{1-\omega_{\min}}=\frac{\bar{K}}{\bar{L}}=2.
 $$
 
 4. With the default-rate target:
+
 $$
 \bar{\omega}^C=\omega_{\min}\bar{\eta}^{-\kappa}.
 $$
 
 5. Recover the steady-state return to capital and marginal product:
+
 $$
 \bar{r}^K=\frac{1+\bar{r}^L}{\bar{\omega}^C}\left(1-\frac{\bar{L}}{\bar{K}}\right)-1,\qquad
 \bar{z}=\bar{r}^K+\delta.
 $$
 
 6. Compute the conditional means of the Pareto project return and loan marginal cost:
+
 $$
 1=\bar{\eta}\bar{\omega}+(1-\bar{\eta})\underline{\omega},\qquad
 \underline{\omega}=\frac{1-\bar{\eta}\bar{\omega}}{1-\bar{\eta}},
 $$
+
 $$
 \overline{mc}^L=(1+\bar{r})\left[\bar{\eta}+(1-\mu^B)(1-\bar{\eta})\frac{\underline{\omega}}{\bar{\omega}^C}\right]^{-1}-1.
 $$
 
 7. Compute the lending markup (`needs_review`: paper OCR around B.43 is ambiguous; implementation sets `mu_L=rL/mcL`):
+
 $$
 \mu_L \approx \frac{\bar{r}^L}{\overline{mc}^L}.
 $$
 
 8. Use the free-entry/share valuation equation to solve the steady-state number of firms:
+
 $$
 \bar{n}=\bar{H}
 \left[
@@ -395,24 +450,30 @@ $$
 +f_E\frac{\delta}{1-\delta}
 \right]^{-1},
 $$
+
 where
+
 $$
 d^K=\theta\bar{\eta}\bar{\omega}^C(\kappa-1)^{-1}(1+\bar{r}^K).
 $$
 
 9. Complete the real allocation:
+
 $$
 \bar{\rho}=\bar{n}^{1/(\epsilon_P-1)},\qquad
 \overline{mc}=\frac{\bar{\rho}}{\bar{\mu}},
 $$
+
 $$
 \bar{n}^E=\bar{n}\frac{\delta}{1-\delta},\qquad
 \bar{H}^E=f_E\bar{n}\frac{\delta}{1-\delta},\qquad
 \bar{H}^d=\bar{H}-\bar{H}^E,
 $$
+
 $$
 \bar{w}=(1-\alpha)\left[\overline{mc}\left(\frac{\alpha}{\bar{z}}\right)^\alpha\right]^{1/(1-\alpha)},
 $$
+
 $$
 \bar{K}=\frac{\alpha}{\bar{z}(1-\alpha)}\bar{H}^d\bar{w}.
 $$

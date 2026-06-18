@@ -80,28 +80,33 @@ $$
 以下方程为论文的缩放均衡条件，并为归档用途连续重新编号。OCR 受损方程标为 `needs_review`。
 
 - **(F1) 边际成本，成本份额表达式**：
+
 $$
 s_t=\left(\frac{1}{1-\alpha}\right)^{1-\alpha}\left(\frac{1}{\alpha}\right)^{\alpha}
 \frac{(r_t^k[1+\psi_kR_t])^{\alpha}(\tilde w_t[1+\psi_lR_t])^{1-\alpha}}{\epsilon_t}.
 $$
 
 - **(F2) 边际成本，资本租金表达式**：
+
 $$
 s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^{\ast}l_t}{u_t k_t}\right)^{1-\alpha}}.
 $$
 
 - **(F3) Calvo 重设价格指数**：
+
 $$
 p_t^{\ast}-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
 \xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
 $$
 
 - **(F4) 价格设定辅助变量 \(F_{p,t}\)，needs_review**：
+
 $$
 E_t\left\{\lambda_{z,t}Y_{z,t}+\left(\frac{\tilde\pi_{t+1}}{\pi_{t+1}}\right)^{1/(1-\lambda_{f,t})}\beta\xi_pF_{p,t+1}-F_{p,t}\right\}=0.
 $$
 
 - **(F5) 价格设定辅助变量 \(K_{p,t}\)，needs_review**：
+
 $$
 E_t\left\{\lambda_{f,t}\lambda_{z,t}Y_{z,t}s_t+\beta\xi_p
 \left(\frac{\tilde\pi_{t+1}}{\pi_{t+1}}\right)^{-\lambda_{f,t}/(\lambda_{f,t}-1)}
@@ -109,6 +114,7 @@ K_{p,t+1}-K_{p,t}\right\}=0.
 $$
 
 - **(F6) 生产和价格离散条件**：
+
 $$
 Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 \left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}\right)^\alpha
@@ -116,22 +122,26 @@ Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 $$
 
 - **(F7) 资本供给 FOC**：
+
 $$
 E_t\left[\lambda_{z,t}q_tF_{1,t}-\lambda_{z,t}\frac{1}{\mu_{\Upsilon,t}}
 +\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
 $$
 
 - **(F8) 资本利用率**：
+
 $$
 r_t^k=\tau_t^{oil}a'(u_t).
 $$
 
 - **(F9) 资本回报率**：
+
 $$
 R_t^k=\frac{[u_t r_t^k-\tau_t^{oil}a(u_t)]+(1-\delta)q_t}{\Upsilon q_{t-1}}\pi_t+\tau^k\delta-1.
 $$
 
 - **(F10) 标准债务合约最优性，needs_review**：
+
 $$
 E_t\left\{[1-\Gamma_t(\bar\omega_{t+1})]\frac{1+R_{t+1}^k}{1+R_{t+1}^e}
 +\frac{\Gamma_t'(\bar\omega_{t+1})}{\Gamma_t'(\bar\omega_{t+1})-\mu G_t'(\bar\omega_{t+1})}
@@ -139,18 +149,21 @@ E_t\left\{[1-\Gamma_t(\bar\omega_{t+1})]\frac{1+R_{t+1}^k}{1+R_{t+1}^e}
 $$
 
 - **(F11) 企业家贷款零利润条件，needs_review**：
+
 $$
 (1+R_{t+1}^k)[\Gamma_t(\bar\omega_{t+1})-\mu G_t(\bar\omega_{t+1})]=
 (1+R_{t+1}^e)\frac{q_t\bar k_{t+1}-n_{t+1}}{q_t\bar k_{t+1}}.
 $$
 
 - **(F12) 净值运动方程，needs_review**：
+
 $$
 n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^{\ast}}\left\{(1+R_t^k)\bar k_tq_{t-1}
 -\left[1+R_t^e+\frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega)(1+R_t^k)\bar k_tq_{t-1}}{\bar k_tq_{t-1}-n_t}\right](\bar k_tq_{t-1}-n_t)\right\}+w^e.
 $$
 
 - **(F13) 银行业服务生产，needs_review**：
+
 $$
 x_t^b(e_{v,t})^{-\xi_t}e_{z,t}^r=
 \frac{m_t^b(1-m_t+\varsigma d_{m,t})}{\pi_t\mu_{z,t}^{\ast}}
@@ -158,24 +171,28 @@ x_t^b(e_{v,t})^{-\xi_t}e_{z,t}^r=
 $$
 
 - **(F14) 超额准备金与银行增加值之比**：
+
 $$
 e_{v,t}=\frac{(1-\tau)\frac{m_t^b}{\pi_t\mu_{z,t}^{\ast}}(1-m_t)-\tau\left(\psi_lw_tl_t+\frac{\psi_kr_t^k}{\mu_{z,t}^{\ast}\Upsilon}k_t\right)}
 {\left(\frac{1}{\mu_{z,t}^{\ast}\Upsilon}(1-\nu_t^k)k_t\right)^\alpha((1-\nu_t^l)l_t)^{1-\alpha}}.
 $$
 
 - **(F15) 银行效率条件**：
+
 $$
 R_{a,t}=\frac{(1-\tau)h_{e^r,t}-1}{\tau h_{e^r,t}+1}R_t,\qquad
 h_{e^r,t}=(1-\xi_t)x_t^b(e_{v,t})^{-\xi_t}.
 $$
 
 - **(F16) 跨期银行效率条件**：
+
 $$
 E_t\left\{\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\pi_{t+1}}
 \left[R_{t+1}^T-R_{t+1}^m-\frac{\varsigma R_{t+1}}{h_{e^r,t+1}\tau+1}\right]\right\}=0.
 $$
 
 - **(F17) 银行劳动选择**：
+
 $$
 w_t=\frac{R_t}{1+\psi_lR_t}
 \frac{(1-\alpha)\xi_tx_t^b(e_{v,t})^{1-\xi_t}
@@ -183,12 +200,14 @@ w_t=\frac{R_t}{1+\psi_lR_t}
 $$
 
 - **(F18) 消费边际效用**：
+
 $$
 E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
 +b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right\}=0.
 $$
 
 - **(F19) 消费-存款选择，needs_review**：
+
 $$
 0=E_t\left\{u_{c,t}^z-(1+\tau^C)\lambda_{z,t}
 -\zeta_{c,t}vc_t^{-\sigma_q}\left(\frac{\pi_t\mu_{z,t}^{\ast}}{m_t^b}\right)^{1-\sigma_q}
@@ -198,12 +217,14 @@ $$
 $$
 
 - **(F20) Calvo 工资重设指数，needs_review**：
+
 $$
 w_t^{\ast}=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
 +\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F21) 工资设定辅助变量 \(F_{w,t}\)，needs_review**：
+
 $$
 E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
 +\beta\xi_w(\mu_{z^{\ast}})^{(1-\vartheta)/(1-\lambda_w)}
@@ -213,6 +234,7 @@ E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}
 $$
 
 - **(F22) 工资设定辅助变量 \(K_{w,t}\)，needs_review**：
+
 $$
 E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
 +\beta\xi_w\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}
@@ -220,11 +242,13 @@ E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\ze
 $$
 
 - **(F23) 定期存款 Euler 方程**：
+
 $$
 E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
 $$
 
 - **(F24) 货币 \(M_t\) 选择，needs_review**：
+
 $$
 E_t\left\{\zeta_{c,t}v\mathcal L_t^{1-\sigma_q}
 \left(\frac{\pi_t\mu_{z,t}^{\ast}}{m_t^b}\right)^{2-\sigma_q}
@@ -233,6 +257,7 @@ E_t\left\{\zeta_{c,t}v\mathcal L_t^{1-\sigma_q}
 $$
 
 - **(F25) 可交易存款 \(D_{t+1}^m\) 选择，needs_review**：
+
 $$
 E_t\left\{\beta\zeta_{c,t+1}v\chi_{t+1}\mathcal L_{t+1}^{1-\sigma_q}
 \frac{1}{d_{t+1}^m}\left(\frac{1}{m_{t+1}^b}\right)^{2-\sigma_q}
@@ -241,6 +266,7 @@ E_t\left\{\beta\zeta_{c,t+1}v\chi_{t+1}\mathcal L_{t+1}^{1-\sigma_q}
 $$
 
 - **(F26) 基础货币 \(M_{t+1}^b\) 选择，needs_review**：
+
 $$
 E_t\left\{\beta\zeta_{c,t+1}v(1-\theta)(1-\chi_{t+1})\mathcal L_{t+1}^{1-\sigma_q}
 \left(\frac{1}{m_{t+1}^b}\right)^{2-\sigma_q}(\pi_{t+1}\mu_{z,t+1}^{\ast})^{1-\sigma_q}\frac{1}{1-m_{t+1}}
@@ -250,12 +276,14 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F27) 资本积累**：
+
 $$
 \bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^{\ast}\Upsilon}\bar k_t+
 \left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^{\ast}\Upsilon}{i_{t-1}}\right)\right]i_t.
 $$
 
 - **(F28) 货币政策规则，线性化**：
+
 $$
 \hat R_{t+1}^e=\rho_i\hat R_t^e+(1-\rho_i)\alpha_\pi\frac{\pi}{R^e}
 \left[E_t(\hat\pi_{t+1})-\hat\pi_t^{target}\right]
@@ -266,11 +294,13 @@ $$
 $$
 
 - **(F29) 基础货币运动方程**：
+
 $$
 m_{t+1}^b=\frac{1}{\pi_t\mu_{z,t}^{\ast}}m_t^b(1+x_t).
 $$
 
 - **(F30) 资源约束，needs_review**：
+
 $$
 \frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^{\ast}\pi_t}
 +\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}+g_t+c_t+\frac{i_t}{\mu_{\Upsilon,t}}
@@ -279,30 +309,35 @@ $$
 $$
 
 - **(F31) 广义货币**：
+
 $$
 m_t^{Broad}=m_{t+1}^b(1+d_{t+1}^m)+\psi_lw_tl_t+
 \psi_k\frac{r_t^ku_t}{\Upsilon\mu_{z,t}^{\ast}}\bar k_t.
 $$
 
 - **(F32) 银行贷款总量**：
+
 $$
 b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^{\ast}\Upsilon}
 +(q_t\bar k_{t+1}-n_{t+1}).
 $$
 
 - **(F33) 平均信用利差 / 外部融资溢价**：
+
 $$
 P_t^e=\frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega_t)(1+R_t^k)\bar k_tq_{t-1}}
 {\bar k_tq_{t-1}-n_t}.
 $$
 
 - **(F34) 狭义货币**：
+
 $$
 m_t^{Narrow}=m_{t+1}^b+\psi_lw_tl_t+
 \psi_k\frac{r_t^ku_t\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}.
 $$
 
 - **(F35) 准备金**：
+
 $$
 res_t=\frac{m_t^b}{\pi_t}(1-m_t+x_t).
 $$
@@ -312,6 +347,7 @@ $$
 论文估计了价格加成、银行技术、银行准备金需求/流动性偏好、期限溢价、投资专用技术、货币需求、政府消费、永久和暂时生产率、金融财富、风险、消费偏好、投资边际效率、油价、货币政策和价格加成冲击的随机过程。Rep-MMB 实现交叉检查使用如下形式的一阶 AR(1) 过程：
 
 - **(F36) 通用 AR(1) 冲击过程**：
+
 $$
 x_t=\bar x(1+\varepsilon_{x,t})+\rho_x(x_{t-1}-\bar x).
 $$
@@ -321,11 +357,13 @@ $$
 论文给出了风险冲击的信号表示：
 
 - **(F37) 带新闻信号的风险冲击**：
+
 $$
 \hat\sigma_t=\rho\hat\sigma_{t-1}+\xi_t^0+\xi_{t-1}^1+\xi_{t-2}^2+\cdots+\xi_{t-p}^p.
 $$
 
 - **(F38) 风险信号状态向量，紧凑形式**：
+
 $$
 \Psi_{\hat\sigma,t}=P_{\hat\sigma}\Psi_{\hat\sigma,t-1}+\varepsilon_{\hat\sigma,t}.
 $$

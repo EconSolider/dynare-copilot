@@ -83,27 +83,32 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 非贸易品篮子价格指数**：
+
 $$
 P_{N,t}=\left[\frac{1}{s}\int_0^s p_t(n)^{1-\theta}\,dn\right]^{1/(1-\theta)}.
 $$
 
 - **(F2) 国内贸易品差异化商品需求**：
+
 $$
 \int_0^s Q_t^D(h,x)\,dx=\left(\frac{p_t(h)}{P_{Q,t}}\right)^{-\theta}Q_t.
 $$
 
 - **(F3) 分销部门价格楔子**：
+
 $$
 p_t(n)=\bar p_t(n),\qquad p_t(h)=\bar p_t(h)+\eta P_{N,t},\qquad p_t(f)=\bar p_t(f)+\eta P_{N,t}.
 $$
 
 - **(F4) 含分销服务的非贸易品需求**：
+
 $$
 N_t^D(n)=\left(\frac{p_t(n)}{P_{N,t}}\right)^{-\theta}
 \left[N_{N,t}+\eta(Q_t+M_t)+G_{N,t}\right].
 $$
 
 - **(F5) 劳动投入需求和工资指数**：
+
 $$
 \ell_t^D(n,j)=\frac{1}{s}\left(\frac{W_t(j)}{W_t}\right)^{-\phi}\ell_t(n),
 \qquad
@@ -111,22 +116,27 @@ W_t=\left[\frac{1}{s}\int_0^s W_t(j)^{1-\phi}\,dj\right]^{1/(1-\phi)}.
 $$
 
 - **(F6) 非贸易品边际成本指数**：
+
 $$
 MC_{N,t}=Z_{N,t}^{-1}\left[(1-\alpha_N-\gamma_N)W_t^{1-\xi_N}
 +\alpha_NR_t^{1-\xi_N}
 +\gamma_NP_{O,N,t}^{1-\xi_N}\Xi_{O,N,t}^{\xi_N-1}\right]^{1/(1-\xi_N)}.
 $$
+
 `needs_review`：论文说明成本最小化给出边际成本，但未打印这个精确表达式；该形式由 CES 对偶推得，并与实现交叉检查。
 
 - **(F7) 贸易品边际成本指数**：
+
 $$
 MC_{T,t}=Z_{T,t}^{-1}\left[(1-\alpha_T-\gamma_T)W_t^{1-\xi_T}
 +\alpha_TR_t^{1-\xi_T}
 +\gamma_TP_{O,T,t}^{1-\xi_T}\Xi_{O,T,t}^{\xi_T-1}\right]^{1/(1-\xi_T)}.
 $$
+
 `needs_review`：来源限制同 (F6)。
 
 - **(F8) 原材料边际成本**：
+
 $$
 P_{QO,t}=
 \frac{\left[(1-\alpha_O-\gamma_O)W_t^{1-\xi_O}
@@ -135,22 +145,26 @@ P_{QO,t}=
 $$
 
 - **(F9) 原材料一价定律**：
+
 $$
 P_{MO,t}^{\ast}=\frac{P_{QO,t}}{\mathcal E_t}.
 $$
 
 - **(F10) 非贸易品价格调整成本**：
+
 $$
 \Gamma_{PN,t}(n)=\frac{\phi_N}{2}
 \left(\frac{p_t(n)/p_{t-1}(n)}{P_{N,t-1}/P_{N,t-2}}-1\right)^2.
 $$
 
 - **(F11) 非贸易品灵活价格加成极限**：
+
 $$
 p_t(n)=\frac{\theta}{\theta-1}MC_t(n).
 $$
 
 - **(F12) 含分销成本的灵活价格出口定价**：
+
 $$
 \bar p_t(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta}{\theta-1}P_{N,t},
 \qquad
@@ -158,24 +172,29 @@ $$
 $$
 
 - **(F13) 随机贴现因子 / 定价核**：
+
 $$
 D_{t,\tau}=\beta^{\tau-t}\frac{P_tU'(C_\tau)\left[1+\Gamma_{S,t}+\Gamma'_{S,t}v_t\right]}
 {P_\tau U'(C_t)\left[1+\Gamma_{S,\tau}+\Gamma'_{S,\tau}v_\tau\right]}.
 $$
+
 `needs_review`：MinerU OCR 在 Eq. (34) 中显示前导 $\beta$，而不是 $\beta^{\tau-t}$；指数来自 Eq. (25) 的推断。
 
 - **(F14) 国内债券 Euler 方程**：
+
 $$
 1=(1+i_{t+1})E_tD_{t,t+1}.
 $$
 
 - **(F15) 风险调整的未抛补利率平价**：
+
 $$
 1=(1+i_{t+1}^{\ast})(1-\Gamma_{B,t+1})
 E_t\left(D_{t,t+1}\frac{\mathcal E_{t+1}}{\mathcal E_t}\right).
 $$
 
 - **(F16) 外币债券中介楔子**：
+
 $$
 \Gamma_{B,t+1}=\phi_{B1}
 \frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)-1}
@@ -184,11 +203,13 @@ $$
 $$
 
 - **(F17) 资本积累**：
+
 $$
 K_{t+1}(j)=(1-\delta)K_t(j)+\Psi_tK_t(j).
 $$
 
 - **(F18) 投资调整技术**：
+
 $$
 \Psi_t=\frac{I_t(j)}{K_t(j)}
 -\frac{\phi_{I1}}{2}\left(\frac{I_t(j)}{K_t(j)}-\delta(1+Z_{I,t})\right)^2
@@ -196,35 +217,41 @@ $$
 $$
 
 - **(F19) 工资调整成本**：
+
 $$
 \Gamma_{W,t}(j)=\frac{\phi_W}{2}
 \left(\frac{W_t(j)/W_{t-1}(j)}{W_{t-1}/W_{t-2}}-1\right)^2.
 $$
 
 - **(F20) 家庭横截条件**：
+
 $$
 \lim_{\tau\to\infty}E_tD_{t,\tau}
 \left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^{\ast})(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^{\ast}(j)\right]=0.
 $$
 
 - **(F21) 政府预算约束**：
+
 $$
 sP_tG_{A,t}+sP_{N,t}G_{N,t}
 \leq \int_0^s NETT_t(j)\,dj+\int_0^s\left[\mathcal M_t(j)-\mathcal M_{t-1}(j)\right]\,dj.
 $$
 
 - **(F22) 年化货币政策规则**：
+
 $$
 (1+i_{t+1})^4-1=\omega_i\left[(1+i_t)^4-1\right]
 +(1-\omega_i)\left[(1+\bar i_{t+1})^4-1\right]
 +\omega_1E_t\left[\frac{P_{t+\tau}}{P_{t+\tau-4}}-\Pi_{t+\tau}\right]
 +\Theta(F_t).
 $$
+
 `needs_review`：论文 Eq. (38) 在预测期符号和目标通胀记号处存在 OCR 歧义。
 
 ## 4. Market Clearing & Identities
 
 - **(F23) 原材料市场出清**：
+
 $$
 \int_0^s T_{O,t}^S(o)\,do
 =\int_0^s Q_{O,t}^D(n)\,dn+\int_0^s Q_{O,t}^D(h)\,dh
@@ -232,48 +259,58 @@ $$
 $$
 
 - **(F24) 非贸易品市场出清**：
+
 $$
 N^S(n)=\int_0^s N_{N,t}^D(n,x)\,dx+\eta(Q_t+M_t)+G_{N,t}.
 $$
 
 - **(F25) 贸易品市场出清**：
+
 $$
 T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{\astD}(h,x^{\ast})\,dx^{\ast}.
 $$
 
 - **(F26) 最终品资源约束**：
+
 $$
 \int_0^s A_t(x)\,dx=\int_0^s C_t(j)(1+\Gamma_{S,t}(j))\,dj+sG_{A,t}+\int_0^s I_t(j)\,dj.
 $$
 
 - **(F27) 劳动市场出清**：
+
 $$
 \ell_t(j)=\int_0^s\ell_t^D(n,j)\,dn+\int_0^s\ell_t^D(h,j)\,dh+\int_0^s\ell_t^D(o,j)\,do.
 $$
 
 - **(F28) 资本市场出清**：
+
 $$
 \int_0^sK_t(j)\,dj=\int_0^sK_t^D(n)\,dn+\int_0^sK_t^D(h)\,dh+\int_0^sK_t^D(o)\,do.
 $$
 
 - **(F29) 土地市场出清**：
+
 $$
 \int_0^s\bar L_t(j)\,dj=\int_0^sL_t^D(o)\,do.
 $$
 
 - **(F30) 资产市场出清**：
+
 $$
 \int_0^sB_t(j)\,dj=0,\qquad
 \int_0^sB_t^{\ast}(j)\,dj+\int_s^1B_t^{\ast}(j^{\ast})\,dj^{\ast}=0.
 $$
+
 `needs_review`：MinerU 将 Eq. (46) 的两个资产出清方程合并；这里按上下文拆分。
 
 - **(F31) Home GDP 恒等式，仅实现交叉检查**：
+
 $$
 GDPH=AH+REALPNH\cdot GNH+EXPORTSH-IMPORTSH+(RNOMF_{t-1}-1)\frac{REALEX_tREALBH_{t-1}}{PIEF_t}.
 $$
 
 - **(F32) Home 经常账户比率，仅实现交叉检查**：
+
 $$
 CURBALH\_RAT=\frac{REALEX_t(REALBH_t-REALBH_{t-1}/PIEF_t)}{GDPH_t}.
 $$
@@ -283,21 +320,25 @@ $$
 论文说明每个随机过程采用 AR(1) 形式 $y_t=(1-\psi)\bar y+\psi y_{t-1}+\epsilon_t^y$，作用于变量水平或对数。
 
 - **(F33) 通用水平冲击**：
+
 $$
 y_t=(1-\rho_y)\bar y+\rho_yy_{t-1}+\varepsilon_t^y.
 $$
 
 - **(F34) 通用对数冲击**：
+
 $$
 \log y_t=(1-\rho_y)\log\bar y+\rho_y\log y_{t-1}+\varepsilon_t^y.
 $$
 
 - **(F35) 风险溢价冲击**：
+
 $$
 Z_{B,t}=(1-\rho_B)\bar Z_B+\rho_BZ_{B,t-1}+\varepsilon_t^B.
 $$
 
 - **(F36) 贸易品偏好权重冲击**：
+
 $$
 \log\gamma_t=(1-\rho_\gamma)\log\bar\gamma+\rho_\gamma\log\gamma_{t-1}+\varepsilon_t^\gamma.
 $$
@@ -311,36 +352,43 @@ $$
 关键稳态限制：
 
 - **(F37) 稳态实际总利率**：
+
 $$
 1+r=\frac{1}{\beta}.
 $$
 
 - **(F38) 稳态名义利率和通胀**：
+
 $$
 1+i=\frac{\pi}{\beta}.
 $$
 
 - **(F39) 净外国资产的无中介稳态**：
+
 $$
 B_H^{\ast}=0,\qquad \Gamma_B=0.
 $$
 
 - **(F40) 资本租金稳态限制**：
+
 $$
 1+\frac{R}{P}=\frac{1}{\beta}+\delta.
 $$
 
 - **(F41) 实际工资稳态条件**：
+
 $$
 \frac{W}{P}=\frac{\phi}{\phi-1}\frac{V'(\ell)}{U'(C)}.
 $$
 
 - **(F42) 政府支出份额**：
+
 $$
 \frac{G_N}{GDP}=0.10,\qquad \frac{G_A}{GDP}=0.05.
 $$
 
 - **(F43) 核心校准值**：
+
 $$
 s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^{\ast}=6,\quad
 \phi=\phi^{\ast}=4,\quad \delta=\delta^{\ast}=0.025.

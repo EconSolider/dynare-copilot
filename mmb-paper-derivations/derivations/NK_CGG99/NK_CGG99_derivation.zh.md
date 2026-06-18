@@ -40,7 +40,11 @@ x_t =
 $$
 
 在论文记号中，利率弹性系数在
-$$x_t=-\varphi(i_t-E_t\pi_{t+1})+\theta x_{t-1}+(1-\theta)E_t x_{t+1}+g_t$$
+
+$$
+x_t=-\varphi(i_t-E_t\pi_{t+1})+\theta x_{t-1}+(1-\theta)E_t x_{t+1}+g_t
+$$
+
 中为正。MMB 实现使用 `sigma = -6.25`，因此符号约定包含在校准参数中。
 
 **(F2) 混合新凯恩斯 Phillips 曲线 / Calvo 定价关系**：
@@ -105,7 +109,11 @@ $$
 $$
 
 来源基准模型写作 AR(1) 需求和成本推动过程，
-$$g_t=\mu g_{t-1}+\hat{g}_t,\quad u_t=\rho_u u_{t-1}+\hat{u}_t.$$
+
+$$
+g_t=\mu g_{t-1}+\hat{g}_t,\quad u_t=\rho_u u_{t-1}+\hat{u}_t.
+$$
+
 对第 6 节的混合模型，论文为简化明确将这些序列相关系数设为零；MMB 文件将冲击实现为创新 `demand_` 和 `inflation_`。
 
 ## 6. Steady-State Solution

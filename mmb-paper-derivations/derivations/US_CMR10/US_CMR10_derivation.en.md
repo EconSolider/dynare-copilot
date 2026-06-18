@@ -80,28 +80,33 @@ Households consume, supply differentiated labor, and allocate wealth across depo
 The following equations are the paper's scaled equilibrium conditions, renumbered continuously for archive use. OCR-damaged equations are marked `needs_review`.
 
 - **(F1) Marginal cost, cost-share expression**:
+
 $$
 s_t=\left(\frac{1}{1-\alpha}\right)^{1-\alpha}\left(\frac{1}{\alpha}\right)^{\alpha}
 \frac{(r_t^k[1+\psi_kR_t])^{\alpha}(\tilde w_t[1+\psi_lR_t])^{1-\alpha}}{\epsilon_t}.
 $$
 
 - **(F2) Marginal cost, capital rental expression**:
+
 $$
 s_t=\frac{r_t^k[1+\psi_kR_t]}{\alpha\epsilon_t\left(\Upsilon\frac{\mu_{z,t}^{\ast}l_t}{u_t k_t}\right)^{1-\alpha}}.
 $$
 
 - **(F3) Calvo price reset index**:
+
 $$
 p_t^{\ast}-\left[(1-\xi_p)\left(\frac{1-\xi_p(\tilde\pi_t/\pi_t)^{1/(1-\lambda_{f,t})}}{1-\xi_p}\right)^{\lambda_{f,t}}
 \xi_p\left((\tilde\pi_t/\pi_t)p_{t-1}^{\ast}\right)^{\lambda_{f,t}/(1-\lambda_{f,t})}\right]^{(1-\lambda_{f,t})/\lambda_{f,t}}=0.
 $$
 
 - **(F4) Price-setting auxiliary \(F_{p,t}\), needs_review**:
+
 $$
 E_t\left\{\lambda_{z,t}Y_{z,t}+\left(\frac{\tilde\pi_{t+1}}{\pi_{t+1}}\right)^{1/(1-\lambda_{f,t})}\beta\xi_pF_{p,t+1}-F_{p,t}\right\}=0.
 $$
 
 - **(F5) Price-setting auxiliary \(K_{p,t}\), needs_review**:
+
 $$
 E_t\left\{\lambda_{f,t}\lambda_{z,t}Y_{z,t}s_t+\beta\xi_p
 \left(\frac{\tilde\pi_{t+1}}{\pi_{t+1}}\right)^{-\lambda_{f,t}/(\lambda_{f,t}-1)}
@@ -109,6 +114,7 @@ K_{p,t+1}-K_{p,t}\right\}=0.
 $$
 
 - **(F6) Production and price-dispersion condition**:
+
 $$
 Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 \left\{\epsilon_t\nu_t^l\left(u_t\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}\right)^\alpha
@@ -116,22 +122,26 @@ Y_{z,t}=(p_t^{\ast})^{\lambda_f/(\lambda_f-1)}
 $$
 
 - **(F7) Capital supply FOC**:
+
 $$
 E_t\left[\lambda_{z,t}q_tF_{1,t}-\lambda_{z,t}\frac{1}{\mu_{\Upsilon,t}}
 +\beta\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\Upsilon}q_{t+1}F_{2,t+1}\right]=0.
 $$
 
 - **(F8) Capital utilization**:
+
 $$
 r_t^k=\tau_t^{oil}a'(u_t).
 $$
 
 - **(F9) Return on capital**:
+
 $$
 R_t^k=\frac{[u_t r_t^k-\tau_t^{oil}a(u_t)]+(1-\delta)q_t}{\Upsilon q_{t-1}}\pi_t+\tau^k\delta-1.
 $$
 
 - **(F10) Standard debt contract optimality, needs_review**:
+
 $$
 E_t\left\{[1-\Gamma_t(\bar\omega_{t+1})]\frac{1+R_{t+1}^k}{1+R_{t+1}^e}
 +\frac{\Gamma_t'(\bar\omega_{t+1})}{\Gamma_t'(\bar\omega_{t+1})-\mu G_t'(\bar\omega_{t+1})}
@@ -139,18 +149,21 @@ E_t\left\{[1-\Gamma_t(\bar\omega_{t+1})]\frac{1+R_{t+1}^k}{1+R_{t+1}^e}
 $$
 
 - **(F11) Entrepreneurial-loan zero-profit condition, needs_review**:
+
 $$
 (1+R_{t+1}^k)[\Gamma_t(\bar\omega_{t+1})-\mu G_t(\bar\omega_{t+1})]=
 (1+R_{t+1}^e)\frac{q_t\bar k_{t+1}-n_{t+1}}{q_t\bar k_{t+1}}.
 $$
 
 - **(F12) Net-worth law of motion, needs_review**:
+
 $$
 n_{t+1}=\frac{\gamma_t}{\pi_t\mu_{z,t}^{\ast}}\left\{(1+R_t^k)\bar k_tq_{t-1}
 -\left[1+R_t^e+\frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega)(1+R_t^k)\bar k_tq_{t-1}}{\bar k_tq_{t-1}-n_t}\right](\bar k_tq_{t-1}-n_t)\right\}+w^e.
 $$
 
 - **(F13) Banking services production, needs_review**:
+
 $$
 x_t^b(e_{v,t})^{-\xi_t}e_{z,t}^r=
 \frac{m_t^b(1-m_t+\varsigma d_{m,t})}{\pi_t\mu_{z,t}^{\ast}}
@@ -158,24 +171,28 @@ x_t^b(e_{v,t})^{-\xi_t}e_{z,t}^r=
 $$
 
 - **(F14) Ratio of excess reserves to bank value added**:
+
 $$
 e_{v,t}=\frac{(1-\tau)\frac{m_t^b}{\pi_t\mu_{z,t}^{\ast}}(1-m_t)-\tau\left(\psi_lw_tl_t+\frac{\psi_kr_t^k}{\mu_{z,t}^{\ast}\Upsilon}k_t\right)}
 {\left(\frac{1}{\mu_{z,t}^{\ast}\Upsilon}(1-\nu_t^k)k_t\right)^\alpha((1-\nu_t^l)l_t)^{1-\alpha}}.
 $$
 
 - **(F15) Banking efficiency condition**:
+
 $$
 R_{a,t}=\frac{(1-\tau)h_{e^r,t}-1}{\tau h_{e^r,t}+1}R_t,\qquad
 h_{e^r,t}=(1-\xi_t)x_t^b(e_{v,t})^{-\xi_t}.
 $$
 
 - **(F16) Intertemporal banking efficiency condition**:
+
 $$
 E_t\left\{\frac{\lambda_{z,t+1}}{\mu_{z,t+1}^{\ast}\pi_{t+1}}
 \left[R_{t+1}^T-R_{t+1}^m-\frac{\varsigma R_{t+1}}{h_{e^r,t+1}\tau+1}\right]\right\}=0.
 $$
 
 - **(F17) Bank labor choice**:
+
 $$
 w_t=\frac{R_t}{1+\psi_lR_t}
 \frac{(1-\alpha)\xi_tx_t^b(e_{v,t})^{1-\xi_t}
@@ -183,12 +200,14 @@ w_t=\frac{R_t}{1+\psi_lR_t}
 $$
 
 - **(F18) Marginal utility of consumption**:
+
 $$
 E_t\left\{u_{c,t}^z-\frac{\mu_{z,t}^{\ast}\zeta_{c,t}}{c_t\mu_{z,t}^{\ast}-bc_{t-1}}
 +b\beta\frac{\zeta_{c,t+1}}{c_{t+1}\mu_{z,t+1}^{\ast}-bc_t}\right\}=0.
 $$
 
 - **(F19) Consumption-deposit choice, needs_review**:
+
 $$
 0=E_t\left\{u_{c,t}^z-(1+\tau^C)\lambda_{z,t}
 -\zeta_{c,t}vc_t^{-\sigma_q}\left(\frac{\pi_t\mu_{z,t}^{\ast}}{m_t^b}\right)^{1-\sigma_q}
@@ -198,12 +217,14 @@ $$
 $$
 
 - **(F20) Calvo wage reset index, needs_review**:
+
 $$
 w_t^{\ast}=\left[(1-\xi_w)\left(\frac{1-\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta\right)^{1/(1-\lambda_w)}}{1-\xi_w}\right)^{\lambda_w}
 +\xi_w\left(\frac{\tilde\pi_{w,t}}{\pi_{w,t}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t})^\vartheta w_{t-1}^{\ast}\right)^{\lambda_w/(1-\lambda_w)}\right]^{(1-\lambda_w)/\lambda_w}.
 $$
 
 - **(F21) Wage-setting auxiliary \(F_{w,t}\), needs_review**:
+
 $$
 E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}}{\lambda_w}
 +\beta\xi_w(\mu_{z^{\ast}})^{(1-\vartheta)/(1-\lambda_w)}
@@ -213,6 +234,7 @@ E_t\left\{(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\frac{(1-\tau^l)\lambda_{z,t}
 $$
 
 - **(F22) Wage-setting auxiliary \(K_{w,t}\), needs_review**:
+
 $$
 E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\zeta_{c,t}
 +\beta\xi_w\left(\frac{\tilde\pi_{w,t+1}}{\pi_{w,t+1}}(\mu_{z^{\ast}})^{1-\vartheta}(\mu_{z^{\ast},t+1})^\vartheta\right)^{\lambda_w(1+\sigma_L)/(1-\lambda_w)}K_{w,t+1}
@@ -220,11 +242,13 @@ E_t\left\{\left[(w_t^{\ast})^{\lambda_w/(\lambda_w-1)}H_t\right]^{1+\sigma_L}\ze
 $$
 
 - **(F23) Time-deposit Euler equation**:
+
 $$
 E_t\left\{-\lambda_{z,t}+\frac{\beta}{\mu_{z,t+1}^{\ast}\pi_{t+1}}\lambda_{z,t+1}(1+R_{t+1}^T)\right\}=0.
 $$
 
 - **(F24) Choice of money \(M_t\), needs_review**:
+
 $$
 E_t\left\{\zeta_{c,t}v\mathcal L_t^{1-\sigma_q}
 \left(\frac{\pi_t\mu_{z,t}^{\ast}}{m_t^b}\right)^{2-\sigma_q}
@@ -233,6 +257,7 @@ E_t\left\{\zeta_{c,t}v\mathcal L_t^{1-\sigma_q}
 $$
 
 - **(F25) Choice of marketable deposits \(D_{t+1}^m\), needs_review**:
+
 $$
 E_t\left\{\beta\zeta_{c,t+1}v\chi_{t+1}\mathcal L_{t+1}^{1-\sigma_q}
 \frac{1}{d_{t+1}^m}\left(\frac{1}{m_{t+1}^b}\right)^{2-\sigma_q}
@@ -241,6 +266,7 @@ E_t\left\{\beta\zeta_{c,t+1}v\chi_{t+1}\mathcal L_{t+1}^{1-\sigma_q}
 $$
 
 - **(F26) Choice of base money \(M_{t+1}^b\), needs_review**:
+
 $$
 E_t\left\{\beta\zeta_{c,t+1}v(1-\theta)(1-\chi_{t+1})\mathcal L_{t+1}^{1-\sigma_q}
 \left(\frac{1}{m_{t+1}^b}\right)^{2-\sigma_q}(\pi_{t+1}\mu_{z,t+1}^{\ast})^{1-\sigma_q}\frac{1}{1-m_{t+1}}
@@ -250,12 +276,14 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F27) Capital accumulation**:
+
 $$
 \bar k_{t+1}=(1-\delta)\frac{1}{\mu_{z,t}^{\ast}\Upsilon}\bar k_t+
 \left[1-S\left(\frac{\zeta_{i,t}i_t\mu_{z,t}^{\ast}\Upsilon}{i_{t-1}}\right)\right]i_t.
 $$
 
 - **(F28) Monetary policy rule, linearized**:
+
 $$
 \hat R_{t+1}^e=\rho_i\hat R_t^e+(1-\rho_i)\alpha_\pi\frac{\pi}{R^e}
 \left[E_t(\hat\pi_{t+1})-\hat\pi_t^{target}\right]
@@ -266,11 +294,13 @@ $$
 $$
 
 - **(F29) Monetary-base law of motion**:
+
 $$
 m_{t+1}^b=\frac{1}{\pi_t\mu_{z,t}^{\ast}}m_t^b(1+x_t).
 $$
 
 - **(F30) Resource constraint, needs_review**:
+
 $$
 \frac{\mu G_t(\bar\omega_t)(1+R_t^k)q_{t-1}\bar k_t}{\mu_{z,t}^{\ast}\pi_t}
 +\tau_t^{oil}a(u_t)\frac{\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}+g_t+c_t+\frac{i_t}{\mu_{\Upsilon,t}}
@@ -279,30 +309,35 @@ $$
 $$
 
 - **(F31) Broad money**:
+
 $$
 m_t^{Broad}=m_{t+1}^b(1+d_{t+1}^m)+\psi_lw_tl_t+
 \psi_k\frac{r_t^ku_t}{\Upsilon\mu_{z,t}^{\ast}}\bar k_t.
 $$
 
 - **(F32) Total bank loans**:
+
 $$
 b_t^{Tot}=\psi_lw_tl_t+\psi_k\frac{r_t^ku_t\bar k_t}{\mu_{z,t}^{\ast}\Upsilon}
 +(q_t\bar k_{t+1}-n_{t+1}).
 $$
 
 - **(F33) Average credit spread / external finance premium**:
+
 $$
 P_t^e=\frac{\mu\int_0^{\bar\omega_t}\omega\,dF_t(\omega_t)(1+R_t^k)\bar k_tq_{t-1}}
 {\bar k_tq_{t-1}-n_t}.
 $$
 
 - **(F34) Narrow money**:
+
 $$
 m_t^{Narrow}=m_{t+1}^b+\psi_lw_tl_t+
 \psi_k\frac{r_t^ku_t\bar k_t}{\Upsilon\mu_{z,t}^{\ast}}.
 $$
 
 - **(F35) Reserves**:
+
 $$
 res_t=\frac{m_t^b}{\pi_t}(1-m_t+x_t).
 $$
@@ -312,6 +347,7 @@ $$
 The paper estimates stochastic processes for markup, banking technology, bank reserve demand/liquidity preference, term premium, investment-specific technology, money demand, government consumption, permanent and transitory productivity, financial wealth, risk, consumption preference, marginal efficiency of investment, oil price, monetary policy, and price markup shocks. The Rep-MMB implementation cross-check uses first-order AR(1) processes of the form:
 
 - **(F36) Generic AR(1) shock process**:
+
 $$
 x_t=\bar x(1+\varepsilon_{x,t})+\rho_x(x_{t-1}-\bar x).
 $$
@@ -321,11 +357,13 @@ For example, the implementation cross-check records processes for \(\lambda_{f,t
 The paper gives a signal representation for the risk shock:
 
 - **(F37) Risk shock with news signals**:
+
 $$
 \hat\sigma_t=\rho\hat\sigma_{t-1}+\xi_t^0+\xi_{t-1}^1+\xi_{t-2}^2+\cdots+\xi_{t-p}^p.
 $$
 
 - **(F38) Risk-signal state vector, compact form**:
+
 $$
 \Psi_{\hat\sigma,t}=P_{\hat\sigma}\Psi_{\hat\sigma,t-1}+\varepsilon_{\hat\sigma,t}.
 $$

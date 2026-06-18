@@ -63,6 +63,7 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 资本品生产者的投资调整 FOC**：
+
 $$
 \varepsilon^i_t Q_t\left(1-S\left(\frac{I_t}{I_{t-1}}\right)\right)
 =1+\varepsilon^i_t Q_tS'\left(\frac{I_t}{I_{t-1}}\right)\frac{I_t}{I_{t-1}}
@@ -74,6 +75,7 @@ S'\left(\frac{I_{t+1}}{I_t}\right)
 $$
 
 - **(F2) 线性化投资方程**：
+
 $$
 \hat i_t=\frac{1}{1+\bar\beta\gamma}
 \left(\hat i_{t-1}+\bar\beta\gamma E_t\hat i_{t+1}
@@ -81,6 +83,7 @@ $$
 $$
 
 - **(F3) 资本积累**：
+
 $$
 \hat k_t=\left(1-\frac{i_\ast}{k_\ast}\right)\hat k_{t-1}
 +\frac{i_\ast}{k_\ast}\hat i_t
@@ -88,21 +91,25 @@ $$
 $$
 
 - **(F4) 利用率 FOC**：
+
 $$
 r^k_{t+1}=a'(U_{t+1}).
 $$
 
 - **(F5) 线性化资本利用率**：
+
 $$
 \hat u_t=\frac{1-\psi}{\psi}\hat r^k_t.
 $$
 
 - **(F6) 资本服务**：
+
 $$
 \hat k^S_{t+1}=\hat u_{t+1}+\hat k_{t+1}.
 $$
 
 - **(F7) 预期资本回报**：
+
 $$
 E_tR^k_{t+1}
 =E_t\left[
@@ -112,6 +119,7 @@ E_tR^k_{t+1}
 $$
 
 - **(F8) 线性化预期资本回报**：
+
 $$
 E_t\hat R^K_{t+1}
 =\frac{1-\tau}{\bar R^K}E_t\hat Q_{t+1}
@@ -120,6 +128,7 @@ E_t\hat R^K_{t+1}
 $$
 
 - **(F9) 外部融资溢价条件**：
+
 $$
 E_tR^k_{t+1}
 =E_t\left[
@@ -128,6 +137,7 @@ s\left(\frac{N_{t+1}}{Q_tK_{t+1}}\right)\varepsilon^b_tR_t
 $$
 
 - **(F10) 线性化外部融资溢价**：
+
 $$
 E_t\hat R^K_{t+1}
 =-el\left\{E_t\left[\hat N_{t+1}-\hat Q_t-\hat k_{t+1}\right]\right\}
@@ -135,6 +145,7 @@ E_t\hat R^K_{t+1}
 $$
 
 - **(F11) 企业家净值运动规律**：
+
 $$
 N_{t+1}
 =\varkappa\left[
@@ -144,6 +155,7 @@ R^K_tQ_{t-1}K_t
 $$
 
 - **(F12) 线性化净值运动规律**：
+
 $$
 \hat N_{t+1}
 =\varkappa\bar R^K\left[
@@ -153,6 +165,7 @@ $$
 $$
 
 - **(F13) 含溢价组成的净值方程**：
+
 $$
 \hat N_{t+1}
 =\varkappa\bar R^K\left[
@@ -164,6 +177,7 @@ $$
 $$
 
 - **(F14) 线性化消费 Euler 方程，继承 SW07 模块，needs_review**：
+
 $$
 \hat c_t=a_c\hat c_{t-1}+(1-a_c)\,E_t\hat c_{t+1}
 +a_l(\hat l_t-E_t\hat l_{t+1})
@@ -171,6 +185,7 @@ $$
 $$
 
 - **(F15) 生产和边际成本关系，继承 SW07 模块，needs_review**：
+
 $$
 \hat y_t=\Phi\left[\alpha\hat k^S_t+(1-\alpha)\hat l_t+\hat a_t\right],
 \qquad
@@ -178,11 +193,13 @@ $$
 $$
 
 - **(F16) 价格 Phillips 曲线，继承 SW07 模块，needs_review**：
+
 $$
 \hat\pi_t=b_pE_t\hat\pi_{t+1}+i_p\hat\pi_{t-1}+k_p\hat{mc}_t+\hat\varepsilon^p_t.
 $$
 
 - **(F17) 工资 Phillips 曲线，继承 SW07 模块，needs_review**：
+
 $$
 \hat w_t=b_wE_t\hat w_{t+1}+i_w\hat w_{t-1}
 +\chi_w\left(\sigma_l\hat l_t+\hat\lambda_t-\hat w_t\right)
@@ -190,6 +207,7 @@ $$
 $$
 
 - **(F18) 货币政策规则**：
+
 $$
 \hat R^n_t=\rho_R\hat R^n_{t-1}
 +(1-\rho_R)(r_\pi\hat\pi_t+r_y\widehat{ygap}_t)
@@ -198,11 +216,13 @@ $$
 $$
 
 - **(F19) 产出缺口近似**：
+
 $$
 \widehat{ygap}_t=\hat y_t-\hat A_t.
 $$
 
 - **(F20) 实际利率的 Fisher 关系**：
+
 $$
 \hat R_t=\hat R^n_t-E_t\hat\pi_{t+1}.
 $$
@@ -210,6 +230,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F21) 资源约束**：
+
 $$
 \hat y_t
 =\frac{(\bar R^K-1+\tau)k_\ast}{y_\ast}\hat u_t
@@ -220,6 +241,7 @@ $$
 $$
 
 - **(F22) 资源约束中的银行利差贡献，needs_review OCR**：
+
 $$
 \hat\mu^{bank}_t
 =\frac{k_\ast}{y_\ast}(\bar R^K-\bar R)\left(1-\frac{\bar N}{\bar K}\right)
@@ -227,11 +249,13 @@ $$
 $$
 
 - **(F23) 贷款融资资本购买恒等式**：
+
 $$
 B_{t+1}=Q_tK_{t+1}-N_{t+1}.
 $$
 
 - **(F24) 来自实现交叉检查的年通胀恒等式**：
+
 $$
 \hat\pi^{(4)}_t=\frac{1}{4}\left(4\hat\pi_t+4\hat\pi_{t-1}+4\hat\pi_{t-2}+4\hat\pi_{t-3}\right).
 $$
@@ -239,46 +263,55 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) 外生风险溢价冲击**：
+
 $$
 \hat b_t=\rho_b\hat b_{t-1}+\epsilon^b_t.
 $$
 
 - **(F26) 投资专有技术冲击**：
+
 $$
 \hat q_t=\rho_q\hat q_{t-1}+\epsilon^i_t.
 $$
 
 - **(F27) 带生产率联动的政府支出冲击**：
+
 $$
 \hat g_t=\rho_g\hat g_{t-1}+\rho_{ga}\epsilon^a_t+\epsilon^g_t.
 $$
 
 - **(F28) 生产率冲击**：
+
 $$
 \hat a_t=\rho_a\hat a_{t-1}+\epsilon^a_t.
 $$
 
 - **(F29) 带移动平均项的价格加成冲击**：
+
 $$
 \hat\varepsilon^p_t=\rho_p\hat\varepsilon^p_{t-1}+\eta^p_t-\mu_p\eta^p_{t-1}.
 $$
 
 - **(F30) 带移动平均项的工资加成冲击**：
+
 $$
 \hat\varepsilon^w_t=\rho_w\hat\varepsilon^w_{t-1}+\eta^w_t-\mu_w\eta^w_{t-1}.
 $$
 
 - **(F31) 货币政策冲击**：
+
 $$
 \epsilon^r_t=\eta^r_t.
 $$
 
 - **(F32) 学习的感知运动规律**：
+
 $$
 y^f_{j,t}=\beta_{j,t-1}X_{j,t-1}+u_{j,t}.
 $$
 
 - **(F33) Kalman 信念更新**：
+
 $$
 \beta_{t/t}=\beta_{t/t-1}+K_t\tilde z_t,
 \qquad
@@ -286,11 +319,13 @@ P_{t/t}=(I-K_tX_{t-1})P_{t/t-1}.
 $$
 
 - **(F34) 信念预测规律**：
+
 $$
 (\beta_t-\bar\beta)=F(\beta_{t-1}-\bar\beta)+v_t.
 $$
 
 - **(F35) 学习下的实际运动规律**：
+
 $$
 \begin{bmatrix}y_t\\w_t\end{bmatrix}
 =\mu_t+T_t\begin{bmatrix}y_{t-1}\\w_{t-1}\end{bmatrix}+R_t\epsilon_t.

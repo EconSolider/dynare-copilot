@@ -20,6 +20,7 @@ Source: Adolfson, Malin; Laseen, Stefan; Linde, Jesper; Villani, Mattias (2007),
 The final domestic good is a CES composite of differentiated intermediate goods:
 
 **(F1) Domestic CES aggregator**
+
 $$
 Y_t=\left[\int_0^1 (Y_{i,t})^{1/\lambda_t^d}\,di\right]^{\lambda_t^d},
 \qquad 1\leq \lambda_t^d<\infty .
@@ -30,6 +31,7 @@ $$
 Intermediate firm `i` produces with capital services and homogeneous labor:
 
 **(F2) Intermediate production**
+
 $$
 Y_{i,t}=z_t^{1-\alpha}\epsilon_t K_{i,t}^{\alpha}H_{i,t}^{1-\alpha}-z_t\phi .
 $$
@@ -37,6 +39,7 @@ $$
 Working capital requires firms to finance a fraction `nu` of the wage bill before production. Cost minimization gives nominal marginal cost:
 
 **(F3) Domestic nominal marginal cost**
+
 $$
 MC_t^d=
 \frac{1}{(1-\alpha)^{1-\alpha}\alpha^\alpha}
@@ -53,6 +56,7 @@ needs_review: the Markdown OCR/source equation uses multiplicative factors; the 
 Importing firms buy the homogeneous foreign good and brand it into differentiated import-consumption or import-investment goods. Exporting firms buy the domestic final good and brand it into differentiated export goods. Their local-currency pricing problems are Calvo problems analogous to the domestic-price problem.
 
 **(F4) Import and export CES aggregators**
+
 $$
 C_t^m=\left[\int_0^1(C_{i,t}^m)^{1/\lambda_t^{mc}}\,di\right]^{\lambda_t^{mc}},
 \quad
@@ -66,6 +70,7 @@ $$
 Household `j` chooses consumption, labor, money balances, domestic bonds, foreign bonds, investment, capital, and utilization subject to a standard budget constraint and the capital accumulation law. The source states the utility function:
 
 **(F5) Household utility**
+
 $$
 E_0^j\sum_{t=0}^{\infty}\beta^t
 \left[
@@ -78,6 +83,7 @@ $$
 Aggregate consumption and investment combine domestic and imported goods:
 
 **(F6) Consumption aggregator**
+
 $$
 C_t=\left[
 (1-\omega_c)^{1/\eta_c}(C_t^d)^{(\eta_c-1)/\eta_c}
@@ -86,6 +92,7 @@ C_t=\left[
 $$
 
 **(F7) Investment aggregator**
+
 $$
 I_t=\left[
 (1-\omega_i)^{1/\eta_i}(I_t^d)^{(\eta_i-1)/\eta_i}
@@ -96,6 +103,7 @@ $$
 Physical capital becomes productive with a one-period delay, while utilization converts physical capital into capital services:
 
 **(F8) Capital accumulation**
+
 $$
 \bar K_{t+1}=(1-\delta)\bar K_t+\mathcal{Y}_t\left(1-\tilde S(I_t/I_{t-1})\right)I_t,
 \qquad K_t=u_t\bar K_t .
@@ -104,6 +112,7 @@ $$
 Foreign bond holdings face a debt-elastic risk premium:
 
 **(F9) Foreign bond premium**
+
 $$
 \Phi(a_t,\tilde\phi_t)=
 \exp\left[-\tilde\phi_a(a_t-\bar a)+\tilde\phi_t\right],
@@ -126,6 +135,7 @@ The central bank follows an empirical instrument rule rather than an optimizing 
 The domestic Calvo pricing FOC is given in log-linearized form:
 
 **(F10) Domestic-price Phillips curve**
+
 $$
 \begin{aligned}
 \hat\pi_t^d-\hat{\bar\pi}_t^c
@@ -140,6 +150,7 @@ $$
 Import-consumption, import-investment, and export price Phillips curves are stated to have the same structure as the domestic curve:
 
 **(F11) Generic local-currency Phillips curve for sector `j`**
+
 $$
 \begin{aligned}
 \hat\pi_t^j-\hat{\bar\pi}_t^c
@@ -159,6 +170,7 @@ needs_review: the published article states the analogous structure but does not 
 The paper refers to the household budget constraint as standard but does not print all household FOCs in Section 2. The following FOCs are therefore source-backed at the block level and require appendix/PDF review for formula-level confirmation:
 
 **(F12) Consumption Euler equation, log-linear implementation form**
+
 $$
 \hat c_t =
 -\frac{1}{\mu_z^2+b^2\beta}
@@ -175,6 +187,7 @@ $$
 needs_review: formula is from implementation cross-check B6 and should be verified against the paper appendix before review status is upgraded.
 
 **(F13) Investment FOC with adjustment costs, log-linear implementation form**
+
 $$
 \hat i_t=
 \frac{\mu_z^2\tilde S(\hat i_{t-1}+\beta\hat i_{t+1}-\hat\mu_{z,t}+\beta\hat\mu_{z,t+1})
@@ -186,6 +199,7 @@ $$
 needs_review: formula is from implementation cross-check B7 and should be verified against the paper appendix.
 
 **(F14) Capital-return FOC, log-linear implementation form**
+
 $$
 \hat\psi_{z,t}+\hat\mu_{z,t+1}-\hat\psi_{z,t+1}
 -\frac{\beta(1-\delta)}{\mu_z}\hat P_{k,t+1}
@@ -197,6 +211,7 @@ $$
 needs_review: formula is from implementation cross-check B9 and should be verified against the paper appendix.
 
 **(F15) Real-balances FOC, log-linear implementation form**
+
 $$
 -\mu\hat\psi_{z,t}+\mu\hat\psi_{z,t+1}-\mu\hat\mu_{z,t+1}
 +(\mu-\beta\tau_k)\hat R_t-\mu\hat\pi_{t+1}
@@ -206,6 +221,7 @@ $$
 needs_review: formula is from implementation cross-check B8 and should be verified against the paper appendix.
 
 **(F16) Wage Phillips curve, implementation cross-check placeholder**
+
 $$
 \hat{\bar w}_t=\mathcal{W}\left(
 \hat{\bar w}_{t-1},E_t\hat{\bar w}_{t+1},\hat\pi_t,\hat\pi_{t+1},
@@ -219,6 +235,7 @@ needs_review: the Section 2 Markdown describes Calvo wage setting but not the pr
 ### Monetary Policy And Open-Economy Arbitrage
 
 **(F17) Monetary policy rule**
+
 $$
 \hat R_t=\rho_R\hat R_{t-1}
 +(1-\rho_R)\left[
@@ -232,6 +249,7 @@ $$
 needs_review: the source OCR around the inflation-target term is imperfect; compare with PDF before final review.
 
 **(F18) UIP condition with debt-elastic premium**
+
 $$
 E_t\Delta \hat S_{t+1}-(\hat R_t-\hat R_t^{\ast})-\phi_a\hat a_t+\tilde\phi_t=0 .
 $$
@@ -241,6 +259,7 @@ needs_review: the paper states the premium and describes the arbitrage condition
 ## 4. Market Clearing & Identities
 
 **(F19) Export demand**
+
 $$
 C_t^x=\left(\frac{P_t^x}{P_t^{\ast}}\right)^{-\eta_f}C_t^{\ast},
 \qquad
@@ -248,6 +267,7 @@ I_t^x=\left(\frac{P_t^x}{P_t^{\ast}}\right)^{-\eta_f}I_t^{\ast} .
 $$
 
 **(F20) Relative import/export prices, log-linear implementation form**
+
 $$
 \hat\gamma_{mcd,t}=\hat\gamma_{mcd,t-1}+\hat\pi_t^{mc}-\hat\pi_t^d,
 \quad
@@ -257,6 +277,7 @@ $$
 $$
 
 **(F21) Real exchange rate and export marginal cost identities**
+
 $$
 \widehat{mc}_{x,t}=\widehat{mc}_{x,t-1}+\hat\pi_t^d-\hat\pi_t^x-\Delta\hat S_t,
 \qquad
@@ -265,6 +286,7 @@ $$
 $$
 
 **(F22) CPI inflation**
+
 $$
 \hat\pi_t^c=
 (1-\omega_c)\gamma_{dc}^{1-\eta_c}\hat\pi_t^d
@@ -272,11 +294,13 @@ $$
 $$
 
 **(F23) Output definition**
+
 $$
 \hat y_t=\lambda_d\left[\epsilon_t+\alpha(\hat k_t-\hat\mu_{z,t})+(1-\alpha)\hat H_t\right].
 $$
 
 **(F24) Aggregate resource constraint, log-linear implementation form**
+
 $$
 \begin{aligned}
 &(1-\omega_c)\gamma_{cd}^{\eta_c}\frac{c}{\bar y}(\hat c_t+\eta_c\hat\gamma_{cd,t})
@@ -295,12 +319,15 @@ needs_review: formula is from implementation cross-check B11 and should be verif
 The paper states a univariate AR(1) representation for structural shocks:
 
 **(F25) Generic structural shock process**
+
 $$
 \hat\varsigma_t=\rho_\varsigma\hat\varsigma_{t-1}+\varepsilon_{\varsigma,t},
 \qquad
 \varepsilon_{\varsigma,t}\stackrel{iid}{\sim}N(0,\sigma_\varsigma^2),
 $$
+
 where
+
 $$
 \varsigma_t\in\{\mu_{z,t},\epsilon_t,\lambda_t^j,\zeta_t^c,\zeta_t^h,\gamma_t,
 \tilde\phi_t,\varepsilon_{R,t},\hat{\bar\pi}_t^c,\hat z_t^{\ast}\},
@@ -308,6 +335,7 @@ $$
 $$
 
 **(F26) Fiscal VAR block**
+
 $$
 \hat f_t=A_{f,1}\hat f_{t-1}+A_{f,2}\hat f_{t-2}+B_f\varepsilon_{f,t},
 \qquad
@@ -317,6 +345,7 @@ $$
 needs_review: the paper states that fiscal variables follow an identified two-lag VAR; coefficient matrices are implementation/calibration data rather than paper-side equation extraction.
 
 **(F27) Foreign VAR block**
+
 $$
 \hat f_t^{\ast}=A_{\ast,1}\hat f_{t-1}^{\ast}+A_{\ast,2}\hat f_{t-2}^{\ast}
 +A_{\ast,3}\hat f_{t-3}^{\ast}+A_{\ast,4}\hat f_{t-4}^{\ast}+B_\ast\varepsilon_{\ast,t},
@@ -331,6 +360,7 @@ needs_review: the paper states that foreign prices, output, and interest rate ar
 The paper calibrates steady-state-related parameters to observed sample means and reports implied steady-state values, but the Markdown source does not include the appendix derivation. The following relationships were identified from the implementation cross-check and remain `needs_review` until checked against the appendix/PDF.
 
 1. Inflation, technology growth, and nominal interest:
+
 $$
 \pi=\frac{\mu}{\mu_z},
 \qquad
@@ -340,6 +370,7 @@ R_f=\nu R+1-\nu .
 $$
 
 2. Import-sector substitution elasticities and relative-price constants:
+
 $$
 \eta_{mc}=\frac{\lambda_{mc}}{\lambda_{mc}-1},
 \qquad
@@ -347,6 +378,7 @@ $$
 $$
 
 3. Consumption and investment composite constants:
+
 $$
 \gamma_{id}=\left[(1-\omega_i)+\omega_i\left(\frac{\eta_{mi}}{\eta_{mi}-1}\right)^{1-\eta_i}\right]^{1/(1-\eta_i)},
 \quad

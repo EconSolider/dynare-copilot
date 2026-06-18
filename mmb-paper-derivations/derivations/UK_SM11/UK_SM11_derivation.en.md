@@ -29,6 +29,7 @@ The paper does not print primitive maximization problems. It states the economic
 The following conditions reproduce the paper's log-linear equilibrium equations where they are agent choice or pricing conditions. Paper equation numbers are not reused; archive numbering is continuous as `(F#)`.
 
 - **(F1) Habit consumption Euler equation**:
+
 $$
 \hat{c}_t =
 \frac{\psi_{hab}(1-\sigma_c)}{1+\psi_{hab}(1-\sigma_c)}\hat{c}_{t-1}
@@ -38,6 +39,7 @@ $$
 $$
 
 - **(F2) Capital accumulation / investment condition**:
+
 $$
 \begin{aligned}
 i_t-E_t\pi_{c,t+1}-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}
@@ -51,21 +53,25 @@ i_t-E_t\pi_{c,t+1}-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}
 $$
 
 - **(F3) Capital utilisation rental-rate condition**:
+
 $$
 \hat{w}_{k,t}=\phi_z\hat{z}_t.
 $$
 
 - **(F4) Energy consumption aggregator**:
+
 $$
 \hat{c}_{E,t}=(1-\psi_p)\hat{c}_{U,t}+\psi_p\hat{c}_{P,t}.
 $$
 
 - **(F5) Aggregate consumption aggregator**:
+
 $$
 \hat{c}_t=(1-\psi_e)\hat{c}_{n,t}+\psi_e\hat{c}_{e,t}.
 $$
 
 - **(F6) Non-energy/utilities relative consumption demand**:
+
 $$
 \hat{p}_{U,t}=\frac{1}{\sigma_e}\hat{c}_{n,t}
 +\left(\frac{1}{\sigma_p}-\frac{1}{\sigma_e}\right)\hat{c}_{E,t}
@@ -73,6 +79,7 @@ $$
 $$
 
 - **(F7) Petrol/utilities relative consumption demand**:
+
 $$
 \hat{p}_{U,t}-\hat{p}_{P,t}
 =-\frac{1}{\sigma_p}\hat{c}_{U,t}
@@ -80,12 +87,14 @@ $$
 $$
 
 - **(F8) UIP with foreign-bond adjustment cost**:
+
 $$
 E_t\hat{s}_{t+1}-\hat{s}_t
 =-\left(i_t-\left(\frac{1}{\beta}-1\right)\right)-\chi_{bf}b_{f,t}+\varepsilon_{rf,t}.
 $$
 
 - **(F9) Wage Phillips curve**:
+
 $$
 \dot{W}_t=\frac{\xi_w}{1+\beta\xi_w}\dot{W}_{t-1}
 +\frac{\beta}{1+\beta\xi_w}E_t\dot{W}_{t+1}
@@ -95,32 +104,38 @@ $$
 $$
 
 - **(F10) Marginal rate of substitution**:
+
 $$
 mrs_t=\frac{1}{\sigma_h}\hat{h}_t
 +\frac{1}{\sigma_c}\left(\hat{c}_t+\psi_{hab}(\sigma_c-1)\hat{c}_{t-1}\right).
 $$
 
 - **(F11) Real consumption wage law of motion**:
+
 $$
 \hat{w}_t=\dot{W}_t+\hat{w}_{t-1}-\pi_{c,t}.
 $$
 
 - **(F12) Non-energy production**:
+
 $$
 \hat{q}_t=(1-\alpha_q)\hat{B}_t+\alpha_q\hat{e}_t+\varepsilon_{a,t}.
 $$
 
 - **(F13) Value-added/import bundle**:
+
 $$
 \hat{B}_t=(1-\alpha_B)\hat{V}_{n,t}+\alpha_B\hat{M}_{n,t}.
 $$
 
 - **(F14) Energy input Leontief relation in non-energy production**:
+
 $$
 \hat{e}_t=\hat{I}_{p,t}=\hat{I}_{u,t}.
 $$
 
 - **(F15) Demand for value-added by non-energy firms**:
+
 $$
 \hat{V}_{n,t}=\hat{\mu}_t-\hat{p}_{vc,t}
 +\frac{1}{\sigma_q}\hat{q}_t
@@ -129,6 +144,7 @@ $$
 $$
 
 - **(F16) Demand for imported intermediates by non-energy firms**:
+
 $$
 \hat{M}_{n,t}=\hat{\mu}_t-\hat{p}_{m,t}
 +\frac{1}{\sigma_q}\hat{q}_t
@@ -137,6 +153,7 @@ $$
 $$
 
 - **(F17) Energy demand by non-energy firms**:
+
 $$
 \hat{e}_t=\sigma_q\hat{\mu}_t+\hat{q}_t
 -\sigma_q\left(\psi_n\hat{p}_{p,t}+(1-\psi_n)\hat{p}_{U,t}\right)
@@ -144,6 +161,7 @@ $$
 $$
 
 - **(F18) Non-energy-sector Phillips curve**:
+
 $$
 \pi_t=\frac{\beta}{1+\beta\varepsilon}E_t\pi_{t+1}
 +\frac{\varepsilon}{1+\beta\varepsilon}\pi_{t-1}
@@ -152,26 +170,31 @@ $$
 $$
 
 - **(F19) Value-added production**:
+
 $$
 \hat{V}_t=(1-\alpha_v)\hat{h}_t+\alpha_v(\hat{k}_{t-1}+\hat{z}_t).
 $$
 
 - **(F20) Labour demand by value-added producers with working-capital cost**:
+
 $$
 \hat{h}_t=\hat{V}_t+\sigma_V\left(\hat{p}_{vc,t}-\hat{w}_t-\psi_{wc}\left(i_t-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}\right)\right).
 $$
 
 - **(F21) Capital services demand by value-added producers**:
+
 $$
 \hat{k}_{t-1}+\hat{z}_t=\hat{V}_t+\sigma_V(\hat{p}_{vc,t}-\hat{w}_{k,t}).
 $$
 
 - **(F22) Petrol production technology**:
+
 $$
 \hat{q}_{p,t}=\hat{I}_{o,t}=\hat{V}_{p,t}.
 $$
 
 - **(F23) Petrol-sector Phillips curve**:
+
 $$
 \pi_{pb,t}=\frac{\beta}{1+\beta\varepsilon_{pp}}E_t\pi_{pb,t+1}
 +\frac{\varepsilon_{pp}}{1+\beta\varepsilon_{pp}}\pi_{pb,t-1}
@@ -179,21 +202,25 @@ $$
 $$
 
 - **(F24) Petrol marginal cost**:
+
 $$
 \hat{\mu}_{p,t}=\psi_{qp}\hat{p}_{vc,t}+(1-\psi_{qp})\hat{p}_{o,t}-\hat{p}_{pb,t}.
 $$
 
 - **(F25) Basic petrol inflation identity**:
+
 $$
 \pi_{pb,t}=\pi_t+\hat{p}_{pb,t}-\hat{p}_{pb,t-1}.
 $$
 
 - **(F26) Utilities production technology**:
+
 $$
 \hat{q}_{u,t}=\hat{I}_{g,t}=\hat{V}_{u,t}.
 $$
 
 - **(F27) Utilities-sector Phillips curve**:
+
 $$
 \pi_{u,t}=\frac{\beta}{1+\beta\varepsilon_u}E_t\pi_{u,t+1}
 +\frac{\varepsilon_u}{1+\beta\varepsilon_u}\pi_{u,t-1}
@@ -201,16 +228,19 @@ $$
 $$
 
 - **(F28) Utilities marginal cost**:
+
 $$
 \hat{\mu}_{u,t}=\psi_u\hat{p}_{vc,t}+(1-\psi_u)\hat{p}_{g,t}-\hat{p}_{u,t}.
 $$
 
 - **(F29) Utilities inflation identity**:
+
 $$
 \pi_{u,t}=\pi_t+\hat{p}_{u,t}-\hat{p}_{u,t-1}.
 $$
 
 - **(F30) Taylor rule**:
+
 $$
 i_t-\left(\frac{1}{\beta}-1\right)
 =\theta_{rg}\left(i_{t-1}-\left(\frac{1}{\beta}-1\right)\right)
@@ -219,21 +249,25 @@ i_t-\left(\frac{1}{\beta}-1\right)
 $$
 
 - **(F31) Petrol duty pass-through**:
+
 $$
 \hat{p}_{p,t}=(1-\psi_d)\hat{p}_{pb,t}.
 $$
 
 - **(F32) Oil price in domestic currency**:
+
 $$
 \hat{p}_{o,t}=\varepsilon_{p_o,t}-\hat{s}_t.
 $$
 
 - **(F33) Gas price in domestic currency**:
+
 $$
 \hat{p}_{g,t}=\varepsilon_{p_g,t}-\hat{s}_t.
 $$
 
 - **(F34) Import-price Phillips curve**:
+
 $$
 \pi_{m,t}=\frac{\iota_{pm}}{1+\beta\iota_{pm}}\pi_{m,t-1}
 +\frac{\beta}{1+\beta\iota_{pm}}E_t\pi_{m,t+1}
@@ -242,6 +276,7 @@ $$
 $$
 
 - **(F35) Export demand**:
+
 $$
 \hat{x}_{n,t}=\psi_x\hat{x}_{n,t-1}+(1-\psi_x)(\varepsilon_{y_f,t}-\eta_x\hat{s}_t).
 $$
@@ -249,6 +284,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F36) Consumer price index / aggregate-consumption value identity**:
+
 $$
 \hat{p}_{c,t}+\hat{c}_t
 =\frac{c_n}{p_c c}\hat{c}_{n,t}
@@ -257,6 +293,7 @@ $$
 $$
 
 - **(F37) Aggregate value-added allocation**:
+
 $$
 \hat{V}_t=\frac{V_n}{V}\hat{V}_{n,t}
 +\frac{V_u}{V}\hat{V}_{u,t}
@@ -264,28 +301,33 @@ $$
 $$
 
 - **(F38) Petrol goods market clearing**:
+
 $$
 \hat{q}_{P,t}=\frac{c_P}{q_P}\hat{c}_{P,t}
 +\left(1-\frac{c_P}{q_P}\right)\hat{I}_{P,t}.
 $$
 
 - **(F39) Utilities goods market clearing**:
+
 $$
 \hat{q}_{U,t}=\frac{c_U}{q_U}\hat{c}_{U,t}
 +\left(1-\frac{c_U}{q_U}\right)\hat{I}_{U,t}.
 $$
 
 - **(F40) Oil input/export identity**:
+
 $$
 \hat{I}_{O,t}=-\frac{X_o}{I_o}\hat{X}_{O,t}.
 $$
 
 - **(F41) Gas input/export identity**:
+
 $$
 \hat{I}_{G,t}=-\frac{X_g}{I_g}\hat{X}_{G,t}.
 $$
 
 - **(F42) Non-energy output market clearing**:
+
 $$
 \hat{q}_t=\frac{c_n}{q}\hat{c}_{n,t}
 +\frac{k}{q}\hat{k}_t-\frac{(1-\delta)k}{q}\hat{k}_{t-1}
@@ -295,6 +337,7 @@ $$
 $$
 
 - **(F43) Net foreign asset accumulation**:
+
 $$
 b_{f,t}=\frac{1}{\beta}b_{f,t-1}
 +\frac{x_n}{q}\hat{x}_{n,t}
@@ -304,69 +347,83 @@ b_{f,t}=\frac{1}{\beta}b_{f,t-1}
 $$
 
 The government budget is balanced by lump-sum taxes:
+
 $$
 G_t=\psi_d P_{p,t}q_{p,t}+T_t.
 $$
+
 This printed budget equation is not assigned an F-number because the paper uses it as fiscal closure and the log-linear domestic-demand disturbance enters (F42).
 
 ## 5. Exogenous Processes
 
 - **(F44) Productivity shock**:
+
 $$
 \varepsilon_{a,t}=\rho_a\varepsilon_{a,t-1}+\eta_{a,t}.
 $$
 
 - **(F45) Risk-premium shock**:
+
 $$
 \varepsilon_{b,t}=\rho_b\varepsilon_{b,t-1}+\eta_{b,t}.
 $$
 
 - **(F46) Domestic-demand shock**:
+
 $$
 \varepsilon_{g,t}=\rho_g\varepsilon_{g,t-1}+\eta_{g,t}.
 $$
 
 - **(F47) Monetary-policy shock**:
+
 $$
 \varepsilon_{i,t}=\rho_i\varepsilon_{i,t-1}+\eta_{i,t}.
 $$
 
 - **(F48) Price mark-up shock**:
+
 $$
 \varepsilon_{\mu,t}=\rho_{\mu}\varepsilon_{\mu,t-1}+\eta_{\mu,t}.
 $$
 
 - **(F49) Investment-specific technology shock**:
+
 $$
 \varepsilon_{inv,t}=\rho_{inv}\varepsilon_{inv,t-1}+\eta_{inv,t}.
 $$
 
 - **(F50) Wage mark-up shock**:
+
 $$
 \varepsilon_{w,t}=\rho_w\varepsilon_{w,t-1}+\eta_{w,t}.
 $$
 
 - **(F51) World-demand shock**:
+
 $$
 \varepsilon_{y_f,t}=\rho_{y_f}\varepsilon_{y_f,t-1}+\eta_{y_f,t}.
 $$
 
 - **(F52) World export/import-price shock**:
+
 $$
 \varepsilon_{p_{mf},t}=\rho_{p_{mf}}\varepsilon_{p_{mf},t-1}+\eta_{p_{mf},t}.
 $$
 
 - **(F53) World oil-price shock**:
+
 $$
 \varepsilon_{p_o,t}=\rho_{p_o}\varepsilon_{p_o,t-1}+\eta_{p_o,t}.
 $$
 
 - **(F54) World gas-price shock**:
+
 $$
 \varepsilon_{p_g,t}=\rho_{p_g}\varepsilon_{p_g,t-1}+\eta_{p_g,t}.
 $$
 
 - **(F55) World real-interest-rate shock**:
+
 $$
 \varepsilon_{rf,t}=\rho_{rf}\varepsilon_{rf,t-1}+\eta_{rf,t}.
 $$

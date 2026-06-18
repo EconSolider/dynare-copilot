@@ -93,6 +93,7 @@ $$
 **借款人家庭**
 
 - **(F1) 借款人劳动供给，两个部门**：
+
 $$
 \frac{W_{j,t}^b}{P_{C,t}}=
 \frac{(X_t^b)^\sigma (N_{j,t}^b)^\varphi(\widetilde C_t^b)^{\gamma\mathcal E_t^{D,b}}}
@@ -101,6 +102,7 @@ $$
 $$
 
 - **(F2) 借款人住房 Euler 条件**（`needs_review`：OCR 对幂和期望项较脆弱）：
+
 $$
 \begin{aligned}
 P_{D/C,t}={}&
@@ -117,6 +119,7 @@ P_{D/C,t}={}&
 $$
 
 - **(F3) 带抵押影子价值的借款人 Euler 方程**（`needs_review`：OCR 在偏好项中交替使用 $\mathcal E$ 和 $\varepsilon$）：
+
 $$
 R_t\psi_t=
 1-\beta_bE_t\left[
@@ -131,6 +134,7 @@ $$
 **储蓄者家庭**
 
 - **(F4) 储蓄者劳动供给，两个部门**：
+
 $$
 \frac{W_{j,t}^s}{P_{C,t}}=
 \frac{(X_t^s)^\sigma (N_{j,t}^s)^\varphi(\widetilde C_t^s)^{\gamma\mathcal E_t^{D,s}}}
@@ -139,6 +143,7 @@ $$
 $$
 
 - **(F5) 储蓄者住房 Euler 条件**（`needs_review`：MinerU 公式包含畸形比率）：
+
 $$
 \begin{aligned}
 P_{D/C,t}={}&
@@ -155,6 +160,7 @@ P_{D/C,t+1}
 $$
 
 - **(F6) 储蓄者国内债券 Euler 方程**：
+
 $$
 1=\beta_sE_t\left[
 \left(\frac{1-\gamma\mathcal E_{t+1}^{D,s}}{1-\gamma\mathcal E_t^{D,s}}\right)
@@ -166,6 +172,7 @@ $$
 $$
 
 - **(F7) 储蓄者外国债券 Euler/风险分担条件**（`needs_review`：来源 OCR 中汇率记号畸形）：
+
 $$
 1=\beta_sE_t\left[
 \left(\frac{1-\gamma\mathcal E_{t+1}^{D,s}}{1-\gamma\mathcal E_t^{D,s}}\right)
@@ -179,6 +186,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F8) 非耐用品 Armington 聚合器**：
+
 $$
 C_t=\left[
 (1-\alpha_C)^{1/\eta_C}C_{H,t}^{(\eta_C-1)/\eta_C}
@@ -187,6 +195,7 @@ C_t=\left[
 $$
 
 - **(F9) 耐用品 Armington 聚合器**：
+
 $$
 D_t=\left[
 (1-\alpha_D)^{1/\eta_D}D_{H,t}^{(\eta_D-1)/\eta_D}
@@ -195,6 +204,7 @@ D_t=\left[
 $$
 
 - **(F10) 部门价格指数**：
+
 $$
 P_{C,t}=\left[(1-\alpha_C)P_{C,H,t}^{1-\eta_C}+\alpha_CP_{C,F,t}^{1-\eta_C}\right]^{1/(1-\eta_C)},
 \quad
@@ -202,12 +212,14 @@ P_{D,t}=\left[(1-\alpha_D)P_{D,H,t}^{1-\eta_D}+\alpha_DP_{D,F,t}^{1-\eta_D}\righ
 $$
 
 - **(F11) 相对贸易条件恒等式**：
+
 $$
 (1-\alpha_C)\widehat s_{C,t}-(1-\alpha_D)\widehat s_{D,t}
 =\widehat p_{D/C,t}-\widehat p_{D/C,t}^{\ast}.
 $$
 
 - **(F12) 耐心家庭的国际风险分担条件**：
+
 $$
 \left(\frac{X_t^s}{X_t^{s,\ast}}\right)^{-\sigma}
 \left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
@@ -216,12 +228,14 @@ $$
 $$
 
 - **(F13) 零售聚合技术**：
+
 $$
 Y_{j,t}=\left(\int_0^1Y_{j,t}(k)^{-1/(1+\mu_t^j)}dk\right)^{1+\mu_t^j},
 \qquad j=C,D.
 $$
 
 - **(F14) 消费品部门边际成本**：
+
 $$
 MC_{C,t}=
 \frac{X_t^\sigma N_{C,t}^\varphi \widetilde C_t^{\gamma\mathcal E_t^D}S_{C,t}^{\alpha_C}}
@@ -229,6 +243,7 @@ MC_{C,t}=
 $$
 
 - **(F15) 住房部门边际成本**：
+
 $$
 MC_{D,t}=
 \frac{X_t^\sigma N_{D,t}^\varphi \widetilde C_t^{\gamma\mathcal E_t^D}S_{D,t}^{\alpha_D}}
@@ -236,6 +251,7 @@ MC_{D,t}=
 $$
 
 - **(F16) 混合 Calvo 加价规则**：
+
 $$
 \bar p_{j,H,t}^{n}=
 \widehat\mu_t^j+(1-\beta_s\theta_j)
@@ -243,18 +259,21 @@ $$
 $$
 
 - **(F17) 消费品市场出清，对数线性化**：
+
 $$
 \widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^{\ast}
 +\alpha_C\vartheta_C\widehat s_{C,t}+g_t.
 $$
 
 - **(F18) 住房品市场出清，对数线性化**：
+
 $$
 \widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^{\ast}
 +\alpha_D\vartheta_D\widehat s_{D,t}+g_t.
 $$
 
 - **(F19) 总实际产出恒等式，对数线性化**：
+
 $$
 \widehat y_t=
 \frac{P_{D/C}^{-\xi}C}{Y}\widehat y_{C,t}
@@ -264,6 +283,7 @@ $$
 $$
 
 - **(F20) 货币发行局固定汇率与贸易条件调整**：
+
 $$
 \widehat e_t=0,\qquad
 \Delta\widehat s_{C,t}=\widehat\pi_{C,F,t}-\widehat\pi_{C,H,t},\qquad
@@ -273,11 +293,13 @@ $$
 ## 5. Exogenous Processes
 
 - **(F21) 部门技术冲击**：
+
 $$
 a_{j,t}=\rho_{a_j}a_{j,t-1}+\varepsilon_t^{a_j},\qquad j=C,D.
 $$
 
 - **(F22) 部门加价冲击，ARMA(1,1)**：
+
 $$
 \epsilon_t^{\mu_j}=\rho_{\mu_j}^{+}\epsilon_{t-1}^{\mu_j}
 +\varepsilon_t^{\mu_j}-\rho_{\mu_j}^{-}\varepsilon_{t-1}^{\mu_j},
@@ -285,37 +307,44 @@ $$
 $$
 
 - **(F23) 贷款价值比冲击**：
+
 $$
 \epsilon_t^{LTV}=\rho_{LTV}\epsilon_{t-1}^{LTV}+\varepsilon_t^{LTV}.
 $$
 
 - **(F24) 住房偏好冲击**：
+
 $$
 \epsilon_t^{d,j}=\rho_{d,j}\epsilon_{t-1}^{d,j}+\varepsilon_t^{d,j},
 \qquad j=s,b,\ast.
 $$
 
 - **(F25) 政府支出冲击**：
+
 $$
 g_t=\rho_g g_{t-1}+\varepsilon_t^g.
 $$
 
 - **(F26) 外国非耐用品消费需求**：
+
 $$
 \widehat c_t^{\ast}=\rho_{c^{\ast}}\widehat c_{t-1}^{\ast}+\varepsilon_t^{c^{\ast}}.
 $$
 
 - **(F27) 外国住房投资需求**：
+
 $$
 \widehat i_{D,t}^{\ast}=\rho_{d^{\ast}}\widehat d_{t-1}^{\ast}+\varepsilon_t^{d^{\ast}}.
 $$
 
 - **(F28) 外国住房价格扰动**：
+
 $$
 \widehat p_{D,t}^{\ast}=\rho_{p_D^{\ast}}\widehat p_{D,t-1}^{\ast}+\varepsilon_t^{p_D^{\ast}}.
 $$
 
 - **(F29) 外国消费价格扰动**：
+
 $$
 \widehat p_{C,t}^{\ast}=\rho_{p_C^{\ast}}\widehat p_{C,t-1}^{\ast}+\varepsilon_t^{p_C^{\ast}}.
 $$

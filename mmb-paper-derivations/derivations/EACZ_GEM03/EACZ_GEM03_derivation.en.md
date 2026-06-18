@@ -83,27 +83,32 @@ Government purchases final and nontradable goods and finances them through lump-
 ## 3. First-Order Conditions
 
 - **(F1) Nontradable basket price index**:
+
 $$
 P_{N,t}=\left[\frac{1}{s}\int_0^s p_t(n)^{1-\theta}\,dn\right]^{1/(1-\theta)}.
 $$
 
 - **(F2) Domestic tradable differentiated-good demand**:
+
 $$
 \int_0^s Q_t^D(h,x)\,dx=\left(\frac{p_t(h)}{P_{Q,t}}\right)^{-\theta}Q_t.
 $$
 
 - **(F3) Distribution-sector price wedge**:
+
 $$
 p_t(n)=\bar p_t(n),\qquad p_t(h)=\bar p_t(h)+\eta P_{N,t},\qquad p_t(f)=\bar p_t(f)+\eta P_{N,t}.
 $$
 
 - **(F4) Nontradable-good demand including distribution services**:
+
 $$
 N_t^D(n)=\left(\frac{p_t(n)}{P_{N,t}}\right)^{-\theta}
 \left[N_{N,t}+\eta(Q_t+M_t)+G_{N,t}\right].
 $$
 
 - **(F5) Labor-input demand and wage index**:
+
 $$
 \ell_t^D(n,j)=\frac{1}{s}\left(\frac{W_t(j)}{W_t}\right)^{-\phi}\ell_t(n),
 \qquad
@@ -111,22 +116,27 @@ W_t=\left[\frac{1}{s}\int_0^s W_t(j)^{1-\phi}\,dj\right]^{1/(1-\phi)}.
 $$
 
 - **(F6) Nontradable marginal-cost index**:
+
 $$
 MC_{N,t}=Z_{N,t}^{-1}\left[(1-\alpha_N-\gamma_N)W_t^{1-\xi_N}
 +\alpha_NR_t^{1-\xi_N}
 +\gamma_NP_{O,N,t}^{1-\xi_N}\Xi_{O,N,t}^{\xi_N-1}\right]^{1/(1-\xi_N)}.
 $$
+
 `needs_review`: the paper states that cost minimization yields marginal cost but does not print this exact expression; the form is inferred from the CES dual and cross-checked against the implementation.
 
 - **(F7) Tradable marginal-cost index**:
+
 $$
 MC_{T,t}=Z_{T,t}^{-1}\left[(1-\alpha_T-\gamma_T)W_t^{1-\xi_T}
 +\alpha_TR_t^{1-\xi_T}
 +\gamma_TP_{O,T,t}^{1-\xi_T}\Xi_{O,T,t}^{\xi_T-1}\right]^{1/(1-\xi_T)}.
 $$
+
 `needs_review`: same source limitation as (F6).
 
 - **(F8) Raw-material marginal cost**:
+
 $$
 P_{QO,t}=
 \frac{\left[(1-\alpha_O-\gamma_O)W_t^{1-\xi_O}
@@ -135,22 +145,26 @@ P_{QO,t}=
 $$
 
 - **(F9) Law of one price for raw materials**:
+
 $$
 P_{MO,t}^{\ast}=\frac{P_{QO,t}}{\mathcal E_t}.
 $$
 
 - **(F10) Price-adjustment cost for nontradables**:
+
 $$
 \Gamma_{PN,t}(n)=\frac{\phi_N}{2}
 \left(\frac{p_t(n)/p_{t-1}(n)}{P_{N,t-1}/P_{N,t-2}}-1\right)^2.
 $$
 
 - **(F11) Flexible-price markup limit for nontradables**:
+
 $$
 p_t(n)=\frac{\theta}{\theta-1}MC_t(n).
 $$
 
 - **(F12) Flexible-price export pricing with distribution costs**:
+
 $$
 \bar p_t(h)=\frac{\theta}{\theta-1}MC_t(h)+\frac{\eta}{\theta-1}P_{N,t},
 \qquad
@@ -158,24 +172,29 @@ $$
 $$
 
 - **(F13) Stochastic discount factor / pricing kernel**:
+
 $$
 D_{t,\tau}=\beta^{\tau-t}\frac{P_tU'(C_\tau)\left[1+\Gamma_{S,t}+\Gamma'_{S,t}v_t\right]}
 {P_\tau U'(C_t)\left[1+\Gamma_{S,\tau}+\Gamma'_{S,\tau}v_\tau\right]}.
 $$
+
 `needs_review`: MinerU OCR shows a leading $\beta$ rather than $\beta^{\tau-t}$ in Eq. (34); the exponent is inferred from Eq. (25).
 
 - **(F14) Domestic-bond Euler equation**:
+
 $$
 1=(1+i_{t+1})E_tD_{t,t+1}.
 $$
 
 - **(F15) Risk-adjusted uncovered interest parity**:
+
 $$
 1=(1+i_{t+1}^{\ast})(1-\Gamma_{B,t+1})
 E_t\left(D_{t,t+1}\frac{\mathcal E_{t+1}}{\mathcal E_t}\right).
 $$
 
 - **(F16) Foreign-bond intermediation wedge**:
+
 $$
 \Gamma_{B,t+1}=\phi_{B1}
 \frac{\exp\left(\phi_{B2}\mathcal E_tB_{H,t+1}^{\ast}/P_t\right)-1}
@@ -184,11 +203,13 @@ $$
 $$
 
 - **(F17) Capital accumulation**:
+
 $$
 K_{t+1}(j)=(1-\delta)K_t(j)+\Psi_tK_t(j).
 $$
 
 - **(F18) Investment adjustment technology**:
+
 $$
 \Psi_t=\frac{I_t(j)}{K_t(j)}
 -\frac{\phi_{I1}}{2}\left(\frac{I_t(j)}{K_t(j)}-\delta(1+Z_{I,t})\right)^2
@@ -196,35 +217,41 @@ $$
 $$
 
 - **(F19) Wage-adjustment cost**:
+
 $$
 \Gamma_{W,t}(j)=\frac{\phi_W}{2}
 \left(\frac{W_t(j)/W_{t-1}(j)}{W_{t-1}/W_{t-2}}-1\right)^2.
 $$
 
 - **(F20) Household transversality condition**:
+
 $$
 \lim_{\tau\to\infty}E_tD_{t,\tau}
 \left[\mathcal M_{\tau-1}(j)+(1+i_\tau)B_\tau(j)+(1+i_\tau^{\ast})(1-\Gamma_{B,\tau})\mathcal E_\tau B_\tau^{\ast}(j)\right]=0.
 $$
 
 - **(F21) Government budget constraint**:
+
 $$
 sP_tG_{A,t}+sP_{N,t}G_{N,t}
 \leq \int_0^s NETT_t(j)\,dj+\int_0^s\left[\mathcal M_t(j)-\mathcal M_{t-1}(j)\right]\,dj.
 $$
 
 - **(F22) Annualized monetary policy rule**:
+
 $$
 (1+i_{t+1})^4-1=\omega_i\left[(1+i_t)^4-1\right]
 +(1-\omega_i)\left[(1+\bar i_{t+1})^4-1\right]
 +\omega_1E_t\left[\frac{P_{t+\tau}}{P_{t+\tau-4}}-\Pi_{t+\tau}\right]
 +\Theta(F_t).
 $$
+
 `needs_review`: paper Eq. (38) has OCR ambiguity around the forecast horizon symbol and target inflation notation.
 
 ## 4. Market Clearing & Identities
 
 - **(F23) Raw-material market clearing**:
+
 $$
 \int_0^s T_{O,t}^S(o)\,do
 =\int_0^s Q_{O,t}^D(n)\,dn+\int_0^s Q_{O,t}^D(h)\,dh
@@ -232,48 +259,58 @@ $$
 $$
 
 - **(F24) Nontradable market clearing**:
+
 $$
 N^S(n)=\int_0^s N_{N,t}^D(n,x)\,dx+\eta(Q_t+M_t)+G_{N,t}.
 $$
 
 - **(F25) Tradable-goods market clearing**:
+
 $$
 T^S(h)=\int_0^s Q_t^D(h,x)\,dx+\int_s^1 M_t^{\astD}(h,x^{\ast})\,dx^{\ast}.
 $$
 
 - **(F26) Final-good resource constraint**:
+
 $$
 \int_0^s A_t(x)\,dx=\int_0^s C_t(j)(1+\Gamma_{S,t}(j))\,dj+sG_{A,t}+\int_0^s I_t(j)\,dj.
 $$
 
 - **(F27) Labor market clearing**:
+
 $$
 \ell_t(j)=\int_0^s\ell_t^D(n,j)\,dn+\int_0^s\ell_t^D(h,j)\,dh+\int_0^s\ell_t^D(o,j)\,do.
 $$
 
 - **(F28) Capital market clearing**:
+
 $$
 \int_0^sK_t(j)\,dj=\int_0^sK_t^D(n)\,dn+\int_0^sK_t^D(h)\,dh+\int_0^sK_t^D(o)\,do.
 $$
 
 - **(F29) Land market clearing**:
+
 $$
 \int_0^s\bar L_t(j)\,dj=\int_0^sL_t^D(o)\,do.
 $$
 
 - **(F30) Asset-market clearing**:
+
 $$
 \int_0^sB_t(j)\,dj=0,\qquad
 \int_0^sB_t^{\ast}(j)\,dj+\int_s^1B_t^{\ast}(j^{\ast})\,dj^{\ast}=0.
 $$
+
 `needs_review`: MinerU merged the two asset-clearing equations in Eq. (46); separation follows the surrounding prose.
 
 - **(F31) Home GDP identity, implementation cross-check only**:
+
 $$
 GDPH=AH+REALPNH\cdot GNH+EXPORTSH-IMPORTSH+(RNOMF_{t-1}-1)\frac{REALEX_tREALBH_{t-1}}{PIEF_t}.
 $$
 
 - **(F32) Home current-account ratio, implementation cross-check only**:
+
 $$
 CURBALH\_RAT=\frac{REALEX_t(REALBH_t-REALBH_{t-1}/PIEF_t)}{GDPH_t}.
 $$
@@ -283,21 +320,25 @@ $$
 The paper states that each stochastic process has AR(1) form $y_t=(1-\psi)\bar y+\psi y_{t-1}+\epsilon_t^y$, applied either to the level or the logarithm.
 
 - **(F33) Generic level shock**:
+
 $$
 y_t=(1-\rho_y)\bar y+\rho_yy_{t-1}+\varepsilon_t^y.
 $$
 
 - **(F34) Generic log shock**:
+
 $$
 \log y_t=(1-\rho_y)\log\bar y+\rho_y\log y_{t-1}+\varepsilon_t^y.
 $$
 
 - **(F35) Risk-premium shock**:
+
 $$
 Z_{B,t}=(1-\rho_B)\bar Z_B+\rho_BZ_{B,t-1}+\varepsilon_t^B.
 $$
 
 - **(F36) Tradable-preference weight shock**:
+
 $$
 \log\gamma_t=(1-\rho_\gamma)\log\bar\gamma+\rho_\gamma\log\gamma_{t-1}+\varepsilon_t^\gamma.
 $$
@@ -311,36 +352,43 @@ The paper does not print a full closed-form steady-state block. It states that t
 Key steady-state restrictions:
 
 - **(F37) Gross steady-state real rate**:
+
 $$
 1+r=\frac{1}{\beta}.
 $$
 
 - **(F38) Steady-state nominal rate and inflation**:
+
 $$
 1+i=\frac{\pi}{\beta}.
 $$
 
 - **(F39) No-intermediation steady state for net foreign assets**:
+
 $$
 B_H^{\ast}=0,\qquad \Gamma_B=0.
 $$
 
 - **(F40) Capital rental steady-state restriction**:
+
 $$
 1+\frac{R}{P}=\frac{1}{\beta}+\delta.
 $$
 
 - **(F41) Real wage steady-state condition**:
+
 $$
 \frac{W}{P}=\frac{\phi}{\phi-1}\frac{V'(\ell)}{U'(C)}.
 $$
 
 - **(F42) Government spending shares**:
+
 $$
 \frac{G_N}{GDP}=0.10,\qquad \frac{G_A}{GDP}=0.05.
 $$
 
 - **(F43) Core calibration values**:
+
 $$
 s=0.05,\quad \beta=1.03^{-0.25},\quad \theta=\theta^{\ast}=6,\quad
 \phi=\phi^{\ast}=4,\quad \delta=\delta^{\ast}=0.025.

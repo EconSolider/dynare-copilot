@@ -29,23 +29,29 @@
 由于来源是半结构模型，本节记录行为条件，而不是由显式最优化推出的一阶条件。
 
 - **(F1) 产出缺口/总需求，基准形式**：
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon_t^y .
 $$
 
 - **(F2) 带金融-实体联动的产出缺口**：
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} - \theta \eta_t + \varepsilon_t^y .
 $$
+
 当 BLT 分布滞后项不存在或其载荷为零时，基准模型嵌套在该式中。
 
 - **(F3) 通胀方程**：
+
 $$
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon_t^\pi .
 $$
+
 `needs_review`：论文将通胀残差写为负号；此处保留该符号。
 
 - **(F4) Taylor 型政策规则**：
+
 $$
 rs_t = (1-\gamma_1)\left[
 \overline{rr}_t + \pi4_{t+3}
@@ -55,17 +61,21 @@ rs_t = (1-\gamma_1)\left[
 $$
 
 - **(F5) 动态奥肯定律**：
+
 $$
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon_t^u .
 $$
 
 - **(F6) 银行贷款收紧方程**：
+
 $$
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon_t^{BLT}.
 $$
+
 `needs_review`：有针对性的 PDF 文本核对确认了方程结构，但 BLT 趋势/均衡项上的上横线受 OCR 影响。
 
 - **(F7) 进入需求的 BLT 冲击分布滞后**：
+
 $$
 \eta_t =
 0.04\varepsilon_{t-1}^{BLT}
@@ -82,43 +92,53 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F8) 产出缺口定义**：
+
 $$
 y_t = Y_t - \overline{Y}_t .
 $$
+
 论文将 $Y_t$ 和 $\overline{Y}_t$ 分别定义为实际 GDP 和潜在产出的 100 倍对数。
 
 - **(F9) 失业缺口定义**：
+
 $$
 u_t = U_t - \overline{U}_t .
 $$
 
 - **(F10) 实际利率定义**：
+
 $$
 rr_t = rs_t - \pi_{t+1}.
 $$
 
 - **(F11) 实际利率缺口定义**：
+
 $$
 rrgap_t = rr_t - \overline{rr}_t .
 $$
 
 - **(F12) 同比通胀定义**：
+
 $$
 \pi4_t = \frac{\pi_t+\pi_{t-1}+\pi_{t-2}+\pi_{t-3}}{4}.
 $$
+
 `needs_review`：论文从 CPI 对数定义季度年化通胀和同比通胀；该平均式是平稳实现中的恒等式，并与 `.mod` 交叉核对一致。
 
 - **(F13) 四季度通胀报告期望**：
+
 $$
 E4\_\pi4_t = \pi4_{t+4}.
 $$
 
 - **(F14) 下一季度通胀报告期望**：
+
 $$
 E1\_\pi_t = \pi_{t+1}.
 $$
 
 - **(F15) 下一期产出缺口报告期望**：
+
 $$
 E1\_y_t = y_{t+1}.
 $$
@@ -126,35 +146,43 @@ $$
 ## 5. Exogenous Processes
 
 - **(F16) 潜在产出随机趋势**：
+
 $$
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g_t^{\overline{Y}}}{4} + \varepsilon_t^{\overline{Y}}.
 $$
 
 - **(F17) 潜在产出增长过程**：
+
 $$
 g_t^{\overline{Y}} = \tau g^{\overline{Y},ss} + (1-\tau)g_{t-1}^{\overline{Y}} + \varepsilon_t^{g^{\overline{Y}}}.
 $$
 
 - **(F18) NAIRU 随机趋势**：
+
 $$
 \overline{U}_t = \overline{U}_{t-1} + g_t^{\overline{U}} + \varepsilon_t^{\overline{U}}.
 $$
 
 - **(F19) NAIRU 增长过程**：
+
 $$
 g_t^{\overline{U}} = (1-\alpha_3)g_{t-1}^{\overline{U}} + \varepsilon_t^{g^{\overline{U}}}.
 $$
 
 - **(F20) 均衡实际利率过程**：
+
 $$
 \overline{rr}_t = \rho \overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon_t^{\overline{rr}}.
 $$
+
 `needs_review`：MinerU Markdown 与有针对性的 PDF 文本显示同一结构，但 PDF 提取中的系数位置有视觉噪声。
 
 - **(F21) BLT 均衡项过程**：
+
 $$
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon_t^{\overline{BLT}}.
 $$
+
 `needs_review`：方程 13 附近的 Markdown/PDF 文本在部分提取结果中丢失左侧下标。
 
 `US_PM08` 的 MMB 实现交叉核对使用外生创新 `RES_RR_US_BAR`、`RES_UNR_US_GAP`、`RES_Y_US`、`RES_PIE_US`、`RES_BLT_US` 和 `RES_RS_US`；它省略了论文层面的潜在产出和 NAIRU 增长随机趋势创新，改用平稳实现状态向量。

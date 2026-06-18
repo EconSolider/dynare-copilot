@@ -79,74 +79,88 @@ $$
 以下归档方程结合了论文的非线性模型条件和 `NK_CFP10` 使用的对数线性约化系统。凡在 `extraction_notes.md` 中标记 OCR 问题的方程均应视为 `needs_review`。
 
 - **(F1) 家庭对受约束投入的劳动供给**：
+
 $$
 \frac{U_L(t)}{U_c(t)}=w_t(1+w_{\mathrm{sub}}).
 $$
 
 - **(F2) 家庭对非受约束投入的劳动供给**：
+
 $$
 \frac{U_u(t)}{U_c(t)}=r_t(1+r_{\mathrm{sub}}).
 $$
 
 - **(F3) 家庭债券 Euler / Fisher 条件**：
+
 $$
 U_c(t)=E_t\left[\beta U_c(t+1)\frac{R_t}{\pi_{t+1}}\right].
 $$
 
 - **(F4) 家庭股权定价条件**：
+
 $$
 Q_tU_c(t)=E_t\left[\beta U_c(t+1)(Q_{t+1}+D_{t+1})\right].
 $$
 
 - **(F5) 企业家对受约束劳动的 FOC**：
+
 $$
 \alpha p_tx_t=w_tL_t(1+b\phi_t).
 $$
 
 - **(F6) 企业家对非受约束劳动的 FOC**：
+
 $$
 (1-\alpha)p_tx_t=r_tu_t.
 $$
 
 - **(F7) 绑定抵押约束，改写为信用扭曲**：
+
 $$
 1+b\phi_t=\left(\frac{\alpha p_tx_t}{nw_t}\right)^b.
 $$
 
 - **(F8) 企业家利润恒等式**：
+
 $$
 \text{profits}_t=\alpha p_tx_t-w_tL_t
 =\alpha p_tx_t\left(\frac{b\phi_t}{1+b\phi_t}\right).
 $$
 
 - **(F9) $L_t$ 的线性家庭劳动条件**：
+
 $$
 \sigma\hat y_t+\theta\hat L_t=\hat w_t.
 $$
 
 - **(F10) $u_t$ 的线性家庭劳动条件**：
+
 $$
 \sigma\hat y_t+\theta\hat u_t=\hat r_t.
 $$
 
 - **(F11) 线性跨期 Euler 条件**：
+
 $$
 \sigma(E_t\hat y_{t+1}-\hat y_t)=\hat R_t-E_t\hat\pi_{t+1}.
 $$
 
 - **(F12) 线性股权定价方程**（`needs_review`：OCR 在最后括号中显示出不一致的当期产出项）：
+
 $$
 \hat q_t=\beta E_t\hat q_{t+1}+(1-\beta)E_t\hat d_{t+1}
 -\sigma(E_t\hat y_{t+1}-\hat y_t).
 $$
 
 - **(F13) 企业家股权价值恒等式**：
+
 $$
 \hat e_t+\hat q_t=\hat z_t+\hat y_t+\Lambda\hat\phi_t,
 \qquad \Lambda\equiv\frac{F'}{F}\approx b-1\leq 0.
 $$
 
 - **(F14) 线性抵押约束**：
+
 $$
 \hat w_t+\hat L_t
 =b(\hat e_{t-1}+\beta\hat q_t+(1-\beta)\hat d_t+\hat n_t)
@@ -154,22 +168,26 @@ $$
 $$
 
 - **(F15) 线性生产函数**：
+
 $$
 \hat y_t=\hat a_t+(1-\alpha)\hat u_t+\alpha\hat L_t.
 $$
 
 - **(F16) Rotemberg 菲利普斯曲线**：
+
 $$
 \hat\pi_t=\lambda\hat z_t+\beta E_t\hat\pi_{t+1}+\lambda\epsilon_t^\pi,
 \qquad \lambda=\frac{\varepsilon-1}{\varphi}.
 $$
 
 - **(F17) 股利方程**：
+
 $$
 \hat d_t=\hat y_t-(\varepsilon-1)\hat z_t.
 $$
 
 - **(F18) 线性信用扭曲恒等式**：
+
 $$
 b\hat\phi_t=\hat z_t+\hat y_t-\hat w_t-\hat L_t.
 $$
@@ -177,6 +195,7 @@ $$
 ## 4. 市场出清与恒等式
 
 - **(F19) 有效产出与产出缺口**：
+
 $$
 \hat y_t^{\mathrm{eff}}=\frac{1+\theta}{\sigma+\theta}\hat a_t,
 \qquad
@@ -184,12 +203,14 @@ $$
 $$
 
 - **(F20) 产出缺口与边际成本、信用扭曲的关系**：
+
 $$
 \hat y_t^g=\frac{1}{\sigma+\theta}\hat z_t
 -\frac{\alpha}{\sigma+\theta}b\hat\phi_t.
 $$
 
 - **(F21) 产出缺口形式的菲利普斯曲线**：
+
 $$
 \hat\pi_t=\lambda(\sigma+\theta)\hat y_t^g
 +\alpha\lambda b\hat\phi_t
@@ -198,6 +219,7 @@ $$
 $$
 
 - **(F22) MMB 实现中使用的 Taylor 规则**：
+
 $$
 \hat R_t=\tau\hat\pi_t+\tau_g\hat y_t^g+\epsilon_t^R.
 $$
@@ -207,21 +229,25 @@ $$
 ## 5. 外生过程
 
 - **(F23) 技术过程**：
+
 $$
 \hat a_t=\rho_a\hat a_{t-1}-\eta_t^a.
 $$
 
 - **(F24) 加成冲击过程**：
+
 $$
 \epsilon_t^\pi=\rho_\pi\epsilon_{t-1}^\pi+\eta_t^\pi.
 $$
 
 - **(F25) 净值冲击过程**：
+
 $$
 \hat n_t=\rho_n\hat n_{t-1}-\eta_t^n.
 $$
 
 - **(F26) 货币政策冲击过程**：
+
 $$
 \epsilon_t^R=\rho_R\epsilon_{t-1}^R-\eta_t^R.
 $$

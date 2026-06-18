@@ -52,21 +52,25 @@ The model is then used to search for the parameter vector that minimizes the los
 Because the AWM private-sector block is empirical and largely backward-looking, the source does not provide structural FOCs for households or firms. The equations below therefore summarize the policy optimality target and the AWM implementation equations as model conditions. Equations copied from the implementation cross-check are marked `needs_review` because the paper points readers to Fagan et al. (2001) and Dieppe-Henry (2004) for the full model listing.
 
 - **(F1) Policymaker period loss**:
+
 $$
 \ell_t = (\pi_t-\pi^{\ast})^2 + \lambda gap_t^2 + \gamma (r_t-r_{t-1})^2.
 $$
 
 - **(F2) Policy-evaluation loss**:
+
 $$
 \mathcal{L} = \sigma_\pi^2 + \lambda \sigma_{gap}^2 + \gamma \sigma_{\Delta r}^2.
 $$
 
 - **(F3) Generic simple interest-rate rule**:
+
 $$
 r_t = \rho r_{t-1} + \alpha E_t\pi_{t+\theta} + \beta E_t gap_{t+\kappa}.
 $$
 
 - **(F4) MMB flexible policy rule, implementation_cross_check, needs_review**:
+
 $$
 \begin{aligned}
 i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
@@ -79,6 +83,7 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 $$
 
 - **(F5) Employment equation, implementation_cross_check, needs_review**:
+
 $$
 \ell^n_t =
 \ell^n_{t-1}
@@ -91,6 +96,7 @@ $$
 $$
 
 - **(F6) Wage equation, implementation_cross_check, needs_review**:
+
 $$
 \Delta w^n_t =
 \Delta lprod_t + \Delta p^c_t - \omega_\pi \pi^c_{t-1}
@@ -102,6 +108,7 @@ $$
 $$
 
 - **(F7) GDP deflator inflation, implementation_cross_check, needs_review**:
+
 $$
 \pi^{yfd}_t =
 a_g y^r_{t-1} - a_\pi \pi^{yfd}_{t-1}
@@ -112,6 +119,7 @@ a_g y^r_{t-1} - a_\pi \pi^{yfd}_{t-1}
 $$
 
 - **(F8) Consumer-price inflation, implementation_cross_check, needs_review**:
+
 $$
 \pi^c_t =
 a_4\pi^c_{t-4}
@@ -123,6 +131,7 @@ a_4\pi^c_{t-4}
 $$
 
 - **(F9) Investment ratio, implementation_cross_check, needs_review**:
+
 $$
 i^r_t =
 i^r_{t-1}+\Delta y^r_t
@@ -132,6 +141,7 @@ i^r_{t-1}+\Delta y^r_t
 $$
 
 - **(F10) Import-price inflation, implementation_cross_check, needs_review**:
+
 $$
 \pi^m_t =
 a_m\pi^m_{t-1}
@@ -142,6 +152,7 @@ a_m\pi^m_{t-1}
 $$
 
 - **(F11) Private consumption ratio, implementation_cross_check, needs_review**:
+
 $$
 c^r_t =
 c^r_{t-1}-\pi^{pot}_t
@@ -154,6 +165,7 @@ c^r_{t-1}-\pi^{pot}_t
 $$
 
 - **(F12) Long-term bond rate, implementation_cross_check, needs_review**:
+
 $$
 \ell^T_t =
 \chi_T \frac{1}{20}\sum_{j=0}^{19} E_t s^n_{t+j}
@@ -165,37 +177,44 @@ $$
 The following conditions summarize the model identities visible in the implementation cross-check. They are `needs_review` because the indexed paper provides only a high-level model description and references the full AWM listing elsewhere.
 
 - **(F13) Output gap definition**:
+
 $$
 gap_t = y^r_t-y^{pot}_t .
 $$
 
 - **(F14) Quarterly and annualized consumer inflation definitions**:
+
 $$
 \pi^q_t = 400\,\pi^c_t,\qquad
 \pi^{ann}_t = \pi^c_t+\pi^c_{t-1}+\pi^c_{t-2}+\pi^c_{t-3}.
 $$
 
 - **(F15) Potential output growth process used in model identities**:
+
 $$
 \pi^{pot}_t = \beta_B \pi^{pot}_{t-1} + \beta_B(k^s_{t-1}-k^s_{t-2}).
 $$
 
 - **(F16) Unemployment gap from employment**:
+
 $$
 urx_t = -\frac{1-\bar U}{\bar U}\ell^n_t .
 $$
 
 - **(F17) Labor productivity**:
+
 $$
 lprod_t = y^r_t + y^{trend}_t - \ell^n_t .
 $$
 
 - **(F18) Unit labor cost identities**:
+
 $$
 ulc_t = w^i_t-y^{trend}_t-y^r_t,\qquad ulc^T_t=w^n_t-y^{trend}_t .
 $$
 
 - **(F19) Capital stock accumulation, linearized ratio form**:
+
 $$
 k^s_t =
 \frac{1-\delta}{1+\bar g}k^s_{t-1}
@@ -204,6 +223,7 @@ k^s_t =
 $$
 
 - **(F20) Short real rate proxy**:
+
 $$
 s^r_t =
 \frac{0.25}{100}\left(\frac{1}{1+\bar s/100}\right)^{0.75}s^n_t
@@ -211,6 +231,7 @@ s^r_t =
 $$
 
 - **(F21) Domestic demand deflator aggregate**:
+
 $$
 f^d_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_X x^r_t
@@ -218,11 +239,13 @@ f^d_t =
 $$
 
 - **(F22) Trade balance aggregate**:
+
 $$
 tb_t = \omega_X x^n_t + (1-\omega_X)m^n_t .
 $$
 
 - **(F23) Real GDP expenditure identity**:
+
 $$
 y^r_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_{TB}tb_t
@@ -230,11 +253,13 @@ y^r_t =
 $$
 
 - **(F24) Current account identity**:
+
 $$
 ca_t=\omega_{TB}tb_t+(1-\omega_{TB})nfn_t .
 $$
 
 - **(F25) Net foreign assets accumulation**:
+
 $$
 nfa_t =
 \frac{1}{(1+\bar g)(1+\bar\pi)}(nfa_{t-1}-\pi^{pot}_t-\pi^{yfd}_t)
@@ -242,6 +267,7 @@ nfa_t =
 $$
 
 - **(F26) Private income identity**:
+
 $$
 y^p_t =
 \omega_Y y^r_t +(1-\omega_Y-\omega_T-\omega_N-\omega_D)g^y_t
@@ -249,12 +275,14 @@ y^p_t =
 $$
 
 - **(F27) Private wealth identity**:
+
 $$
 w^l_t =
 \omega_N nfa_t+\omega_K(k^s_t+i^d_t)+(1-\omega_N-\omega_K)g^d_t .
 $$
 
 - **(F28) Government income identity**:
+
 $$
 g^y_t =
 \omega_{tdn}tdn_t+\omega_{ssn}y^r_t+\omega_{tin}y^r_t+\omega_{ogn}y^r_t
@@ -267,11 +295,13 @@ $$
 The implementation contains explicit innovations for employment, wages, deflators, investment, trade, consumption, stockbuilding, exports, imports, long rates, the short-rate rule, and fiscal spending. The paper-side article emphasizes monetary-policy shocks and fixed fiscal rules rather than a compact DSGE shock list.
 
 - **(F29) Interest-rate shock in the policy rule, implementation_cross_check**:
+
 $$
 i_t = \cdots + \sigma_i \varepsilon^i_t .
 $$
 
 - **(F30) Government consumption shock, implementation_cross_check, needs_review**:
+
 $$
 g^c_t-\bar a_g g^c_{t-1}+\pi^{pot}_t =
 \rho_g(g^c_{t-1}-\bar a_g g^c_{t-2}+\pi^{pot}_{t-1})
@@ -279,6 +309,7 @@ g^c_t-\bar a_g g^c_{t-1}+\pi^{pot}_t =
 $$
 
 - **(F31) Structural residual block, implementation_cross_check, needs_review**:
+
 $$
 \varepsilon_t =
 \{\varepsilon^\ell_t,\varepsilon^w_t,\varepsilon^{yfd}_t,\varepsilon^c_t,\varepsilon^I_t,
@@ -291,6 +322,7 @@ $$
 The MMB implementation is declared as `model(linear)`. Therefore:
 
 - **(F32) Linear-model steady state**:
+
 $$
 \bar x = 0 \quad \text{for each stationary deviation variable } x_t .
 $$

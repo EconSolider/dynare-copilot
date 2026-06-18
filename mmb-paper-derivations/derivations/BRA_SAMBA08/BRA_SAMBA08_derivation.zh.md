@@ -61,6 +61,7 @@ $$
 下列方程是论文用于估计的对数线性系统，符号与附录 C 对齐，并与 MMB `model(linear)` 实现交叉核对。标记为 `needs_review` 的方程包含 OCR 敏感符号，或包含论文到 MMB 简化版本之间需要后续核对的部分。
 
 - **(F1) 优化型家庭消费 Euler 方程**:
+
 $$
 c_t^O=\frac{\tilde\kappa}{1+\tilde\kappa}c_{t-1}^O
 +\frac{1}{1+\tilde\kappa}E_tc_{t+1}^O
@@ -71,22 +72,26 @@ c_t^O=\frac{\tilde\kappa}{1+\tilde\kappa}c_{t-1}^O
 $$
 
 - **(F2) 即期消费家庭消费**:
+
 $$
 c_t^{RT}=w_t+n_t-\frac{T}{1-T}\tau_t.
 $$
 
 - **(F3) 总消费**:
+
 $$
 c_t=\tilde\varpi_C c_t^{RT}+(1-\tilde\varpi_C)c_t^O.
 $$
 
 - **(F4) 实际汇率 UIP 条件**:
+
 $$
 q_t=E_tq_{t+1}-(r_t+s_t^B-E_t\pi_{t+1}^C)
 +(r_t^{\ast}+s_t^{B^{\ast}}-E_t\pi_{t+1}^{C^{\ast}})+z_t^Q.
 $$
 
 - **(F5) 资本影子价值**:
+
 $$
 q_t^K=\tilde\beta\frac{1-\delta}{Z^Z}E_tq_{t+1}^K
 +\left(1-\tilde\beta\frac{1-\delta}{Z^Z}\right)E_tr_{t+1}^K
@@ -94,6 +99,7 @@ q_t^K=\tilde\beta\frac{1-\delta}{Z^Z}E_tq_{t+1}^K
 $$
 
 - **(F6) 投资 Euler 方程**:
+
 $$
 i_t=\frac{1}{1+\tilde\beta}i_{t-1}
 +\frac{\tilde\beta}{1+\tilde\beta}E_ti_{t+1}
@@ -103,57 +109,68 @@ i_t=\frac{1}{1+\tilde\beta}i_{t-1}
 $$
 
 - **(F7) 资本积累**:
+
 $$
 k_{t+1}=\frac{1-\delta}{Z^Z}(k_t-z_t^Z)
 +\left(1-\frac{1-\delta}{Z^Z}\right)i_t.
 $$
 
 - **(F8) 国家风险溢价**:
+
 $$
 s_t^{B^{\ast}}=-\varphi_B^{\ast} b_{t+1}^{\asty}+\varphi_V^{\ast}v_t^{\ast}+z_t^{B^{\ast}}.
 $$
 
 - **(F9) 国内风险溢价**:
+
 $$
 s_t^B=\rho_Bs_{t-1}^B+\varepsilon_t^B.
 $$
 
 - **(F10) 工资 Phillips 曲线**:
+
 $$
 \Delta w_t=\frac{\omega_W}{1+\tilde\beta\omega_W}\Delta w_{t-1}
 +\frac{\tilde\beta}{1+\tilde\beta\omega_W}E_t\Delta w_{t+1}
 +\lambda_W(mrs_t-w_t)+z_t^W+\text{indexation terms}.
 $$
+
 `needs_review`：紧凑的 MMB 实现使用静态劳动供给关系，而不是完整工资 Phillips 曲线。
 
 - **(F11) 消费和闲暇边际替代率**:
+
 $$
 mrs_t=\eta n_t+\frac{\sigma}{1-\tilde\kappa}
 \left[c_t^O-\tilde\kappa(c_{t-1}^O-z_t^Z)\right].
 $$
 
 - **(F12) 资本租赁率**:
+
 $$
 r_t^K=q_t^D+y_t^D-k_t+z_t^Z.
 $$
 
 - **(F13) 国内投入相对价格**:
+
 $$
 q_t^D=\alpha r_t^K+(1-\alpha)w_t-z_t^D.
 $$
 
 - **(F14) 劳动需求**:
+
 $$
 n_t=\alpha_N(q_t^D+y_t^D-w_t).
 $$
 
 - **(F15) 进口价格 Phillips 曲线**:
+
 $$
 \pi_t^M-v_t^M=\lambda_M(q_t+q_t^{M^{\ast}}-q_t^M)
 +\tilde\beta E_t(\pi_{t+1}^M-v_{t+1}^M).
 $$
 
 - **(F16) 部门边际成本**:
+
 $$
 mc_t^H=\varpi_Hq_t^D+(1-\varpi_H)\left[
 q_t^M+\varpi_H^{\ast}(r_t^{\ast}+s_t^{B^{\ast}})
@@ -162,11 +179,13 @@ q_t^M+\varpi_H^{\ast}(r_t^{\ast}+s_t^{B^{\ast}})
 $$
 
 - **(F17) 部门国内投入需求**:
+
 $$
 y_{H,t}^D=y_t^H-\epsilon_H(q_t^D-mc_t^H).
 $$
 
 - **(F18) 部门进口投入需求**:
+
 $$
 m_t^H=y_t^H-\frac{\epsilon_H}{1+\epsilon_H\vartheta_H^M}
 \left[q_t^M+\varpi_H^{\ast}(r_t^{\ast}+s_t^{B^{\ast}})-mc_t^H\right]
@@ -175,33 +194,39 @@ m_t^H=y_t^H-\frac{\epsilon_H}{1+\epsilon_H\vartheta_H^M}
 $$
 
 - **(F19) 政府和投资品价格 Phillips 曲线**:
+
 $$
 \pi_t^H-v_t^H=\lambda_H(mc_t^H-q_t^H)
 +\tilde\beta E_t(\pi_{t+1}^H-v_{t+1}^H)+z_t^P,\quad H\in\{G,I\}.
 $$
 
 - **(F20) 部门相对价格运动方程**:
+
 $$
 q_t^H=q_{t-1}^H+\pi_t^H-\pi_t^C.
 $$
 
 - **(F21) 自由定价消费品价格 Phillips 曲线**:
+
 $$
 \pi_t^F-v_t^F=\lambda_F(mc_t^C-q_t^F)
 +\tilde\beta E_t(\pi_{t+1}^F-v_{t+1}^F)+z_t^P.
 $$
 
 - **(F22) 自由定价相对价格运动方程**:
+
 $$
 q_t^F=q_{t-1}^F+\pi_t^F-\pi_t^C.
 $$
 
 - **(F23) 管制价格通胀**:
+
 $$
 \pi_t^A=\theta_Av_t^A+(1-\theta_A)\bar\pi_t^C.
 $$
 
 - **(F24) 管制价格规则**:
+
 $$
 v_t^A=\chi_A\left[\pi_{t-1,t-5}^C+v_A^1(q_{t-1}-q_{t-5})
 +v_A^2(mc_{t-1}^C-mc_{t-5}^C)\right]
@@ -209,22 +234,26 @@ v_t^A=\chi_A\left[\pi_{t-1,t-5}^C+v_A^1(q_{t-1}-q_{t-5})
 $$
 
 - **(F25) CPI 通胀聚合**:
+
 $$
 \pi_t^C=\varpi_A\pi_t^A+(1-\varpi_A)\pi_t^F.
 $$
 
 - **(F26) 出口价格 Phillips 曲线**:
+
 $$
 \pi_t^X-v_t^X=\lambda_X(mc_t^X-q_t^{X^{\ast}}-q_t)
 +\tilde\beta E_t(\pi_{t+1}^X-v_{t+1}^X)+z_t^{P^X}.
 $$
 
 - **(F27) 出口相对价格运动方程**:
+
 $$
 q_t^{X^{\ast}}=q_{t-1}^{X^{\ast}}+\pi_t^X-\pi_t^{C^{\ast}}.
 $$
 
 - **(F28) 世界对巴西出口的需求**:
+
 $$
 x_t=y_t^{\ast}+\frac{\epsilon^{\ast}}{1+\epsilon^{\ast}\vartheta^{M^{\ast}}}
 \left[\vartheta^{M^{\ast}}(x_{t-1}-y_{t-1}^{\ast})-q_t^{X^{\ast}}+z_t^{M^{\ast}}\right].
@@ -233,21 +262,25 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F29) 最终品市场出清**:
+
 $$
 y_t^C=c_t,\qquad y_t^G=g_t,\qquad y_t^I=i_t,\qquad y_t^X=x_t.
 $$
 
 - **(F30) 国内投入市场出清**:
+
 $$
 y_t^D=s_C^D y_{C,t}^D+s_G^D y_{G,t}^D+s_I^D y_{I,t}^D+s_X^D y_{X,t}^D.
 $$
 
 - **(F31) 进口投入市场出清**:
+
 $$
 m_t=s_C^M m_t^C+s_I^M m_t^I+s_X^M m_t^X.
 $$
 
 - **(F32) 外部贷款/GDP 比率**:
+
 $$
 l_t^{\asty}=\sum_{H=C,I,X}\iota_Hs_{M,H}
 \left[
@@ -257,6 +290,7 @@ R^{\ast}S^{B^{\ast}}(r_t^{\ast}+s_t^{B^{\ast}})
 $$
 
 - **(F33) 净出口/GDP 比率**:
+
 $$
 nx_t^y=s_X(q_t+q_t^{X^{\ast}}+x_t)
 -s_M(q_t+q_t^{M^{\ast}}+m_t)
@@ -264,6 +298,7 @@ nx_t^y=s_X(q_t+q_t^{X^{\ast}}+x_t)
 $$
 
 - **(F34) 净国外资产/GDP 运动方程**:
+
 $$
 b_{t+1}^{\asty}=\lambda_{B^{\ast}}b_t^{\asty}
 +R^{\ast}S^{B^{\ast}}(nx_t^y-l_t^{\asty})
@@ -273,17 +308,20 @@ b_{t+1}^{\asty}=\lambda_{B^{\ast}}b_t^{\asty}
 $$
 
 - **(F35) 实际 GDP**:
+
 $$
 y_t=s_Cc_t+s_Ii_t+s_Gg_t+s_Xx_t-s_Mm_t.
 $$
 
 - **(F36) 相对 GDP 平减指数**:
+
 $$
 q_t^Y=s_Gq_t^G+s_Iq_t^I+s_X(q_t+q_t^{X^{\ast}})
 -s_M(q_t+q_t^{M^{\ast}}).
 $$
 
 - **(F37) GDP 平减指数通胀**:
+
 $$
 \pi_t^Y=\pi_t^C+q_t^Y-q_{t-1}^Y.
 $$
@@ -291,6 +329,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F38) 货币政策规则**:
+
 $$
 r_t=\gamma_Rr_{t-1}+(1-\gamma_R)
 \left[\frac{1}{4}\bar\pi_{t-3,t+1}^C
@@ -299,6 +338,7 @@ r_t=\gamma_Rr_{t-1}+(1-\gamma_R)
 $$
 
 - **(F39) 通胀目标**:
+
 $$
 \frac{1}{4}\bar\pi_{t,t+4}^C
 =\rho_{\bar\Pi^C}\frac{1}{4}\bar\pi_{t-4,t}^C
@@ -306,61 +346,73 @@ $$
 $$
 
 - **(F40) 财政基本盈余规则**:
+
 $$
 s_t^y=\phi_Ss_{t-1}^y+\phi_{\bar S}\bar s_t^y-s_Gz_t^G.
 $$
 
 - **(F41) 基本盈余目标**:
+
 $$
 \bar s_t^y=\rho_{\bar S}\bar s_{t-1}^y+\phi_Bb_t^y+\varepsilon_t^{\bar S}.
 $$
 
 - **(F42) 税率过程**:
+
 $$
 \tau_t=\rho_T\tau_{t-1}+\varepsilon_t^T.
 $$
 
 - **(F43) 政府消费**:
+
 $$
 g_t=\frac{1}{s_G}(\tau_t-s_t^y)+y_t+q_t^Y-q_t^G.
 $$
 
 - **(F44) 政府债务运动方程**:
+
 $$
 b_t^y=\lambda_Bb_{t-1}^y+B^yr_t-Rs_t^y
 +\lambda_BB^y(y_{t-1}-y_t-\pi_t^Y-z_t^Z).
 $$
 
 - **(F45) 外国产出**:
+
 $$
 y_t^{\ast}=\rho_{Y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{Y^{\ast}}.
 $$
 
 - **(F46) 外国进口价格过程**:
+
 $$
 q_t^{M^{\ast}}=\rho_{Q^{M^{\ast}}}q_{t-1}^{M^{\ast}}+\varepsilon_t^{Q^{M^{\ast}}}.
 $$
 
 - **(F47) 外国通胀**:
+
 $$
 \pi_t^{C^{\ast}}=\rho_{\Pi^{C^{\ast}}}\pi_{t-1}^{C^{\ast}}+\varepsilon_t^{\Pi^{C^{\ast}}}.
 $$
 
 - **(F48) 外国投资者风险厌恶**:
+
 $$
 v_t^{\ast}=\rho_{V^{\ast}}v_{t-1}^{\ast}+\varepsilon_t^{V^{\ast}}.
 $$
 
 - **(F49) 外国利率**:
+
 $$
 r_t^{\ast}=\rho_{R^{\ast}}r_{t-1}^{\ast}+\varepsilon_t^{R^{\ast}}.
 $$
 
 - **(F50) 国内结构冲击过程**:
+
 $$
 z_t^S=\rho_Sz_{t-1}^S+\varepsilon_t^S,\quad
 S\in\{C,Q,B^{\ast},D,Z,I,M,M^{\ast},W,P,A,P^X,R,G\}.
 $$
+
 在论文估计设定中，$\rho_R=0$ 且 $\rho_G=0$。
 
 ## 6. Steady-State Solution

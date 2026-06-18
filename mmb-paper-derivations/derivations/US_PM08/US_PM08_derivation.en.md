@@ -29,23 +29,29 @@ This is a small semi-structural projection model. The paper does not state house
 Because the source is semi-structural, this section records behavioral conditions rather than FOCs from explicit optimization.
 
 - **(F1) Output gap / aggregate demand, benchmark form**:
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon_t^y .
 $$
 
 - **(F2) Output gap with financial-real linkage**:
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} - \theta \eta_t + \varepsilon_t^y .
 $$
+
 The benchmark model is nested when the BLT distributed-lag component is absent or has zero loading.
 
 - **(F3) Inflation equation**:
+
 $$
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon_t^\pi .
 $$
+
 `needs_review`: the paper states the inflation residual with a negative sign; this sign is preserved.
 
 - **(F4) Taylor-type policy rule**:
+
 $$
 rs_t = (1-\gamma_1)\left[
 \overline{rr}_t + \pi4_{t+3}
@@ -55,17 +61,21 @@ rs_t = (1-\gamma_1)\left[
 $$
 
 - **(F5) Dynamic Okun's law**:
+
 $$
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon_t^u .
 $$
 
 - **(F6) Bank-lending-tightening equation**:
+
 $$
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon_t^{BLT}.
 $$
+
 `needs_review`: targeted PDF text confirms the equation structure, but the overbar on the BLT trend/equilibrium term is OCR-sensitive.
 
 - **(F7) BLT shock distributed lag entering demand**:
+
 $$
 \eta_t =
 0.04\varepsilon_{t-1}^{BLT}
@@ -82,43 +92,53 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F8) Output gap definition**:
+
 $$
 y_t = Y_t - \overline{Y}_t .
 $$
+
 The paper defines $Y_t$ and $\overline{Y}_t$ as 100 times the logs of real GDP and potential output, respectively.
 
 - **(F9) Unemployment gap definition**:
+
 $$
 u_t = U_t - \overline{U}_t .
 $$
 
 - **(F10) Real interest rate definition**:
+
 $$
 rr_t = rs_t - \pi_{t+1}.
 $$
 
 - **(F11) Real interest rate gap definition**:
+
 $$
 rrgap_t = rr_t - \overline{rr}_t .
 $$
 
 - **(F12) Year-on-year inflation definition**:
+
 $$
 \pi4_t = \frac{\pi_t+\pi_{t-1}+\pi_{t-2}+\pi_{t-3}}{4}.
 $$
+
 `needs_review`: the paper defines quarterly annualized inflation and year-on-year inflation from CPI logs; this average is the stationary implementation identity and is consistent with the `.mod` cross-check.
 
 - **(F13) Reporting expectation for four-quarter inflation**:
+
 $$
 E4\_\pi4_t = \pi4_{t+4}.
 $$
 
 - **(F14) Reporting expectation for next-quarter inflation**:
+
 $$
 E1\_\pi_t = \pi_{t+1}.
 $$
 
 - **(F15) Reporting expectation for next-period output gap**:
+
 $$
 E1\_y_t = y_{t+1}.
 $$
@@ -126,35 +146,43 @@ $$
 ## 5. Exogenous Processes
 
 - **(F16) Potential output stochastic trend**:
+
 $$
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g_t^{\overline{Y}}}{4} + \varepsilon_t^{\overline{Y}}.
 $$
 
 - **(F17) Potential output growth process**:
+
 $$
 g_t^{\overline{Y}} = \tau g^{\overline{Y},ss} + (1-\tau)g_{t-1}^{\overline{Y}} + \varepsilon_t^{g^{\overline{Y}}}.
 $$
 
 - **(F18) NAIRU stochastic trend**:
+
 $$
 \overline{U}_t = \overline{U}_{t-1} + g_t^{\overline{U}} + \varepsilon_t^{\overline{U}}.
 $$
 
 - **(F19) NAIRU growth process**:
+
 $$
 g_t^{\overline{U}} = (1-\alpha_3)g_{t-1}^{\overline{U}} + \varepsilon_t^{g^{\overline{U}}}.
 $$
 
 - **(F20) Equilibrium real interest rate process**:
+
 $$
 \overline{rr}_t = \rho \overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon_t^{\overline{rr}}.
 $$
+
 `needs_review`: the MinerU Markdown shows the same structure as the targeted PDF text, but the coefficient placement is visually noisy in PDF extraction.
 
 - **(F21) BLT equilibrium process**:
+
 $$
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon_t^{\overline{BLT}}.
 $$
+
 `needs_review`: the Markdown/PDF text around equation 13 loses a subscript on the left-hand side in some extraction output.
 
 The MMB implementation cross-check for `US_PM08` uses exogenous innovations `RES_RR_US_BAR`, `RES_UNR_US_GAP`, `RES_Y_US`, `RES_PIE_US`, `RES_BLT_US`, and `RES_RS_US`; it omits the paper-level stochastic-trend innovations for potential output and NAIRU growth in favor of a stationary implemented state vector.

@@ -103,44 +103,52 @@ The government levies an emissions tax and rebates through the consolidated budg
 The following equations use the paper appendix's detrended notation. Tildes denote variables divided by \(z_t\); \(\theta\) is gross trend growth.
 
 - **(F1) Labor supply**:
+
 $$
 h_t^\varphi=\widetilde{w}_t\widetilde{\lambda}_t .
 $$
 
 - **(F2) Euler equation for public bonds/reserves**:
+
 $$
 1=\beta E_t\left(\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}\frac{r_t}{\pi_{t+1}}\right).
 $$
 
 - **(F3) Euler equation for green bonds**:
+
 $$
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^G_{t+1}\right]
 +\frac{\nu_G}{\widetilde{\lambda}_t}\left(\widetilde{b}^G_{Ht}\right)^{-\kappa_G}.
 $$
 
 - **(F4) Euler equation for brown bonds**:
+
 $$
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^B_{t+1}\right]
 -\frac{\nu_B}{\widetilde{\lambda}_t}\left(\widetilde{b}^B_{Ht}\right)^{\kappa_B}.
 $$
 
 - **(F5) CES production of the intermediate bundle**:
+
 $$
 \widetilde{y}_t=\left[(1-\zeta)^{1/\xi}(\widetilde{y}^G_t)^{\frac{\xi-1}{\xi}}
 +\zeta^{1/\xi}(\widetilde{y}^B_t)^{\frac{\xi-1}{\xi}}\right]^{\frac{\xi}{\xi-1}}.
 $$
 
 - **(F6) Demand for green output**:
+
 $$
 \widetilde{y}^G_t=(1-\zeta)\left(\frac{p^G_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
 $$
 
 - **(F7) Demand for brown output**:
+
 $$
 \widetilde{y}^B_t=\zeta\left(\frac{p^B_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
 $$
 
 - **(F8) Nonlinear Phillips curve**:
+
 $$
 \pi_t(\pi_t-\bar{\pi})=\beta E_t\left[
 \frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t}
@@ -150,52 +158,62 @@ $$
 $$
 
 - **(F9) Green production**:
+
 $$
 \widetilde{y}^G_t=\left(\frac{\widetilde{k}^G_{t-1}}{\theta}\right)^\alpha(h^G_t)^{1-\alpha}.
 $$
 
 - **(F10) Brown production**:
+
 $$
 \widetilde{y}^B_t=\left(\frac{\widetilde{k}^B_{t-1}}{\theta}\right)^\alpha(h^B_t)^{1-\alpha}.
 $$
 
 - **(F11) Green labor demand**:
+
 $$
 \widetilde{w}_t h^G_t=(1-\alpha)p^G_t\widetilde{y}^G_t .
 $$
 
 - **(F12) Brown labor demand**:
+
 $$
 \widetilde{w}_t h^B_t=(1-\alpha)\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
 $$
 
 - **(F13) Green capital demand**:
+
 $$
 r^G_{kt}\frac{\widetilde{k}^G_{t-1}}{\theta}=\alpha p^G_t\widetilde{y}^G_t .
 $$
 
 - **(F14) Brown capital demand**:
+
 $$
 r^B_{kt}\frac{\widetilde{k}^B_{t-1}}{\theta}
 =\alpha\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
 $$
 
 - **(F15) Green rental rate**:
+
 $$
 r^G_{kt}=r^G_tq_{t-1}-(1-\delta)q_t .
 $$
 
 - **(F16) Brown rental rate**:
+
 $$
 r^B_{kt}=r^B_tq_{t-1}-(1-\delta)q_t .
 $$
 
 - **(F17) Optimal abatement**:
+
 $$
 \mu_t=\left(\frac{\nu_E\tau_t}{\nu_M}\right)^{1/\chi}.
 $$
 
 - **(F18) Capital-producer Tobin's Q condition**:
+
 $$
 \begin{aligned}
 1={}&q_t\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2
@@ -209,6 +227,7 @@ $$
 $$
 
 - **(F19) Marginal utility with external habits**:
+
 $$
 \widetilde{\lambda}_t=\frac{\theta}{\theta\widetilde{c}_t-\varsigma\widetilde{c}_{t-1}}
 -\beta\varsigma E_t\left(\frac{1}{\theta\widetilde{c}_{t+1}-\varsigma\widetilde{c}_t}\right).
@@ -217,22 +236,26 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F20) Emission function**:
+
 $$
 \widetilde{e}_t=(1-\mu_t)\nu_E\widetilde{y}^B_t .
 $$
 
 - **(F21) Pollution accumulation**:
+
 $$
 \widetilde{x}_t=(1-\delta^x)\frac{\widetilde{x}_{t-1}}{\theta}+\widetilde{e}_t+\widetilde{e}^{row}.
 $$
 
 - **(F22) Capital accumulation**:
+
 $$
 \widetilde{k}_t=(1-\delta)\frac{\widetilde{k}_{t-1}}{\theta}
 +\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2\right]\widetilde{i}_t .
 $$
 
 - **(F23) Resource constraint**:
+
 $$
 \widetilde{y}_t=\widetilde{c}_t+\widetilde{i}_t+\widetilde{g}
 +\widetilde{y}^B_t\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}
@@ -240,36 +263,43 @@ $$
 $$
 
 - **(F24) Labor market clearing**:
+
 $$
 h_t=h^B_t+h^G_t .
 $$
 
 - **(F25) Capital market clearing**:
+
 $$
 \widetilde{k}_t=\widetilde{k}^B_t+\widetilde{k}^G_t .
 $$
 
 - **(F26) Green bond market clearing**:
+
 $$
 q_t\widetilde{k}^G_t=\widetilde{b}^G_{Ht}+\widetilde{b}^G_{Ct}.
 $$
 
 - **(F27) Brown bond market clearing** (`needs_review`: appendix OCR omits the time subscript on central-bank brown bonds):
+
 $$
 q_t\widetilde{k}^B_t=\widetilde{b}^B_{Ht}+\widetilde{b}^B_{Ct}.
 $$
 
 - **(F28) Central-bank balance sheet** (`needs_review`: MinerU renders real reserves ambiguously):
+
 $$
 \widetilde{b}^G_{Ct}+\widetilde{b}^B_{Ct}+\widetilde{d}_{Ct}=\widetilde{re}_t .
 $$
 
 - **(F29) Carbon price conversion**:
+
 $$
 p^C_t=\frac{s_1s_2}{s_3}\tau_t .
 $$
 
 - **(F30) Euro-area pollution stock**:
+
 $$
 \widetilde{x}^{ea}_t=(1-\delta^x)\frac{\widetilde{x}^{ea}_{t-1}}{\theta}+\widetilde{e}_t .
 $$
@@ -277,6 +307,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F31) TFP process**:
+
 $$
 \log(a_t)=\log(\bar{a})+\rho_a\log(a_{t-1})+v^a_t .
 $$
@@ -295,9 +326,11 @@ Initial steady state:
 3. Set \(\pi=\bar{\pi}\), \(r=\bar{\pi}\theta/\beta\), \(r^G=rr+\gamma^G\), \(r^B=rr+\gamma^B\), \(q=1\), \(r^G_k=r^G-(1-\delta)\), and \(r^B_k=r^B-(1-\delta)\).
 4. From the Phillips curve, \(p^I=(\varepsilon-1)/\varepsilon\).
 5. Given \(p^B\), compute \(p^G\) from
+
 $$
 p^G=\left\{\frac{(p^I)^{1-\xi}-\zeta(p^B)^{1-\xi}}{1-\zeta}\right\}^{1/(1-\xi)}.
 $$
+
 6. Determine sectoral outputs from (F6) and (F7), pollution from (F20)-(F21), investment and aggregate capital from the investment-output ratio and (F22), and sectoral capital from (F13)-(F14).
 7. Determine sectoral labor from (F9)-(F10), wage from (F11), government spending from the \(g/y\) calibration, consumption from (F23), and aggregate labor from (F24).
 8. Household bond holdings follow from (F26)-(F27), and \(\kappa_G,\kappa_B,\nu_G,\nu_B\) are backed out from the steady-state spread and bond Euler equations.

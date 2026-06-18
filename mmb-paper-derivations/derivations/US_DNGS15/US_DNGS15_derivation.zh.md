@@ -48,6 +48,7 @@
 令 `bar beta = beta exp((1-sigma_c) gamma)`。下列归档方程保留论文的对数线性结构，并使用连续归档编号。
 
 - **(F1) 消费 Euler 方程**：
+
 $$
 c_t =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
@@ -59,6 +60,7 @@ c_t =
 $$
 
 - **(F2) 投资/Tobin's Q 条件**：
+
 $$
 q_t^k = S'' e^{2\gamma}(1+\bar\beta)
 \left(i_t-\frac{1}{1+\bar\beta}(i_{t-1}-z_t)
@@ -67,6 +69,7 @@ q_t^k = S'' e^{2\gamma}(1+\bar\beta)
 $$
 
 - **(F3) 资本积累**：
+
 $$
 \bar{k}_t =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
@@ -75,32 +78,38 @@ $$
 $$
 
 - **(F4) 租给厂商的有效资本**：
+
 $$
 k_t = u_t - z_t + \bar{k}_{t-1}.
 $$
 
 - **(F5) 利用率条件**：
+
 $$
 u_t = \frac{1-\psi}{\psi}r_t^k.
 $$
 
 - **(F6) 实际边际成本**：
+
 $$
 mc_t = w_t+\alpha l_t-\alpha k_t.
 $$
 
 - **(F7) 共同资本劳动比**：
+
 $$
 k_t = w_t-r_t^k+l_t.
 $$
 
 - **(F8) 生产函数**：
+
 $$
 y_t = \Phi_p\big(\alpha k_t+(1-\alpha)l_t\big)
 +\mathcal{I}\{\rho_z<1\}\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F9) 资源约束**：
+
 $$
 y_t = g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t
@@ -108,13 +117,16 @@ y_t = g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 $$
 
 - **(F10) 价格 Phillips 曲线**：
+
 $$
 \pi_t = \kappa mc_t
 +\frac{\iota_p}{1+\iota_p\bar\beta}\pi_{t-1}
 +\frac{\bar\beta}{1+\iota_p\bar\beta}E_t[\pi_{t+1}]
 +\lambda_{f,t},
 $$
+
 其中
+
 $$
 \kappa =
 \frac{(1-\zeta_p\bar\beta)(1-\zeta_p)}
@@ -122,6 +134,7 @@ $$
 $$
 
 - **(F11) 工资 Phillips 曲线**：
+
 $$
 \begin{aligned}
 w_t={}&
@@ -136,6 +149,7 @@ w_t={}&
 $$
 
 - **(F12) 家庭边际替代率**：
+
 $$
 w_t^h =
 \frac{1}{1-h e^{-\gamma}}(c_t-h e^{-\gamma}c_{t-1}+h e^{-\gamma}z_t)
@@ -143,6 +157,7 @@ w_t^h =
 $$
 
 - **(F13) 基准货币政策规则**：
+
 $$
 R_t = \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1\pi_t+\psi_2(y_t-y_t^f)\big)
@@ -151,21 +166,25 @@ R_t = \rho_R R_{t-1}
 $$
 
 - **(F14) 带时变目标的货币政策规则**：
+
 $$
 R_t = \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
 $$
+
 扩展模型用 (F14) 取代 (F13)。
 
 - **(F15) 外部融资利差**：
+
 $$
 E_t[\tilde{R}_{t+1}^k-R_t] =
 b_t+\zeta_{sp,b}(q_t^k+\bar{k}_t-n_t)+\tilde{\sigma}_{\omega,t}.
 $$
 
 - **(F16) 企业家资本回报**：
+
 $$
 \tilde{R}_t^k-\pi_t =
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
@@ -174,6 +193,7 @@ $$
 $$
 
 - **(F17) 企业家净值**：
+
 $$
 \begin{aligned}
 n_t={}&
@@ -190,11 +210,13 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F18) 产出缺口定义**：
+
 $$
 og_t = y_t-y_t^f.
 $$
 
 - **(F19) 灵活价格消费 Euler 方程**：
+
 $$
 c_t^f =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}r_t^f
@@ -205,6 +227,7 @@ c_t^f =
 $$
 
 - **(F20) 灵活价格投资/Tobin's Q 条件**：
+
 $$
 q_t^{k,f} = S'' e^{2\gamma}(1+\bar\beta)
 \left(i_t^f-\frac{1}{1+\bar\beta}(i_{t-1}^f-z_t)
@@ -213,6 +236,7 @@ q_t^{k,f} = S'' e^{2\gamma}(1+\bar\beta)
 $$
 
 - **(F21) 灵活价格资本积累**：
+
 $$
 \bar{k}_t^f =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
@@ -221,6 +245,7 @@ $$
 $$
 
 - **(F22) 灵活价格生产侧恒等式**：
+
 $$
 k_t^f=u_t^f-z_t+\bar{k}_{t-1}^f,\quad
 u_t^f=\frac{1-\psi}{\psi}r_t^{k,f},\quad
@@ -229,10 +254,12 @@ k_t^f=w_t^f-r_t^{k,f}+l_t^f.
 $$
 
 - **(F23) 灵活价格产出和资源约束**：
+
 $$
 y_t^f=\Phi_p\big(\alpha k_t^f+(1-\alpha)l_t^f\big)
 +\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t,
 $$
+
 $$
 y_t^f=g_\ast\;g_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
@@ -240,6 +267,7 @@ y_t^f=g_\ast\;g_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
 $$
 
 - **(F24) 灵活价格工资/MRS 条件**：
+
 $$
 w_t^f =
 \frac{1}{1-h e^{-\gamma}}(c_t^f-h e^{-\gamma}c_{t-1}^f+h e^{-\gamma}z_t)
@@ -247,6 +275,7 @@ w_t^f =
 $$
 
 - **(F25) 无金融摩擦灵活价格套利条件**：
+
 $$
 q_t^{k,f} =
 \frac{r_\ast^k}{r_\ast^k+1-\delta}E_t[r_{t+1}^{k,f}]
@@ -258,33 +287,39 @@ $$
 ## 5. Exogenous Processes
 
 - **(F26) 去趋势生产率增长**：
+
 $$
 z_t=\frac{1}{1-\alpha}(\rho_z-1)\tilde{z}_{t-1}
 +\frac{1}{1-\alpha}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F27) 去趋势对数生产率**：
+
 $$
 \tilde{z}_t=\rho_z\tilde{z}_{t-1}+\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F28) 政府支出**：
+
 $$
 g_t=\rho_g g_{t-1}+\sigma_g\varepsilon_{g,t}
 +\eta_{gz}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F29) 跨期楔子**：
+
 $$
 b_t=\rho_b b_{t-1}+\sigma_b\varepsilon_{b,t}.
 $$
 
 - **(F30) 边际投资效率**：
+
 $$
 \mu_t=\rho_\mu\mu_{t-1}+\sigma_\mu\varepsilon_{\mu,t}.
 $$
 
 - **(F31) 价格加成冲击**：
+
 $$
 \lambda_{f,t}=\rho_{\lambda_f}\lambda_{f,t-1}
 +\sigma_{\lambda_f}\varepsilon_{\lambda_f,t}
@@ -292,6 +327,7 @@ $$
 $$
 
 - **(F32) 工资加成冲击**：
+
 $$
 \lambda_{w,t}=\rho_{\lambda_w}\lambda_{w,t-1}
 +\sigma_{\lambda_w}\varepsilon_{\lambda_w,t}
@@ -299,11 +335,13 @@ $$
 $$
 
 - **(F33) 货币政策残差**：
+
 $$
 r_t^m=\rho_{r^m}r_{t-1}^m+\sigma_{r^m}\varepsilon_{r^m,t}.
 $$
 
 - **(F34) 金融风险/利差冲击**：
+
 $$
 \tilde{\sigma}_{\omega,t}=
 \rho_{\sigma_\omega}\tilde{\sigma}_{\omega,t-1}
@@ -311,6 +349,7 @@ $$
 $$
 
 - **(F35) 时变通胀目标**：
+
 $$
 \pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}
 +\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.

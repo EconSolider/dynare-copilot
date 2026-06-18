@@ -22,7 +22,9 @@
 
 在 Taylor 名义合约变体中，工资制定者设定当前合约工资时参考四个季度合约期内的预期平均价格和预期平均产出缺口。该选择直接由合约工资条件表示，而不是由效用最大化问题表示：
 
-$$x_t = E_t\left[\bar p_t + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.$$
+$$
+x_t = E_t\left[\bar p_t + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.
+$$
 
 ### 2.2 总需求与政策模块
 
@@ -34,53 +36,77 @@ $$x_t = E_t\left[\bar p_t + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\vare
 
 - **(F1) 合约价格加总**：
 
-$$p_t = \sum_{i=0}^{3} f_i x_{t-i}.$$
+$$
+p_t = \sum_{i=0}^{3} f_i x_{t-i}.
+$$
 
 - **(F2) 合约权重序列**：
 
-$$f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad s\in(0,1/6].$$
+$$
+f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad s\in(0,1/6].
+$$
 
 - **(F3) 合约期内预期平均价格**：
 
-$$\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.$$
+$$
+\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.
+$$
 
 - **(F4) 合约期内预期平均产出缺口**：
 
-$$\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.$$
+$$
+\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.
+$$
 
 - **(F5) Taylor 名义工资合约条件**：
 
-$$x_t = E_t\left[\bar p_t + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.$$
+$$
+x_t = E_t\left[\bar p_t + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.
+$$
 
 - **(F6) 季度通胀定义**：
 
-$$\pi_t = p_t-p_{t-1}.$$
+$$
+\pi_t = p_t-p_{t-1}.
+$$
 
 - **(F7) 政策规则使用的四季度通胀**：
 
-$$\pi_t^{(4)} = p_t-p_{t-4} = \sum_{j=0}^{3}\pi_{t-j}.$$
+$$
+\pi_t^{(4)} = p_t-p_{t-4} = \sum_{j=0}^{3}\pi_{t-j}.
+$$
 
 - **(F8) 总需求 / IS 方程**：
 
-$$q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.$$
+$$
+q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.
+$$
 
 - **(F9) Taylor 型短期利率规则**：
 
-$$i^s_t = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t + \varepsilon_{i,t}.$$
+$$
+i^s_t = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t + \varepsilon_{i,t}.
+$$
 
 加性货币政策冲击来自 MMB 实现交叉检查；论文方程列出的是没有显式冲击项的确定性规则。状态：`needs_review`。
 
 - **(F10) 预期假说下的长期名义利率**：
 
-$$i^l_t = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i^s_{t+j}\right].$$
+$$
+i^l_t = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i^s_{t+j}\right].
+$$
 
 - **(F11) 长期事前实际利率**：
 
-$$r^l_t = i^l_t - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
+$$
+r^l_t = i^l_t - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].
+$$
 
 - **(F12) 确定性稳态实际利率恒等式**：
 
-$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
+$$
+r^{\ast} = -\frac{\delta_0}{\delta_3}.
+$$
 
 ## 4. 市场出清与总量恒等式
 
@@ -88,13 +114,17 @@ $$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
 
 - **(F13) 产出缺口归一化**：
 
-$$q_t = y_t-y^{\ast}_t.$$
+$$
+q_t = y_t-y^{\ast}_t.
+$$
 
 其中 $y_t$ 是对数产出，$y^{\ast}_t$ 是趋势或潜在产出。论文估计中使用对数线性趋势产出缺口，并讨论了 OECD 产出缺口对照。状态：`needs_review`，因为本档案没有从原始数据重建精确 MMB 数据转换。
 
 - **(F14) 实现中的通胀/产出/利率别名**：
 
-$$\text{outputgap}_t=q_t,\qquad \text{inflation}_t=\pi_t^{(4)},\qquad \text{interest}_t=i^s_t.$$
+$$
+\text{outputgap}_t=q_t,\qquad \text{inflation}_t=\pi_t^{(4)},\qquad \text{interest}_t=i^s_t.
+$$
 
 这些别名来自 `.mod` 实现交叉检查，并非单独的论文侧方程。
 
@@ -102,15 +132,21 @@ $$\text{outputgap}_t=q_t,\qquad \text{inflation}_t=\pi_t^{(4)},\qquad \text{inte
 
 - **(F15) 合约工资冲击**：
 
-$$\varepsilon_{x,t}\sim iid(0,1).$$
+$$
+\varepsilon_{x,t}\sim iid(0,1).
+$$
 
 - **(F16) 总需求冲击**：
 
-$$\varepsilon_{d,t}\sim iid(0,1).$$
+$$
+\varepsilon_{d,t}\sim iid(0,1).
+$$
 
 - **(F17) MMB 模拟中的货币政策冲击**：
 
-$$\varepsilon_{i,t}\sim iid(0,\sigma_i^2).$$
+$$
+\varepsilon_{i,t}\sim iid(0,\sigma_i^2).
+$$
 
 来源中的模拟讨论成本推动冲击和反通胀实验；显式政策冲击创新是实现交叉检查项。状态：`needs_review`。
 
@@ -120,23 +156,33 @@ $$\varepsilon_{i,t}\sim iid(0,\sigma_i^2).$$
 
 1. 将冲击设为零：
 
-$$\varepsilon_{x,t}=\varepsilon_{d,t}=\varepsilon_{i,t}=0.$$
+$$
+\varepsilon_{x,t}=\varepsilon_{d,t}=\varepsilon_{i,t}=0.
+$$
 
 2. 将产出缺口设为零：
 
-$$\bar q=0.$$
+$$
+\bar q=0.
+$$
 
 3. 政策目标钉住通胀：
 
-$$\bar\pi^{(4)}=\pi^{\ast}.$$
+$$
+\bar\pi^{(4)}=\pi^{\ast}.
+$$
 
 4. 长期事前实际利率等于均衡实际利率：
 
-$$\bar r^l=r^{\ast}=-\frac{\delta_0}{\delta_3}.$$
+$$
+\bar r^l=r^{\ast}=-\frac{\delta_0}{\delta_3}.
+$$
 
 5. 短期和长期名义利率满足：
 
-$$\bar i^s=\bar i^l=r^{\ast}+\pi^{\ast}.$$
+$$
+\bar i^s=\bar i^l=r^{\ast}+\pi^{\ast}.
+$$
 
 6. 合约价格水平的绝对水平未被钉住。可以使用 $\bar p=0$ 这样的归一化；在去趋势后的零缺口、常数通胀表示中，$\bar x=\bar p$。状态：`needs_review`，因为本档案没有重建 MMB 转换使用的精确水平归一化。
 

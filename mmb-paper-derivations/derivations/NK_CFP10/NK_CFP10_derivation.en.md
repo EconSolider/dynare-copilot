@@ -79,74 +79,88 @@ The paper studies optimal commitment policy and simple interest-rate rules. The 
 The archive equations below combine the paper's nonlinear model conditions and the log-linear reduced system used by `NK_CFP10`. All equations should be treated as `needs_review` where OCR artifacts are noted in `extraction_notes.md`.
 
 - **(F1) Household labor supply for constrained input**:
+
 $$
 \frac{U_L(t)}{U_c(t)}=w_t(1+w_{\mathrm{sub}}).
 $$
 
 - **(F2) Household labor supply for unconstrained input**:
+
 $$
 \frac{U_u(t)}{U_c(t)}=r_t(1+r_{\mathrm{sub}}).
 $$
 
 - **(F3) Household bond Euler / Fisher condition**:
+
 $$
 U_c(t)=E_t\left[\beta U_c(t+1)\frac{R_t}{\pi_{t+1}}\right].
 $$
 
 - **(F4) Household equity-pricing condition**:
+
 $$
 Q_tU_c(t)=E_t\left[\beta U_c(t+1)(Q_{t+1}+D_{t+1})\right].
 $$
 
 - **(F5) Entrepreneur FOC for constrained labor**:
+
 $$
 \alpha p_tx_t=w_tL_t(1+b\phi_t).
 $$
 
 - **(F6) Entrepreneur FOC for unconstrained labor**:
+
 $$
 (1-\alpha)p_tx_t=r_tu_t.
 $$
 
 - **(F7) Binding collateral constraint, rewritten as a credit distortion**:
+
 $$
 1+b\phi_t=\left(\frac{\alpha p_tx_t}{nw_t}\right)^b.
 $$
 
 - **(F8) Entrepreneur profit identity**:
+
 $$
 \text{profits}_t=\alpha p_tx_t-w_tL_t
 =\alpha p_tx_t\left(\frac{b\phi_t}{1+b\phi_t}\right).
 $$
 
 - **(F9) Linear household labor condition for $L_t$**:
+
 $$
 \sigma\hat y_t+\theta\hat L_t=\hat w_t.
 $$
 
 - **(F10) Linear household labor condition for $u_t$**:
+
 $$
 \sigma\hat y_t+\theta\hat u_t=\hat r_t.
 $$
 
 - **(F11) Linear intertemporal Euler condition**:
+
 $$
 \sigma(E_t\hat y_{t+1}-\hat y_t)=\hat R_t-E_t\hat\pi_{t+1}.
 $$
 
 - **(F12) Linear equity pricing equation** (`needs_review`: OCR shows an inconsistent current-output term in the last bracket):
+
 $$
 \hat q_t=\beta E_t\hat q_{t+1}+(1-\beta)E_t\hat d_{t+1}
 -\sigma(E_t\hat y_{t+1}-\hat y_t).
 $$
 
 - **(F13) Entrepreneur share-value identity**:
+
 $$
 \hat e_t+\hat q_t=\hat z_t+\hat y_t+\Lambda\hat\phi_t,
 \qquad \Lambda\equiv\frac{F'}{F}\approx b-1\leq 0.
 $$
 
 - **(F14) Linear collateral constraint**:
+
 $$
 \hat w_t+\hat L_t
 =b(\hat e_{t-1}+\beta\hat q_t+(1-\beta)\hat d_t+\hat n_t)
@@ -154,22 +168,26 @@ $$
 $$
 
 - **(F15) Linear production function**:
+
 $$
 \hat y_t=\hat a_t+(1-\alpha)\hat u_t+\alpha\hat L_t.
 $$
 
 - **(F16) Rotemberg Phillips curve**:
+
 $$
 \hat\pi_t=\lambda\hat z_t+\beta E_t\hat\pi_{t+1}+\lambda\epsilon_t^\pi,
 \qquad \lambda=\frac{\varepsilon-1}{\varphi}.
 $$
 
 - **(F17) Dividend equation**:
+
 $$
 \hat d_t=\hat y_t-(\varepsilon-1)\hat z_t.
 $$
 
 - **(F18) Linear credit-distortion identity**:
+
 $$
 b\hat\phi_t=\hat z_t+\hat y_t-\hat w_t-\hat L_t.
 $$
@@ -177,6 +195,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F19) Efficient output and output gap**:
+
 $$
 \hat y_t^{\mathrm{eff}}=\frac{1+\theta}{\sigma+\theta}\hat a_t,
 \qquad
@@ -184,12 +203,14 @@ $$
 $$
 
 - **(F20) Output-gap relation to marginal cost and credit distortion**:
+
 $$
 \hat y_t^g=\frac{1}{\sigma+\theta}\hat z_t
 -\frac{\alpha}{\sigma+\theta}b\hat\phi_t.
 $$
 
 - **(F21) Phillips curve in output-gap form**:
+
 $$
 \hat\pi_t=\lambda(\sigma+\theta)\hat y_t^g
 +\alpha\lambda b\hat\phi_t
@@ -198,6 +219,7 @@ $$
 $$
 
 - **(F22) Taylor rule used in the MMB implementation**:
+
 $$
 \hat R_t=\tau\hat\pi_t+\tau_g\hat y_t^g+\epsilon_t^R.
 $$
@@ -207,21 +229,25 @@ The model has no capital accumulation block. Share ownership, equity prices, div
 ## 5. Exogenous Processes
 
 - **(F23) Technology process**:
+
 $$
 \hat a_t=\rho_a\hat a_{t-1}-\eta_t^a.
 $$
 
 - **(F24) Markup shock process**:
+
 $$
 \epsilon_t^\pi=\rho_\pi\epsilon_{t-1}^\pi+\eta_t^\pi.
 $$
 
 - **(F25) Net-worth shock process**:
+
 $$
 \hat n_t=\rho_n\hat n_{t-1}-\eta_t^n.
 $$
 
 - **(F26) Monetary-policy shock process**:
+
 $$
 \epsilon_t^R=\rho_R\epsilon_{t-1}^R-\eta_t^R.
 $$

@@ -100,78 +100,93 @@ $$
 下面列出 MMB 线性均衡系统；凡论文中可见的方程优先以论文为来源，`.mod` 只用于交叉检查覆盖范围、时序和变量名。变量均为相对稳态的偏离。
 
 - **(F1) 本地区消费 Euler 方程**：
+
 $$
 c_t=c_{t+1}-\sigma_c(r_t-\pi_{t+1})
 +\frac{\sigma_c}{\sigma_l}l_t-\frac{\sigma_c}{\sigma_l}l_{t+1}.
 $$
 
 - **(F2) 完全市场 Backus-Smith 条件**：
+
 $$
 c_t-c_t^{\ast}=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^{\ast}).
 $$
 
 - **(F3) 本地区 Phillips 曲线**：
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\kappa\zeta s_{H,t}.
 $$
 
 - **(F4) 外国 Phillips 曲线**：
+
 $$
 \pi_{F,t}=\beta E_t\pi_{F,t+1}+\kappa\zeta s_{F,t}.
 $$
 
 - **(F5) 本地区 CPI 通胀聚合**：
+
 $$
 \pi_t=\phi_H\pi_{H,t}+\phi_F\pi_{F,t}.
 $$
 
 - **(F6) 外国 CPI 通胀聚合**：
+
 $$
 \pi_t^{\ast}=\phi_H^{\ast}\pi_{H,t}+\phi_F^{\ast}\pi_{F,t}.
 $$
 
 - **(F7) 含预定资本的本地区生产函数**：
+
 $$
 y_t=a\,l_t+(1-a)k_{t-1}.
 $$
 
 - **(F8) 含预定资本的外国生产函数**：
+
 $$
 y_t^{\ast}=a\,l_t^{\ast}+(1-a)k_{t-1}^{\ast}.
 $$
 
 - **(F9) 本地区实际工资/劳动供给关系**：
+
 $$
 w_t=\nu^{-1}l_t.
 $$
 
 - **(F10) 外国实际工资/劳动供给关系**：
+
 $$
 w_t^{\ast}=\nu^{-1}l_t^{\ast}.
 $$
 
 - **(F11) 本地区实际边际成本**：
+
 $$
 s_{H,t}+p_{H,t}=\bar\omega y_t-(\bar\omega-\nu^{-1})k_{t-1}.
 $$
 
 - **(F12) 外国实际边际成本**：
+
 $$
 s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}
 =\bar\omega y_t^{\ast}-(\bar\omega-\nu^{-1})k_{t-1}^{\ast}+q_t.
 $$
 
 - **(F13) 本地区资本积累**：
+
 $$
 k_t=(1-\delta)k_{t-1}+\delta i_t.
 $$
 
 - **(F14) 外国资本积累**：
+
 $$
 k_t^{\ast}=(1-\delta)k_{t-1}^{\ast}+\delta i_t^{\ast}.
 $$
 
 - **(F15) 本地区最优投资条件**（`needs_review`：来自实现交叉检查，因为 MinerU 正文 Markdown 中没有在线附录公式）：
+
 $$
 \sigma_c^{-1}c_t-\sigma_c^{-1}E_tc_{t+1}
 -\sigma_l^{-1}l_t+\sigma_l^{-1}E_tl_{t+1}
@@ -183,6 +198,7 @@ $$
 $$
 
 - **(F16) 外国最优投资条件**（`needs_review`：同 F15 的来源限制）：
+
 $$
 \sigma_c^{-1}c_t^{\ast}-\sigma_c^{-1}E_tc_{t+1}^{\ast}
 -\sigma_l^{-1}l_t^{\ast}+\sigma_l^{-1}E_tl_{t+1}^{\ast}
@@ -196,6 +212,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F17) 本地区资源约束**：
+
 $$
 \begin{aligned}
 y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
@@ -206,6 +223,7 @@ y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
 $$
 
 - **(F18) 外国资源约束**：
+
 $$
 \begin{aligned}
 y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
@@ -217,31 +235,37 @@ y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
 $$
 
 - **(F19) 本地区相对价格运动方程**：
+
 $$
 p_{H,t}-p_{H,t-1}=\pi_{H,t}-\pi_t.
 $$
 
 - **(F20) 实际汇率恒等式**：
+
 $$
 \phi_H^{\ast}p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}=q_t.
 $$
 
 - **(F21) 本地区名义产出恒等式**：
+
 $$
 ny_t=y_t+p_t.
 $$
 
 - **(F22) 外国名义产出恒等式**：
+
 $$
 ny_t^{\ast}=y_t^{\ast}+p_t^{\ast}.
 $$
 
 - **(F23) 本地区生产者价格指数**：
+
 $$
 p_t=\pi_{H,t}+p_{t-1}.
 $$
 
 - **(F24) 外国生产者价格指数**：
+
 $$
 p_t^{\ast}=\pi_{F,t}+p_{t-1}^{\ast}.
 $$
@@ -249,6 +273,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) 共同货币政策规则**：
+
 $$
 r_t=\rho_i r_{t-1}+(1-\rho_i)
 \left[\phi_\pi(n\pi_t+(1-n)\pi_t^{\ast})+\phi_y(ny_t+(1-n)y_t^{\ast})
@@ -256,6 +281,7 @@ r_t=\rho_i r_{t-1}+(1-\rho_i)
 $$
 
 - **(F26) 政府支出过程**：
+
 $$
 g_t=\rho_G g_{t-1}+\varepsilon^g_t,\qquad
 g_t^{\ast}=\rho_G g_{t-1}^{\ast}+\varepsilon^{g\ast}_t.

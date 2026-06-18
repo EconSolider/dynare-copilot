@@ -21,6 +21,7 @@
 企业 $j$ 面对其差异化国内品种的需求：
 
 **(F1) 国内品种需求**：
+
 $$
 Y_t^j =
 \frac{1-s^M-u_t^M}{n}
@@ -32,6 +33,7 @@ $$
 生产使用经利用率调整的私人资本、扣除固定劳动后的劳动、技术和公共资本：
 
 **(F2) 生产函数**：
+
 $$
 Y_t^j =
 \left(ucap_t^j K_t^j\right)^{1-\alpha}
@@ -43,6 +45,7 @@ $$
 企业总劳动是家庭劳动类型的 CES 聚合：
 
 **(F3) 劳动聚合**：
+
 $$
 L_t^j =
 \left[\int_0^1 \left(L_t^{i,j}\right)^{(\theta-1)/\theta}\,di\right]^{\theta/(\theta-1)}.
@@ -51,6 +54,7 @@ $$
 代表性企业选择劳动、资本服务、利用率和价格来最大化当期实际利润：
 
 **(F4) 企业利润目标**：
+
 $$
 Pr_t^j =
 \frac{P_t^j}{P_t}Y_t^j
@@ -62,16 +66,19 @@ $$
 调整成本为：
 
 **(F5) 劳动调整成本**：
+
 $$
 adj^L(L_t^j)=W_t\left(L_t^j u_t^L+\frac{\gamma_L}{2}(\Delta L_t^j)^2\right).
 $$
 
 **(F6) 价格调整成本**：
+
 $$
 adj^P(P_t^j)=\frac{\gamma_P}{2}\frac{(\Delta P_t^j)^2}{P_{t-1}^j}.
 $$
 
 **(F7) 产能利用率调整成本**：
+
 $$
 adj^{UCAP}(ucap_t^j)=P_t^I K_t\left[\gamma_{ucap,1}(ucap_t^j-1)+\frac{\gamma_{ucap,2}}{2}(ucap_t^j-1)^2\right].
 $$
@@ -81,11 +88,13 @@ $$
 投资品部门把国内和外国最终品组合为投资投入，并用线性技术转化：
 
 **(F8) 投资品技术**：
+
 $$
 I_t=I_t^{inp}U_t^I.
 $$
 
 **(F9) 投资品价格**：
+
 $$
 P_t^I=\frac{P_t^C}{U_t^I}.
 $$
@@ -95,6 +104,7 @@ $$
 非流动性约束家庭选择消费、国内和外国债券、物质资本、现金余额和投资。论文将其问题写为：
 
 **(F10) 李嘉图家庭目标**：
+
 $$
 \max E_0\sum_{t=0}^{\infty}\beta^t U(C_t^i,1-L_t^i).
 $$
@@ -102,6 +112,7 @@ $$
 当期效用为：
 
 **(F11) 习惯效用**：
+
 $$
 U(C_t^i,1-L_t^i)=
 \frac{
@@ -116,6 +127,7 @@ $$
 带调整成本的物质投资支出为：
 
 **(F12) 家庭资本投资调整成本**：
+
 $$
 I_t^i=
 J_t^i\left(1+\frac{\gamma_K}{2}\frac{J_t^i}{K_{t-1}^i}\right)
@@ -127,6 +139,7 @@ $$
 流动性约束家庭不在资产上优化；其消费等于当期可支配收入：
 
 **(F13) 流动性约束消费**：
+
 $$
 (1+t_t^c)P_t^C C_t^k=(1-t_t^w)W_t L_t+\mathrm{TR}_t^k-T_t^{LS,k}.
 $$
@@ -136,6 +149,7 @@ $$
 私人消费、投资、政府消费和政府投资使用相同的国内/外国 CES 聚合器：
 
 **(F14) 国内/外国吸收聚合器**：
+
 $$
 Z^i=
 \left[
@@ -149,6 +163,7 @@ $$
 ### 企业
 
 **(F15) 劳动需求条件**（`needs_review`：OCR 中前瞻劳动调整项的括号受损）：
+
 $$
 \alpha\frac{Y_t^j}{L_t^j-LO_t^j}\eta_t^j
 -\frac{W_t}{P_t^j}u_t^L
@@ -158,12 +173,14 @@ $$
 $$
 
 **(F16) 资本服务需求**：
+
 $$
 (1-\alpha)\frac{Y_t^j}{K_t^j}\eta_t^j
 =i_t^K\frac{P_t^{I,j}}{P_t^j}.
 $$
 
 **(F17) 产能利用率条件**：
+
 $$
 (1-\alpha)\frac{Y_t^j}{K_t^j ucap_t^j}\eta_t^j
 =
@@ -172,6 +189,7 @@ $$
 $$
 
 **(F18) 企业加成条件**（`needs_review`：来源 OCR 损坏了 Eq. 7d 的撇号）：
+
 $$
 \eta_t =
 1-\frac{1}{\sigma^d}
@@ -184,11 +202,13 @@ $$
 ### 李嘉图家庭
 
 **(F19) 消费边际效用条件**：
+
 $$
 U_{C,t}^i-\lambda_t\frac{(1+t_t^c)P_t^C}{P_t}=0.
 $$
 
 **(F20) 国内债券欧拉方程**：
+
 $$
 -\lambda_t+
 E_t\left[
@@ -199,6 +219,7 @@ E_t\left[
 $$
 
 **(F21) 带风险溢价的外国债券欧拉方程**：
+
 $$
 -\lambda_t+
 E_t\left[
@@ -210,6 +231,7 @@ E_t\left[
 $$
 
 **(F22) 资本欧拉方程**：
+
 $$
 -\xi_t+
 E_t\left[
@@ -221,6 +243,7 @@ E_t\left[
 $$
 
 **(F23) 物质投资 FOC**（`needs_review`：来源 OCR 在 Eq. 13 与 Eq. 15a 中使用的资本时点不一致）：
+
 $$
 \gamma_K\frac{J_t^i}{K_{t-1}^i}
 +\gamma_I\Delta J_t^i
@@ -231,6 +254,7 @@ Q_t=\frac{\xi_t}{\lambda_t}\frac{P_t}{P_t^I}.
 $$
 
 **(F24) Tobin-Q 资产价值方程**：
+
 $$
 Q_t=
 E_t\left[
@@ -243,6 +267,7 @@ $$
 ### 工资设定
 
 **(F25) 工资规则**：
+
 $$
 \frac{W_t}{P_t^C}
 =
@@ -255,6 +280,7 @@ $$
 $$
 
 **(F26) 带指数化的工资加成**（`needs_review`：OCR 括号受损）：
+
 $$
 \eta_t^W=
 1-\frac{1}{\theta}
@@ -269,17 +295,20 @@ $$
 ## 4. Market Clearing & Identities
 
 **(F27) 总消费**：
+
 $$
 C_t=(1-slc)C_t^i+slc\,C_t^k.
 $$
 
 **(F28) 总就业**：
+
 $$
 L_t=(1-slc)L_t^i+slc\,L_t^k,
 \qquad L_t^i=L_t^k=L_t.
 $$
 
 **(F29) 进口需求**：
+
 $$
 M_t=(s^M+u_t^M)
 \left[
@@ -290,6 +319,7 @@ M_t=(s^M+u_t^M)
 $$
 
 **(F30) 出口需求**：
+
 $$
 X_t=(s^{M,W}+u_t^X)
 \left[
@@ -300,16 +330,19 @@ Y_t^F.
 $$
 
 **(F31) 出口价格加成**：
+
 $$
 \eta_t^X P_t^X=P_t.
 $$
 
 **(F32) 进口价格加成**：
+
 $$
 \eta_t^M P_t^M=E_tP_t^F.
 $$
 
 **(F33) 进出口加成动态**：
+
 $$
 \eta_t^k=
 1-\frac{1}{\sigma^{v,k}}
@@ -322,11 +355,13 @@ $$
 $$
 
 **(F34) 净外国资产**：
+
 $$
 E_tB_t^F=(1+i_t^F)E_tB_{t-1}^F+P_t^X X_t-P_t^M M_t.
 $$
 
 **(F35) 产出缺口指标**：
+
 $$
 YGAP_t=
 \left(\frac{ucap_t}{ucap_t^{ss}}\right)^{1-\alpha}
@@ -334,36 +369,43 @@ YGAP_t=
 $$
 
 **(F36) 平滑的产能利用率参照值**：
+
 $$
 ucap_t^{ss}=(1-\rho^{ucap})ucap_{t-1}^{ss}+\rho^{ucap}ucap_t.
 $$
 
 **(F37) 平滑的就业参照值**：
+
 $$
 L_t^{ss}=(1-\rho^{Lss})L_{t-1}^{ss}+\rho^{Lss}L_t.
 $$
 
 **(F38) 政府收入**：
+
 $$
 R_t^G=t_t^w W_tL_t+t_t^cP_t^C C_t+t_t^K i_t^K P_t^I K_{t-1}.
 $$
 
 **(F39) 劳动所得税规则**：
+
 $$
 t_t^w=\tau_0^w Y_t^{\tau_1^w}U_t^{TW}.
 $$
 
 **(F40) 线性化劳动所得税响应**：
+
 $$
 t_t^w=\tau_0^w+\tau_0^w\tau_1^w ygap_t.
 $$
 
 **(F41) 政府债务运动方程**：
+
 $$
 B_t=(1+i_t)B_{t-1}+P_t^C C_t^G+P_t^C I_t^G+\mathrm{TR}_t-R_t^G-T_t^{LS}.
 $$
 
 **(F42) 一次总付税/债务反馈**：
+
 $$
 \Delta T_t^{LS}
 =\tau^B\left(\frac{B_{t-1}}{Y_{t-1}P_{t-1}}-b^T\right)
@@ -373,21 +415,25 @@ $$
 ## 5. Exogenous Processes
 
 **(F43) TFP 随机趋势**：
+
 $$
 u_t^Y=g_t^U+u_{t-1}^Y+\varepsilon_t^Y.
 $$
 
 **(F44) 固定劳动份额**：
+
 $$
 lol_t^j=(1-\rho^{LOL})lol+\rho^{LOL}lol_{t-1}^j+\varepsilon_t^{LOL}.
 $$
 
 **(F45) 投资技术随机趋势**：
+
 $$
 u_t^I=g^{UI}+u_{t-1}^I+\varepsilon_t^{UI}.
 $$
 
 **(F46) 政府消费财政规则**：
+
 $$
 \Delta c_t^G=
 (1-\tau_{Lag}^{CG})\overline{\Delta c^G}
@@ -398,6 +444,7 @@ $$
 $$
 
 **(F47) 政府投资财政规则**：
+
 $$
 \Delta i_t^G=
 (1-\tau_{Lag}^{IG})\overline{\Delta i^G}
@@ -408,6 +455,7 @@ $$
 $$
 
 **(F48) 转移支付规则**：
+
 $$
 \mathrm{TR}_t=
 b^U W_t(POP_t^W-POP_t^{NPART}-L_t)
@@ -416,6 +464,7 @@ b^U W_t(POP_t^W-POP_t^{NPART}-L_t)
 $$
 
 **(F49) 货币政策规则**：
+
 $$
 i_t=
 \tau_{lag}^{INOM}i_{t-1}
@@ -429,6 +478,7 @@ r^{EQ}+\pi^T+\tau_\pi^{INOM}(\pi_t^C-\pi^T)
 $$
 
 **(F50) 通用自相关结构冲击**：
+
 $$
 \log U_t^k=\rho^k\log U_{t-1}^k+\varepsilon_t^k.
 $$

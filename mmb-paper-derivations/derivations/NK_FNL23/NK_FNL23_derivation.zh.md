@@ -103,44 +103,52 @@ $$
 以下方程使用论文附录的去趋势记号。波浪号表示变量除以 \(z_t\)；\(\theta\) 是总趋势增长率。
 
 - **(F1) 劳动供给**：
+
 $$
 h_t^\varphi=\widetilde{w}_t\widetilde{\lambda}_t .
 $$
 
 - **(F2) 公共债券/准备金欧拉方程**：
+
 $$
 1=\beta E_t\left(\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}\frac{r_t}{\pi_{t+1}}\right).
 $$
 
 - **(F3) 绿色债券欧拉方程**：
+
 $$
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^G_{t+1}\right]
 +\frac{\nu_G}{\widetilde{\lambda}_t}\left(\widetilde{b}^G_{Ht}\right)^{-\kappa_G}.
 $$
 
 - **(F4) 棕色债券欧拉方程**：
+
 $$
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^B_{t+1}\right]
 -\frac{\nu_B}{\widetilde{\lambda}_t}\left(\widetilde{b}^B_{Ht}\right)^{\kappa_B}.
 $$
 
 - **(F5) 中间投入 CES 生产**：
+
 $$
 \widetilde{y}_t=\left[(1-\zeta)^{1/\xi}(\widetilde{y}^G_t)^{\frac{\xi-1}{\xi}}
 +\zeta^{1/\xi}(\widetilde{y}^B_t)^{\frac{\xi-1}{\xi}}\right]^{\frac{\xi}{\xi-1}}.
 $$
 
 - **(F6) 绿色产出需求**：
+
 $$
 \widetilde{y}^G_t=(1-\zeta)\left(\frac{p^G_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
 $$
 
 - **(F7) 棕色产出需求**：
+
 $$
 \widetilde{y}^B_t=\zeta\left(\frac{p^B_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
 $$
 
 - **(F8) 非线性 Phillips 曲线**：
+
 $$
 \pi_t(\pi_t-\bar{\pi})=\beta E_t\left[
 \frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t}
@@ -150,52 +158,62 @@ $$
 $$
 
 - **(F9) 绿色生产**：
+
 $$
 \widetilde{y}^G_t=\left(\frac{\widetilde{k}^G_{t-1}}{\theta}\right)^\alpha(h^G_t)^{1-\alpha}.
 $$
 
 - **(F10) 棕色生产**：
+
 $$
 \widetilde{y}^B_t=\left(\frac{\widetilde{k}^B_{t-1}}{\theta}\right)^\alpha(h^B_t)^{1-\alpha}.
 $$
 
 - **(F11) 绿色劳动需求**：
+
 $$
 \widetilde{w}_t h^G_t=(1-\alpha)p^G_t\widetilde{y}^G_t .
 $$
 
 - **(F12) 棕色劳动需求**：
+
 $$
 \widetilde{w}_t h^B_t=(1-\alpha)\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
 $$
 
 - **(F13) 绿色资本需求**：
+
 $$
 r^G_{kt}\frac{\widetilde{k}^G_{t-1}}{\theta}=\alpha p^G_t\widetilde{y}^G_t .
 $$
 
 - **(F14) 棕色资本需求**：
+
 $$
 r^B_{kt}\frac{\widetilde{k}^B_{t-1}}{\theta}
 =\alpha\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
 $$
 
 - **(F15) 绿色资本租金率**：
+
 $$
 r^G_{kt}=r^G_tq_{t-1}-(1-\delta)q_t .
 $$
 
 - **(F16) 棕色资本租金率**：
+
 $$
 r^B_{kt}=r^B_tq_{t-1}-(1-\delta)q_t .
 $$
 
 - **(F17) 最优减排**：
+
 $$
 \mu_t=\left(\frac{\nu_E\tau_t}{\nu_M}\right)^{1/\chi}.
 $$
 
 - **(F18) 资本品生产者 Tobin's Q 条件**：
+
 $$
 \begin{aligned}
 1={}&q_t\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2
@@ -209,6 +227,7 @@ $$
 $$
 
 - **(F19) 带外部习惯的消费边际效用**：
+
 $$
 \widetilde{\lambda}_t=\frac{\theta}{\theta\widetilde{c}_t-\varsigma\widetilde{c}_{t-1}}
 -\beta\varsigma E_t\left(\frac{1}{\theta\widetilde{c}_{t+1}-\varsigma\widetilde{c}_t}\right).
@@ -217,22 +236,26 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F20) 排放函数**：
+
 $$
 \widetilde{e}_t=(1-\mu_t)\nu_E\widetilde{y}^B_t .
 $$
 
 - **(F21) 污染积累**：
+
 $$
 \widetilde{x}_t=(1-\delta^x)\frac{\widetilde{x}_{t-1}}{\theta}+\widetilde{e}_t+\widetilde{e}^{row}.
 $$
 
 - **(F22) 资本积累**：
+
 $$
 \widetilde{k}_t=(1-\delta)\frac{\widetilde{k}_{t-1}}{\theta}
 +\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2\right]\widetilde{i}_t .
 $$
 
 - **(F23) 资源约束**：
+
 $$
 \widetilde{y}_t=\widetilde{c}_t+\widetilde{i}_t+\widetilde{g}
 +\widetilde{y}^B_t\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}
@@ -240,36 +263,43 @@ $$
 $$
 
 - **(F24) 劳动市场出清**：
+
 $$
 h_t=h^B_t+h^G_t .
 $$
 
 - **(F25) 资本市场出清**：
+
 $$
 \widetilde{k}_t=\widetilde{k}^B_t+\widetilde{k}^G_t .
 $$
 
 - **(F26) 绿色债券市场出清**：
+
 $$
 q_t\widetilde{k}^G_t=\widetilde{b}^G_{Ht}+\widetilde{b}^G_{Ct}.
 $$
 
 - **(F27) 棕色债券市场出清**（`needs_review`：附录 OCR 漏掉中央银行棕色债券的时间下标）：
+
 $$
 q_t\widetilde{k}^B_t=\widetilde{b}^B_{Ht}+\widetilde{b}^B_{Ct}.
 $$
 
 - **(F28) 中央银行资产负债表**（`needs_review`：MinerU 对实际准备金的渲染有歧义）：
+
 $$
 \widetilde{b}^G_{Ct}+\widetilde{b}^B_{Ct}+\widetilde{d}_{Ct}=\widetilde{re}_t .
 $$
 
 - **(F29) 碳价格换算**：
+
 $$
 p^C_t=\frac{s_1s_2}{s_3}\tau_t .
 $$
 
 - **(F30) 欧元区污染存量**：
+
 $$
 \widetilde{x}^{ea}_t=(1-\delta^x)\frac{\widetilde{x}^{ea}_{t-1}}{\theta}+\widetilde{e}_t .
 $$
@@ -277,6 +307,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F31) TFP 过程**：
+
 $$
 \log(a_t)=\log(\bar{a})+\rho_a\log(a_{t-1})+v^a_t .
 $$
@@ -295,9 +326,11 @@ $$
 3. 设 \(\pi=\bar{\pi}\)，\(r=\bar{\pi}\theta/\beta\)，\(r^G=rr+\gamma^G\)，\(r^B=rr+\gamma^B\)，\(q=1\)，\(r^G_k=r^G-(1-\delta)\)，\(r^B_k=r^B-(1-\delta)\)。
 4. 由 Phillips 曲线得到 \(p^I=(\varepsilon-1)/\varepsilon\)。
 5. 给定 \(p^B\)，由下式计算 \(p^G\)：
+
 $$
 p^G=\left\{\frac{(p^I)^{1-\xi}-\zeta(p^B)^{1-\xi}}{1-\zeta}\right\}^{1/(1-\xi)}.
 $$
+
 6. 由 (F6) 和 (F7) 确定部门产出，由 (F20)-(F21) 确定污染，由投资产出比和 (F22) 确定投资与总资本，并由 (F13)-(F14) 确定部门资本。
 7. 由 (F9)-(F10) 确定部门劳动，由 (F11) 确定工资，由 \(g/y\) 校准确定政府支出，由 (F23) 确定消费，并由 (F24) 确定总劳动。
 8. 家庭债券持有量由 (F26)-(F27) 得到，\(\kappa_G,\kappa_B,\nu_G,\nu_B\) 由稳态利差和债券欧拉方程反解。

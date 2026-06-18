@@ -93,6 +93,7 @@ Government purchases a time-varying fraction of sectoral output and finances it 
 **Borrower household**
 
 - **(F1) Borrower labor supply, both sectors**:
+
 $$
 \frac{W_{j,t}^b}{P_{C,t}}=
 \frac{(X_t^b)^\sigma (N_{j,t}^b)^\varphi(\widetilde C_t^b)^{\gamma\mathcal E_t^{D,b}}}
@@ -101,6 +102,7 @@ $$
 $$
 
 - **(F2) Borrower housing Euler condition** (`needs_review`: OCR around powers and expectation term is fragile):
+
 $$
 \begin{aligned}
 P_{D/C,t}={}&
@@ -117,6 +119,7 @@ P_{D/C,t}={}&
 $$
 
 - **(F3) Borrower Euler equation with collateral shadow value** (`needs_review`: OCR alternates between $\mathcal E$ and $\varepsilon$ in preference terms):
+
 $$
 R_t\psi_t=
 1-\beta_bE_t\left[
@@ -131,6 +134,7 @@ $$
 **Saver household**
 
 - **(F4) Saver labor supply, both sectors**:
+
 $$
 \frac{W_{j,t}^s}{P_{C,t}}=
 \frac{(X_t^s)^\sigma (N_{j,t}^s)^\varphi(\widetilde C_t^s)^{\gamma\mathcal E_t^{D,s}}}
@@ -139,6 +143,7 @@ $$
 $$
 
 - **(F5) Saver housing Euler condition** (`needs_review`: MinerU formula contains malformed ratios):
+
 $$
 \begin{aligned}
 P_{D/C,t}={}&
@@ -155,6 +160,7 @@ P_{D/C,t+1}
 $$
 
 - **(F6) Saver domestic-bond Euler equation**:
+
 $$
 1=\beta_sE_t\left[
 \left(\frac{1-\gamma\mathcal E_{t+1}^{D,s}}{1-\gamma\mathcal E_t^{D,s}}\right)
@@ -166,6 +172,7 @@ $$
 $$
 
 - **(F7) Saver foreign-bond Euler/risk-sharing condition** (`needs_review`: source OCR has malformed exchange-rate notation):
+
 $$
 1=\beta_sE_t\left[
 \left(\frac{1-\gamma\mathcal E_{t+1}^{D,s}}{1-\gamma\mathcal E_t^{D,s}}\right)
@@ -179,6 +186,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F8) Non-durable Armington aggregator**:
+
 $$
 C_t=\left[
 (1-\alpha_C)^{1/\eta_C}C_{H,t}^{(\eta_C-1)/\eta_C}
@@ -187,6 +195,7 @@ C_t=\left[
 $$
 
 - **(F9) Durable Armington aggregator**:
+
 $$
 D_t=\left[
 (1-\alpha_D)^{1/\eta_D}D_{H,t}^{(\eta_D-1)/\eta_D}
@@ -195,6 +204,7 @@ D_t=\left[
 $$
 
 - **(F10) Sectoral price indexes**:
+
 $$
 P_{C,t}=\left[(1-\alpha_C)P_{C,H,t}^{1-\eta_C}+\alpha_CP_{C,F,t}^{1-\eta_C}\right]^{1/(1-\eta_C)},
 \quad
@@ -202,12 +212,14 @@ P_{D,t}=\left[(1-\alpha_D)P_{D,H,t}^{1-\eta_D}+\alpha_DP_{D,F,t}^{1-\eta_D}\righ
 $$
 
 - **(F11) Relative terms-of-trade identity**:
+
 $$
 (1-\alpha_C)\widehat s_{C,t}-(1-\alpha_D)\widehat s_{D,t}
 =\widehat p_{D/C,t}-\widehat p_{D/C,t}^{\ast}.
 $$
 
 - **(F12) International risk-sharing condition for patient households**:
+
 $$
 \left(\frac{X_t^s}{X_t^{s,\ast}}\right)^{-\sigma}
 \left(\frac{(\widetilde C_t^s)^{\mathcal E_t^{D,s}}}{(\widetilde C_t^{s,\ast})^{\mathcal E_t^{D,\ast}}}\right)^\gamma
@@ -216,12 +228,14 @@ $$
 $$
 
 - **(F13) Retail aggregation technology**:
+
 $$
 Y_{j,t}=\left(\int_0^1Y_{j,t}(k)^{-1/(1+\mu_t^j)}dk\right)^{1+\mu_t^j},
 \qquad j=C,D.
 $$
 
 - **(F14) Sectoral marginal cost, consumption sector**:
+
 $$
 MC_{C,t}=
 \frac{X_t^\sigma N_{C,t}^\varphi \widetilde C_t^{\gamma\mathcal E_t^D}S_{C,t}^{\alpha_C}}
@@ -229,6 +243,7 @@ MC_{C,t}=
 $$
 
 - **(F15) Sectoral marginal cost, housing sector**:
+
 $$
 MC_{D,t}=
 \frac{X_t^\sigma N_{D,t}^\varphi \widetilde C_t^{\gamma\mathcal E_t^D}S_{D,t}^{\alpha_D}}
@@ -236,6 +251,7 @@ MC_{D,t}=
 $$
 
 - **(F16) Hybrid Calvo mark-up rule**:
+
 $$
 \bar p_{j,H,t}^{n}=
 \widehat\mu_t^j+(1-\beta_s\theta_j)
@@ -243,18 +259,21 @@ $$
 $$
 
 - **(F17) Consumption-goods market clearing, log-linearized**:
+
 $$
 \widehat y_{C,t}=(1-\alpha_C)\widehat c_t+\alpha_C\widehat c_t^{\ast}
 +\alpha_C\vartheta_C\widehat s_{C,t}+g_t.
 $$
 
 - **(F18) Housing-goods market clearing, log-linearized**:
+
 $$
 \widehat y_{D,t}=(1-\alpha_D)\widehat i_{D,t}+\alpha_D\widehat i_{D,t}^{\ast}
 +\alpha_D\vartheta_D\widehat s_{D,t}+g_t.
 $$
 
 - **(F19) Aggregate real output identity, log-linearized**:
+
 $$
 \widehat y_t=
 \frac{P_{D/C}^{-\xi}C}{Y}\widehat y_{C,t}
@@ -264,6 +283,7 @@ $$
 $$
 
 - **(F20) Currency-board peg and terms-of-trade adjustment**:
+
 $$
 \widehat e_t=0,\qquad
 \Delta\widehat s_{C,t}=\widehat\pi_{C,F,t}-\widehat\pi_{C,H,t},\qquad
@@ -273,11 +293,13 @@ $$
 ## 5. Exogenous Processes
 
 - **(F21) Sectoral technology shocks**:
+
 $$
 a_{j,t}=\rho_{a_j}a_{j,t-1}+\varepsilon_t^{a_j},\qquad j=C,D.
 $$
 
 - **(F22) Sectoral mark-up shocks, ARMA(1,1)**:
+
 $$
 \epsilon_t^{\mu_j}=\rho_{\mu_j}^{+}\epsilon_{t-1}^{\mu_j}
 +\varepsilon_t^{\mu_j}-\rho_{\mu_j}^{-}\varepsilon_{t-1}^{\mu_j},
@@ -285,37 +307,44 @@ $$
 $$
 
 - **(F23) Loan-to-value shock**:
+
 $$
 \epsilon_t^{LTV}=\rho_{LTV}\epsilon_{t-1}^{LTV}+\varepsilon_t^{LTV}.
 $$
 
 - **(F24) Housing preference shocks**:
+
 $$
 \epsilon_t^{d,j}=\rho_{d,j}\epsilon_{t-1}^{d,j}+\varepsilon_t^{d,j},
 \qquad j=s,b,\ast.
 $$
 
 - **(F25) Government expenditure shock**:
+
 $$
 g_t=\rho_g g_{t-1}+\varepsilon_t^g.
 $$
 
 - **(F26) Foreign non-durable consumption demand**:
+
 $$
 \widehat c_t^{\ast}=\rho_{c^{\ast}}\widehat c_{t-1}^{\ast}+\varepsilon_t^{c^{\ast}}.
 $$
 
 - **(F27) Foreign housing investment demand**:
+
 $$
 \widehat i_{D,t}^{\ast}=\rho_{d^{\ast}}\widehat d_{t-1}^{\ast}+\varepsilon_t^{d^{\ast}}.
 $$
 
 - **(F28) Foreign housing-price disturbance**:
+
 $$
 \widehat p_{D,t}^{\ast}=\rho_{p_D^{\ast}}\widehat p_{D,t-1}^{\ast}+\varepsilon_t^{p_D^{\ast}}.
 $$
 
 - **(F29) Foreign consumption-price disturbance**:
+
 $$
 \widehat p_{C,t}^{\ast}=\rho_{p_C^{\ast}}\widehat p_{C,t-1}^{\ast}+\varepsilon_t^{p_C^{\ast}}.
 $$

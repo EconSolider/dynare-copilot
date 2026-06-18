@@ -19,15 +19,21 @@
 
 对 `EA_CW05fm` 的 Fuhrer-Moore 相对实际工资变体，工资制定者选择当期名义合约工资 $x_t$，使合约期限内的预期实际工资与预期重叠实际合约工资和平均产出缺口相关：
 
-$${x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}} \qquad \text{(source M-3)}$$
+$$
+{x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}} \qquad \text{(source M-3)}
+$$
 
 其中论文定义合约期限平均量为
 
-$${\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}, \qquad \bar q_t = \sum_{i=0}^{3} f_i q_{t+i}}$$
+$$
+{\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}, \qquad \bar q_t = \sum_{i=0}^{3} f_i q_{t+i}}
+$$
 
 并且在基准 RW 情形下，
 
-$${v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right)}.$$
+$$
+{v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right)}.
+$$
 
 完整模型随后由估计行为方程封闭，而不是由显式家庭、企业或政府最优化问题封闭。
 
@@ -37,31 +43,45 @@ $${v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right)}.$$
 
 **(F1) 合约权重**
 
-$$f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad 0<s\leq \frac{1}{6}.$$
+$$
+f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad 0<s\leq \frac{1}{6}.
+$$
 
 **(F2) 由生效合约决定的总价格指数**
 
-$$p_t = \sum_{i=0}^{3} f_i x_{t-i}.$$
+$$
+p_t = \sum_{i=0}^{3} f_i x_{t-i}.
+$$
 
 **(F3) 合约期限内的平均预期价格**
 
-$$\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.$$
+$$
+\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.
+$$
 
 **(F4) 合约期限内的平均预期产出缺口**
 
-$$\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.$$
+$$
+\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.
+$$
 
 **(F5) 基准 RW 设定的实际合约工资指数**
 
-$$v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right).$$
+$$
+v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right).
+$$
 
 **(F6) `EA_CW05fm` 的相对实际工资合约方程**
 
-$$x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.$$
+$$
+x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.
+$$
 
 **(F7) 年化季度通胀定义**
 
-$$\pi_t = p_t - p_{t-1}.$$
+$$
+\pi_t = p_t - p_{t-1}.
+$$
 
 `needs_review`：论文说明工资-价格模块可以改写为季度通胀和实际合约工资形式，而 Rep-MMB 代码使用辅助滞后/超前变量以及四季度通胀指标。从 $(p_t,x_t)$ 到实现中的 `pi1`、`infl` 和滞后变量的精确代数转换已和 `.mod` 交叉检查，但尚未从论文完整重推。
 
@@ -71,31 +91,45 @@ $$\pi_t = p_t - p_{t-1}.$$
 
 **(F8) 总需求 / IS 方程**
 
-$$q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.$$
+$$
+q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.
+$$
 
 **(F9) 政策规则使用的四季度通胀**
 
-$$\pi_t^{(4)} = p_t - p_{t-4}.$$
+$$
+\pi_t^{(4)} = p_t - p_{t-4}.
+$$
 
 **(F10) Taylor 型短期名义利率规则**
 
-$$i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.$$
+$$
+i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.
+$$
 
 **(F11) 由预期假说给出的长期名义利率**
 
-$$i_t^l = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i_{t+j}^s\right].$$
+$$
+i_t^l = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i_{t+j}^s\right].
+$$
 
 **(F12) 长期事前实际利率**
 
-$$r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
+$$
+r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].
+$$
 
 **(F13) 确定性稳态实际利率关系**
 
-$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
+$$
+r^{\ast} = -\frac{\delta_0}{\delta_3}.
+$$
 
 **(F14) 政策目标决定稳态通胀**
 
-$$\pi = \pi^{\ast}.$$
+$$
+\pi = \pi^{\ast}.
+$$
 
 `needs_review`：Rep-MMB 实现使用带平滑的 Gerdesmeier-Roffia 型 `interest` 规则，即 `interest = (0.87^3) interest_{t-1} + (1-0.87^3)1.93 inflation + (1-0.87^3)0.28 outputgap + interest_`。这相对于论文 Table 4 的 Taylor 规则似乎是实现层面的设定。
 
@@ -105,15 +139,21 @@ $$\pi = \pi^{\ast}.$$
 
 **(F15) 合约工资冲击**
 
-$$\varepsilon_{x,t}\sim iid(0,1),\qquad \text{contract block scale } \sigma_{\varepsilon_x}.$$
+$$
+\varepsilon_{x,t}\sim iid(0,1),\qquad \text{contract block scale } \sigma_{\varepsilon_x}.
+$$
 
 **(F16) 需求冲击**
 
-$$\varepsilon_{d,t}\sim iid(0,1),\qquad \text{aggregate-demand scale } \sigma_{\varepsilon_d}.$$
+$$
+\varepsilon_{d,t}\sim iid(0,1),\qquad \text{aggregate-demand scale } \sigma_{\varepsilon_d}.
+$$
 
 **(F17) Rep-MMB 政策规则中的货币政策冲击**
 
-$$\varepsilon_{i,t}\sim iid(0,\sigma_i^2).$$
+$$
+\varepsilon_{i,t}\sim iid(0,\sigma_i^2).
+$$
 
 `needs_review`：论文 Table 4 的政策规则除模型模拟外是确定性的，而 Rep-MMB 文件包含名为 `interest_` 的政策创新。
 
@@ -123,19 +163,27 @@ $$\varepsilon_{i,t}\sim iid(0,\sigma_i^2).$$
 
 **(F18) 产出缺口稳态**
 
-$$q = 0.$$
+$$
+q = 0.
+$$
 
 **(F19) 长期实际利率稳态**
 
-$$r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
+$$
+r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.
+$$
 
 **(F20) 通胀稳态**
 
-$$\pi = \pi^{\ast}.$$
+$$
+\pi = \pi^{\ast}.
+$$
 
 **(F21) 冲击稳态**
 
-$$\varepsilon_x = \varepsilon_d = \varepsilon_i = 0.$$
+$$
+\varepsilon_x = \varepsilon_d = \varepsilon_i = 0.
+$$
 
 对于 Dynare `model(linear)` 实现，偏离值形式辅助变量的稳态为零，除非变量代表围绕非零目标的水平/利率并已在模型方程中去均值。未执行运行时稳态验证。
 

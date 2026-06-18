@@ -29,6 +29,7 @@ The paper does not restate the full nonlinear optimization problems; it summariz
 All variables are log deviations from the nonstochastic steady state unless noted. Let $\bar{\beta}=\beta e^{(1-\sigma_c)\gamma}$.
 
 - **(F1) Consumption Euler equation**:
+
 $$
 c_t =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
@@ -40,6 +41,7 @@ c_t =
 $$
 
 - **(F2) Investment Euler / Tobin's Q condition**:
+
 $$
 q_t^k=S'' e^{2\gamma}(1+\bar{\beta})
 \left(i_t-\frac{1}{1+\bar{\beta}}(i_{t-1}-z_t)
@@ -48,6 +50,7 @@ q_t^k=S'' e^{2\gamma}(1+\bar{\beta})
 $$
 
 - **(F3) Capital accumulation**:
+
 $$
 \bar{k}_t=
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
@@ -56,26 +59,31 @@ $$
 $$
 
 - **(F4) Effective capital services**:
+
 $$
 k_t=u_t-z_t+\bar{k}_{t-1}.
 $$
 
 - **(F5) Utilization condition**:
+
 $$
 u_t=\frac{1-\psi}{\psi}r_t^k.
 $$
 
 - **(F6) Real marginal cost**:
+
 $$
 mc_t=w_t+\alpha l_t-\alpha k_t.
 $$
 
 - **(F7) Common capital-labor ratio**:
+
 $$
 k_t=w_t-r_t^k+l_t.
 $$
 
 - **(F8) Price Phillips curve**:
+
 $$
 \pi_t=\kappa mc_t+
 \frac{\iota_p}{1+\iota_p\bar{\beta}}\pi_{t-1}
@@ -84,6 +92,7 @@ $$
 $$
 
 - **(F9) Price Phillips slope**:
+
 $$
 \kappa=
 \frac{(1-\zeta_p\bar{\beta})(1-\zeta_p)}
@@ -91,6 +100,7 @@ $$
 $$
 
 - **(F10) Wage Phillips curve**:
+
 $$
 \begin{aligned}
 w_t={}&
@@ -105,18 +115,21 @@ w_t={}&
 $$
 
 - **(F11) Household marginal rate of substitution wage**:
+
 $$
 w_t^h=\frac{1}{1-h e^{-\gamma}}
 (c_t-h e^{-\gamma}c_{t-1}+h e^{-\gamma}z_t)+\nu_l l_t.
 $$
 
 - **(F12) Financial-friction spread condition**:
+
 $$
 E_t[\tilde{R}_{t+1}^k-R_t]
 =b_t+\zeta_{sp,b}(q_t^k+\bar{k}_t-n_t)+\tilde{\sigma}_{\omega,t}.
 $$
 
 - **(F13) Nominal return on capital**:
+
 $$
 \tilde{R}_t^k-\pi_t=
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
@@ -125,6 +138,7 @@ $$
 $$
 
 - **(F14) Entrepreneurial net worth**:
+
 $$
 \begin{aligned}
 n_t={}&
@@ -141,12 +155,14 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F15) Aggregate production**:
+
 $$
 y_t=\Phi_p(\alpha k_t+(1-\alpha)l_t)
 +\mathcal{I}\{\rho_z<1\}(\Phi_p-1)\frac{1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F16) Resource constraint**:
+
 $$
 y_t=g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t
@@ -154,6 +170,7 @@ y_t=g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 $$
 
 - **(F17) Time-varying-target Taylor rule**:
+
 $$
 \begin{aligned}
 R_t={}&\rho_R R_{t-1}
@@ -163,31 +180,37 @@ R_t={}&\rho_R R_{t-1}
 $$
 
 - **(F18) Flexible-price/wage counterpart**:
+
 $$
 y_t^f=\mathcal{F}^{flex}(c_t^f,i_t^f,l_t^f,k_t^f,u_t^f,\bar{k}_t^f,w_t^f,r_t^f,q_t^{k,f}; \Theta),
 $$
+
 where $\mathcal{F}^{flex}$ denotes the flexible price/wage version of equations (F1)-(F7), (F11), and (F15)-(F16). The paper defines $y_t^f$ by solving the model without nominal rigidities; the implementation cross-check expands this as a parallel block.
 
 ## 5. Exogenous Processes
 
 - **(F19) Detrended productivity**:
+
 $$
 \tilde{z}_t=\rho_z\tilde{z}_{t-1}+\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F20) Growth-rate effect of productivity**:
+
 $$
 z_t=\frac{1}{1-\alpha}(\rho_z-1)\tilde{z}_{t-1}
 +\frac{1}{1-\alpha}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F21) Government spending**:
+
 $$
 g_t=\rho_g g_{t-1}+\sigma_g\varepsilon_{g,t}
 +\eta_{gz}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F22) Price markup process**:
+
 $$
 \lambda_{f,t}=\rho_{\lambda_f}\lambda_{f,t-1}
 +\sigma_{\lambda_f}\varepsilon_{\lambda_f,t}
@@ -195,6 +218,7 @@ $$
 $$
 
 - **(F23) Wage markup process**:
+
 $$
 \lambda_{w,t}=\rho_{\lambda_w}\lambda_{w,t-1}
 +\sigma_{\lambda_w}\varepsilon_{\lambda_w,t}
@@ -202,26 +226,31 @@ $$
 $$
 
 - **(F24) Time-varying target inflation**:
+
 $$
 \pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
 $$
 
 - **(F25) Discount-rate wedge**:
+
 $$
 b_t=\rho_b b_{t-1}+\sigma_b\varepsilon_{b,t}.
 $$
 
 - **(F26) Marginal efficiency of investment**:
+
 $$
 \mu_t=\rho_\mu\mu_{t-1}+\sigma_\mu\varepsilon_{\mu,t}.
 $$
 
 - **(F27) Monetary policy residual**:
+
 $$
 r_t^m=\rho_{r^m}r_{t-1}^m+\sigma_{r^m}\varepsilon_{r^m,t}.
 $$
 
 - **(F28) Financial risk/spread shock**:
+
 $$
 \tilde{\sigma}_{\omega,t}=\rho_{\sigma_\omega}\tilde{\sigma}_{\omega,t-1}
 +\sigma_{\sigma_\omega}\varepsilon_{\sigma_\omega,t}.

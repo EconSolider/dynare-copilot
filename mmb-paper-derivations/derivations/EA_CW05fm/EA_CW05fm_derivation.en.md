@@ -19,15 +19,21 @@ The paper does not provide micro-founded utility or profit maximization problems
 
 For the `EA_CW05fm` Fuhrer-Moore relative real wage variant, wage setters choose the current nominal contract wage $x_t$ so that the expected real wage over the contract life is tied to expected overlapping real contract wages and the average output gap:
 
-$${x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}} \qquad \text{(source M-3)}$$
+$$
+{x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}} \qquad \text{(source M-3)}
+$$
 
 where the paper defines the contract-life averages
 
-$${\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}, \qquad \bar q_t = \sum_{i=0}^{3} f_i q_{t+i}}$$
+$$
+{\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}, \qquad \bar q_t = \sum_{i=0}^{3} f_i q_{t+i}}
+$$
 
 and, for the baseline RW case,
 
-$${v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right)}.$$
+$$
+{v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right)}.
+$$
 
 The full model is then closed with estimated behavioral equations rather than explicit household, firm, or government optimization problems.
 
@@ -37,31 +43,45 @@ Because the paper's model is estimated as a linear contracting system, this sect
 
 **(F1) Contract weights**
 
-$$f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad 0<s\leq \frac{1}{6}.$$
+$$
+f_i = 0.25 + (1.5-i)s,\qquad i=0,1,2,3,\qquad 0<s\leq \frac{1}{6}.
+$$
 
 **(F2) Aggregate price index from active contracts**
 
-$$p_t = \sum_{i=0}^{3} f_i x_{t-i}.$$
+$$
+p_t = \sum_{i=0}^{3} f_i x_{t-i}.
+$$
 
 **(F3) Average expected price over the contract life**
 
-$$\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.$$
+$$
+\bar p_t = \sum_{i=0}^{3} f_i p_{t+i}.
+$$
 
 **(F4) Average expected output gap over the contract life**
 
-$$\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.$$
+$$
+\bar q_t = \sum_{i=0}^{3} f_i q_{t+i}.
+$$
 
 **(F5) Real contract wage index for the baseline RW specification**
 
-$$v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right).$$
+$$
+v_t = \sum_{i=0}^{3} f_i\left(x_{t-i} - E_t[\bar p_{t-i}]\right).
+$$
 
 **(F6) Relative real wage contract equation for `EA_CW05fm`**
 
-$$x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.$$
+$$
+x_t - E_t[\bar p_t] = E_t\left[\sum_{i=0}^{3} f_i v_{t+i} + \gamma \bar q_t\right] + \sigma_{\varepsilon_x}\varepsilon_{x,t}.
+$$
 
 **(F7) Annualized quarterly inflation definition**
 
-$$\pi_t = p_t - p_{t-1}.$$
+$$
+\pi_t = p_t - p_{t-1}.
+$$
 
 `needs_review`: the paper notes that the wage-price block can be rewritten in terms of quarterly inflation and the real contract wage, while the Rep-MMB code uses auxiliary lag/lead variables and a four-quarter inflation measure. The exact algebraic transformation from $(p_t,x_t)$ to the implementation's `pi1`, `infl`, and lag variables was cross-checked against the `.mod`, not fully re-derived from the paper.
 
@@ -71,31 +91,45 @@ The model does not include goods, labor, or asset market clearing from a fully m
 
 **(F8) Aggregate demand / IS equation**
 
-$$q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.$$
+$$
+q_t = \delta_0 + \delta_1 q_{t-1} + \delta_2 q_{t-2} + \delta_3 r^l_{t-1} + \sigma_{\varepsilon_d}\varepsilon_{d,t}.
+$$
 
 **(F9) Four-quarter inflation used in the policy rule**
 
-$$\pi_t^{(4)} = p_t - p_{t-4}.$$
+$$
+\pi_t^{(4)} = p_t - p_{t-4}.
+$$
 
 **(F10) Taylor-type short nominal interest-rate rule**
 
-$$i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.$$
+$$
+i_t^s = r^{\ast} + \pi_t^{(4)} + \alpha_{\pi}\left(\pi_t^{(4)}-\pi^{\ast}\right) + \alpha_q q_t.
+$$
 
 **(F11) Long nominal interest rate from expectations hypothesis**
 
-$$i_t^l = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i_{t+j}^s\right].$$
+$$
+i_t^l = E_t\left[\frac{1}{8}\sum_{j=0}^{7} i_{t+j}^s\right].
+$$
 
 **(F12) Long ex ante real interest rate**
 
-$$r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].$$
+$$
+r_t^l = i_t^l - E_t\left[\frac{1}{2}(p_{t+8}-p_t)\right].
+$$
 
 **(F13) Deterministic steady-state real-rate relation**
 
-$$r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
+$$
+r^{\ast} = -\frac{\delta_0}{\delta_3}.
+$$
 
 **(F14) Policy target pins down steady-state inflation**
 
-$$\pi = \pi^{\ast}.$$
+$$
+\pi = \pi^{\ast}.
+$$
 
 `needs_review`: the Rep-MMB implementation uses a smoothed Gerdesmeier-Roffia-style policy rule for `interest`, with `interest = (0.87^3) interest_{t-1} + (1-0.87^3)1.93 inflation + (1-0.87^3)0.28 outputgap + interest_`. This appears to be implementation-specific relative to the paper's Table 4 Taylor rule.
 
@@ -105,15 +139,21 @@ The paper treats the contract-wage shock and demand shock as serially uncorrelat
 
 **(F15) Contract-wage shock**
 
-$$\varepsilon_{x,t}\sim iid(0,1),\qquad \text{contract block scale } \sigma_{\varepsilon_x}.$$
+$$
+\varepsilon_{x,t}\sim iid(0,1),\qquad \text{contract block scale } \sigma_{\varepsilon_x}.
+$$
 
 **(F16) Demand shock**
 
-$$\varepsilon_{d,t}\sim iid(0,1),\qquad \text{aggregate-demand scale } \sigma_{\varepsilon_d}.$$
+$$
+\varepsilon_{d,t}\sim iid(0,1),\qquad \text{aggregate-demand scale } \sigma_{\varepsilon_d}.
+$$
 
 **(F17) Monetary policy shock in the Rep-MMB policy rule**
 
-$$\varepsilon_{i,t}\sim iid(0,\sigma_i^2).$$
+$$
+\varepsilon_{i,t}\sim iid(0,\sigma_i^2).
+$$
 
 `needs_review`: the paper's Table 4 policy rule is deterministic apart from the model simulations, while the Rep-MMB file includes a policy innovation named `interest_`.
 
@@ -123,19 +163,27 @@ This is a linear model in gaps/rates. The deterministic steady state is characte
 
 **(F18) Output-gap steady state**
 
-$$q = 0.$$
+$$
+q = 0.
+$$
 
 **(F19) Long real-rate steady state**
 
-$$r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.$$
+$$
+r^l = r^{\ast} = -\frac{\delta_0}{\delta_3}.
+$$
 
 **(F20) Inflation steady state**
 
-$$\pi = \pi^{\ast}.$$
+$$
+\pi = \pi^{\ast}.
+$$
 
 **(F21) Shock steady states**
 
-$$\varepsilon_x = \varepsilon_d = \varepsilon_i = 0.$$
+$$
+\varepsilon_x = \varepsilon_d = \varepsilon_i = 0.
+$$
 
 For a Dynare `model(linear)` implementation, steady states for deviation-style auxiliary variables are zero unless the variable represents a level/rate around a nonzero target that has already been demeaned by the model equations. Runtime steady-state validation was not performed.
 

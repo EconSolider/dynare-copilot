@@ -117,21 +117,25 @@ $$
 以下条件是有来源支撑的第一版对数线性均衡映射。(F1)-(F18) 的结构来自论文；当精确对数线性系数形式来自 `US_LTW17gz_rep.mod` 时，它只是 `implementation_cross_check`，仍需用论文/附录方程复核，状态为 `needs_review`。
 
 - **(F1) 生产函数**：
+
 $$
 \hat y_t=\frac{\bar Y+\Omega}{\bar Y}\alpha\hat k_t+\frac{\bar Y+\Omega}{\bar Y}(1-\alpha)\hat l_t.
 $$
 
 - **(F2) 要素价格关系**：
+
 $$
 \hat r_t^k-\hat w_t+\hat k_t-\hat l_t=0.
 $$
 
 - **(F3) 边际成本**：
+
 $$
 \hat{mc}_t-\alpha\hat r_t^k+(\alpha-1)\hat w_t=0.
 $$
 
 - **(F4) 新凯恩斯价格 Phillips 曲线**（`needs_review`, implementation_cross_check）：
+
 $$
 \lambda_p\hat\pi_t-\frac{\lambda_p\beta}{1+\beta\chi_p}E_t\hat\pi_{t+1}
 -\hat{mc}_t-\lambda_p\hat u_t^p
@@ -139,6 +143,7 @@ $$
 $$
 
 - **(F5) 储蓄者财富边际效用**：
+
 $$
 \hat\lambda_t+\frac{\theta}{e^\gamma-\theta}\hat u_t^a
 +\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
@@ -147,35 +152,41 @@ $$
 $$
 
 - **(F6) 长期实际利率与长期债券价格关系**（`needs_review`, implementation_cross_check）：
+
 $$
 \hat r_t^L+\hat P_t^B-\frac{\beta\rho}{e^\gamma}E_t\hat r_{t+1}^L
 -\frac{\beta\rho}{e^\gamma}E_t\hat P_{t+1}^B+E_t\hat\pi_{t+1}=0.
 $$
 
 - **(F7) 长期通胀定义**（`needs_review`, implementation_cross_check）：
+
 $$
 \hat\pi_t^L+\hat P_t^B+\hat r_t^L=0.
 $$
 
 - **(F8) 复合消费**：
+
 $$
 \hat c_t^{\ast}-\frac{C^S}{C^S+\alpha_G G}\hat c_t^S
 -\frac{\alpha_G G}{C^S+\alpha_G G}\hat g_t=0.
 $$
 
 - **(F9) 储蓄者 Euler 方程**：
+
 $$
 \hat\lambda_t-\hat R_t+E_t\hat\pi_{t+1}-E_t\hat\lambda_{t+1}
 +\rho_a\hat u_t^a=0.
 $$
 
 - **(F10) 资本利用率**：
+
 $$
 \frac{1-\psi}{\psi}\hat r_t^k-\hat v_t
 -\frac{1-\psi}{\psi}\frac{\tau^K}{1-\tau^K}\hat\tau_t^K=0.
 $$
 
 - **(F11) 资本 FOC**：
+
 $$
 \hat q_t+\hat R_t-E_t\hat\pi_{t+1}
 -\beta e^{-\gamma}(1-\delta)E_t\hat q_{t+1}
@@ -184,6 +195,7 @@ $$
 $$
 
 - **(F12) 投资 FOC**：
+
 $$
 -\frac{1}{(1+\beta)s e^{2\gamma}}\hat q_t+\hat i_t
 -\frac{\beta}{1+\beta}E_t\hat i_{t+1}
@@ -192,11 +204,13 @@ $$
 $$
 
 - **(F13) 有效资本**：
+
 $$
 \hat k_t-\hat v_t+\hat u_t^a=\hat{\bar K}_{t-1}.
 $$
 
 - **(F14) 物理资本运动方程**：
+
 $$
 \hat{\bar K}_t-\left(1-(1-\delta)e^{-\gamma}\right)(1+\beta)s e^{2\gamma}\hat u_t^i
 -\left(1-(1-\delta)e^{-\gamma}\right)\hat i_t
@@ -205,6 +219,7 @@ $$
 $$
 
 - **(F15) 工资 Phillips 曲线**（`needs_review`, implementation_cross_check）：
+
 $$
 \begin{aligned}
 (1+\lambda_w)\hat w_t&-\lambda_w\frac{\beta}{1+\beta}E_t\hat w_{t+1}
@@ -221,11 +236,13 @@ $$
 $$
 
 - **(F16) 货币政策规则**：
+
 $$
 \hat R_t=(1-\rho_r)\phi_\pi\hat\pi_t+(1-\rho_r)\phi_y\hat y_t+\rho_r\hat R_{t-1}+\hat u_t^m.
 $$
 
 - **(F17) 非储蓄者预算条件**：
+
 $$
 C^N(1+\tau^C)\hat c_t^N+\tau^C C^N\hat\tau_t^C
 -W L(1-\tau^L)\hat w_t-WL(1-\tau^L)\hat l_t
@@ -233,6 +250,7 @@ C^N(1+\tau^C)\hat c_t^N+\tau^C C^N\hat\tau_t^C
 $$
 
 - **(F18) 消费加总**：
+
 $$
 C\hat c_t-(1-\mu)C^S\hat c_t^S-\mu C^N\hat c_t^N=0.
 $$
@@ -240,16 +258,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F19) 商品市场出清**：
+
 $$
 C\hat c_t+I\hat i_t-Y\hat y_t+G\hat g_t+\Psi'(1)K\hat v_t=0.
 $$
 
 - **(F20) 长期债券定价 / 到期结构**：
+
 $$
 \hat R_t-\frac{\rho P^B}{1+\rho P^B}E_t\hat P_{t+1}^B+\hat P_t^B=0.
 $$
 
 - **(F21) 政府预算约束**（`needs_review`，论文 OCR 损坏；implementation_cross_check）：
+
 $$
 \begin{aligned}
 s^b\hat b_t&-\frac{G}{Y}\hat g_t-\frac{Z}{Y}\hat z_t
@@ -263,26 +284,31 @@ s^b\hat b_t&-\frac{G}{Y}\hat g_t-\frac{Z}{Y}\hat z_t
 $$
 
 - **(F22) 债务产出比定义**：
+
 $$
 \hat s_t^b+\hat y_t-\hat b_t=0.
 $$
 
 - **(F23) 消费税收入恒等式**：
+
 $$
 \hat T_t^C-\hat\tau_t^C-\hat c_t=0.
 $$
 
 - **(F24) 资本税收入恒等式**：
+
 $$
 \hat T_t^K-\hat\tau_t^K-\hat r_t^k-\hat k_t=0.
 $$
 
 - **(F25) 事后债券回报恒等式**（`needs_review`, implementation_cross_check）：
+
 $$
 \hat r_t^b-\frac{\rho\beta}{e^\gamma}\hat P_t^B+\hat\pi_t=-\hat P_{t-1}^B.
 $$
 
 - **(F26) 初级盈余恒等式**：
+
 $$
 \hat S_t-\frac{\tau^K r^k K}{S}(\hat\tau_t^K+\hat r_t^k+\hat k_t)
 -\frac{\tau^L w L}{S}(\hat\tau_t^L+\hat w_t+\hat l_t)
@@ -291,11 +317,13 @@ $$
 $$
 
 - **(F27) 劳动税收入恒等式**：
+
 $$
 \hat T_t^L-\hat\tau_t^L-\hat w_t-\hat l_t=0.
 $$
 
 - **(F28) Fisher 方程**：
+
 $$
 \hat r_t-\hat R_t+E_t\hat\pi_{t+1}=0.
 $$
@@ -303,31 +331,37 @@ $$
 ## 5. Exogenous Processes
 
 - **(F29) 政府消费规则，`US_LTW17gz` 变体**：
+
 $$
 \hat g_t-\hat u_t^G=\rho_G\hat g_{t-1}-(1-\rho_G)\gamma_G\hat s_{t-1}^b,\qquad \gamma_G=0\ \text{in }US\_LTW17gz.
 $$
 
 - **(F30) 资本税规则**：
+
 $$
 \hat\tau_t^K=(1-\rho_K)\gamma_K\hat s_{t-1}^b+\rho_K\hat\tau_{t-1}^K.
 $$
 
 - **(F31) 劳动税规则**：
+
 $$
 \hat\tau_t^L=(1-\rho_L)\gamma_L\hat s_{t-1}^b+\rho_L\hat\tau_{t-1}^L.
 $$
 
 - **(F32) 消费税规则**：
+
 $$
 \hat\tau_t^C=\rho_C\hat\tau_{t-1}^C.
 $$
 
 - **(F33) 转移支付规则，`US_LTW17gz` 变体**：
+
 $$
 \hat z_t-\hat u_t^Z=-(1-\rho_Z)\gamma_Z\hat s_{t-1}^b+\rho_Z\hat z_{t-1},\qquad \gamma_Z=0.2\ \text{in }US\_LTW17gz.
 $$
 
 - **(F34) 财政与结构冲击过程**：
+
 $$
 \hat u_t^s=\rho_{es}\hat u_{t-1}^s+\epsilon_t^s,\qquad s\in\{Z,a,b,m,i,w,p\}.
 $$

@@ -100,78 +100,93 @@ For the variable-capital MMB version, the paper says the online appendices add c
 The equations below give the MMB linear equilibrium system, using the paper equations as source where available and `.mod` only to cross-check coverage, timing, and names. Variables are deviations from steady state.
 
 - **(F1) Home consumption Euler equation**:
+
 $$
 c_t=c_{t+1}-\sigma_c(r_t-\pi_{t+1})
 +\frac{\sigma_c}{\sigma_l}l_t-\frac{\sigma_c}{\sigma_l}l_{t+1}.
 $$
 
 - **(F2) Complete-markets Backus-Smith condition**:
+
 $$
 c_t-c_t^{\ast}=\sigma_c q_t+\frac{\sigma_c}{\sigma_l}(l_t-l_t^{\ast}).
 $$
 
 - **(F3) Home Phillips curve**:
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\kappa\zeta s_{H,t}.
 $$
 
 - **(F4) Foreign Phillips curve**:
+
 $$
 \pi_{F,t}=\beta E_t\pi_{F,t+1}+\kappa\zeta s_{F,t}.
 $$
 
 - **(F5) Home CPI inflation aggregator**:
+
 $$
 \pi_t=\phi_H\pi_{H,t}+\phi_F\pi_{F,t}.
 $$
 
 - **(F6) Foreign CPI inflation aggregator**:
+
 $$
 \pi_t^{\ast}=\phi_H^{\ast}\pi_{H,t}+\phi_F^{\ast}\pi_{F,t}.
 $$
 
 - **(F7) Home production function with predetermined capital**:
+
 $$
 y_t=a\,l_t+(1-a)k_{t-1}.
 $$
 
 - **(F8) Foreign production function with predetermined capital**:
+
 $$
 y_t^{\ast}=a\,l_t^{\ast}+(1-a)k_{t-1}^{\ast}.
 $$
 
 - **(F9) Home real wage / labor supply relation**:
+
 $$
 w_t=\nu^{-1}l_t.
 $$
 
 - **(F10) Foreign real wage / labor supply relation**:
+
 $$
 w_t^{\ast}=\nu^{-1}l_t^{\ast}.
 $$
 
 - **(F11) Home real marginal cost**:
+
 $$
 s_{H,t}+p_{H,t}=\bar\omega y_t-(\bar\omega-\nu^{-1})k_{t-1}.
 $$
 
 - **(F12) Foreign real marginal cost**:
+
 $$
 s_{F,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}
 =\bar\omega y_t^{\ast}-(\bar\omega-\nu^{-1})k_{t-1}^{\ast}+q_t.
 $$
 
 - **(F13) Home capital accumulation**:
+
 $$
 k_t=(1-\delta)k_{t-1}+\delta i_t.
 $$
 
 - **(F14) Foreign capital accumulation**:
+
 $$
 k_t^{\ast}=(1-\delta)k_{t-1}^{\ast}+\delta i_t^{\ast}.
 $$
 
 - **(F15) Home optimal investment condition** (`needs_review`: sourced from implementation cross-check because the online appendix formulas are not present in the MinerU main-text Markdown):
+
 $$
 \sigma_c^{-1}c_t-\sigma_c^{-1}E_tc_{t+1}
 -\sigma_l^{-1}l_t+\sigma_l^{-1}E_tl_{t+1}
@@ -183,6 +198,7 @@ $$
 $$
 
 - **(F16) Foreign optimal investment condition** (`needs_review`: same source limitation as F15):
+
 $$
 \sigma_c^{-1}c_t^{\ast}-\sigma_c^{-1}E_tc_{t+1}^{\ast}
 -\sigma_l^{-1}l_t^{\ast}+\sigma_l^{-1}E_tl_{t+1}^{\ast}
@@ -196,6 +212,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F17) Home resource constraint**:
+
 $$
 \begin{aligned}
 y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
@@ -206,6 +223,7 @@ y_t={}&\phi_H\bar C c_t+\frac{1-n}{n}\phi_H^{\ast}\bar C c_t^{\ast}
 $$
 
 - **(F18) Foreign resource constraint**:
+
 $$
 \begin{aligned}
 y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
@@ -217,31 +235,37 @@ y_t^{\ast}={}&\phi_F^{\ast}\bar C c_t^{\ast}+\frac{n}{1-n}\phi_F\bar C c_t
 $$
 
 - **(F19) Home relative-price law of motion**:
+
 $$
 p_{H,t}-p_{H,t-1}=\pi_{H,t}-\pi_t.
 $$
 
 - **(F20) Real exchange-rate identity**:
+
 $$
 \phi_H^{\ast}p_{H,t}-\frac{\phi_H}{\phi_F}\phi_F^{\ast}p_{H,t}=q_t.
 $$
 
 - **(F21) Home nominal output identity**:
+
 $$
 ny_t=y_t+p_t.
 $$
 
 - **(F22) Foreign nominal output identity**:
+
 $$
 ny_t^{\ast}=y_t^{\ast}+p_t^{\ast}.
 $$
 
 - **(F23) Home producer price index**:
+
 $$
 p_t=\pi_{H,t}+p_{t-1}.
 $$
 
 - **(F24) Foreign producer price index**:
+
 $$
 p_t^{\ast}=\pi_{F,t}+p_{t-1}^{\ast}.
 $$
@@ -249,6 +273,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) Common monetary policy rule**:
+
 $$
 r_t=\rho_i r_{t-1}+(1-\rho_i)
 \left[\phi_\pi(n\pi_t+(1-n)\pi_t^{\ast})+\phi_y(ny_t+(1-n)y_t^{\ast})
@@ -256,6 +281,7 @@ r_t=\rho_i r_{t-1}+(1-\rho_i)
 $$
 
 - **(F26) Government spending processes**:
+
 $$
 g_t=\rho_G g_{t-1}+\varepsilon^g_t,\qquad
 g_t^{\ast}=\rho_G g_{t-1}^{\ast}+\varepsilon^{g\ast}_t.

@@ -58,6 +58,7 @@ The monetary authority follows an empirical Taylor rule with interest-rate smoot
 The paper's Section 2 prints the estimated log-linear system. Equations (F1)-(F12) correspond to paper equations (1)-(12), except where noted.
 
 - **(F1) Consumption Euler equation with habit and preference shock**:
+
 $$
 \hat C_t =
 \frac{h}{1+h}\hat C_{t-1}
@@ -70,6 +71,7 @@ $$
 $$
 
 - **(F2) Sticky-wage equation**:
+
 $$
 \begin{aligned}
 \hat w_t={}&
@@ -90,6 +92,7 @@ $$
 $$
 
 - **(F3) Aggregate supply / production**:
+
 $$
 \hat Y_t =
 \phi\hat\varepsilon_t^A
@@ -99,12 +102,14 @@ $$
 $$
 
 - **(F4) Labor demand**:
+
 $$
 \hat L_t =
 -\hat w_t+\left(1+\frac{1}{\psi}\right)\hat r_t^k+\hat K_{t-1}.
 $$
 
 - **(F5) Sticky-price Phillips curve**:
+
 $$
 \begin{aligned}
 \hat\pi_t-\bar\pi_t={}&
@@ -118,11 +123,13 @@ $$
 $$
 
 - **(F6) Capital accumulation**:
+
 $$
 \hat K_{t+1}=(1-\tau)\hat K_t+\tau\hat I_t+\tau\hat\varepsilon_t^I .
 $$
 
 - **(F7) Investment adjustment-cost condition**:
+
 $$
 \hat I_t=
 \frac{1}{1+\beta}\hat I_{t-1}
@@ -131,6 +138,7 @@ $$
 $$
 
 - **(F8) Expected real return to capital**:
+
 $$
 E_t\hat R_{t+1}^K =
 \frac{1-\tau}{\bar R^K}E_t\hat Q_{t+1}
@@ -139,6 +147,7 @@ E_t\hat R_{t+1}^K =
 $$
 
 - **(F9) External-finance premium / capital-arbitrage condition**:
+
 $$
 E_t\hat R_{t+1}^K =
 -\varepsilon E_t[\hat N_{t+1}-\hat Q_t-\hat K_{t+1}]
@@ -146,6 +155,7 @@ E_t\hat R_{t+1}^K =
 $$
 
 - **(F10) Entrepreneurial net worth**:
+
 $$
 \hat N_{t+1} =
 \gamma\bar R^K
@@ -159,6 +169,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F11) Goods-market resource constraint**:
+
 $$
 \hat Y_t =
 c_y\hat C_t+\tau k_y\hat I_t+\varepsilon_t^G
@@ -178,6 +189,7 @@ k_y(\hat R_t^K+\hat Q_{t-1}+\hat K_t).
 $$
 
 - **(F12) Monetary policy rule**:
+
 $$
 \begin{aligned}
 \hat R_t^n={}&
@@ -191,16 +203,19 @@ $$
 $$
 
 - **(F13) Fisher relation / real interest-rate identity**:
+
 $$
 \hat R_t^n=\hat R_t+E_t\hat\pi_{t+1}.
 $$
 
 - **(F14) External finance premium definition**:
+
 $$
 \widehat{\mathrm{Prem}}_t=E_t\hat R_{t+1}^K-\hat R_t.
 $$
 
 - **(F15) Flexible-price output objective**:
+
 $$
 \hat Y_t^p
 \quad\text{is the flexible-price, flexible-wage, frictionless-credit-market equilibrium.}
@@ -211,31 +226,37 @@ The `.mod` cross-check represents this target with a parallel flexible-price blo
 ## 5. Exogenous Processes
 
 - **(F16) Inflation target**:
+
 $$
 \bar\pi_t=\bar\pi_{t-1}+\eta_t^\pi .
 $$
 
 - **(F17) Discount-factor shock**:
+
 $$
 \hat\varepsilon_t^B=\rho_B\hat\varepsilon_{t-1}^B+\epsilon_t^B .
 $$
 
 - **(F18) Labor-supply shock**:
+
 $$
 \hat\varepsilon_t^L=\rho_L\hat\varepsilon_{t-1}^L+\epsilon_t^L .
 $$
 
 - **(F19) Productivity shock**:
+
 $$
 \hat\varepsilon_t^A=\rho_A\hat\varepsilon_{t-1}^A+\epsilon_t^A .
 $$
 
 - **(F20) Investment-specific technology shock**:
+
 $$
 \hat\varepsilon_t^I=\rho_I\hat\varepsilon_{t-1}^I+\epsilon_t^I .
 $$
 
 - **(F21) Government-spending shock**:
+
 $$
 \hat\varepsilon_t^G=\rho_G\hat\varepsilon_{t-1}^G+\epsilon_t^G .
 $$

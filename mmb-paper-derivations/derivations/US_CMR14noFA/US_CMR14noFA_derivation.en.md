@@ -352,7 +352,11 @@ The source fixes steady-state growth and calibration targets rather than providi
 4. Use the bond Euler equation and inflation target to pin down the steady-state nominal net risk-free rate $R^e$.
 5. Use utilization, rental-rate, marginal-cost, production, and zero-profit fixed-cost conditions to solve $r^k$, $s$, $\bar k$, $H$, $Y_z$, and $\phi$.
 6. Use capital accumulation with $S=0$ and $S'=0$ at the steady state to solve investment:
-   $$I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.$$
+
+   $$
+   I=\left[1-\frac{1-\delta}{\mu_{z^{\ast}}\Upsilon}\right]\bar k.
+   $$
+
 7. Set government spending so that $g/(C+I)=\eta_g/(1-\eta_g)$, equivalently $g/Y=0.20$ in the calibrated steady state.
 8. Use the resource constraint and consumption FOC to determine $C$, $\lambda_z$, and the wage block auxiliary values $F_w,K_w,F_p,K_p$.
 

@@ -19,26 +19,36 @@
 
 最终品厂商聚合差异化中间品：
 
-$$Y_t = \left(\int_0^1 Y_t(i)^{\frac{1}{1+\eta_t^p}}\,di\right)^{1+\eta_t^p} \tag{(F1)}$$
+$$
+Y_t = \left(\int_0^1 Y_t(i)^{\frac{1}{1+\eta_t^p}}\,di\right)^{1+\eta_t^p} \tag{(F1)}
+$$
 
 中间品 \(i\) 的需求为：
 
-$$Y_t(i)=Y_t\left(\frac{P_t(i)}{P_t}\right)^{-\frac{1+\eta_t^p}{\eta_t^p}} \tag{(F2)}$$
+$$
+Y_t(i)=Y_t\left(\frac{P_t(i)}{P_t}\right)^{-\frac{1+\eta_t^p}{\eta_t^p}} \tag{(F2)}
+$$
 
 ### 中间品厂商
 
 中间品厂商租用资本和劳动并生产：
 
-$$Y_t(i)=K_t(i)^\alpha\big(A_t L_t(i)\big)^{1-\alpha}-A_t\Omega \tag{(F3)}$$
+$$
+Y_t(i)=K_t(i)^\alpha\big(A_t L_t(i)\big)^{1-\alpha}-A_t\Omega \tag{(F3)}
+$$
 
 成本最小化给出名义边际成本：
 
-$$MC_t=(1-\alpha)^{\alpha-1}\alpha^{-\alpha}(R_t^k)^\alpha W_t^{1-\alpha}A_t^{-1+\alpha} \tag{(F4)}$$
+$$
+MC_t=(1-\alpha)^{\alpha-1}\alpha^{-\alpha}(R_t^k)^\alpha W_t^{1-\alpha}A_t^{-1+\alpha} \tag{(F4)}
+$$
 
 能够重设价格的厂商最大化：
 
-$$E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
-\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}$$
+$$
+E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
+\left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t^{\ast}(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right] \tag{(F5), needs_review}
+$$
 
 (F5) 中利润括号前的加号来自 OCR 文本，但很可能应理解为贴现因子与利润项相乘；需要对照 PDF 复核。
 
@@ -46,49 +56,67 @@ $$E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
 
 竞争性劳动聚合机构聚合差异化劳动：
 
-$$L_t=\left(\int_0^1 L_t(l)^{\frac{1}{1+\eta_t^w}}\,dl\right)^{1+\eta_t^w} \tag{(F6)}$$
+$$
+L_t=\left(\int_0^1 L_t(l)^{\frac{1}{1+\eta_t^w}}\,dl\right)^{1+\eta_t^w} \tag{(F6)}
+$$
 
 类型 \(l\) 的劳动需求为：
 
-$$L_t(l)=L_t^d\left(\frac{W_t(l)}{W_t}\right)^{-\frac{1+\eta_t^w}{\eta_t^w}} \tag{(F7)}$$
+$$
+L_t(l)=L_t^d\left(\frac{W_t(l)}{W_t}\right)^{-\frac{1+\eta_t^w}{\eta_t^w}} \tag{(F7)}
+$$
 
 工资设定者面临 Calvo 重设并带有指数化：
 
-$$W_t(l)=W_{t-1}(l)\big(\pi_{t-1}e^{u^a_{t-1}}\big)^{\chi_w}(\pi e^\gamma)^{1-\chi_w} \tag{(F8), needs_review}$$
+$$
+W_t(l)=W_{t-1}(l)\big(\pi_{t-1}e^{u^a_{t-1}}\big)^{\chi_w}(\pi e^\gamma)^{1-\chi_w} \tag{(F8), needs_review}
+$$
 
 ### 储蓄者家庭
 
 储蓄者家庭 \(j\) 最大化：
 
-$$E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{\astS}(j)-\theta\widetilde C_{t-1}^{\astS}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}$$
+$$
+E_0\sum_{t=0}^{\infty}\beta^t u_t^b\left[\log\left(C_t^{\astS}(j)-\theta\widetilde C_{t-1}^{\astS}\right)-\frac{(L_t^S(j))^{1+\xi}}{1+\xi}\right] \tag{(F9)}
+$$
 
 进入效用的复合消费为：
 
-$$C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}$$
+$$
+C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t \tag{(F10)}
+$$
 
 储蓄者名义预算约束为：
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 P_t(1+\tau_t^C)C_t^S(j)+P_tI_t^S(j)+P_t^B B_t(j)+R_t^{-1}B_{s,t}(j)
 &=(1+\rho P_t^B)B_{t-1}(j)+B_{s,t-1}(j)\\
 &\quad +(1-\tau_t^L)\int_0^1 W_t(l)L_t^S(j,l)\,dl\\
 &\quad +(1-\tau_t^K)R_t^k v_t(j)\bar K_{t-1}^S(j)-\psi(v_t)\bar K_{t-1}^S(j)\\
 &\quad +P_tZ_t^S(j)+D_t(j).
-\end{aligned} \tag{(F11)}$$
+\end{aligned} \tag{(F11)}
+$$
 
 资本演化为：
 
-$$\bar K_t^S(j)=(1-\delta)\bar K_{t-1}^S(j)+u_t^i\left[1-s\left(\frac{I_t^S(j)}{I_{t-1}^S(j)}\right)\right]I_t^S(j) \tag{(F12)}$$
+$$
+\bar K_t^S(j)=(1-\delta)\bar K_{t-1}^S(j)+u_t^i\left[1-s\left(\frac{I_t^S(j)}{I_{t-1}^S(j)}\right)\right]I_t^S(j) \tag{(F12)}
+$$
 
 有效资本为：
 
-$$K_t^S(j)=v_t(j)\bar K_{t-1}^S(j) \tag{(F13)}$$
+$$
+K_t^S(j)=v_t(j)\bar K_{t-1}^S(j) \tag{(F13)}
+$$
 
 ### 非储蓄者家庭
 
 非储蓄者消费当期可支配收入：
 
-$$P_t(1+\tau_t^C)C_t^N(j)=(1-\tau_t^L)\int_0^1 W_t(l)L_t^N(j,l)\,dl+P_tZ_t^N(j) \tag{(F14)}$$
+$$
+P_t(1+\tau_t^C)C_t^N(j)=(1-\tau_t^L)\int_0^1 W_t(l)L_t^N(j,l)\,dl+P_tZ_t^N(j) \tag{(F14)}
+$$
 
 ## 3. First-Order Conditions
 
@@ -96,31 +124,42 @@ $$P_t(1+\tau_t^C)C_t^N(j)=(1-\tau_t^L)\int_0^1 W_t(l)L_t^N(j,l)\,dl+P_tZ_t^N(j) 
 
 **(F15) 储蓄者财富边际效用，对数线性 implementation_cross_check**：
 
-$$\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast} -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
-=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}$$
+$$
+\lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}c_t^{\ast} -u_t^b+\frac{\tau^C}{1+\tau^C}\tau_t^C
+=\frac{\theta}{e^\gamma-\theta}c_{t-1}^{\ast}
+$$
 
 **(F16) 储蓄者欧拉方程，对数线性 implementation_cross_check**：
 
-$$\lambda_t-R_t+\pi_{t+1}-\lambda_{t+1}+\rho_a u_t^a=0$$
+$$
+\lambda_t-R_t+\pi_{t+1}-\lambda_{t+1}+\rho_a u_t^a=0
+$$
 
 **(F17) 资本利用率条件，对数线性 implementation_cross_check**：
 
-$$\frac{1-\psi}{\psi}r_t^k-v_t-\frac{1-\psi}{\psi}\frac{\tau^K}{1-\tau^K}\tau_t^K=0$$
+$$
+\frac{1-\psi}{\psi}r_t^k-v_t-\frac{1-\psi}{\psi}\frac{\tau^K}{1-\tau^K}\tau_t^K=0
+$$
 
 **(F18) 资本 FOC，对数线性 implementation_cross_check**：
 
-$$q_t+R_t-\pi_{t+1}-\beta e^{-\gamma}(1-\delta)q_{t+1}
+$$
+q_t+R_t-\pi_{t+1}-\beta e^{-\gamma}(1-\delta)q_{t+1}
 -\beta e^{-\gamma}R^K(1-\tau^K)r_{t+1}^k
-+\tau^K e^{-\gamma}\beta R^K\tau_{t+1}^K=0$$
++\tau^K e^{-\gamma}\beta R^K\tau_{t+1}^K=0
+$$
 
 **(F19) 投资 FOC，对数线性 implementation_cross_check**：
 
-$$-\frac{1}{(1+\beta)s e^{2\gamma}}q_t+i_t-\frac{\beta}{1+\beta}i_{t+1}
-+\frac{1-\beta\rho_a}{1+\beta}u_t^a-u_t^i=\frac{1}{1+\beta}i_{t-1}$$
+$$
+-\frac{1}{(1+\beta)s e^{2\gamma}}q_t+i_t-\frac{\beta}{1+\beta}i_{t+1}
++\frac{1-\beta\rho_a}{1+\beta}u_t^a-u_t^i=\frac{1}{1+\beta}i_{t-1}
+$$
 
 **(F20) 工资 Phillips 曲线，对数线性 implementation_cross_check，needs_review**：
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 (1+\lambda_w)w_t-\lambda_w\frac{\beta}{1+\beta}w_{t+1}
 +\lambda_w\frac{1+\beta\chi_w}{1+\beta}\pi_t
 -\lambda_w\frac{\beta}{1+\beta}\pi_{t+1}
@@ -130,81 +169,116 @@ $$\begin{aligned}
 =\frac{\lambda_w}{1+\beta}w_{t-1}
 +\frac{\lambda_w\chi_w}{1+\beta}\pi_{t-1}
 +\frac{\lambda_w\chi_w}{1+\beta}u_{t-1}^a .
-\end{aligned}$$
+\end{aligned}
+$$
 
 **(F21) 新凯恩斯价格 Phillips 曲线，对数线性 implementation_cross_check**：
 
-$$\lambda_p\pi_t-\lambda_p\frac{\beta}{1+\beta\chi_p}\pi_{t+1}-mc_t-\lambda_p u_t^p
-=\lambda_p\frac{\chi_p}{1+\beta\chi_p}\pi_{t-1}$$
+$$
+\lambda_p\pi_t-\lambda_p\frac{\beta}{1+\beta\chi_p}\pi_{t+1}-mc_t-\lambda_p u_t^p
+=\lambda_p\frac{\chi_p}{1+\beta\chi_p}\pi_{t-1}
+$$
 
 ## 4. Market Clearing & Identities
 
 总消费：
 
-$$C_t=(1-\mu)C_t^S+\mu C_t^N \tag{(F22)}$$
+$$
+C_t=(1-\mu)C_t^S+\mu C_t^N \tag{(F22)}
+$$
 
 产品市场出清：
 
-$$Y_t=C_t+I_t+G_t+\psi(v_t)\bar K_{t-1} \tag{(F23)}$$
+$$
+Y_t=C_t+I_t+G_t+\psi(v_t)\bar K_{t-1} \tag{(F23)}
+$$
 
 债务产出比：
 
-$$s_t^b=\frac{P_t^B B_t}{P_tY_t} \tag{(F24)}$$
+$$
+s_t^b=\frac{P_t^B B_t}{P_tY_t} \tag{(F24)}
+$$
 
 长期名义债券定价，对数线性 implementation_cross_check：
 
-$$R_t-\frac{\rho_B P^B}{1+\rho_B P^B}P^B_{t+1}+P^B_t=0 \tag{(F25)}$$
+$$
+R_t-\frac{\rho_B P^B}{1+\rho_B P^B}P^B_{t+1}+P^B_t=0 \tag{(F25)}
+$$
 
 政府预算约束，来源层面恒等式：
 
-$$P_t^B B_t+\tau_t^K R_t^K K_t+\tau_t^L W_tL_t+P_t\tau_t^C C_t=(1+\rho P_t^B)B_{t-1}+P_tG_t+P_tZ_t \tag{(F26), needs_review}$$
+$$
+P_t^B B_t+\tau_t^K R_t^K K_t+\tau_t^L W_tL_t+P_t\tau_t^C C_t=(1+\rho P_t^B)B_{t-1}+P_tG_t+P_tZ_t \tag{(F26), needs_review}
+$$
 
 基本盈余：
 
-$$S_t=\tau_t^K R_t^kK_t+\tau_t^L W_tL_t+\tau_t^C C_t-G_t-Z_t \tag{(F27)}$$
+$$
+S_t=\tau_t^K R_t^kK_t+\tau_t^L W_tL_t+\tau_t^C C_t-G_t-Z_t \tag{(F27)}
+$$
 
 税收收入定义：
 
-$$T_t^C=\tau_t^C C_t,\qquad T_t^K=\tau_t^K R_t^kK_t,\qquad T_t^L=\tau_t^L W_tL_t \tag{(F28)}$$
+$$
+T_t^C=\tau_t^C C_t,\qquad T_t^K=\tau_t^K R_t^kK_t,\qquad T_t^L=\tau_t^L W_tL_t \tag{(F28)}
+$$
 
 Fisher 方程：
 
-$$r_t-R_t+\pi_{t+1}=0 \tag{(F29)}$$
+$$
+r_t-R_t+\pi_{t+1}=0 \tag{(F29)}
+$$
 
 ## 5. Exogenous Processes
 
 技术增长：
 
-$$u_t^a=(1-\rho_a)\gamma+\rho_a u_{t-1}^a+\epsilon_t^a,\qquad \epsilon_t^a\sim N(0,\sigma_a^2) \tag{(F30)}$$
+$$
+u_t^a=(1-\rho_a)\gamma+\rho_a u_{t-1}^a+\epsilon_t^a,\qquad \epsilon_t^a\sim N(0,\sigma_a^2) \tag{(F30)}
+$$
 
 货币政策：
 
-$$\widehat R_t=\rho_r\widehat R_{t-1}+(1-\rho_r)\left(\phi_\pi\widehat\pi_t+\phi_y\widehat y_t\right)+u_t^m \tag{(F31)}$$
+$$
+\widehat R_t=\rho_r\widehat R_{t-1}+(1-\rho_r)\left(\phi_\pi\widehat\pi_t+\phi_y\widehat y_t\right)+u_t^m \tag{(F31)}
+$$
 
 货币政策冲击：
 
-$$u_t^m=\rho_{em}u_{t-1}^m+\epsilon_t^m,\qquad \epsilon_t^m\sim N(0,\sigma_m^2) \tag{(F32)}$$
+$$
+u_t^m=\rho_{em}u_{t-1}^m+\epsilon_t^m,\qquad \epsilon_t^m\sim N(0,\sigma_m^2) \tag{(F32)}
+$$
 
 政府消费和转移支付财政规则：
 
-$$\widehat g_t=\rho_G\widehat g_{t-1}-(1-\rho_G)\gamma_G\widehat s_{t-1}^b+u_t^G \tag{(F33)}$$
+$$
+\widehat g_t=\rho_G\widehat g_{t-1}-(1-\rho_G)\gamma_G\widehat s_{t-1}^b+u_t^G \tag{(F33)}
+$$
 
-$$\widehat z_t=\rho_Z\widehat z_{t-1}-(1-\rho_Z)\gamma_Z\widehat s_{t-1}^b+u_t^Z \tag{(F34)}$$
+$$
+\widehat z_t=\rho_Z\widehat z_{t-1}-(1-\rho_Z)\gamma_Z\widehat s_{t-1}^b+u_t^Z \tag{(F34)}
+$$
 
 税收工具财政规则：
 
-$$\widehat\tau_t^J=\rho_J\widehat\tau_{t-1}^J+(1-\rho_J)\gamma_J\widehat s_{t-1}^b,\qquad J\in\{K,L,C\} \tag{(F35)}$$
+$$
+\widehat\tau_t^J=\rho_J\widehat\tau_{t-1}^J+(1-\rho_J)\gamma_J\widehat s_{t-1}^b,\qquad J\in\{K,L,C\} \tag{(F35)}
+$$
 
 财政冲击：
 
-$$u_t^s=\rho_{es}u_{t-1}^s+\epsilon_t^s,\qquad s\in\{G,Z\},\qquad \epsilon_t^s\sim N(0,\sigma_s^2) \tag{(F36)}$$
+$$
+u_t^s=\rho_{es}u_{t-1}^s+\epsilon_t^s,\qquad s\in\{G,Z\},\qquad \epsilon_t^s\sim N(0,\sigma_s^2) \tag{(F36)}
+$$
 
 其他 implementation_cross_check 冲击：
 
-$$u_t^b=\rho_bu_{t-1}^b+\epsilon_t^b,\quad
+$$
+u_t^b=\rho_bu_{t-1}^b+\epsilon_t^b,\quad
 u_t^i=\rho_iu_{t-1}^i+\epsilon_t^i,\quad
 u_t^w=\rho_wu_{t-1}^w+\epsilon_t^w,\quad
-u_t^p=\rho_pu_{t-1}^p+\epsilon_t^p \tag{(F37)}$$
+u_t^p=\rho_pu_{t-1}^p+\epsilon_t^p \tag{(F37)}
+$$
 
 ## 6. Steady-State Solution
 

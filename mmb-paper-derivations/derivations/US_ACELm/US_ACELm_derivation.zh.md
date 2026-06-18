@@ -17,6 +17,7 @@
 完全竞争最终品企业聚合差异化中间品：
 
 **(F1) 最终品聚合器**
+
 $$
 Y_t=\left[\int_0^1 y_t(i)^{1/\lambda_f}\,di\right]^{\lambda_f},\qquad 1\leq \lambda_f<\infty .
 $$
@@ -24,6 +25,7 @@ $$
 对各中间品投入利润最大化得到需求：
 
 **(F2) 中间品需求**
+
 $$
 \left(\frac{P_t}{P_t(i)}\right)^{\lambda_f/(\lambda_f-1)}
 =\frac{y_t(i)}{Y_t}.
@@ -34,6 +36,7 @@ $$
 每个中间品企业是垄断生产者，使用中性技术和资本服务：
 
 **(F3) 中间品生产技术**
+
 $$
 y_t(i)=K_t(i)^\alpha\big(z_t h_t(i)\big)^{1-\alpha}-\phi z_t^\ast ,
 \qquad
@@ -43,12 +46,14 @@ $$
 在企业特定资本版本中，企业 `i` 积累自己的物质资本：
 
 **(F4) 企业特定投资技术**
+
 $$
 F(I_t(i),I_{t-1}(i))=
 \left[1-S\left(\frac{I_t(i)}{I_{t-1}(i)}\right)\right]I_t(i),
 $$
 
 **(F5) 企业特定资本积累**
+
 $$
 \bar K_{t+1}(i)=(1-\delta)\bar K_t(i)+F(I_t(i),I_{t-1}(i)).
 $$
@@ -56,6 +61,7 @@ $$
 企业最大化预期贴现名义现金流：
 
 **(F6) 企业目标函数**
+
 $$
 E_t\sum_{j=0}^{\infty}\beta^j v_{t+j}
 \left\{
@@ -72,6 +78,7 @@ $$
 家庭消费、供给差异化劳动、持有货币和现金余额、在同质资本基准中拥有资本，并在 Calvo 摩擦下设定工资。偏好为：
 
 **(F7) 家庭效用**
+
 $$
 E_t^j\sum_{l=0}^{\infty}\beta^{l-t}
 \left[
@@ -83,6 +90,7 @@ $$
 名义资产演化方程为：
 
 **(F8) 家庭资产演化**
+
 $$
 \begin{aligned}
 M_{t+1}={}&R_t\big[M_t-Q_t+(x_t-1)M_t^a\big]+A_{j,t}+Q_t+W_{j,t}h_{j,t}\\
@@ -94,6 +102,7 @@ $$
 现金流通速度和交易技术为：
 
 **(F9) 流通速度定义**
+
 $$
 V_t=\frac{P_tC_t}{Q_t}.
 $$
@@ -101,6 +110,7 @@ $$
 家庭通过劳动聚合器供给差异化劳动：
 
 **(F10) 劳动聚合器**
+
 $$
 H_t=\left[\int_0^1 h_{j,t}^{1/\lambda_w}\,dj\right]^{\lambda_w}.
 $$
@@ -110,48 +120,58 @@ $$
 论文侧 Markdown 报告了原始最优化问题和若干一阶条件，但没有给出完整技术附录线性系统。因此，下列一阶和均衡条件是有来源支撑的推导骨架；精确系数层面的线性方程在获得附录来源核验前标记为 `needs_review`。
 
 **(F11) 总价格指数**
+
 $$
 P_t=\left[\int_0^1 P_t(i)^{1/(1-\lambda_f)}\,di\right]^{1-\lambda_f}.
 $$
 
 **(F12) 未重优化企业的 Calvo 价格更新**
+
 $$
 P_t(i)=\pi_{t-1}P_{t-1}(i).
 $$
 
 **(F13) 通胀动态的约化形式**
+
 $$
 \Delta\hat\pi_t
 =E\left[\beta\Delta\hat\pi_{t+1}+\gamma\hat s_t\mid\Omega_t\right].
 $$
 
 **(F14) 斜率参数映射**
+
 $$
 \gamma=\frac{(1-\xi_p)(1-\beta\xi_p)}{\xi_p}\chi ,
 $$
+
 其中 $\chi=1$ 对应同质资本模型；在企业特定资本模型中，$\chi$ 是结构参数的非线性函数。
 
 **(F15) 工资需求曲线**
+
 $$
 h_{j,t}=\left(\frac{W_t}{W_{j,t}}\right)^{\lambda_w/(\lambda_w-1)}H_t.
 $$
 
 **(F16) 总工资指数**
+
 $$
 W_t=\left[\int_0^1 W_{j,t}^{1/(1-\lambda_w)}\,dj\right]^{1-\lambda_w}.
 $$
 
 **(F17) 未重优化家庭的 Calvo 工资更新**
+
 $$
 W_{j,t}=\pi_{t-1}\mu_{z^\ast}W_{j,t-1}.
 $$
 
 **(F18) 货币需求一阶条件**
+
 $$
 R_t=1+\eta'\left(\frac{P_tC_t}{Q_t}\right)\left(\frac{P_tC_t}{Q_t}\right)^2 .
 $$
 
 **(F19) 货币需求利率半弹性**
+
 $$
 \epsilon=\frac{1}{4}\left(\frac{1}{R-1}\right)\left(\frac{1}{2+\varphi}\right),
 \qquad
@@ -159,22 +179,26 @@ $$
 $$
 
 **(F20) 资本服务**
+
 $$
 K_t=u_t\bar K_t .
 $$
 
 **(F21) 资本利用率对数线性 FOC, needs_review**
+
 $$
 E\left[\frac{1}{\sigma_a}\hat r_t^k-\hat u_t\mid\Omega_t\right]=0.
 $$
 
 **(F22) 投资调整对数线性反应, needs_review**
+
 $$
 \hat i_t=\hat i_{t-1}+\frac{1}{S''}\sum_{j=0}^{\infty}\beta^j
 E\left[\hat P_{k',t+j}\mid\Omega_t\right].
 $$
 
 **(F23) 稳态 Fisher 关系**
+
 $$
 R=\frac{\pi\mu_{z^\ast}}{\beta}.
 $$
@@ -182,27 +206,32 @@ $$
 ## 4. 市场出清与总量恒等式
 
 **(F24) 平衡增长技术的增长率**
+
 $$
 \mu_{z^\ast,t}=\mu_{\Upsilon,t}^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 **(F25) 贷款市场出清**
+
 $$
 W_tH_t=x_tM_t-Q_t.
 $$
 
 **(F26) 总资源约束**
+
 $$
 (1+\eta(V_t))C_t+\Upsilon_t^{-1}\big[I_t+a(u_t)\bar K_t\big]\leq Y_t.
 $$
 
 **(F27) 货币基础恒等式, implementation_cross_check needs_review**
+
 $$
 \hat m_t+\hat\pi_t-\hat m_{t-1}-\hat x_{t-1}
 =-\hat\mu_{z,t}-\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}.
 $$
 
 **(F28) 产出缺口定义, implementation_cross_check**
+
 $$
 \widehat{outputgap}_t=\hat y_t-\hat y_t^{flex}.
 $$
@@ -210,37 +239,44 @@ $$
 ## 5. 外生过程
 
 **(F29) 中性技术增长**
+
 $$
 \hat\mu_{z,t}=\rho_{\mu_z}\hat\mu_{z,t-1}+\varepsilon_{\mu_z,t}.
 $$
 
 **(F30) 资本体现型技术增长**
+
 $$
 \hat\mu_{\Upsilon,t}=\rho_{\mu_\Upsilon}\hat\mu_{\Upsilon,t-1}+\varepsilon_{\mu_\Upsilon,t}.
 $$
 
 **(F31) 货币增长政策分解**
+
 $$
 \hat x_t=\hat x_{z,t}+\hat x_{\Upsilon,t}+\hat x_{M,t}.
 $$
 
 **(F32) 货币政策冲击过程**
+
 $$
 \hat x_{M,t}=\rho_{xM}\hat x_{M,t-1}+\varepsilon_{M,t}.
 $$
 
 **(F33) 货币政策对中性技术的反应**
+
 $$
 \hat x_{z,t}=\rho_{xz}\hat x_{z,t-1}+c_z\varepsilon_{z,t}+c_z^p\varepsilon_{z,t-1}.
 $$
 
 **(F34) 货币政策对体现型技术的反应**
+
 $$
 \hat x_{\Upsilon,t}=\rho_{x\Upsilon}\hat x_{\Upsilon,t-1}
 c_{\Upsilon}\varepsilon_{\Upsilon,t}+c_{\Upsilon}^p\varepsilon_{\Upsilon,t-1}.
 $$
 
 **(F35) Rep-MMB 中的暂时性中性技术冲击, implementation_cross_check**
+
 $$
 \epsilon_t=\rho_\epsilon\epsilon_{t-1}+\sigma_\epsilon\varepsilon_{\epsilon,t}.
 $$
@@ -250,32 +286,38 @@ $$
 模型围绕平衡增长稳态求解。论文直接设定若干稳态关系，并估计动态参数。
 
 1. 选择校准的长期参数：
+
 $$
 \beta=1.03^{-0.25},\qquad \alpha=0.36,\qquad \delta=0.025,\qquad \lambda_w=1.05.
 $$
 
 2. 设定体现型技术增长，并由平均产出增长推出中性技术增长：
+
 $$
 \mu_y=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z,\qquad
 \mu_\Upsilon=1.0042,\qquad \mu_y=1.0045.
 $$
 
 3. 定义平衡增长技术：
+
 $$
 \mu_{z^\ast}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
 $$
 
 4. 使用稳态 Fisher 关系：
+
 $$
 R=\frac{\pi\mu_{z^\ast}}{\beta}.
 $$
 
 5. 设定平均货币增长：
+
 $$
 x=1.017.
 $$
 
 6. 通过稳态流通速度和交易成本份额参数化交易成本：
+
 $$
 V=0.45,\qquad \eta=0.036,\qquad V=\frac{PC}{Q}.
 $$

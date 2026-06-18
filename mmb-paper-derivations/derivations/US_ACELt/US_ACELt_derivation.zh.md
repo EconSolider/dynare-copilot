@@ -118,6 +118,7 @@ $$
 论文用围绕非随机平衡增长路径的线性近似表示均衡。以下编号条件只用 MMB `US_ACELt` 实现作为技术附录方程骨架和变量命名的 `implementation_cross_check`；它们不被当作论文侧原始数学来源。
 
 - **(F1) 资本欧拉方程，粘性价格块，needs_review**：
+
 $$
 \lambda_{z^{\ast},t+1}+\frac{1-\delta}{\tilde\rho+1-\delta}\tilde\mu_{t+1}
 +\frac{\tilde\rho}{\tilde\rho+1-\delta}\tilde\rho_{t+1}
@@ -126,6 +127,7 @@ $$
 $$
 
 - **(F2) 投资欧拉方程，粘性价格块，needs_review**：
+
 $$
 -\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2 i_{t+1}-\tilde\mu_t
 +\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)i_t
@@ -135,6 +137,7 @@ $$
 $$
 
 - **(F3) 资本影子租金，粘性价格块，needs_review**：
+
 $$
 \tilde w_t+\frac{1}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\tilde y_t
 +\frac{\nu R}{\nu R+1-\nu}R_t-\tilde\rho_t-\frac{1}{1-\alpha}u_t
@@ -144,6 +147,7 @@ $$
 $$
 
 - **(F4) 资本演化，粘性价格块**：
+
 $$
 (\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))i_t-\mu_\Upsilon\mu_{z^{\ast}}\bar k_t
 +(1-\delta)\bar k_{t-1}
@@ -151,11 +155,13 @@ $$
 $$
 
 - **(F5) 带约化斜率 \(\gamma\) 的通胀方程**：
+
 $$
 \beta\pi_{t+1}-(1+\beta\varsigma)\pi_t+\gamma s_t=-\varsigma\pi_{t-1}.
 $$
 
 - **(F6) 边际成本方程，粘性价格块，needs_review**：
+
 $$
 \tilde w_t-s_t+\frac{\alpha}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\tilde y_t
 +\frac{\nu R}{\nu R+1-\nu}R_t-\frac{\alpha}{1-\alpha}u_t
@@ -165,11 +171,13 @@ $$
 $$
 
 - **(F7) 货币需求**：
+
 $$
 c_t-q_t=\frac{R}{R-1}\frac{1}{2+\sigma_\eta}R_t.
 $$
 
 - **(F8) 带习惯和流动性服务的消费欧拉方程，needs_review**：
+
 $$
 \begin{aligned}
 &-\beta b\left(\frac{1}{\mu_{z^{\ast}}c-bc}\right)^2\mu_{z^{\ast}}c\,c_{t+1}
@@ -183,12 +191,14 @@ $$
 $$
 
 - **(F9) 货币基础一阶条件**：
+
 $$
 \lambda_{z^{\ast},t+1}-\pi_{t+1}+R_{t+1}-\lambda_{z^{\ast},t}
 =\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t+1}.
 $$
 
 - **(F10) 工资一阶条件，needs_review**：
+
 $$
 \eta_2\tilde w_{t+1}+\eta_5\pi_{t+1}
 +\eta_1\tilde w_t+\eta_4\pi_t+\eta_6 h_t+\eta_7\lambda_{z^{\ast},t}
@@ -198,6 +208,7 @@ $$
 $$
 
 - **(F11) 资本利用率**：
+
 $$
 \frac{1}{\sigma_a}\tilde\rho_t=u_t.
 $$
@@ -207,16 +218,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F12) 贷款市场出清**：
+
 $$
 W_tH_t=x_tM_t-Q_t.
 $$
 
 - **(F13) 资源约束，论文非线性形式**：
+
 $$
 (1+\eta(V_t))C_t+\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right]\leq Y_t.
 $$
 
 - **(F14) 资源约束，实现线性形式，needs_review**：
+
 $$
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)c_t
@@ -231,18 +245,21 @@ $$
 $$
 
 - **(F15) 货币市场出清，实现线性形式**：
+
 $$
 \tilde w_t-\frac{xm}{xm-q}m_t+h_t+\frac{q}{xm-q}q_t
 =\frac{xm}{xm-q}x_t.
 $$
 
 - **(F16) 货币基础增长和货币余额的连接式**：
+
 $$
 -m_t-\pi_t+m_{t-1}+x_{t-1}
 =\mu_{z,t}+\frac{\alpha}{1-\alpha}\mu_{\Upsilon,t}.
 $$
 
 - **(F17) 生产函数，实现线性形式，needs_review**：
+
 $$
 (\tilde y+\phi)(1-\alpha)h_t-\tilde y\,\tilde y_t
 +\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)u_t
@@ -253,21 +270,25 @@ $$
 $$
 
 - **(F18) 最终品对中间品投入的需求**：
+
 $$
 \frac{y_t(i)}{Y_t}=\left(\frac{P_t}{P_t(i)}\right)^{\lambda_f/(\lambda_f-1)}.
 $$
 
 - **(F19) 价格指数**：
+
 $$
 P_t=\left[\int_0^1P_t(i)^{1/(1-\lambda_f)}\,di\right]^{1-\lambda_f}.
 $$
 
 - **(F20) 总工资指数**：
+
 $$
 W_t=\left[\int_0^1W_{j,t}^{1/(1-\lambda_w)}\,dj\right]^{1-\lambda_w}.
 $$
 
 - **(F21) Modelbase 利率规则，实现替换**：
+
 $$
 \begin{aligned}
 interest_t={}&\sum_{\ell=1}^{4}a_\ell interest_{t-\ell}
@@ -292,42 +313,50 @@ $$
 ## 5. Exogenous Processes
 
 - **(F22) 中性技术增长**：
+
 $$
 \hat\mu_{z,t}=\rho_{\mu_z}\hat\mu_{z,t-1}+\varepsilon_{\mu_z,t}.
 $$
 
 - **(F23) 资本体现型技术增长**：
+
 $$
 \hat\mu_{\Upsilon,t}=\rho_{\mu_\Upsilon}\hat\mu_{\Upsilon,t-1}+\varepsilon_{\mu_\Upsilon,t}.
 $$
 
 - **(F24) 平衡增长技术复合项**：
+
 $$
 \mu_{z^{\ast},t}=(\mu_{\Upsilon,t})^{\alpha/(1-\alpha)}\mu_{z,t}.
 $$
 
 - **(F25) 货币增长分解，论文形式**：
+
 $$
 \hat x_t=\hat x_{z,t}+\hat x_{\Upsilon,t}+\hat x_{M,t}.
 $$
 
 - **(F26) 货币政策冲击过程，论文形式**：
+
 $$
 \hat x_{M,t}=\rho_{xM}\hat x_{M,t-1}+\varepsilon_{M,t}.
 $$
 
 - **(F27) 货币对中性技术的响应，论文形式**：
+
 $$
 \hat x_{z,t}=\rho_{xz}\hat x_{z,t-1}+c_z\varepsilon_{z,t}+c_z^p\varepsilon_{z,t-1}.
 $$
 
 - **(F28) 货币对体现型技术的响应，论文形式**：
+
 $$
 \hat x_{\Upsilon,t}=\rho_{x\Upsilon}\hat x_{\Upsilon,t-1}
 +c_{\Upsilon}\varepsilon_{\Upsilon,t}+c_{\Upsilon}^p\varepsilon_{\Upsilon,t-1}.
 $$
 
 - **(F29) MMB 实现中的额外暂时性技术冲击，implementation_cross_check**：
+
 $$
 \epsilon_t=\rho_\epsilon\epsilon_{t-1}+\sigma_\epsilon\varepsilon^\epsilon_t.
 $$
@@ -338,31 +367,41 @@ $$
 
 1. 设定校准的增长、偏好和技术参数 \(\alpha,\beta,\delta,b,\lambda_f,\lambda_w,\mu_\Upsilon,\mu_z,\nu,\psi_L,\sigma_L,x,V,\eta\)。
 2. 计算平衡增长技术：
+
 $$
 \mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z.
 $$
+
 3. 计算租金回报和名义利率：
+
 $$
 \tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),\qquad
 \pi=\frac{x}{\mu_{z^{\ast}}},\qquad
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 $$
+
 4. 参数化交易成本：
+
 $$
 \eta'=\frac{R-1}{V^2},\qquad
 \sigma_\eta=\frac{1}{4\epsilon(R-1)}-2.
 $$
+
 5. 计算边际成本和营运资本对象：
+
 $$
 s=\frac{1}{\lambda_f},\qquad
 R_\nu=\nu R+1-\nu.
 $$
+
 6. 用实现公式计算稳态工资、资本小时比、资本、小时、消费、货币余额、产出、固定成本、投资和边际效用：
+
 $$
 \tilde w=\frac{1-\alpha}{R_\nu}s\left(\frac{\tilde\rho}{\alpha s}\right)^{\alpha/(\alpha-1)},
 \qquad
 \frac{h}{\bar k}=\left(\frac{\tilde\rho}{\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}\right)^{1/(1-\alpha)}.
 $$
+
 7. 对共享水平，弹性价格稳态等于粘性价格稳态；在线性模型中弹性价格偏离为零。
 
 \(c,\bar k,h,q,m,\tilde y,\phi,i,\lambda_{z^{\ast}}\) 的完整代数按 MMB 实现给出；在任何可运行提升之前，应与原始技术附录重新核对。运行验证记录为未执行。

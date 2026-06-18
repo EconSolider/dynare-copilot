@@ -103,43 +103,51 @@ $$
 下面的线性化系统来自论文附录 A.2 的 RTM 模型经济；本归档为其分配连续方程编号。若干较长的工资剩余递推式标为 `needs_review`，因为 MinerU 源中 $\vartheta$ 与 `9` 等符号存在 OCR 歧义；其经济含义已用复制 `.mod` 交叉核对。
 
 - **(F1) 消费 Euler 方程**：
+
 $$
 \widehat{\lambda}_t=E_t\{\widehat{\lambda}_{t+1}+\widehat R_t+\widehat\varepsilon^b_t-\widehat\Pi_{t+1}\}.
 $$
 
 - **(F2) 消费边际效用**：
+
 $$
 \widehat{\lambda}_t=-\frac{\sigma}{1-\varrho}\left(\widehat c_t-\varrho\widehat c_{t-1}\right).
 $$
 
 - **(F3) 新凯恩斯 Phillips 曲线**：
+
 $$
 \widehat\Pi_t=\beta E_t\{\widehat\Pi_{t+1}\}+
 \frac{(1-\omega)(1-\omega\beta)}{\omega}\widehat{mc}_t .
 $$
 
 - **(F4) 边际成本等于劳动品价格**：
+
 $$
 \widehat{mc}_t=\widehat{x}^L_t .
 $$
 
 - **(F5) 工资谈判一阶条件**：
+
 $$
 \widehat J^{\ast}_t+\widehat\delta^W_t=
 \widehat\Delta^{\ast}_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
 $$
 
 - **(F6) right-to-manage 下的工时一阶条件**：
+
 $$
 \widehat{x}^L_t+\widehat z_t+(\alpha-1)\widehat h_t=\widehat w_t .
 $$
 
 - **(F7) 总体实际工资演化**：
+
 $$
 \widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^{\ast}_t .
 $$
 
 - **(F8) 企业侧边际工资剩余递推式**（`needs_review`，OCR 敏感长式）：
+
 $$
 \begin{aligned}
 \widehat\delta^F_t={}&[1-\beta(1-\vartheta)\gamma]\left[
@@ -152,6 +160,7 @@ $$
 $$
 
 - **(F9) 工人侧边际工资剩余递推式**（`needs_review`，OCR 敏感长式）：
+
 $$
 \begin{aligned}
 \delta^W\widehat\delta^W_t={}&-\frac{\alpha}{1-\alpha}wh
@@ -170,6 +179,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\delta^W_{t+1}\}.
 $$
 
 - **(F10) 重置工资劳动企业的价值**（`needs_review`）：
+
 $$
 \begin{aligned}
 J\widehat J^{\ast}_t={}&\frac{wh}{\alpha}
@@ -182,6 +192,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 $$
 
 - **(F11) 重置工资下的工人剩余**（`needs_review`）：
+
 $$
 \begin{aligned}
 \Delta\widehat\Delta^{\ast}_t={}&\frac{wh}{1-\alpha}
@@ -202,6 +213,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^{\ast}_{t+1}\}
 $$
 
 - **(F12) 职位发布条件**：
+
 $$
 -\frac{\kappa}{q}\widehat q_t=
 \frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
@@ -212,41 +224,49 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) Cobb-Douglas 匹配函数**：
+
 $$
 \widehat m_t=\xi\widehat u_t+(1-\xi)\widehat v_t .
 $$
 
 - **(F14) 就业运动方程**：
+
 $$
 \widehat n_t=(1-\vartheta)\widehat n_{t-1}+\frac{m}{n}\widehat m_{t-1}.
 $$
 
 - **(F15) 就业-失业关系**：
+
 $$
 \widehat n_t=-\frac{u}{1-u}\widehat u_t .
 $$
 
 - **(F16) 企业找到工人的概率**：
+
 $$
 \widehat q_t=\widehat m_t-\widehat v_t .
 $$
 
 - **(F17) 工人找到工作的概率**：
+
 $$
 \widehat s_t=\widehat m_t-\widehat u_t .
 $$
 
 - **(F18) 资源约束**：
+
 $$
 y\widehat y_t=c\widehat c_t+g\widehat g_t+\kappa v\widehat v_t+\Phi n\widehat n_t .
 $$
 
 - **(F19) 总量生产**：
+
 $$
 \widehat y_t=\widehat z_t+\alpha\widehat h_t+\widehat n_t .
 $$
 
 - **(F20) 平均劳动品利润**：
+
 $$
 \widehat\Psi^L_t=
 \frac{\frac{1-\alpha}{\alpha}wh}{\frac{1-\alpha}{\alpha}wh-\Phi}
@@ -254,6 +274,7 @@ $$
 $$
 
 - **(F21) 年化通胀恒等式**：
+
 $$
 \widehat\Pi^a_t=\widehat\Pi_t+\widehat\Pi_{t-1}+\widehat\Pi_{t-2}+\widehat\Pi_{t-3}.
 $$
@@ -261,6 +282,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F22) 带利率平滑的 Taylor 规则**：
+
 $$
 \widehat R_t=\gamma_R\widehat R_{t-1}
 +(1-\gamma_R)\left[\frac{\gamma_\pi}{12}\widehat\Pi^a_{t-1}
@@ -269,24 +291,28 @@ $$
 $$
 
 - **(F23) 偏好/风险溢价冲击**：
+
 $$
 \widehat\varepsilon^b_t=\rho_b\widehat\varepsilon^b_{t-1}+\zeta^b_t,\qquad
 \zeta^b_t\sim iid\,N(0,\sigma_b^2).
 $$
 
 - **(F24) 技术冲击**：
+
 $$
 \widehat z_t=\rho_z\widehat z_{t-1}+\zeta^z_t,\qquad
 \zeta^z_t\sim iid\,N(0,\sigma_z^2).
 $$
 
 - **(F25) 政府支出冲击**：
+
 $$
 \widehat g_t=\rho_g\widehat g_{t-1}+\zeta^g_t,\qquad
 \zeta^g_t\sim iid\,N(0,\sigma_g^2).
 $$
 
 - **(F26) 货币政策创新**：
+
 $$
 \widehat\varepsilon^{money}_t=\zeta^{money}_t,\qquad
 \zeta^{money}_t\sim iid\,N(0,\sigma_{money}^2).
@@ -298,31 +324,41 @@ $$
 
 1. 设 $\Pi=1$，论文月度记号中 $\Pi^a=4\Pi$，$R=\Pi/\beta$，且 $mc=x^L=(\varepsilon-1)/\varepsilon$。
 2. 劳动力市场：
+
 $$
 m=\sigma_m u^\xi v^{1-\xi},\qquad \vartheta n=m,\qquad u=1-n,\qquad q=m/v,\qquad s=m/u.
 $$
+
 3. 边际效用和工时：
+
 $$
 \lambda=(c-\varrho c)^{-\sigma},\qquad
 w=x^Lz\alpha h^{\alpha-1},\qquad
 mrs=\frac{\kappa^L h^\varphi}{\lambda}.
 $$
+
 4. 谈判和边际工资剩余项：
+
 $$
 \eta J\delta^W=(1-\eta)\Delta\delta^F,
 $$
+
 $$
 \delta^F=\frac{wh}{1-\beta(1-\vartheta)\gamma},
 \qquad
 \delta^W=\frac{h}{1-\beta(1-\vartheta)\gamma}
 \left[-\frac{\alpha}{1-\alpha}w+\frac{1}{1-\alpha}mrs\right].
 $$
+
 5. 企业和工人价值：
+
 $$
 J=\frac{\frac{1-\alpha}{\alpha}wh-\Phi}{1-\beta(1-\vartheta)},\qquad
 \Delta=\frac{wh-b-\frac{mrs\,h}{1+\varphi}}{1-\beta(1-\vartheta-s)}.
 $$
+
 6. 职位和资源方程：
+
 $$
 \kappa=q\beta J,\qquad
 y=c+g+\kappa v+\Phi n,\qquad

@@ -49,6 +49,7 @@ The belief coefficients are updated each period using constant-gain recursive le
 ## 3. First-Order Conditions
 
 - **(F1) Consumption Euler equation with external habit**:
+
 $$
 \widehat{c}_t =
 c_1 E_t[\widehat{c}_{t+1}]
@@ -56,7 +57,9 @@ c_1 E_t[\widehat{c}_{t+1}]
 +c_2\left(\widehat{L}_t-E_t[\widehat{L}_{t+1}]\right)
 -c_3\left(\widehat{R}_t-E_t[\widehat{\pi}_{t+1}]+\widehat{\varepsilon}^b_t\right).
 $$
+
 with
+
 $$
 c_1=\frac{1}{1+\bar{\eta}},\qquad
 c_2=\frac{c_1(\sigma_c-1)(wL/C)}{\sigma_c},\qquad
@@ -65,6 +68,7 @@ c_3=\frac{c_1(1-\bar{\eta})}{\sigma_c},\qquad
 $$
 
 - **(F2) Investment Euler equation**:
+
 $$
 \widehat{i}_t =
 i_1\widehat{i}_{t-1}
@@ -72,7 +76,9 @@ i_1\widehat{i}_{t-1}
 +i_2\widehat{Q}^k_t
 +\widehat{\varepsilon}^q_t.
 $$
+
 with
+
 $$
 i_1=\frac{1}{1+\bar{\beta}\gamma},\qquad
 i_2=\frac{i_1}{\gamma^2\varphi},\qquad
@@ -80,25 +86,31 @@ i_2=\frac{i_1}{\gamma^2\varphi},\qquad
 $$
 
 - **(F3) Value of installed capital**:
+
 $$
 \widehat{Q}^k_t =
 -\left(\widehat{R}_t-E_t[\widehat{\pi}_{t+1}]+\widehat{\varepsilon}^b_t\right)
 +q_1 E_t[\widehat{r}^k_{t+1}]
 +(1-q_1)E_t[\widehat{Q}^k_{t+1}].
 $$
+
 with
+
 $$
 q_1=\frac{r^k_\ast}{r^k_\ast+(1-\delta)}.
 $$
 
 - **(F4) Price-setting under Calvo pricing with indexation**:
+
 $$
 \widehat{\pi}_t-\iota_p\widehat{\pi}_{t-1}
 =\pi_1\left(E_t[\widehat{\pi}_{t+1}]-\iota_p\widehat{\pi}_t\right)
 -\pi_2\widehat{\mu}^p_t
 +\widehat{\varepsilon}^p_t.
 $$
+
 with
+
 $$
 \pi_1=\bar{\beta}\gamma,\qquad
 \pi_2=\frac{(1-\xi_p\bar{\beta}\gamma)(1-\xi_p)}
@@ -106,25 +118,30 @@ $$
 $$
 
 - **(F5) Price markup / real marginal cost relation**:
+
 $$
 \widehat{\mu}^p_t=-\widehat{mc}_t,\qquad
 \widehat{mc}_t=(1-\alpha)\widehat{w}_t+\alpha\widehat{r}^k_t-\widehat{\varepsilon}^a_t.
 $$
 
 - **(F6) Wage-setting under Calvo wages with indexation**:
+
 $$
 \widehat{\pi}^w_t-\iota_w\widehat{\pi}_{t-1}
 =\pi_1\left(E_t[\widehat{\pi}^w_{t+1}]-\iota_w\widehat{\pi}_t\right)
 -\pi_3\widehat{\mu}^w_t
 +\widehat{\varepsilon}^w_t.
 $$
+
 with
+
 $$
 \pi_3=\frac{(1-\xi_w\bar{\beta}\gamma)(1-\xi_w)}
 {\xi_w(1+(\phi_w-1)\varepsilon_w)}.
 $$
 
 - **(F7) Wage markup relation**:
+
 $$
 \widehat{\mu}^w_t
 =\widehat{w}_t
@@ -136,11 +153,13 @@ w_1=\frac{1}{1-\bar{\eta}}.
 $$
 
 - **(F8) Optimal capital utilization condition**:
+
 $$
 \widehat{u}_t=\frac{1-\psi}{\psi}\widehat{r}^k_t.
 $$
 
 - **(F9) Optimal capital/labor input condition**:
+
 $$
 \widehat{k}_t=\widehat{w}_t-\widehat{r}^k_t+\widehat{L}_t.
 $$
@@ -148,6 +167,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F10) Aggregate demand equals aggregate supply / production identity**:
+
 $$
 \widehat{y}_t
 =\frac{c_\ast}{y_\ast}\widehat{c}_t
@@ -158,30 +178,37 @@ $$
 $$
 
 - **(F11) Capital accumulation**:
+
 $$
 \widehat{\bar{k}}_t
 =k_1\widehat{\bar{k}}_{t-1}
 +(1-k_1)\widehat{i}_t
 +k_2\widehat{\varepsilon}^q_t.
 $$
+
 with
+
 $$
 k_1=1-\frac{i_\ast}{\bar{k}_\ast},\qquad
 k_2=\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''.
 $$
 
 - **(F12) Capital services identity**:
+
 $$
 \widehat{k}_t=\widehat{u}_t+\widehat{\bar{k}}_{t-1}.
 $$
 
 - **(F13) Output-gap definition for the policy rule**:
+
 $$
 \widehat{ygap}_t=\widehat{y}_t-\widehat{y}^{flex}_t.
 $$
+
 `needs_review`: the paper notes that the flexible economy is solved simultaneously and abstracts from markup shocks, but the Appendix B OCR does not provide the complete companion flexible-price/wage block.
 
 - **(F14) Monetary policy rule**:
+
 $$
 \widehat{R}_t
 =\rho_R\widehat{R}_{t-1}
@@ -196,17 +223,20 @@ $$
 ## 5. Exogenous Processes
 
 - **(F15) Generic ARMA exogenous process**:
+
 $$
 x_t=\rho x_{t-1}+\varepsilon_t+\theta\varepsilon_{t-1}.
 $$
 
 - **(F16) Stacked AR(1) representation used in the learning solution**:
+
 $$
 w_t=\Gamma w_{t-1}+\Pi\varepsilon_t,\qquad
 w_t=(x_t^T,\varepsilon_t^T)^T.
 $$
 
 - **(F17) Structural linear system before substituting beliefs**:
+
 $$
 A_0
 \begin{bmatrix}
@@ -224,6 +254,7 @@ w_t
 $$
 
 - **(F18) Rational-expectations/MSV solution form**:
+
 $$
 \begin{bmatrix}
 y_t\\
@@ -240,6 +271,7 @@ y_t=a+by_{t-1}+cw_t.
 $$
 
 - **(F19) Perceived law of motion for forward-looking variables**:
+
 $$
 y^f_t=\alpha_{t-1}+\beta_{t-1}^T
 \begin{bmatrix}
@@ -247,9 +279,11 @@ y^s_{t-1}\\
 w_t
 \end{bmatrix}.
 $$
+
 In the MSV case, the regressors are endogenous state variables and exogenous driving processes; in the VAR-learning case, the regressors are restricted to observed macro variables and a constant.
 
 - **(F20) Constant-gain belief update**:
+
 $$
 \phi_t=\phi_{t-1}
 +gR_t^{-1}Z_{t-1}
@@ -257,17 +291,22 @@ $$
 $$
 
 - **(F21) Constant-gain second-moment update**:
+
 $$
 R_t=R_{t-1}+g\left(Z_{t-1}Z_{t-1}^T-R_{t-1}\right).
 $$
+
 where
+
 $$
 Z_t=\left(1,(y^s_{t-1})^T,w_t^T\right)^T,\qquad
 \phi^T=(\alpha,\beta^T).
 $$
+
 `needs_review`: Appendix text/OCR states 12 forward-looking variables, 11 endogenous state variables, and 9 exogenous stochastic processes, but the rendered dimension for $\alpha_{t-1}$ is garbled.
 
 - **(F22) Initial beliefs from REE moments**:
+
 $$
 \phi_0
 =E[Z_{t-1}Z_{t-1}^T]^{-1}
@@ -282,15 +321,19 @@ The Appendix B equations are log-linear around the stationary steady state of de
 
 1. Detrend real quantities by deterministic labor-augmenting technological growth.
 2. Normalize log deviations of stationary real variables and inflation/rate deviations to zero at the steady state:
+
 $$
 \widehat{c}_\ast=\widehat{i}_\ast=\widehat{y}_\ast=\widehat{w}_\ast=\widehat{L}_\ast
 =\widehat{\pi}_\ast=\widehat{R}_\ast=\widehat{Q}^k_\ast
 =\widehat{r}^k_\ast=\widehat{u}_\ast=0.
 $$
+
 3. Set innovations and exogenous deviations to zero:
+
 $$
 \widehat{\varepsilon}^a_\ast=\widehat{\varepsilon}^b_\ast=\widehat{\varepsilon}^g_\ast=\widehat{\varepsilon}^q_\ast=\widehat{\varepsilon}^r_\ast=\widehat{\varepsilon}^p_\ast=\widehat{\varepsilon}^w_\ast=0.
 $$
+
 4. For the learning state, if beliefs are initialized from an REE moment matrix, use (F22). Under model-consistent beliefs and zero innovations, the PLM produces steady expectations equal to the zero-deviation steady state.
 5. Structural steady-state ratios and calibrated constants appearing in the log-linear coefficients include $c_\ast/y_\ast$, $i_\ast/y_\ast$, $r^k_\astk_\ast/y_\ast$, $\bar{k}_\ast$, $r^k_\ast$, $\bar{\eta}$, $\bar{\beta}$, and $\gamma$. The paper appendix does not provide a complete nonlinear steady-state derivation; this first-pass archive records those coefficients as source-stated inputs and marks full nonlinear reconstruction as `needs_review`.
 

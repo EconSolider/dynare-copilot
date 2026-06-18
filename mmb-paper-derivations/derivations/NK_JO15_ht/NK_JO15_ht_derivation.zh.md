@@ -19,6 +19,7 @@
 两国居民最大化预期终身效用：
 
 **(F1) Household objectives**
+
 $$
 \mathcal{U}=E_0\sum_{t=0}^{\infty}\beta^t
 \left[\frac{C_t^{1-\sigma}}{1-\sigma}-\frac{N_t^{1+\varphi}}{1+\varphi}\right],
@@ -28,19 +29,23 @@ $$
 $$
 
 **(F2) Home and foreign consumption aggregators**
+
 $$
 C_t=\left[(1-\alpha)^{1/\eta}C_{H,t}^{(\eta-1)/\eta}
 +\alpha^{1/\eta}C_{F,t}^{(\eta-1)/\eta}\right]^{\eta/(\eta-1)},
 $$
+
 $$
 C_t^{\ast}=\left[(1-\alpha)^{1/\eta}(C_{F,t}^{\ast})^{(\eta-1)/\eta}
 +\alpha^{1/\eta}(C_{H,t}^{\ast})^{(\eta-1)/\eta}\right]^{\eta/(\eta-1)}.
 $$
 
 **(F3) Household nominal budget constraints**
+
 $$
 P_t C_t+E_t(Q_{t,t+1}D_{t+1}^{n})\le D_t^n+W_tN_t+TR_t,
 $$
+
 $$
 P_t^{\ast}C_t^{\ast}+E_t(Q_{t,t+1}^{\ast}D_{t+1}^{n\ast})\le D_t^{n\ast}+W_t^{\ast}N_t^{\ast}+TR_t^{\ast}.
 $$
@@ -48,11 +53,13 @@ $$
 ### 2.2 商品需求与价格指数
 
 **(F4) Within-origin differentiated-goods demand**
+
 $$
 C_t(h)=\left(\frac{P_t(h)}{P_{H,t}}\right)^{-\varepsilon}C_{H,t},
 \quad
 C_t(f)=\left(\frac{P_t(f)}{P_{F,t}}\right)^{-\varepsilon}C_{F,t},
 $$
+
 $$
 C_t^{\ast}(h)=\left(\frac{P_t^{\ast}(h)}{P_{H,t}^{\ast}}\right)^{-\varepsilon}C_{H,t}^{\ast},
 \quad
@@ -60,11 +67,13 @@ C_t^{\ast}(f)=\left(\frac{P_t^{\ast}(f)}{P_{F,t}^{\ast}}\right)^{-\varepsilon}C_
 $$
 
 **(F5) Home/foreign-good allocation**
+
 $$
 C_{H,t}=(1-\alpha)\left(\frac{P_{H,t}}{P_t}\right)^{-\eta}C_t,
 \quad
 C_{F,t}=\alpha\left(\frac{P_{F,t}}{P_t}\right)^{-\eta}C_t,
 $$
+
 $$
 C_{H,t}^{\ast}=\alpha\left(\frac{P_{H,t}^{\ast}}{P_t^{\ast}}\right)^{-\eta}C_t^{\ast},
 \quad
@@ -72,9 +81,11 @@ C_{F,t}^{\ast}=(1-\alpha)\left(\frac{P_{F,t}^{\ast}}{P_t^{\ast}}\right)^{-\eta}C
 $$
 
 **(F6) CPI indices**
+
 $$
 P_t=\left[(1-\alpha)P_{H,t}^{1-\eta}+\alpha P_{F,t}^{1-\eta}\right]^{1/(1-\eta)},
 $$
+
 $$
 P_t^{\ast}=\left[(1-\alpha)(P_{F,t}^{\ast})^{1-\eta}+\alpha(P_{H,t}^{\ast})^{1-\eta}\right]^{1/(1-\eta)}.
 $$
@@ -84,6 +95,7 @@ $$
 每个国家的典型厂商用线性劳动技术生产差异化产品：
 
 **(F7) Firm production technologies**
+
 $$
 Y_t(h)=A_tN_t(h),
 \qquad
@@ -93,6 +105,7 @@ $$
 Calvo-Yun 定价厂商在获得重设价格机会时最大化预期贴现利润。来源直接给出最优重设价格：
 
 **(F8) Calvo reset-price optimality, needs_review**
+
 $$
 \widetilde{P}_{H,t}
 =E_t\left[
@@ -101,6 +114,7 @@ $$
 {\sum_{k=0}^{\infty}\theta^k Q_{t,t+k}Y_{t+k}}
 \right],
 $$
+
 $$
 \widetilde{P}_{F,t}^{\ast}
 =E_t\left[
@@ -115,6 +129,7 @@ $$
 ## 3. First-Order Conditions
 
 **(F9) Intertemporal Euler equations**
+
 $$
 \beta E_t\left(\frac{C_{t+1}^{-\sigma}P_t}{C_t^{-\sigma}P_{t+1}}\right)=\frac{1}{R_t},
 \qquad
@@ -122,6 +137,7 @@ $$
 $$
 
 **(F10) Intratemporal labor supply**
+
 $$
 C_t^{\sigma}N_t^{\varphi}=\frac{W_t}{P_t},
 \qquad
@@ -129,6 +145,7 @@ C_t^{\sigma}N_t^{\varphi}=\frac{W_t}{P_t},
 $$
 
 **(F11) Log-linear consumption Euler equations**
+
 $$
 c_t=E_t(c_{t+1})-\frac{1}{\sigma}\left\{\hat r_t-E_t(\pi_{t+1})\right\},
 \qquad
@@ -136,21 +153,25 @@ c_t^{\ast}=E_t(c_{t+1}^{\ast})-\frac{1}{\sigma}\left\{\hat r_t^{\ast}-E_t(\pi_{t
 $$
 
 **(F12) Log-linear New Keynesian IS curves in output**
+
 $$
 y_t=E_t(y_{t+1})-\frac{1}{\sigma_{\omega}}\left\{\hat r_t-E_t(\pi_{H,t+1})\right\}
 +\frac{\omega_2}{\omega_2+1}E_t(y_{t+1}^{\ast}-y_t^{\ast}),
 $$
+
 $$
 y_t^{\ast}=E_t(y_{t+1}^{\ast})-\frac{1}{\sigma_{\omega}}\left\{\hat r_t^{\ast}-E_t(\pi_{F,t+1}^{\ast})\right\}
 +\frac{\omega_2}{\omega_2+1}E_t(y_{t+1}-y_t).
 $$
 
 **(F13) Output-gap IS curves**
+
 $$
 x_t=E_t(x_{t+1})-\frac{1}{\sigma_{\omega}}\left\{\hat r_t-E_t(\pi_{H,t+1})\right\}
 +\frac{\omega_2}{\omega_2+1}\left\{E_t(x_{t+1}^{\ast})-x_t^{\ast}\right\}
 +\frac{1}{\sigma_{\omega}}\bar r_t,
 $$
+
 $$
 x_t^{\ast}=E_t(x_{t+1}^{\ast})-\frac{1}{\sigma_{\omega}}\left\{\hat r_t^{\ast}-E_t(\pi_{F,t+1}^{\ast})\right\}
 +\frac{\omega_2}{\omega_2+1}\left\{E_t(x_{t+1})-x_t\right\}
@@ -158,6 +179,7 @@ x_t^{\ast}=E_t(x_{t+1}^{\ast})-\frac{1}{\sigma_{\omega}}\left\{\hat r_t^{\ast}-E
 $$
 
 **(F14) Real marginal costs**
+
 $$
 mc_{H,t}=\frac{\varsigma}{\omega_4+1}x_t+\frac{\omega_2\sigma}{\omega_4+1}x_t^{\ast}+r_t,
 \qquad
@@ -165,11 +187,13 @@ mc_{F,t}^{\ast}=\frac{\varsigma}{\omega_4+1}x_t^{\ast}+\frac{\omega_2\sigma}{\om
 $$
 
 **(F15) PPI Phillips curves**
+
 $$
 \pi_{H,t}=\beta E_t(\pi_{H,t+1})+\kappa_H\frac{\varsigma}{\omega_4+1}x_t
 +\kappa_H\frac{\omega_2\sigma}{\omega_4+1}x_t^{\ast}
 +\kappa_H r_t,
 $$
+
 $$
 \pi_{F,t}^{\ast}=\beta E_t(\pi_{F,t+1}^{\ast})+\kappa_F\frac{\varsigma}{\omega_4+1}x_t^{\ast}
 +\kappa_F\frac{\omega_2\sigma}{\omega_4+1}x_t
@@ -181,6 +205,7 @@ $$
 ## 4. Market Clearing & Identities
 
 **(F16) Goods-market clearing**
+
 $$
 Y_t(h)=C_t(h)+C_t^{\ast}(h),
 \qquad
@@ -188,6 +213,7 @@ Y_t^{\ast}(f)=C_t(f)+C_t^{\ast}(f).
 $$
 
 **(F17) Aggregate output and consumption**
+
 $$
 y_t=c_t+\frac{\alpha[2(1-\alpha)(\sigma\eta-1)+1]}{\sigma}s_t,
 \qquad
@@ -195,6 +221,7 @@ y_t^{\ast}=c_t^{\ast}-\frac{\alpha[2(1-\alpha)(\sigma\eta-1)+1]}{\sigma}s_t.
 $$
 
 **(F18) Terms of trade and real exchange rate**
+
 $$
 s_t=\frac{\sigma}{\omega_4+1}(y_t-y_t^{\ast}),
 \qquad
@@ -202,11 +229,13 @@ q_t=(1-2\alpha)s_t.
 $$
 
 **(F19) CPI/PPI inflation identities**
+
 $$
 \pi_t=\pi_{H,t}+\frac{\alpha\sigma}{\omega_4+1}(x_t-x_{t-1})
 -\frac{\alpha\sigma}{\omega_4+1}(x_t^{\ast}-x_{t-1}^{\ast})
 +\Omega_2(a_t-a_{t-1})-\Omega_2(a_t^{\ast}-a_{t-1}^{\ast}),
 $$
+
 $$
 \pi_t^{\ast}=\pi_{F,t}^{\ast}+\frac{\alpha\sigma}{\omega_4+1}(x_t^{\ast}-x_{t-1}^{\ast})
 -\frac{\alpha\sigma}{\omega_4+1}(x_t-x_{t-1})
@@ -214,11 +243,13 @@ $$
 $$
 
 **(F20) Natural output and output gaps**
+
 $$
 x_t=y_t-\bar y_t,
 \qquad
 x_t^{\ast}=y_t^{\ast}-\bar y_t^{\ast},
 $$
+
 $$
 \bar y_t=\frac{\varsigma\psi}{\delta}a_t-\frac{\omega_2\sigma\psi}{\delta}a_t^{\ast},
 \qquad
@@ -226,6 +257,7 @@ $$
 $$
 
 **(F21) Natural real interest rates**
+
 $$
 \bar r_t=-\Theta a_t-\Omega_1 a_t^{\ast},
 \qquad
@@ -233,6 +265,7 @@ $$
 $$
 
 **(F22) Price-level and exchange-rate accounting**
+
 $$
 p_t=p_{t-1}+\pi_t,
 \qquad
@@ -244,6 +277,7 @@ $$
 ## 5. Exogenous Processes
 
 **(F23) Productivity processes**
+
 $$
 a_t=\rho a_{t-1}+\xi_t,
 \qquad
@@ -251,9 +285,11 @@ a_t^{\ast}=\rho^{\ast}a_{t-1}^{\ast}+\xi_t^{\ast}.
 $$
 
 **(F24) Monetary policy rules**
+
 $$
 \hat r_t=\varrho \hat r_{t-1}+(1-\varrho)(\phi_{\pi}\pi_t+\phi_x x_t)+m_t,
 $$
+
 $$
 \hat r_t^{\ast}=\varrho^{\ast}\hat r_{t-1}^{\ast}+(1-\varrho^{\ast})(\phi_{\pi}^{\ast}\pi_t^{\ast}+\phi_x^{\ast}x_t^{\ast})+m_t^{\ast}.
 $$

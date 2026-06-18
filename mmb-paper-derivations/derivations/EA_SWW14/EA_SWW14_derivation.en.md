@@ -39,15 +39,18 @@ The monetary authority follows an interest-rate rule with smoothing, inflation, 
 Equations are numbered continuously across Sections 3-5. Hatted variables are deviations from the steady-state balanced-growth path.
 
 - **(F1) Consumption Euler equation with habit and risk premium**:
+
 $$
 \widehat{c}_t
 = c_1 E_t\widehat{c}_{t+1}
 + (1-c_1)\widehat{c}_{t-1}
 - c_2\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right),
 $$
+
 where $c_1=1/(1+h/\tau)$ and $c_2=(1-h/\tau)/(1+h/\tau)$.
 
 - **(F2) Investment Euler equation**:
+
 $$
 \widehat{i}_t
 = i_1\widehat{i}_{t-1}
@@ -55,26 +58,32 @@ $$
 + i_2\widehat{q}^k_t
 + \widehat{\varepsilon}^q_t,
 $$
+
 with $i_1=1/(1+\beta)$ and $i_2=i_1/(\tau^2\varphi)$.
 
 - **(F3) Value of installed capital**:
+
 $$
 \widehat{q}^k_t
 = -\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right)
 + q_1E_t\widehat{r}^k_{t+1}
 + (1-q_1)E_t\widehat{q}^k_{t+1},
 $$
+
 where $q_1=r^k/(r^k+1-\delta)$.
 
 - **(F4) Price Phillips curve with indexation**:
+
 $$
 \widehat{\pi}_t-\gamma_p\widehat{\pi}_{t-1}
 = \pi_1\left(E_t\widehat{\pi}_{t+1}-\gamma_p\widehat{\pi}_t\right)
 -\pi_2\left(\widehat{\mu}_{p,t}-\widehat{\mu}^n_{p,t}\right),
 $$
+
 where $\pi_1=\beta$ and $\pi_2=(1-\theta_p\beta)(1-\theta_p)/[\theta_p(1+(\phi_p-1)\varepsilon_p)]$.
 
 - **(F5) Average price markup / real marginal cost relation**:
+
 $$
 \widehat{mc}_t
 = (1-\alpha)(\widehat{w}_t-\widehat{p}_t)
@@ -83,23 +92,28 @@ $$
 \qquad
 \widehat{\mu}_{p,t}\approx-\widehat{mc}_t.
 $$
+
 The sign and markup normalization are marked `needs_review` because the Markdown has OCR noise around the inverse marginal-cost sentence.
 
 - **(F6) Natural price markup shock**:
+
 $$
 \widehat{\mu}^n_{p,t}=100\,\widehat{\varepsilon}^p_t.
 $$
 
 - **(F7) Wage Phillips curve with indexation**:
+
 $$
 \Delta\widehat{w}_t
 = \gamma_w\widehat{\pi}_{t-1}
 +\beta E_t\left(\Delta\widehat{w}_{t+1}-\gamma_w\widehat{\pi}_t\right)
 -w_1\left(\widehat{\mu}_{w,t}-\widehat{\mu}^n_{w,t}\right),
 $$
+
 where $w_1=(1-\beta\theta_w)(1-\theta_w)/[\theta_w(1+\epsilon_w\omega)]$.
 
 - **(F8) Average wage markup and unemployment**:
+
 $$
 \widehat{\mu}_{w,t}
 = \widehat{w}_t-\widehat{p}_t-\left(\widehat{z}_t+\widehat{\varepsilon}^s_t+\omega\widehat{e}_t\right)
@@ -107,12 +121,14 @@ $$
 $$
 
 - **(F9) Natural wage markup / natural unemployment**:
+
 $$
 \widehat{\mu}^n_{w,t}=100\,\widehat{\varepsilon}^w_t
 =\omega\widehat{u}^n_t.
 $$
 
 - **(F10) Smoothed trend of consumption entering labor supply**:
+
 $$
 \widehat{z}_t
 =(1-\upsilon)\widehat{z}_{t-1}
@@ -121,11 +137,13 @@ $$
 $$
 
 - **(F11) Capital utilization condition**:
+
 $$
 \widehat{v}_t=\frac{1-\psi}{\psi}\widehat{r}^k_t.
 $$
 
 - **(F12) Optimal capital-labor input condition**:
+
 $$
 \widehat{k}_t
 =\widehat{w}_t-\widehat{p}_t-\widehat{r}^k_t+\widehat{n}_t.
@@ -134,37 +152,44 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) Aggregate demand / resource constraint**:
+
 $$
 \widehat{y}_t
 =c_y\widehat{c}_t+i_y\widehat{i}_t+v_y\widehat{v}_t+\widehat{\varepsilon}^g_t.
 $$
 
 - **(F14) Aggregate supply / production function**:
+
 $$
 \widehat{y}_t
 =\phi_p\left(\alpha\widehat{k}_t+(1-\alpha)\widehat{n}_t+\widehat{\varepsilon}^a_t\right).
 $$
 
 - **(F15) Capital accumulation**:
+
 $$
 \widehat{\bar{k}}_t
 =\kappa_1\widehat{\bar{k}}_{t-1}
 +(1-\kappa_1)\widehat{i}_t
 +\kappa_2\widehat{\varepsilon}^q_t,
 $$
+
 where $\kappa_1=(1-\delta)/\tau$ and $\kappa_2=(\tau+\delta-1)(1+\beta)\tau\varphi$.
 
 - **(F16) Capital services**:
+
 $$
 \widehat{k}_t=\widehat{v}_t+\widehat{\bar{k}}_{t-1}.
 $$
 
 - **(F17) Labor force identity**:
+
 $$
 \widehat{l}_t=\widehat{e}_t+\widehat{u}_t.
 $$
 
 - **(F18) Employment adjustment / productivity link**:
+
 $$
 \widehat{e}_t-\widehat{e}_{t-1}
 =E_t\widehat{e}_{t+1}-\widehat{e}_t
@@ -173,12 +198,15 @@ $$
 $$
 
 - **(F19) Output gap definition**:
+
 $$
 \widehat{y}^{gap}_t=\widehat{y}_t-\widehat{y}^{flex}_t.
 $$
+
 The flexible-price-and-wage block mirrors the structural equations without nominal markup distortions; the paper defines the gap as output relative to the flexible-price/wage economy but does not print every flexible-block equation.
 
 - **(F20) Measurement equations for the eight observed variables**:
+
 $$
 \begin{bmatrix}
 \Delta y_t\\
@@ -213,15 +241,18 @@ r_t
 4\widehat{r}_t
 \end{bmatrix}.
 $$
+
 The fifth row is `needs_review`: the paper's printed measurement vector and the implementation cross-check differ in whether the wage observation subtracts inflation or the change in inflation.
 
 - **(F21) SPF noise measurement example for annual inflation**:
+
 $$
 \pi^a_{t+3|t}
 =4\bar{\pi}
 +E_t\left[\widehat{\pi}_{t+3}+\widehat{\pi}_{t+2}+\widehat{\pi}_{t+1}+\widehat{\pi}_{t}\right]
 +\eta_{\pi,t}.
 $$
+
 Analogous noisy measurement equations are added for SPF unemployment three quarters ahead and annual real GDP growth two quarters ahead. Under the news interpretation, the SPF path is imposed as conditioning information through expected future shocks rather than as noisy measurement.
 
 ## 5. Exogenous Processes
@@ -229,48 +260,57 @@ Analogous noisy measurement equations are added for SPF unemployment three quart
 The paper states the shock list and AR/ARMA classes, and Table 2 reports persistence and MA parameters. The implementation cross-check makes the following process equations explicit:
 
 - **(F22) Risk-premium shock**:
+
 $$
 \widehat{\varepsilon}^b_t=\rho_b\widehat{\varepsilon}^b_{t-1}+\eta^b_t.
 $$
 
 - **(F23) Investment-specific technology shock**:
+
 $$
 \widehat{\varepsilon}^q_t=\rho_q\widehat{\varepsilon}^q_{t-1}+\eta^q_t.
 $$
 
 - **(F24) Exogenous spending shock with productivity innovation spillover**:
+
 $$
 \widehat{\varepsilon}^g_t=\rho_g\widehat{\varepsilon}^g_{t-1}+\eta^g_t+\rho_{ga}\eta^a_t.
 $$
 
 - **(F25) Productivity shock**:
+
 $$
 \widehat{\varepsilon}^a_t=\rho_a\widehat{\varepsilon}^a_{t-1}+\eta^a_t.
 $$
 
 - **(F26) Price-markup ARMA(1,1) shock**:
+
 $$
 \widehat{\varepsilon}^p_t
 =\rho_p\widehat{\varepsilon}^p_{t-1}+\eta^p_t-\mu_p\eta^p_{t-1}.
 $$
 
 - **(F27) Wage-markup ARMA(1,1) shock**:
+
 $$
 \widehat{\varepsilon}^w_t
 =\rho_w\widehat{\varepsilon}^w_{t-1}+\eta^w_t-\mu_w\eta^w_{t-1}.
 $$
 
 - **(F28) Labor-supply shock**:
+
 $$
 \widehat{\varepsilon}^s_t=\rho_s\widehat{\varepsilon}^s_{t-1}+\eta^s_t.
 $$
 
 - **(F29) Monetary-policy shock process**:
+
 $$
 \widehat{\varepsilon}^r_t=\rho_r\widehat{\varepsilon}^r_{t-1}+\eta^r_t.
 $$
 
 - **(F30) Monetary policy rule**:
+
 $$
 \widehat{r}_t
 =\rho_R\widehat{r}_{t-1}
@@ -279,6 +319,7 @@ $$
 +r_{\Delta y}\Delta\widehat{y}^{gap}_t\right)
 +\widehat{\varepsilon}^r_t.
 $$
+
 The implementation cross-check uses a minus sign before `epsilonr`; this sign convention is `needs_review` against the authors' state-space shock definition.
 
 ## 6. Steady-State Solution

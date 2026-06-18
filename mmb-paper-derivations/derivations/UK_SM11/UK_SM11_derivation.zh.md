@@ -29,6 +29,7 @@
 以下条件复现论文中作为主体选择或定价条件的对数线性均衡方程。此处不沿用论文方程号；归档编号连续记为 `(F#)`。
 
 - **(F1) 含习惯的消费 Euler 方程**：
+
 $$
 \hat{c}_t =
 \frac{\psi_{hab}(1-\sigma_c)}{1+\psi_{hab}(1-\sigma_c)}\hat{c}_{t-1}
@@ -38,6 +39,7 @@ $$
 $$
 
 - **(F2) 资本积累 / 投资条件**：
+
 $$
 \begin{aligned}
 i_t-E_t\pi_{c,t+1}-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}
@@ -51,21 +53,25 @@ i_t-E_t\pi_{c,t+1}-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}
 $$
 
 - **(F3) 资本利用率与资本租金条件**：
+
 $$
 \hat{w}_{k,t}=\phi_z\hat{z}_t.
 $$
 
 - **(F4) 能源消费聚合器**：
+
 $$
 \hat{c}_{E,t}=(1-\psi_p)\hat{c}_{U,t}+\psi_p\hat{c}_{P,t}.
 $$
 
 - **(F5) 总消费聚合器**：
+
 $$
 \hat{c}_t=(1-\psi_e)\hat{c}_{n,t}+\psi_e\hat{c}_{e,t}.
 $$
 
 - **(F6) 非能源/公用事业相对消费需求**：
+
 $$
 \hat{p}_{U,t}=\frac{1}{\sigma_e}\hat{c}_{n,t}
 +\left(\frac{1}{\sigma_p}-\frac{1}{\sigma_e}\right)\hat{c}_{E,t}
@@ -73,6 +79,7 @@ $$
 $$
 
 - **(F7) 汽油/公用事业相对消费需求**：
+
 $$
 \hat{p}_{U,t}-\hat{p}_{P,t}
 =-\frac{1}{\sigma_p}\hat{c}_{U,t}
@@ -80,12 +87,14 @@ $$
 $$
 
 - **(F8) 含外国债券调整成本的 UIP**：
+
 $$
 E_t\hat{s}_{t+1}-\hat{s}_t
 =-\left(i_t-\left(\frac{1}{\beta}-1\right)\right)-\chi_{bf}b_{f,t}+\varepsilon_{rf,t}.
 $$
 
 - **(F9) 工资 Phillips 曲线**：
+
 $$
 \dot{W}_t=\frac{\xi_w}{1+\beta\xi_w}\dot{W}_{t-1}
 +\frac{\beta}{1+\beta\xi_w}E_t\dot{W}_{t+1}
@@ -95,32 +104,38 @@ $$
 $$
 
 - **(F10) 边际替代率**：
+
 $$
 mrs_t=\frac{1}{\sigma_h}\hat{h}_t
 +\frac{1}{\sigma_c}\left(\hat{c}_t+\psi_{hab}(\sigma_c-1)\hat{c}_{t-1}\right).
 $$
 
 - **(F11) 实际消费工资运动方程**：
+
 $$
 \hat{w}_t=\dot{W}_t+\hat{w}_{t-1}-\pi_{c,t}.
 $$
 
 - **(F12) 非能源生产**：
+
 $$
 \hat{q}_t=(1-\alpha_q)\hat{B}_t+\alpha_q\hat{e}_t+\varepsilon_{a,t}.
 $$
 
 - **(F13) 增加值/进口品组合**：
+
 $$
 \hat{B}_t=(1-\alpha_B)\hat{V}_{n,t}+\alpha_B\hat{M}_{n,t}.
 $$
 
 - **(F14) 非能源生产中的能源投入 Leontief 关系**：
+
 $$
 \hat{e}_t=\hat{I}_{p,t}=\hat{I}_{u,t}.
 $$
 
 - **(F15) 非能源企业对增加值的需求**：
+
 $$
 \hat{V}_{n,t}=\hat{\mu}_t-\hat{p}_{vc,t}
 +\frac{1}{\sigma_q}\hat{q}_t
@@ -129,6 +144,7 @@ $$
 $$
 
 - **(F16) 非能源企业对进口中间品的需求**：
+
 $$
 \hat{M}_{n,t}=\hat{\mu}_t-\hat{p}_{m,t}
 +\frac{1}{\sigma_q}\hat{q}_t
@@ -137,6 +153,7 @@ $$
 $$
 
 - **(F17) 非能源企业对能源的需求**：
+
 $$
 \hat{e}_t=\sigma_q\hat{\mu}_t+\hat{q}_t
 -\sigma_q\left(\psi_n\hat{p}_{p,t}+(1-\psi_n)\hat{p}_{U,t}\right)
@@ -144,6 +161,7 @@ $$
 $$
 
 - **(F18) 非能源部门 Phillips 曲线**：
+
 $$
 \pi_t=\frac{\beta}{1+\beta\varepsilon}E_t\pi_{t+1}
 +\frac{\varepsilon}{1+\beta\varepsilon}\pi_{t-1}
@@ -152,26 +170,31 @@ $$
 $$
 
 - **(F19) 增加值生产**：
+
 $$
 \hat{V}_t=(1-\alpha_v)\hat{h}_t+\alpha_v(\hat{k}_{t-1}+\hat{z}_t).
 $$
 
 - **(F20) 含营运资本成本的增加值生产者劳动需求**：
+
 $$
 \hat{h}_t=\hat{V}_t+\sigma_V\left(\hat{p}_{vc,t}-\hat{w}_t-\psi_{wc}\left(i_t-\left(\frac{1}{\beta}-1\right)+\varepsilon_{b,t}\right)\right).
 $$
 
 - **(F21) 增加值生产者资本服务需求**：
+
 $$
 \hat{k}_{t-1}+\hat{z}_t=\hat{V}_t+\sigma_V(\hat{p}_{vc,t}-\hat{w}_{k,t}).
 $$
 
 - **(F22) 汽油生产技术**：
+
 $$
 \hat{q}_{p,t}=\hat{I}_{o,t}=\hat{V}_{p,t}.
 $$
 
 - **(F23) 汽油部门 Phillips 曲线**：
+
 $$
 \pi_{pb,t}=\frac{\beta}{1+\beta\varepsilon_{pp}}E_t\pi_{pb,t+1}
 +\frac{\varepsilon_{pp}}{1+\beta\varepsilon_{pp}}\pi_{pb,t-1}
@@ -179,21 +202,25 @@ $$
 $$
 
 - **(F24) 汽油边际成本**：
+
 $$
 \hat{\mu}_{p,t}=\psi_{qp}\hat{p}_{vc,t}+(1-\psi_{qp})\hat{p}_{o,t}-\hat{p}_{pb,t}.
 $$
 
 - **(F25) 基础汽油通胀恒等式**：
+
 $$
 \pi_{pb,t}=\pi_t+\hat{p}_{pb,t}-\hat{p}_{pb,t-1}.
 $$
 
 - **(F26) 公用事业生产技术**：
+
 $$
 \hat{q}_{u,t}=\hat{I}_{g,t}=\hat{V}_{u,t}.
 $$
 
 - **(F27) 公用事业部门 Phillips 曲线**：
+
 $$
 \pi_{u,t}=\frac{\beta}{1+\beta\varepsilon_u}E_t\pi_{u,t+1}
 +\frac{\varepsilon_u}{1+\beta\varepsilon_u}\pi_{u,t-1}
@@ -201,16 +228,19 @@ $$
 $$
 
 - **(F28) 公用事业边际成本**：
+
 $$
 \hat{\mu}_{u,t}=\psi_u\hat{p}_{vc,t}+(1-\psi_u)\hat{p}_{g,t}-\hat{p}_{u,t}.
 $$
 
 - **(F29) 公用事业通胀恒等式**：
+
 $$
 \pi_{u,t}=\pi_t+\hat{p}_{u,t}-\hat{p}_{u,t-1}.
 $$
 
 - **(F30) Taylor 规则**：
+
 $$
 i_t-\left(\frac{1}{\beta}-1\right)
 =\theta_{rg}\left(i_{t-1}-\left(\frac{1}{\beta}-1\right)\right)
@@ -219,21 +249,25 @@ i_t-\left(\frac{1}{\beta}-1\right)
 $$
 
 - **(F31) 汽油税传递**：
+
 $$
 \hat{p}_{p,t}=(1-\psi_d)\hat{p}_{pb,t}.
 $$
 
 - **(F32) 本币石油价格**：
+
 $$
 \hat{p}_{o,t}=\varepsilon_{p_o,t}-\hat{s}_t.
 $$
 
 - **(F33) 本币天然气价格**：
+
 $$
 \hat{p}_{g,t}=\varepsilon_{p_g,t}-\hat{s}_t.
 $$
 
 - **(F34) 进口价格 Phillips 曲线**：
+
 $$
 \pi_{m,t}=\frac{\iota_{pm}}{1+\beta\iota_{pm}}\pi_{m,t-1}
 +\frac{\beta}{1+\beta\iota_{pm}}E_t\pi_{m,t+1}
@@ -242,6 +276,7 @@ $$
 $$
 
 - **(F35) 出口需求**：
+
 $$
 \hat{x}_{n,t}=\psi_x\hat{x}_{n,t-1}+(1-\psi_x)(\varepsilon_{y_f,t}-\eta_x\hat{s}_t).
 $$
@@ -249,6 +284,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F36) 消费者价格指数 / 总消费价值恒等式**：
+
 $$
 \hat{p}_{c,t}+\hat{c}_t
 =\frac{c_n}{p_c c}\hat{c}_{n,t}
@@ -257,6 +293,7 @@ $$
 $$
 
 - **(F37) 总增加值配置**：
+
 $$
 \hat{V}_t=\frac{V_n}{V}\hat{V}_{n,t}
 +\frac{V_u}{V}\hat{V}_{u,t}
@@ -264,28 +301,33 @@ $$
 $$
 
 - **(F38) 汽油品市场出清**：
+
 $$
 \hat{q}_{P,t}=\frac{c_P}{q_P}\hat{c}_{P,t}
 +\left(1-\frac{c_P}{q_P}\right)\hat{I}_{P,t}.
 $$
 
 - **(F39) 公用事业品市场出清**：
+
 $$
 \hat{q}_{U,t}=\frac{c_U}{q_U}\hat{c}_{U,t}
 +\left(1-\frac{c_U}{q_U}\right)\hat{I}_{U,t}.
 $$
 
 - **(F40) 石油投入/出口恒等式**：
+
 $$
 \hat{I}_{O,t}=-\frac{X_o}{I_o}\hat{X}_{O,t}.
 $$
 
 - **(F41) 天然气投入/出口恒等式**：
+
 $$
 \hat{I}_{G,t}=-\frac{X_g}{I_g}\hat{X}_{G,t}.
 $$
 
 - **(F42) 非能源产出市场出清**：
+
 $$
 \hat{q}_t=\frac{c_n}{q}\hat{c}_{n,t}
 +\frac{k}{q}\hat{k}_t-\frac{(1-\delta)k}{q}\hat{k}_{t-1}
@@ -295,6 +337,7 @@ $$
 $$
 
 - **(F43) 净外国资产积累**：
+
 $$
 b_{f,t}=\frac{1}{\beta}b_{f,t-1}
 +\frac{x_n}{q}\hat{x}_{n,t}
@@ -304,69 +347,83 @@ b_{f,t}=\frac{1}{\beta}b_{f,t-1}
 $$
 
 政府预算通过一次总付税平衡：
+
 $$
 G_t=\psi_d P_{p,t}q_{p,t}+T_t.
 $$
+
 这条正文预算式不分配 F 编号，因为论文将其作为财政闭合条件，且对数线性的国内需求扰动进入 (F42)。
 
 ## 5. Exogenous Processes
 
 - **(F44) 生产率冲击**：
+
 $$
 \varepsilon_{a,t}=\rho_a\varepsilon_{a,t-1}+\eta_{a,t}.
 $$
 
 - **(F45) 风险溢价冲击**：
+
 $$
 \varepsilon_{b,t}=\rho_b\varepsilon_{b,t-1}+\eta_{b,t}.
 $$
 
 - **(F46) 国内需求冲击**：
+
 $$
 \varepsilon_{g,t}=\rho_g\varepsilon_{g,t-1}+\eta_{g,t}.
 $$
 
 - **(F47) 货币政策冲击**：
+
 $$
 \varepsilon_{i,t}=\rho_i\varepsilon_{i,t-1}+\eta_{i,t}.
 $$
 
 - **(F48) 价格加成冲击**：
+
 $$
 \varepsilon_{\mu,t}=\rho_{\mu}\varepsilon_{\mu,t-1}+\eta_{\mu,t}.
 $$
 
 - **(F49) 投资专用技术冲击**：
+
 $$
 \varepsilon_{inv,t}=\rho_{inv}\varepsilon_{inv,t-1}+\eta_{inv,t}.
 $$
 
 - **(F50) 工资加成冲击**：
+
 $$
 \varepsilon_{w,t}=\rho_w\varepsilon_{w,t-1}+\eta_{w,t}.
 $$
 
 - **(F51) 世界需求冲击**：
+
 $$
 \varepsilon_{y_f,t}=\rho_{y_f}\varepsilon_{y_f,t-1}+\eta_{y_f,t}.
 $$
 
 - **(F52) 世界出口/进口价格冲击**：
+
 $$
 \varepsilon_{p_{mf},t}=\rho_{p_{mf}}\varepsilon_{p_{mf},t-1}+\eta_{p_{mf},t}.
 $$
 
 - **(F53) 世界石油价格冲击**：
+
 $$
 \varepsilon_{p_o,t}=\rho_{p_o}\varepsilon_{p_o,t-1}+\eta_{p_o,t}.
 $$
 
 - **(F54) 世界天然气价格冲击**：
+
 $$
 \varepsilon_{p_g,t}=\rho_{p_g}\varepsilon_{p_g,t-1}+\eta_{p_g,t}.
 $$
 
 - **(F55) 世界实际利率冲击**：
+
 $$
 \varepsilon_{rf,t}=\rho_{rf}\varepsilon_{rf,t-1}+\eta_{rf,t}.
 $$

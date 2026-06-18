@@ -75,16 +75,19 @@ For `NK_ADE25ppi`, central banks target producer-price inflation rather than CPI
 ## 3. First-Order Conditions
 
 - **(F1) Home intratemporal labor condition**:
+
 $$
 \ell'(H_t)=A_t\,u_{c_h,t}\,E_t\{\Omega_{t,t+1}\}.
 $$
 
 - **(F2) Home optimal import spending condition**:
+
 $$
 u_{c_h,t}(1+\tau_t)S_t=u_{c_f,t}.
 $$
 
 - **(F3) Home Euler equation in Home-goods units, combined with PPI monetary policy**:
+
 $$
 E_t\left[
 \frac{\pi_{h,t}^{\mu_\pi}}{\pi_{h,t+1}}
@@ -93,6 +96,7 @@ E_t\left[
 $$
 
 - **(F4) Home Rotemberg Phillips curve from firm price setting**:
+
 $$
 E_t\{\Omega_{t,t+1}\}
 =\mathcal{W}_t A_t^{-1}
@@ -101,6 +105,7 @@ E_t\{\Omega_{t,t+1}\}
 $$
 
 - **(F5) Home marginal-cost representation used in the quantitative model** needs_review:
+
 $$
 MC_t=
 \frac{\left(\chi P_t C_t^\sigma L_t^\psi\right)^{1-\alpha}P_{x,t}^{\alpha}}
@@ -108,6 +113,7 @@ MC_t=
 $$
 
 - **(F6) Home intermediate-input demand condition** needs_review:
+
 $$
 X_t=
 \left(
@@ -117,21 +123,25 @@ X_t=
 $$
 
 - **(F7) Home production function**:
+
 $$
 Y_t=A_tL_t^{1-\alpha}X_t^\alpha.
 $$
 
 - **(F8) Foreign intratemporal labor condition** needs_review:
+
 $$
 \ell^{\ast'}(H_t^{\ast})=A_t^{\ast}\,u_{c_f^{\ast},t}^{\ast}\,E_t\{\Omega_{t,t+1}^{\ast}\}.
 $$
 
 - **(F9) Foreign optimal import spending condition** needs_review:
+
 $$
 u_{c_f^{\ast},t}^{\ast}\frac{1+\tau_t^{\ast}}{S_t}=u_{c_h^{\ast},t}^{\ast}.
 $$
 
 - **(F10) Foreign Euler equation in Foreign-goods units, combined with PPI monetary policy** needs_review:
+
 $$
 E_t\left[
 \frac{(\pi_{f,t}^{\ast})^{\mu_\pi^{\ast}}}{\pi_{f,t+1}^{\ast}}
@@ -140,6 +150,7 @@ E_t\left[
 $$
 
 - **(F11) Foreign Rotemberg Phillips curve** needs_review:
+
 $$
 E_t\{\Omega_{t,t+1}^{\ast}\}
 =\mathcal{W}_t^{\ast}(A_t^{\ast})^{-1}
@@ -148,6 +159,7 @@ E_t\{\Omega_{t,t+1}^{\ast}\}
 $$
 
 - **(F12) Foreign production function**:
+
 $$
 Y_t^{\ast}=A_t^{\ast}(L_t^{\ast})^{1-\alpha}(X_t^{\ast})^\alpha.
 $$
@@ -155,37 +167,44 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) Home goods market clearing in the simple model**:
+
 $$
 A_tH_t\Phi_t=C_{h,t}+C_{h,t}^{\ast},\qquad
 \Phi_t=1-\frac{\phi}{2}(\pi_{h,t}-1)^2.
 $$
 
 - **(F14) Balanced trade in the simple model**:
+
 $$
 \bar{A}S_t^\eta=S_tC_{f,t}.
 $$
 
 - **(F15) Home resource constraint in the quantitative model** needs_review:
+
 $$
 Y_t\left[1-\frac{\phi}{2}(\pi_{h,t}-1)^2\right]=D_t+D_{x,t}^{\ast}.
 $$
 
 - **(F16) Foreign resource constraint in the quantitative model** needs_review:
+
 $$
 Y_t^{\ast}\left[1-\frac{\phi^{\ast}}{2}(\pi_{f,t}^{\ast}-1)^2\right]=D_t^{\ast}+D_{x,t}.
 $$
 
 - **(F17) Home CPI and import-price index** needs_review:
+
 $$
 P_t=\left[\gamma_h+(1-\gamma_h)\left((1+\tau_t)S_t\right)^{1-\lambda}\right]^{1/(1-\lambda)}.
 $$
 
 - **(F18) Foreign CPI and import-price index** needs_review:
+
 $$
 P_t^{\ast}=\left[\gamma_f+(1-\gamma_f)\left(\frac{1+\tau_t^{\ast}}{S_t}\right)^{1-\lambda}\right]^{1/(1-\lambda)}.
 $$
 
 - **(F19) Net foreign asset accumulation and UIP condition** needs_review:
+
 $$
 b_t=\mathcal{B}(b_{t-1},S_t,P_t,P_t^{\ast},D_{x,t},D_{x,t}^{\ast}),\qquad
 E_t\left[\frac{S_{t+1}\Omega_t}{S_t\Omega_t^{\ast}(1+\nu(b_t-\bar{b}))}\right]=1.
@@ -194,22 +213,26 @@ $$
 ## 5. Exogenous Processes
 
 - **(F20) Home PPI monetary policy rule for `NK_ADE25ppi`**:
+
 $$
 R_t=\beta^{-1}\left(\frac{\pi_{h,t}}{\bar{\pi}_h}\right)^{\mu_\pi}\exp(e^R_t).
 $$
 
 - **(F21) Foreign PPI monetary policy rule**:
+
 $$
 R_t^{\ast}=\beta^{-1}\left(\frac{\pi_{f,t}^{\ast}}{\bar{\pi}_f^{\ast}}\right)^{\mu_\pi^{\ast}}\exp(e^{R^{\ast}}_t).
 $$
 
 - **(F22) Productivity processes**:
+
 $$
 \log A_t=\rho_a\log A_{t-1}+\varepsilon^A_t,\qquad
 \log A_t^{\ast}=\rho_a^{\ast}\log A_{t-1}^{\ast}+\varepsilon^{A^{\ast}}_t.
 $$
 
 - **(F23) Tariff and monetary shocks used in the MMB implementation cross-check**:
+
 $$
 \tau_t=\bar{\tau}+e^T_t,\qquad
 \tau_t^{\ast}=\bar{\tau}^{\ast}+e^{T^{\ast}}_t,\qquad
@@ -228,10 +251,13 @@ The deterministic steady state sets shocks to zero and keeps tariffs constant. T
 5. Use the steady-state firm conditions to solve marginal costs. With zero inflation and no sales subsidy, the distorted steady state has the monopoly markup distortion; with the first-best subsidy, $\theta=1$.
 6. Solve labor, intermediate inputs, output, and demands from (F5)-(F16). The full closed-form sequence is needs_review because the main Markdown refers to Appendix C equations (C40)-(C48) rather than printing them.
 7. For the simple small-economy PPI case, the paper gives the steady-state optimal tariff:
+
 $$
 1+\tau^{ppi}=\frac{\eta}{\eta-1}\frac{1-\theta\Delta_1}{1-\Delta_1},
 $$
+
 where
+
 $$
 \Delta_1=\frac{A^2u_{c_hc_h}}{\ell''(H)}
 \left(\theta+\frac{\phi}{\mu_\pi\epsilon}\right)<0.
@@ -242,10 +268,12 @@ $$
 - The derivation is nonlinear. Do not treat these equations as a hand log-linearization.
 - Producer-currency pricing is used: sticky prices are in domestic producer prices, so the `ppi` variant targets $\pi_{h,t}$ and $\pi_{f,t}^{\ast}$.
 - CPI inflation differs from PPI inflation by changes in tariff-adjusted terms of trade. For Home, the paper writes
+
 $$
 \pi_{cpi,t}=\pi_{h,t}
 \frac{\mathcal{P}((1+\tau_t)S_t)}{\mathcal{P}((1+\tau_{t-1})S_{t-1})}.
 $$
+
 This formula is not the target in `NK_ADE25ppi`, but it identifies the paired CPI variant.
 - Bonds/net foreign assets are state variables. The MMB implementation uses lagged net foreign assets and a debt-elastic UIP wedge; exact Appendix C notation is needs_review.
 - Tariff policy is discretionary: tariff setters take future policy functions as given when choosing current tariffs.

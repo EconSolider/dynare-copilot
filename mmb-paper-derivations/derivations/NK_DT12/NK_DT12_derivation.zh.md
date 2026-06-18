@@ -22,6 +22,7 @@
 在 $t$ 期初，家庭把名义财富 $W_t$ 分配到货币、状态或有债券和一期存款。名义财富演化为：
 
 **(F1) Household nominal wealth accumulation**
+
 $$
 W_{t+1}=Z_{t+1}+R_t^dD_t+R_t^m\left(M_t+P_tw_th_t+V_t-P_tc_t-T_t\right).
 $$
@@ -29,6 +30,7 @@ $$
 家庭最大化：
 
 **(F2) Household preferences**
+
 $$
 E_0\sum_{t=0}^{\infty}\beta^t\left[u(c_t)+\kappa(m_t)-v(h_t)\right],
 $$
@@ -36,6 +38,7 @@ $$
 约束为：
 
 **(F3) Household portfolio budget**
+
 $$
 M_t+D_t+E_t(Q_{t,t+1}Z_{t+1})\leq W_t.
 $$
@@ -43,6 +46,7 @@ $$
 在化简系统中，论文采用：
 
 **(F4) Functional form for household utility**
+
 $$
 U(c_t,h_t)=\frac{c_t^{1-\sigma^{-1}}}{1-\sigma^{-1}}-\psi\frac{h_t^{1+\varphi}}{1+\varphi}.
 $$
@@ -54,6 +58,7 @@ $$
 批发企业 $i$ 使用劳动和个体生产率：
 
 **(F5) Wholesale production**
+
 $$
 y_{i,t}=A_t\omega_{i,t}l_{i,t}.
 $$
@@ -61,6 +66,7 @@ $$
 企业必须在生产前借款来支付劳动成本。总资金 $P_tx_{i,t}$ 满足：
 
 **(F6) Working-capital financing constraint**
+
 $$
 x_{i,t}\geq w_tl_{i,t}.
 $$
@@ -68,11 +74,13 @@ $$
 企业在融资约束下选择劳动/资金。由于 (F6) 以等号成立，最优性给出：
 
 **(F7) Financial markup and real wage relation**
+
 $$
 q_t=\frac{A_t}{w_t\chi_t}.
 $$
 
 **(F8) Expected wholesale revenue condition**
+
 $$
 \mathcal{E}(y_{i,t})=\chi_tq_tx_{i,t}.
 $$
@@ -84,11 +92,13 @@ $$
 银行吸收家庭存款并向企业贷款。个体冲击由企业家私下观察，中介可以用成本 $\mu P_tx_{i,t}$ 监督。令 $\bar{\omega}_t$ 为违约阈值。定义企业家和贷款人的产出份额：
 
 **(F9) Entrepreneur share under the debt contract**
+
 $$
 f(\bar{\omega}_t)=\int_{\bar{\omega}_t}^{\infty}\omega\,\Phi(d\omega)-\bar{\omega}_t\left[1-\Phi(\bar{\omega}_t)\right].
 $$
 
 **(F10) Lender share under the debt contract**
+
 $$
 g(\bar{\omega}_t)=\int_{0}^{\bar{\omega}_t}\omega\,\Phi(d\omega)-\mu\Phi(\bar{\omega}_t)+\bar{\omega}_t\left[1-\Phi(\bar{\omega}_t)\right].
 $$
@@ -96,11 +106,13 @@ $$
 论文说明最优合约由在线附录推导。Markdown 中报告的合约最优性条件为：
 
 **(F11) Financial markup from costly state verification**
+
 $$
 q_t=\frac{R_t}{1-\mu\Phi(\bar{\omega}_t)+\frac{\mu f(\bar{\omega}_t)\phi(\bar{\omega}_t)}{f_{\bar{\omega}}(\bar{\omega}_t)}}.
 $$
 
 **(F12) Total production funds**
+
 $$
 x_t=\frac{R_t\tau_t}{R_t-q_tg(\bar{\omega}_t)}.
 $$
@@ -108,6 +120,7 @@ $$
 贷款总利率可以从债务偿还条件反推出，并可概括为：
 
 **(F13) Loan-deposit spread**
+
 $$
 \Delta_t=\frac{\bar{\omega}_t}{g(\bar{\omega}_t)}.
 $$
@@ -123,11 +136,13 @@ $$
 定义通胀 $\pi_{t+1}=\log(P_{t+1}/P_t)$，生产率 $a_t=\log A_t$，内部资金冲击 $\hat{\tau}_t=\log\tau_t$。令 $\tilde{Y}_t$ 表示相对有效产出的产出缺口。对数线性化的基准均衡为：
 
 **(F14) Credit-spread relation**
+
 $$
 \delta_1\hat{\Delta}_t=\left(1+\varphi+\sigma^{-1}\frac{Y}{c}\right)\tilde{Y}_t-\sigma^{-1}\frac{e}{c}\hat{R}_t+\xi_{1,t}.
 $$
 
 **(F15) IS curve with credit channel**
+
 $$
 \tilde{Y}_t=E_t\tilde{Y}_{t+1}-\sigma\left(\frac{1+\sigma^{-1}\frac{e}{c}}{1-\varphi\frac{e}{c}}\right)(\hat{R}_t-E_t\pi_{t+1})
 -\left(\frac{\alpha_1-\alpha_2\frac{e}{c}}{1-\varphi\frac{e}{c}}\right)(\hat{\Delta}_t-E_t\hat{\Delta}_{t+1})
@@ -135,6 +150,7 @@ $$
 $$
 
 **(F16) Phillips curve with nominal-rate and spread terms**
+
 $$
 \pi_t=\bar{\kappa}\left[(\sigma^{-1}\alpha_1+\alpha_2)\hat{\Delta}_t+(\sigma^{-1}+\varphi)\tilde{Y}_t+\hat{R}_t+\xi_{3,t}\right]+\beta E_t\pi_{t+1}.
 $$
@@ -142,6 +158,7 @@ $$
 用于经验比较时，论文把 Phillips 曲线改写为平均实际边际成本 $u_t$ 的形式：
 
 **(F17) Marginal-cost Phillips curve**
+
 $$
 \hat{\pi}_t=\lambda(\hat{u}_t+\hat{R}_t+\alpha_2\hat{\Lambda}_t)+\beta E_t\hat{\pi}_{t+1}.
 $$
@@ -149,6 +166,7 @@ $$
 该经验方程的 GMM 矩条件为：
 
 **(F18) GMM orthogonality condition**
+
 $$
 E_t\left\{\left[\theta\hat{\pi}_t-(1-\theta)(1-\theta\beta)\left(\frac{\hat{u}_t}{\zeta}+\eta\frac{\hat{R}_t}{\zeta}+\alpha_2\frac{\hat{\Delta}_t}{\zeta}\right)-\theta\beta\hat{\pi}_{t+1}\right]\mathbf{z}_t\right\}=0.
 $$
@@ -158,6 +176,7 @@ $$
 论文侧 Markdown 隐含以下总量条件：
 
 **(F19) Aggregate entrepreneurial consumption**
+
 $$
 e_t=f(\bar{\omega}_t)q_tx_t.
 $$
@@ -165,6 +184,7 @@ $$
 使用合约方程后，企业家消费可写为：
 
 **(F20) Entrepreneurial consumption in reduced form**
+
 $$
 e_t=\tau_tR_t\left[1+\frac{\mu\phi(\bar{\omega}_t)}{f_{\bar{\omega}}(\bar{\omega}_t)}\right]^{-1}.
 $$
@@ -172,6 +192,7 @@ $$
 最终零售产出用于家庭消费和企业家消费：
 
 **(F21) Resource identity**
+
 $$
 Y_t=c_t+e_t.
 $$
@@ -179,6 +200,7 @@ $$
 批发品平均实际边际成本为：
 
 **(F22) Average wholesale real marginal cost**
+
 $$
 u_t=\frac{w_th_t}{y_t}.
 $$
@@ -186,6 +208,7 @@ $$
 零售边际成本可由批发边际成本和金融加价表示：
 
 **(F23) Retail marginal-cost identity**
+
 $$
 \chi_t^{-1}=u_tq_t.
 $$
@@ -193,6 +216,7 @@ $$
 对于第 2 节讨论的含资本经验扩展，该式变为：
 
 **(F24) Capital-extension marginal-cost identity**
+
 $$
 \chi_t^{-1}=\frac{q_tu_t}{a}.
 $$
@@ -202,11 +226,13 @@ $$
 基准论文侧文本识别了总生产率和企业内部资金冲击。Taylor 规则模拟加入货币政策冲击。MMB 实现还包括监督成本和个体风险离散度冲击；这些作为实现交叉检查变量记录，不在本一稿中作为单独推导的论文侧方程。
 
 **(F25) Productivity process**
+
 $$
 a_t=\rho_a a_{t-1}+\varepsilon^A_t.
 $$
 
 **(F26) Internal-funds shock process**
+
 $$
 \hat{\tau}_t=\rho_{\tau}\hat{\tau}_{t-1}+\varepsilon^{\tau}_t.
 $$
@@ -214,6 +240,7 @@ $$
 对于 Taylor 规则实验：
 
 **(F27) Monetary policy shock process**
+
 $$
 u_t^p=\rho_pu_{t-1}^p+\varepsilon^p_t.
 $$
@@ -221,6 +248,7 @@ $$
 基准脉冲响应使用的货币政策规则为：
 
 **(F28) Taylor-type policy rule**
+
 $$
 R_t=-\ln\beta+1.5\hat{\pi}_t+0.5\tilde{Y}_t+u_t^p.
 $$
@@ -228,6 +256,7 @@ $$
 内生内部资金扩展，而非基准核心，具有：
 
 **(F29) Endogenous internal-funds extension**
+
 $$
 \pi_tb_t=(1-\gamma)\left[1+\frac{\mu\phi(\bar{\omega}_t)}{f_{\bar{\omega}}(\bar{\omega}_t)}\right]^{-1}R_tb_{t-1}\varepsilon_t^v.
 $$
@@ -239,31 +268,37 @@ $$
 正文中直接可见的稳态约束为：
 
 **(F30) Zero-inflation steady state**
+
 $$
 \pi=0.
 $$
 
 **(F31) Deposit-rate steady state from the Taylor rule**
+
 $$
 R=-\ln\beta.
 $$
 
 **(F32) Steady-state spread target**
+
 $$
 \Delta=\frac{\bar{\omega}}{g(\bar{\omega})}.
 $$
 
 **(F33) Steady-state financial markup**
+
 $$
 q=\frac{R}{1-\mu\Phi(\bar{\omega})+\frac{\mu f(\bar{\omega})\phi(\bar{\omega})}{f_{\bar{\omega}}(\bar{\omega})}}.
 $$
 
 **(F34) Steady-state funds**
+
 $$
 x=\frac{R\tau}{R-qg(\bar{\omega})}.
 $$
 
 **(F35) Steady-state entrepreneurial consumption**
+
 $$
 e=\tau R\left[1+\frac{\mu\phi(\bar{\omega})}{f_{\bar{\omega}}(\bar{\omega})}\right]^{-1}.
 $$

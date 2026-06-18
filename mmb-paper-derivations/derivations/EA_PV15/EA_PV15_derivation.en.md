@@ -21,6 +21,7 @@ Notation: country index $i \in \{h,f\}$ and $j \neq i$. Variables are country-sp
 Illiquid bank $b \in [0,\lambda]$ supplies one-period corporate loans to entrepreneurs and funds them with interbank borrowing, bank capital, and other liabilities. Its balance sheet is:
 
 **(F1) Illiquid bank balance sheet**:
+
 $$
 L_{i,t+1}^{s}(b)=IB_{i,t+1}^{H}(b)+BK_{i,t+1}(b)+liab_{i,t}.
 $$
@@ -28,6 +29,7 @@ $$
 It chooses loan supply to maximize expected profits:
 
 **(F2) Illiquid bank profit problem**:
+
 $$
 \max_{L_{i,t+1}^{s}(b)}
 E_t\left[
@@ -41,6 +43,7 @@ $$
 Liquid bank $b \in [\lambda,1]$ supplies loans to entrepreneurs and interbank loans to illiquid banks, financed by ECB borrowing, bank capital, and other liabilities:
 
 **(F3) Liquid bank balance sheet**:
+
 $$
 L_{i,t+1}^{s}(b)+IB_{i,t+1}^{s}(b)=L_{i,t+1}^{ECB}(b)+BK_{i,t+1}(b)+liab_t(b).
 $$
@@ -48,6 +51,7 @@ $$
 Its objective includes loan income, interbank loan income, ECB funding costs, and convex monitoring/intermediation costs:
 
 **(F4) Liquid bank profit problem**:
+
 $$
 \max_{\{L_{i,t+1}^{s}(b),IB_{i,t+1}^{s}(b)\}}
 E_t\left[
@@ -62,6 +66,7 @@ $$
 The representative national banking system sets differentiated corporate loan rates under Calvo stickiness. A bank allowed to reset chooses $R_{i,t}^{L\ast}(b)$:
 
 **(F5) Loan-rate reset problem (`needs_review`)**:
+
 $$
 \max_{\{R_{i,t}^{L\ast}(b)\}}
 E_t\sum_{\tau=0}^{\infty}(\theta_i^L\beta)^\tau
@@ -77,6 +82,7 @@ The Markdown OCR garbles parts of the demand constraint, but the paper states th
 Entrepreneur $e$ finances capital projects with net worth and corporate loans:
 
 **(F6) Entrepreneur balance sheet**:
+
 $$
 Q_{i,t}K_{i,t+1}(e)-N_{i,t+1}(e)=L_{i,t+1}^{H}(e).
 $$
@@ -84,6 +90,7 @@ $$
 The entrepreneur chooses capital after accounting for the risky project return and perceived profitability:
 
 **(F7) Entrepreneur capital-choice problem**:
+
 $$
 \max_{\{K_{i,t+1}(e)\}}
 E_t\left\{
@@ -100,6 +107,7 @@ $$
 The representative household chooses consumption, hours, and bond holdings:
 
 **(F8) Household utility maximization**:
+
 $$
 \max_{\{C_{i,t}(j),H_{i,t}(j),B_{i,t+1}(j)\}}
 E_t\sum_{\tau=0}^{\infty}\beta^\tau e^{\varepsilon_{i,t+\tau}^{\beta}}
@@ -110,6 +118,7 @@ E_t\sum_{\tau=0}^{\infty}\beta^\tau e^{\varepsilon_{i,t+\tau}^{\beta}}
 $$
 
 **(F9) Household budget constraint**:
+
 $$
 \frac{W_{i,t}^{h}}{P_{i,t}^{c}}H_{i,t}(j)+R_{t-1}\frac{B_{i,t}(j)}{P_{i,t}^{c}}+\frac{\Pi_{i,t}(j)}{P_{i,t}^{c}}
 =C_{i,t}(j)+\frac{B_{i,t+1}(j)}{P_{i,t}^{c}}+\frac{T_{i,t}(j)}{P_{i,t}^{c}}+\frac{P_{i,t}}{P_{i,t}^{c}}AC_{i,t}^{B}(j).
@@ -120,6 +129,7 @@ $$
 Labor unions set differentiated wages with Calvo stickiness and partial indexation. Intermediate firms rent labor and utilized capital, minimize cost, and set sticky prices. Capital suppliers produce installed capital subject to investment adjustment costs.
 
 **(F10) Capital supplier problem**:
+
 $$
 \max_{\{I_{i,t}(k)\}}E_t\sum_{\tau=0}^{\infty}\beta^\tau
 \frac{\lambda_{i,t+\tau}^{c}}{\lambda_{i,t}^{c}}
@@ -131,11 +141,13 @@ $$
 ### 3.1 Banking and Loan Aggregation
 
 **(F11) Illiquid-bank marginal cost of loans**:
+
 $$
 MC_{i,t}^{ill}=\frac{P_{i,t}^{IB}}{E_t\eta_{i,t+1}}.
 $$
 
 **(F12) Interbank CES demand aggregator**:
+
 $$
 IB_{i,t+1}^{d}(b)=
 \left[
@@ -145,6 +157,7 @@ IB_{i,t+1}^{d}(b)=
 $$
 
 **(F13) Interbank price index**:
+
 $$
 P_{i,t}^{IB}=
 \left[
@@ -154,6 +167,7 @@ P_{i,t}^{IB}=
 $$
 
 **(F14) Interbank demand by origin**:
+
 $$
 IB_{h,i,t+1}^{d}(b)=(1-\alpha_i^{IB})
 \left(\frac{R_{h,t}^{IB}}{P_{i,t}^{IB}}\right)^{-\xi}IB_{i,t+1}^{d}(b),
@@ -163,27 +177,32 @@ IB_{f,i,t+1}^{d}(b)=\alpha_i^{IB}
 $$
 
 **(F15) Bank capital accumulation**:
+
 $$
 BK_{i,t+1}(b)=(1-\tau^B)\Pi_{i,t}^{B}(b).
 $$
 
 **(F16) Liquid-bank marginal cost of loans**:
+
 $$
 MC_{i,t}^{liq}=\frac{R_t}{E_t\eta_{i,t+1}}.
 $$
 
 **(F17) Interbank rate from monitoring cost**:
+
 $$
 R_{i,t}^{IB}(b)=\chi_i^{IB}\left(IB_{i,t+1}^{s}(b)-\bar{IB}_{i}^{s}(b)\right)+R_t.
 $$
 
 **(F18) Aggregate marginal cost of corporate loans**:
+
 $$
 MC_{i,t}^{L}=(MC_{i,t}^{ill})^\lambda(MC_{i,t}^{liq})^{1-\lambda}
 =\frac{(P_{i,t}^{IB})^\lambda R_t^{1-\lambda}}{E_t\eta_{i,t+1}}.
 $$
 
 **(F19) Log-linear loan marginal cost (`needs_review`)**:
+
 $$
 \widehat{mc}_{i,t}^{L}=
 \frac{(1-\alpha_i^L)(1-\varkappa_i)\widehat{kn}_{i,t}
@@ -192,6 +211,7 @@ $$
 $$
 
 **(F20) Sticky real loan-rate equation (`needs_review`)**:
+
 $$
 \hat{r}_{i,t}^{L}=
 \frac{
@@ -206,6 +226,7 @@ $$
 ### 3.2 Entrepreneurs and Financial Accelerator
 
 **(F21) Corporate loan CES aggregator**:
+
 $$
 L_{i,t+1}^{d}(e)=
 \left[
@@ -215,6 +236,7 @@ L_{i,t+1}^{d}(e)=
 $$
 
 **(F22) Corporate loan price index**:
+
 $$
 P_{i,t}^{L}(e)=
 \left[
@@ -224,6 +246,7 @@ P_{i,t}^{L}(e)=
 $$
 
 **(F23) Corporate loan demand by origin**:
+
 $$
 L_{h,i,t+1}^{d}(e)=(1-\alpha_i^L)
 \left(\frac{R_{h,t}^{L}(e)}{P_{i,t}^{L}(e)}\right)^{-\nu}L_{i,t+1}^{d}(e),
@@ -233,6 +256,7 @@ L_{f,i,t+1}^{d}(e)=\alpha_i^L
 $$
 
 **(F24) Entrepreneur one-period profit**:
+
 $$
 \Pi_{i,t+1}^{E}(e)=
 \begin{cases}
@@ -242,6 +266,7 @@ $$
 $$
 
 **(F25) Perceived profitability function**:
+
 $$
 g(\bar{\omega}_{i,t+1},\varepsilon_{i,t}^{Q})
 =\gamma_i(\bar{\omega}_{i,t+1})^{\varkappa_i/(\varkappa_i-1)}
@@ -249,6 +274,7 @@ g(\bar{\omega}_{i,t+1},\varepsilon_{i,t}^{Q})
 $$
 
 **(F26) External finance premium**:
+
 $$
 S_{i,t}(e)=\frac{E_tR_{i,t+1}^{k}}{P_{i,t}^{L}(e)}
 =\gamma_i^{\varkappa_i-1}
@@ -259,17 +285,20 @@ S_{i,t}(e)=\frac{E_tR_{i,t+1}^{k}}{P_{i,t}^{L}(e)}
 $$
 
 **(F27) Entrepreneur net worth accumulation**:
+
 $$
 N_{i,t+1}(e)=(1-\tau^E)\frac{\Pi_{i,t}^{E}(e)}{e^{\varepsilon_{i,t}^{N}}}.
 $$
 
 **(F28) Log-linear spread equation**:
+
 $$
 \hat{s}_{i,t}=E_t\hat{r}_{i,t+1}^{k}-\hat{p}_{i,t}^{L}
 =\varkappa_i\left(\hat{q}_{i,t}+\hat{k}_{i,t+1}-\hat{n}_{i,t+1}\right)+\varepsilon_{i,t}^{Q}.
 $$
 
 **(F29) Default threshold from Pareto appendix**:
+
 $$
 \omega_{i,t}^{C}(e)R_{i,t}^{k}Q_{i,t-1}K_{i,t}(e,\omega_{i,t}^{C})
 =P_{i,t-1}^{L}(e)L_{i,t}^{H}(e,\omega_{i,t}^{C}).
@@ -278,6 +307,7 @@ $$
 ### 3.3 Households, Wages, Firms, and Capital
 
 **(F30) Household Euler equation (`needs_review`)**:
+
 $$
 C_{i,t+1}-(1+h_i^c)C_{i,t}+h_i^cC_{i,t-1}
 =\frac{1-h_i^c}{\sigma_i^c}
@@ -285,12 +315,14 @@ C_{i,t+1}-(1+h_i^c)C_{i,t}+h_i^cC_{i,t-1}
 $$
 
 **(F31) Household labor supply**:
+
 $$
 \widehat{W}_{i,t}^{h}=\sigma_i^L\widehat{H}_{i,t}
 +\frac{\sigma_i^c}{1-h_i^c}\left(\widehat{C}_{i,t}-h_i^c\widehat{C}_{i,t-1}\right).
 $$
 
 **(F32) Sticky wage condition (`needs_review`)**:
+
 $$
 (1+\beta)\widehat{W}_{i,t}
 =\xi_i^w\pi_{i,t-1}^{c}+\widehat{W}_{i,t-1}
@@ -302,6 +334,7 @@ $$
 $$
 
 **(F33) Intermediate firm marginal cost**:
+
 $$
 MC_{i,t}=\frac{1}{e^{\varepsilon_{i,t}^{A}}}
 \left(\frac{Z_{i,t}}{\alpha}\right)^\alpha
@@ -309,6 +342,7 @@ MC_{i,t}=\frac{1}{e^{\varepsilon_{i,t}^{A}}}
 $$
 
 **(F34) Sticky price reset condition (`needs_review`)**:
+
 $$
 P_{i,t}^{\ast}=
 \frac{\epsilon_p}{(\epsilon_p-1)(1-\tau^y)}
@@ -323,6 +357,7 @@ E_t\sum_{\tau=0}^{\infty}(\theta_i^p\beta)^\tau
 $$
 
 **(F35) Tobin's Q investment condition**:
+
 $$
 Q_{i,t}=P_{i,t}^{I}
 +Q_{i,t}\frac{\partial(I_{i,t}AC_{i,t}^{I})}{\partial I_{i,t}}
@@ -331,6 +366,7 @@ Q_{i,t}=P_{i,t}^{I}
 $$
 
 **(F36) Expected return on capital (`needs_review`)**:
+
 $$
 \frac{E_tR_{i,t+1}^{k}}{1+P_{i,t}\chi^B(B_{i,t+1}(j)-B_i(j))}
 =E_t\left[
@@ -339,6 +375,7 @@ $$
 $$
 
 **(F37) Capital utilization condition**:
+
 $$
 \frac{\psi_i}{1-\psi_i}\hat{u}_{i,t}=\hat{z}_{i,t}.
 $$
@@ -346,6 +383,7 @@ $$
 ## 4. Market Clearing & Identities
 
 **(F38) Government budget identity**:
+
 $$
 P_{i,t}\bar{G}\varepsilon_{i,t}^{G}
 =\int_0^1T_{i,t}(j)\,dj+\tau^y\int_0^1P_{i,t}(m)Y_{i,t}(m)\,dm
@@ -356,6 +394,7 @@ P_{i,t}\bar{G}\varepsilon_{i,t}^{G}
 $$
 
 **(F39) Monetary policy rule**:
+
 $$
 \frac{R_t}{\bar{R}}=
 \left(\frac{R_{t-1}}{\bar{R}}\right)^\rho
@@ -367,6 +406,7 @@ e^{\varepsilon_t^R}.
 $$
 
 **(F40) Home resource constraint (`needs_review`)**:
+
 $$
 \frac{Y_{h,t}}{\Delta_{h,t}^{p}}
 =(1-\alpha^C)\left(\frac{P_{h,t}}{P_{h,t}^{c}}\right)^{-\mu}C_{h,t}
@@ -379,6 +419,7 @@ $$
 $$
 
 **(F41) Price index aggregation**:
+
 $$
 P_{i,t}^{1-\epsilon_p}
 =\theta_i^p(P_{i,t-1}\pi_{i,t-1}^{\xi_i^p})^{1-\epsilon_p}
@@ -386,6 +427,7 @@ P_{i,t}^{1-\epsilon_p}
 $$
 
 **(F42) Wage index aggregation**:
+
 $$
 W_{i,t}^{1/(1-\mu_{i,t}^{w})}
 =\theta_i^w\left[W_{i,t-1}(\pi_{i,t-1}^{C})^{\xi_i^w}\right]^{1/(1-\mu_{i,t}^{w})}
@@ -393,6 +435,7 @@ W_{i,t}^{1/(1-\mu_{i,t}^{w})}
 $$
 
 **(F43) Corporate credit market clearing**:
+
 $$
 L_{h,t+1}^{s}=
 \left[
@@ -402,6 +445,7 @@ L_{h,t+1}^{s}=
 $$
 
 **(F44) Interbank market clearing**:
+
 $$
 IB_{h,t+1}^{s}=
 \frac{\lambda}{1-\lambda}
@@ -412,11 +456,13 @@ IB_{h,t+1}^{s}=
 $$
 
 **(F45) International asset market clearing**:
+
 $$
 B_{h,t+1}+B_{f,t+1}=0,\qquad CA_{h,t}+CA_{f,t}=0.
 $$
 
 **(F46) Home current-account identity**:
+
 $$
 CA_{h,t}=(B_{h,t+1}-B_{h,t})
 +[(L_{h,f,t+1}-L_{h,f,t})-(L_{f,h,t+1}-L_{f,h,t})]
@@ -428,6 +474,7 @@ $$
 For country-specific disturbances $s \in \{\beta,A,Q,N,L,B\}$:
 
 **(F47) Country shock processes**:
+
 $$
 \varepsilon_{i,t}^{s}=\rho_i^s\varepsilon_{i,t-1}^{s}+\eta_{i,t}^{s}.
 $$
@@ -435,6 +482,7 @@ $$
 The common monetary-policy disturbance is:
 
 **(F48) Monetary-policy shock**:
+
 $$
 \varepsilon_t^R=\rho^R\varepsilon_{t-1}^R+\eta_t^R.
 $$
@@ -442,6 +490,7 @@ $$
 Government spending is linked to productivity innovations:
 
 **(F49) Spending shock process**:
+
 $$
 \varepsilon_{i,t}^{G}=\rho_i^G\varepsilon_{i,t-1}^{G}+\eta_{i,t}^{G}+\rho_i^{ag}\eta_{i,t}^{A}.
 $$
@@ -449,6 +498,7 @@ $$
 Wage markup disturbances have an ARMA component:
 
 **(F50) Wage markup shock process**:
+
 $$
 \varepsilon_{i,t}^{W}=\rho_i^W\varepsilon_{i,t-1}^{W}+\eta_{i,t}^{W}-u_i^W\eta_{i,t-1}^{W}.
 $$

@@ -52,27 +52,33 @@ Taxes follow a log-linear fiscal rule responding to debt and government spending
 The following equations are written in detrended/log-linear notation. Hatted variables denote percentage or log deviations from steady state where the CCTW appendix uses hats. The MMB cross-check uses ASCII variable names without hats.
 
 - **(F1) Flexible-economy marginal-cost relation** (`implementation_cross_check`, needs_review):
+
 $$
 a_t = \alpha r^k_{f,t} + (1-\alpha) w_{f,t}.
 $$
 
 - **(F2) Flexible-economy capital utilization** (`implementation_cross_check`, needs_review):
+
 $$
 z^k_{f,t} = \frac{1-\zeta}{\zeta} r^k_{f,t},
 $$
+
 where the MMB file implements the coefficient as $1/(\zeta/(1-\zeta))$.
 
 - **(F3) Flexible-economy rental rate of capital** (`implementation_cross_check`, needs_review):
+
 $$
 r^k_{f,t} = w_{f,t} + l_{f,t} - k_{f,t}.
 $$
 
 - **(F4) Flexible-economy installed capital used in production** (`implementation_cross_check`, needs_review):
+
 $$
 k_{f,t} = k^p_{f,t-1} + z^k_{f,t}.
 $$
 
 - **(F5) Flexible-economy investment Euler equation** (`implementation_cross_check`, needs_review):
+
 $$
 i_{f,t} =
 \frac{1}{1+\bar{\beta}\gamma}
@@ -81,6 +87,7 @@ i_{f,t} =
 $$
 
 - **(F6) Flexible-economy value of capital** (`implementation_cross_check`, needs_review):
+
 $$
 p^k_{f,t} =
 -r^r_{f,t}
@@ -88,9 +95,11 @@ p^k_{f,t} =
 +\frac{\bar{r}^k}{\bar{r}^k+1-\delta}E_t r^k_{f,t+1}
 +\frac{1-\delta}{\bar{r}^k+1-\delta}E_t p^k_{f,t+1},
 $$
+
 with $\eta_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]$.
 
 - **(F7) Flexible-economy Ricardian consumption Euler equation** (`implementation_cross_check`, needs_review):
+
 $$
 c_{j,f,t} =
 \frac{h/\gamma}{1+h/\gamma}c_{j,f,t-1}
@@ -101,6 +110,7 @@ c_{j,f,t} =
 $$
 
 - **(F8) Flexible-economy rule-of-thumb consumption**:
+
 $$
 c_{i,f,t} =
 \frac{\bar{W}^h\bar{L}}{\bar{C}}(w_{f,t}+l_{f,t})
@@ -108,11 +118,13 @@ c_{i,f,t} =
 $$
 
 - **(F9) Flexible-economy aggregate consumption**:
+
 $$
 c_{f,t}=(1-\omega)c_{j,f,t}+\omega c_{i,f,t}.
 $$
 
 - **(F10) Flexible-economy wage/labor supply condition** (`implementation_cross_check`, needs_review):
+
 $$
 w_{f,t} =
 \sigma_l l_{f,t}
@@ -121,26 +133,31 @@ w_{f,t} =
 $$
 
 - **(F11) Sticky-economy marginal cost** (`implementation_cross_check`, needs_review):
+
 $$
 mc_t = \alpha r^k_t + (1-\alpha)w_t - a_t.
 $$
 
 - **(F12) Sticky-economy capital utilization** (`implementation_cross_check`, needs_review):
+
 $$
 z^k_t = \frac{1-\zeta}{\zeta}r^k_t.
 $$
 
 - **(F13) Sticky-economy rental rate of capital** (`implementation_cross_check`, needs_review):
+
 $$
 r^k_t = w_t + l_t - k_t.
 $$
 
 - **(F14) Sticky-economy installed capital used in production** (`implementation_cross_check`, needs_review):
+
 $$
 k_t = k^p_{t-1}+z^k_t.
 $$
 
 - **(F15) Sticky-economy investment Euler equation** (`implementation_cross_check`, needs_review):
+
 $$
 i_t =
 \frac{1}{1+\bar{\beta}\gamma}
@@ -149,6 +166,7 @@ i_t =
 $$
 
 - **(F16) Sticky-economy value of capital/arbitrage** (`implementation_cross_check`, needs_review):
+
 $$
 p^k_t =
 -r_t+E_t\pi_{t+1}
@@ -158,6 +176,7 @@ p^k_t =
 $$
 
 - **(F17) Sticky-economy Ricardian consumption Euler equation** (`implementation_cross_check`, needs_review):
+
 $$
 c_{j,t} =
 \frac{h/\gamma}{1+h/\gamma}c_{j,t-1}
@@ -169,6 +188,7 @@ c_{j,t} =
 $$
 
 - **(F18) Sticky-economy rule-of-thumb consumption**:
+
 $$
 c_{i,t} =
 \frac{\bar{W}^h\bar{L}}{\bar{C}}(w_t+l_t)
@@ -176,11 +196,13 @@ c_{i,t} =
 $$
 
 - **(F19) Sticky-economy aggregate consumption**:
+
 $$
 c_t=(1-\omega)c_{j,t}+\omega c_{i,t}.
 $$
 
 - **(F20) Price Phillips curve** (`implementation_cross_check`, needs_review):
+
 $$
 \pi_t =
 \frac{1}{1+\bar{\beta}\gamma\iota_p}
@@ -192,6 +214,7 @@ $$
 $$
 
 - **(F21) Wage Phillips curve** (`implementation_cross_check`, needs_review):
+
 $$
 w_t =
 \frac{1}{1+\bar{\beta}\gamma}w_{t-1}
@@ -206,16 +229,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F22) Flexible-economy resource constraint** (`implementation_cross_check`, needs_review):
+
 $$
 y_{f,t} = c_y c_{f,t}+i_y i_{f,t}+g_t+\bar{r}^k k_y z^k_{f,t}.
 $$
 
 - **(F23) Flexible-economy production function** (`implementation_cross_check`, needs_review):
+
 $$
 y_{f,t} = \Phi\left(\alpha k_{f,t}+(1-\alpha)l_{f,t}+a_t\right).
 $$
 
 - **(F24) Flexible-economy installed-capital accumulation** (`implementation_cross_check`, needs_review):
+
 $$
 k^p_{f,t}=(1-\bar{i}/\bar{k})k^p_{f,t-1}
 +(\bar{i}/\bar{k})i_{f,t}
@@ -223,26 +249,31 @@ k^p_{f,t}=(1-\bar{i}/\bar{k})k^p_{f,t-1}
 $$
 
 - **(F25) Flexible-economy government budget constraint**:
+
 $$
 b_{f,t}=R_\ast\left(\frac{b_{f,t-1}}{\pi_\ast}+g_t-t_{f,t}\right).
 $$
 
 - **(F26) Flexible-economy fiscal rule**:
+
 $$
 t_{f,t}=\phi_b b_{f,t-1}+\phi_g g_t.
 $$
 
 - **(F27) Sticky-economy aggregate resource constraint** (`implementation_cross_check`, needs_review):
+
 $$
 y_t = c_y c_t+i_y i_t+g_t+\bar{r}^k k_y z^k_t.
 $$
 
 - **(F28) Sticky-economy production function** (`implementation_cross_check`, needs_review):
+
 $$
 y_t = \Phi\left(\alpha k_t+(1-\alpha)l_t+a_t\right).
 $$
 
 - **(F29) Sticky-economy installed-capital accumulation** (`implementation_cross_check`, needs_review):
+
 $$
 k^p_t=(1-\bar{i}/\bar{k})k^p_{t-1}
 +(\bar{i}/\bar{k})i_t
@@ -250,16 +281,19 @@ k^p_t=(1-\bar{i}/\bar{k})k^p_{t-1}
 $$
 
 - **(F30) Sticky-economy government budget constraint**:
+
 $$
 b_t=R_\ast\left(\frac{b_{t-1}}{\pi_\ast}+g_t-t_t\right).
 $$
 
 - **(F31) Sticky-economy fiscal rule**:
+
 $$
 t_t=\phi_b b_{t-1}+\phi_g g_t.
 $$
 
 - **(F32) Monetary policy rule with peg dummy**:
+
 $$
 i_t^{obs} =
 d^{MP}_t\cdot 0+(1-d^{MP}_t)
@@ -267,11 +301,13 @@ d^{MP}_t\cdot 0+(1-d^{MP}_t)
 $$
 
 - **(F33) Modelbase output gap identity**:
+
 $$
 gap_t=y_t-y_{f,t}.
 $$
 
 - **(F34) Inflation and interest observables** (`implementation_cross_check`, needs_review):
+
 $$
 \pi^{obs}_t=\pi_t+\bar{\pi},\quad
 \pi^{(4)}_t=\pi_t+\pi_{t-1}+\pi_{t-2}+\pi_{t-3},\quad
@@ -279,6 +315,7 @@ r^{obs}_t=r_t+\bar{r}.
 $$
 
 - **(F35) Growth observables** (`implementation_cross_check`, needs_review):
+
 $$
 \Delta y_t=y_t-y_{t-1}+\bar{\gamma},\quad
 \Delta c_t=c_t-c_{t-1}+\bar{\gamma},\quad
@@ -289,41 +326,49 @@ $$
 ## 5. Exogenous Processes
 
 - **(F36) Technology shock** (`implementation_cross_check`, needs_review):
+
 $$
 a_t=\rho_a a_{t-1}+\varepsilon^a_t.
 $$
 
 - **(F37) Preference/risk-premium shock** (`implementation_cross_check`, needs_review):
+
 $$
 b_t^{pref}=\rho_b b_{t-1}^{pref}+\varepsilon^b_t.
 $$
 
 - **(F38) Government purchases path**:
+
 $$
 g_t=fiscal_t.
 $$
 
 - **(F39) Investment-specific shock** (`implementation_cross_check`, needs_review):
+
 $$
 q^s_t=\rho_{qs}q^s_{t-1}+\varepsilon^{qs}_t.
 $$
 
 - **(F40) Monetary-policy shock process** (`implementation_cross_check`, needs_review):
+
 $$
 m_t=\rho_m m_{t-1}+\varepsilon^m_t.
 $$
 
 - **(F41) Price markup shock** (`implementation_cross_check`, needs_review):
+
 $$
 s^\pi_t=\rho_\pi s^\pi_{t-1}+\varepsilon^\pi_t-\mu_\pi\varepsilon^\pi_{t-1}.
 $$
 
 - **(F42) Wage markup shock** (`implementation_cross_check`, needs_review):
+
 $$
 s^w_t=\rho_w s^w_{t-1}+\varepsilon^w_t-\mu_w\varepsilon^w_{t-1}.
 $$
 
 - **(F43) Policy peg dummy path**:
+
 $$
 d^{MP}_t =
 \begin{cases}
@@ -352,24 +397,28 @@ $$
 The MMB implementation computes the nonzero steady-state ratios and constants before the model block. The source-backed calculation order is:
 
 1. Set quarterly steady inflation and trend growth:
+
 $$
 \pi_\ast = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
 \gamma = 1+\frac{\bar{\gamma}^{obs}}{100}.
 $$
 
 2. Set discounting and the trend-adjusted discount factor:
+
 $$
 \beta=\frac{1}{1+\bar{\beta}^{obs}/100},\qquad
 \bar{\beta}=\beta\gamma^{-\sigma_c}.
 $$
 
 3. Compute steady nominal and rental returns:
+
 $$
 R_\ast=\frac{\pi_\ast}{\beta\gamma^{-\sigma_c}},\qquad
 \bar{r}^k=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
 $$
 
 4. Compute wage, capital-output, investment-output, and consumption-output ratios:
+
 $$
 \bar{w} =
 \left[

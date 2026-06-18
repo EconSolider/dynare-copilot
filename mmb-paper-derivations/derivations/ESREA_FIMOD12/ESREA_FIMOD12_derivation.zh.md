@@ -49,6 +49,7 @@ $$
 以下方程记录本国模块。外国结构相同，论文中用星号表示，实现交叉检查中用 `f` 前缀表示。
 
 - **(F1) 优化家庭收入边际效用**：
+
 $$
 \lambda_t^o=
 \frac{(c_t^o-hc_{t-1}^o)^{-\sigma_c}
@@ -57,6 +58,7 @@ $$
 $$
 
 - **(F2) 国内债券 Euler 方程**：
+
 $$
 \lambda_t^o=\beta E_t\left[
 \lambda_{t+1}^o
@@ -65,6 +67,7 @@ $$
 $$
 
 - **(F3) 资本 Euler 方程**：
+
 $$
 Q_t=\beta E_t\left[
 \frac{\lambda_{t+1}^o}{\lambda_t^o}
@@ -73,6 +76,7 @@ Q_t=\beta E_t\left[
 $$
 
 - **(F4) 投资/Tobin's Q 条件**（`needs_review`：MinerU OCR 在调整成本项中丢失部分指数）：
+
 $$
 1=Q_t\left[1-S(I_t^o/I_{t-1}^o)-I_t^o S'(I_t^o/I_{t-1}^o)\right]
 +\beta E_t\left[
@@ -83,18 +87,21 @@ S'(I_{t+1}^o/I_t^o)
 $$
 
 - **(F5) 国际债券 Euler 方程**：
+
 $$
 \lambda_t^o=\beta R_t^{ecb}\exp\left[-\psi_d(d_t-\bar d)/Y_t\right]
 E_t\left[\frac{\lambda_{t+1}^o}{\pi_{t+1}}\right].
 $$
 
 - **(F6) 规则型家庭预算约束**：
+
 $$
 (1+\tau_t^c)c_t^r=(1-\tau_t^w)(w_t^p n_t^{p,r}+w_t^g n_t^{g,r})
 +(1-n_t^{p,r}-n_t^{g,r})\kappa^B.
 $$
 
 - **(F7) 规则型家庭边际效用**：
+
 $$
 \lambda_t^r=
 \frac{(c_t^r-hc_{t-1}^r)^{-\sigma_c}
@@ -103,101 +110,121 @@ $$
 $$
 
 - **(F8) 中间品品种 $j$ 的零售 CES 需求**：
+
 $$
 y_t(j)=\left(\frac{P_{At}(j)}{P_{At}}\right)^{-\varepsilon}Y_t.
 $$
 
 - **(F9) 生产者价格指数**：
+
 $$
 P_{At}=\left(\int_0^\omega \frac{1}{\omega}P_{At}(j)^{1-\varepsilon}dj\right)^{1/(1-\varepsilon)}.
 $$
 
 - **(F10) 中间品生产和价格分散**：
+
 $$
 Y_tD_t=A_t(k_{t-1}^g)^\eta k_{t-1}^{\alpha}L_t^{1-\alpha}.
 $$
 
 - **(F11) 私人资本租金率**：
+
 $$
 r_t^k=mc_t\alpha\frac{Y_t}{k_{t-1}}.
 $$
 
 - **(F12) 劳动服务价格**：
+
 $$
 x_t=mc_t(1-\alpha)\frac{Y_t}{L_t}.
 $$
 
 - **(F13) Calvo 最优价格条件**（`needs_review`：紧凑无穷和条件被概括为递归实现形式）：
+
 $$
 \tilde p_t=\frac{\varepsilon}{\varepsilon-1}\frac{q_{1,t}}{q_{2,t}}.
 $$
 
 - **(F14) Calvo 分子递归**：
+
 $$
 q_{1,t}=\lambda_t^oY_tmc_t+\theta_P\beta E_t[\pi_{A,t+1}^{\varepsilon}q_{1,t+1}].
 $$
 
 - **(F15) Calvo 分母递归**：
+
 $$
 q_{2,t}=\lambda_t^oY_tp_{B,t}^{-(1-\omega-\psi)}
 +\theta_P\beta E_t[\pi_{A,t+1}^{\varepsilon-1}q_{2,t+1}].
 $$
 
 - **(F16) PPI 通胀规律**：
+
 $$
 1=\theta_P\pi_{A,t}^{\varepsilon-1}+(1-\theta_P)\tilde p_t^{1-\varepsilon}.
 $$
 
 - **(F17) 价格分散规律**：
+
 $$
 D_t=(1-\theta_P)\tilde p_t^{-\varepsilon}
 +\theta_P\pi_{A,t}^{\varepsilon}D_{t-1}.
 $$
 
 - **(F18) 由 PPI 通胀和贸易条件得到 CPI 通胀**：
+
 $$
 \pi_t=\pi_{A,t}\left(\frac{p_{B,t}}{p_{B,t-1}}\right)^{1-\omega-\psi}.
 $$
 
 - **(F19) 搜索工人池**：
+
 $$
 \tilde U_t=U_{t-1}+s^pN_{t-1}^p+s^gN_{t-1}^g.
 $$
 
 - **(F20) 部门匹配函数**：
+
 $$
 M_t^f=\kappa_e^f(\tilde U_t)^{\phi^f}(v_t^f)^{1-\phi^f},\qquad f\in\{p,g\}.
 $$
 
 - **(F21) 找工作概率和职位填补概率**：
+
 $$
 p_t^f=\frac{M_t^f}{\tilde U_t},\qquad q_t^f=\frac{M_t^f}{v_t^f}.
 $$
 
 - **(F22) 部门就业运动方程**：
+
 $$
 N_t^f=(1-s^f)N_{t-1}^f+p_t^f\tilde U_t,\qquad f\in\{p,g\}.
 $$
 
 - **(F23) 失业恒等式**：
+
 $$
 U_t=1-N_t^{tot},\qquad N_t^{tot}=N_t^p+N_t^g.
 $$
 
 - **(F24) 职位自由进入条件**：
+
 $$
 \frac{\kappa_v^p}{q_t^p}+\kappa_{tc}
 =(1-\theta_w^n)J_t(\tilde W_t^p)+\theta_w^nJ_t(W_{t-1}^p).
 $$
 
 - **(F25) 工会-企业 Nash 分享规则**（`needs_review`：来源表达式中的税率符号有 OCR 噪声）：
+
 $$
 \Omega_t=\frac{\xi}{1-\xi}\cdot
 \frac{\mathcal A_t^w}{\mathcal A_t^{sc}}\cdot J_t(\tilde W_t^p),
 $$
+
 其中 $\mathcal A_t^w$ 和 $\mathcal A_t^{sc}$ 是论文 Eq. (58) 中的预期贴现劳动税和社保税楔子。
 
 - **(F26) 平均私人实际工资运动方程**：
+
 $$
 w_t^p=
 \frac{(1-s^p)N_{t-1}^p}{N_t^p}
@@ -209,42 +236,50 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F27) 总消费**：
+
 $$
 C_t=(1-\mu)c_t^o+\mu c_t^r.
 $$
 
 - **(F28) 仅优化家庭持有的总量存量和投资**：
+
 $$
 k_t=(1-\mu)k_t^o,\qquad I_t=(1-\mu)I_t^o,\qquad b_t=(1-\mu)b_t^o,\qquad d_t=(1-\mu)d_t^o.
 $$
 
 - **(F29) 私人资本积累**：
+
 $$
 k_t=(1-\delta^k)k_{t-1}+[1-S(I_t/I_{t-1})]I_t,\qquad
 S(x)=\frac{\kappa_I}{2}(x-1)^2.
 $$
 
 - **(F30) 私人产出吸收**：
+
 $$
 Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot}).
 $$
 
 - **(F31) 总 GDP 定义**：
+
 $$
 Y_t^{tot}=Y_t+g_t^g.
 $$
 
 - **(F32) 政府支出分解**：
+
 $$
 G_t=C_t^g+I_t^g+\left[(1+\tau_t^{sc})w_t^gN_t^g\right]p_{B,t}^{1-\omega-\psi}.
 $$
 
 - **(F33) 政府预算约束/债务积累**：
+
 $$
 b_t=\frac{R_{t-1}}{\pi_t}b_{t-1}+PD_t.
 $$
 
 - **(F34) 初级赤字**：
+
 $$
 PD_t=
 \left[\frac{G_t}{p_{B,t}^{1-\omega-\psi}}+\kappa^BU_t+Sub_t\right]
@@ -254,16 +289,19 @@ PD_t=
 $$
 
 - **(F35) 公共资本积累**：
+
 $$
 k_t^g=(1-\delta^g)k_{t-1}^g+I_t^g.
 $$
 
 - **(F36) 贸易条件规律**：
+
 $$
 p_{B,t}=\frac{\pi_{B,t}}{\pi_{A,t}}p_{B,t-1}.
 $$
 
 - **(F37) 本国经常账户/净国外资产恒等式**（`needs_review`：代码生成前需对照 PDF 核查价格平减约定）：
+
 $$
 d_t=\frac{R_{t-1}^{ecb}\exp[-\psi_d(d_{t-1}-\bar d)/Y_{t-1}]}{\pi_{A,t}}d_{t-1}
 +\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot})
@@ -273,29 +311,35 @@ $$
 ## 5. Exogenous Processes
 
 - **(F38) 技术过程**：
+
 $$
 \log A_t=\rho_A\log A_{t-1}+\varepsilon_t^A.
 $$
 
 - **(F39) 财政工具规则**：
+
 $$
 X_t=\bar X+\rho_X(X_{t-1}-\bar X)
 +(1-\rho_X)\varphi_X e_X^{aux}
 \left(\frac{b_{t-1}}{Y_{t-1}^{tot}}p_{B,t-1}^{1-\omega-\psi}-\omega^b\right)
 +\varepsilon_t^X,
 $$
+
 适用于税率工具 $X\in\{\tau^w,\tau^{sc},\tau^b,\tau^c,\tau^k\}$。
 
 - **(F40) 支出和转移工具规则**：
+
 $$
 \frac{X_t}{\bar X}=
 \left(\frac{X_{t-1}}{\bar X}\right)^{\rho_X}
 \left(\frac{b_{t-1}}{\omega^bY_{t-1}^{tot}}p_{B,t-1}^{1-\omega-\psi}\right)^{(1-\rho_X)\varphi_X}
 \exp(\varepsilon_t^X),
 $$
+
 适用于 $X\in\{C^g,I^g,w^g,N^g,Sub,T\}$。
 
 - **(F41) 联盟 Taylor 规则**：
+
 $$
 \frac{R_t^{ecb}}{\bar R^{ecb}}=
 \left(\frac{R_{t-1}^{ecb}}{\bar R^{ecb}}\right)^{\rho_i}

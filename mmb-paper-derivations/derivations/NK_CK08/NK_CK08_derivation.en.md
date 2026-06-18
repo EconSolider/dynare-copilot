@@ -103,43 +103,51 @@ The monetary authority follows a Taylor-type rule for the nominal rate, and the 
 The linearized system below is the paper's RTM model economy in appendix A.2, with equation numbering assigned for this archive. Several long wage-surplus recursions are marked `needs_review` because the MinerU source has OCR ambiguity in symbols such as $\vartheta$ versus `9`; the intended economics is cross-checked against the replication `.mod`.
 
 - **(F1) Consumption Euler equation**:
+
 $$
 \widehat{\lambda}_t=E_t\{\widehat{\lambda}_{t+1}+\widehat R_t+\widehat\varepsilon^b_t-\widehat\Pi_{t+1}\}.
 $$
 
 - **(F2) Marginal utility of consumption**:
+
 $$
 \widehat{\lambda}_t=-\frac{\sigma}{1-\varrho}\left(\widehat c_t-\varrho\widehat c_{t-1}\right).
 $$
 
 - **(F3) New Keynesian Phillips curve**:
+
 $$
 \widehat\Pi_t=\beta E_t\{\widehat\Pi_{t+1}\}+
 \frac{(1-\omega)(1-\omega\beta)}{\omega}\widehat{mc}_t .
 $$
 
 - **(F4) Marginal cost equals the labor-good price**:
+
 $$
 \widehat{mc}_t=\widehat{x}^L_t .
 $$
 
 - **(F5) Wage-bargaining FOC**:
+
 $$
 \widehat J^{\ast}_t+\widehat\delta^W_t=
 \widehat\Delta^{\ast}_t+\widehat\delta^F_t-\frac{1}{1-\eta}\widehat\eta_t .
 $$
 
 - **(F6) Hours FOC under right-to-manage**:
+
 $$
 \widehat{x}^L_t+\widehat z_t+(\alpha-1)\widehat h_t=\widehat w_t .
 $$
 
 - **(F7) Aggregate real wage evolution**:
+
 $$
 \widehat w_t=\gamma(\widehat w_{t-1}-\widehat\Pi_t)+(1-\gamma)\widehat w^{\ast}_t .
 $$
 
 - **(F8) Firm-side marginal wage-surplus recursion** (`needs_review`, OCR-sensitive long formula):
+
 $$
 \begin{aligned}
 \widehat\delta^F_t={}&[1-\beta(1-\vartheta)\gamma]\left[
@@ -152,6 +160,7 @@ $$
 $$
 
 - **(F9) Worker-side marginal wage-surplus recursion** (`needs_review`, OCR-sensitive long formula):
+
 $$
 \begin{aligned}
 \delta^W\widehat\delta^W_t={}&-\frac{\alpha}{1-\alpha}wh
@@ -170,6 +179,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\delta^W_{t+1}\}.
 $$
 
 - **(F10) Value of a resetting labor firm** (`needs_review`):
+
 $$
 \begin{aligned}
 J\widehat J^{\ast}_t={}&\frac{wh}{\alpha}
@@ -182,6 +192,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat J^{\ast}_{t+1}\}.
 $$
 
 - **(F11) Worker surplus at a resetting wage** (`needs_review`):
+
 $$
 \begin{aligned}
 \Delta\widehat\Delta^{\ast}_t={}&\frac{wh}{1-\alpha}
@@ -202,6 +213,7 @@ E_t\{\widehat\lambda_{t+1}-\widehat\lambda_t+\widehat\Delta^{\ast}_{t+1}\}
 $$
 
 - **(F12) Vacancy posting condition**:
+
 $$
 -\frac{\kappa}{q}\widehat q_t=
 \frac{\beta\gamma}{1-\beta(1-\vartheta)\gamma}wh
@@ -212,41 +224,49 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) Cobb-Douglas matching function**:
+
 $$
 \widehat m_t=\xi\widehat u_t+(1-\xi)\widehat v_t .
 $$
 
 - **(F14) Employment law of motion**:
+
 $$
 \widehat n_t=(1-\vartheta)\widehat n_{t-1}+\frac{m}{n}\widehat m_{t-1}.
 $$
 
 - **(F15) Employment-unemployment link**:
+
 $$
 \widehat n_t=-\frac{u}{1-u}\widehat u_t .
 $$
 
 - **(F16) Worker-filling probability**:
+
 $$
 \widehat q_t=\widehat m_t-\widehat v_t .
 $$
 
 - **(F17) Job-finding probability**:
+
 $$
 \widehat s_t=\widehat m_t-\widehat u_t .
 $$
 
 - **(F18) Resource constraint**:
+
 $$
 y\widehat y_t=c\widehat c_t+g\widehat g_t+\kappa v\widehat v_t+\Phi n\widehat n_t .
 $$
 
 - **(F19) Aggregate production**:
+
 $$
 \widehat y_t=\widehat z_t+\alpha\widehat h_t+\widehat n_t .
 $$
 
 - **(F20) Average labor-good profit**:
+
 $$
 \widehat\Psi^L_t=
 \frac{\frac{1-\alpha}{\alpha}wh}{\frac{1-\alpha}{\alpha}wh-\Phi}
@@ -254,6 +274,7 @@ $$
 $$
 
 - **(F21) Annual inflation identity**:
+
 $$
 \widehat\Pi^a_t=\widehat\Pi_t+\widehat\Pi_{t-1}+\widehat\Pi_{t-2}+\widehat\Pi_{t-3}.
 $$
@@ -261,6 +282,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F22) Taylor rule with interest-rate smoothing**:
+
 $$
 \widehat R_t=\gamma_R\widehat R_{t-1}
 +(1-\gamma_R)\left[\frac{\gamma_\pi}{12}\widehat\Pi^a_{t-1}
@@ -269,24 +291,28 @@ $$
 $$
 
 - **(F23) Preference/risk-premium shock**:
+
 $$
 \widehat\varepsilon^b_t=\rho_b\widehat\varepsilon^b_{t-1}+\zeta^b_t,\qquad
 \zeta^b_t\sim iid\,N(0,\sigma_b^2).
 $$
 
 - **(F24) Technology shock**:
+
 $$
 \widehat z_t=\rho_z\widehat z_{t-1}+\zeta^z_t,\qquad
 \zeta^z_t\sim iid\,N(0,\sigma_z^2).
 $$
 
 - **(F25) Government spending shock**:
+
 $$
 \widehat g_t=\rho_g\widehat g_{t-1}+\zeta^g_t,\qquad
 \zeta^g_t\sim iid\,N(0,\sigma_g^2).
 $$
 
 - **(F26) Monetary policy innovation**:
+
 $$
 \widehat\varepsilon^{money}_t=\zeta^{money}_t,\qquad
 \zeta^{money}_t\sim iid\,N(0,\sigma_{money}^2).
@@ -298,31 +324,41 @@ The archive form is linearized, so simulated variables are deviations around a n
 
 1. Set $\Pi=1$, $\Pi^a=4\Pi$ in the paper's monthly notation, $R=\Pi/\beta$, and $mc=x^L=(\varepsilon-1)/\varepsilon$.
 2. Labor market:
+
 $$
 m=\sigma_m u^\xi v^{1-\xi},\qquad \vartheta n=m,\qquad u=1-n,\qquad q=m/v,\qquad s=m/u.
 $$
+
 3. Marginal utility and hours:
+
 $$
 \lambda=(c-\varrho c)^{-\sigma},\qquad
 w=x^Lz\alpha h^{\alpha-1},\qquad
 mrs=\frac{\kappa^L h^\varphi}{\lambda}.
 $$
+
 4. Bargaining and marginal wage-surplus terms:
+
 $$
 \eta J\delta^W=(1-\eta)\Delta\delta^F,
 $$
+
 $$
 \delta^F=\frac{wh}{1-\beta(1-\vartheta)\gamma},
 \qquad
 \delta^W=\frac{h}{1-\beta(1-\vartheta)\gamma}
 \left[-\frac{\alpha}{1-\alpha}w+\frac{1}{1-\alpha}mrs\right].
 $$
+
 5. Firm and worker values:
+
 $$
 J=\frac{\frac{1-\alpha}{\alpha}wh-\Phi}{1-\beta(1-\vartheta)},\qquad
 \Delta=\frac{wh-b-\frac{mrs\,h}{1+\varphi}}{1-\beta(1-\vartheta-s)}.
 $$
+
 6. Vacancy and resource equations:
+
 $$
 \kappa=q\beta J,\qquad
 y=c+g+\kappa v+\Phi n,\qquad

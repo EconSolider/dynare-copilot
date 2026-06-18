@@ -75,16 +75,19 @@ The fiscal authority uses subsidies/taxes $\tau_y$, $\tau_z$, and $S$ to offset 
 ## 3. First-Order Conditions
 
 - **(F1) Non-energy demand of worker type $i$**:
+
 $$
 g_t^i=(1-\omega_e)\left(\frac{P_t}{P_{g,t}}\right)c_t^i.
 $$
 
 - **(F2) Energy demand of worker type $i$**:
+
 $$
 e_t^i=\omega_e\left(\frac{P_t}{P_{e,t}}\right)c_t^i+\xi.
 $$
 
 - **(F3) CPI aggregator**:
+
 $$
 P_t=\left(\frac{P_{g,t}}{1-\omega_e}\right)^{1-\omega_e}
 \left(\frac{P_{e,t}}{\omega_e}\right)^{\omega_e}.
@@ -93,6 +96,7 @@ $$
 `needs_review`: the source prints (4) as a Cobb-Douglas price index; this equation should be checked against the PDF before final review.
 
 - **(F4) Employed-worker Euler inequality**:
+
 $$
 \frac{1}{c_t^n}\geq \beta E_t\left\{\left(\frac{1+i_t}{1+\pi_{t+1}}\right)
 \left[(1-\lambda_{t+1})\frac{1}{c_{t+1}^n}+\lambda_{t+1}\frac{1}{c_{t+1}^u}\right]\right\}.
@@ -101,6 +105,7 @@ $$
 `needs_review`: multiplication inside the expectation is source-intended; OCR spacing may obscure it.
 
 - **(F5) Unemployed-worker Euler inequality**:
+
 $$
 \frac{1}{c_t^u}\geq \beta E_t\left\{\left(\frac{1+i_t}{1+\pi_{t+1}}\right)
 \left[f_{t+1}\frac{1}{c_{t+1}^n}+(1-f_{t+1})\frac{1}{c_{t+1}^u}\right]\right\}.
@@ -109,78 +114,93 @@ $$
 `needs_review`: multiplication inside the expectation is source-intended; OCR spacing may obscure it.
 
 - **(F6) Zero-liquidity employed consumption**:
+
 $$
 c_t^n=w_t-p_{e,t}\xi.
 $$
 
 - **(F7) Zero-liquidity unemployed consumption**:
+
 $$
 c_t^u=\delta_t-p_{e,t}\xi.
 $$
 
 - **(F8) Variety demand**:
+
 $$
 y_t(k)=Y_t\left[\frac{P_t(k)}{P_{g,t}}\right]^{-\varepsilon}.
 $$
 
 - **(F9) Input demand for labor services**:
+
 $$
 l_t(k)=(1-\gamma_e)y_t(k).
 $$
 
 - **(F10) Input demand for energy**:
+
 $$
 e_t(k)=\gamma_e y_t(k).
 $$
 
 - **(F11) Wholesale real marginal cost**:
+
 $$
 mc_{g,t}=(1-\gamma_e)\frac{\Phi_t}{P_{g,t}}+\gamma_e\frac{P_{e,t}}{P_{g,t}}.
 $$
 
 - **(F12) Optimal reset price ratio**:
+
 $$
 \bar p_{g,t}=\frac{\bar P_t}{P_{g,t}}=\frac{{\cal Y}_t}{{\cal Z}_t}.
 $$
 
 - **(F13) Calvo numerator recursion**:
+
 $$
 {\cal Y}_t=(1-\tau_y)\left(\frac{\varepsilon}{\varepsilon-1}\right)\frac{P_{g,t}}{P_t}mc_{g,t}Y_t
 +\theta\beta E_t\left[(1+\pi_{g,t+1})^{\varepsilon}{\cal Y}_{t+1}\right].
 $$
 
 - **(F14) Calvo denominator recursion**:
+
 $$
 {\cal Z}_t=\frac{P_{g,t}}{P_t}Y_t+\theta\beta E_t\left[(1+\pi_{g,t+1})^{\varepsilon-1}{\cal Z}_{t+1}\right].
 $$
 
 - **(F15) Non-energy inflation law from the Calvo price index**:
+
 $$
 1+\pi_{g,t}=\left[\frac{1}{\theta}-\left(\frac{1-\theta}{\theta}\right)(\bar p_{g,t})^{1-\varepsilon}\right]^{\frac{1}{\varepsilon-1}}.
 $$
 
 - **(F16) Price dispersion law**:
+
 $$
 {\cal D}_t=(1-\theta)(\bar p_{g,t})^{-\varepsilon}+\theta(1+\pi_{g,t})^{\varepsilon}{\cal D}_{t-1}.
 $$
 
 - **(F17) Matching function**:
+
 $$
 m_t=s_t^{\alpha}v_t^{1-\alpha},\qquad s_t=u_{t-1}+\rho n_{t-1}.
 $$
 
 - **(F18) Job-finding and vacancy-filling rates**:
+
 $$
 f_t=\frac{m_t}{s_t},\qquad q_t=\frac{m_t}{v_t}=f_t^{\frac{\alpha}{\alpha-1}}.
 $$
 
 - **(F19) Job creation / free entry**:
+
 $$
 f_t^{\frac{\alpha}{1-\alpha}}=\frac{1-\tau_z}{\kappa}(\varphi_t-w_t+S)
 +\beta(1-\rho)E_t\left[f_{t+1}^{\frac{\alpha}{1-\alpha}}\right].
 $$
 
 - **(F20) Wage schedule for the linearized model**:
+
 $$
 \widetilde w_t=-\chi\widetilde p_{e,t}.
 $$
@@ -188,60 +208,71 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F21) Employment law of motion**:
+
 $$
 n_{t+1}=(1-\lambda_{t+1})n_t+f_{t+1}u_t.
 $$
 
 - **(F22) Unemployment law of motion**:
+
 $$
 u_{t+1}=(1-f_{t+1})u_t+\lambda_{t+1}n_t.
 $$
 
 - **(F23) Separation and unemployment identity**:
+
 $$
 u_t=1-n_t,\qquad \lambda_{t+1}=\rho(1-f_{t+1}).
 $$
 
 - **(F24) Labor-market clearing**:
+
 $$
 n_t=(1-\gamma_e)Y_t{\cal D}_t.
 $$
 
 - **(F25) Firm-owner consumption**:
+
 $$
 c_t^o=\left(\frac{p_{g,t}{\cal D}_t^{-1}-\gamma_e p_{e,t}}{1-\gamma_e}-w_t\right)n_t
 -\kappa\left\{\frac{n_t-(1-\rho)n_{t-1}}{[1-(1-\rho)n_{t-1}]^{\alpha}}\right\}^{\frac{1}{1-\alpha}}.
 $$
 
 - **(F26) Linearized unemployment dynamics**:
+
 $$
 \widehat u_t=(1-\rho)(1-f)\widehat u_{t-1}
 -\frac{\rho}{f+\rho(1-f)}\widehat f_t.
 $$
 
 - **(F27) Linearized job creation**:
+
 $$
 \widehat f_t=\frac{qf}{\kappa}\left(\frac{1-\alpha}{\alpha}\right)(1-\tau_z)(\widehat\varphi_t-\widehat w_t)
 +\beta(1-\rho)E_t(\widehat f_{t+1}).
 $$
 
 - **(F28) Linearized real marginal cost**:
+
 $$
 \widehat{mc}_{g,t}=(1-\gamma_e)\frac{1}{p_g}\widehat\varphi_t
 +\left(\gamma_e\frac{p_e}{p_g}+\frac{\omega_e}{1-\omega_e}\right)\widetilde p_{e,t}.
 $$
 
 - **(F29) New Keynesian Phillips curve**:
+
 $$
 \pi_{g,t}=\beta E_t(\pi_{g,t+1})+\Theta\widehat{mc}_{g,t}.
 $$
 
 - **(F30) CPI inflation identity**:
+
 $$
 \pi_t=\pi_{g,t}+\frac{\omega_e}{1-\omega_e}(\widetilde p_{e,t}-\widetilde p_{e,t-1}).
 $$
 
 - **(F31) Dynamic IS condition**:
+
 $$
 \widetilde I_t-E_t(\pi_{t+1})
 =E_t(\widetilde w_{t+1}-\widetilde w_t)
@@ -250,17 +281,20 @@ $$
 $$
 
 - **(F32) Simple interest-rate rule**:
+
 $$
 \widetilde I_t=\phi_{\pi}\pi_{g,t}+\phi_f\widehat f_t.
 $$
 
 - **(F33) Natural-minus-efficient unemployment wedge, analytical case**:
+
 $$
 \widehat u_t^n-\widehat u_t^{\ast}
 =\frac{w}{2\kappa}\left(\frac{\zeta\Xi_w}{1-\zeta-\Xi_w}\right)(1+\chi)\widetilde p_{e,t}.
 $$
 
 - **(F34) Welfare-relevant NKPC, analytical case**:
+
 $$
 \pi_{g,t}=\beta E_t(\pi_{g,t+1})
 -\Theta\frac{2\kappa}{p_g}(1-\gamma_e){\cal V}_t
@@ -268,6 +302,7 @@ $$
 $$
 
 - **(F35) Linear-quadratic loss**:
+
 $$
 E_t\sum_{j=0}^{\infty}\beta^j\left({\cal V}_{t+j}^2+\Omega\pi_{g,t+j}^2\right).
 $$
@@ -275,6 +310,7 @@ $$
 ## 5. Exogenous Processes
 
 - **(F36) Real energy price shock**:
+
 $$
 \widetilde p_{e,t}=\rho_e\widetilde p_{e,t-1}+\varepsilon^e_t.
 $$
@@ -286,24 +322,32 @@ The paper sets the steady-state real energy price at $p_e=1$ and considers a one
 - The constrained-efficient steady state has zero non-energy inflation, $\pi_g=0$, and therefore $\bar p_g=1$ and ${\cal D}=1$.
 - The real energy price mean is $p_e=1$.
 - The wholesale production subsidy offsets the steady-state markup:
+
 $$
 \tau_y=\frac{1}{\varepsilon}.
 $$
+
 - The efficient wage is:
+
 $$
 w^{\ast}=\frac{1}{\nu}+\xi p_e.
 $$
+
 - The steady-state fiscal instruments reported by the source are:
+
 $$
 \tau_y=\frac{1}{\varepsilon},\qquad
 S=\frac{1}{\nu}\ln\left(\frac{w^{\ast}-\xi p_e}{\delta-\xi p_e}\right),\qquad
 \tau_z=1-\frac{(1-\alpha)[1-\beta(1-\rho)]}{1-\beta(1-\rho)(1-\alpha f^{\ast})}.
 $$
+
 - The steady-state efficient job-finding rate satisfies:
+
 $$
 f^{\ast}=\left[\frac{1-\tau_z}{\kappa[1-\beta(1-\rho)]}
 \left(\frac{p_g-\gamma_e p_e}{1-\gamma_e}-w^{\ast}+S\right)\right]^{\frac{1-\alpha}{\alpha}}.
 $$
+
 - The quantitative calibration targets a quarterly model with $\beta=0.98$, $\omega_e=0.08$, $\Xi_w=0.11$, $f=0.25$, $u=0.10$, $\rho=0.037$, $\alpha=0.6$, $\chi=0.1$, $\gamma_e=0.04$, $\theta=3/4$, and $\varepsilon=4$.
 - For the linearized model, steady states are normalized as deviations from the constrained-efficient steady state: hatted level deviations and tilded proportional deviations are zero in steady state.
 

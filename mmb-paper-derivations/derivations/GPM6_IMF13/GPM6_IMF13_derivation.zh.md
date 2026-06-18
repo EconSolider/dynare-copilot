@@ -25,36 +25,43 @@
 由于链接来源是半结构模型，以下是行为/均衡方程，而不是由显式最优化推出的 FOC。编号连续保留，便于归档和后续 `.mod` 核对。
 
 - **(F1) 潜在产出水平**：
+
 $$
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g^{\overline{Y}}_t}{4} + \varepsilon^{\overline{Y}}_t
 $$
 
 - **(F2) 潜在产出增长过程**：
+
 $$
 g^{\overline{Y}}_t = \tau g^{\overline{Y},ss} + (1-\tau)g^{\overline{Y}}_{t-1} + \varepsilon^{g^{\overline{Y}}}_t
 $$
 
 - **(F3) NAIRU 水平**：
+
 $$
 \overline{U}_t = \overline{U}_{t-1} + g^{\overline{U}}_t + \varepsilon^{\overline{U}}_t
 $$
 
 - **(F4) NAIRU 增长过程**：
+
 $$
 g^{\overline{U}}_t = (1-\alpha_3)g^{\overline{U}}_{t-1} + \varepsilon^{g^{\overline{U}}}_t
 $$
 
 - **(F5) 基准模型产出缺口方程**：
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon^y_t
 $$
 
 - **(F6) 通胀方程**：
+
 $$
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon^\pi_t
 $$
 
 - **(F7) Taylor 型政策利率方程**：
+
 $$
 rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 + \gamma_2\left(\pi4_{t+3}-\pi^{tar}\right) + \gamma_4 y_t\right]
@@ -62,16 +69,19 @@ rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 $$
 
 - **(F8) 动态 Okun 方程**：
+
 $$
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon^u_t
 $$
 
 - **(F9) 金融联动扩展中的银行贷款收紧方程**：
+
 $$
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon^{BLT}_t
 $$
 
 - **(F10) 含金融联动的产出缺口方程**：
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1}
 - \theta\eta_t + \varepsilon^y_t
@@ -82,16 +92,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F11) 实际利率定义**：
+
 $$
 rr_t = rs_t - \pi_{t+1}
 $$
 
 - **(F12) 实际利率缺口**：
+
 $$
 rrgap_t = rr_t - \overline{rr}_t
 $$
 
 - **(F13) 银行贷款收紧的分布滞后项**：
+
 $$
 \eta_t = 0.04\varepsilon^{BLT}_{t-1}
 + 0.08\varepsilon^{BLT}_{t-2}
@@ -105,6 +118,7 @@ $$
 $$
 
 - **(F14) 来源中说明的测度定义**：
+
 $$
 y_t = Y_t-\overline{Y}_t,\qquad
 u_t = \overline{U}_t-U_t,\qquad
@@ -117,11 +131,13 @@ $$
 ## 5. Exogenous Processes
 
 - **(F15) 均衡实际利率**：
+
 $$
 \overline{rr}_t = \rho\overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon^{\overline{rr}}_t
 $$
 
 - **(F16) 均衡 BLT 随机游走**：
+
 $$
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon^{\overline{BLT}}_t
 $$

@@ -49,6 +49,7 @@ Fiscal authorities obey government budget constraints and instrument rules. The 
 The equations below record the home-country block. The foreign country is structurally analogous, with starred notation in the paper and `f` prefixes in the implementation cross-check.
 
 - **(F1) Optimizing household marginal utility of income**:
+
 $$
 \lambda_t^o=
 \frac{(c_t^o-hc_{t-1}^o)^{-\sigma_c}
@@ -57,6 +58,7 @@ $$
 $$
 
 - **(F2) Domestic bond Euler equation**:
+
 $$
 \lambda_t^o=\beta E_t\left[
 \lambda_{t+1}^o
@@ -65,6 +67,7 @@ $$
 $$
 
 - **(F3) Capital Euler equation**:
+
 $$
 Q_t=\beta E_t\left[
 \frac{\lambda_{t+1}^o}{\lambda_t^o}
@@ -73,6 +76,7 @@ Q_t=\beta E_t\left[
 $$
 
 - **(F4) Investment/Tobin's Q condition** (`needs_review`: MinerU OCR drops part of the exponent in the adjustment-cost term):
+
 $$
 1=Q_t\left[1-S(I_t^o/I_{t-1}^o)-I_t^o S'(I_t^o/I_{t-1}^o)\right]
 +\beta E_t\left[
@@ -83,18 +87,21 @@ S'(I_{t+1}^o/I_t^o)
 $$
 
 - **(F5) International bond Euler equation**:
+
 $$
 \lambda_t^o=\beta R_t^{ecb}\exp\left[-\psi_d(d_t-\bar d)/Y_t\right]
 E_t\left[\frac{\lambda_{t+1}^o}{\pi_{t+1}}\right].
 $$
 
 - **(F6) Rule-of-thumb household budget constraint**:
+
 $$
 (1+\tau_t^c)c_t^r=(1-\tau_t^w)(w_t^p n_t^{p,r}+w_t^g n_t^{g,r})
 +(1-n_t^{p,r}-n_t^{g,r})\kappa^B.
 $$
 
 - **(F7) Rule-of-thumb marginal utility**:
+
 $$
 \lambda_t^r=
 \frac{(c_t^r-hc_{t-1}^r)^{-\sigma_c}
@@ -103,101 +110,121 @@ $$
 $$
 
 - **(F8) Retail CES demand for intermediate variety $j$**:
+
 $$
 y_t(j)=\left(\frac{P_{At}(j)}{P_{At}}\right)^{-\varepsilon}Y_t.
 $$
 
 - **(F9) Producer price index**:
+
 $$
 P_{At}=\left(\int_0^\omega \frac{1}{\omega}P_{At}(j)^{1-\varepsilon}dj\right)^{1/(1-\varepsilon)}.
 $$
 
 - **(F10) Intermediate-goods production and price dispersion**:
+
 $$
 Y_tD_t=A_t(k_{t-1}^g)^\eta k_{t-1}^{\alpha}L_t^{1-\alpha}.
 $$
 
 - **(F11) Rental rate of private capital**:
+
 $$
 r_t^k=mc_t\alpha\frac{Y_t}{k_{t-1}}.
 $$
 
 - **(F12) Labor-service price**:
+
 $$
 x_t=mc_t(1-\alpha)\frac{Y_t}{L_t}.
 $$
 
 - **(F13) Calvo optimal-price condition** (`needs_review`: compact infinite-sum condition summarized into recursive implementation form):
+
 $$
 \tilde p_t=\frac{\varepsilon}{\varepsilon-1}\frac{q_{1,t}}{q_{2,t}}.
 $$
 
 - **(F14) Calvo numerator recursion**:
+
 $$
 q_{1,t}=\lambda_t^oY_tmc_t+\theta_P\beta E_t[\pi_{A,t+1}^{\varepsilon}q_{1,t+1}].
 $$
 
 - **(F15) Calvo denominator recursion**:
+
 $$
 q_{2,t}=\lambda_t^oY_tp_{B,t}^{-(1-\omega-\psi)}
 +\theta_P\beta E_t[\pi_{A,t+1}^{\varepsilon-1}q_{2,t+1}].
 $$
 
 - **(F16) PPI inflation law**:
+
 $$
 1=\theta_P\pi_{A,t}^{\varepsilon-1}+(1-\theta_P)\tilde p_t^{1-\varepsilon}.
 $$
 
 - **(F17) Price dispersion law**:
+
 $$
 D_t=(1-\theta_P)\tilde p_t^{-\varepsilon}
 +\theta_P\pi_{A,t}^{\varepsilon}D_{t-1}.
 $$
 
 - **(F18) CPI inflation from PPI inflation and terms of trade**:
+
 $$
 \pi_t=\pi_{A,t}\left(\frac{p_{B,t}}{p_{B,t-1}}\right)^{1-\omega-\psi}.
 $$
 
 - **(F19) Searching-worker pool**:
+
 $$
 \tilde U_t=U_{t-1}+s^pN_{t-1}^p+s^gN_{t-1}^g.
 $$
 
 - **(F20) Sectoral matching functions**:
+
 $$
 M_t^f=\kappa_e^f(\tilde U_t)^{\phi^f}(v_t^f)^{1-\phi^f},\qquad f\in\{p,g\}.
 $$
 
 - **(F21) Job-finding and vacancy-filling probabilities**:
+
 $$
 p_t^f=\frac{M_t^f}{\tilde U_t},\qquad q_t^f=\frac{M_t^f}{v_t^f}.
 $$
 
 - **(F22) Sectoral employment law of motion**:
+
 $$
 N_t^f=(1-s^f)N_{t-1}^f+p_t^f\tilde U_t,\qquad f\in\{p,g\}.
 $$
 
 - **(F23) Unemployment identity**:
+
 $$
 U_t=1-N_t^{tot},\qquad N_t^{tot}=N_t^p+N_t^g.
 $$
 
 - **(F24) Vacancy free-entry condition**:
+
 $$
 \frac{\kappa_v^p}{q_t^p}+\kappa_{tc}
 =(1-\theta_w^n)J_t(\tilde W_t^p)+\theta_w^nJ_t(W_{t-1}^p).
 $$
 
 - **(F25) Union-firm Nash sharing rule** (`needs_review`: source expression has OCR noise in tax-rate notation):
+
 $$
 \Omega_t=\frac{\xi}{1-\xi}\cdot
 \frac{\mathcal A_t^w}{\mathcal A_t^{sc}}\cdot J_t(\tilde W_t^p),
 $$
+
 where $\mathcal A_t^w$ and $\mathcal A_t^{sc}$ are the expected discounted labor-tax and social-security tax wedges appearing in the paper's Eq. (58).
 
 - **(F26) Average private real wage law**:
+
 $$
 w_t^p=
 \frac{(1-s^p)N_{t-1}^p}{N_t^p}
@@ -209,42 +236,50 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F27) Aggregate consumption**:
+
 $$
 C_t=(1-\mu)c_t^o+\mu c_t^r.
 $$
 
 - **(F28) Optimizer-only aggregate stocks and investment**:
+
 $$
 k_t=(1-\mu)k_t^o,\qquad I_t=(1-\mu)I_t^o,\qquad b_t=(1-\mu)b_t^o,\qquad d_t=(1-\mu)d_t^o.
 $$
 
 - **(F29) Private capital accumulation**:
+
 $$
 k_t=(1-\delta^k)k_{t-1}+[1-S(I_t/I_{t-1})]I_t,\qquad
 S(x)=\frac{\kappa_I}{2}(x-1)^2.
 $$
 
 - **(F30) Private output absorption**:
+
 $$
 Y_t=C_t^g+C_{A,t}^{tot}+I_{A,t}^{tot}+I_t^g+\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot}).
 $$
 
 - **(F31) Total GDP definition**:
+
 $$
 Y_t^{tot}=Y_t+g_t^g.
 $$
 
 - **(F32) Government spending decomposition**:
+
 $$
 G_t=C_t^g+I_t^g+\left[(1+\tau_t^{sc})w_t^gN_t^g\right]p_{B,t}^{1-\omega-\psi}.
 $$
 
 - **(F33) Government budget constraint / debt accumulation**:
+
 $$
 b_t=\frac{R_{t-1}}{\pi_t}b_{t-1}+PD_t.
 $$
 
 - **(F34) Primary deficit**:
+
 $$
 PD_t=
 \left[\frac{G_t}{p_{B,t}^{1-\omega-\psi}}+\kappa^BU_t+Sub_t\right]
@@ -254,16 +289,19 @@ PD_t=
 $$
 
 - **(F35) Public capital accumulation**:
+
 $$
 k_t^g=(1-\delta^g)k_{t-1}^g+I_t^g.
 $$
 
 - **(F36) Terms of trade law**:
+
 $$
 p_{B,t}=\frac{\pi_{B,t}}{\pi_{A,t}}p_{B,t-1}.
 $$
 
 - **(F37) Home current account / net foreign asset identity** (`needs_review`: verify price-deflator convention against PDF before code generation):
+
 $$
 d_t=\frac{R_{t-1}^{ecb}\exp[-\psi_d(d_{t-1}-\bar d)/Y_{t-1}]}{\pi_{A,t}}d_{t-1}
 +\frac{1-\omega}{\omega}(C_{A,t}^{\ast,tot}+I_{A,t}^{\ast,tot})
@@ -273,29 +311,35 @@ $$
 ## 5. Exogenous Processes
 
 - **(F38) Technology process**:
+
 $$
 \log A_t=\rho_A\log A_{t-1}+\varepsilon_t^A.
 $$
 
 - **(F39) Fiscal instrument rules**:
+
 $$
 X_t=\bar X+\rho_X(X_{t-1}-\bar X)
 +(1-\rho_X)\varphi_X e_X^{aux}
 \left(\frac{b_{t-1}}{Y_{t-1}^{tot}}p_{B,t-1}^{1-\omega-\psi}-\omega^b\right)
 +\varepsilon_t^X,
 $$
+
 for tax-rate instruments $X\in\{\tau^w,\tau^{sc},\tau^b,\tau^c,\tau^k\}$.
 
 - **(F40) Expenditure and transfer instrument rules**:
+
 $$
 \frac{X_t}{\bar X}=
 \left(\frac{X_{t-1}}{\bar X}\right)^{\rho_X}
 \left(\frac{b_{t-1}}{\omega^bY_{t-1}^{tot}}p_{B,t-1}^{1-\omega-\psi}\right)^{(1-\rho_X)\varphi_X}
 \exp(\varepsilon_t^X),
 $$
+
 for $X\in\{C^g,I^g,w^g,N^g,Sub,T\}$.
 
 - **(F41) Union-wide Taylor rule**:
+
 $$
 \frac{R_t^{ecb}}{\bar R^{ecb}}=
 \left(\frac{R_{t-1}^{ecb}}{\bar R^{ecb}}\right)^{\rho_i}

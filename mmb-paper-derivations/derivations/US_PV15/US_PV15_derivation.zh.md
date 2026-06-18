@@ -60,26 +60,31 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 消费边际效用**：
+
 $$
 \lambda_t^c = (C_t - h C_{t-1})^{-\sigma_c}.
 $$
 
 - **(F2) 存款欧拉方程**：
+
 $$
 \beta E_t\left[\frac{\lambda_{t+1}^c}{\lambda_t^c}\right] e^{\varepsilon_t^B}(1+r_t)=1.
 $$
 
 - **(F3) 股份欧拉方程**：
+
 $$
 v_t=(1-\delta)\beta E_t\left[\frac{\lambda_{t+1}^c}{\lambda_t^c}\left(d_{t+1}+v_{t+1}+\theta d_{t+1}^E\right)\right].
 $$
 
 - **(F4) 劳动供给**：
+
 $$
 \lambda_t^c w_t^h=\chi H_{jt}^{\sigma_H}.
 $$
 
 - **(F5) 自由进入条件**：
+
 $$
 f_E mc_t^E
 =v_t\frac{\partial[(1-AC_t^E)n_t^E]}{\partial n_t^E}e^{\varepsilon_t^E}
@@ -89,6 +94,7 @@ v_{t+1}\frac{\partial(1-AC_{t+1}^E)}{\partial n_t^E}n_{t+1}^E e^{\varepsilon_{t+
 $$
 
 - **(F6) 工资设定条件**：
+
 $$
 \frac{W_t}{P_t^C}
 =\mu_t^W\frac{W_t^h}{P_t^C}
@@ -99,16 +105,19 @@ AC_t^{W\prime}
 $$
 
 - **(F7) 在位企业生产函数**：
+
 $$
 n_tY_t=e^{\varepsilon_t^A}(K_{t+1}^u)^\alpha(H_t^d)^{1-\alpha}.
 $$
 
 - **(F8) 已利用资本**：
+
 $$
 K_{t+1}^u=u_tK_t.
 $$
 
 - **(F9) 实际边际成本**：
+
 $$
 mc_t=\frac{1}{e^{\varepsilon_t^A}}
 \left(\frac{z_t}{\alpha}\right)^\alpha
@@ -116,22 +125,26 @@ mc_t=\frac{1}{e^{\varepsilon_t^A}}
 $$
 
 - **(F10) 成本最小化投入组合**：
+
 $$
 \alpha H_t^d w_t=(1-\alpha)K_{t+1}^u z_t.
 $$
 
 - **(F11) 相对价格加成关系**：
+
 $$
 \rho_t=\mu_t mc_t.
 $$
 
 - **(F12) 时变商品加成**（`needs_review`：MinerU 对辅助变量 $\Psi_t$ 附近的 OCR 较嘈杂）：
+
 $$
 \mu_t=e^{\varepsilon_t^P}
 \frac{\epsilon_P}{(\epsilon_P-1)\left(1-\frac{P_t^C}{P_t}AC_t^P\right)+\kappa_P\Psi_t}.
 $$
 
 - **(F13) 价格调整辅助项**（`needs_review`）：
+
 $$
 \Psi_t =
 \left(\pi_t-[\xi_P\pi_{t-1}+(1-\xi_P)]\right)\pi_t
@@ -144,31 +157,37 @@ $$
 $$
 
 - **(F14) 在位企业股息**：
+
 $$
 d_t=(\rho_t-mc_t-AC_t^P)Y_t.
 $$
 
 - **(F15) 初创企业生产技术**：
+
 $$
 n_t^E f_E=e^{\varepsilon_t^A}H_t^E.
 $$
 
 - **(F16) 新企业边际成本**：
+
 $$
 mc_t^E=\frac{w_t}{e^{\varepsilon_t^A}}(1+\gamma r_t^L).
 $$
 
 - **(F17) 企业家资产负债表**：
+
 $$
 L_{t+1}+NW_{t+1}=Q_tK_{t+1}+\gamma W_tH_t^E.
 $$
 
 - **(F18) 违约截止点**：
+
 $$
 \omega_t^C(1+r_t^k)Q_{t-1}K_t=(1+r_{t-1}^L)L_t.
 $$
 
 - **(F19) 外部融资溢价 / 企业家 FOC**（`needs_review`：论文相邻方程中混用 $\chi$ 和 $\varkappa$ 记号）：
+
 $$
 \frac{1+E_t r_{t+1}^k}{1+r_t^L}
 =\frac{\kappa-1}{\kappa\bar{\omega}^C}
@@ -178,16 +197,19 @@ $$
 $$
 
 - **(F20) 企业家净值运动方程**：
+
 $$
 NW_{t+1}=(1-\delta)(1-\theta)d_t^E+T^E.
 $$
 
 - **(F21) 企业家股息**：
+
 $$
 n_td_t^E=\eta_t(\bar{\omega}_t-\omega_t^C)(1+R_t^k)Q_{t-1}K_t e^{\varepsilon_t^N}.
 $$
 
 - **(F22) 贷款边际成本**：
+
 $$
 1+MC_t^L=(1+R_t)E_t\left[
 \eta_{t+1}+(1-\mu^B)(1-\eta_{t+1})\frac{\omega_{t+1}}{\omega_{t+1}^C}
@@ -195,6 +217,7 @@ $$
 $$
 
 - **(F23) 名义贷款利率设定**：
+
 $$
 R_t^L=\mu_t^LMC_t^L
 -(\mu_t^L-1)R_t^L
@@ -209,16 +232,19 @@ R_t^L=\mu_t^LMC_t^L
 $$
 
 - **(F24) 实际贷款利率**：
+
 $$
 1+r_t^L=\frac{1+R_t^L}{E_t\pi_{t+1}^C}.
 $$
 
 - **(F25) 资本积累**：
+
 $$
 K_{t+1}=e^{\varepsilon_t^I}(1-AC_t^I)I_t+(1-\delta)K_t.
 $$
 
 - **(F26) 已安装资本影子价值**（`needs_review`：源方程以 $\varepsilon_t^I q_t$ 开头；实现交叉检查使用 $e^{\varepsilon_t^I}q_t$）：
+
 $$
 \varepsilon_t^I q_t
 =1+e^{\varepsilon_t^I}q_t
@@ -230,11 +256,13 @@ $$
 $$
 
 - **(F27) 资本利用率条件**：
+
 $$
 z_t=\bar{Z}\exp\left[\frac{\psi}{1-\psi}(u_t-1)\right].
 $$
 
 - **(F28) 资本回报**：
+
 $$
 1+r_t^k=\frac{z_tu_t-\Phi(u_t)+(1-\delta)q_t}{q_{t-1}}.
 $$
@@ -242,6 +270,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F29) 货币政策规则**（`needs_review`：源方程同时使用 $\rho$ 和 $\rho_R$）：
+
 $$
 R_t-\bar{R}
 =\rho(R_{t-1}-\bar{R})
@@ -250,37 +279,44 @@ R_t-\bar{R}
 $$
 
 - **(F30) Fisher 方程**：
+
 $$
 1+r_t=\frac{1+R_t}{E_t\pi_{t+1}^C}.
 $$
 
 - **(F31) 总需求 / 资源约束**：
+
 $$
 Y_t^d=C_t+I_t+\bar{G}\varepsilon_t^G+\Phi(u_t)K_{t-1}
 +n_tAC_t^PY_t+AC_t^WH_t+AC_t^LL_{t+1}.
 $$
 
 - **(F32) 品种价格关系**：
+
 $$
 n_t\rho_t^{1-\epsilon_P}=1.
 $$
 
 - **(F33) 相对价格通胀恒等式**：
+
 $$
 \frac{\rho_t}{\rho_{t-1}}=\frac{\pi_t}{\pi_t^C}.
 $$
 
 - **(F34) 商品市场均衡**：
+
 $$
 n_tY_t=\rho_t^{-\epsilon_P}Y_t^d.
 $$
 
 - **(F35) 劳动市场均衡**：
+
 $$
 H_t=H_t^d+H_t^E.
 $$
 
 - **(F36) 企业品种运动方程**（`needs_review`：Appendix B 使用 $n_{jt}$ 记号；这里按模型正文作总量解释）：
+
 $$
 n_t=(1-\delta)\left[n_{t-1}+e^{\varepsilon_{t-1}^E}(1-AC_{t-1}^E)n_{t-1}^E\right].
 $$
@@ -290,51 +326,61 @@ $$
 论文估计生产率、政府支出、偏好、投资、银行加成、净值、价格加成、工资加成、进入和货币政策冲击。Appendix B 将创新项嵌入均衡方程，而不是把所有冲击过程单独列为显示方程。实现交叉检查使用：
 
 - **(F37) 生产率冲击**：
+
 $$
 \varepsilon_t^A=\rho_A\varepsilon_{t-1}^A+e_t^A.
 $$
 
 - **(F38) 政府支出冲击，实现中含生产率创新溢出项**：
+
 $$
 \varepsilon_t^G=\rho_G\varepsilon_{t-1}^G+e_t^G+\rho_{AG}e_t^A.
 $$
 
 - **(F39) 偏好冲击**：
+
 $$
 \varepsilon_t^B=\rho_B\varepsilon_{t-1}^B+e_t^B.
 $$
 
 - **(F40) 投资冲击**：
+
 $$
 \varepsilon_t^I=\rho_I\varepsilon_{t-1}^I+e_t^I.
 $$
 
 - **(F41) 银行加成冲击**：
+
 $$
 \varepsilon_t^L=\rho_L\varepsilon_{t-1}^L+e_t^L.
 $$
 
 - **(F42) 净值冲击**：
+
 $$
 \varepsilon_t^N=\rho_N\varepsilon_{t-1}^N+e_t^N.
 $$
 
 - **(F43) 价格加成冲击**：
+
 $$
 \varepsilon_t^P=\rho_P\varepsilon_{t-1}^P+e_t^P-u_Pe_{t-1}^P.
 $$
 
 - **(F44) 工资加成冲击**：
+
 $$
 \varepsilon_t^W=\rho_W\varepsilon_{t-1}^W+e_t^W-u_We_{t-1}^W.
 $$
 
 - **(F45) 进入冲击**：
+
 $$
 \varepsilon_t^E=\rho_E\varepsilon_{t-1}^E+e_t^E.
 $$
 
 - **(F46) 货币政策冲击**：
+
 $$
 \varepsilon_t^R=\rho_R\varepsilon_{t-1}^R+e_t^R.
 $$
@@ -346,47 +392,56 @@ $$
 论文在 Appendix B.2 给出构造性稳态求解顺序。下列方程保留该顺序，并标记 OCR 问题。
 
 1. 设定零稳态通胀并计算实际政策利率：
+
 $$
 \bar{\pi}^C=\bar{\pi}=1,\qquad \bar{r}=\bar{R}=\beta^{-1}-1.
 $$
 
 2. 校准稳态贷款利率：
+
 $$
 \bar{R}^L=\bar{r}^L=\left(1+\frac{0.98}{100}\right)\bar{R}-1.
 $$
 
 3. 使用贷款资本比目标：
+
 $$
 \omega_{\min}=\frac{\bar{L}}{\bar{K}}=0.50,\qquad
 \kappa=\frac{1}{1-\omega_{\min}}=\frac{\bar{K}}{\bar{L}}=2.
 $$
 
 4. 用违约率目标求：
+
 $$
 \bar{\omega}^C=\omega_{\min}\bar{\eta}^{-\kappa}.
 $$
 
 5. 复原稳态资本回报和边际产出：
+
 $$
 \bar{r}^K=\frac{1+\bar{r}^L}{\bar{\omega}^C}\left(1-\frac{\bar{L}}{\bar{K}}\right)-1,\qquad
 \bar{z}=\bar{r}^K+\delta.
 $$
 
 6. 计算 Pareto 项目回报的条件均值和贷款边际成本：
+
 $$
 1=\bar{\eta}\bar{\omega}+(1-\bar{\eta})\underline{\omega},\qquad
 \underline{\omega}=\frac{1-\bar{\eta}\bar{\omega}}{1-\bar{\eta}},
 $$
+
 $$
 \overline{mc}^L=(1+\bar{r})\left[\bar{\eta}+(1-\mu^B)(1-\bar{\eta})\frac{\underline{\omega}}{\bar{\omega}^C}\right]^{-1}-1.
 $$
 
 7. 计算贷款加成（`needs_review`：论文 B.43 附近 OCR 有歧义；实现中设为 `mu_L=rL/mcL`）：
+
 $$
 \mu_L \approx \frac{\bar{r}^L}{\overline{mc}^L}.
 $$
 
 8. 使用自由进入/股份估值方程求稳态企业数：
+
 $$
 \bar{n}=\bar{H}
 \left[
@@ -395,24 +450,30 @@ $$
 +f_E\frac{\delta}{1-\delta}
 \right]^{-1},
 $$
+
 其中
+
 $$
 d^K=\theta\bar{\eta}\bar{\omega}^C(\kappa-1)^{-1}(1+\bar{r}^K).
 $$
 
 9. 完成实际配置：
+
 $$
 \bar{\rho}=\bar{n}^{1/(\epsilon_P-1)},\qquad
 \overline{mc}=\frac{\bar{\rho}}{\bar{\mu}},
 $$
+
 $$
 \bar{n}^E=\bar{n}\frac{\delta}{1-\delta},\qquad
 \bar{H}^E=f_E\bar{n}\frac{\delta}{1-\delta},\qquad
 \bar{H}^d=\bar{H}-\bar{H}^E,
 $$
+
 $$
 \bar{w}=(1-\alpha)\left[\overline{mc}\left(\frac{\alpha}{\bar{z}}\right)^\alpha\right]^{1/(1-\alpha)},
 $$
+
 $$
 \bar{K}=\frac{\alpha}{\bar{z}(1-\alpha)}\bar{H}^d\bar{w}.
 $$

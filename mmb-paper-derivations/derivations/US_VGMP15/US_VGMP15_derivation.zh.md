@@ -73,32 +73,38 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 家庭石油/最终品支出分配**：
+
 $$
 P_{e,t}C_{e,t}=xP_{c,t}C_t.
 $$
 
 - **(F2) 家庭国内最终品支出分配**：
+
 $$
 P_{q,t}C_{q,t}=(1-x)P_{c,t}C_t.
 $$
 
 - **(F3) CPI 聚合器**：
+
 $$
 P_{c,t}=P_{e,t}^{x}P_{q,t}^{1-x}.
 $$
 
 - **(F4) 债券 Euler 方程，一稿归一化条件（`needs_review`）**：
+
 $$
 \frac{1}{P_{c,t}C_t}
 =\beta E_t\left[\frac{1+i_t}{P_{c,t+1}C_{t+1}}\right].
 $$
 
 - **(F5) 劳动供给，一稿归一化条件（`needs_review`）**：
+
 $$
 L_t^{\phi}=\frac{W_t}{P_{c,t}C_t}.
 $$
 
 - **(F6) 资本 Euler / 无套利条件，一稿归一化条件（`needs_review`）**：
+
 $$
 S_{k,t}
 =\beta E_t\left[\frac{C_t}{C_{t+1}}\frac{P_{c,t}}{P_{c,t+1}}
@@ -107,31 +113,37 @@ S_{k,t}
 $$
 
 - **(F7) 最终品对品种 $i$ 的需求，CES 对偶蕴含**：
+
 $$
 Q_t(i)=\left(\frac{P_t(i)}{P_{q,t}}\right)^{-\epsilon}Q_t.
 $$
 
 - **(F8) 最终品价格指数，CES 对偶蕴含**：
+
 $$
 P_{q,t}=\left(\int_0^1 P_t(i)^{1-\epsilon}\,di\right)^{1/(1-\epsilon)}.
 $$
 
 - **(F9) 中间品厂商石油需求 / 边际成本定价**：
+
 $$
 mc_t(i)=\frac{P_{e,t}}{\alpha_e Q_t(i)/E_t(i)}.
 $$
 
 - **(F10) 中间品厂商劳动需求 / 边际成本定价**：
+
 $$
 mc_t(i)=\frac{W_t}{\alpha_l Q_t(i)/L_t(i)}.
 $$
 
 - **(F11) 中间品厂商资本需求 / 边际成本定价**：
+
 $$
 mc_t(i)=\frac{r_t^k P_{k,t}}{\alpha_k Q_t(i)/K_t(i)}.
 $$
 
 - **(F12) Calvo 定价 / 新凯恩斯 Phillips 关系（`needs_review`）**：
+
 $$
 \hat{\Pi}_{q,t}
 =\beta E_t[\hat{\Pi}_{q,t+1}]
@@ -143,26 +155,31 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F13) 资本积累**：
+
 $$
 I_t=K_{t+1}-(1-\delta)K_t.
 $$
 
 - **(F14) 国内产出生产函数**：
+
 $$
 Q_t(i)=A_t E_t(i)^{\alpha_e}L_t(i)^{\alpha_l}K_t(i)^{\alpha_k}.
 $$
 
 - **(F15) 扣除进口石油成本后的实际 GDP 定义**：
+
 $$
 P_{y,t}Y_t=P_{q,t}Q_t-P_{e,t}E_t.
 $$
 
 - **(F16) GDP 平减指数约定**：
+
 $$
 P_{y,t}=P_{c,t}.
 $$
 
 - **(F17) 政府预算约束**：
+
 $$
 (1+i_{t-1})B_{t-1}+G_t=B_t+T_t.
 $$
@@ -170,22 +187,26 @@ $$
 ## 5. Exogenous Processes
 
 - **(F18) 实际油价过程**：
+
 $$
 \ln S_{e,t}=(1-\rho_{se})\ln \bar{S}_e+\rho_{se}\ln S_{e,t-1}+e_{se,t},
 \qquad S_{e,t}=\frac{P_{e,t}}{P_{q,t}}.
 $$
 
 - **(F19) 实际资本价格过程**：
+
 $$
 \ln S_{k,t}=(1-\rho_{sk})\ln \bar{S}_k+\rho_{sk}\ln S_{k,t-1}+e_{sk,t}.
 $$
 
 - **(F20) TFP 过程**：
+
 $$
 \ln A_t=\rho_a\ln A_{t-1}+e_{a,t}.
 $$
 
 - **(F21) 货币政策规则**：
+
 $$
 \frac{1+i_t}{1+\bar{i}}
 =\left(\frac{\Pi_{q,t}}{\bar{\Pi}}\right)^{\phi_{\pi}}
@@ -193,11 +214,13 @@ $$
 $$
 
 - **(F22) 货币政策冲击过程**：
+
 $$
 \ln\varepsilon_{i,t}=\rho_i\ln\varepsilon_{i,t-1}+e_{i,t}.
 $$
 
 - **(F23) 实际政府支出过程**：
+
 $$
 \ln G_{r,t}=(1-\rho_g)\ln(\omega\bar{Q})+\rho_g\ln G_{r,t-1}+\rho_{ag}e_{a,t}+e_{g,t}.
 $$

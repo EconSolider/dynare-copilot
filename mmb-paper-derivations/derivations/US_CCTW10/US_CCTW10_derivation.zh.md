@@ -52,27 +52,33 @@ $$
 以下方程使用去趋势/对数线性记号。CCTW 附录使用帽子时，带帽变量表示相对稳态的百分比或对数偏离。MMB 交叉检查使用不带帽子的 ASCII 变量名。
 
 - **(F1) 灵活经济边际成本关系**（`implementation_cross_check`, needs_review）：
+
 $$
 a_t = \alpha r^k_{f,t} + (1-\alpha) w_{f,t}.
 $$
 
 - **(F2) 灵活经济资本利用**（`implementation_cross_check`, needs_review）：
+
 $$
 z^k_{f,t} = \frac{1-\zeta}{\zeta} r^k_{f,t},
 $$
+
 其中 MMB 文件把该系数实现为 $1/(\zeta/(1-\zeta))$。
 
 - **(F3) 灵活经济资本租赁率**（`implementation_cross_check`, needs_review）：
+
 $$
 r^k_{f,t} = w_{f,t} + l_{f,t} - k_{f,t}.
 $$
 
 - **(F4) 灵活经济生产中使用的已安装资本**（`implementation_cross_check`, needs_review）：
+
 $$
 k_{f,t} = k^p_{f,t-1} + z^k_{f,t}.
 $$
 
 - **(F5) 灵活经济投资 Euler 方程**（`implementation_cross_check`, needs_review）：
+
 $$
 i_{f,t} =
 \frac{1}{1+\bar{\beta}\gamma}
@@ -81,6 +87,7 @@ i_{f,t} =
 $$
 
 - **(F6) 灵活经济资本价值**（`implementation_cross_check`, needs_review）：
+
 $$
 p^k_{f,t} =
 -r^r_{f,t}
@@ -88,9 +95,11 @@ p^k_{f,t} =
 +\frac{\bar{r}^k}{\bar{r}^k+1-\delta}E_t r^k_{f,t+1}
 +\frac{1-\delta}{\bar{r}^k+1-\delta}E_t p^k_{f,t+1},
 $$
+
 其中 $\eta_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]$。
 
 - **(F7) 灵活经济 Ricardian 消费 Euler 方程**（`implementation_cross_check`, needs_review）：
+
 $$
 c_{j,f,t} =
 \frac{h/\gamma}{1+h/\gamma}c_{j,f,t-1}
@@ -101,6 +110,7 @@ c_{j,f,t} =
 $$
 
 - **(F8) 灵活经济规则型家庭消费**：
+
 $$
 c_{i,f,t} =
 \frac{\bar{W}^h\bar{L}}{\bar{C}}(w_{f,t}+l_{f,t})
@@ -108,11 +118,13 @@ c_{i,f,t} =
 $$
 
 - **(F9) 灵活经济总消费**：
+
 $$
 c_{f,t}=(1-\omega)c_{j,f,t}+\omega c_{i,f,t}.
 $$
 
 - **(F10) 灵活经济工资/劳动供给条件**（`implementation_cross_check`, needs_review）：
+
 $$
 w_{f,t} =
 \sigma_l l_{f,t}
@@ -121,26 +133,31 @@ w_{f,t} =
 $$
 
 - **(F11) 粘性经济边际成本**（`implementation_cross_check`, needs_review）：
+
 $$
 mc_t = \alpha r^k_t + (1-\alpha)w_t - a_t.
 $$
 
 - **(F12) 粘性经济资本利用**（`implementation_cross_check`, needs_review）：
+
 $$
 z^k_t = \frac{1-\zeta}{\zeta}r^k_t.
 $$
 
 - **(F13) 粘性经济资本租赁率**（`implementation_cross_check`, needs_review）：
+
 $$
 r^k_t = w_t + l_t - k_t.
 $$
 
 - **(F14) 粘性经济生产中使用的已安装资本**（`implementation_cross_check`, needs_review）：
+
 $$
 k_t = k^p_{t-1}+z^k_t.
 $$
 
 - **(F15) 粘性经济投资 Euler 方程**（`implementation_cross_check`, needs_review）：
+
 $$
 i_t =
 \frac{1}{1+\bar{\beta}\gamma}
@@ -149,6 +166,7 @@ i_t =
 $$
 
 - **(F16) 粘性经济资本价值/套利方程**（`implementation_cross_check`, needs_review）：
+
 $$
 p^k_t =
 -r_t+E_t\pi_{t+1}
@@ -158,6 +176,7 @@ p^k_t =
 $$
 
 - **(F17) 粘性经济 Ricardian 消费 Euler 方程**（`implementation_cross_check`, needs_review）：
+
 $$
 c_{j,t} =
 \frac{h/\gamma}{1+h/\gamma}c_{j,t-1}
@@ -169,6 +188,7 @@ c_{j,t} =
 $$
 
 - **(F18) 粘性经济规则型家庭消费**：
+
 $$
 c_{i,t} =
 \frac{\bar{W}^h\bar{L}}{\bar{C}}(w_t+l_t)
@@ -176,11 +196,13 @@ c_{i,t} =
 $$
 
 - **(F19) 粘性经济总消费**：
+
 $$
 c_t=(1-\omega)c_{j,t}+\omega c_{i,t}.
 $$
 
 - **(F20) 价格 Phillips 曲线**（`implementation_cross_check`, needs_review）：
+
 $$
 \pi_t =
 \frac{1}{1+\bar{\beta}\gamma\iota_p}
@@ -192,6 +214,7 @@ $$
 $$
 
 - **(F21) 工资 Phillips 曲线**（`implementation_cross_check`, needs_review）：
+
 $$
 w_t =
 \frac{1}{1+\bar{\beta}\gamma}w_{t-1}
@@ -206,16 +229,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F22) 灵活经济资源约束**（`implementation_cross_check`, needs_review）：
+
 $$
 y_{f,t} = c_y c_{f,t}+i_y i_{f,t}+g_t+\bar{r}^k k_y z^k_{f,t}.
 $$
 
 - **(F23) 灵活经济生产函数**（`implementation_cross_check`, needs_review）：
+
 $$
 y_{f,t} = \Phi\left(\alpha k_{f,t}+(1-\alpha)l_{f,t}+a_t\right).
 $$
 
 - **(F24) 灵活经济已安装资本积累**（`implementation_cross_check`, needs_review）：
+
 $$
 k^p_{f,t}=(1-\bar{i}/\bar{k})k^p_{f,t-1}
 +(\bar{i}/\bar{k})i_{f,t}
@@ -223,26 +249,31 @@ k^p_{f,t}=(1-\bar{i}/\bar{k})k^p_{f,t-1}
 $$
 
 - **(F25) 灵活经济政府预算约束**：
+
 $$
 b_{f,t}=R_\ast\left(\frac{b_{f,t-1}}{\pi_\ast}+g_t-t_{f,t}\right).
 $$
 
 - **(F26) 灵活经济财政规则**：
+
 $$
 t_{f,t}=\phi_b b_{f,t-1}+\phi_g g_t.
 $$
 
 - **(F27) 粘性经济总资源约束**（`implementation_cross_check`, needs_review）：
+
 $$
 y_t = c_y c_t+i_y i_t+g_t+\bar{r}^k k_y z^k_t.
 $$
 
 - **(F28) 粘性经济生产函数**（`implementation_cross_check`, needs_review）：
+
 $$
 y_t = \Phi\left(\alpha k_t+(1-\alpha)l_t+a_t\right).
 $$
 
 - **(F29) 粘性经济已安装资本积累**（`implementation_cross_check`, needs_review）：
+
 $$
 k^p_t=(1-\bar{i}/\bar{k})k^p_{t-1}
 +(\bar{i}/\bar{k})i_t
@@ -250,16 +281,19 @@ k^p_t=(1-\bar{i}/\bar{k})k^p_{t-1}
 $$
 
 - **(F30) 粘性经济政府预算约束**：
+
 $$
 b_t=R_\ast\left(\frac{b_{t-1}}{\pi_\ast}+g_t-t_t\right).
 $$
 
 - **(F31) 粘性经济财政规则**：
+
 $$
 t_t=\phi_b b_{t-1}+\phi_g g_t.
 $$
 
 - **(F32) 带钉住哑变量的货币政策规则**：
+
 $$
 i_t^{obs} =
 d^{MP}_t\cdot 0+(1-d^{MP}_t)
@@ -267,11 +301,13 @@ d^{MP}_t\cdot 0+(1-d^{MP}_t)
 $$
 
 - **(F33) Modelbase 产出缺口恒等式**：
+
 $$
 gap_t=y_t-y_{f,t}.
 $$
 
 - **(F34) 通胀和利率观测变量**（`implementation_cross_check`, needs_review）：
+
 $$
 \pi^{obs}_t=\pi_t+\bar{\pi},\quad
 \pi^{(4)}_t=\pi_t+\pi_{t-1}+\pi_{t-2}+\pi_{t-3},\quad
@@ -279,6 +315,7 @@ r^{obs}_t=r_t+\bar{r}.
 $$
 
 - **(F35) 增长率观测变量**（`implementation_cross_check`, needs_review）：
+
 $$
 \Delta y_t=y_t-y_{t-1}+\bar{\gamma},\quad
 \Delta c_t=c_t-c_{t-1}+\bar{\gamma},\quad
@@ -289,41 +326,49 @@ $$
 ## 5. Exogenous Processes
 
 - **(F36) 技术冲击**（`implementation_cross_check`, needs_review）：
+
 $$
 a_t=\rho_a a_{t-1}+\varepsilon^a_t.
 $$
 
 - **(F37) 偏好/风险溢价冲击**（`implementation_cross_check`, needs_review）：
+
 $$
 b_t^{pref}=\rho_b b_{t-1}^{pref}+\varepsilon^b_t.
 $$
 
 - **(F38) 政府购买路径**：
+
 $$
 g_t=fiscal_t.
 $$
 
 - **(F39) 投资专有冲击**（`implementation_cross_check`, needs_review）：
+
 $$
 q^s_t=\rho_{qs}q^s_{t-1}+\varepsilon^{qs}_t.
 $$
 
 - **(F40) 货币政策冲击过程**（`implementation_cross_check`, needs_review）：
+
 $$
 m_t=\rho_m m_{t-1}+\varepsilon^m_t.
 $$
 
 - **(F41) 价格加成冲击**（`implementation_cross_check`, needs_review）：
+
 $$
 s^\pi_t=\rho_\pi s^\pi_{t-1}+\varepsilon^\pi_t-\mu_\pi\varepsilon^\pi_{t-1}.
 $$
 
 - **(F42) 工资加成冲击**（`implementation_cross_check`, needs_review）：
+
 $$
 s^w_t=\rho_w s^w_{t-1}+\varepsilon^w_t-\mu_w\varepsilon^w_{t-1}.
 $$
 
 - **(F43) 政策钉住哑变量路径**：
+
 $$
 d^{MP}_t =
 \begin{cases}
@@ -352,24 +397,28 @@ $$
 MMB 实现在 model 块之前计算非零稳态比率和常数。来源支持的计算顺序为：
 
 1. 设定季度稳态通胀和趋势增长：
+
 $$
 \pi_\ast = 1+\frac{\bar{\pi}^{obs}}{100},\qquad
 \gamma = 1+\frac{\bar{\gamma}^{obs}}{100}.
 $$
 
 2. 设定贴现和趋势调整贴现因子：
+
 $$
 \beta=\frac{1}{1+\bar{\beta}^{obs}/100},\qquad
 \bar{\beta}=\beta\gamma^{-\sigma_c}.
 $$
 
 3. 计算稳态名义回报和资本租赁回报：
+
 $$
 R_\ast=\frac{\pi_\ast}{\beta\gamma^{-\sigma_c}},\qquad
 \bar{r}^k=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
 $$
 
 4. 计算工资、资本产出比、投资产出比和消费产出比：
+
 $$
 \bar{w} =
 \left[

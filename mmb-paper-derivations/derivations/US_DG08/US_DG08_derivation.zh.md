@@ -58,6 +58,7 @@ $$
 论文第 2 节打印估计用的对数线性系统。除特别说明外，(F1)-(F12) 对应论文方程 (1)-(12)。
 
 - **(F1) 带习惯和偏好冲击的消费 Euler 方程**：
+
 $$
 \hat C_t =
 \frac{h}{1+h}\hat C_{t-1}
@@ -70,6 +71,7 @@ $$
 $$
 
 - **(F2) 粘性工资方程**：
+
 $$
 \begin{aligned}
 \hat w_t={}&
@@ -90,6 +92,7 @@ $$
 $$
 
 - **(F3) 总供给 / 生产函数**：
+
 $$
 \hat Y_t =
 \phi\hat\varepsilon_t^A
@@ -99,12 +102,14 @@ $$
 $$
 
 - **(F4) 劳动需求**：
+
 $$
 \hat L_t =
 -\hat w_t+\left(1+\frac{1}{\psi}\right)\hat r_t^k+\hat K_{t-1}.
 $$
 
 - **(F5) 粘性价格 Phillips 曲线**：
+
 $$
 \begin{aligned}
 \hat\pi_t-\bar\pi_t={}&
@@ -118,11 +123,13 @@ $$
 $$
 
 - **(F6) 资本积累**：
+
 $$
 \hat K_{t+1}=(1-\tau)\hat K_t+\tau\hat I_t+\tau\hat\varepsilon_t^I .
 $$
 
 - **(F7) 投资调整成本条件**：
+
 $$
 \hat I_t=
 \frac{1}{1+\beta}\hat I_{t-1}
@@ -131,6 +138,7 @@ $$
 $$
 
 - **(F8) 预期实际资本回报**：
+
 $$
 E_t\hat R_{t+1}^K =
 \frac{1-\tau}{\bar R^K}E_t\hat Q_{t+1}
@@ -139,6 +147,7 @@ E_t\hat R_{t+1}^K =
 $$
 
 - **(F9) 外部融资溢价 / 资本套利条件**：
+
 $$
 E_t\hat R_{t+1}^K =
 -\varepsilon E_t[\hat N_{t+1}-\hat Q_t-\hat K_{t+1}]
@@ -146,6 +155,7 @@ E_t\hat R_{t+1}^K =
 $$
 
 - **(F10) 企业家净值**：
+
 $$
 \hat N_{t+1} =
 \gamma\bar R^K
@@ -159,6 +169,7 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F11) 产品市场资源约束**：
+
 $$
 \hat Y_t =
 c_y\hat C_t+\tau k_y\hat I_t+\varepsilon_t^G
@@ -178,6 +189,7 @@ k_y(\hat R_t^K+\hat Q_{t-1}+\hat K_t).
 $$
 
 - **(F12) 货币政策规则**：
+
 $$
 \begin{aligned}
 \hat R_t^n={}&
@@ -191,16 +203,19 @@ $$
 $$
 
 - **(F13) Fisher 关系 / 实际利率恒等式**：
+
 $$
 \hat R_t^n=\hat R_t+E_t\hat\pi_{t+1}.
 $$
 
 - **(F14) 外部融资溢价定义**：
+
 $$
 \widehat{\mathrm{Prem}}_t=E_t\hat R_{t+1}^K-\hat R_t.
 $$
 
 - **(F15) 弹性价格产出目标**：
+
 $$
 \hat Y_t^p
 \quad\text{is the flexible-price, flexible-wage, frictionless-credit-market equilibrium.}
@@ -211,31 +226,37 @@ $$
 ## 5. Exogenous Processes
 
 - **(F16) 通胀目标**：
+
 $$
 \bar\pi_t=\bar\pi_{t-1}+\eta_t^\pi .
 $$
 
 - **(F17) 贴现因子冲击**：
+
 $$
 \hat\varepsilon_t^B=\rho_B\hat\varepsilon_{t-1}^B+\epsilon_t^B .
 $$
 
 - **(F18) 劳动供给冲击**：
+
 $$
 \hat\varepsilon_t^L=\rho_L\hat\varepsilon_{t-1}^L+\epsilon_t^L .
 $$
 
 - **(F19) 生产率冲击**：
+
 $$
 \hat\varepsilon_t^A=\rho_A\hat\varepsilon_{t-1}^A+\epsilon_t^A .
 $$
 
 - **(F20) 投资特定技术冲击**：
+
 $$
 \hat\varepsilon_t^I=\rho_I\hat\varepsilon_{t-1}^I+\epsilon_t^I .
 $$
 
 - **(F21) 政府支出冲击**：
+
 $$
 \hat\varepsilon_t^G=\rho_G\hat\varepsilon_{t-1}^G+\epsilon_t^G .
 $$

@@ -126,17 +126,20 @@ The paper also analyzes CPI inflation targeting and an exchange-rate peg, but th
 ## 3. First-Order Conditions
 
 - **(F1) Intratemporal household labor condition**:
+
 $$
 C_t^{\sigma}N_t^{\varphi}=\frac{W_t}{P_t}.
 $$
 
 - **(F2) Nominal stochastic discount factor**:
+
 $$
 \beta\left(\frac{C_{t+1}}{C_t}\right)^{-\sigma}
 \left(\frac{P_t}{P_{t+1}}\right)=Q_{t,t+1}.
 $$
 
 - **(F3) Household Euler equation**:
+
 $$
 \beta R_tE_t\left[
 \left(\frac{C_{t+1}}{C_t}\right)^{-\sigma}
@@ -145,12 +148,14 @@ $$
 $$
 
 - **(F4) Log-linear consumption Euler equation**:
+
 $$
 c_t=E_t c_{t+1}-\frac{1}{\sigma}
 \left(r_t-E_t\pi_{t+1}-\rho\right).
 $$
 
 - **(F5) Complete-markets international risk sharing**:
+
 $$
 C_t=C_t^i\mathcal{Q}_{i,t}^{1/\sigma}
 \quad\Rightarrow\quad
@@ -158,21 +163,25 @@ c_t=c_t^{\ast}+\frac{1}{\sigma}q_t.
 $$
 
 - **(F6) Risk-sharing relation in terms of the effective terms of trade**:
+
 $$
 c_t=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F7) Uncovered interest parity**:
+
 $$
 r_t-r_t^{\ast}=E_t\Delta e_{t+1}.
 $$
 
 - **(F8) Terms-of-trade difference equation**:
+
 $$
 s_t=(r_t^{\ast}-E_t\pi_{t+1}^{\ast})-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
 $$
 
 - **(F9) Calvo optimal reset-price condition, log-linear form**:
+
 $$
 \overline{p}_{H,t}=\mu+(1-\beta\theta)
 \sum_{k=0}^{\infty}(\beta\theta)^kE_t\{mc_{t+k}+p_{H,t+k}\},
@@ -181,6 +190,7 @@ $$
 $$
 
 - **(F10) Domestic Phillips curve in marginal-cost form**:
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\lambda\widehat{mc}_t,
 \qquad
@@ -188,12 +198,14 @@ $$
 $$
 
 - **(F11) Real marginal cost as a function of output, world output, and productivity**:
+
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
 +(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F12) Domestic natural output**:
+
 $$
 \overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
@@ -209,16 +221,19 @@ $$
 $$
 
 - **(F13) Output gap definition**:
+
 $$
 x_t=y_t-\overline{y}_t.
 $$
 
 - **(F14) Marginal cost and output-gap relation**:
+
 $$
 \widehat{mc}_t=(\sigma_\alpha+\varphi)x_t.
 $$
 
 - **(F15) Small-open-economy New Keynesian Phillips curve**:
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\kappa_\alpha x_t,
 \qquad
@@ -226,12 +241,14 @@ $$
 $$
 
 - **(F16) Natural real interest rate**:
+
 $$
 \overline{rr}_t=\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
 +\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F17) Dynamic IS equation in output-gap form**:
+
 $$
 x_t=E_tx_{t+1}
 -\frac{1}{\sigma_\alpha}
@@ -239,6 +256,7 @@ x_t=E_tx_{t+1}
 $$
 
 - **(F18) PPI/domestic-inflation Taylor rule for `NK_GMAS25ppi`**:
+
 $$
 r_t=\rho+\phi_\pi\pi_{H,t}.
 $$
@@ -246,46 +264,55 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F19) Effective terms of trade**:
+
 $$
 s_t=p_{F,t}-p_{H,t}.
 $$
 
 - **(F20) CPI/domestic-price identity**:
+
 $$
 p_t=p_{H,t}+\alpha s_t.
 $$
 
 - **(F21) CPI inflation identity**:
+
 $$
 \pi_t=\pi_{H,t}+\alpha\Delta s_t.
 $$
 
 - **(F22) Nominal exchange-rate and terms-of-trade identity**:
+
 $$
 s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F23) Real exchange-rate relation**:
+
 $$
 q_t=(1-\alpha)s_t.
 $$
 
 - **(F24) Aggregate production, first-order approximation**:
+
 $$
 y_t=a_t+n_t.
 $$
 
 - **(F25) Goods-market clearing / output-demand relation**:
+
 $$
 y_t=c_t+\frac{\alpha\omega}{\sigma}s_t.
 $$
 
 - **(F26) World resource condition**:
+
 $$
 y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F27) Terms of trade and relative output**:
+
 $$
 y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 \qquad
@@ -293,11 +320,13 @@ y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 $$
 
 - **(F28) Net exports relation**:
+
 $$
 nx_t=\alpha\left(\frac{\omega}{\sigma}-1\right)s_t.
 $$
 
 - **(F29) Auxiliary open-economy parameter**:
+
 $$
 \omega=\sigma\gamma+(1-\alpha)(\sigma\eta-1),
 \qquad
@@ -307,16 +336,19 @@ $$
 ## 5. Exogenous Processes
 
 - **(F30) Domestic technology process**:
+
 $$
 a_t=\rho_a a_{t-1}+\varepsilon_t^a.
 $$
 
 - **(F31) World output process used in calibration**:
+
 $$
 y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F32) Innovation correlation used in calibration**:
+
 $$
 \operatorname{corr}(\varepsilon_t^a,\varepsilon_t^{\ast})=0.3.
 $$

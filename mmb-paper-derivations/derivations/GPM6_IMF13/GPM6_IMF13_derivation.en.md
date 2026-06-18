@@ -25,36 +25,43 @@ No optimizing household, firm, banking, or fiscal problems are stated in the lin
 Because the linked source is semi-structural, the following are behavioral/equilibrium equations rather than FOCs from explicit optimization. They are numbered continuously for archive and future `.mod` cross-checking.
 
 - **(F1) Potential output level**:
+
 $$
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g^{\overline{Y}}_t}{4} + \varepsilon^{\overline{Y}}_t
 $$
 
 - **(F2) Potential-output growth process**:
+
 $$
 g^{\overline{Y}}_t = \tau g^{\overline{Y},ss} + (1-\tau)g^{\overline{Y}}_{t-1} + \varepsilon^{g^{\overline{Y}}}_t
 $$
 
 - **(F3) NAIRU level**:
+
 $$
 \overline{U}_t = \overline{U}_{t-1} + g^{\overline{U}}_t + \varepsilon^{\overline{U}}_t
 $$
 
 - **(F4) NAIRU-growth process**:
+
 $$
 g^{\overline{U}}_t = (1-\alpha_3)g^{\overline{U}}_{t-1} + \varepsilon^{g^{\overline{U}}}_t
 $$
 
 - **(F5) Output-gap equation, benchmark model**:
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon^y_t
 $$
 
 - **(F6) Inflation equation**:
+
 $$
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon^\pi_t
 $$
 
 - **(F7) Taylor-type policy-rate equation**:
+
 $$
 rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 + \gamma_2\left(\pi4_{t+3}-\pi^{tar}\right) + \gamma_4 y_t\right]
@@ -62,16 +69,19 @@ rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 $$
 
 - **(F8) Dynamic Okun equation**:
+
 $$
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon^u_t
 $$
 
 - **(F9) Bank-lending-tightening equation in the financial-linkage extension**:
+
 $$
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon^{BLT}_t
 $$
 
 - **(F10) Output-gap equation with financial linkages**:
+
 $$
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1}
 - \theta\eta_t + \varepsilon^y_t
@@ -82,16 +92,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F11) Real interest rate definition**:
+
 $$
 rr_t = rs_t - \pi_{t+1}
 $$
 
 - **(F12) Real interest-rate gap**:
+
 $$
 rrgap_t = rr_t - \overline{rr}_t
 $$
 
 - **(F13) Bank-lending distributed lag**:
+
 $$
 \eta_t = 0.04\varepsilon^{BLT}_{t-1}
 + 0.08\varepsilon^{BLT}_{t-2}
@@ -105,6 +118,7 @@ $$
 $$
 
 - **(F14) Measurement definitions stated in the source**:
+
 $$
 y_t = Y_t-\overline{Y}_t,\qquad
 u_t = \overline{U}_t-U_t,\qquad
@@ -117,11 +131,13 @@ The checked implementation generalizes identities to six regions: output gap as 
 ## 5. Exogenous Processes
 
 - **(F15) Equilibrium real interest rate**:
+
 $$
 \overline{rr}_t = \rho\overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon^{\overline{rr}}_t
 $$
 
 - **(F16) Equilibrium BLT random walk**:
+
 $$
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon^{\overline{BLT}}_t
 $$

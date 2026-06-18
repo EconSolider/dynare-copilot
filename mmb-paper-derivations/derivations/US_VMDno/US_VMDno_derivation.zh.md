@@ -68,16 +68,19 @@ $$
 **更安全的 LR 企业家和投资银行**
 
 - **(F1) 债券融资资本购置。**
+
 $$
 BI_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}.
 $$
 
 - **(F2) 利用率条件。**
+
 $$
 r_t^{k,LR}=a'\left(u_t^{LR,l}\right).
 $$
 
 - **(F3) 资本 Euler 方程。**
+
 $$
 Q_{\bar{k}',t}
 =\beta E_t\left\{\left[u_{t+1}^{LR,l}r_{t+1}^{k,LR}-a(u_{t+1}^{LR,l})\right]P_{t+1}
@@ -86,30 +89,35 @@ Q_{\bar{k}',t}
 $$
 
 - **(F4) 企业家对承销商 $z$ 的资金需求。**
+
 $$
 BI_{t+1}^{LR,l}(z)
 =\left(\frac{1+R_{t+1}^{coupon}(z)}{1+R_{t+1}^{coupon}}\right)^{-\varepsilon_{t+1}^{coupon}}BI_{t+1}^{LR,l}.
 $$
 
 - **(F5) 平均票息利率指数。**
+
 $$
 1+R_{t+1}^{coupon}
 =\left\{\int_0^1\left[1+R_{t+1}^{coupon}(z)\right]^{1-\varepsilon_{t+1}^{coupon}}dz\right\}^{\frac{1}{1-\varepsilon_{t+1}^{coupon}}}.
 $$
 
 - **(F6) 投资银行加成条件。**
+
 $$
 1+R_{t+1}^{coupon}
 =\frac{\varepsilon_{t+1}^{coupon}}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
 $$
 
 - **(F7) 债券融资利差。**
+
 $$
 spread_{t+1}\equiv R_{t+1}^{coupon}-R_{t+1}^e
 =\frac{1}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
 $$
 
 - **(F8) 更安全企业家的权益价值。**
+
 $$
 V_t^{LR,l}
 =\left\{\left[u_t^{LR,l}r_t^{k,LR}-a(u_t^{LR,l})\right]P_t+(1-\delta)Q_{\bar{k}',t}\right\}\bar{K}_t^{LR,l}
@@ -117,6 +125,7 @@ V_t^{LR,l}
 $$
 
 - **(F9) 更安全企业家的净值。**
+
 $$
 N_{t+1}^{LR,l}=\gamma^{LR}V_t^{LR,l}+W_t^{e,LR,l}.
 $$
@@ -124,17 +133,20 @@ $$
 **正常时期影子银行校准**
 
 - **(F10) 正常时期债券需求弹性。**
+
 $$
 \varepsilon_{t+1}^{normal}=\bar{\varepsilon}+\alpha_1\left(Y_t-\bar{Y}\right).
 $$
 
 - **(F11) 正常时期票息利率。**
+
 $$
 1+R_{t+1}^{coupon,normal}
 =\frac{\varepsilon_{t+1}^{normal}}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
 $$
 
 - **(F12) 正常时期利差。**
+
 $$
 spread_{t+1}^{normal}
 =\frac{1}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
@@ -143,17 +155,21 @@ $$
 **为区分变体而记录的乐观情绪层；在 `US_VMDno` 中不激活**
 
 - **(F13) 乐观情绪过程。**
+
 $$
 \chi_t=\rho_\chi\chi_{t-1}+(1-\rho_\chi)\left[\bar{\chi}+\alpha_2\left(N_{t+1}^{LR,l}-N^{LR,l}\right)\right].
 $$
+
 对 `US_VMDno`，$\alpha_2=0$，所以该层不是额外乐观动态的来源。
 
 - **(F14) 乐观情绪弹性。**
+
 $$
 \varepsilon_{t+1}^{optimistic}=\varepsilon_{t+1}^{normal}(1+\chi_t).
 $$
 
 - **(F15) 乐观情绪票息利率。**
+
 $$
 1+R_{t+1}^{coupon,optimistic}
 =\frac{\varepsilon_{t+1}^{normal}(1+\chi_t)}{\varepsilon_{t+1}^{normal}(1+\chi_t)-1}(1+R_{t+1}^{e}).
@@ -162,6 +178,7 @@ $$
 **政策规则和标准模型外壳**
 
 - **(F16) 固定利率实验之外的 Taylor 型政策规则。**
+
 $$
 R_t^e
 =\tilde{\rho}R_{t-1}^e
@@ -170,22 +187,27 @@ R_t^e
 $$
 
 - **(F17) 政策实验路径。**
+
 $$
 R_t^e=R^e-0.01 \quad \text{for } t=1,\ldots,6,
 $$
+
 通过每期残差非预期冲击或预先宣布的预期冲击序列实现。
 
 - **(F18) 家庭 Euler 方程，实现交叉检查，needs_review。**
+
 $$
 \lambda_t=\beta E_t\left[\lambda_{t+1}\frac{1+R_t^e}{\pi_{t+1}}\right].
 $$
 
 - **(F19) 含习惯的边际效用，实现交叉检查，needs_review。**
+
 $$
 \lambda_t=(c_t-bc_{t-1})^{-\sigma_c}-b\beta E_t\left[(c_{t+1}-bc_t)^{-\sigma_c}\right].
 $$
 
 - **(F20) 投资调整成本条件，实现交叉检查，needs_review。**
+
 $$
 \lambda_t q_t\left[1-\frac{S''}{2}\left(\frac{i_t}{i_{t-1}}-1\right)^2-S''\frac{i_t}{i_{t-1}}\left(\frac{i_t}{i_{t-1}}-1\right)\right]
 -\lambda_t
@@ -195,16 +217,19 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F21) CES 总资本服务。**
+
 $$
 K_t=\left[\eta\left(u_t^{HR,r}\bar{K}_t^{HR,r}\right)^\rho+(1-\eta)\left(u_t^{LR,l}\bar{K}_t^{LR,l}\right)^\rho\right]^{1/\rho}.
 $$
 
 - **(F22) 商品市场资源约束，实现交叉检查，needs_review。**
+
 $$
 Y_t=G_t+C_t+I_t+a(u_t^{HR})\eta\bar{K}_{t-1}^{HR}+a(u_t^{LR})(1-\eta)\bar{K}_{t-1}^{LR}+monitoring\ costs_t.
 $$
 
 - **(F23) 总债券、银行贷款和总融资定义。**
+
 $$
 B_t^{LR}=Q_t\bar{K}_t^{LR}-N_t^{LR},\qquad
 Loans_t^{HR}=Q_t\bar{K}_t^{HR}-N_t^{HR},\qquad
@@ -212,6 +237,7 @@ Finance_t=(1-\eta)B_t^{LR}+\eta Loans_t^{HR}.
 $$
 
 - **(F24) 杠杆定义。**
+
 $$
 lev_t^{LR}=\frac{Q_t\bar{K}_t^{LR}}{N_t^{LR}},\qquad
 lev_t^{HR}=\frac{Q_t\bar{K}_t^{HR}}{N_t^{HR}}.
@@ -220,11 +246,13 @@ $$
 ## 5. Exogenous Processes
 
 - **(F25) 货币政策创新。**
+
 $$
 \varepsilon_t^{MP}\sim iid(0,\sigma_{MP}^2).
 $$
 
 - **(F26) 乐观情绪持久性过程，在正常时期校准中不激活。**
+
 $$
 \chi_t=\rho_\chi\chi_{t-1}\quad\text{when }\alpha_2=0,\ \bar{\chi}=0.
 $$
@@ -236,17 +264,20 @@ $$
 文章报告季度校准和稳态目标，但没有给出完整模型的来源侧稳态算法。因此，一遍初稿的稳态质量为 `needs_review`。
 
 1. 设置零通胀/稳态政策对象并关闭乐观情绪：
+
 $$
 \chi=0,\qquad \varepsilon^{normal}=\bar{\varepsilon},\qquad \alpha_2=0\quad(\text{for }US\_VMDno).
 $$
 
 2. 计算正常时期稳态票息和利差：
+
 $$
 1+R^{coupon}=\frac{\bar{\varepsilon}}{\bar{\varepsilon}-1}(1+R^e),\qquad
 spread=\frac{1}{\bar{\varepsilon}-1}(1+R^e).
 $$
 
 3. 使用论文报告的校准目标：
+
 $$
 \beta=0.9875,\quad \eta=0.2772,\quad \bar{\varepsilon}=510,\quad \alpha_1=30000,\quad \gamma^{LR}=0.96,\quad \gamma^{HR}=0.97.
 $$

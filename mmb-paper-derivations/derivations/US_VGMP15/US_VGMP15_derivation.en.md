@@ -73,32 +73,38 @@ The central bank sets the nominal short rate with a Taylor rule. The government 
 ## 3. First-Order Conditions
 
 - **(F1) Household oil/final-good expenditure split**:
+
 $$
 P_{e,t}C_{e,t}=xP_{c,t}C_t.
 $$
 
 - **(F2) Household domestic final-good expenditure split**:
+
 $$
 P_{q,t}C_{q,t}=(1-x)P_{c,t}C_t.
 $$
 
 - **(F3) CPI aggregator**:
+
 $$
 P_{c,t}=P_{e,t}^{x}P_{q,t}^{1-x}.
 $$
 
 - **(F4) Bond Euler equation, normalized first-pass condition (`needs_review`)**:
+
 $$
 \frac{1}{P_{c,t}C_t}
 =\beta E_t\left[\frac{1+i_t}{P_{c,t+1}C_{t+1}}\right].
 $$
 
 - **(F5) Labor supply, normalized first-pass condition (`needs_review`)**:
+
 $$
 L_t^{\phi}=\frac{W_t}{P_{c,t}C_t}.
 $$
 
 - **(F6) Capital Euler / no-arbitrage condition, normalized first-pass condition (`needs_review`)**:
+
 $$
 S_{k,t}
 =\beta E_t\left[\frac{C_t}{C_{t+1}}\frac{P_{c,t}}{P_{c,t+1}}
@@ -107,31 +113,37 @@ S_{k,t}
 $$
 
 - **(F7) Final-good demand for variety $i$, source-implied CES demand**:
+
 $$
 Q_t(i)=\left(\frac{P_t(i)}{P_{q,t}}\right)^{-\epsilon}Q_t.
 $$
 
 - **(F8) Final-good price index, source-implied CES dual**:
+
 $$
 P_{q,t}=\left(\int_0^1 P_t(i)^{1-\epsilon}\,di\right)^{1/(1-\epsilon)}.
 $$
 
 - **(F9) Intermediate-firm oil demand / marginal-cost pricing**:
+
 $$
 mc_t(i)=\frac{P_{e,t}}{\alpha_e Q_t(i)/E_t(i)}.
 $$
 
 - **(F10) Intermediate-firm labor demand / marginal-cost pricing**:
+
 $$
 mc_t(i)=\frac{W_t}{\alpha_l Q_t(i)/L_t(i)}.
 $$
 
 - **(F11) Intermediate-firm capital demand / marginal-cost pricing**:
+
 $$
 mc_t(i)=\frac{r_t^k P_{k,t}}{\alpha_k Q_t(i)/K_t(i)}.
 $$
 
 - **(F12) Calvo price-setting / New Keynesian Phillips relation (`needs_review`)**:
+
 $$
 \hat{\Pi}_{q,t}
 =\beta E_t[\hat{\Pi}_{q,t+1}]
@@ -143,26 +155,31 @@ The source states that the full pricing rule is in the online appendix; this loc
 ## 4. Market Clearing & Identities
 
 - **(F13) Capital accumulation**:
+
 $$
 I_t=K_{t+1}-(1-\delta)K_t.
 $$
 
 - **(F14) Domestic output production**:
+
 $$
 Q_t(i)=A_t E_t(i)^{\alpha_e}L_t(i)^{\alpha_l}K_t(i)^{\alpha_k}.
 $$
 
 - **(F15) Real GDP definition with imported oil subtraction**:
+
 $$
 P_{y,t}Y_t=P_{q,t}Q_t-P_{e,t}E_t.
 $$
 
 - **(F16) GDP deflator convention**:
+
 $$
 P_{y,t}=P_{c,t}.
 $$
 
 - **(F17) Government budget constraint**:
+
 $$
 (1+i_{t-1})B_{t-1}+G_t=B_t+T_t.
 $$
@@ -170,22 +187,26 @@ $$
 ## 5. Exogenous Processes
 
 - **(F18) Real oil price process**:
+
 $$
 \ln S_{e,t}=(1-\rho_{se})\ln \bar{S}_e+\rho_{se}\ln S_{e,t-1}+e_{se,t},
 \qquad S_{e,t}=\frac{P_{e,t}}{P_{q,t}}.
 $$
 
 - **(F19) Real capital price process**:
+
 $$
 \ln S_{k,t}=(1-\rho_{sk})\ln \bar{S}_k+\rho_{sk}\ln S_{k,t-1}+e_{sk,t}.
 $$
 
 - **(F20) TFP process**:
+
 $$
 \ln A_t=\rho_a\ln A_{t-1}+e_{a,t}.
 $$
 
 - **(F21) Monetary policy rule**:
+
 $$
 \frac{1+i_t}{1+\bar{i}}
 =\left(\frac{\Pi_{q,t}}{\bar{\Pi}}\right)^{\phi_{\pi}}
@@ -193,11 +214,13 @@ $$
 $$
 
 - **(F22) Monetary policy shock process**:
+
 $$
 \ln\varepsilon_{i,t}=\rho_i\ln\varepsilon_{i,t-1}+e_{i,t}.
 $$
 
 - **(F23) Real government spending process**:
+
 $$
 \ln G_{r,t}=(1-\rho_g)\ln(\omega\bar{Q})+\rho_g\ln G_{r,t-1}+\rho_{ag}e_{a,t}+e_{g,t}.
 $$

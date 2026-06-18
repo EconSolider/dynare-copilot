@@ -92,11 +92,13 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 家庭劳动供给**：
+
 $$
 u_{C_t}W_t=\chi L_t^\varphi.
 $$
 
 - **(F2) 家庭 Euler 方程**：
+
 $$
 E_t\Lambda_{t,t+1}R_{t+1}=1,
 \qquad
@@ -104,38 +106,45 @@ E_t\Lambda_{t,t+1}R_{t+1}=1,
 $$
 
 - **(F3) 私人资本债权回报**：
+
 $$
 R_{k,t+1}=\frac{Z_{t+1}+(1-\delta)Q_{t+1}}{Q_t}\xi_{t+1}.
 $$
 
 - **(F4) 长期政府债券回报**：
+
 $$
 R_{b,t+1}=\frac{1/P_t+q_{t+1}}{q_t}.
 $$
 
 - **(F5) 银行私人债权超额回报条件**：
+
 $$
 E_t\widetilde{\Lambda}_{t,t+1}(R_{k,t+1}-R_{t+1})
 =\frac{\lambda_t}{1+\lambda_t}\theta.
 $$
 
 - **(F6) 银行长期政府债券超额回报条件**：
+
 $$
 E_t\widetilde{\Lambda}_{t,t+1}(R_{b,t+1}-R_{t+1})
 =\Delta\frac{\lambda_t}{1+\lambda_t}\theta.
 $$
 
 - **(F7) 扩展随机贴现因子**：
+
 $$
 \widetilde{\Lambda}_{t,t+1}=\Lambda_{t,t+1}\Omega_{t+1}.
 $$
 
 - **(F8) 总银行组合约束**：
+
 $$
 Q_tS_{pt}+\Delta q_tB_{pt}\leq \phi_tN_t.
 $$
 
 - **(F9) 最大调整杠杆率**：
+
 $$
 \phi_t=
 \frac{E_t\widetilde{\Lambda}_{t,t+1}R_{t+1}}
@@ -143,11 +152,13 @@ $$
 $$
 
 - **(F10) 银行净值边际价值**：
+
 $$
 \Omega_{t+1}=1-\sigma+\sigma\frac{\partial V_{t+1}}{\partial n_{t+1}}.
 $$
 
 - **(F11) 净值边际价值递归**：
+
 $$
 \frac{\partial V_t}{\partial n_t}
 =E_t\widetilde{\Lambda}_{t,t+1}
@@ -157,6 +168,7 @@ $$
 $$
 
 - **(F12) 总银行净值积累**：
+
 $$
 N_t=\sigma\left[
 (R_{kt}-R_t)\frac{Q_{t-1}S_{p,t-1}}{N_{t-1}}
@@ -166,80 +178,95 @@ N_t=\sigma\left[
 $$
 
 - **(F13) 中央银行资产负债表**：
+
 $$
 Q_tS_{gt}+q_tB_{gt}=D_{gt}.
 $$
 
 - **(F14) 私人证券总供给恒等式**：
+
 $$
 S_t=S_{pt}+S_{gt}.
 $$
 
 - **(F15) 长期政府债券总供给恒等式**：
+
 $$
 B_t=B_{pt}+B_{gt}.
 $$
 
 - **(F16) 银行资产负债表受约束时的私人证券总价值**：
+
 $$
 Q_tS_t\leq \phi_tN_t+Q_tS_{gt}+\Delta(q_tB_{gt}-q_tB_t).
 $$
 
 - **(F17) 跨资产超额回报关系**：
+
 $$
 E_t\widetilde{\Lambda}_{t,t+1}(R_{b,t+1}-R_{t+1})
 =\Delta E_t\widetilde{\Lambda}_{t,t+1}(R_{k,t+1}-R_{t+1}).
 $$
 
 - **(F18) 家庭直接持有私人证券需求**：
+
 $$
 S_{ht}=\bar S_h+
 \frac{E_t\Lambda_{t,t+1}(R_{k,t+1}-R_{t+1})}{\kappa}.
 $$
 
 - **(F19) 家庭直接持有长期债券需求**：
+
 $$
 B_{ht}=\bar B_h+
 \frac{E_t\Lambda_{t,t+1}(R_{b,t+1}-R_{t+1})}{\kappa}.
 $$
 
 - **(F20) 含家庭持有的私人证券市场出清**：
+
 $$
 S_t=S_{pt}+S_{ht}+S_{gt}.
 $$
 
 - **(F21) 含家庭持有的政府债券市场出清**：
+
 $$
 B_t=B_{pt}+B_{ht}+B_{gt}.
 $$
 
 - **(F22) 含家庭持有时的银行组合约束**：
+
 $$
 Q_t(S_t-S_{ht})\leq
 \phi_tN_t+Q_tS_{gt}+\Delta q_t\left[B_{gt}-(B_t-B_{ht})\right].
 $$
 
 - **(F23) 中间品生产函数**：
+
 $$
 Y_t=A_tK_t^\alpha L_t^{1-\alpha}.
 $$
 
 - **(F24) 劳动需求 / 实际工资**：
+
 $$
 W_t=P_{mt}(1-\alpha)\frac{Y_t}{L_t}.
 $$
 
 - **(F25) 单位资本毛利润流**：
+
 $$
 Z_t=P_{mt}\alpha\frac{Y_t}{K_t}.
 $$
 
 - **(F26) 含资本质量冲击的资本积累**：
+
 $$
 K_{t+1}=\xi_{t+1}\left[I_t+(1-\delta)K_t\right].
 $$
 
 - **(F27) 资本品定价条件**：
+
 $$
 Q_t=1+f\left(\frac{I_t}{I_{t-1}}\right)
 +\frac{I_t}{I_{t-1}}f'\left(\frac{I_t}{I_{t-1}}\right)
@@ -248,11 +275,13 @@ f'\left(\frac{I_{t+1}}{I_t}\right).
 $$
 
 - **(F28) 最终品 CES 加总**：
+
 $$
 Y_t=\left[\int_0^1Y_{ft}^{\frac{\varepsilon-1}{\varepsilon}}df\right]^{\frac{\varepsilon}{\varepsilon-1}}.
 $$
 
 - **(F29) Calvo 重定价条件**：
+
 $$
 \sum_{i=0}^{\infty}\gamma^i\Lambda_{t,t+i}
 \left[
@@ -263,12 +292,14 @@ $$
 $$
 
 - **(F30) 价格指数演化**：
+
 $$
 P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma(P_{t-1})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
 $$
 
 - **(F31) 政府预算约束**：
+
 $$
 \begin{aligned}
 G+(R_{bt}-1)\bar B
@@ -278,21 +309,25 @@ G+(R_{bt}-1)\bar B
 $$
 
 - **(F32) Taylor 规则**：
+
 $$
 i_t=i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})+\epsilon_t.
 $$
 
 - **(F33) Fisher 关系**：
+
 $$
 1+i_t=R_{t+1}\frac{P_{t+1}}{P_t}.
 $$
 
 - **(F34) 私人证券 LSAP 规则**：
+
 $$
 S_{gt}=\varphi_{st}S_t.
 $$
 
 - **(F35) 政府债券 LSAP 规则**：
+
 $$
 B_{gt}=\varphi_{bt}B_t.
 $$
@@ -302,11 +337,13 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F36) 资源约束**：
+
 $$
 Y_t=C_t+\left[1+f\left(\frac{I_t}{I_{t-1}}\right)\right]I_t+G+\Phi_t.
 $$
 
 - **(F37) 中央银行中介资源成本**：
+
 $$
 \Phi_t=\tau_sQ_{t-1}S_{g,t-1}+\tau_bq_{t-1}B_{g,t-1}.
 $$
@@ -314,55 +351,66 @@ $$
 `needs_review`：OCR 来源在资源成本表达式中给出 `\tau_g`，但政府预算和正文使用债券中介成本。本文为一致性写作 $\tau_b$，并记录该差异。
 
 - **(F38) 由已安装资本和新资本构成的私人证券供给**：
+
 $$
 S_t=I_t+(1-\delta)K_t.
 $$
 
 - **(F39) 固定政府债券供给**：
+
 $$
 B_t=\bar B.
 $$
 
 - **(F40) 劳动市场出清条件**：
+
 $$
 (1-\alpha)\frac{Y_t}{L_t}E_tu_{C_t}
 =\frac{1}{P_{mt}}\chi L_t^\varphi.
 $$
 
 - **(F41) 短期债务市场出清**：
+
 $$
 D_{ht}+D_{gt}=D_t,
 $$
+
 在商品、劳动和长期证券市场出清后，精确分解由 Walras 定律决定，是冗余条件。
 
 ## 5. Exogenous Processes
 
 - **(F42) 生产率冲击**：
+
 $$
 \log A_t=\rho_a\log A_{t-1}+\varepsilon^a_t.
 $$
 
 - **(F43) 资本质量冲击**：
+
 $$
 \log \xi_t=\rho_\xi\log \xi_{t-1}+\varepsilon^\xi_t.
 $$
 
 - **(F44) 政府消费冲击**：
+
 $$
 \log G_t=(1-\rho_g)\log \bar G+\rho_g\log G_{t-1}+\varepsilon^g_t.
 $$
 
 - **(F45) 私人证券购买过程**：
+
 $$
 \varphi_{st}=\rho_{s1}\varphi_{s,t-1}+\rho_{s2}\varphi_{s,t-2}+\varepsilon^s_t.
 $$
 
 - **(F46) 政府债券购买过程**：
+
 $$
 \varphi_{bt}=\rho_{b1}\varphi_{b,t-1}+\rho_{b2}\varphi_{b,t-2}+\varepsilon^b_t.
 $$
 
 - **(F47) 货币政策冲击**：
+
 $$
 \epsilon_t=\rho_\epsilon\epsilon_{t-1}+\varepsilon^i_t.
 $$

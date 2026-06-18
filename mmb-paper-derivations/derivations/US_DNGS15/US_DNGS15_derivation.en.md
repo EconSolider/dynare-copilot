@@ -48,6 +48,7 @@ The monetary authority follows a generalized feedback rule with interest-rate sm
 Let `bar beta = beta exp((1-sigma_c) gamma)`. The archive equations below preserve the paper-side log-linear structure and use continuous archive numbering.
 
 - **(F1) Consumption Euler equation**:
+
 $$
 c_t =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
@@ -59,6 +60,7 @@ c_t =
 $$
 
 - **(F2) Investment/Tobin's Q condition**:
+
 $$
 q_t^k = S'' e^{2\gamma}(1+\bar\beta)
 \left(i_t-\frac{1}{1+\bar\beta}(i_{t-1}-z_t)
@@ -67,6 +69,7 @@ q_t^k = S'' e^{2\gamma}(1+\bar\beta)
 $$
 
 - **(F3) Capital accumulation**:
+
 $$
 \bar{k}_t =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
@@ -75,32 +78,38 @@ $$
 $$
 
 - **(F4) Effective capital rented to firms**:
+
 $$
 k_t = u_t - z_t + \bar{k}_{t-1}.
 $$
 
 - **(F5) Utilization condition**:
+
 $$
 u_t = \frac{1-\psi}{\psi}r_t^k.
 $$
 
 - **(F6) Real marginal cost**:
+
 $$
 mc_t = w_t+\alpha l_t-\alpha k_t.
 $$
 
 - **(F7) Common capital-labor ratio**:
+
 $$
 k_t = w_t-r_t^k+l_t.
 $$
 
 - **(F8) Production function**:
+
 $$
 y_t = \Phi_p\big(\alpha k_t+(1-\alpha)l_t\big)
 +\mathcal{I}\{\rho_z<1\}\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t.
 $$
 
 - **(F9) Resource constraint**:
+
 $$
 y_t = g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t
@@ -108,13 +117,16 @@ y_t = g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 $$
 
 - **(F10) Price Phillips curve**:
+
 $$
 \pi_t = \kappa mc_t
 +\frac{\iota_p}{1+\iota_p\bar\beta}\pi_{t-1}
 +\frac{\bar\beta}{1+\iota_p\bar\beta}E_t[\pi_{t+1}]
 +\lambda_{f,t},
 $$
+
 where
+
 $$
 \kappa =
 \frac{(1-\zeta_p\bar\beta)(1-\zeta_p)}
@@ -122,6 +134,7 @@ $$
 $$
 
 - **(F11) Wage Phillips curve**:
+
 $$
 \begin{aligned}
 w_t={}&
@@ -136,6 +149,7 @@ w_t={}&
 $$
 
 - **(F12) Household marginal rate of substitution**:
+
 $$
 w_t^h =
 \frac{1}{1-h e^{-\gamma}}(c_t-h e^{-\gamma}c_{t-1}+h e^{-\gamma}z_t)
@@ -143,6 +157,7 @@ w_t^h =
 $$
 
 - **(F13) Baseline monetary policy rule**:
+
 $$
 R_t = \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1\pi_t+\psi_2(y_t-y_t^f)\big)
@@ -151,21 +166,25 @@ R_t = \rho_R R_{t-1}
 $$
 
 - **(F14) Time-varying-target monetary policy rule**:
+
 $$
 R_t = \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
 $$
+
 The extended model uses (F14) in place of (F13).
 
 - **(F15) External finance spread**:
+
 $$
 E_t[\tilde{R}_{t+1}^k-R_t] =
 b_t+\zeta_{sp,b}(q_t^k+\bar{k}_t-n_t)+\tilde{\sigma}_{\omega,t}.
 $$
 
 - **(F16) Entrepreneurial return on capital**:
+
 $$
 \tilde{R}_t^k-\pi_t =
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
@@ -174,6 +193,7 @@ $$
 $$
 
 - **(F17) Entrepreneurial net worth**:
+
 $$
 \begin{aligned}
 n_t={}&
@@ -190,11 +210,13 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F18) Output gap definition**:
+
 $$
 og_t = y_t-y_t^f.
 $$
 
 - **(F19) Flexible-price consumption Euler equation**:
+
 $$
 c_t^f =
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}r_t^f
@@ -205,6 +227,7 @@ c_t^f =
 $$
 
 - **(F20) Flexible-price investment/Tobin's Q condition**:
+
 $$
 q_t^{k,f} = S'' e^{2\gamma}(1+\bar\beta)
 \left(i_t^f-\frac{1}{1+\bar\beta}(i_{t-1}^f-z_t)
@@ -213,6 +236,7 @@ q_t^{k,f} = S'' e^{2\gamma}(1+\bar\beta)
 $$
 
 - **(F21) Flexible-price capital accumulation**:
+
 $$
 \bar{k}_t^f =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
@@ -221,6 +245,7 @@ $$
 $$
 
 - **(F22) Flexible-price production-side identities**:
+
 $$
 k_t^f=u_t^f-z_t+\bar{k}_{t-1}^f,\quad
 u_t^f=\frac{1-\psi}{\psi}r_t^{k,f},\quad
@@ -229,10 +254,12 @@ k_t^f=w_t^f-r_t^{k,f}+l_t^f.
 $$
 
 - **(F23) Flexible-price output and resource constraint**:
+
 $$
 y_t^f=\Phi_p\big(\alpha k_t^f+(1-\alpha)l_t^f\big)
 +\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t,
 $$
+
 $$
 y_t^f=g_\ast\;g_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
@@ -240,6 +267,7 @@ y_t^f=g_\ast\;g_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
 $$
 
 - **(F24) Flexible-price wage/MRS condition**:
+
 $$
 w_t^f =
 \frac{1}{1-h e^{-\gamma}}(c_t^f-h e^{-\gamma}c_{t-1}^f+h e^{-\gamma}z_t)
@@ -247,6 +275,7 @@ w_t^f =
 $$
 
 - **(F25) Flexible-price arbitrage condition without financial frictions**:
+
 $$
 q_t^{k,f} =
 \frac{r_\ast^k}{r_\ast^k+1-\delta}E_t[r_{t+1}^{k,f}]
@@ -258,33 +287,39 @@ $$
 ## 5. Exogenous Processes
 
 - **(F26) Detrended productivity growth**:
+
 $$
 z_t=\frac{1}{1-\alpha}(\rho_z-1)\tilde{z}_{t-1}
 +\frac{1}{1-\alpha}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F27) Detrended log productivity**:
+
 $$
 \tilde{z}_t=\rho_z\tilde{z}_{t-1}+\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F28) Government spending**:
+
 $$
 g_t=\rho_g g_{t-1}+\sigma_g\varepsilon_{g,t}
 +\eta_{gz}\sigma_z\varepsilon_{z,t}.
 $$
 
 - **(F29) Intertemporal wedge**:
+
 $$
 b_t=\rho_b b_{t-1}+\sigma_b\varepsilon_{b,t}.
 $$
 
 - **(F30) Marginal efficiency of investment**:
+
 $$
 \mu_t=\rho_\mu\mu_{t-1}+\sigma_\mu\varepsilon_{\mu,t}.
 $$
 
 - **(F31) Price markup shock**:
+
 $$
 \lambda_{f,t}=\rho_{\lambda_f}\lambda_{f,t-1}
 +\sigma_{\lambda_f}\varepsilon_{\lambda_f,t}
@@ -292,6 +327,7 @@ $$
 $$
 
 - **(F32) Wage markup shock**:
+
 $$
 \lambda_{w,t}=\rho_{\lambda_w}\lambda_{w,t-1}
 +\sigma_{\lambda_w}\varepsilon_{\lambda_w,t}
@@ -299,11 +335,13 @@ $$
 $$
 
 - **(F33) Monetary policy residual**:
+
 $$
 r_t^m=\rho_{r^m}r_{t-1}^m+\sigma_{r^m}\varepsilon_{r^m,t}.
 $$
 
 - **(F34) Financial risk/spread shock**:
+
 $$
 \tilde{\sigma}_{\omega,t}=
 \rho_{\sigma_\omega}\tilde{\sigma}_{\omega,t-1}
@@ -311,6 +349,7 @@ $$
 $$
 
 - **(F35) Time-varying inflation target**:
+
 $$
 \pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}
 +\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.

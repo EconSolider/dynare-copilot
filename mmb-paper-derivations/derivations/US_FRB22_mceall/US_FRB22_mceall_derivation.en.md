@@ -21,6 +21,7 @@ The LINVER paper does not present household, firm, government, or financial-sect
 - **Monetary authority**: the paper gives a generic inertial federal-funds-rate rule used in LINVER policy analysis:
 
 **(F1) Generic inertial policy rule from the paper**:
+
 $$
 R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right].
 $$
@@ -30,6 +31,7 @@ Here $R_t$ is the nominal federal funds rate, $r^{\ast}$ the neutral real rate, 
 - **Fiscal stabilization mechanism**: the appendix describes an emergency fiscal stabilization variable used when ELB simulations would otherwise produce severe downturns.
 
 **(F2) ECFS fiscal process from the paper**:
+
 $$
 FISCAL_t = 0.97 FISCAL_{t-1} + \varepsilon_t.
 $$
@@ -41,6 +43,7 @@ The shock is selected by the solution routine when needed to keep the expected n
 No source-level first-order conditions are reported in the LINVER overview paper. The archive therefore records only reduced-form behavioral equations and cross-checked implementation equations. The following generic templates summarize the MMB implementation structure and must be treated as `implementation_cross_check`.
 
 **(F3) Linear behavioral equation template (`implementation_cross_check`)**:
+
 $$
 x_t =
 c_x
@@ -53,6 +56,7 @@ $$
 This template represents the many named equations in the MMB `.mod`, each written as a calibrated linear relation in lagged, contemporaneous, and sometimes future-dated variables.
 
 **(F4) Model-consistent expectations object (`implementation_cross_check`)**:
+
 $$
 z^q_t = \sum_i \omega_i q_{i,t+s_i}.
 $$
@@ -60,6 +64,7 @@ $$
 The MMB implementation has many expectation variables such as `zebfi`, `zecd`, `zeco`, `zeh`, `zgap05`, `zgap10`, `zgap30`, `zpi10`, `zpicxfe`, and `zrff5`/`zrff10`/`zrff30`, often involving leads. For `mceall`, these objects are consistent with the variant description "all expectations are model consistent."
 
 **(F5) Interest-rate policy rule in the MMB implementation (`implementation_cross_check`)**:
+
 $$
 \begin{aligned}
 i_t ={}&
@@ -86,31 +91,37 @@ The source paper does not provide a full set of market-clearing equations. It de
 The MMB implementation exposes summary identities for Modelbase reporting:
 
 **(F6) Reported short-rate identity (`implementation_cross_check`)**:
+
 $$
 interest_t = rff_t.
 $$
 
 **(F7) Quarterly inflation reporting identity (`implementation_cross_check`)**:
+
 $$
 inflationq_t = 4\,picnia_t.
 $$
 
 **(F8) Output-gap reporting identity (`implementation_cross_check`)**:
+
 $$
 outputgap_t = xgap2_t.
 $$
 
 **(F9) Output reporting identity (`implementation_cross_check`)**:
+
 $$
 output_t = 100\,xgdp\_l_t.
 $$
 
 **(F10) Production-side output-gap identity (`implementation_cross_check`)**:
+
 $$
 xgap2_t = 100\,xgdo\_l_t - 100\,xgdpt\_l_t.
 $$
 
 **(F11) GDP accounting block template (`implementation_cross_check`)**:
+
 $$
 xgdpn\_l_t =
 \sum_s \lambda_s\,component_{s,t}
@@ -127,26 +138,31 @@ $$
 The paper describes equation residuals sampled from 1970-2019 and rescaled wage-price shocks for stochastic simulation, but does not list all residual processes. The MMB implementation declares many equation residual shocks plus policy shocks.
 
 **(F12) Generic equation residual (`implementation_cross_check`)**:
+
 $$
 u^x_t = \sigma_x \varepsilon^x_t.
 $$
 
 **(F13) Fiscal policy shock mapping (`implementation_cross_check`)**:
+
 $$
 fispol_t = \kappa_f \varepsilon^f_t.
 $$
 
 **(F14) Fiscal stock process (`implementation_cross_check`, paper-consistent)**:
+
 $$
 fiscal_t = 0.97\,fiscal_{t-1} + fiscal\_aerr_t.
 $$
 
 **(F15) Moving-average fiscal impetus (`implementation_cross_check`)**:
+
 $$
 fiscalav_t = 0.90\,fiscalav_{t-1} + fiscal_t.
 $$
 
 **(F16) Persistent trend/process template (`implementation_cross_check`)**:
+
 $$
 s_t = \rho_s s_{t-1} + \varepsilon^s_t.
 $$
@@ -160,6 +176,7 @@ LINVER is not linearized around a conventional full stock steady state. The sour
 For a linear implementation, the archive-level steady-state interpretation is:
 
 **(F17) Baseline deviation convention**:
+
 $$
 \tilde{x}_t = x_t - x^{base}_t,
 \qquad
@@ -169,6 +186,7 @@ $$
 for variables represented as linear deviations around the LINVER baseline/evaluation point.
 
 **(F18) Inflation and interest baseline targets**:
+
 $$
 \pi_t = \pi^{\ast} + \tilde{\pi}_t,
 \qquad

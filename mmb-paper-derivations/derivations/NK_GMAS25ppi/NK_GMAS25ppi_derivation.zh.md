@@ -126,17 +126,20 @@ $$
 ## 3. First-Order Conditions
 
 - **(F1) 家庭劳动的期内条件**：
+
 $$
 C_t^{\sigma}N_t^{\varphi}=\frac{W_t}{P_t}.
 $$
 
 - **(F2) 名义随机贴现因子**：
+
 $$
 \beta\left(\frac{C_{t+1}}{C_t}\right)^{-\sigma}
 \left(\frac{P_t}{P_{t+1}}\right)=Q_{t,t+1}.
 $$
 
 - **(F3) 家庭 Euler 方程**：
+
 $$
 \beta R_tE_t\left[
 \left(\frac{C_{t+1}}{C_t}\right)^{-\sigma}
@@ -145,12 +148,14 @@ $$
 $$
 
 - **(F4) 对数线性消费 Euler 方程**：
+
 $$
 c_t=E_t c_{t+1}-\frac{1}{\sigma}
 \left(r_t-E_t\pi_{t+1}-\rho\right).
 $$
 
 - **(F5) 完全市场下的国际风险分享**：
+
 $$
 C_t=C_t^i\mathcal{Q}_{i,t}^{1/\sigma}
 \quad\Rightarrow\quad
@@ -158,21 +163,25 @@ c_t=c_t^{\ast}+\frac{1}{\sigma}q_t.
 $$
 
 - **(F6) 用有效贸易条件表示的风险分享关系**：
+
 $$
 c_t=c_t^{\ast}+\frac{1-\alpha}{\sigma}s_t.
 $$
 
 - **(F7) 无抛补利率平价**：
+
 $$
 r_t-r_t^{\ast}=E_t\Delta e_{t+1}.
 $$
 
 - **(F8) 贸易条件差分方程**：
+
 $$
 s_t=(r_t^{\ast}-E_t\pi_{t+1}^{\ast})-(r_t-E_t\pi_{H,t+1})+E_ts_{t+1}.
 $$
 
 - **(F9) Calvo 最优重设价格条件，对数线性形式**：
+
 $$
 \overline{p}_{H,t}=\mu+(1-\beta\theta)
 \sum_{k=0}^{\infty}(\beta\theta)^kE_t\{mc_{t+k}+p_{H,t+k}\},
@@ -181,6 +190,7 @@ $$
 $$
 
 - **(F10) 边际成本形式的国内 Phillips 曲线**：
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\lambda\widehat{mc}_t,
 \qquad
@@ -188,12 +198,14 @@ $$
 $$
 
 - **(F11) 由产出、世界产出和生产率表示的实际边际成本**：
+
 $$
 mc_t=-\nu+(\sigma_\alpha+\varphi)y_t
 +(\sigma-\sigma_\alpha)y_t^{\ast}-(1+\varphi)a_t.
 $$
 
 - **(F12) 国内自然产出**：
+
 $$
 \overline{y}_t=\Omega+\Gamma a_t+\alpha\Psi y_t^{\ast},
 $$
@@ -209,16 +221,19 @@ $$
 $$
 
 - **(F13) 产出缺口定义**：
+
 $$
 x_t=y_t-\overline{y}_t.
 $$
 
 - **(F14) 边际成本与产出缺口关系**：
+
 $$
 \widehat{mc}_t=(\sigma_\alpha+\varphi)x_t.
 $$
 
 - **(F15) 小型开放经济 New Keynesian Phillips 曲线**：
+
 $$
 \pi_{H,t}=\beta E_t\pi_{H,t+1}+\kappa_\alpha x_t,
 \qquad
@@ -226,12 +241,14 @@ $$
 $$
 
 - **(F16) 自然实际利率**：
+
 $$
 \overline{rr}_t=\rho-\sigma_\alpha\Gamma(1-\rho_a)a_t
 +\alpha\sigma_\alpha(\Theta+\Psi)E_t\Delta y_{t+1}^{\ast}.
 $$
 
 - **(F17) 产出缺口形式的动态 IS 方程**：
+
 $$
 x_t=E_tx_{t+1}
 -\frac{1}{\sigma_\alpha}
@@ -239,6 +256,7 @@ x_t=E_tx_{t+1}
 $$
 
 - **(F18) `NK_GMAS25ppi` 的 PPI/国内通胀 Taylor 规则**：
+
 $$
 r_t=\rho+\phi_\pi\pi_{H,t}.
 $$
@@ -246,46 +264,55 @@ $$
 ## 4. Market Clearing & Identities
 
 - **(F19) 有效贸易条件**：
+
 $$
 s_t=p_{F,t}-p_{H,t}.
 $$
 
 - **(F20) CPI 与国内价格恒等式**：
+
 $$
 p_t=p_{H,t}+\alpha s_t.
 $$
 
 - **(F21) CPI 通胀恒等式**：
+
 $$
 \pi_t=\pi_{H,t}+\alpha\Delta s_t.
 $$
 
 - **(F22) 名义汇率与贸易条件恒等式**：
+
 $$
 s_t=e_t+p_t^{\ast}-p_{H,t}.
 $$
 
 - **(F23) 实际汇率关系**：
+
 $$
 q_t=(1-\alpha)s_t.
 $$
 
 - **(F24) 总量生产函数，一阶近似**：
+
 $$
 y_t=a_t+n_t.
 $$
 
 - **(F25) 商品市场出清/产出需求关系**：
+
 $$
 y_t=c_t+\frac{\alpha\omega}{\sigma}s_t.
 $$
 
 - **(F26) 世界资源条件**：
+
 $$
 y_t^{\ast}=c_t^{\ast}.
 $$
 
 - **(F27) 贸易条件与相对产出**：
+
 $$
 y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 \qquad
@@ -293,11 +320,13 @@ y_t=y_t^{\ast}+\frac{1}{\sigma_\alpha}s_t,
 $$
 
 - **(F28) 净出口关系**：
+
 $$
 nx_t=\alpha\left(\frac{\omega}{\sigma}-1\right)s_t.
 $$
 
 - **(F29) 开放经济辅助参数**：
+
 $$
 \omega=\sigma\gamma+(1-\alpha)(\sigma\eta-1),
 \qquad
@@ -307,16 +336,19 @@ $$
 ## 5. Exogenous Processes
 
 - **(F30) 国内技术过程**：
+
 $$
 a_t=\rho_a a_{t-1}+\varepsilon_t^a.
 $$
 
 - **(F31) 校准中使用的世界产出过程**：
+
 $$
 y_t^{\ast}=\rho_{y^{\ast}}y_{t-1}^{\ast}+\varepsilon_t^{\ast}.
 $$
 
 - **(F32) 校准中使用的创新相关系数**：
+
 $$
 \operatorname{corr}(\varepsilon_t^a,\varepsilon_t^{\ast})=0.3.
 $$
