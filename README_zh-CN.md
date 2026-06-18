@@ -26,6 +26,7 @@
 - [安装](#安装约-1-分钟)
 - [更新](#更新)
 - [卸载](#卸载)
+- [在 OpenAI Codex 中使用](#在-openai-codex-中使用)
 - [快速上手](#快速上手)
 - [支持的任务](#支持的任务)
 - [工作原理](#工作原理)
@@ -42,7 +43,7 @@
 
 | 你想做的事                               | 需要装的东西                                                         |
 | ---------------------------------------- | -------------------------------------------------------------------- |
-| 让它**写 / 改 / 查** `.mod` 文件 | 只需[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| 让它**写 / 改 / 查** `.mod` 文件 | 一个编程智能体：[Claude Code](https://docs.claude.com/en/docs/claude-code/overview) 或 [OpenAI Codex](https://developers.openai.com/codex/skills) |
 | 自己**运行**生成的 `.mod`        | 额外需要[Dynare 7.1](https://www.dynare.org/) + MATLAB（或 Octave）     |
 | 让它**自动运行并循环纠错**         | 再额外装一个 MATLAB MCP 服务器（在 VSCode 中）                       |
 
@@ -53,6 +54,8 @@
 > 🔌 **没配过 MCP？** 如果你从没把 MATLAB（或 Stata）接进 Claude Code，请跟着这份零基础图文教程一步步来：**[给 Claude Code 接上 MATLAB / Stata（MCP 配置入门指南）](./docs/mcp-setup-guide_zh-CN.md)**。它默认你毫无配置基础，手把手教你安装 Claude Code、接好驱动上面「自动运行-纠错」闭环的 MATLAB MCP，以及 Stata MCP。
 
 ## 安装（约 1 分钟）
+
+> 用的是 **OpenAI Codex** 而非 Claude Code？请直接看[在 OpenAI Codex 中使用](#在-openai-codex-中使用)。
 
 先装好 Claude Code，见[官方安装文档](https://docs.claude.com/en/docs/claude-code/overview)，常见方式：`npm install -g @anthropic-ai/claude-code`。然后：
 
@@ -99,6 +102,47 @@
 这样只卸载插件、保留市场注册，之后想重装或更新都不必再重新添加市场。
 
 > 如果你是手动安装的（见下方「进阶」），没有插件可卸载，直接删掉拷过去的目录即可：`rm -rf ~/.claude/skills/dynare-copilot`（或项目级的 `.claude/skills/dynare-copilot/`）。
+
+## 在 OpenAI Codex 中使用
+
+本 skill 就是一个标准的 [Agent Skill](https://developers.openai.com/codex/skills)——一份带 `name` + `description` frontmatter 的 `SKILL.md` 加一个 `references/` 文件夹——所以 [OpenAI Codex](https://developers.openai.com/codex/) 无需转换即可直接加载。Codex 会从 `~/.agents/skills/`（所有项目）或 `<repo>/.agents/skills/`（单个项目）发现 skill；同样的 `references/` 参考库（149 篇 MMB 模型、89 个 Pfeifer 示例、已做种子的模型存档库）也随之带过去。
+
+**全局安装**（所有项目可用）—— 克隆本仓库，把 skill 文件夹拷进 `~/.agents/skills/`：
+
+```bash
+git clone https://github.com/EconSolider/dynare-copilot.git
+mkdir -p ~/.agents/skills
+cp -r dynare-copilot/plugins/dynare-copilot/skills/dynare-copilot ~/.agents/skills/dynare-copilot
+```
+
+<details>
+<summary>Windows PowerShell</summary>
+
+```powershell
+git clone https://github.com/EconSolider/dynare-copilot.git
+New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
+Copy-Item -Recurse -Force `
+  dynare-copilot\plugins\dynare-copilot\skills\dynare-copilot `
+  "$HOME\.agents\skills\dynare-copilot"
+```
+
+</details>
+
+**只想给某个项目用**，就把同一个文件夹拷到 `<你的项目>/.agents/skills/dynare-copilot/`（Codex 也会扫描仓库根目录）。
+
+**使用**：启动 `codex`，像[快速上手](#快速上手)那样直接用中文或英文描述任务即可。Codex 可以根据你的请求自动选用该 skill，你也可以用 `/skills` 选择、或用 `$dynare-copilot` 显式调用。
+
+**更新**：重跑上面的安装命令（拷贝会覆盖旧文件夹），或在克隆里 `git pull` 后再拷一次。
+
+**自动运行—纠错闭环**：和 Claude Code 一样，要让 Codex *运行* Dynare 并自动迭代修错，需要一个 MATLAB MCP 服务器。在 `~/.codex/config.toml` 里注册（或用 `codex mcp add`）：
+
+```toml
+[mcp_servers.matlab]
+command = "..."   # 你的 MATLAB MCP 服务器启动命令
+args = ["..."]
+```
+
+没有 MCP 服务器时，Codex 仍能写、改、查 `.mod` 文件，只是不会替你执行。MATLAB MCP 服务器的获取方式见 [MCP 配置指南](./docs/mcp-setup-guide.md)（其中步骤是针对 Claude Code 的，把同一个服务器指向 Codex 的 `config.toml` 即可）。
 
 ## 快速上手
 

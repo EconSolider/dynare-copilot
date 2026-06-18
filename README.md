@@ -26,6 +26,7 @@
 - [Installation](#installation-about-1-minute)
 - [Update](#update)
 - [Uninstall](#uninstall)
+- [Use with OpenAI Codex](#use-with-openai-codex-cli)
 - [Quick Start](#quick-start)
 - [Supported Tasks](#supported-tasks)
 - [How It Works](#how-it-works)
@@ -42,7 +43,7 @@
 
 | What you want to do                                     | What you need                                                        |
 | ------------------------------------------------------- | -------------------------------------------------------------------- |
-| Let it **write / edit / inspect** `.mod` files   | Only [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) |
+| Let it **write / edit / inspect** `.mod` files   | A coding agent: [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) or [OpenAI Codex](https://developers.openai.com/codex/skills) |
 | **Run** the generated `.mod` files yourself     | Also install [Dynare 7.1](https://www.dynare.org/) + MATLAB or Octave    |
 | Let it **run automatically and iterate on errors** | Also install a MATLAB MCP server in VSCode                           |
 
@@ -53,6 +54,8 @@
 > 🔌 **New to MCP?** If you've never connected MATLAB (or Stata) to Claude Code before, follow the step-by-step beginner's guide: **[Connecting MATLAB / Stata to Claude Code (MCP Setup Guide)](./docs/mcp-setup-guide.md)**. It assumes zero prior setup and covers installing Claude Code, wiring up the MATLAB MCP that powers the automatic run-debug loop above, and the Stata MCP.
 
 ## Installation (about 1 minute)
+
+> Using **OpenAI Codex** instead of Claude Code? Skip to [Use with OpenAI Codex](#use-with-openai-codex-cli).
 
 First install Claude Code. See the [official installation guide](https://docs.claude.com/en/docs/claude-code/overview); a common method is `npm install -g @anthropic-ai/claude-code`. Then:
 
@@ -99,6 +102,47 @@ To remove the plugin, run in Claude Code:
 This removes the plugin while keeping the marketplace registered, so you can reinstall or update later without re-adding it.
 
 > If you installed manually (the Advanced method below), there is no plugin to uninstall — just delete the copied directory: `rm -rf ~/.claude/skills/dynare-copilot` (or the project-local `.claude/skills/dynare-copilot/`).
+
+## Use with OpenAI Codex CLI
+
+The skill is just a standard [Agent Skill](https://developers.openai.com/codex/skills) — a `SKILL.md` with `name` + `description` frontmatter plus a `references/` folder — so [OpenAI Codex](https://developers.openai.com/codex/) loads it with no conversion. Codex discovers skills under `~/.agents/skills/` (every project) or `<repo>/.agents/skills/` (one project); the same `references/` libraries (149 MMB models, 89 Pfeifer examples, the seeded model archive) ship with it.
+
+**Install globally** (available in every project) — clone this repo and copy the skill folder into `~/.agents/skills/`:
+
+```bash
+git clone https://github.com/EconSolider/dynare-copilot.git
+mkdir -p ~/.agents/skills
+cp -r dynare-copilot/plugins/dynare-copilot/skills/dynare-copilot ~/.agents/skills/dynare-copilot
+```
+
+<details>
+<summary>Windows PowerShell</summary>
+
+```powershell
+git clone https://github.com/EconSolider/dynare-copilot.git
+New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
+Copy-Item -Recurse -Force `
+  dynare-copilot\plugins\dynare-copilot\skills\dynare-copilot `
+  "$HOME\.agents\skills\dynare-copilot"
+```
+
+</details>
+
+For a **single project** instead, copy that same folder to `<your-project>/.agents/skills/dynare-copilot/` — Codex scans the repo root too.
+
+**Use it.** Start `codex`, then describe the task in Chinese or English (see [Quick Start](#quick-start)). Codex can pick the skill up automatically from your request, or you can run `/skills` to select it or mention it explicitly with `$dynare-copilot`.
+
+**Update.** Re-run the install commands (the copy overwrites the old folder), or `git pull` in the clone and copy again.
+
+**Automatic run-debug loop.** As in Claude Code, having Codex *run* Dynare and iterate on errors needs a MATLAB MCP server. Register one in `~/.codex/config.toml` (or `codex mcp add`):
+
+```toml
+[mcp_servers.matlab]
+command = "..."   # your MATLAB MCP server launch command
+args = ["..."]
+```
+
+Without an MCP server Codex still writes, edits, and inspects `.mod` files — it just won't execute them for you. See the [MCP setup guide](./docs/mcp-setup-guide.md) for how to obtain a MATLAB MCP server (the wiring shown there is for Claude Code; point the same server at Codex's `config.toml`).
 
 ## Quick Start
 
