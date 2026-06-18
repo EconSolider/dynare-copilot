@@ -13,7 +13,7 @@
 
 - Status: `needs_review`.
 - The main model equations are present in the Markdown, especially the household budget constraints, Euler equation, CES production function, factor demands, price setting, import/export equations, Taylor rule, shock processes, log-linear block, dynamic IS equation, consumption-gap decomposition, markup equation, and labor-share equation.
-- OCR uncertainty remains in the household-type notation around the constrained share, in the production-cost multiplier notation around $\tau_t^Z$, and in several references to appendix material.
+- OCR uncertainty remains in the household-type notation around the constrained share, in the production-cost multiplier notation around \(\tau_t^Z\), and in several references to appendix material.
 - The appendix key-parameter table is referenced by the paper text but is not visible in the extracted Markdown.
 
 ## Implementation Cross-Check
@@ -30,7 +30,7 @@
 ## Deferred Issues
 
 - Recover supplementary appendix tables or inspect the PDF only if a later pass needs exact steady-state ratios and complete calibration details.
-- Verify whether implementation uses the paper's $R_t$ notation as a nominal policy rate or separates nominal and real rates differently in code.
+- Verify whether implementation uses the paper's \(R_t\) notation as a nominal policy rate or separates nominal and real rates differently in code.
 - Source-check the wage block against Appendix A.2 if a runnable `.mod` implementation is later produced.
 - Runtime validation, residual checks, Blanchard-Kahn checks, and IRF replication were not performed.
 

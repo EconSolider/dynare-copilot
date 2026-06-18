@@ -19,12 +19,12 @@
 
 家庭选择消费、债券持有和劳动供给，并具有外部习惯。源文件表 1 报告的是所得欧拉方程和工资 Phillips 曲线，而不是完整的家庭拉格朗日问题；因此底层优化问题记录为：
 
-$$
+\[
 \max_{\{C_t,L_t,B_t\}} E_0 \sum_{t=0}^{\infty} \beta^t
 \left[ U(C_t-h C_{t-1}) - V(L_t) \right]
 \quad\text{s.t.}\quad
 P_t C_t + B_t \le W_t L_t + R^n_{t-1}B_{t-1} + \Pi_t^{div}.
-$$
+\]
 
 `needs_review`：精确的效用归一化依赖附录；下方线性化欧拉方程和工资方程来自表 1。
 
@@ -42,9 +42,9 @@ $$
 
 由于项目回报受到企业可无成本观察、但贷款人只能以监测成本观察的个体冲击影响，最优合约生成外部融资溢价：
 
-$$
+\[
 EP_t = EP\!\left(Q_t + E_t[\hat{K}_{t+1}] - E_t[\hat{N}_{t+1}]\right),
-$$
+\]
 
 其线性化形式见表 1 中的方程 (F14)。
 
@@ -60,16 +60,16 @@ $$
 
 **(F1) 带习惯的欧拉方程**
 
-$$
+\[
 \frac{1+h}{1-h}\hat{C}_{t}
 = \frac{1}{1-h}E_t[\hat{C}_{t+1}]
 + \frac{h}{1-h}\hat{C}_{t-1}
 - \hat{R}_{t}.
-$$
+\]
 
 **(F2) 工资 Phillips 曲线**
 
-$$
+\[
 \hat{W}_{t}
 = \frac{\beta}{1+\beta}E_t[\hat{W}_{t+1}]
 + \frac{1}{1+\beta}\hat{W}_{t-1}
@@ -81,51 +81,51 @@ $$
 \left[\phi\hat{L}_{t}-\frac{h}{1-h}\hat{C}_{t-1}
 +\frac{1}{1-h}\hat{C}_{t}-\hat{W}_{t}\right]
 +\varepsilon_t^w.
-$$
+\]
 
 **(F3) 资本积累**
 
-$$
+\[
 \hat{K}_{t+1}
 = \delta(\hat{I}_{t}+\varepsilon_t^x)
 + (1-\delta)(\hat{K}_{t}+\varepsilon_t^k).
-$$
+\]
 
 **(F4) 最优资本利用率**
 
-$$
+\[
 \hat{Z}_t^k = \frac{\zeta}{1-\zeta}\hat{U}_t.
-$$
+\]
 
 **(F5) 投资欧拉方程**
 
-$$
+\[
 \hat{I}_t
 = \frac{1}{\xi(1+\beta)}(\hat{Q}_t+\varepsilon_t^x)
 + \frac{1}{1+\beta}\hat{I}_{t-1}
 + \frac{\beta}{1+\beta}E_t[\hat{I}_{t+1}].
-$$
+\]
 
 **(F6) 生产侧要素 FOC**
 
-$$
+\[
 \hat{W}_t = \hat{Z}_t^k - \hat{L}_t + \hat{K}_t + \hat{U}_t.
-$$
+\]
 
 **(F7) 价格 Phillips 曲线**
 
-$$
+\[
 \hat{\Pi}_t
 = \frac{\sigma_{pi}}{1+\sigma_{pi}\beta}\hat{\Pi}_{t-1}
 + \frac{\beta}{1+\sigma_{pi}\beta}E_t[\hat{\Pi}_{t+1}]
 - \frac{(1-\beta\sigma_p)(1-\sigma_p)}{(1+\sigma_{pi}\beta)\sigma_p}
 \left[\varepsilon_t^a-\alpha\hat{Z}_t^k-(1-\alpha)\hat{W}_t\right]
 + \varepsilon_t^p.
-$$
+\]
 
 **(F8) Taylor 规则**
 
-$$
+\[
 \hat{R}_t^n
 = \rho_i\hat{R}_{t-1}^n
 + (1-\rho_i)\left[\rho_\pi\hat{\Pi}_t
@@ -133,77 +133,77 @@ $$
 + \rho_{\Delta y}\left[\hat{Y}_t-\hat{Y}_t^p
 - (\hat{Y}_{t-1}-\hat{Y}_{t-1}^p)\right]
 + \varepsilon_t^r.
-$$
+\]
 
 **(F9) Fisher 方程**
 
-$$
+\[
 \hat{R}_t^n = \hat{R}_t + E_t[\hat{\Pi}_{t+1}].
-$$
+\]
 
 **(F10) SWBGG 中的资本价格/资本回报**
 
-$$
+\[
 \hat{R}_t^k
 = \frac{Z^k}{R^k}\hat{Z}_t^k
 + \frac{1-\delta}{R^k}(\hat{Q}_t+\varepsilon_t^k)
 - \hat{Q}_{t-1}.
-$$
+\]
 
 **(F11) 外部融资溢价**
 
-$$
+\[
 \hat{EP}_t
 = \varkappa\left(\hat{Q}_t + E_t[\hat{K}_{t+1}]
 - E_t[\hat{N}_{t+1}]\right).
-$$
+\]
 
 **(F12) 利差/资本回报套利**
 
-$$
+\[
 E_t[\hat{R}_{t+1}^k] = \hat{R}_t + \hat{EP}_t.
-$$
+\]
 
 **(F13) 企业净值积累**
 
-$$
+\[
 \frac{1}{\theta R^k}E_t[\hat{N}_{t+1}]
 = \frac{K}{N}\hat{R}_t^k
 - \left(\frac{K}{N}-1\right)\hat{R}_{t-1}
 - \varkappa\left(\frac{K}{N}-1\right)(\hat{K}_t+\hat{Q}_{t-1})
 + \left[\left(\frac{K}{N}-1\right)\varkappa+1\right]\hat{N}_t.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 **(F14) 资源约束**
 
-$$
+\[
 \hat{Y}_t
 = \frac{C}{Y}\hat{C}_t
 + \frac{I}{Y}\hat{I}_t
 + \frac{G}{Y}\varepsilon_t^g
 + Z^k\frac{K}{Y}\hat{U}_t.
-$$
+\]
 
 **(F15) 生产函数**
 
-$$
+\[
 \hat{Y}_t
 = \Theta\left[\varepsilon_t^a
 + \alpha(\varepsilon_t^k+\hat{K}_t+\hat{U}_t)
 + (1-\alpha)\hat{L}_t\right].
-$$
+\]
 
 **(F16) 可选就业 Phillips 曲线**
 
-$$
+\[
 \hat{E}_t
 = \frac{1}{1+\beta}\hat{E}_{t-1}
 + \frac{\beta}{1+\beta}E_t[\hat{E}_{t+1}]
 - \frac{(1-\beta\sigma_E)(1-\sigma_E)}{(1+\beta)\sigma_E}
 (\hat{L}_t-\hat{E}_t).
-$$
+\]
 
 `needs_review`：实现交叉检查中，美国复制版因为有可用工时数据而注释掉就业方程；本档案保留表 1 中的来源方程，但将其标为美国 MMB 实现的可选项。
 
@@ -213,71 +213,71 @@ $$
 
 **(F17) 技术冲击**
 
-$$
+\[
 \varepsilon_t^a = \rho_a\varepsilon_{t-1}^a - e_t^a.
-$$
+\]
 
 **(F18) 政府冲击**
 
-$$
+\[
 \varepsilon_t^g = \rho_g\varepsilon_{t-1}^g - e_t^g.
-$$
+\]
 
 **(F19) 投资专有技术冲击**
 
-$$
+\[
 \varepsilon_t^x = \rho_x\varepsilon_{t-1}^x - e_t^x.
-$$
+\]
 
 **(F20) 货币政策冲击**
 
-$$
+\[
 \varepsilon_t^r = \rho_{ri}\varepsilon_{t-1}^r + e_t^r.
-$$
+\]
 
 **(F21) 价格加成冲击**
 
-$$
+\[
 \varepsilon_t^p = \rho_p\varepsilon_{t-1}^p + e_t^p.
-$$
+\]
 
 **(F22) 工资加成冲击**
 
-$$
+\[
 \varepsilon_t^w = \rho_w\varepsilon_{t-1}^w + e_t^w.
-$$
+\]
 
 **(F23) 资本质量冲击**
 
-$$
+\[
 \varepsilon_t^k = \rho_k\varepsilon_{t-1}^k - e_t^k.
-$$
+\]
 
 ## 6. Steady-State Solution
 
 因为模型是线性化模型，所有带帽内生变量和零均值冲击的稳态均为零：
 
-$$
+\[
 \hat{C}=\hat{I}=\hat{Y}=\hat{W}=\hat{L}=\hat{\Pi}=\hat{R}=\hat{R}^n
 =\hat{K}=\hat{Q}=\hat{R}^k=\hat{EP}=\hat{N}=\hat{U}=\hat{Z}^k=0.
-$$
+\]
 
 来源和实现交叉检查定义了稳态常数：
 
-$$
+\[
 R=\frac{1}{\beta},\qquad
 Z^k=R-(1-\delta),\qquad
 R^k=S R,\qquad
 \frac{K}{N}=2.
-$$
+\]
 
 线性方程中使用的其他比率由校准常数计算：
 
-$$
+\[
 \frac{I}{K}=\delta,\qquad
 \frac{G}{Y}=0.20,\qquad
 \frac{C}{Y}=1-\frac{I}{Y}-\frac{G}{Y}.
-$$
+\]
 
 `needs_review`：来源表 1 没有打印每个稳态比率公式。实现交叉检查计算了 `W`、`K_L`、`Y_K`、`K_Y`、`I_Y` 和 `C_Y`；这些在 `extraction_notes.md` 中作为实现证据记录，而不是独立的论文侧推导。
 

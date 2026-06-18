@@ -11,7 +11,7 @@
 
 - Status: `needs_review`.
 - The main aggregate equations (paper equations 1-12) are readable in MinerU Markdown and were renumbered as `(F1)` through `(F13)` for the archive.
-- The subjective multi-step forecast expression is marked `needs_review`: the OCR/source text uses an $I_5$ identity matrix while $Z_t$ is defined as $[\pi_t,x_t,i_t]'$. This may reflect the augmented state vector or an OCR/notation issue and needs targeted source review.
+- The subjective multi-step forecast expression is marked `needs_review`: the OCR/source text uses an \(I_5\) identity matrix while \(Z_t\) is defined as \([\pi_t,x_t,i_t]'\). This may reflect the augmented state vector or an OCR/notation issue and needs targeted source review.
 - The paper gives a log-linear aggregate model rather than a complete nonlinear household-firm FOC derivation. Optimization blocks were therefore described at the source-supported aggregate level.
 - No missing formulas were invented.
 

@@ -13,7 +13,7 @@
 - Overall status: `needs_review`.
 - The main model equations (1)-(13), output-gap transformations (16)-(26), policy constraints (32)-(35), and appendix equations (A1)-(A11) are present in MinerU Markdown.
 - OCR issue: appendix equation (A4) appears with an inconsistent current-output term. The derivation uses the economically standard Euler/asset-pricing form `E_t y_{t+1} - y_t`, but marks (F12) as `needs_review`.
-- OCR issue: some appendix notation around $\Lambda=F'/F$, the CSV distribution functions, and the optimal targeting criterion contains duplicated or malformed symbols. These are not central to the reduced simulation model but should be checked against the PDF before review status is upgraded.
+- OCR issue: some appendix notation around \(\Lambda=F'/F\), the CSV distribution functions, and the optimal targeting criterion contains duplicated or malformed symbols. These are not central to the reduced simulation model but should be checked against the PDF before review status is upgraded.
 - The derivation emphasizes the MMB `model(linear)` version rather than reproducing every optimal-policy condition from the paper.
 
 ## Implementation Cross-Check

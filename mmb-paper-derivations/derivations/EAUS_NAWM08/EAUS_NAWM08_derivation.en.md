@@ -18,18 +18,18 @@
 
 Household member \(i \in [0,1-\omega]\) chooses consumption, investment, next-period physical capital, utilization, domestic bonds, foreign bonds, and money:
 
-$$
+\[
 \max_{\{C_{i,t},I_{i,t},K_{i,t+1},u_{i,t},B_{i,t+1},B^F_{i,t+1},M_{i,t}\}}
 E_t\sum_{k=0}^{\infty}\beta^k
 \left[
 \frac{(C_{i,t+k}-\kappa C_{I,t+k-1})^{1-\sigma}}{1-\sigma}
 -\frac{N_{i,t+k}^{1+\zeta}}{1+\zeta}
 \right].
-$$
+\]
 
 The period budget constraint is:
 
-$$
+\[
 \begin{aligned}
 &(1+\tau_t^C+\Gamma_v(v_{i,t}))P_{C,t}C_{i,t}+P_{I,t}I_{i,t}
 +R_t^{-1}B_{i,t+1}
@@ -39,22 +39,22 @@ $$
 +\tau_t^K\delta P_{I,t}K_{i,t} \\
 &\quad +(1-\tau_t^D)D_{i,t}+TR_{i,t}-T_{i,t}+B_{i,t}+S_tB^F_{i,t}+M_{i,t-1}.
 \end{aligned}
-$$
+\]
 
 Capital evolves as:
 
-$$
+\[
 K_{i,t+1}=(1-\delta)K_{i,t}+\left(1-\Gamma_I(I_{i,t}/I_{i,t-1})\right)I_{i,t}.
-$$
+\]
 
 ### 2.2 Limited-Asset-Market Household J
 
 Household member \(j \in (1-\omega,1]\) has the same period utility but chooses consumption and money only, subject to:
 
-$$
+\[
 (1+\tau_t^C+\Gamma_v(v_{j,t}))P_{C,t}C_{j,t}+M_{j,t}
 =(1-\tau_t^N-\tau_t^{W_h})W_{j,t}N_{j,t}+TR_{j,t}-T_{j,t}+M_{j,t-1}+\Phi_{j,t}.
-$$
+\]
 
 Both household types set differentiated wages under Calvo contracts. Resetters choose \(\widetilde W_{I,t}\) or \(\widetilde W_{J,t}\), taking the demand for their labor variety as given.
 
@@ -62,9 +62,9 @@ Both household types set differentiated wages under Calvo contracts. Resetters c
 
 Each monopolistically competitive intermediate producer minimizes factor cost subject to:
 
-$$
+\[
 Y_{f,t}=\max\left[z_t K_{f,t}^{\alpha}N_{f,t}^{1-\alpha}-\psi,0\right].
-$$
+\]
 
 The firm rents capital services and a composite labor bundle, pays the employer payroll tax \(\tau_t^{W_f}\), and sets domestic and export prices under Calvo local-currency pricing.
 
@@ -78,15 +78,15 @@ Final consumption and investment goods are CES bundles of domestic and imported 
 
 - **(F1) Marginal utility of consumption**:
 
-$$
+\[
 \Lambda_{i,t}=
 \frac{(C_{i,t}-\kappa C_{I,t-1})^{-\sigma}}
 {1+\tau_t^C+\Gamma_v(v_{i,t})+\Gamma_v'(v_{i,t})v_{i,t}}.
-$$
+\]
 
 - **(F2) Investment FOC / Tobin's Q**:
 
-$$
+\[
 \frac{P_{I,t}}{P_{C,t}}
 =Q_{i,t}\left[1-\Gamma_I(s_{i,t})-\Gamma_I'(s_{i,t})I_{i,t}\right]
 +\beta E_t\left[
@@ -94,13 +94,13 @@ $$
 \frac{I_{i,t+1}^2}{I_{i,t}}
 \right],
 \quad s_{i,t}=\frac{I_{i,t}}{I_{i,t-1}}.
-$$
+\]
 
 The source formula is transcribed by MinerU and should be checked because the derivative notation is compact; `needs_review`.
 
 - **(F3) Capital Euler equation**:
 
-$$
+\[
 Q_{i,t}=\beta E_t\left[
 \frac{\Lambda_{i,t+1}}{\Lambda_{i,t}}
 \left(
@@ -109,44 +109,44 @@ Q_{i,t}=\beta E_t\left[
 +(\tau_{t+1}^K\delta-(1-\tau_{t+1}^K)\Gamma_u(u_{i,t+1}))
 \frac{P_{I,t+1}}{P_{C,t+1}}
 \right)\right].
-$$
+\]
 
 - **(F4) Utilization FOC**:
 
-$$
+\[
 R_{K,t}=\Gamma_u'(u_{i,t})P_{I,t}.
-$$
+\]
 
 - **(F5) Domestic-bond Euler equation**:
 
-$$
+\[
 \beta R_t E_t\left[
 \frac{\Lambda_{i,t+1}}{\Lambda_{i,t}}
 \frac{P_{C,t}}{P_{C,t+1}}
 \right]=1.
-$$
+\]
 
 - **(F6) Foreign-bond Euler equation with risk premium**:
 
-$$
+\[
 \beta(1-\Gamma_{B^F}(B_t^F))R_{F,t}E_t\left[
 \frac{\Lambda_{i,t+1}}{\Lambda_{i,t}}
 \frac{P_{C,t}}{P_{C,t+1}}\frac{S_{t+1}}{S_t}
 \right]=1.
-$$
+\]
 
 - **(F7) Money FOC**:
 
-$$
+\[
 \beta E_t\left[
 \frac{\Lambda_{i,t+1}}{\Lambda_{i,t}}
 \frac{P_{C,t}}{P_{C,t+1}}
 \right]=1-\Gamma_v'(v_{i,t})v_{i,t}^2.
-$$
+\]
 
 - **(F8) Household-I wage reset FOC**:
 
-$$
+\[
 E_t\sum_{k=0}^{\infty}(\xi_I\beta)^k
 \left[
 \Lambda_{i,t+k}(1-\tau_{t+k}^N-\tau_{t+k}^{W_h})
@@ -155,49 +155,49 @@ E_t\sum_{k=0}^{\infty}(\xi_I\beta)^k
 \pi_C^{(1-\chi_I)k}
 -\frac{\eta_I}{\eta_I-1}N_{i,t+k}^{\zeta}
 \right]N_{i,t+k}=0.
-$$
+\]
 
 This compact infinite-sum formula follows the paper; the implementation rewrites it with recursive auxiliaries \(F_I,G_I\).
 
 - **(F9) Household-I wage indexation**:
 
-$$
+\[
 W_{I,t}=\left[
 (1-\xi_I)\widetilde W_{I,t}^{1-\eta_I}
 +\xi_I\left(\left(\frac{P_{C,t-1}}{P_{C,t-2}}\right)^{\chi_I}
 \pi_C^{1-\chi_I}W_{I,t-1}\right)^{1-\eta_I}
 \right]^{1/(1-\eta_I)}.
-$$
+\]
 
 ### Household J
 
 - **(F10) Household-J budget constraint**:
 
-$$
+\[
 (1+\tau_t^C+\Gamma_v(v_{j,t}))P_{C,t}C_{j,t}+M_{j,t}
 =(1-\tau_t^N-\tau_t^{W_h})W_{j,t}N_{j,t}+TR_{j,t}-T_{j,t}+M_{j,t-1}+\Phi_{j,t}.
-$$
+\]
 
 - **(F11) Household-J marginal utility of consumption**:
 
-$$
+\[
 \Lambda_{j,t}=
 \frac{(C_{j,t}-\kappa C_{J,t-1})^{-\sigma}}
 {1+\tau_t^C+\Gamma_v(v_{j,t})+\Gamma_v'(v_{j,t})v_{j,t}}.
-$$
+\]
 
 - **(F12) Household-J money FOC**:
 
-$$
+\[
 \beta E_t\left[
 \frac{\Lambda_{j,t+1}}{\Lambda_{j,t}}
 \frac{P_{C,t}}{P_{C,t+1}}
 \right]=1-\Gamma_v'(v_{j,t})v_{j,t}^2.
-$$
+\]
 
 - **(F13) Household-J wage reset FOC**:
 
-$$
+\[
 E_t\sum_{k=0}^{\infty}(\xi_J\beta)^k
 \left[
 \Lambda_{j,t+k}(1-\tau_{t+k}^N-\tau_{t+k}^{W_h})
@@ -206,87 +206,87 @@ E_t\sum_{k=0}^{\infty}(\xi_J\beta)^k
 \pi_C^{(1-\chi_J)k}
 -\frac{\eta_J}{\eta_J-1}N_{j,t+k}^{\zeta}
 \right]N_{j,t+k}=0.
-$$
+\]
 
 - **(F14) Household-J wage indexation**:
 
-$$
+\[
 W_{J,t}=\left[
 (1-\xi_J)\widetilde W_{J,t}^{1-\eta_J}
 +\xi_J\left(\left(\frac{P_{C,t-1}}{P_{C,t-2}}\right)^{\chi_J}
 \pi_C^{1-\chi_J}W_{J,t-1}\right)^{1-\eta_J}
 \right]^{1/(1-\eta_J)}.
-$$
+\]
 
 ### Intermediate-Good Firms
 
 - **(F15) Production function**:
 
-$$
+\[
 Y_{f,t}=z_tK_{f,t}^{\alpha}N_{f,t}^{1-\alpha}-\psi.
-$$
+\]
 
 - **(F16) Capital demand condition**:
 
-$$
+\[
 R_{K,t}=\alpha\frac{Y_{f,t}+\psi}{K_{f,t}}MC_t.
-$$
+\]
 
 - **(F17) Marginal cost**:
 
-$$
+\[
 MC_t=\frac{1}{z_t\alpha^{\alpha}(1-\alpha)^{1-\alpha}}
 (R_{K,t})^{\alpha}\left((1+\tau_t^{W_f})W_t\right)^{1-\alpha}.
-$$
+\]
 
 - **(F18) Composite labor aggregator**:
 
-$$
+\[
 N_{f,t}=\left[
 (1-\omega)^{1/\eta}(N_{f,t}^I)^{1-1/\eta}
 +\omega^{1/\eta}(N_{f,t}^J)^{1-1/\eta}
 \right]^{\eta/(\eta-1)}.
-$$
+\]
 
 - **(F19) Household-specific labor demand**:
 
-$$
+\[
 N_{f,t}^I=(1-\omega)\left(\frac{W_{I,t}}{W_t}\right)^{-\eta}N_{f,t},
 \quad
 N_{f,t}^J=\omega\left(\frac{W_{J,t}}{W_t}\right)^{-\eta}N_{f,t}.
-$$
+\]
 
 - **(F20) Domestic-price reset FOC**:
 
-$$
+\[
 E_t\sum_{k=0}^{\infty}\xi_H^k\Lambda_{I,t,t+k}
 \left[
 \widetilde P_{H,t}
 \left(\frac{P_{H,t+k-1}}{P_{H,t-1}}\right)^{\chi_H}\pi_H^{(1-\chi_H)k}
 -\frac{\theta}{\theta-1}MC_{t+k}
 \right]H_{f,t+k}=0.
-$$
+\]
 
 - **(F21) Domestic price index**:
 
-$$
+\[
 P_{H,t}=\left[
 (1-\xi_H)\widetilde P_{H,t}^{1-\theta}
 +\xi_H\left(\left(\frac{P_{H,t-1}}{P_{H,t-2}}\right)^{\chi_H}
 \pi_H^{1-\chi_H}P_{H,t-1}\right)^{1-\theta}
 \right]^{1/(1-\theta)}.
-$$
+\]
 
 - **(F22) Export-price reset FOC**:
 
-$$
+\[
 E_t\sum_{k=0}^{\infty}\xi_X^k\Lambda_{I,t,t+k}
 \left[
 \widetilde P_{X,t}
 \left(\frac{P_{X,t+k-1}}{P_{X,t-1}}\right)^{\chi_X}\pi_X^{(1-\chi_X)k}
 -\frac{\theta}{\theta-1}\frac{MC_{t+k}}{S_{t+k}}
 \right]X_{f,t+k}=0.
-$$
+\]
 
 The export-price expression is the source-stated analogue of (F20); its exact discounting and currency conversion should be formula-checked against the PDF or implementation auxiliaries; `needs_review`.
 
@@ -294,59 +294,59 @@ The export-price expression is the source-stated analogue of (F20); its exact di
 
 - **(F23) Consumption-good CES technology**:
 
-$$
+\[
 Q_t^C=\left[
 \nu_C^{1/\mu_C}(H_t^C)^{1-1/\mu_C}
 +(1-\nu_C)^{1/\mu_C}
 \left((1-\Gamma_{IM^C}(IM_t^C/Q_t^C))IM_t^C\right)^{1-1/\mu_C}
 \right]^{\mu_C/(\mu_C-1)}.
-$$
+\]
 
 - **(F24) Consumption-good domestic-input demand**:
 
-$$
+\[
 H_t^C=\nu_C\left(\frac{P_{H,t}}{P_{C,t}}\right)^{-\mu_C}Q_t^C.
-$$
+\]
 
 - **(F25) Consumption-good import demand**:
 
-$$
+\[
 IM_t^C=(1-\nu_C)
 \left(\frac{P_{IM,t}}{P_{C,t}\Gamma_{IM^C,t}^{\dagger}}\right)^{-\mu_C}
 \frac{Q_t^C}{1-\Gamma_{IM^C}(IM_t^C/Q_t^C)}.
-$$
+\]
 
 The \(\Gamma^\dagger\) OCR around the source definition is damaged; `needs_review`.
 
 - **(F26) Consumption-good price index**:
 
-$$
+\[
 P_{C,t}=\left[
 \nu_C P_{H,t}^{1-\mu_C}
 +(1-\nu_C)\left(\frac{P_{IM,t}}{\Gamma_{IM^C,t}^{\dagger}}\right)^{1-\mu_C}
 \right]^{1/(1-\mu_C)}.
-$$
+\]
 
 - **(F27) Investment-good CES technology**:
 
-$$
+\[
 Q_t^I=\left[
 \nu_I^{1/\mu_I}(H_t^I)^{1-1/\mu_I}
 +(1-\nu_I)^{1/\mu_I}
 \left((1-\Gamma_{IM^I}(IM_t^I/Q_t^I))IM_t^I\right)^{1-1/\mu_I}
 \right]^{\mu_I/(\mu_I-1)}.
-$$
+\]
 
 - **(F28) Investment-good price and demand system**:
 
-$$
+\[
 H_t^I=\nu_I\left(\frac{P_{H,t}}{P_{I,t}}\right)^{-\mu_I}Q_t^I,
 \quad
 P_{I,t}=\left[
 \nu_I P_{H,t}^{1-\mu_I}
 +(1-\nu_I)\left(\frac{P_{IM,t}}{\Gamma_{IM^I,t}^{\dagger}}\right)^{1-\mu_I}
 \right]^{1/(1-\mu_I)}.
-$$
+\]
 
 The import-demand companion for investment goods is analogous to (F25) and should be checked if promoted to runnable code; `needs_review`.
 
@@ -354,25 +354,25 @@ The import-demand companion for investment goods is analogous to (F25) and shoul
 
 - **(F29) Per-capita aggregation**:
 
-$$
+\[
 X_t=(1-\omega)X_{i,t}+\omega X_{j,t}.
-$$
+\]
 
 - **(F30) Aggregate capital and investment**:
 
-$$
+\[
 K_t=(1-\omega)K_{i,t},\quad I_t=(1-\omega)I_{i,t},\quad M_t=(1-\omega)M_{i,t}+\omega M_{j,t}.
-$$
+\]
 
 - **(F31) Public-good and intermediate demand aggregation**:
 
-$$
+\[
 H_t=H_t^C+H_t^I+G_t,\quad IM_t=IM_t^C+IM_t^I.
-$$
+\]
 
 - **(F32) Aggregate resource constraint**:
 
-$$
+\[
 \begin{aligned}
 P_{Y,t}Y_t
 &=P_{C,t}(C_t+\Gamma_{v,t})
@@ -385,13 +385,13 @@ IM_t^C\frac{1-\Gamma_{IM^C}(IM_t^C/Q_t^C)}
 {\Gamma_{IM^I}^{\dagger}(IM_t^I/Q_t^I)}
 \right].
 \end{aligned}
-$$
+\]
 
 The OCR uses \(T\) and \(\Gamma\) inconsistently for transaction/import costs; formula needs source-level review.
 
 - **(F33) Fiscal authority budget constraint**:
 
-$$
+\[
 \begin{aligned}
 P_{G,t}G_t+TR_t+B_t+M_{t-1}
 &=\tau_t^CP_{C,t}C_t
@@ -400,51 +400,51 @@ P_{G,t}G_t+TR_t+B_t+M_{t-1}
 &\quad+\tau_t^K(R_{K,t}u_t-(\Gamma_u(u_t)+\delta)P_{I,t})K_t
 +\tau_t^DD_t+T_t+R_t^{-1}B_{t+1}+M_t.
 \end{aligned}
-$$
+\]
 
 - **(F34) Lump-sum tax feedback rule**:
 
-$$
+\[
 \tau_t=\phi_{B_Y}\left(\frac{B_t}{P_YY}-B_Y\right).
-$$
+\]
 
 - **(F35) Monetary policy rule**:
 
-$$
+\[
 R_t^4=\phi_RR_{t-1}^4+(1-\phi_R)
 \left[R^4+\phi_{\Pi}\left(\frac{P_{C,t}}{P_{C,t-4}}-\Pi\right)\right]
 +\phi_{g_Y}\left(\frac{Y_t}{Y_{t-1}}-g_Y\right)+\varepsilon_{R,t}.
-$$
+\]
 
 - **(F36) Net foreign asset law of motion**:
 
-$$
+\[
 R_{F,t}^{-1}B_{t+1}^F=B_t^F+\frac{TB_t}{S_t},
 \quad
 TB_t=S_tP_{X,t}X_t-P_{IM,t}IM_t.
-$$
+\]
 
 - **(F37) World foreign-bond clearing**:
 
-$$
+\[
 sB_t^F+(1-s)B_t^{F,\ast}=0.
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F38) Total factor productivity**:
 
-$$
+\[
 \log z_t=(1-\rho_z)\log z+\rho_z\log z_{t-1}+\varepsilon_{z,t}.
-$$
+\]
 
 - **(F39) Fiscal and tax processes**:
 
-$$
+\[
 x_t=(1-\rho_x)\bar x+\rho_xx_{t-1}+\varepsilon_{x,t},
 \quad
 x_t\in\{g_t,tr_t,\tau_t^C,\tau_t^D,\tau_t^K,\tau_t^N,\tau_t^{W_h},\tau_t^{W_f}\}.
-$$
+\]
 
 The published article states constant distortionary tax rates unless otherwise stated, while the MMB implementation includes AR(1) shock processes for each tax rate as implementation coverage.
 

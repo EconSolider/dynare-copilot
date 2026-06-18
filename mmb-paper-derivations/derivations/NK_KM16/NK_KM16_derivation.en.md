@@ -16,18 +16,18 @@
 
 The household chooses consumption, real money balances, labor, one-period nominal bonds, and the portfolio of stochastic long-term bonds:
 
-$$
+\[
 \max_{\{C_t,M_t,N_t,B_t,B_t^L,i_t^L\}} E_0 \sum_{t=0}^{\infty}\beta^t
 \left[
 \frac{C_t^{1-\sigma_c}}{1-\sigma_c}
 + \chi\frac{(M_t/P_t)^{1-\sigma_m}}{1-\sigma_m}
 - \varphi\frac{N_t^{1+\phi}}{1+\phi}
 \right].
-$$
+\]
 
 The nominal budget constraint is:
 
-$$
+\[
 \begin{aligned}
 \frac{B_t}{P_t}+\frac{B_t^{L,n}}{P_t}+\frac{M_t}{P_t}+C_t
 &=(1+i_{t-1})\frac{B_{t-1}}{P_t}
@@ -36,7 +36,7 @@ $$
 &\quad +(1-\tau_t)\frac{W_t}{P_t}N_t
 +\int_0^1\frac{\Pi_t(z)}{P_t}\,dz .
 \end{aligned}
-$$
+\]
 
 The household also internalizes the law of motion for the stock and average interest rate of stochastic long-term bonds.
 
@@ -44,9 +44,9 @@ The household also internalizes the law of motion for the stock and average inte
 
 Each differentiated firm faces demand from the CES final-good aggregator and produces with labor only:
 
-$$
+\[
 Y_t(z)=A N_t(z).
-$$
+\]
 
 With Calvo probability `theta`, a firm cannot reset its price. Non-reset prices are indexed to the actual or perceived inflation target. A resetting firm chooses \(P_t^{\ast}(z)\) to maximize expected discounted profits subject to demand and the indexation rule.
 
@@ -58,134 +58,134 @@ The fiscal authority does not solve an optimization problem in the paper-side mo
 
 - **(F1) Short-term bond Euler equation**:
 
-$$
+\[
 1=E_t\left[\beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}(1+i_t)\right].
-$$
+\]
 
 - **(F2) Long-term bond Euler equation** (`needs_review`: OCR is damaged around the capital-loss term):
 
-$$
+\[
 1=E_t\left[
 \beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}
 \left(1+i_t^{L,n}-\mu_{t+1}(1-\alpha)\Delta i_{t+1}^{L,n}\right)
 \right].
-$$
+\]
 
 - **(F3) Marginal utility of wealth**:
 
-$$
+\[
 \lambda_t=C_t^{-\sigma_c}.
-$$
+\]
 
 - **(F4) Stochastic bond price recursion**:
 
-$$
+\[
 \mu_t=E_t\left[
 \beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}
 \left(1+(1-\alpha)\mu_{t+1}\right)
 \right].
-$$
+\]
 
 - **(F5) Money demand**:
 
-$$
+\[
 \frac{M_t}{P_t}=
 \left[
 \chi C_t^{\sigma_c}\frac{1+i_t}{i_t}
 \right]^{1/\sigma_m}.
-$$
+\]
 
 - **(F6) Labor supply**:
 
-$$
+\[
 \varphi N_t^{\phi}=C_t^{-\sigma_c}(1-\tau_t)\frac{W_t}{P_t}.
-$$
+\]
 
 - **(F7) Demand for differentiated goods**:
 
-$$
+\[
 C_t(z)=\left(\frac{P_t(z)}{P_t}\right)^{-\epsilon}C_t.
-$$
+\]
 
 - **(F8) Relative reset price**:
 
-$$
+\[
 \frac{P_t^{\ast}}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
-$$
+\]
 
 - **(F9) Calvo numerator recursion**:
 
-$$
+\[
 \mathcal{Z}_{1,t}
 =\lambda_t mc_t C_t
 +\theta\beta E_t\left[
 \left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{-\epsilon}
 \mathcal{Z}_{1,t+1}
 \right].
-$$
+\]
 
 - **(F10) Calvo denominator recursion**:
 
-$$
+\[
 \mathcal{Z}_{2,t}
 =\lambda_t C_t
 +\theta\beta E_t\left[
 \left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{1-\epsilon}
 \mathcal{Z}_{2,t+1}
 \right].
-$$
+\]
 
 - **(F11) Real marginal cost**:
 
-$$
+\[
 mc_t=\frac{W_t/P_t}{A}.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F12) Long-term debt stock law of motion**:
 
-$$
+\[
 B_t^L=(1-\alpha)B_{t-1}^L+B_t^{L,n}.
-$$
+\]
 
 - **(F13) Average interest rate on outstanding long-term debt**:
 
-$$
+\[
 i_t^L B_t^L=(1-\alpha)i_{t-1}^L B_{t-1}^L+i_t^{L,n}B_t^{L,n}.
-$$
+\]
 
 - **(F14) Aggregate price index**:
 
-$$
+\[
 1=\theta(\pi_t^{\ast})^{1-\epsilon}\pi_t^{-(1-\epsilon)}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{1-\epsilon}.
-$$
+\]
 
 - **(F15) Fiscal tax rule**:
 
-$$
+\[
 \tau_t-\tau=\rho_{\tau}(\tau_{t-1}-\tau)+\phi_{\tau}\hat{b}_t^L.
-$$
+\]
 
 - **(F16) Government budget constraint in real terms**:
 
-$$
+\[
 \tau_t w_t N_t+m_t-\frac{m_{t-1}}{\pi_t}+b_t^{L,n}
 =g+(\alpha+i_{t-1}^L)\frac{b_{t-1}^L}{\pi_t}.
-$$
+\]
 
 - **(F17) Real long-term debt law of motion**:
 
-$$
+\[
 b_t^L=(1-\alpha)\frac{b_{t-1}^L}{\pi_t}+b_t^{L,n}.
-$$
+\]
 
 - **(F18) Taylor rule with time-varying inflation target**:
 
-$$
+\[
 i_t=\rho_i i_{t-1}
 +(1-\rho_i)\left[
 i+\hat{\pi}_t^{\ast}
@@ -193,65 +193,65 @@ i+\hat{\pi}_t^{\ast}
 +\phi_y(\hat{Y}_t-\hat{Y}_t^n)
 \right]
 +\eta_t.
-$$
+\]
 
 - **(F19) Aggregate demand**:
 
-$$
+\[
 Y_t=C_t+g.
-$$
+\]
 
 - **(F20) Labor market / production aggregation with price dispersion**:
 
-$$
+\[
 \Delta_{p,t}Y_t=A N_t.
-$$
+\]
 
 - **(F21) Price-dispersion law of motion**:
 
-$$
+\[
 \Delta_{p,t}
 =\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^{\ast}}\right)^{\epsilon}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{-\epsilon}.
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F22) Inflation-target process**:
 
-$$
+\[
 \hat{\pi}_t^{\ast}=\rho_{\pi}\hat{\pi}_{t-1}^{\ast}+\eta_t^{\pi}.
-$$
+\]
 
 - **(F23) Monetary-policy signal under imperfect information**:
 
-$$
+\[
 \varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^{\ast}+\eta_t.
-$$
+\]
 
 - **(F24) Perceived inflation-target update** (`needs_review`: OCR is readable but the surrounding state-space notation is compressed):
 
-$$
+\[
 \tilde{E}_t\hat{\pi}_t^{\ast}
 =\tilde{E}_{t-1}\hat{\pi}_t^{\ast}
 +\frac{k}{\rho_{\pi}}
 \left(\varepsilon_t^{\pi}-\tilde{E}_{t-1}\varepsilon_t^{\pi}\right).
-$$
+\]
 
 - **(F25) Perceived monetary-policy shock**:
 
-$$
+\[
 \tilde{E}_t\eta_t
 =\varepsilon_t^{\pi}
 -(1-\rho_i)(1-\phi_{\pi})
 \tilde{E}_{t-1}\hat{\pi}_t^{\ast}.
-$$
+\]
 
 - **(F26) Forecasts under the Kalman filter**:
 
-$$
+\[
 \begin{bmatrix}
 \tilde{E}_t\hat{\pi}_{t+i}^{\ast}\\
 \tilde{E}_t\eta_{t+i}
@@ -265,7 +265,7 @@ $$
 \tilde{E}_t\hat{\pi}_{t}^{\ast}\\
 \tilde{E}_t\eta_t
 \end{bmatrix}.
-$$
+\]
 
 The paper also studies a zero-lower-bound extension with a preference shock, but that extension is not part of the baseline `NK_KM16` archive extraction.
 

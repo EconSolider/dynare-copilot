@@ -20,31 +20,31 @@
 
 家庭选择消费、存款、劳动和利用率服务。偏好为
 
-$$
+\[
 U(c_t,L_t,u_t)=\frac{c_t^{1-\sigma}}{1-\sigma}
 -\frac{L_t^{1+\theta}}{1+\theta}
 -\frac{u_t^{1+\theta}}{1+\theta}.
-$$
+\]
 
 实际预算约束为
 
-$$
+\[
 c_t+A_t=\Omega_w w_t L_t+\Omega_r r_t u_t+\frac{R_{t-1}}{\pi_t}A_{t-1}+T_t+\Pi_t.
-$$
+\]
 
 ### 2.2 中间品生产者
 
 中间品企业雇佣劳动和利用率服务，生产函数为
 
-$$
+\[
 x_t=L_t^{\alpha}u_t^{1-\alpha}.
-$$
+\]
 
 企业需要预先向银行借入工资账单。利润为
 
-$$
+\[
 \text{profits}_t=p_t x_t-R_t^B w_t L_t-r_t u_t.
-$$
+\]
 
 利差由贷款利率相对于存款利率定义；线性系统使用 `\phi_t` 表示信用利差。
 
@@ -52,23 +52,23 @@ $$
 
 最终品企业用弹性 `\varepsilon_t` 聚合差异化产品；生产率把中间品产出转化为最终产出，实际边际成本为
 
-$$
+\[
 z_t=\frac{p_t}{a_t}.
-$$
+\]
 
 Rotemberg 调价成本为
 
-$$
+\[
 \frac{\varphi}{2}(\pi_t-1)^2y_t.
-$$
+\]
 
 ### 2.4 金融中介
 
 银行向企业贷款、吸收存款，并面临作用于融资成本的补贴/税。银行家价值可递归表示为贷款价值和净值价值。银行激励约束为
 
-$$
+\[
 V_{jt}\geq \lambda_t B_{jt}.
-$$
+\]
 
 在约束绑定且杠杆为 `\delta_t=B_{jt}/N_{jt}` 时，银行净值由留存银行家财富和冲击决定。论文设定 startup-fund 项 `\omega=0`，以获得简单的对数线性系统。
 
@@ -82,161 +82,161 @@ $$
 
 - **(F1) 家庭劳动供给**：
 
-$$
+\[
 \frac{L_t^\theta}{c_t^{-\sigma}}=\Omega_w w_t.
-$$
+\]
 
 - **(F2) 家庭利用率服务供给**：
 
-$$
+\[
 \frac{u_t^\theta}{c_t^{-\sigma}}=\Omega_r r_t.
-$$
+\]
 
 - **(F3) 家庭 Euler 方程**：
 
-$$
+\[
 c_t^{-\sigma}=\beta E_t\left(c_{t+1}^{-\sigma}\frac{R_t}{\pi_{t+1}}\right).
-$$
+\]
 
 - **(F4) 带营运资本融资的中间品企业劳动需求**：
 
-$$
+\[
 \alpha p_t x_t=(1+\phi_t)R_t w_t L_t.
-$$
+\]
 
 - **(F5) 中间品企业利用率服务需求**：
 
-$$
+\[
 (1-\alpha)p_t x_t=r_t u_t.
-$$
+\]
 
 - **(F6) 非线性来源形式的 Rotemberg Phillips 曲线**：
 
-$$
+\[
 0=(1-\varepsilon_t)+\varepsilon_t z_t-\varphi(\pi_t-1)\pi_t
 -\beta E_t\left[
 \frac{c_{t+1}^{-\sigma}}{c_t^{-\sigma}}
 \varphi(\pi_{t+1}-1)\pi_{t+1}\frac{y_{t+1}}{y_t}
 \right].
-$$
+\]
 
 - **(F7) 银行贷款价值**：
 
-$$
+\[
 v_{b,t}=(1-\gamma)(\phi_t+S_t)
 +E_t\gamma\beta\Lambda_{t,t+1}\pi_{b,t+1}v_{b,t+1}.
-$$
+\]
 
 - **(F8) 银行净值价值**：
 
-$$
+\[
 v_{n,t}=(1-\gamma)(1-S_t)
 +E_t\gamma\beta\Lambda_{t,t+1}\pi_{n,t+1}v_{n,t+1}.
-$$
+\]
 
 - **(F9) 绑定激励约束 / 杠杆**：
 
-$$
+\[
 \delta_t=\frac{v_{n,t}}{\lambda_t-v_{b,t}}.
-$$
+\]
 
 - **(F10) 总银行净值来源方程**：
 
-$$
+\[
 N_t=\gamma\left[\phi_{t-1}\delta_{t-1}+1-S_{t-1}(1-\delta_{t-1})\right]R_{t-1}N_{t-1}
 +\omega B_{t-1}+N_t^s.
-$$
+\]
 
 简化线性系统中，论文设定 `\omega=0`。
 
 - **(F11) 线性 Phillips 曲线，论文方程 (22)**：
 
-$$
+\[
 \widehat{\pi}_t=\kappa\left[
 (\sigma+\theta)\widehat{y}_t^g
 +\alpha(\widehat{R}_t+b\widehat{\phi}_t)
 +\widehat{\varepsilon}_t
 \right]+\beta E_t\widehat{\pi}_{t+1}.
-$$
+\]
 
 - **(F12) 线性 Euler / IS 方程，论文方程 (23)**：
 
-$$
+\[
 \widehat{R}_t=\sigma E_t\Delta\widehat{y}_{t+1}^g
 +\frac{\theta+1}{\sigma+\theta}\sigma E_t\Delta\widehat{a}_{t+1}
 +E_t\widehat{\pi}_{t+1}.
-$$
+\]
 
 - **(F13) 线性净值演化，论文方程 (24)；`needs_review` OCR tag 间距**：
 
-$$
+\[
 \widehat{n}_t=\widehat{n}_{t-1}+\widehat{R}_{t-1}-\widehat{\pi}_t
 +\frac{1}{\phi\delta+1}\left[
 \phi\delta\widehat{\delta}_{t-1}
 +\delta\widehat{\phi}_{t-1}
 +(\delta-1)\widehat{S}_{t-1}
 \right]+\widehat{n}_t^s.
-$$
+\]
 
 - **(F14) 企业劳动需求与银行部门资产负债关系，论文方程 (25)**：
 
-$$
+\[
 \widehat{\delta}_t+\widehat{n}_t
 =(1+\sigma+\theta)\widehat{y}_t^g
 +\frac{\theta+1}{\sigma+\theta}\widehat{a}_t
 -(1-\alpha)(\widehat{R}_t+b\widehat{\phi}_t).
-$$
+\]
 
 - **(F15) 线性激励相容约束，论文方程 (26)**：
 
-$$
+\[
 \widehat{\delta}_t+\widehat{\lambda}_t
 =\delta\widehat{\phi}_t+(\delta-1)\widehat{S}_t
 +\beta E_t\left[
 (\phi\delta+1)\widehat{\delta}_{t+1}
 +\widehat{\lambda}_{t+1}
 \right].
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F16) 含 Rotemberg 成本的最终品市场出清**：
 
-$$
+\[
 y_t=c_t+\frac{\varphi}{2}(\pi_t-1)^2y_t.
-$$
+\]
 
 - **(F17) 产出缺口定义**：
 
-$$
+\[
 \widehat{y}_t^g=\widehat{y}_t-\frac{1+\theta}{\sigma+\theta}\widehat{a}_t.
-$$
+\]
 
 - **(F18) 有效融资成本 / 信用扭曲指标**：
 
-$$
+\[
 \widehat{f}_t=\widehat{R}_t+b\widehat{\phi}_t,
 \qquad b=\frac{1}{1+\phi}.
-$$
+\]
 
 - **(F19) 实现交叉检查使用的边际成本表达式**：
 
-$$
+\[
 \widehat{z}_t=\kappa\left[(\sigma+\theta)\widehat{y}_t^g
 +\alpha(\widehat{R}_t+b\widehat{\phi}_t)\right].
-$$
+\]
 
 - **(F20) Rep-MMB 实现中的宏观审慎闭合**：
 
-$$
+\[
 \widehat{S}_t=0.
-$$
+\]
 
 - **(F21) Rep-MMB 实现中的 Taylor 规则闭合**：
 
-$$
+\[
 \widehat{R}_t=\tau\widehat{\pi}_t+\tau_g\widehat{y}_t^g+\widehat{\varepsilon}_{R,t}.
-$$
+\]
 
 ## 5. Exogenous Processes
 
@@ -244,33 +244,33 @@ $$
 
 - **(F22) 技术冲击**：
 
-$$
+\[
 \widehat{a}_t=\rho_a\widehat{a}_{t-1}+\eta_{a,t}.
-$$
+\]
 
 - **(F23) Markup 冲击**：
 
-$$
+\[
 \widehat{\varepsilon}_t=\rho_m\widehat{\varepsilon}_{t-1}+\eta_{m,t}.
-$$
+\]
 
 - **(F24) 净值冲击**：
 
-$$
+\[
 \widehat{n}^s_t=\rho_n\widehat{n}^s_{t-1}+\eta_{n,t}.
-$$
+\]
 
 - **(F25) 货币政策冲击，实现交叉检查闭合**：
 
-$$
+\[
 \widehat{\varepsilon}_{R,t}=\rho_R\widehat{\varepsilon}_{R,t-1}+\eta_{R,t}.
-$$
+\]
 
 - **(F26) Moral-hazard 冲击**：
 
-$$
+\[
 \widehat{\lambda}_t=\rho_l\widehat{\lambda}_{t-1}+\eta_{l,t}.
-$$
+\]
 
 Rep-MMB `.mod` 使用符号约定 `a=rho_a*a(-1)-eta_a`、`ns=rho_n*ns(-1)-eta_n` 和 `eps_R=rho_R*eps_R(-1)-eta_R`；这些是实现约定，不是额外的论文侧公式。
 
@@ -278,10 +278,10 @@ Rep-MMB `.mod` 使用符号约定 `a=rho_a*a(-1)-eta_a`、`ns=rho_n*ns(-1)-eta_n
 
 由于归档实现为 `model(linear)`，操作性稳态中所有带帽内生变量均为零：
 
-$$
+\[
 \widehat{y}=\widehat{y}^g=\widehat{R}=\widehat{\pi}=\widehat{\phi}
 =\widehat{n}=\widehat{\delta}=\widehat{S}=\widehat{z}=0.
-$$
+\]
 
 论文和实现交叉检查给出的稳态水平及校准目标：
 

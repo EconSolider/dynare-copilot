@@ -18,37 +18,37 @@
 
 The representative household chooses consumption, hours, and deposits to maximize expected utility:
 
-$$
+\[
 \max_{\{C_t,H_t,D_t\}} E_0 \sum_{t=0}^{\infty} \beta^t
 \left(e_t \log C_t - \theta \frac{H_t^{1+\gamma}}{1+\gamma}\right)
-$$
+\]
 
 subject to the nominal-deposit budget constraint:
 
-$$
+\[
 C_t + \frac{D_t}{P_t}
 = \frac{W_t}{P_t}H_t + \Pi_t + \frac{R_{t-1}^n D_{t-1}}{P_t}.
-$$
+\]
 
 ### 2.2 Entrepreneurs
 
 Entrepreneur \(j\) produces a homogeneous intermediate good using capital purchased in the previous period and composite labor:
 
-$$
+\[
 F(K_t^j,L_t^j)=\omega_t^j (K_t^j)^\alpha (z_t L_t^j)^{1-\alpha}.
-$$
+\]
 
 Composite labor combines household and entrepreneurial labor:
 
-$$
+\[
 L_t^j=(H_t^j)^{1-\Omega}(H_t^{ej})^\Omega.
-$$
+\]
 
 The balance-sheet constraint for capital purchased at the end of period \(t\) is:
 
-$$
+\[
 Q_t K_{t+1}^j = N_{t+1}^j + \frac{B_t^j}{P_t}.
-$$
+\]
 
 Financial frictions follow a costly-state-verification contract. The external finance premium is an increasing function of leverage and is shifted by a financial shock. In policy regimes with the macroprudential tool, it is also multiplied by \(\tau_t\).
 
@@ -56,23 +56,23 @@ Financial frictions follow a costly-state-verification contract. The external fi
 
 Capital producers transform final goods into installed capital with investment-specific efficiency \(x_t\) and quadratic installation costs. The period objective in the paper is:
 
-$$
+\[
 \Pi_t^k = E_t\left[
 Q_t x_t I_t - I_t - \frac{\xi}{2}\left(\frac{I_t}{K_t}-\delta\right)^2 K_t
 \right].
-$$
+\]
 
 ### 2.4 Retailers
 
 Monopolistically competitive retailers buy intermediate goods, differentiate them at no cost, and face CES final-good demand. Retailer \(j\) maximizes expected real profits while its price remains fixed under Calvo pricing:
 
-$$
+\[
 E_t \sum_{i=0}^{\infty} \nu^i \Delta_{i,t+i}
 \left[
 \left(\frac{P_{jt}}{P_{t+i}}\right)Y_{j,t+i}
 - mc_{t+i}Y_{j,t+i}
 \right].
-$$
+\]
 
 `needs_review`: the Markdown OCR for \(\Delta_{i,t+i}\) and the retailer FOC has malformed subscripts and should be PDF-checked before treating the exact recursive representation as final.
 
@@ -80,77 +80,77 @@ $$
 
 - **(F1) Household Euler equation**:
 
-$$
+\[
 \frac{e_t}{C_t}\frac{1}{R_t^n}
 = \beta E_t\left[\frac{e_{t+1}}{C_{t+1}}\frac{P_t}{P_{t+1}}\right].
-$$
+\]
 
 - **(F2) Household labor supply**:
 
-$$
+\[
 \frac{e_t}{C_t}\frac{W_t}{P_t} = \theta H_t^\gamma.
-$$
+\]
 
 - **(F3) Entrepreneur production function**:
 
-$$
+\[
 Y_t^W = F(K_t,L_t)=K_t^\alpha(z_t L_t)^{1-\alpha}.
-$$
+\]
 
 - **(F4) Labor aggregator**:
 
-$$
+\[
 L_t=(H_t)^{1-\Omega}(H_t^e)^\Omega.
-$$
+\]
 
 - **(F5) Household-labor demand condition**:
 
-$$
+\[
 (1-\Omega)F_{H_t}=\frac{W_t}{P_{W,t}}.
-$$
+\]
 
 - **(F6) Entrepreneurial-labor demand condition**:
 
-$$
+\[
 \Omega F_{H_t^e}=\frac{W_t^e}{P_{W,t}}.
-$$
+\]
 
 - **(F7) Entrepreneur balance sheet**:
 
-$$
+\[
 Q_tK_{t+1}=N_{t+1}+\frac{B_t}{P_t}.
-$$
+\]
 
 - **(F8) External finance premium definition**:
 
-$$
+\[
 s_t=\frac{E_tR_{t+1}^k}{E_t\left[R_t^n\frac{P_t}{P_{t+1}}\right]}.
-$$
+\]
 
 - **(F9) Leverage-based premium with financial shock**:
 
-$$
+\[
 s_t=f_t\,s\left(\frac{Q_tK_{t+1}}{N_{t+1}}\right).
-$$
+\]
 
 - **(F10) Capital-arbitrage condition**:
 
-$$
+\[
 E_tR_{t+1}^k=s_t R_t^n E_t\left[\frac{P_t}{P_{t+1}}\right].
-$$
+\]
 
 - **(F11) Expected gross return on capital**:
 
-$$
+\[
 E_tR_{t+1}^k
 =E_t\left[
 \frac{\frac{P_{t+1}^W}{P_{t+1}}F_K+Q_{t+1}(1-\delta)}{Q_t}
 \right].
-$$
+\]
 
 - **(F12) Entrepreneur net worth** (`needs_review` for OCR in the wage-income term):
 
-$$
+\[
 \begin{aligned}
 N_{t+1}
 =&\ \eta\left[
@@ -159,11 +159,11 @@ R_t^k Q_{t-1}K_t
 \right] \\
 &+ (1-\alpha)(1-\Omega)z_tK_t^\alpha L_t^{(1-\alpha)\Omega}.
 \end{aligned}
-$$
+\]
 
 - **(F13) Net worth after substituting nominal-debt repayment** (`needs_review`):
 
-$$
+\[
 \begin{aligned}
 N_{t+1}
 =&\ \eta\left[
@@ -172,52 +172,52 @@ R_t^k Q_{t-1}K_t
 \right] \\
 &+ (1-\alpha)(1-\Omega)z_tK_t^\alpha L_t^{(1-\alpha)\Omega}.
 \end{aligned}
-$$
+\]
 
 - **(F14) Consumption of exiting entrepreneurs**:
 
-$$
+\[
 C_t^e=(1-\eta)\left[
 R_t^kQ_{t-1}K_t
 -E_{t-1}(R_t^k)(Q_{t-1}K_t-N_t)
 \right].
-$$
+\]
 
 - **(F15) Capital accumulation**:
 
-$$
+\[
 K_{t+1}=x_tI_t+(1-\delta)K_t.
-$$
+\]
 
 - **(F16) Capital-producer FOC / Tobin's \(Q\)**:
 
-$$
+\[
 E_t\left[
 Q_t x_t - 1 - \xi\left(\frac{I_t}{K_t}-\delta\right)
 \right]=0.
-$$
+\]
 
 - **(F17) Final-good CES aggregator**:
 
-$$
+\[
 Y_t=\left[\int_0^1 Y_{jt}^{\frac{\varepsilon-1}{\varepsilon}}dj\right]^{\frac{\varepsilon}{\varepsilon-1}}.
-$$
+\]
 
 - **(F18) Final-good price index** (`needs_review`: Markdown uses \(dz\) where \(dj\) is expected):
 
-$$
+\[
 P_t=\left[\int_0^1 P_t(j)^{1-\varepsilon}dj\right]^{\frac{1}{1-\varepsilon}}.
-$$
+\]
 
 - **(F19) Retail-good demand**:
 
-$$
+\[
 Y_{jt}=\left(\frac{P_{jt}}{P_t}\right)^{-\varepsilon}Y_t.
-$$
+\]
 
 - **(F20) Optimal reset price** (`needs_review` for OCR around \(mc\), time subscripts, and discount factor):
 
-$$
+\[
 P_t^{\ast}=\left(\frac{\varepsilon}{\varepsilon-1}\right)
 \frac{
 E_t\sum_{i=0}^{\infty}\nu^i\Delta_{i,t+i}mc_{t+i}Y_{t+i}
@@ -226,60 +226,60 @@ E_t\sum_{i=0}^{\infty}\nu^i\Delta_{i,t+i}mc_{t+i}Y_{t+i}
 E_t\sum_{i=0}^{\infty}\nu^i\Delta_{i,t+i}Y_{t+i}
 \left(\frac{1}{P_{t+i}}\right)^{1-\varepsilon}
 }.
-$$
+\]
 
 - **(F21) Aggregate price index under Calvo adjustment**:
 
-$$
+\[
 P_t=\left[\nu P_{t-1}^{1-\varepsilon}+(1-\nu)(P_t^{\ast})^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F22) Basic final-goods resource constraint**:
 
-$$
+\[
 K_t^\alpha(z_tL_t)^{1-\alpha}
 =C_t+C_t^e+I_t+\frac{\xi}{2}\left(\frac{I_t}{K_t}-\delta\right)^2K_t.
-$$
+\]
 
 - **(F23) Firm-level resource condition with price dispersion**:
 
-$$
+\[
 F(K_{jt},L_{jt})
 =\left(C_t+C_t^e+I_t+\frac{\xi}{2}\left(\frac{I_t}{K_t}-\delta\right)^2K_t\right)
 \left(\frac{P_{jt}}{P_t}\right)^{-\varepsilon}.
-$$
+\]
 
 - **(F24) Aggregate production/resource condition with dispersion**:
 
-$$
+\[
 F(K_t,L_t)
 =\left(C_t+C_t^e+I_t+\frac{\xi}{2}\left(\frac{I_t}{K_t}-\delta\right)^2K_t\right)\Gamma_t.
-$$
+\]
 
 - **(F25) Price-dispersion law of motion** (`needs_review`: Markdown omits the price ratio inside the integral definition of \(\Gamma_t\)):
 
-$$
+\[
 \Gamma_t=(1-\nu)\left(\frac{P_t^{\ast}}{P_t}\right)^{-\varepsilon}
 +\nu \pi_t^\varepsilon \Gamma_{t-1}.
-$$
+\]
 
 - **(F26) Deposit-debt clearing**:
 
-$$
+\[
 D_t=B_t.
-$$
+\]
 
 - **(F27) Nominal credit growth**:
 
-$$
+\[
 cg_t=\frac{B_t}{B_{t-1}}.
-$$
+\]
 
 - **(F28) Augmented Taylor rule**:
 
-$$
+\[
 \frac{R_t^n}{R^n}
 =\left(\frac{R_{t-1}^n}{R^n}\right)^{\phi_R}
 \left[
@@ -288,11 +288,11 @@ $$
 \left(\frac{cg_t}{cg_{ss}}\right)^{\phi_c}
 \right]^{1-\phi_R}
 e^{\epsilon_t^m}.
-$$
+\]
 
 - **(F29) Standard Taylor rule**:
 
-$$
+\[
 \frac{R_t^n}{R^n}
 =\left(\frac{R_{t-1}^n}{R^n}\right)^{\phi_R}
 \left[
@@ -300,23 +300,23 @@ $$
 \left(\frac{Y_t}{Y}\right)^{\phi_Y}
 \right]^{1-\phi_R}
 e^{\epsilon_t^m}.
-$$
+\]
 
 - **(F30) Macroprudential premium rule**:
 
-$$
+\[
 s_t=f_t\,s\left(\frac{Q_tK_{t+1}}{N_{t+1}}\right)\tau_t.
-$$
+\]
 
 - **(F31) Macroprudential instrument**:
 
-$$
+\[
 \tau_t=\left(\frac{cg_t}{cg_{ss}}\right)^{\rho_\tau}.
-$$
+\]
 
 - **(F32) Price-level-targeting rule, optional regime in the paper**:
 
-$$
+\[
 \frac{R_t^n}{R^n}
 =\left(\frac{R_{t-1}^n}{R^n}\right)^{\phi_R}
 \left[
@@ -324,43 +324,43 @@ $$
 \left(\frac{Y_t}{Y_{ss}}\right)^{\phi_Y}
 \right]^{1-\phi_R}
 e^{\epsilon_t^m}.
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F33) Preference shock**:
 
-$$
+\[
 \log e_t=\rho_e\log e_{t-1}+\epsilon_t^e,
 \qquad \epsilon_t^e\sim i.i.d.\ N(0,\sigma_{\epsilon^e}^2).
-$$
+\]
 
 - **(F34) Technology shock**:
 
-$$
+\[
 \log z_t=\rho_z\log z_{t-1}+\epsilon_t^z,
 \qquad \epsilon_t^z\sim i.i.d.\ N(0,\sigma_{\epsilon^z}^2).
-$$
+\]
 
 - **(F35) Financial shock**:
 
-$$
+\[
 \log f_t=\rho_f\log f_{t-1}+\epsilon_t^f,
 \qquad \epsilon_t^f\sim i.i.d.\ N(0,\sigma_{\epsilon^f}^2).
-$$
+\]
 
 - **(F36) Investment-specific shock**:
 
-$$
+\[
 \log x_t=\rho_x\log x_{t-1}+\epsilon_t^x,
 \qquad \epsilon_t^x\sim i.i.d.\ N(0,\sigma_{\epsilon^x}^2).
-$$
+\]
 
 - **(F37) Monetary policy shock**:
 
-$$
+\[
 \epsilon_t^m\sim i.i.d.\ N(0,\sigma_{\epsilon^m}).
-$$
+\]
 
 ## 6. Steady-State Solution
 
@@ -369,17 +369,17 @@ The paper reports calibrated steady-state targets and estimated posterior modes 
 1. Set deterministic shocks at their means: \(\bar e=\bar z=\bar x=\bar f=1\), innovations zero, and \(\bar \tau=1\) when \(cg_t=cg_{ss}\).
 2. Use the household Euler equation:
 
-$$
+\[
 1=\beta R^n/\pi.
-$$
+\]
 
 3. Set steady-state gross inflation from calibration. The paper states annual \(\pi=1.02\); the Rep-MMB file uses a quarterly gross target `mub = 1.005`.
 4. Use markup pricing to pin down steady-state marginal cost from the elasticity of substitution, adjusted for Calvo inflation terms in the implementation.
 5. Use \(Q=1\) and the capital-return equation to solve the capital-labor ratio from:
 
-$$
+\[
 \bar R^k=\frac{\bar{mc}\,F_K+(1-\delta)}{\bar Q}.
-$$
+\]
 
 6. Use labor supply with the calibration target that households spend one-third of time working to pin down \(\theta\) or verify the chosen \(\theta=5.75\).
 7. Use the net-worth-to-capital target \(N/K=0.6\), capital accumulation \(\bar I=\delta \bar K/\bar x\), and the resource constraint to solve \(\bar C\), \(\bar C^e\), \(\bar I\), and \(\bar Y\).

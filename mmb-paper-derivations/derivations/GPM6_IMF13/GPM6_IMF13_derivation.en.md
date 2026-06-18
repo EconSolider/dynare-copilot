@@ -26,66 +26,66 @@ Because the linked source is semi-structural, the following are behavioral/equil
 
 - **(F1) Potential output level**:
 
-$$
+\[
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g^{\overline{Y}}_t}{4} + \varepsilon^{\overline{Y}}_t
-$$
+\]
 
 - **(F2) Potential-output growth process**:
 
-$$
+\[
 g^{\overline{Y}}_t = \tau g^{\overline{Y},ss} + (1-\tau)g^{\overline{Y}}_{t-1} + \varepsilon^{g^{\overline{Y}}}_t
-$$
+\]
 
 - **(F3) NAIRU level**:
 
-$$
+\[
 \overline{U}_t = \overline{U}_{t-1} + g^{\overline{U}}_t + \varepsilon^{\overline{U}}_t
-$$
+\]
 
 - **(F4) NAIRU-growth process**:
 
-$$
+\[
 g^{\overline{U}}_t = (1-\alpha_3)g^{\overline{U}}_{t-1} + \varepsilon^{g^{\overline{U}}}_t
-$$
+\]
 
 - **(F5) Output-gap equation, benchmark model**:
 
-$$
+\[
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon^y_t
-$$
+\]
 
 - **(F6) Inflation equation**:
 
-$$
+\[
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon^\pi_t
-$$
+\]
 
 - **(F7) Taylor-type policy-rate equation**:
 
-$$
+\[
 rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 + \gamma_2\left(\pi4_{t+3}-\pi^{tar}\right) + \gamma_4 y_t\right]
 + \gamma_1 rs_{t-1} + \varepsilon^{rs}_t
-$$
+\]
 
 - **(F8) Dynamic Okun equation**:
 
-$$
+\[
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon^u_t
-$$
+\]
 
 - **(F9) Bank-lending-tightening equation in the financial-linkage extension**:
 
-$$
+\[
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon^{BLT}_t
-$$
+\]
 
 - **(F10) Output-gap equation with financial linkages**:
 
-$$
+\[
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1}
 - \theta\eta_t + \varepsilon^y_t
-$$
+\]
 
 `needs_review`: (F9)-(F10) are source-supported for the U.S. financial-linkage extension. Their country-by-country and cross-border use in the six-region `.mod` is implementation-only evidence until a corrected GPM6 paper source is linked.
 
@@ -93,19 +93,19 @@ $$
 
 - **(F11) Real interest rate definition**:
 
-$$
+\[
 rr_t = rs_t - \pi_{t+1}
-$$
+\]
 
 - **(F12) Real interest-rate gap**:
 
-$$
+\[
 rrgap_t = rr_t - \overline{rr}_t
-$$
+\]
 
 - **(F13) Bank-lending distributed lag**:
 
-$$
+\[
 \eta_t = 0.04\varepsilon^{BLT}_{t-1}
 + 0.08\varepsilon^{BLT}_{t-2}
 + 0.12\varepsilon^{BLT}_{t-3}
@@ -115,16 +115,16 @@ $$
 + 0.12\varepsilon^{BLT}_{t-7}
 + 0.08\varepsilon^{BLT}_{t-8}
 + 0.04\varepsilon^{BLT}_{t-9}
-$$
+\]
 
 - **(F14) Measurement definitions stated in the source**:
 
-$$
+\[
 y_t = Y_t-\overline{Y}_t,\qquad
 u_t = \overline{U}_t-U_t,\qquad
 \pi_t = 400\Delta\log(CPI_t),\qquad
 \pi4_t = 100\left[\log(CPI_t)-\log(CPI_{t-4})\right]
-$$
+\]
 
 The checked implementation generalizes identities to six regions: output gap as `LGDP_i-LGDP_BAR_i`, real rates as `RS_i-PIE_i(+1)`, four-quarter inflation averages, real effective exchange-rate measures, and foreign-activity factors. These are recorded only as `implementation_cross_check`.
 
@@ -132,15 +132,15 @@ The checked implementation generalizes identities to six regions: output gap as 
 
 - **(F15) Equilibrium real interest rate**:
 
-$$
+\[
 \overline{rr}_t = \rho\overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon^{\overline{rr}}_t
-$$
+\]
 
 - **(F16) Equilibrium BLT random walk**:
 
-$$
+\[
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon^{\overline{BLT}}_t
-$$
+\]
 
 The source also estimates shocks to potential-output level and growth, NAIRU level and growth, output, inflation, unemployment, policy rate, equilibrium real rate, BLT, and equilibrium BLT. It reports two cross correlations in the financial-linkage model: a positive relation between the potential-output-growth shock and output-gap shock, and a positive relation between the potential-output-level shock and inflation shock. Exact covariance-matrix implementation is left `needs_review`.
 
@@ -149,19 +149,19 @@ The source also estimates shocks to potential-output level and growth, NAIRU lev
 The paper-side source is a linearized/gap projection model, so the natural steady state sets gap variables and innovations to zero and anchors trend levels by the latent processes:
 
 1. Set all shocks to zero.
-2. Set $y=0$, $u=0$, $rrgap=0$, and $\eta=0$.
-3. Set $\pi4=\pi=\pi^{tar}$ and $rs=\overline{rr}^{ss}+\pi^{tar}$.
-4. Set $g^{\overline{Y}}=g^{\overline{Y},ss}$ and keep $\overline{Y}$ on its stochastic trend.
-5. Set $g^{\overline{U}}=0$ and keep $\overline{U}$ constant absent level shocks.
-6. Set $BLT=\overline{BLT}$ in the financial-linkage block.
+2. Set \(y=0\), \(u=0\), \(rrgap=0\), and \(\eta=0\).
+3. Set \(\pi4=\pi=\pi^{tar}\) and \(rs=\overline{rr}^{ss}+\pi^{tar}\).
+4. Set \(g^{\overline{Y}}=g^{\overline{Y},ss}\) and keep \(\overline{Y}\) on its stochastic trend.
+5. Set \(g^{\overline{U}}=0\) and keep \(\overline{U}\) constant absent level shocks.
+6. Set \(BLT=\overline{BLT}\) in the financial-linkage block.
 
 Implementation cross-check: the six-region `.mod` uses explicit `steady_state_model` assignments for regional CPI levels, GDP trends, exchange-rate levels, BLT levels, inflation targets, output gaps, and shocks. These values are implementation-side calibration, not paper-side derivation evidence from the linked Markdown.
 
 ## 7. Timing & Form Conventions
 
 - **Form**: linear semi-structural projection system with variables measured as rates, log levels, gaps, and trend deviations.
-- **Expectations/timing**: output and inflation equations use leads ($y_{t+1}$, $\pi4_{t+4}$); monetary policy responds to expected year-on-year inflation three quarters ahead ($\pi4_{t+3}$); BLT responds to the expected output gap four quarters ahead ($y_{t+4}$).
-- **Real-rate timing**: the real rate uses the current nominal rate less next-quarter inflation, $rr_t=rs_t-\pi_{t+1}$.
+- **Expectations/timing**: output and inflation equations use leads (\(y_{t+1}\), \(\pi4_{t+4}\)); monetary policy responds to expected year-on-year inflation three quarters ahead (\(\pi4_{t+3}\)); BLT responds to the expected output gap four quarters ahead (\(y_{t+4}\)).
+- **Real-rate timing**: the real rate uses the current nominal rate less next-quarter inflation, \(rr_t=rs_t-\pi_{t+1}\).
 - **Financial-lag timing**: the BLT impulse enters output through a nine-quarter hump-shaped distributed lag.
 - **No capital stock timing**: the paper-side model has no capital accumulation or household/firm stock variable timing.
 - **Six-region timing from implementation only**: the `.mod` uses regional trade/exchange-rate identities, long real-rate weighted averages, foreign-activity factors, and spillover residuals. These require paper-side confirmation.

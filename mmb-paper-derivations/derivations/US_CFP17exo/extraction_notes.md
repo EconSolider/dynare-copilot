@@ -26,7 +26,7 @@
 ## Deferred Issues
 
 - Check Appendix equations against the raw PDF before promoting beyond `needs_review`.
-- Resolve the timing presentation difference between the paper's $k_{t+1}$ accumulation equation and the Rep-MMB implementation's `k(-1)` production timing if this entry is later used for runnable model reconstruction.
+- Resolve the timing presentation difference between the paper's \(k_{t+1}\) accumulation equation and the Rep-MMB implementation's `k(-1)` production timing if this entry is later used for runnable model reconstruction.
 - Review the implementation's duplicated `r2` asset-return equations, one for investment-bond price `qi` and one for long government-bond price `q`, before using the `.mod` as a complete equation-count reference.
 - The current archive entry does not update shared `catalog.csv` or `status.csv` per model ownership instructions.
 

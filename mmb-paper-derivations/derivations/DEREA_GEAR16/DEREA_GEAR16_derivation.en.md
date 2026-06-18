@@ -28,24 +28,24 @@ Important limitation: the paper-side Markdown states that most derivations, firs
 
 The representative final goods firm in country `a` purchases differentiated intermediate inputs and chooses quantities to maximize nominal revenue net of intermediate input costs:
 
-$$
+\[
 \max_{\{\tilde y_t^a(z):z\in[0,1]\}}
 P_t^{a,a}Y_t^a-\int_0^1 P_t^{a,a}(z)\tilde y_t^a(z)\,dz .
 \tag{F1}
-$$
+\]
 
 The CES aggregator is:
 
-$$
+\[
 Y_t^a=\left(\int_0^1 \tilde y_t^a(z)^{(\theta_{a,t}-1)/\theta_{a,t}}\,dz\right)^{\theta_{a,t}/(\theta_{a,t}-1)} .
 \tag{F2}
-$$
+\]
 
 ### 2.2 Intermediate-goods firms
 
 Intermediate firm `z` produces with private capital, private employment, public capital, public employment, domestic and global technology, and fixed costs:
 
-$$
+\[
 y_t^a(z)=e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \zeta_a\left(K_t^{G,a}\right)^{\eta^{K^G,a}}
 \left(N_t^{G,a}\right)^{\eta^{N^G,a}}
@@ -53,13 +53,13 @@ y_t^a(z)=e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \left[N_t^{P,a}(z)\right]^{1-\alpha_a}
 -\Omega_a .
 \tag{F3 needs_review}
-$$
+\]
 
 `needs_review`: OCR around the public-input productivity multiplier in the source is visibly damaged. The intended structure is multiplicative, and the implementation cross-check uses `yG_a_t = z_a*kG_a_t^eta_kG_a*nG_a_t^eta_nG_a` multiplying the private production function.
 
 Price setters choose their own price path subject to demand and Rotemberg adjustment costs:
 
-$$
+\[
 \max_{\{P_{t+s}^{a,a}(z)\}}
 E_t\sum_{s=0}^{\infty}\beta_a^s
 \frac{\lambda_{o,t+s}^a}{\lambda_{o,t}^a}
@@ -68,11 +68,11 @@ E_t\sum_{s=0}^{\infty}\beta_a^s
 -adj_t^{p,a}Y_{t+s}^a
 \right].
 \tag{F4}
-$$
+\]
 
 The Rotemberg price-adjustment term is:
 
-$$
+\[
 adj_t^{P,a}
 =\frac{\gamma_a}{2}
 \left(
@@ -82,7 +82,7 @@ adj_t^{P,a}
 \right)^2
 \frac{P_{t+s}^{a,a}}{P_{t+s}^a}.
 \tag{F5 needs_review}
-$$
+\]
 
 `needs_review`: the adjustment-cost equation is printed inside a price-setter problem and uses both `t` and `t+s`; the exact time indexing should be checked against the unavailable equation summary.
 
@@ -90,7 +90,7 @@ $$
 
 Each region has optimizing households (`o`) and rule-of-thumb households (`r`). The type-`x` household utility, with external habits and labor-force participation costs, is:
 
-$$
+\[
 U(C_{x,t+s}^a,N_{x,t+s}^a)
 =e^{\varepsilon_{t+s}^{\beta_a}}
 \left[
@@ -101,31 +101,31 @@ U(C_{x,t+s}^a,N_{x,t+s}^a)
 d\mathfrak h_x
 \right].
 \tag{F6}
-$$
+\]
 
 The country-`a` private consumption aggregator is:
 
-$$
+\[
 C_{x,t}^a=\left[
 (n_a^a)^{1/\eta_a}(C_{x,t}^{a,a})^{(\eta_a-1)/\eta_a}
 +(n_b^a e^{\varepsilon_t^{b,a}})^{1/\eta_a}(C_{x,t}^{a,b})^{(\eta_a-1)/\eta_a}
 +(n_c^a)^{1/\eta_a}(C_{x,t}^{a,c})^{(\eta_a-1)/\eta_a}
 \right]^{\eta_a/(\eta_a-1)} .
 \tag{F7}
-$$
+\]
 
 RoT households consume current after-tax labor income, unemployment benefits, and transfers:
 
-$$
+\[
 0=(1+\tau_t^{c,a})C_{r,t}^a
 -(1-\tau_t^{w,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
 -UB^a(L_{r,t}^a-N_t^a)-TR_{r,t}^a .
 \tag{F8}
-$$
+\]
 
 Optimizing households choose consumption, investment, private bonds, foreign bonds, government bonds, and capital subject to a large intertemporal budget constraint. The printed source formula is partly OCR-damaged but implies the optimizer budget:
 
-$$
+\[
 0=(1+\tau_t^{c,a})C_{o,t}^a+I_{o,t}^a+B_{o,t}^{a,a}
 +\sum_{j=b,c}S_t^{a,j}B_{o,t}^{a,j}+B_{o,t}^{G,a}+T_{o,t}^a
 -\text{after-tax labor income}
@@ -134,36 +134,36 @@ $$
 -\text{after-tax capital income}
 -D_{o,t}^a .
 \tag{F9 needs_review}
-$$
+\]
 
 Optimizer-owned capital evolves as:
 
-$$
+\[
 k_{o,t}^a=(1-\delta_a)k_{o,t-1}^a+
 \left[
 I_{o,t}^a-I_{o,t}^a\frac{\psi_a^i}{2}
 \left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)^2
 \right]e^{\varepsilon_t^{I_a}} .
 \tag{F10}
-$$
+\]
 
 ### 2.4 Labor agency and union
 
 The labor aggregator chooses differentiated labor services subject to a wage bill:
 
-$$
+\[
 \max_{\{N_t^{P,a}(\mathfrak h):\mathfrak h\in[0,1]\}}
 N_t^{P,a}
 =\left(\int_0^1(N_t^{P,a}(\mathfrak h))^{(\theta_{a,t}^w-1)/\theta_{a,t}^w}\,d\mathfrak h\right)^{\theta_{a,t}^w/(\theta_{a,t}^w-1)} .
 \tag{F11}
-$$
+\]
 
 The union wage-setting problem is only summarized in the paper; the detailed FOCs are stated to be in the equation summary. The source identifies Rotemberg wage adjustment and union bargaining across both household types.
 
-$$
+\[
 \text{Union chooses } W_t^a(\mathfrak h)\text{ taking labor demand, labor supply, wage adjustment costs, and household weights as constraints.}
 \tag{F12 needs_review}
-$$
+\]
 
 ## 3. First-Order Conditions
 
@@ -171,31 +171,31 @@ $$
 
 The final-goods bundler yields demand for variety `z`:
 
-$$
+\[
 \tilde y_t^a(z)=\left(\frac{P_t^{a,a}(z)}{P_t^{a,a}}\right)^{-\theta_{a,t}}Y_t^a .
 \tag{F13}
-$$
+\]
 
 The corresponding PPI aggregator is:
 
-$$
+\[
 P_t^{a,a}=\left(\int_0^1 P_t^{a,a}(z)^{1-\theta_{a,t}}\,dz\right)^{1/(1-\theta_{a,t})}.
 \tag{F14}
-$$
+\]
 
 ### 3.2 Firm cost minimization
 
 The source prints the country-`a` capital-labor ratio condition:
 
-$$
+\[
 \frac{r_{k,t}^a}{w_t^a(1+\tau_t^{sc,a})}
 =\frac{N_t^{P,a}(z)}{K_{t-1}^a(z)}\frac{\alpha_a}{1-\alpha_a}.
 \tag{F15}
-$$
+\]
 
 Real CPI-deflated marginal cost is:
 
-$$
+\[
 mc_t^a=
 \frac{
 (r_{k,t}^a)^{\alpha_a}
@@ -206,7 +206,7 @@ e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \alpha_a^{\alpha_a}(1-\alpha_a)^{1-\alpha_a}
 }.
 \tag{F16 needs_review}
-$$
+\]
 
 `needs_review`: OCR damage affects the denominator exponent and the placement of the public-input multiplier. The mathematical relationship should be checked against the equation summary or PDF formula.
 
@@ -214,48 +214,48 @@ $$
 
 The paper states that optimizer Euler equations for private and public bonds, physical-capital investment, and marginal utility are relegated to the appendix/equation summary. The implementation cross-check indicates the following Euler relationship for domestic private bonds in country `a`:
 
-$$
+\[
 \lambda_{o,t}^a\pi_{t+1}^a
 =\beta_a e^{\varepsilon_t^{RP,EA}}(1+i_t^a)\lambda_{o,t+1}^a .
 \tag{F17 implementation_cross_check needs_review}
-$$
+\]
 
 The implementation cross-check indicates the analogous government-bond Euler equation:
 
-$$
+\[
 \lambda_{o,t}^a\pi_{t+1}^a
 =\beta_a(1+i_t^{G,a})\lambda_{o,t+1}^a .
 \tag{F18 implementation_cross_check needs_review}
-$$
+\]
 
 The marginal utility of optimizing and RoT consumption follows from the printed utility and the implementation cross-check:
 
-$$
+\[
 \lambda_{x,t}^a
 =\frac{e^{\varepsilon_t^{\beta_a}}(C_{x,t}^a-h_aC_{x,t-1}^a)^{-\sigma_a}}{1+\tau_t^{c,a}},
 \quad x\in\{o,r\}.
 \tag{F19 implementation_cross_check needs_review}
-$$
+\]
 
 The optimizer capital-return Euler equation appears in the implementation cross-check as:
 
-$$
+\[
 1=\beta_a\frac{\lambda_{o,t+1}^a}{\lambda_{o,t}^a}
 \frac{1+Rk_{t+1}^a}{\pi_{t+1}^a}.
 \tag{F20 implementation_cross_check needs_review}
-$$
+\]
 
 The effective capital return appears in the implementation cross-check as:
 
-$$
+\[
 Rk_t^a
 =\frac{\pi_t^a\left(q_t^a(1-\delta_a)+(1-\tau_t^{k,a})rk_t^a+\tau_t^{k,a}\delta_a\right)}{q_{t-1}^a}-1 .
 \tag{F21 implementation_cross_check needs_review}
-$$
+\]
 
 The Tobin's Q condition implied by investment adjustment costs appears in the implementation cross-check as:
 
-$$
+\[
 \begin{aligned}
 1={}&q_t^a\left[1-\frac{\upsilon_a}{2}\left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)^2
 -\upsilon_a\frac{I_{o,t}^a}{I_{o,t-1}^a}\left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)\right]e^{\varepsilon_t^{I_a}}\\
@@ -264,7 +264,7 @@ $$
 \left(\frac{I_{o,t+1}^a}{I_{o,t}^a}-1\right)e^{\varepsilon_{t+1}^{I_a}} .
 \end{aligned}
 \tag{F22 implementation_cross_check needs_review}
-$$
+\]
 
 `needs_review`: F17-F22 are not printed in the main article. They are included to document coverage against the existing MMB implementation only.
 
@@ -272,7 +272,7 @@ $$
 
 The household labor-force participation condition printed by the source is:
 
-$$
+\[
 \lambda_{x,t}^a
 \left[
 (1-\tau_t^{w,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
@@ -281,28 +281,28 @@ $$
 =N_t^a\kappa_a^w e^{\varepsilon_t^{N_a}}(L_{x,t}^a)^{\varphi_a},
 \quad x\in\{o,r\}.
 \tag{F23}
-$$
+\]
 
 The labor agency yields variety demand:
 
-$$
+\[
 N_t^{P,a}(\mathfrak h)
 =\left(\frac{W_t^a(\mathfrak h)}{W_t^a}\right)^{-\theta_{a,t}^w}N_t^{P,a}.
 \tag{F24}
-$$
+\]
 
 The wage-setting FOC is not printed in the paper and is marked:
 
-$$
+\[
 \text{Rotemberg union wage FOC linking } \pi_{w,t}^a,\,\lambda_{o,t}^a,\,\lambda_{r,t}^a,\,N_t^{P,a},\,L_{o,t}^a,\,L_{r,t}^a,\text{ and wage-adjustment costs.}
 \tag{F25 needs_review}
-$$
+\]
 
 ### 3.5 Price setting
 
 The Rotemberg price-setting FOC is not fully derived in the paper. The implementation cross-check uses:
 
-$$
+\[
 \begin{aligned}
 &(1-\theta_{a,t})+\theta_{a,t}mc_t^a(pr_{aa,t})^{-1}
 +\beta_a\frac{\lambda_{o,t+1}^a}{\lambda_{o,t}}
@@ -316,7 +316,7 @@ $$
 \frac{\pi_{aa,t}}{\pi_{aa,t-1}^{\xi_a^p}\pi_{ss}^{1-\xi_a^p}} .
 \end{aligned}
 \tag{F26 implementation_cross_check needs_review}
-$$
+\]
 
 `needs_review`: the exact source-level price Phillips curve must be verified against the equation summary; the formula above records the available implementation shape only.
 
@@ -324,105 +324,105 @@ $$
 
 Aggregate household variables combine optimizers and RoT households:
 
-$$
+\[
 X_t^a=(1-\mu^a)X_{o,t}^a+\mu^aX_{r,t}^a,
 \quad X\in\{C,L\}.
 \tag{F27}
-$$
+\]
 
 For optimizer-only stocks and flows, the source states:
 
-$$
+\[
 X_t^a=(1-\mu^a)X_{o,t}^a,
 \quad X\in\{K,I,B^{G}\}.
 \tag{F28}
-$$
+\]
 
 Total employment, labor force, and unemployment are:
 
-$$
+\[
 N_t^a=N_t^{P,a}+N_t^{G,a},\qquad
 L_t^a=(1-\mu^a)L_{o,t}^a+\mu^aL_{r,t}^a,\qquad
 UR_t^a=\frac{L_t^a-N_t^a}{L_t^a}.
 \tag{F29}
-$$
+\]
 
 Government debt evolves as:
 
-$$
+\[
 B_t^{G,a}=\frac{1+i_{t-1}^{G,a}}{\pi_t^a}B_{t-1}^{G,a}+PD_t^a.
 \tag{F30}
-$$
+\]
 
 Primary government expenditures are:
 
-$$
+\[
 \begin{aligned}
 G_t^a={}&R_t^{a,a}(C_t^{G,a}+I_t^{G,a})
 +UB^a\left[\mu^a(L_{r,t}^a-N_t^a)+(1-\mu^a)(L_{o,t}^a-N_t^a)\right]\\
 &+(1+\tau_t^{sc,a})N_t^{G,a}w_t^{G,a}+TR_t^a .
 \end{aligned}
 \tag{F31}
-$$
+\]
 
 Primary revenues are:
 
-$$
+\[
 \begin{aligned}
 Rev_t^a={}&(\tau_t^{w,a}+\tau_t^{sc,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
 +\tau_t^{k,a}(r_t^{k,a}-\delta_a)K_{t-1}^a\\
 &+\tau_t^{c,a}C_t^a+T_{o,t}^a .
 \end{aligned}
 \tag{F32}
-$$
+\]
 
 Public capital and public-good productivity are:
 
-$$
+\[
 K_t^{G,a}=(1-\delta_a^G)K_{t-1}^{G,a}+I_t^{G,a},
 \qquad
 yG_t^a=z_a(K_t^{G,a})^{\eta_k^G,a}(N_t^{G,a})^{\eta_n^G,a}.
 \tag{F33 needs_review}
-$$
+\]
 
 Transfer distribution between household types is:
 
-$$
+\[
 \bar\mu^a\left(\frac{TR_{o,t}^a}{\overline{TR}_o^a}-1\right)
 =(1-\bar\mu^a)\left(\frac{TR_{r,t}^a}{\overline{TR}_r^a}-1\right).
 \tag{F34}
-$$
+\]
 
 Country-`a` market clearing for goods produced in `a` is:
 
-$$
+\[
 \begin{aligned}
 Y_t^a={}&C_t^{G,a}+I_t^{G,a}+C_t^{a,a}+I_t^{a,a}
 +\frac{n_b^a}{n_a^b}(C_t^{b,a}+I_t^{b,a})\\
 &+\frac{n_c^a}{n_a^c}(C_t^{c,a}+I_t^{c,a})+ADJ_t^a .
 \end{aligned}
 \tag{F35}
-$$
+\]
 
 National-accounting GDP adds public employment wage costs to private-sector output:
 
-$$
+\[
 GDP_t^a=Y_t^a+\frac{(1+\tau_t^{sc,a})w_t^{G,a}n_t^{G,a}}{R_t^{a,a}}.
 \tag{F36}
-$$
+\]
 
 Rest-of-world demand for goods from country `j` is approximated by:
 
-$$
+\[
 C_t^{c,j}+I_t^{c,j}
 =n_j^cR_t^{c,j}(g^{c,c}+g^{c,i})e^{\varepsilon_t^{c,j}}Y_t^c,
 \quad j\in\{a,b\}.
 \tag{F37}
-$$
+\]
 
 Country-`a` net foreign assets are:
 
-$$
+\[
 \begin{aligned}
 nfa_t^a={}&rer_t^{a,c}B_t^{a,c}+B_t^a\\
 ={}&(1+i_{t-1}^{a,c})\frac{rer_t^{a,c}B_{t-1}^{a,c}}{\pi_t^c}
@@ -430,11 +430,11 @@ nfa_t^a={}&rer_t^{a,c}B_t^{a,c}+B_t^a\\
 +R_t^{a,a}Y_t^a-C_t^a-I_t^a-C_t^{G,a}-I_t^{G,a}.
 \end{aligned}
 \tag{F38}
-$$
+\]
 
 Country-`b` net foreign assets are analogous:
 
-$$
+\[
 \begin{aligned}
 nfa_t^b={}&rer_t^{b,c}B_t^{b,c}+rer_t^{b,a}B_t^{b,a}\\
 ={}&(1+i_{t-1}^{b,c})\frac{rer_t^{b,c}B_{t-1}^{b,c}}{\pi_t^c}
@@ -442,26 +442,26 @@ nfa_t^b={}&rer_t^{b,c}B_t^{b,c}+rer_t^{b,a}B_t^{b,a}\\
 +R_t^{b,b}Y_t^b-C_t^b-I_t^b-C_t^{G,b}-I_t^{G,b}.
 \end{aligned}
 \tag{F39}
-$$
+\]
 
 Bond-market clearing for the rest-of-world bond position is:
 
-$$
+\[
 B_t^c=-\left(\frac{\mathcal P^a}{\mathcal P^c}B_t^{a,c}
 +\frac{\mathcal P^b}{\mathcal P^c}B_t^{b,c}\right).
 \tag{F40}
-$$
+\]
 
 Relative real exchange rates and nominal exchange-rate changes satisfy:
 
-$$
+\[
 rer_t^{c,a}=\frac{1}{rer_t^{a,c}},
 \qquad
 rer_t^{b,c}=\frac{rer_t^{b,a}}{rer_t^{c,a}},
 \qquad
 \Delta S_t^{a,c}=\frac{\pi_t^a(rer_t^{a,c}/rer_{t-1}^{a,c})}{\pi_t^c}.
 \tag{F41 needs_review}
-$$
+\]
 
 `needs_review`: the source line contains duplicated/malformed `rer` notation and should be checked against the equation summary.
 
@@ -469,24 +469,24 @@ $$
 
 The source describes 41 structural shocks. Except fiscal and monetary policy shocks, all non-policy shocks follow AR(1) processes:
 
-$$
+\[
 \varepsilon_t^{X,i}=\rho^X\varepsilon_{t-1}^{X,i}+\nu_t^X,\quad i\in\{a,b\}.
 \tag{F42}
-$$
+\]
 
 Markup shocks follow AR(1) processes in transformed markups:
 
-$$
+\[
 \frac{\theta_{a,t}}{\theta_{a,t}-1}
 =\rho_{\theta_a}\frac{\theta_{a,t-1}}{\theta_{a,t-1}-1}
 +(1-\rho_{\theta_a})\frac{\bar\theta_a}{\bar\theta_a-1}
 +\nu_t^{\theta_a}.
 \tag{F43 needs_review}
-$$
+\]
 
 Fiscal spending instruments follow log rules:
 
-$$
+\[
 \begin{aligned}
 \log\left(\frac{X_t}{\bar X}\right)
 ={}&\rho^{X,a}\log\left(\frac{X_{t-1}}{\bar X}\right)
@@ -495,18 +495,18 @@ $$
 &+\psi^{X,a}\nu_t^{X,a}+(1-\psi^{X,a})\nu_{t-1}^{X,a},
 \end{aligned}
 \tag{F44}
-$$
+\]
 
 for:
 
-$$
+\[
 X\in\{C^{G,a},I^{G,a},TR^a,w^{G,a}\}.
 \tag{F45}
-$$
+\]
 
 Fiscal revenue/employment instruments follow level-deviation rules:
 
-$$
+\[
 \begin{aligned}
 X_t-\bar X
 ={}&\rho^{X,a}(X_{t-1}-\bar X)
@@ -515,18 +515,18 @@ X_t-\bar X
 &+\psi^{X,a}\nu_t^{X,a}+(1-\psi^{X,a})\nu_{t-1}^{X,a},
 \end{aligned}
 \tag{F46}
-$$
+\]
 
 for:
 
-$$
+\[
 X\in\{\tau^{w,a},\tau^{sc,a},\tau^{k,a},T_o^a,N^{G,a}\}.
 \tag{F47 needs_review}
-$$
+\]
 
 The monetary authority sets one Euro-area policy rate:
 
-$$
+\[
 \begin{aligned}
 \log\left(\frac{1+i_t^{EA}}{1+\bar i^{EA}}\right)
 ={}&\rho_i^a\log\left(\frac{1+i_{t-1}^{EA}}{1+\bar i^{EA}}\right)
@@ -543,20 +543,20 @@ s\log\left(\frac{Y_t^a}{\bar Y^a}\right)
 +\nu_t^{M^{EA}} .
 \end{aligned}
 \tag{F48}
-$$
+\]
 
 The policy rate is linked to country rates by:
 
-$$
+\[
 \log\left(\frac{1+i_t^{EA}}{1+\bar i^{EA}}\right)
 =s\log\left(\frac{1+i_t^a}{1+\bar i^a}\right)
 +(1-s)\log\left(\frac{1+i_t^b}{1+\bar i^b}\right).
 \tag{F49}
-$$
+\]
 
 International risk premia satisfy:
 
-$$
+\[
 1+i_t^{i,j}
 =(1+i_t^j)
 \left[
@@ -567,13 +567,13 @@ $$
 \right],
 \quad i\ne j.
 \tag{F50 needs_review}
-$$
+\]
 
 `needs_review`: the source text around the steady-state denominator has OCR damage and inconsistent `Y^j`/`Y^i` rendering.
 
 The rest-of-world SVAR is:
 
-$$
+\[
 \begin{pmatrix}
 \hat Y_t^c\\
 \hat\pi_t^c\\
@@ -596,7 +596,7 @@ A
 \nu_t^{A_g}
 \end{pmatrix}.
 \tag{F51}
-$$
+\]
 
 ## 6. Steady-State Solution
 
@@ -604,32 +604,32 @@ The source says that the model has an analytically solved asymmetric steady stat
 
 At steady state, policy shocks and non-policy innovations are zero:
 
-$$
+\[
 \nu^X=0,\qquad \varepsilon^X=0 \text{ for stationary AR(1) shocks}.
 \tag{F52 needs_review}
-$$
+\]
 
 Investment pins down private capital from the capital accumulation equation:
 
-$$
+\[
 \bar I_o^a=\delta_a\bar k_o^a
 \quad\text{when } \varepsilon^{I_a}=0 \text{ and adjustment costs are zero}.
 \tag{F53 needs_review}
-$$
+\]
 
 Public capital is pinned down by public investment:
 
-$$
+\[
 \bar I^{G,a}=\delta_a^G\bar K^{G,a}.
 \tag{F54 needs_review}
-$$
+\]
 
 Government debt is stationary only if fiscal rules satisfy the source condition that at least one debt-feedback coefficient is positive:
 
-$$
+\[
 \exists X:\xi^{X,B^{G,a},a}>0 .
 \tag{F55 needs_review}
-$$
+\]
 
 The long-run relative price and inflation targets are embedded in the CPI/PPI blocks, fiscal rules, and Taylor rule. Tables 1 and 2 in the source contain calibrated parameters and targeted steady-state values, but the OCR Markdown mainly stores these tables as images, so the numeric steady-state calibration is not source-extracted here.
 

@@ -19,10 +19,10 @@
 - Overall formula status: `needs_review`.
 - Appendix A OCR is usable for equation coverage but has visible formula damage in several places:
   - A.5 is rendered with `(A. 5)` and contains OCR-sensitive auxiliary-variable notation.
-  - A.11 has mismatched parentheses around $\Gamma_t'$, $G_t'$, $\Gamma_t$, and $G_t$.
+  - A.11 has mismatched parentheses around \(\Gamma_t'\), \(G_t'\), \(\Gamma_t\), and \(G_t\).
   - A.12 appears dimensionally inconsistent in OCR because the right-hand loan principal term is attached to `1 + R`.
   - A.20 and A.25-A.27 contain very long liquidity utility terms; these are baseline-only and inactive for `US_CMR10fa`, but their OCR is not independently repaired.
-  - A.30 is simplified in the derivation by pointing its right side to $Y_{z,t}$ from (F6); a reviewer should check the exact bracket structure against the PDF.
+  - A.30 is simplified in the derivation by pointing its right side to \(Y_{z,t}\) from (F6); a reviewer should check the exact bracket structure against the PDF.
 - No PDF body was opened because the Markdown supplied enough structure for a `needs_review` draft and the instruction was to avoid PDF body inspection by default.
 
 ## Implementation Cross-Check

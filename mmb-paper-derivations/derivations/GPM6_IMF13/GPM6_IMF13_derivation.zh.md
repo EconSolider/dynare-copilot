@@ -26,66 +26,66 @@
 
 - **(F1) 潜在产出水平**：
 
-$$
+\[
 \overline{Y}_t = \overline{Y}_{t-1} + \frac{g^{\overline{Y}}_t}{4} + \varepsilon^{\overline{Y}}_t
-$$
+\]
 
 - **(F2) 潜在产出增长过程**：
 
-$$
+\[
 g^{\overline{Y}}_t = \tau g^{\overline{Y},ss} + (1-\tau)g^{\overline{Y}}_{t-1} + \varepsilon^{g^{\overline{Y}}}_t
-$$
+\]
 
 - **(F3) NAIRU 水平**：
 
-$$
+\[
 \overline{U}_t = \overline{U}_{t-1} + g^{\overline{U}}_t + \varepsilon^{\overline{U}}_t
-$$
+\]
 
 - **(F4) NAIRU 增长过程**：
 
-$$
+\[
 g^{\overline{U}}_t = (1-\alpha_3)g^{\overline{U}}_{t-1} + \varepsilon^{g^{\overline{U}}}_t
-$$
+\]
 
 - **(F5) 基准模型产出缺口方程**：
 
-$$
+\[
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1} + \varepsilon^y_t
-$$
+\]
 
 - **(F6) 通胀方程**：
 
-$$
+\[
 \pi_t = \lambda_1 \pi4_{t+4} + (1-\lambda_1)\pi4_{t-1} + \lambda_2 y_{t-1} - \varepsilon^\pi_t
-$$
+\]
 
 - **(F7) Taylor 型政策利率方程**：
 
-$$
+\[
 rs_t = (1-\gamma_1)\left[\overline{rr}_t + \pi4_{t+3}
 + \gamma_2\left(\pi4_{t+3}-\pi^{tar}\right) + \gamma_4 y_t\right]
 + \gamma_1 rs_{t-1} + \varepsilon^{rs}_t
-$$
+\]
 
 - **(F8) 动态 Okun 方程**：
 
-$$
+\[
 u_t = \alpha_1 u_{t-1} + \alpha_2 y_t + \varepsilon^u_t
-$$
+\]
 
 - **(F9) 金融联动扩展中的银行贷款收紧方程**：
 
-$$
+\[
 BLT_t = \overline{BLT}_t - \kappa y_{t+4} + \varepsilon^{BLT}_t
-$$
+\]
 
 - **(F10) 含金融联动的产出缺口方程**：
 
-$$
+\[
 y_t = \beta_1 y_{t-1} + \beta_2 y_{t+1} - \beta_3 rrgap_{t-1}
 - \theta\eta_t + \varepsilon^y_t
-$$
+\]
 
 `needs_review`：(F9)-(F10) 对美国金融联动扩展有来源支持。它们在六区域 `.mod` 中的逐国和跨境使用只属于实现侧证据，直到链接到修正后的 GPM6 论文来源。
 
@@ -93,19 +93,19 @@ $$
 
 - **(F11) 实际利率定义**：
 
-$$
+\[
 rr_t = rs_t - \pi_{t+1}
-$$
+\]
 
 - **(F12) 实际利率缺口**：
 
-$$
+\[
 rrgap_t = rr_t - \overline{rr}_t
-$$
+\]
 
 - **(F13) 银行贷款收紧的分布滞后项**：
 
-$$
+\[
 \eta_t = 0.04\varepsilon^{BLT}_{t-1}
 + 0.08\varepsilon^{BLT}_{t-2}
 + 0.12\varepsilon^{BLT}_{t-3}
@@ -115,16 +115,16 @@ $$
 + 0.12\varepsilon^{BLT}_{t-7}
 + 0.08\varepsilon^{BLT}_{t-8}
 + 0.04\varepsilon^{BLT}_{t-9}
-$$
+\]
 
 - **(F14) 来源中说明的测度定义**：
 
-$$
+\[
 y_t = Y_t-\overline{Y}_t,\qquad
 u_t = \overline{U}_t-U_t,\qquad
 \pi_t = 400\Delta\log(CPI_t),\qquad
 \pi4_t = 100\left[\log(CPI_t)-\log(CPI_{t-4})\right]
-$$
+\]
 
 已检查的实现把恒等式推广到六个区域：产出缺口为 `LGDP_i-LGDP_BAR_i`，实际利率为 `RS_i-PIE_i(+1)`，四季度平均通胀、实际有效汇率测度和外国活动因子等。这些只记录为 `implementation_cross_check`。
 
@@ -132,15 +132,15 @@ $$
 
 - **(F15) 均衡实际利率**：
 
-$$
+\[
 \overline{rr}_t = \rho\overline{rr}^{ss} + (1-\rho)\overline{rr}_{t-1} + \varepsilon^{\overline{rr}}_t
-$$
+\]
 
 - **(F16) 均衡 BLT 随机游走**：
 
-$$
+\[
 \overline{BLT}_t = \overline{BLT}_{t-1} + \varepsilon^{\overline{BLT}}_t
-$$
+\]
 
 来源还估计了潜在产出水平和增长、NAIRU 水平和增长、产出、通胀、失业、政策利率、均衡实际利率、BLT 与均衡 BLT 的冲击。金融联动模型报告了两类交叉相关：潜在产出增长冲击与产出缺口冲击正相关，潜在产出水平冲击与通胀冲击正相关。精确协方差矩阵实现保留为 `needs_review`。
 
@@ -149,19 +149,19 @@ $$
 论文侧来源是线性化/缺口形式的预测模型，因此自然稳态设定为缺口变量和创新为零，并由潜在过程锚定趋势水平：
 
 1. 所有冲击设为零。
-2. 设 $y=0$、$u=0$、$rrgap=0$、$\eta=0$。
-3. 设 $\pi4=\pi=\pi^{tar}$，且 $rs=\overline{rr}^{ss}+\pi^{tar}$。
-4. 设 $g^{\overline{Y}}=g^{\overline{Y},ss}$，并让 $\overline{Y}$ 留在其随机趋势上。
-5. 设 $g^{\overline{U}}=0$，在没有水平冲击时 $\overline{U}$ 保持常数。
-6. 在金融联动块中设 $BLT=\overline{BLT}$。
+2. 设 \(y=0\)、\(u=0\)、\(rrgap=0\)、\(\eta=0\)。
+3. 设 \(\pi4=\pi=\pi^{tar}\)，且 \(rs=\overline{rr}^{ss}+\pi^{tar}\)。
+4. 设 \(g^{\overline{Y}}=g^{\overline{Y},ss}\)，并让 \(\overline{Y}\) 留在其随机趋势上。
+5. 设 \(g^{\overline{U}}=0\)，在没有水平冲击时 \(\overline{U}\) 保持常数。
+6. 在金融联动块中设 \(BLT=\overline{BLT}\)。
 
 实现交叉检查：六区域 `.mod` 在 `steady_state_model` 中对各区域 CPI 水平、GDP 趋势、汇率水平、BLT 水平、通胀目标、产出缺口和冲击给出显式赋值。这些值是实现侧校准，不是链接 Markdown 的论文侧推导证据。
 
 ## 7. Timing & Form Conventions
 
 - **形式**：线性半结构预测系统，变量以利率、对数水平、缺口和趋势偏离表示。
-- **预期/时序**：产出和通胀方程使用超前项（$y_{t+1}$、$\pi4_{t+4}$）；货币政策响应三季度后的预期同比通胀（$\pi4_{t+3}$）；BLT 响应四季度后的预期产出缺口（$y_{t+4}$）。
-- **实际利率时序**：实际利率使用当期名义利率减下一季度通胀，$rr_t=rs_t-\pi_{t+1}$。
+- **预期/时序**：产出和通胀方程使用超前项（\(y_{t+1}\)、\(\pi4_{t+4}\)）；货币政策响应三季度后的预期同比通胀（\(\pi4_{t+3}\)）；BLT 响应四季度后的预期产出缺口（\(y_{t+4}\)）。
+- **实际利率时序**：实际利率使用当期名义利率减下一季度通胀，\(rr_t=rs_t-\pi_{t+1}\)。
 - **金融滞后时序**：BLT 冲击通过九季度驼峰形分布滞后进入产出。
 - **无资本存量时序**：论文侧模型没有资本积累或家庭/企业存量变量时序。
 - **仅来自实现的六区域时序**：`.mod` 使用区域贸易/汇率恒等式、长期实际利率加权平均、外国活动因子和溢出残差。这些都需要论文侧确认。

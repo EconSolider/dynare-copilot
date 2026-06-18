@@ -21,17 +21,17 @@
 
 Lifetime-income households smooth consumption subject to an intertemporal budget constraint, receive firm profits, sell differentiated labour services, and can borrow or save. A compact source-consistent representation is:
 
-$$
+\[
 \max_{\{C^L_t,N^L_t,A^L_t\}} E_0\sum_{t=0}^{\infty}\beta^t
 U(C^L_t-h C^L_{t-1},N^L_t)
-$$
+\]
 
 subject to
 
-$$
+\[
 P^c_t C^L_t + A^L_t
 = W_t N^L_t + R_{t-1}A^L_{t-1}+\Pi_t-T^L_t .
-$$
+\]
 
 `needs_review`: the paper source identifies lifetime-income households and their intertemporal budget constraint but does not print the exact utility or asset-pricing equation.
 
@@ -39,9 +39,9 @@ $$
 
 Current-income households do not save or borrow and consume disposable current income, including transfers:
 
-$$
+\[
 P^c_t C^C_t = W_t N^C_t + TR_t - T^C_t .
-$$
+\]
 
 `needs_review`: exact tax/transfer split is not printed in the Markdown source.
 
@@ -49,12 +49,12 @@ $$
 
 Households have market power in labour supply because labour skills are imperfect substitutes. Nominal wage contracts are staggered and last about six quarters on average:
 
-$$
+\[
 \max_{W^{\ast}_t} E_t\sum_{j=0}^{\infty}(\beta \theta_w)^j
 \Lambda_{t,t+j}\left[
 W^{\ast}_t N_{t+j|t}-P^c_{t+j} MRS^N_{t+j}N_{t+j|t}
 \right] .
-$$
+\]
 
 `needs_review`: this is a generic Calvo wage-setting representation consistent with the paper description; the exact ToTEM wage block is not printed in the paper-side Markdown.
 
@@ -62,16 +62,16 @@ $$
 
 Each finished-product sector `s in {c, inv, g, x}` combines capital services, labour, commodities, and imports with a CES production technology and sets sticky prices:
 
-$$
+\[
 \max_{\{K_{s,t},L_{s,t},COM_{s,t},M_{s,t}\}}
 P^s_t Y^s_t-W_tL_{s,t}-R^k_tK_{s,t}-P^{com}_tCOM_{s,t}-P^m_tM_{s,t}
-$$
+\]
 
 subject to
 
-$$
+\[
 Y^s_t = A^s_t\,F_s(K_{s,t},L_{s,t},COM_{s,t},M_{s,t};u_{s,t}) .
-$$
+\]
 
 `needs_review`: the Markdown source says the production function is CES and that current ToTEM versions mainly differ by relative import content across finished goods, but it does not print the nested CES formula.
 
@@ -79,16 +79,16 @@ $$
 
 The commodity sector is separate from finished-product sectors, is price-taking in world commodity markets, and supplies commodities for domestic use, household consumption, and exports:
 
-$$
+\[
 \max_{\{K^{com}_t,L^{com}_t\}}
 P^{com}_tY^{com}_t-W_tL^{com}_t-R^k_tK^{com}_t
-$$
+\]
 
 subject to
 
-$$
+\[
 Y^{com}_t=A^{com}_tF^{com}(K^{com}_t,L^{com}_t).
-$$
+\]
 
 ### Central bank and fiscal authority
 
@@ -102,99 +102,99 @@ The following equations are a first-pass structural map. Conditions with exact a
 
 - **(F1) Lifetime-income Euler condition** (`needs_review`):
 
-$$
+\[
 U_{C,t}=\beta E_t\left[U_{C,t+1}\frac{1+i_t}{\Pi^c_{t+1}}\right].
-$$
+\]
 
 - **(F2) Current-income household budget rule** (`needs_review`):
 
-$$
+\[
 C^C_t=\frac{W_tN^C_t+TR_t-T^C_t}{P^c_t}.
-$$
+\]
 
 - **(F3) Labour supply / desired real wage condition** (`needs_review`):
 
-$$
+\[
 \frac{W^{des}_t}{P^c_t}=MRS^N_t(C_t,N_t).
-$$
+\]
 
 - **(F4) Calvo wage Phillips curve block** (`needs_review`):
 
-$$
+\[
 \pi^w_t=\gamma_w\pi^w_{t-1}+\beta E_t\pi^w_{t+1}
 \kappa_w\left(\log W_t-\log P^c_t-\log MRS^N_t\right).
-$$
+\]
 
 - **(F5) Finished-good input demand, capital services** (`needs_review`):
 
-$$
+\[
 R^k_t=P^s_t MC^s_t\frac{\partial F_s}{\partial K_{s,t}}.
-$$
+\]
 
 - **(F6) Finished-good input demand, labour** (`needs_review`):
 
-$$
+\[
 W_t=P^s_t MC^s_t\frac{\partial F_s}{\partial L_{s,t}}.
-$$
+\]
 
 - **(F7) Finished-good input demand, commodities** (`needs_review`):
 
-$$
+\[
 P^{com}_t=P^s_t MC^s_t\frac{\partial F_s}{\partial COM_{s,t}}.
-$$
+\]
 
 - **(F8) Finished-good input demand, imports** (`needs_review`):
 
-$$
+\[
 P^m_t=P^s_t MC^s_t\frac{\partial F_s}{\partial M_{s,t}}.
-$$
+\]
 
 - **(F9) Sectoral New Keynesian price equation** (`needs_review`):
 
-$$
+\[
 \pi^s_t=\gamma_s\pi^s_{t-1}+\beta E_t\pi^s_{t+1}
 \kappa_s\left(\log MC^s_t-\log \overline{MC}^s\right)+\varepsilon^s_t .
-$$
+\]
 
 - **(F10) Import-price Phillips curve / supply-chain pass-through block** (`needs_review`):
 
-$$
+\[
 \pi^m_t=\gamma_m\pi^m_{t-1}+\beta E_t\pi^m_{t+1}
 \kappa_m\left(\log P^{row}_t+\log S_t-\log P^m_t\right).
-$$
+\]
 
 - **(F11) Capital accumulation and utilization cost** (`needs_review`):
 
-$$
+\[
 K_{t+1}=(1-\delta(u_t))K_t+I_t-\Phi_I(I_t,I_{t-1}).
-$$
+\]
 
 - **(F12) Tobin's Q / investment condition** (`needs_review`):
 
-$$
+\[
 Q_t=1+\Phi_{I,t}+\beta E_t\left[\Lambda_{t,t+1}Q_{t+1}\Phi_{I,t+1}\right].
-$$
+\]
 
 - **(F13) Capital-service utilization condition** (`needs_review`):
 
-$$
+\[
 R^k_t=\frac{\partial \delta(u_t)}{\partial u_t}Q_t .
-$$
+\]
 
 - **(F14) Commodity-sector input demand** (`needs_review`):
 
-$$
+\[
 W_t=P^{com}_t\frac{\partial F^{com}}{\partial L^{com}_t},\qquad
 R^k_t=P^{com}_t\frac{\partial F^{com}}{\partial K^{com}_t}.
-$$
+\]
 
 - **(F15) Monetary-policy feedback rule** (`needs_review`; implementation cross-check):
 
-$$
+\[
 i_t=\rho_i i_{t-1}+(1-\rho_i)\left(\bar{i}
 \phi_{\pi}(\pi^{cpi}_{t+h}-\pi^{target}_{t+h})
 \phi_y y^{gap}_t\right)+\varepsilon^i_t .
-$$
+\]
 
 Implementation cross-check maps this to a smoothed rule for `r1n` that reacts to `infq2`, `pertarget`, `pertran`, and `ly_gap`.
 
@@ -202,100 +202,100 @@ Implementation cross-check maps this to a smoothed rule for `r1n` that reacts to
 
 - **(F16) Finished-good resource identities** (`needs_review`):
 
-$$
+\[
 Y^c_t=C_t,\qquad Y^{inv}_t=I_t,\qquad Y^g_t=G_t,\qquad Y^x_t=X_t .
-$$
+\]
 
 - **(F17) Aggregate GDP identity** (`needs_review`):
 
-$$
+\[
 Y_t=C_t+I_t+G_t+X_t-M_t+Y^{com,value}_t .
-$$
+\]
 
 - **(F18) Commodity allocation** (`needs_review`):
 
-$$
+\[
 Y^{com}_t=COM^c_t+COM^{inv}_t+COM^g_t+COM^x_t+COM^{hh}_t+X^{com}_t .
-$$
+\]
 
 - **(F19) Net foreign asset accumulation** (`needs_review`; implementation cross-check):
 
-$$
+\[
 NFA_t=\frac{1+i^{row}_{t-1}+\rho^{risk}_{t-1}}{\Pi_t}\frac{S_t}{S_{t-1}}NFA_{t-1}
 NX_t .
-$$
+\]
 
 The implementation cross-check has an explicit `nfa` law of motion and a risk-premium term linked to deviations from desired NFA.
 
 - **(F20) Risk premium / exchange-rate relation** (`needs_review`; implementation cross-check):
 
-$$
+\[
 1+i_t=(1+i^{row}_t)(1+risk_t)E_t\left[\frac{S_{t+1}}{S_t}\frac{\Pi^{row}_{t+1}}{\Pi_{t+1}}\right].
-$$
+\]
 
 - **(F21) Fiscal debt accumulation** (`needs_review`; implementation cross-check):
 
-$$
+\[
 B^g_t=(1+i^g_{t-1})B^g_{t-1}+P^g_tG_t+TR_t-T_t .
-$$
+\]
 
 - **(F22) Fiscal rule block** (`needs_review`; implementation cross-check):
 
-$$
+\[
 G_t,TR_t,T_t=f(B^g_t/Y_t,\overline{B^g/Y},Y^{gap}_t,\varepsilon^g_t).
-$$
+\]
 
 - **(F23) Price-index definitions** (`needs_review`):
 
-$$
+\[
 \Pi^{cpi}_t=g(\Pi^c_t,\Pi^m_t,\Pi^{com}_t,\Pi^g_t,\Pi^{inv}_t,\Pi^x_t).
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F24) Domestic technology process** (`needs_review`; implementation cross-check `la_shk`):
 
-$$
+\[
 a_t=a_{t-1}+\bar{g}_a+\varepsilon^a_t .
-$$
+\]
 
 - **(F25) World commodity-price process** (`needs_review`; implementation cross-check `lpcomrow_shk`):
 
-$$
+\[
 \log P^{com,row}_t-\log \bar{P}^{com,row}
 =\rho_{com}\left(\log P^{com,row}_{t-1}-\log \bar{P}^{com,row}\right)
 \varepsilon^{com}_t .
-$$
+\]
 
 - **(F26) Foreign output block** (`needs_review`; implementation cross-check `lyrow_shk`):
 
-$$
+\[
 y^{row}_t=y^{row,sreq}_t+y^{row,gap}_t .
-$$
+\]
 
 - **(F27) Exchange-rate / country-risk shock block** (`needs_review`; implementation cross-check `lforexn_shk`, `risk_shk`):
 
-$$
+\[
 risk_t=\overline{risk}+\tau\left(e^{-(NFA_t-\overline{NFA})}-1\right)+\varepsilon^{risk}_t .
-$$
+\]
 
 - **(F28) Consumption-demand shock** (`needs_review`; implementation cross-check `lc_shk`):
 
-$$
+\[
 \xi^c_t=\rho_c\xi^c_{t-1}+\varepsilon^c_t .
-$$
+\]
 
 - **(F29) Fiscal spending-ratio shock** (`needs_review`; implementation cross-check `gn_yn_shk`):
 
-$$
+\[
 gny_t=\rho_g gny_{t-1}+\varepsilon^g_t .
-$$
+\]
 
 - **(F30) Direct CPI-price shock** (`needs_review`; implementation cross-check `lxdc_shk`):
 
-$$
+\[
 \varepsilon^{pc}_t=\rho_{pc}\varepsilon^{pc}_{t-1}+\eta^{pc}_t .
-$$
+\]
 
 ## 6. Steady-State Solution
 
@@ -314,9 +314,9 @@ Recommended steady-state ordering for a later checked implementation:
 
 Steady-state placeholders consistent with the implementation cross-check:
 
-$$
+\[
 \pi^{target}=\bar{\pi},\qquad y^{gap}=0,\qquad i=\bar{i},\qquad risk=\overline{risk}.
-$$
+\]
 
 No Dynare steady-state residual check was run.
 

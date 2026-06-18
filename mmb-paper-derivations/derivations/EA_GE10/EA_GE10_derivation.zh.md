@@ -38,23 +38,23 @@
 
 **(F1) 带习惯和偏好冲击的家庭欧拉方程**：
 
-$$
+\[
 \hat c_t =
 \frac{h}{1+h}\hat c_{t-1}
 + \frac{1}{1+h}E_t\hat c_{t+1}
 - \frac{1-h}{\sigma_c(1+h)}\hat r_t
 + \frac{1-h}{\sigma_c(1+h)}\hat\varepsilon^\beta_t .
-$$
+\]
 
 **(F2) 实际利率定义**：
 
-$$
+\[
 \hat r_t = \hat r^n_t - E_t \pi^c_{t+1}.
-$$
+\]
 
 **(F3) Calvo 工资方程**：
 
-$$
+\[
 \begin{aligned}
 \hat w_t ={}&
 \frac{\beta}{1+\beta}E_t\hat w_{t+1}
@@ -70,119 +70,119 @@ $$
 \right]
 + u^w_t .
 \end{aligned}
-$$
+\]
 
 **(F4) 来自资本生产者最优性的投资动态**：
 
-$$
+\[
 \hat I_t =
 \frac{1}{1+\beta}\hat I_{t-1}
 + \frac{\beta}{1+\beta}E_t\hat I_{t+1}
 + \frac{1}{\varphi(1+\beta)}\hat q_t
 + \hat x_t .
-$$
+\]
 
 **(F5) 资本积累**：
 
-$$
+\[
 \hat k_t = \delta(\hat I_t+\varphi\hat x_t)+(1-\delta)\hat k_{t-1}.
-$$
+\]
 
 **(F6) 带固定成本和利用率的生产函数**：
 
-$$
+\[
 \hat y_t =
 (1+\phi)\left[
 \hat a_t+\alpha\hat k_{t-1}+\alpha\psi\hat r e^k_t+(1-\alpha)\hat l_t
 \right].
-$$
+\]
 
 **(F7) 成本最小化给出的实际边际成本**：
 
-$$
+\[
 \widehat{mc}_t = \alpha\widehat{r e}^k_t+(1-\alpha)\hat w_t-\hat a_t .
-$$
+\]
 
 **(F8) 资本边际产出的要素需求条件**：
 
-$$
+\[
 (1+\psi)\widehat{r e}^k_t = \hat l_t+\hat w_t-\hat k_{t-1}.
-$$
+\]
 
 **(F9) 资本利用率条件**：
 
-$$
+\[
 \widehat{r e}^k_t = \psi z_t .
-$$
+\]
 
 **(F10) 事后总量资本回报**：
 
-$$
+\[
 \hat r^k_{t+1} =
 \frac{R e^k}{R^k}\widehat{r e}^k_{t+1}
 + \frac{1-\delta}{R^k}\hat q_{t+1}
 - \hat q_t .
-$$
+\]
 
 **(F11) 外部融资溢价 / 金融加速器关系**：
 
-$$
+\[
 \hat s_t =
 -\varkappa\left(\widehat{nw}_{t+1}-\hat q_t-\hat k_{t+1}\right),
 \qquad
 \hat s_t \equiv E_t\hat r^k_{t+1}-\hat r_t .
-$$
+\]
 
 **(F12) 企业家净值**：
 
-$$
+\[
 \widehat{nw}_{t+1} =
 \vartheta^e\left[
 \frac{K}{NW}R^n(S\hat r^k_t-\hat r_t)
 + \frac{K}{NW}R^n(S-1)(\hat q_{t-1}+\hat k_t)
 + R^n(\hat r_t+\widehat{nw}_t)
 \right].
-$$
+\]
 
 **(F13) 带价格指数化的新凯恩斯 Phillips 曲线**：
 
-$$
+\[
 \pi^c_t =
 \frac{\beta}{1+\beta\tau_\pi}E_t\pi^c_{t+1}
 + \frac{\tau_\pi}{1+\beta\tau_\pi}\pi^c_{t-1}
 + \frac{1}{1+\beta\tau_\pi}
 \frac{(1-\beta\xi_\pi)(1-\xi_\pi)}{\xi_\pi}\widehat{mc}_t
 + u^{\lambda^\pi}_t .
-$$
+\]
 
 ## 4. 市场出清与总量恒等式
 
 **(F14) 差异化产品的 Dixit-Stiglitz 需求**：
 
-$$
+\[
 y_t(j)=\left(\frac{P^c_t}{P_t(j)}\right)^{-\theta}Y_t .
-$$
+\]
 
 **(F15) 总量资源约束**：
 
-$$
+\[
 \hat y_t =
 \frac{C}{Y}\hat c_t
 + \frac{I}{Y}\hat I_t
 + \frac{G}{Y}\hat g_t
 + \frac{K}{Y}\psi R e^k \widehat{r e}^k_t
 + \frac{K}{Y}S\left(1-\frac{NW}{K}\right)(\hat r^k_t+\hat q_{t-1}+\hat k_t).
-$$
+\]
 
 **(F16) 政府预算/均衡条件**：
 
-$$
+\[
 G_t=T_t .
-$$
+\]
 
 **(F17) 货币政策规则**：
 
-$$
+\[
 \begin{aligned}
 \hat r^n_t ={}&
 \phi_m\hat r^n_{t-1}
@@ -195,79 +195,79 @@ r_\pi\pi_{t-1}+r_y(\hat y_{t-1}-\hat y^{\ast}_{t-1})
 \right]
 + u^{ru}_t .
 \end{aligned}
-$$
+\]
 
 ## 5. 外生过程
 
 **(F18) 偏好冲击**：
 
-$$
+\[
 \hat\varepsilon^\beta_t=\rho_\beta\hat\varepsilon^\beta_{t-1}+u^\beta_t .
-$$
+\]
 
 **(F19) 劳动供给冲击**：
 
-$$
+\[
 \hat\varepsilon^L_t=\rho_L\hat\varepsilon^L_{t-1}+u^L_t .
-$$
+\]
 
 **(F20) 投资特定冲击**：
 
-$$
+\[
 \hat x_t=\rho_x\hat x_{t-1}+u^x_t .
-$$
+\]
 
 **(F21) 技术冲击**：
 
-$$
+\[
 \hat a_t=\rho_a\hat a_{t-1}+u^a_t .
-$$
+\]
 
 **(F22) 政府支出冲击**：
 
-$$
+\[
 \hat g_t=\rho_g\hat g_{t-1}+u^g_t .
-$$
+\]
 
 **(F23) 货币政策冲击**：
 
-$$
+\[
 u^{ru}_t \sim N(0,\sigma_{ru}^2).
-$$
+\]
 
 **(F24) 工资加成冲击**：
 
-$$
+\[
 u^w_t\sim N(0,\sigma_w^2).
-$$
+\]
 
 **(F25) 价格加成冲击**：
 
-$$
+\[
 u^{\lambda^\pi}_t\sim N(0,\sigma_{\lambda^\pi}^2).
-$$
+\]
 
 ## 6. 稳态求解
 
 论文在附录 A 给出稳态关系。由于模型以对数线性偏离形式呈现，稳态偏离值均为零。以下水平值定义线性化展开点和校准目标。
 
 1. 金融和资本回报：
-   $R^k=SR^n$, $R^k=R e^k+1-\delta$, $R^n=1/\beta$, 因此 $R e^k=S/\beta-1+\delta$。
+   \(R^k=SR^n\), \(R^k=R e^k+1-\delta\), \(R^n=1/\beta\), 因此 \(R e^k=S/\beta-1+\delta\)。
 2. 价格加成和边际成本：
-   $MC=(\theta-1)/\theta$。
+   \(MC=(\theta-1)/\theta\)。
 3. 由边际成本求工资：
-   $W=\left[MC(1-\alpha)^{1-\alpha}\alpha^\alpha/(R e^k)^\alpha\right]^{1/(1-\alpha)}$。
+   \(W=\left[MC(1-\alpha)^{1-\alpha}\alpha^\alpha/(R e^k)^\alpha\right]^{1/(1-\alpha)}\)。
 4. 要素比率：
-   $R e^k=\alpha MC\,Y/K$, $W=(1-\alpha)MC\,Y/L$, 且 $L/K=((1-\alpha)/\alpha)(R e^k/W)$。
+   \(R e^k=\alpha MC\,Y/K\), \(W=(1-\alpha)MC\,Y/L\), 且 \(L/K=((1-\alpha)/\alpha)(R e^k/W)\)。
 5. 固定成本和产出：
-   稳态利润为零时，$F=(\lambda_d-1)Y$ 且 $Y=(1/(1+F/Y))(K/L)^\alpha L$。
+   稳态利润为零时，\(F=(\lambda_d-1)Y\) 且 \(Y=(1/(1+F/Y))(K/L)^\alpha L\)。
 6. 资本产出比和投资产出比：
-   $K/Y=(L/K)^{\alpha-1}(1+F/Y)$ 且 $I/Y=\delta K/Y$。
+   \(K/Y=(L/K)^{\alpha-1}(1+F/Y)\) 且 \(I/Y=\delta K/Y\)。
 7. 资源配置：
-   $g=1-(C/Y+I/Y)$ 且 $C/K=(1-g)(1/(1+F/Y))(L/K)^{1-\alpha}-\delta$。
+   \(g=1-(C/Y+I/Y)\) 且 \(C/K=(1-g)(1/(1+F/Y))(L/K)^{1-\alpha}-\delta\)。
 8. 资本、消费、投资、产出、劳动和净值：
-   $K=W(\theta^w-1)/\theta^w\{[(1-h)C/K]^{-\sigma_c}(L/K)^{-\sigma_L}\}^{1/(\sigma_c+\sigma_L)}$，
-   然后 $C=(C/K)K$, $I=\delta K$, $Y=(C+I)/(1-g)$, $L=(L/K)K$, $NW=(NW/K)K$。
+   \(K=W(\theta^w-1)/\theta^w\{[(1-h)C/K]^{-\sigma_c}(L/K)^{-\sigma_L}\}^{1/(\sigma_c+\sigma_L)}\)，
+   然后 \(C=(C/K)K\), \(I=\delta K\), \(Y=(C+I)/(1-g)\), \(L=(L/K)K\), \(NW=(NW/K)K\)。
 
 `needs_review`：附录 A 中若干符号存在 OCR 损坏（`theta^w`、`sigma_L` 和加成记号）。上述关系从 Markdown 规范化，并用 Rep-MMB 稳态定义交叉检查，但未对 PDF 正文逐项核对。
 
@@ -285,32 +285,32 @@ $$
 
 | 类别 | 符号 / 实现名称 | 含义 | 主要方程 |
 |---|---|---|---|
-| 内生变量 | `c`, $\hat c_t$ | 消费 | (F1), (F15) |
-| 内生变量 | `r`, $\hat r_t$ | 实际利率 | (F2), (F11) |
-| 内生变量 | `rn`, $\hat r^n_t$ | 名义政策利率 | (F2), (F17) |
-| 内生变量 | `wp`, $\hat w_t$ | 实际工资 | (F3), (F7), (F8) |
-| 内生变量 | `l`, $\hat l_t$ | 劳动 | (F3), (F6), (F8) |
-| 内生变量 | `inv`, $\hat I_t$ | 投资 | (F4), (F5), (F15) |
-| 内生变量 | `q`, $\hat q_t$ | 资本价格 / Tobin q | (F4), (F10), (F11), (F12) |
-| 内生变量 | `k`, $\hat k_t$ | 资本存量 | (F5), (F6), (F11), (F12) |
-| 内生变量 | `y`, $\hat y_t$ | 产出 | (F6), (F15), (F17) |
-| 内生变量 | `mc`, $\widehat{mc}_t$ | 实际边际成本 | (F7), (F13) |
-| 内生变量 | `z`, $\widehat{re}^k_t$ / 利用率代理 | 资本边际产出/租赁服务；实现中用 `z` | (F8), (F9) |
-| 内生变量 | `rk`, $\hat r^k_t$ | 资本回报 | (F10), (F11), (F12) |
-| 内生变量 | `nw`, $\widehat{nw}_t$ | 企业家净值 | (F11), (F12) |
-| 内生变量 | `pi`, $\pi^c_t$ | CPI 通胀 | (F2), (F13), (F17) |
-| 内生变量 | `S`, $\hat s_t$ | 对数金融溢价 | (F11) |
-| 内生变量 | `g`, $\hat g_t$ | 政府支出 | (F15), (F22) |
+| 内生变量 | `c`, \(\hat c_t\) | 消费 | (F1), (F15) |
+| 内生变量 | `r`, \(\hat r_t\) | 实际利率 | (F2), (F11) |
+| 内生变量 | `rn`, \(\hat r^n_t\) | 名义政策利率 | (F2), (F17) |
+| 内生变量 | `wp`, \(\hat w_t\) | 实际工资 | (F3), (F7), (F8) |
+| 内生变量 | `l`, \(\hat l_t\) | 劳动 | (F3), (F6), (F8) |
+| 内生变量 | `inv`, \(\hat I_t\) | 投资 | (F4), (F5), (F15) |
+| 内生变量 | `q`, \(\hat q_t\) | 资本价格 / Tobin q | (F4), (F10), (F11), (F12) |
+| 内生变量 | `k`, \(\hat k_t\) | 资本存量 | (F5), (F6), (F11), (F12) |
+| 内生变量 | `y`, \(\hat y_t\) | 产出 | (F6), (F15), (F17) |
+| 内生变量 | `mc`, \(\widehat{mc}_t\) | 实际边际成本 | (F7), (F13) |
+| 内生变量 | `z`, \(\widehat{re}^k_t\) / 利用率代理 | 资本边际产出/租赁服务；实现中用 `z` | (F8), (F9) |
+| 内生变量 | `rk`, \(\hat r^k_t\) | 资本回报 | (F10), (F11), (F12) |
+| 内生变量 | `nw`, \(\widehat{nw}_t\) | 企业家净值 | (F11), (F12) |
+| 内生变量 | `pi`, \(\pi^c_t\) | CPI 通胀 | (F2), (F13), (F17) |
+| 内生变量 | `S`, \(\hat s_t\) | 对数金融溢价 | (F11) |
+| 内生变量 | `g`, \(\hat g_t\) | 政府支出 | (F15), (F22) |
 | 内生变量 | `ypot` | 灵活价格产出缺口参照 | (F17) |
 | 内生变量 | `EMP` | 实现中的就业平滑模块 | implementation_cross_check |
-| 外生变量 | `ub`, $u^\beta_t$ | 偏好创新 | (F18) |
-| 外生变量 | `ul`, $u^L_t$ | 劳动供给创新 | (F19) |
-| 外生变量 | `ux`, $u^x_t$ | 投资特定创新 | (F20) |
-| 外生变量 | `ua`, $u^a_t$ | 技术创新 | (F21) |
-| 外生变量 | `ug`, $u^g_t$ | 政府支出创新 | (F22) |
-| 外生变量 | `ur`, $u^{ru}_t$ | 货币政策创新 | (F23), (F17) |
-| 外生变量 | `uw`, $u^w_t$ | 工资加成创新 | (F24), (F3) |
-| 外生变量 | `ulambdapi`, $u^{\lambda^\pi}_t$ | 价格加成创新 | (F25), (F13) |
+| 外生变量 | `ub`, \(u^\beta_t\) | 偏好创新 | (F18) |
+| 外生变量 | `ul`, \(u^L_t\) | 劳动供给创新 | (F19) |
+| 外生变量 | `ux`, \(u^x_t\) | 投资特定创新 | (F20) |
+| 外生变量 | `ua`, \(u^a_t\) | 技术创新 | (F21) |
+| 外生变量 | `ug`, \(u^g_t\) | 政府支出创新 | (F22) |
+| 外生变量 | `ur`, \(u^{ru}_t\) | 货币政策创新 | (F23), (F17) |
+| 外生变量 | `uw`, \(u^w_t\) | 工资加成创新 | (F24), (F3) |
+| 外生变量 | `ulambdapi`, \(u^{\lambda^\pi}_t\) | 价格加成创新 | (F25), (F13) |
 | 参数 | `beta` | 贴现因子 | (F1), 稳态 |
 | 参数 | `h` | 习惯参数 | (F1), (F3) |
 | 参数 | `sigmac`, `sigmal` | 消费/劳动曲率 | (F1), (F3) |
@@ -322,7 +322,7 @@ $$
 | 参数 | `pis`, `varphi` | 投资调整成本倒数 | (F4), (F5) |
 | 参数 | `FI`, `psi` | 利用率成本弹性倒数 | (F6), (F9), (F15) |
 | 参数 | `vkappa`, `varkappa` | 溢价相对于杠杆的弹性 | (F11) |
-| 参数 | `thetae`, $\vartheta^e$ | 企业家存活概率 | (F12) |
+| 参数 | `thetae`, \(\vartheta^e\) | 企业家存活概率 | (F12) |
 | 参数 | `S_ss`, `S` | 稳态金融溢价 | (F11), 稳态 |
 | 参数 | `KNW`, `NWK` | 资本-净值比 | (F12), 稳态 |
 | 参数 | `phim`, `rpi`, `ry`, `rdeltapi`, `rdeltay` | 政策规则系数 | (F17) |

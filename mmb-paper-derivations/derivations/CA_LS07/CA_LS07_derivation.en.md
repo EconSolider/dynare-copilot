@@ -27,30 +27,30 @@ Primitive utility, production, and Calvo reset-price expressions are not reprodu
 
 - **(F1) Open-economy IS curve** from the consumption Euler equation:
 
-$$
+\[
 y_t = E_t y_{t+1}
 - \left[\tau + \alpha(2-\alpha)(1-\tau)\right]\left(R_t - E_t\pi_{t+1}\right)
 - \rho_z z_t
 - \alpha\left[\tau + \alpha(2-\alpha)(1-\tau)\right]E_t\Delta q_{t+1}
 + \alpha(2-\alpha)\frac{1-\tau}{\tau}E_t\Delta y^{\ast}_{t+1}.
-$$
+\]
 
 - **(F2) Open-economy Phillips curve** from optimal price setting:
 
-$$
+\[
 \pi_t = \beta E_t\pi_{t+1}
 + \alpha\beta E_t\Delta q_{t+1}
 - \alpha\Delta q_t
 + \frac{\kappa}{\tau+\alpha(2-\alpha)(1-\tau)}(y_t-\bar y_t).
-$$
+\]
 
 - **(F3) Monetary policy rule** with interest-rate smoothing and exchange-rate response:
 
-$$
+\[
 R_t = \rho_R R_{t-1}
 + (1-\rho_R)\left[\psi_1\pi_t+\psi_2 y_t+\psi_3\Delta e_t\right]
 + \varepsilon^R_t.
-$$
+\]
 
 `needs_review`: equations (F1)-(F3) are transcribed from MinerU OCR and checked against the implementation variable list. They were not checked against the PDF body in this pass.
 
@@ -58,39 +58,39 @@ $$
 
 - **(F4) Potential output in the absence of nominal rigidities**:
 
-$$
+\[
 \bar y_t = -\alpha(2-\alpha)\frac{1-\tau}{\tau}y^{\ast}_t.
-$$
+\]
 
 - **(F5) CPI / relative PPP identity**:
 
-$$
+\[
 \pi_t = \Delta e_t + (1-\alpha)\Delta q_t + \pi^{\ast}_t.
-$$
+\]
 
 - **(F6) World-output growth identity** used by the implementation:
 
-$$
+\[
 \Delta y^{\ast}_t = y^{\ast}_t-y^{\ast}_{t-1}.
-$$
+\]
 
 - **(F7) Annualized CPI inflation reporting identity**:
 
-$$
+\[
 \mathrm{inflationq}_t = 4\pi_t.
-$$
+\]
 
 - **(F8) Annualized nominal interest reporting identity**:
 
-$$
+\[
 \mathrm{interest}_t = 4R_t.
-$$
+\]
 
 The paper's fully structural terms-of-trade market-clearing relation is:
 
-$$
+\[
 \left[\tau+\alpha(2-\alpha)(1-\tau)\right]\Delta q_t = \Delta y^{\ast}_t-\Delta y_t.
-$$
+\]
 
 The estimated and replicated model does not use that equation as an equilibrium condition; it replaces it with the exogenous process (F9). This exclusion is source-stated and implementation-confirmed.
 
@@ -98,27 +98,27 @@ The estimated and replicated model does not use that equation as an equilibrium 
 
 - **(F9) Terms-of-trade growth shock**:
 
-$$
+\[
 \Delta q_t = \rho_q \Delta q_{t-1}+\varepsilon_{q,t}.
-$$
+\]
 
 - **(F10) Technology growth shock**:
 
-$$
+\[
 z_t = \rho_z z_{t-1}+\varepsilon^z_t.
-$$
+\]
 
 - **(F11) World output shock**:
 
-$$
+\[
 y^{\ast}_t = \rho_{y^{\ast}}y^{\ast}_{t-1}+\varepsilon^{y^{\ast}}_t.
-$$
+\]
 
 - **(F12) World inflation shock**:
 
-$$
+\[
 \pi^{\ast}_t = \rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+\varepsilon^{\pi^{\ast}}_t.
-$$
+\]
 
 The policy shock `\varepsilon^R_t` enters the rule in (F3). The implementation cross-check names the five innovations `epsR`, `epsq`, `epsy_star`, `epspi_star`, and `epsz`.
 
@@ -126,15 +126,15 @@ The policy shock `\varepsilon^R_t` enters the rule in (F3). The implementation c
 
 Because `CA_LS07` is a `model(linear)` implementation, the model variables are deviations or growth-rate deviations around their steady states. The Dynare steady state is therefore zero for all endogenous variables:
 
-$$
+\[
 y=R=\pi=z=\Delta q=\Delta y^{\ast}=y^{\ast}=\bar y=\Delta e=\pi^{\ast}=\mathrm{inflationq}=\mathrm{interest}=0.
-$$
+\]
 
 The discount factor is parameterized from the annualized steady-state real interest rate:
 
-$$
+\[
 \beta = \exp(-r/400).
-$$
+\]
 
 For the Canadian replication, the implementation cross-check uses `rss=2.52`, so `beta=exp(-2.52/400)`. Runtime validation was not performed.
 
@@ -153,43 +153,43 @@ For the Canadian replication, the implementation cross-check uses `rss=2.52`, so
 
 | Symbol | Implementation name | Meaning | Main equation |
 |---|---|---|---|
-| $y_t$ | `y` | output deviation relative to technology trend | (F1) |
-| $R_t$ | `R` | nominal interest-rate deviation | (F3) |
-| $\pi_t$ | `pi` | CPI inflation deviation | (F2), (F5) |
-| $z_t$ | `z` | technology growth process | (F10) |
-| $\Delta q_t$ | `deltaq` | terms-of-trade growth | (F9) |
-| $\Delta y^{\ast}_t$ | `deltay_star` | world-output growth | (F6) |
-| $\bar y_t$ | `y_bar` | potential output without nominal rigidities | (F4) |
-| $y^{\ast}_t$ | `y_star` | world output | (F11) |
-| $\Delta e_t$ | `deltae` | nominal exchange-rate depreciation | (F5) |
-| $\pi^{\ast}_t$ | `pi_star` | world inflation / PPP deviation shock | (F12) |
-| $\mathrm{inflationq}_t$ | `inflationq` | annualized CPI inflation reporting variable | (F7) |
-| $\mathrm{interest}_t$ | `interest` | annualized nominal interest reporting variable | (F8) |
+| \(y_t\) | `y` | output deviation relative to technology trend | (F1) |
+| \(R_t\) | `R` | nominal interest-rate deviation | (F3) |
+| \(\pi_t\) | `pi` | CPI inflation deviation | (F2), (F5) |
+| \(z_t\) | `z` | technology growth process | (F10) |
+| \(\Delta q_t\) | `deltaq` | terms-of-trade growth | (F9) |
+| \(\Delta y^{\ast}_t\) | `deltay_star` | world-output growth | (F6) |
+| \(\bar y_t\) | `y_bar` | potential output without nominal rigidities | (F4) |
+| \(y^{\ast}_t\) | `y_star` | world output | (F11) |
+| \(\Delta e_t\) | `deltae` | nominal exchange-rate depreciation | (F5) |
+| \(\pi^{\ast}_t\) | `pi_star` | world inflation / PPP deviation shock | (F12) |
+| \(\mathrm{inflationq}_t\) | `inflationq` | annualized CPI inflation reporting variable | (F7) |
+| \(\mathrm{interest}_t\) | `interest` | annualized nominal interest reporting variable | (F8) |
 
 ### Exogenous shocks
 
 | Symbol | Implementation name | Meaning |
 |---|---|---|
-| $\varepsilon^R_t$ | `epsR` | monetary policy shock |
-| $\varepsilon_{q,t}$ | `epsq` | terms-of-trade growth shock |
-| $\varepsilon^{y^{\ast}}_t$ | `epsy_star` | world output shock |
-| $\varepsilon^{\pi^{\ast}}_t$ | `epspi_star` | world inflation shock |
-| $\varepsilon^z_t$ | `epsz` | technology growth shock |
+| \(\varepsilon^R_t\) | `epsR` | monetary policy shock |
+| \(\varepsilon_{q,t}\) | `epsq` | terms-of-trade growth shock |
+| \(\varepsilon^{y^{\ast}}_t\) | `epsy_star` | world output shock |
+| \(\varepsilon^{\pi^{\ast}}_t\) | `epspi_star` | world inflation shock |
+| \(\varepsilon^z_t\) | `epsz` | technology growth shock |
 
 ### Parameters
 
 | Symbol | Implementation name | Meaning / Canada value used in MMB cross-check |
 |---|---|---|
-| $\tau$ | `tau` | intertemporal substitution elasticity; 0.31 |
-| $\alpha$ | `alfa` | import share; 0.11 |
-| $\rho_z$ | `rhoz` | technology-growth persistence; 0.42 |
-| $r$ | `rss` | annualized steady-state real interest rate; 2.52 |
-| $\beta$ | `beta` | discount factor, `exp(-rss/400)` |
-| $\kappa$ | `kappa` | Phillips-curve slope; 0.32 |
-| $\rho_R$ | `rhoR` | interest-rate smoothing; 0.69 |
-| $\psi_1$ | `psi1` | policy response to inflation; 1.30 |
-| $\psi_2$ | `psi2` | policy response to output; 0.23 |
-| $\psi_3$ | `psi3` | policy response to nominal depreciation; 0.14 |
-| $\rho_q$ | `rhoq` | terms-of-trade growth persistence; 0.31 |
-| $\rho_{y^{\ast}}$ | `rhoy_star` | world-output persistence; 0.97 |
-| $\rho_{\pi^{\ast}}$ | `rhopi_star` | world-inflation persistence; 0.46 |
+| \(\tau\) | `tau` | intertemporal substitution elasticity; 0.31 |
+| \(\alpha\) | `alfa` | import share; 0.11 |
+| \(\rho_z\) | `rhoz` | technology-growth persistence; 0.42 |
+| \(r\) | `rss` | annualized steady-state real interest rate; 2.52 |
+| \(\beta\) | `beta` | discount factor, `exp(-rss/400)` |
+| \(\kappa\) | `kappa` | Phillips-curve slope; 0.32 |
+| \(\rho_R\) | `rhoR` | interest-rate smoothing; 0.69 |
+| \(\psi_1\) | `psi1` | policy response to inflation; 1.30 |
+| \(\psi_2\) | `psi2` | policy response to output; 0.23 |
+| \(\psi_3\) | `psi3` | policy response to nominal depreciation; 0.14 |
+| \(\rho_q\) | `rhoq` | terms-of-trade growth persistence; 0.31 |
+| \(\rho_{y^{\ast}}\) | `rhoy_star` | world-output persistence; 0.97 |
+| \(\rho_{\pi^{\ast}}\) | `rhopi_star` | world-inflation persistence; 0.46 |

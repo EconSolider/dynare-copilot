@@ -17,21 +17,21 @@
 
 代表性家庭选择消费、劳动、公共债券/准备金、绿色债券和棕色债券持有量：
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}\beta^t\left[
 \log(c_t-\varsigma c_{t-1})-\frac{h_t^{1+\varphi}}{1+\varphi}
 +\frac{\nu_G}{1-\kappa_G}\left(\frac{B^G_{Ht}}{P_tz_t}\right)^{1-\kappa_G}
 -\frac{\nu_B}{1+\kappa_B}\left(\frac{B^B_{Ht}}{P_tz_t}\right)^{1+\kappa_B}
 \right]
-$$
+\]
 
 约束为名义预算约束
 
-$$
+\[
 c_t+\frac{D_{Ht}+B^G_{Ht}+B^B_{Ht}}{P_t}
 =\frac{r_{t-1}D_{H,t-1}+R^G_tB^G_{H,t-1}+R^B_tB^B_{H,t-1}}{P_t}
 +w_th_t-t_t+\Gamma_t .
-$$
+\]
 
 绿色债券正向进入效用，棕色债券负向进入效用，因此二者不是完全替代品，中央银行资产组合可以影响利差。
 
@@ -39,9 +39,9 @@ $$
 
 最终品厂商组合差异化中间品：
 
-$$
+\[
 y_t=\left[\int_0^1 y_t(i)^{\frac{\varepsilon-1}{\varepsilon}}\,di\right]^{\frac{\varepsilon}{\varepsilon-1}},
-$$
+\]
 
 并在相对价格约束下选择各类投入。
 
@@ -49,52 +49,52 @@ $$
 
 中间品厂商组合绿色和棕色部门产出：
 
-$$
+\[
 y^I_t(i)=\left[(1-\zeta)^{1/\xi}y^G_t(i)^{\frac{\xi-1}{\xi}}+\zeta^{1/\xi}y^B_t(i)^{\frac{\xi-1}{\xi}}\right]^{\frac{\xi}{\xi-1}}.
-$$
+\]
 
 它们在该 CES 聚合约束下最小化 \(p^G_ty^G_t(i)+p^B_ty^B_t(i)\)，并在二次价格调整成本下设定价格：
 
-$$
+\[
 AC_t(i)=\frac{\kappa_P}{2}\left(\frac{P_t(i)}{P_{t-1}(i)}-\bar{\pi}\right)^2P_ty_t .
-$$
+\]
 
 ### 2.4 绿色与棕色厂商
 
 每个部门 \(j\in\{G,B\}\) 使用资本和劳动生产：
 
-$$
+\[
 y^j_t=a_t(k^j_{t-1})^\alpha(z_th^j_t)^{1-\alpha}.
-$$
+\]
 
 绿色厂商不污染。棕色厂商面对排放税并选择减排 \(\mu_t\)，棕色净价格为
 
-$$
+\[
 p^{Bnet}_t=p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}.
-$$
+\]
 
 ### 2.5 资本品生产者
 
 资本品生产者选择投资和总资本：
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}\beta^t\frac{\lambda_t}{\lambda_0}
 \left[q_tk_t-(1-\delta)q_tk_{t-1}-i_t\right]
-$$
+\]
 
 约束为
 
-$$
+\[
 k_t=(1-\delta)k_{t-1}+\left[1-\frac{\kappa_I}{2}\left(\frac{i_t}{i_{t-1}}-\theta\right)^2\right]i_t .
-$$
+\]
 
 ### 2.6 政策当局
 
 中央银行持有绿色公司债、棕色公司债和公共债券/准备金：
 
-$$
+\[
 b^G_{Ct}+b^B_{Ct}+d_{Ct}=re_t .
-$$
+\]
 
 政府征收排放税，并通过合并预算返还。论文把 \(\tau_t\) 和 \(re_t\) 作为转型实验中的政策路径。
 
@@ -104,117 +104,117 @@ $$
 
 - **(F1) 劳动供给**：
 
-$$
+\[
 h_t^\varphi=\widetilde{w}_t\widetilde{\lambda}_t .
-$$
+\]
 
 - **(F2) 公共债券/准备金欧拉方程**：
 
-$$
+\[
 1=\beta E_t\left(\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}\frac{r_t}{\pi_{t+1}}\right).
-$$
+\]
 
 - **(F3) 绿色债券欧拉方程**：
 
-$$
+\[
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^G_{t+1}\right]
 +\frac{\nu_G}{\widetilde{\lambda}_t}\left(\widetilde{b}^G_{Ht}\right)^{-\kappa_G}.
-$$
+\]
 
 - **(F4) 棕色债券欧拉方程**：
 
-$$
+\[
 1=\beta E_t\left[\frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t\theta}r^B_{t+1}\right]
 -\frac{\nu_B}{\widetilde{\lambda}_t}\left(\widetilde{b}^B_{Ht}\right)^{\kappa_B}.
-$$
+\]
 
 - **(F5) 中间投入 CES 生产**：
 
-$$
+\[
 \widetilde{y}_t=\left[(1-\zeta)^{1/\xi}(\widetilde{y}^G_t)^{\frac{\xi-1}{\xi}}
 +\zeta^{1/\xi}(\widetilde{y}^B_t)^{\frac{\xi-1}{\xi}}\right]^{\frac{\xi}{\xi-1}}.
-$$
+\]
 
 - **(F6) 绿色产出需求**：
 
-$$
+\[
 \widetilde{y}^G_t=(1-\zeta)\left(\frac{p^G_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
-$$
+\]
 
 - **(F7) 棕色产出需求**：
 
-$$
+\[
 \widetilde{y}^B_t=\zeta\left(\frac{p^B_t}{p^I_t}\right)^{-\xi}\widetilde{y}_t .
-$$
+\]
 
 - **(F8) 非线性 Phillips 曲线**：
 
-$$
+\[
 \pi_t(\pi_t-\bar{\pi})=\beta E_t\left[
 \frac{\widetilde{\lambda}_{t+1}}{\widetilde{\lambda}_t}
 \frac{\widetilde{y}_{t+1}}{\widetilde{y}_t}
 \pi_{t+1}(\pi_{t+1}-\bar{\pi})\right]
 +\frac{\varepsilon}{\kappa_P}\left(p^I_t-\frac{\varepsilon-1}{\varepsilon}\right).
-$$
+\]
 
 - **(F9) 绿色生产**：
 
-$$
+\[
 \widetilde{y}^G_t=\left(\frac{\widetilde{k}^G_{t-1}}{\theta}\right)^\alpha(h^G_t)^{1-\alpha}.
-$$
+\]
 
 - **(F10) 棕色生产**：
 
-$$
+\[
 \widetilde{y}^B_t=\left(\frac{\widetilde{k}^B_{t-1}}{\theta}\right)^\alpha(h^B_t)^{1-\alpha}.
-$$
+\]
 
 - **(F11) 绿色劳动需求**：
 
-$$
+\[
 \widetilde{w}_t h^G_t=(1-\alpha)p^G_t\widetilde{y}^G_t .
-$$
+\]
 
 - **(F12) 棕色劳动需求**：
 
-$$
+\[
 \widetilde{w}_t h^B_t=(1-\alpha)\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
-$$
+\]
 
 - **(F13) 绿色资本需求**：
 
-$$
+\[
 r^G_{kt}\frac{\widetilde{k}^G_{t-1}}{\theta}=\alpha p^G_t\widetilde{y}^G_t .
-$$
+\]
 
 - **(F14) 棕色资本需求**：
 
-$$
+\[
 r^B_{kt}\frac{\widetilde{k}^B_{t-1}}{\theta}
 =\alpha\left[p^B_t-\tau_t(1-\mu_t)\nu_E-\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}\right]\widetilde{y}^B_t .
-$$
+\]
 
 - **(F15) 绿色资本租金率**：
 
-$$
+\[
 r^G_{kt}=r^G_tq_{t-1}-(1-\delta)q_t .
-$$
+\]
 
 - **(F16) 棕色资本租金率**：
 
-$$
+\[
 r^B_{kt}=r^B_tq_{t-1}-(1-\delta)q_t .
-$$
+\]
 
 - **(F17) 最优减排**：
 
-$$
+\[
 \mu_t=\left(\frac{\nu_E\tau_t}{\nu_M}\right)^{1/\chi}.
-$$
+\]
 
 - **(F18) 资本品生产者 Tobin's Q 条件**：
 
-$$
+\[
 \begin{aligned}
 1={}&q_t\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2
 -\kappa_I\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)\right]\\
@@ -224,93 +224,93 @@ $$
 \kappa_I\left(\frac{\widetilde{i}_{t+1}}{\widetilde{i}_t}\theta-\theta\right)
 \right].
 \end{aligned}
-$$
+\]
 
 - **(F19) 带外部习惯的消费边际效用**：
 
-$$
+\[
 \widetilde{\lambda}_t=\frac{\theta}{\theta\widetilde{c}_t-\varsigma\widetilde{c}_{t-1}}
 -\beta\varsigma E_t\left(\frac{1}{\theta\widetilde{c}_{t+1}-\varsigma\widetilde{c}_t}\right).
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F20) 排放函数**：
 
-$$
+\[
 \widetilde{e}_t=(1-\mu_t)\nu_E\widetilde{y}^B_t .
-$$
+\]
 
 - **(F21) 污染积累**：
 
-$$
+\[
 \widetilde{x}_t=(1-\delta^x)\frac{\widetilde{x}_{t-1}}{\theta}+\widetilde{e}_t+\widetilde{e}^{row}.
-$$
+\]
 
 - **(F22) 资本积累**：
 
-$$
+\[
 \widetilde{k}_t=(1-\delta)\frac{\widetilde{k}_{t-1}}{\theta}
 +\left[1-\frac{\kappa_I}{2}\left(\frac{\widetilde{i}_t}{\widetilde{i}_{t-1}}\theta-\theta\right)^2\right]\widetilde{i}_t .
-$$
+\]
 
 - **(F23) 资源约束**：
 
-$$
+\[
 \widetilde{y}_t=\widetilde{c}_t+\widetilde{i}_t+\widetilde{g}
 +\widetilde{y}^B_t\frac{\nu_M}{1+\chi}\mu_t^{1+\chi}
 +\frac{\kappa_P}{2}(\pi_t-\bar{\pi})^2\widetilde{y}_t .
-$$
+\]
 
 - **(F24) 劳动市场出清**：
 
-$$
+\[
 h_t=h^B_t+h^G_t .
-$$
+\]
 
 - **(F25) 资本市场出清**：
 
-$$
+\[
 \widetilde{k}_t=\widetilde{k}^B_t+\widetilde{k}^G_t .
-$$
+\]
 
 - **(F26) 绿色债券市场出清**：
 
-$$
+\[
 q_t\widetilde{k}^G_t=\widetilde{b}^G_{Ht}+\widetilde{b}^G_{Ct}.
-$$
+\]
 
 - **(F27) 棕色债券市场出清**（`needs_review`：附录 OCR 漏掉中央银行棕色债券的时间下标）：
 
-$$
+\[
 q_t\widetilde{k}^B_t=\widetilde{b}^B_{Ht}+\widetilde{b}^B_{Ct}.
-$$
+\]
 
 - **(F28) 中央银行资产负债表**（`needs_review`：MinerU 对实际准备金的渲染有歧义）：
 
-$$
+\[
 \widetilde{b}^G_{Ct}+\widetilde{b}^B_{Ct}+\widetilde{d}_{Ct}=\widetilde{re}_t .
-$$
+\]
 
 - **(F29) 碳价格换算**：
 
-$$
+\[
 p^C_t=\frac{s_1s_2}{s_3}\tau_t .
-$$
+\]
 
 - **(F30) 欧元区污染存量**：
 
-$$
+\[
 \widetilde{x}^{ea}_t=(1-\delta^x)\frac{\widetilde{x}^{ea}_{t-1}}{\theta}+\widetilde{e}_t .
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F31) TFP 过程**：
 
-$$
+\[
 \log(a_t)=\log(\bar{a})+\rho_a\log(a_{t-1})+v^a_t .
-$$
+\]
 
 - **政策路径**：论文附录把 \(\tau_t\) 和 \(\widetilde{re}_t\) 作为转型和 Green QE 情景中的外生政策工具，而不是平稳冲击过程。
 - **仅作实现交叉检查**：`NK_FNL23_rep.mod` 增加了 \(a_t\)、投资专用生产率 \(\varepsilon^I_t\)、政府支出 \(G_t\) 以及 Taylor 规则货币政策冲击的随机过程。这些内容有助于检查 MMB 模拟覆盖，但本推导不把它们当作论文侧来源方程。
@@ -327,9 +327,9 @@ $$
 4. 由 Phillips 曲线得到 \(p^I=(\varepsilon-1)/\varepsilon\)。
 5. 给定 \(p^B\)，由下式计算 \(p^G\)：
 
-$$
+\[
 p^G=\left\{\frac{(p^I)^{1-\xi}-\zeta(p^B)^{1-\xi}}{1-\zeta}\right\}^{1/(1-\xi)}.
-$$
+\]
 
 6. 由 (F6) 和 (F7) 确定部门产出，由 (F20)-(F21) 确定污染，由投资产出比和 (F22) 确定投资与总资本，并由 (F13)-(F14) 确定部门资本。
 7. 由 (F9)-(F10) 确定部门劳动，由 (F11) 确定工资，由 \(g/y\) 校准确定政府支出，由 (F23) 确定消费，并由 (F24) 确定总劳动。
@@ -337,17 +337,17 @@ $$
 
 剩余的初始稳态系统为：
 
-$$
+\[
 \widetilde{w}h^B=(1-\alpha)\left[p^B-\tau(1-\mu)\nu_E-\frac{\nu_M}{1+\chi}\mu^{1+\chi}\right]\widetilde{y}^B,
-$$
+\]
 
-$$
+\[
 \widetilde{\lambda}\widetilde{w}=h^\varphi,
-$$
+\]
 
-$$
+\[
 \widetilde{e}=(1-\mu)\nu_E\widetilde{y}^B.
-$$
+\]
 
 最终稳态：
 

@@ -28,24 +28,24 @@
 
 国家 `a` 的代表性最终品企业购买差异化中间品，并选择投入数量，使名义收入减去中间品成本最大：
 
-$$
+\[
 \max_{\{\tilde y_t^a(z):z\in[0,1]\}}
 P_t^{a,a}Y_t^a-\int_0^1 P_t^{a,a}(z)\tilde y_t^a(z)\,dz .
 \tag{F1}
-$$
+\]
 
 CES 聚合器为：
 
-$$
+\[
 Y_t^a=\left(\int_0^1 \tilde y_t^a(z)^{(\theta_{a,t}-1)/\theta_{a,t}}\,dz\right)^{\theta_{a,t}/(\theta_{a,t}-1)} .
 \tag{F2}
-$$
+\]
 
 ### 2.2 中间品企业
 
 中间品企业 `z` 使用私人资本、私人就业、公共资本、公共就业、本地与全球技术以及固定成本进行生产：
 
-$$
+\[
 y_t^a(z)=e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \zeta_a\left(K_t^{G,a}\right)^{\eta^{K^G,a}}
 \left(N_t^{G,a}\right)^{\eta^{N^G,a}}
@@ -53,13 +53,13 @@ y_t^a(z)=e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \left[N_t^{P,a}(z)\right]^{1-\alpha_a}
 -\Omega_a .
 \tag{F3 needs_review}
-$$
+\]
 
 `needs_review`：来源中公共投入生产率乘子附近的 OCR 明显受损。预期结构应为乘法形式，实现交叉检查中使用 `yG_a_t = z_a*kG_a_t^eta_kG_a*nG_a_t^eta_nG_a` 乘以私人生产函数。
 
 价格制定者选择自身价格路径，并受到需求与 Rotemberg 调整成本约束：
 
-$$
+\[
 \max_{\{P_{t+s}^{a,a}(z)\}}
 E_t\sum_{s=0}^{\infty}\beta_a^s
 \frac{\lambda_{o,t+s}^a}{\lambda_{o,t}^a}
@@ -68,11 +68,11 @@ E_t\sum_{s=0}^{\infty}\beta_a^s
 -adj_t^{p,a}Y_{t+s}^a
 \right].
 \tag{F4}
-$$
+\]
 
 Rotemberg 价格调整项为：
 
-$$
+\[
 adj_t^{P,a}
 =\frac{\gamma_a}{2}
 \left(
@@ -82,7 +82,7 @@ adj_t^{P,a}
 \right)^2
 \frac{P_{t+s}^{a,a}}{P_{t+s}^a}.
 \tag{F5 needs_review}
-$$
+\]
 
 `needs_review`：该调整成本方程位于价格制定问题中，同时出现 `t` 与 `t+s`；精确时点需用不可得的 equation summary 检查。
 
@@ -90,7 +90,7 @@ $$
 
 每个地区有优化型家庭（`o`）与 rule-of-thumb 家庭（`r`）。类型 `x` 家庭的效用含外部习惯与劳动参与成本：
 
-$$
+\[
 U(C_{x,t+s}^a,N_{x,t+s}^a)
 =e^{\varepsilon_{t+s}^{\beta_a}}
 \left[
@@ -101,31 +101,31 @@ U(C_{x,t+s}^a,N_{x,t+s}^a)
 d\mathfrak h_x
 \right].
 \tag{F6}
-$$
+\]
 
 国家 `a` 的私人消费聚合器为：
 
-$$
+\[
 C_{x,t}^a=\left[
 (n_a^a)^{1/\eta_a}(C_{x,t}^{a,a})^{(\eta_a-1)/\eta_a}
 +(n_b^a e^{\varepsilon_t^{b,a}})^{1/\eta_a}(C_{x,t}^{a,b})^{(\eta_a-1)/\eta_a}
 +(n_c^a)^{1/\eta_a}(C_{x,t}^{a,c})^{(\eta_a-1)/\eta_a}
 \right]^{\eta_a/(\eta_a-1)} .
 \tag{F7}
-$$
+\]
 
 RoT 家庭消费当期税后劳动收入、失业救济和转移：
 
-$$
+\[
 0=(1+\tau_t^{c,a})C_{r,t}^a
 -(1-\tau_t^{w,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
 -UB^a(L_{r,t}^a-N_t^a)-TR_{r,t}^a .
 \tag{F8}
-$$
+\]
 
 优化型家庭在大型跨期预算约束下选择消费、投资、私人债券、外国债券、政府债券和资本。正文公式有 OCR 损坏，但含义为：
 
-$$
+\[
 0=(1+\tau_t^{c,a})C_{o,t}^a+I_{o,t}^a+B_{o,t}^{a,a}
 +\sum_{j=b,c}S_t^{a,j}B_{o,t}^{a,j}+B_{o,t}^{G,a}+T_{o,t}^a
 -\text{after-tax labor income}
@@ -134,36 +134,36 @@ $$
 -\text{after-tax capital income}
 -D_{o,t}^a .
 \tag{F9 needs_review}
-$$
+\]
 
 优化者持有资本的运动方程为：
 
-$$
+\[
 k_{o,t}^a=(1-\delta_a)k_{o,t-1}^a+
 \left[
 I_{o,t}^a-I_{o,t}^a\frac{\psi_a^i}{2}
 \left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)^2
 \right]e^{\varepsilon_t^{I_a}} .
 \tag{F10}
-$$
+\]
 
 ### 2.4 劳动聚合机构与工会
 
 劳动聚合机构在给定工资支出的约束下选择差异化劳动服务：
 
-$$
+\[
 \max_{\{N_t^{P,a}(\mathfrak h):\mathfrak h\in[0,1]\}}
 N_t^{P,a}
 =\left(\int_0^1(N_t^{P,a}(\mathfrak h))^{(\theta_{a,t}^w-1)/\theta_{a,t}^w}\,d\mathfrak h\right)^{\theta_{a,t}^w/(\theta_{a,t}^w-1)} .
 \tag{F11}
-$$
+\]
 
 论文仅概述工会工资设定问题；详细 FOC 被说明位于 equation summary 中。来源表明工资设定包含两类家庭的 Rotemberg 工资调整与工会谈判。
 
-$$
+\[
 \text{Union chooses } W_t^a(\mathfrak h)\text{ taking labor demand, labor supply, wage adjustment costs, and household weights as constraints.}
 \tag{F12 needs_review}
-$$
+\]
 
 ## 3. 一阶条件
 
@@ -171,31 +171,31 @@ $$
 
 最终品组合商给出对品种 `z` 的需求：
 
-$$
+\[
 \tilde y_t^a(z)=\left(\frac{P_t^{a,a}(z)}{P_t^{a,a}}\right)^{-\theta_{a,t}}Y_t^a .
 \tag{F13}
-$$
+\]
 
 对应的 PPI 聚合器为：
 
-$$
+\[
 P_t^{a,a}=\left(\int_0^1 P_t^{a,a}(z)^{1-\theta_{a,t}}\,dz\right)^{1/(1-\theta_{a,t})}.
 \tag{F14}
-$$
+\]
 
 ### 3.2 企业成本最小化
 
 来源给出国家 `a` 的资本-劳动比条件：
 
-$$
+\[
 \frac{r_{k,t}^a}{w_t^a(1+\tau_t^{sc,a})}
 =\frac{N_t^{P,a}(z)}{K_{t-1}^a(z)}\frac{\alpha_a}{1-\alpha_a}.
 \tag{F15}
-$$
+\]
 
 以 CPI 平减的实际边际成本为：
 
-$$
+\[
 mc_t^a=
 \frac{
 (r_{k,t}^a)^{\alpha_a}
@@ -206,7 +206,7 @@ e^{\varepsilon_t^{A_a}}e^{\varepsilon_t^{A_g}}
 \alpha_a^{\alpha_a}(1-\alpha_a)^{1-\alpha_a}
 }.
 \tag{F16 needs_review}
-$$
+\]
 
 `needs_review`：OCR 损坏影响分母指数和公共投入乘子的位置。该数学关系需对照 equation summary 或 PDF 公式检查。
 
@@ -214,48 +214,48 @@ $$
 
 论文说明优化者关于私人债券、公共债券、物理资本投资和边际效用的欧拉方程被放入附录/equation summary。实现交叉检查显示国家 `a` 的国内私人债券欧拉关系为：
 
-$$
+\[
 \lambda_{o,t}^a\pi_{t+1}^a
 =\beta_a e^{\varepsilon_t^{RP,EA}}(1+i_t^a)\lambda_{o,t+1}^a .
 \tag{F17 implementation_cross_check needs_review}
-$$
+\]
 
 实现交叉检查显示对应的政府债券欧拉方程为：
 
-$$
+\[
 \lambda_{o,t}^a\pi_{t+1}^a
 =\beta_a(1+i_t^{G,a})\lambda_{o,t+1}^a .
 \tag{F18 implementation_cross_check needs_review}
-$$
+\]
 
 优化型与 RoT 消费边际效用由打印出的效用式和实现交叉检查给出：
 
-$$
+\[
 \lambda_{x,t}^a
 =\frac{e^{\varepsilon_t^{\beta_a}}(C_{x,t}^a-h_aC_{x,t-1}^a)^{-\sigma_a}}{1+\tau_t^{c,a}},
 \quad x\in\{o,r\}.
 \tag{F19 implementation_cross_check needs_review}
-$$
+\]
 
 优化者资本回报欧拉方程在实现交叉检查中为：
 
-$$
+\[
 1=\beta_a\frac{\lambda_{o,t+1}^a}{\lambda_{o,t}^a}
 \frac{1+Rk_{t+1}^a}{\pi_{t+1}^a}.
 \tag{F20 implementation_cross_check needs_review}
-$$
+\]
 
 有效资本回报在实现交叉检查中为：
 
-$$
+\[
 Rk_t^a
 =\frac{\pi_t^a\left(q_t^a(1-\delta_a)+(1-\tau_t^{k,a})rk_t^a+\tau_t^{k,a}\delta_a\right)}{q_{t-1}^a}-1 .
 \tag{F21 implementation_cross_check needs_review}
-$$
+\]
 
 投资调整成本隐含的 Tobin's Q 条件在实现交叉检查中为：
 
-$$
+\[
 \begin{aligned}
 1={}&q_t^a\left[1-\frac{\upsilon_a}{2}\left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)^2
 -\upsilon_a\frac{I_{o,t}^a}{I_{o,t-1}^a}\left(\frac{I_{o,t}^a}{I_{o,t-1}^a}-1\right)\right]e^{\varepsilon_t^{I_a}}\\
@@ -264,7 +264,7 @@ $$
 \left(\frac{I_{o,t+1}^a}{I_{o,t}^a}-1\right)e^{\varepsilon_{t+1}^{I_a}} .
 \end{aligned}
 \tag{F22 implementation_cross_check needs_review}
-$$
+\]
 
 `needs_review`：F17-F22 未印在正文中；此处仅记录与现有 MMB 实现的覆盖关系。
 
@@ -272,7 +272,7 @@ $$
 
 来源印出的家庭劳动参与条件为：
 
-$$
+\[
 \lambda_{x,t}^a
 \left[
 (1-\tau_t^{w,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
@@ -281,28 +281,28 @@ $$
 =N_t^a\kappa_a^w e^{\varepsilon_t^{N_a}}(L_{x,t}^a)^{\varphi_a},
 \quad x\in\{o,r\}.
 \tag{F23}
-$$
+\]
 
 劳动聚合机构给出品种劳动需求：
 
-$$
+\[
 N_t^{P,a}(\mathfrak h)
 =\left(\frac{W_t^a(\mathfrak h)}{W_t^a}\right)^{-\theta_{a,t}^w}N_t^{P,a}.
 \tag{F24}
-$$
+\]
 
 论文未印出工资设定 FOC，标记为：
 
-$$
+\[
 \text{Rotemberg union wage FOC linking } \pi_{w,t}^a,\,\lambda_{o,t}^a,\,\lambda_{r,t}^a,\,N_t^{P,a},\,L_{o,t}^a,\,L_{r,t}^a,\text{ and wage-adjustment costs.}
 \tag{F25 needs_review}
-$$
+\]
 
 ### 3.5 价格设定
 
 论文没有完整推导 Rotemberg 价格设定 FOC。实现交叉检查使用：
 
-$$
+\[
 \begin{aligned}
 &(1-\theta_{a,t})+\theta_{a,t}mc_t^a(pr_{aa,t})^{-1}
 +\beta_a\frac{\lambda_{o,t+1}^a}{\lambda_{o,t}}
@@ -316,7 +316,7 @@ $$
 \frac{\pi_{aa,t}}{\pi_{aa,t-1}^{\xi_a^p}\pi_{ss}^{1-\xi_a^p}} .
 \end{aligned}
 \tag{F26 implementation_cross_check needs_review}
-$$
+\]
 
 `needs_review`：精确的来源级价格 Phillips/Rotemberg 方程必须对照 equation summary 核查；上式仅记录可用实现形状。
 
@@ -324,105 +324,105 @@ $$
 
 家庭总量变量由优化者和 RoT 家庭加总：
 
-$$
+\[
 X_t^a=(1-\mu^a)X_{o,t}^a+\mu^aX_{r,t}^a,
 \quad X\in\{C,L\}.
 \tag{F27}
-$$
+\]
 
 对仅属于优化者的存量和流量，来源说明：
 
-$$
+\[
 X_t^a=(1-\mu^a)X_{o,t}^a,
 \quad X\in\{K,I,B^{G}\}.
 \tag{F28}
-$$
+\]
 
 总就业、劳动人口和失业率为：
 
-$$
+\[
 N_t^a=N_t^{P,a}+N_t^{G,a},\qquad
 L_t^a=(1-\mu^a)L_{o,t}^a+\mu^aL_{r,t}^a,\qquad
 UR_t^a=\frac{L_t^a-N_t^a}{L_t^a}.
 \tag{F29}
-$$
+\]
 
 政府债务演化为：
 
-$$
+\[
 B_t^{G,a}=\frac{1+i_{t-1}^{G,a}}{\pi_t^a}B_{t-1}^{G,a}+PD_t^a.
 \tag{F30}
-$$
+\]
 
 政府初级支出为：
 
-$$
+\[
 \begin{aligned}
 G_t^a={}&R_t^{a,a}(C_t^{G,a}+I_t^{G,a})
 +UB^a\left[\mu^a(L_{r,t}^a-N_t^a)+(1-\mu^a)(L_{o,t}^a-N_t^a)\right]\\
 &+(1+\tau_t^{sc,a})N_t^{G,a}w_t^{G,a}+TR_t^a .
 \end{aligned}
 \tag{F31}
-$$
+\]
 
 初级收入为：
 
-$$
+\[
 \begin{aligned}
 Rev_t^a={}&(\tau_t^{w,a}+\tau_t^{sc,a})(w_t^aN_t^{P,a}+w_t^{G,a}N_t^{G,a})
 +\tau_t^{k,a}(r_t^{k,a}-\delta_a)K_{t-1}^a\\
 &+\tau_t^{c,a}C_t^a+T_{o,t}^a .
 \end{aligned}
 \tag{F32}
-$$
+\]
 
 公共资本和公共品生产率为：
 
-$$
+\[
 K_t^{G,a}=(1-\delta_a^G)K_{t-1}^{G,a}+I_t^{G,a},
 \qquad
 yG_t^a=z_a(K_t^{G,a})^{\eta_k^G,a}(N_t^{G,a})^{\eta_n^G,a}.
 \tag{F33 needs_review}
-$$
+\]
 
 两类家庭之间的转移分配为：
 
-$$
+\[
 \bar\mu^a\left(\frac{TR_{o,t}^a}{\overline{TR}_o^a}-1\right)
 =(1-\bar\mu^a)\left(\frac{TR_{r,t}^a}{\overline{TR}_r^a}-1\right).
 \tag{F34}
-$$
+\]
 
 国家 `a` 所生产商品的市场出清为：
 
-$$
+\[
 \begin{aligned}
 Y_t^a={}&C_t^{G,a}+I_t^{G,a}+C_t^{a,a}+I_t^{a,a}
 +\frac{n_b^a}{n_a^b}(C_t^{b,a}+I_t^{b,a})\\
 &+\frac{n_c^a}{n_a^c}(C_t^{c,a}+I_t^{c,a})+ADJ_t^a .
 \end{aligned}
 \tag{F35}
-$$
+\]
 
 国民账户 GDP 将公共就业工资成本加入私人部门产出：
 
-$$
+\[
 GDP_t^a=Y_t^a+\frac{(1+\tau_t^{sc,a})w_t^{G,a}n_t^{G,a}}{R_t^{a,a}}.
 \tag{F36}
-$$
+\]
 
 世界其余地区对国家 `j` 商品的需求近似为：
 
-$$
+\[
 C_t^{c,j}+I_t^{c,j}
 =n_j^cR_t^{c,j}(g^{c,c}+g^{c,i})e^{\varepsilon_t^{c,j}}Y_t^c,
 \quad j\in\{a,b\}.
 \tag{F37}
-$$
+\]
 
 国家 `a` 的净国外资产为：
 
-$$
+\[
 \begin{aligned}
 nfa_t^a={}&rer_t^{a,c}B_t^{a,c}+B_t^a\\
 ={}&(1+i_{t-1}^{a,c})\frac{rer_t^{a,c}B_{t-1}^{a,c}}{\pi_t^c}
@@ -430,11 +430,11 @@ nfa_t^a={}&rer_t^{a,c}B_t^{a,c}+B_t^a\\
 +R_t^{a,a}Y_t^a-C_t^a-I_t^a-C_t^{G,a}-I_t^{G,a}.
 \end{aligned}
 \tag{F38}
-$$
+\]
 
 国家 `b` 的净国外资产类似：
 
-$$
+\[
 \begin{aligned}
 nfa_t^b={}&rer_t^{b,c}B_t^{b,c}+rer_t^{b,a}B_t^{b,a}\\
 ={}&(1+i_{t-1}^{b,c})\frac{rer_t^{b,c}B_{t-1}^{b,c}}{\pi_t^c}
@@ -442,26 +442,26 @@ nfa_t^b={}&rer_t^{b,c}B_t^{b,c}+rer_t^{b,a}B_t^{b,a}\\
 +R_t^{b,b}Y_t^b-C_t^b-I_t^b-C_t^{G,b}-I_t^{G,b}.
 \end{aligned}
 \tag{F39}
-$$
+\]
 
 世界其余地区债券头寸的债券市场出清为：
 
-$$
+\[
 B_t^c=-\left(\frac{\mathcal P^a}{\mathcal P^c}B_t^{a,c}
 +\frac{\mathcal P^b}{\mathcal P^c}B_t^{b,c}\right).
 \tag{F40}
-$$
+\]
 
 相对实际汇率和名义汇率变化满足：
 
-$$
+\[
 rer_t^{c,a}=\frac{1}{rer_t^{a,c}},
 \qquad
 rer_t^{b,c}=\frac{rer_t^{b,a}}{rer_t^{c,a}},
 \qquad
 \Delta S_t^{a,c}=\frac{\pi_t^a(rer_t^{a,c}/rer_{t-1}^{a,c})}{\pi_t^c}.
 \tag{F41 needs_review}
-$$
+\]
 
 `needs_review`：来源行存在重复/畸形的 `rer` 记号，需用 equation summary 检查。
 
@@ -469,24 +469,24 @@ $$
 
 来源描述了 41 个结构冲击。除财政与货币政策冲击外，所有非政策冲击均服从 AR(1) 过程：
 
-$$
+\[
 \varepsilon_t^{X,i}=\rho^X\varepsilon_{t-1}^{X,i}+\nu_t^X,\quad i\in\{a,b\}.
 \tag{F42}
-$$
+\]
 
 加成冲击在变换后的加成中服从 AR(1)：
 
-$$
+\[
 \frac{\theta_{a,t}}{\theta_{a,t}-1}
 =\rho_{\theta_a}\frac{\theta_{a,t-1}}{\theta_{a,t-1}-1}
 +(1-\rho_{\theta_a})\frac{\bar\theta_a}{\bar\theta_a-1}
 +\nu_t^{\theta_a}.
 \tag{F43 needs_review}
-$$
+\]
 
 财政支出工具服从对数规则：
 
-$$
+\[
 \begin{aligned}
 \log\left(\frac{X_t}{\bar X}\right)
 ={}&\rho^{X,a}\log\left(\frac{X_{t-1}}{\bar X}\right)
@@ -495,18 +495,18 @@ $$
 &+\psi^{X,a}\nu_t^{X,a}+(1-\psi^{X,a})\nu_{t-1}^{X,a},
 \end{aligned}
 \tag{F44}
-$$
+\]
 
 其中：
 
-$$
+\[
 X\in\{C^{G,a},I^{G,a},TR^a,w^{G,a}\}.
 \tag{F45}
-$$
+\]
 
 财政收入/就业工具服从水平偏离规则：
 
-$$
+\[
 \begin{aligned}
 X_t-\bar X
 ={}&\rho^{X,a}(X_{t-1}-\bar X)
@@ -515,18 +515,18 @@ X_t-\bar X
 &+\psi^{X,a}\nu_t^{X,a}+(1-\psi^{X,a})\nu_{t-1}^{X,a},
 \end{aligned}
 \tag{F46}
-$$
+\]
 
 其中：
 
-$$
+\[
 X\in\{\tau^{w,a},\tau^{sc,a},\tau^{k,a},T_o^a,N^{G,a}\}.
 \tag{F47 needs_review}
-$$
+\]
 
 货币当局设定一个欧元区政策利率：
 
-$$
+\[
 \begin{aligned}
 \log\left(\frac{1+i_t^{EA}}{1+\bar i^{EA}}\right)
 ={}&\rho_i^a\log\left(\frac{1+i_{t-1}^{EA}}{1+\bar i^{EA}}\right)
@@ -543,20 +543,20 @@ s\log\left(\frac{Y_t^a}{\bar Y^a}\right)
 +\nu_t^{M^{EA}} .
 \end{aligned}
 \tag{F48}
-$$
+\]
 
 政策利率与国家利率之间的关系为：
 
-$$
+\[
 \log\left(\frac{1+i_t^{EA}}{1+\bar i^{EA}}\right)
 =s\log\left(\frac{1+i_t^a}{1+\bar i^a}\right)
 +(1-s)\log\left(\frac{1+i_t^b}{1+\bar i^b}\right).
 \tag{F49}
-$$
+\]
 
 国际风险溢价满足：
 
-$$
+\[
 1+i_t^{i,j}
 =(1+i_t^j)
 \left[
@@ -567,13 +567,13 @@ $$
 \right],
 \quad i\ne j.
 \tag{F50 needs_review}
-$$
+\]
 
 `needs_review`：来源中稳态分母附近存在 OCR 损坏，并且 `Y^j`/`Y^i` 呈现不一致。
 
 世界其余地区 SVAR 为：
 
-$$
+\[
 \begin{pmatrix}
 \hat Y_t^c\\
 \hat\pi_t^c\\
@@ -596,7 +596,7 @@ A
 \nu_t^{A_g}
 \end{pmatrix}.
 \tag{F51}
-$$
+\]
 
 ## 6. 稳态求解
 
@@ -604,32 +604,32 @@ $$
 
 稳态下，政策冲击和非政策创新为零：
 
-$$
+\[
 \nu^X=0,\qquad \varepsilon^X=0 \text{ for stationary AR(1) shocks}.
 \tag{F52 needs_review}
-$$
+\]
 
 资本积累方程给出由投资决定的私人资本：
 
-$$
+\[
 \bar I_o^a=\delta_a\bar k_o^a
 \quad\text{when } \varepsilon^{I_a}=0 \text{ and adjustment costs are zero}.
 \tag{F53 needs_review}
-$$
+\]
 
 公共资本由公共投资决定：
 
-$$
+\[
 \bar I^{G,a}=\delta_a^G\bar K^{G,a}.
 \tag{F54 needs_review}
-$$
+\]
 
 只有当财政规则满足来源所述至少一个债务反馈系数为正时，政府债务才是稳定的：
 
-$$
+\[
 \exists X:\xi^{X,B^{G,a},a}>0 .
 \tag{F55 needs_review}
-$$
+\]
 
 长期相对价格和通胀目标嵌入 CPI/PPI 模块、财政规则和 Taylor 规则。来源中的表 1 和表 2 包含校准参数与目标稳态值，但 OCR Markdown 主要将这些表作为图像保存，因此本条目没有抽取数值稳态校准。
 

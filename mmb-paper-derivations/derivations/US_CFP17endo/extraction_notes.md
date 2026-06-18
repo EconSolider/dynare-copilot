@@ -20,8 +20,8 @@
 
 - Overall formula status: `needs_review`.
 - MinerU Markdown captures the main model equations (1)-(64) and appendix FI value-function equations (A28)-(A40), but some OCR output is visibly noisy.
-- Main issue: equation (47) in the paper-side Markdown has ambiguous typography around `\psi n_t` versus $\psi_n n_t`; the derivation normalizes it to $\psi_n n_t` and marks it `needs_review`.
-- Some variables are notation-dependent across paper and `.mod`: paper $\lambda_t$ appears as implementation `muc`; paper $h_t$ labor maps to implementation `L`; paper $r_t^L` maps to implementation `r2`; paper $q_t^{EH}` maps to implementation `qnat`.
+- Main issue: equation (47) in the paper-side Markdown has ambiguous typography around `\psi n_t` versus \(\psi_n n_t`; the derivation normalizes it to \)\psi_n n_t` and marks it `needs_review`.
+- Some variables are notation-dependent across paper and `.mod`: paper \(\lambda_t\) appears as implementation `muc`; paper \(h_t\) labor maps to implementation `L`; paper \(r_t^L` maps to implementation `r2`; paper \)q_t^{EH}` maps to implementation `qnat`.
 - The PDF body was not opened because the Markdown was sufficient for a first-pass `needs_review` extraction and the task contract says not to read the PDF body by default.
 
 ## Implementation Cross-Check

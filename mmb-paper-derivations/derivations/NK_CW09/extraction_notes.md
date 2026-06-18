@@ -13,8 +13,8 @@
 - Status: `needs_review`.
 - The main Section 1 structural equations are readable enough for a first-pass derivation: household wealth, type Euler equations, aggregate demand, intermediation technology, spread identity, debt dynamics, labor supply, wage bill, and Calvo summary block.
 - Several equations in the Section 2 log-linear block contain OCR damage around hatted interest-rate notation. I normalized these to economically standard notation in the derivation and marked the affected IS relation as `needs_review`.
-- The Calvo functions $\Pi(Z_t)$, $G(\cdot)$, $g(\cdot)$, and $h(\Delta_{t-1},\Pi_t)$ are referenced in the main text as Appendix definitions. They were not expanded in this first pass.
-- The full function $B(Y_t,\lambda_t^b,\lambda_t^s,\Delta_t;\tilde{\xi}_t)$ in the aggregate borrowing law is also delegated to the Appendix and should be checked before runnable implementation.
+- The Calvo functions \(\Pi(Z_t)\), \(G(\cdot)\), \(g(\cdot)\), and \(h(\Delta_{t-1},\Pi_t)\) are referenced in the main text as Appendix definitions. They were not expanded in this first pass.
+- The full function \(B(Y_t,\lambda_t^b,\lambda_t^s,\Delta_t;\tilde{\xi}_t)\) in the aggregate borrowing law is also delegated to the Appendix and should be checked before runnable implementation.
 
 ## Implementation Cross-Check
 
@@ -27,8 +27,8 @@
 ## Deferred Issues
 
 - Check the raw PDF or paper Appendix for the exact definitions of Calvo recursion functions and price-dispersion law if a runnable model is built later.
-- Check Appendix definitions for the aggregate private debt term $B(\cdot)$.
-- Reconcile the paper's notation for technology/productivity $A_t$ with the MMB implementation variable `Z`.
+- Check Appendix definitions for the aggregate private debt term \(B(\cdot)\).
+- Reconcile the paper's notation for technology/productivity \(A_t\) with the MMB implementation variable `Z`.
 - Confirm whether the MMB `K` and `F` variables are Calvo auxiliary recursions rather than physical capital; the model is a consumption/output model without investment capital in the main paper exposition.
 - Steady-state derivation needs a source-level Appendix pass before marking anything above first-pass `needs_review`.
 - Runtime validation, Dynare residual checks, BK checks, and IRF comparison were not performed.

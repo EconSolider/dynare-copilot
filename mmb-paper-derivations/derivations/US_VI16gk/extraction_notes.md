@@ -15,7 +15,7 @@
 - The source Markdown table is usable but OCR-sensitive. I did not invent missing nonlinear optimization problems or a nonlinear steady state; where the paper gives only linearized conditions, the derivation says so.
 - Equations marked `needs_review`:
   - (F16) leverage condition, because Rep-MMB shifts equation 18b one period forward for determinacy while the paper table prints the contemporaneous equation.
-  - (F17) FI balance-sheet constraint, because the paper table uses $K_{t+1}+Q_t$ while Rep-MMB changes capital to a static `k` convention.
+  - (F17) FI balance-sheet constraint, because the paper table uses \(K_{t+1}+Q_t\) while Rep-MMB changes capital to a static `k` convention.
   - (F26)-(F32) shock-process sign conventions, because the Rep-MMB implementation uses negative signs for some innovations while the derivation preserves a paper-side AR(1) convention.
 - The full flexible-price/wage reference block is summarized rather than numbered equation-by-equation. It should be expanded if the later runnable replication requires exact flexible-block equation parity.
 

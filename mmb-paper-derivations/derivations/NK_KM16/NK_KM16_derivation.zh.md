@@ -16,18 +16,18 @@
 
 家庭选择消费、实际货币余额、劳动、一周期名义债券，以及随机长期债券组合：
 
-$$
+\[
 \max_{\{C_t,M_t,N_t,B_t,B_t^L,i_t^L\}} E_0 \sum_{t=0}^{\infty}\beta^t
 \left[
 \frac{C_t^{1-\sigma_c}}{1-\sigma_c}
 + \chi\frac{(M_t/P_t)^{1-\sigma_m}}{1-\sigma_m}
 - \varphi\frac{N_t^{1+\phi}}{1+\phi}
 \right].
-$$
+\]
 
 名义预算约束为：
 
-$$
+\[
 \begin{aligned}
 \frac{B_t}{P_t}+\frac{B_t^{L,n}}{P_t}+\frac{M_t}{P_t}+C_t
 &=(1+i_{t-1})\frac{B_{t-1}}{P_t}
@@ -36,7 +36,7 @@ $$
 &\quad +(1-\tau_t)\frac{W_t}{P_t}N_t
 +\int_0^1\frac{\Pi_t(z)}{P_t}\,dz .
 \end{aligned}
-$$
+\]
 
 家庭还内生化随机长期债券存量和平均利率的运动方程。
 
@@ -44,9 +44,9 @@ $$
 
 每个差异化厂商面对 CES 最终品汇总器给出的需求，并只使用劳动生产：
 
-$$
+\[
 Y_t(z)=A N_t(z).
-$$
+\]
 
 以 Calvo 概率 `theta`，厂商不能重设价格。未重设的价格按实际或感知的通胀目标指数化。能够重设价格的厂商选择 \(P_t^{\ast}(z)\)，在需求和指数化规则约束下最大化预期贴现利润。
 
@@ -58,134 +58,134 @@ $$
 
 - **(F1) 短期债券欧拉方程**：
 
-$$
+\[
 1=E_t\left[\beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}(1+i_t)\right].
-$$
+\]
 
 - **(F2) 长期债券欧拉方程**（`needs_review`：资本损失项附近 OCR 受损）：
 
-$$
+\[
 1=E_t\left[
 \beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}
 \left(1+i_t^{L,n}-\mu_{t+1}(1-\alpha)\Delta i_{t+1}^{L,n}\right)
 \right].
-$$
+\]
 
 - **(F3) 财富边际效用**：
 
-$$
+\[
 \lambda_t=C_t^{-\sigma_c}.
-$$
+\]
 
 - **(F4) 随机债券价格递推式**：
 
-$$
+\[
 \mu_t=E_t\left[
 \beta\frac{\lambda_{t+1}}{\lambda_t}\frac{P_t}{P_{t+1}}
 \left(1+(1-\alpha)\mu_{t+1}\right)
 \right].
-$$
+\]
 
 - **(F5) 货币需求**：
 
-$$
+\[
 \frac{M_t}{P_t}=
 \left[
 \chi C_t^{\sigma_c}\frac{1+i_t}{i_t}
 \right]^{1/\sigma_m}.
-$$
+\]
 
 - **(F6) 劳动供给**：
 
-$$
+\[
 \varphi N_t^{\phi}=C_t^{-\sigma_c}(1-\tau_t)\frac{W_t}{P_t}.
-$$
+\]
 
 - **(F7) 差异化产品需求**：
 
-$$
+\[
 C_t(z)=\left(\frac{P_t(z)}{P_t}\right)^{-\epsilon}C_t.
-$$
+\]
 
 - **(F8) 相对重设价格**：
 
-$$
+\[
 \frac{P_t^{\ast}}{P_t}=\frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}.
-$$
+\]
 
 - **(F9) Calvo 分子递推式**：
 
-$$
+\[
 \mathcal{Z}_{1,t}
 =\lambda_t mc_t C_t
 +\theta\beta E_t\left[
 \left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{-\epsilon}
 \mathcal{Z}_{1,t+1}
 \right].
-$$
+\]
 
 - **(F10) Calvo 分母递推式**：
 
-$$
+\[
 \mathcal{Z}_{2,t}
 =\lambda_t C_t
 +\theta\beta E_t\left[
 \left(\frac{\pi_{t+1}}{\pi_{t+1}^{\ast}}\right)^{1-\epsilon}
 \mathcal{Z}_{2,t+1}
 \right].
-$$
+\]
 
 - **(F11) 实际边际成本**：
 
-$$
+\[
 mc_t=\frac{W_t/P_t}{A}.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F12) 长期债务存量运动方程**：
 
-$$
+\[
 B_t^L=(1-\alpha)B_{t-1}^L+B_t^{L,n}.
-$$
+\]
 
 - **(F13) 存量长期债务平均利率**：
 
-$$
+\[
 i_t^L B_t^L=(1-\alpha)i_{t-1}^L B_{t-1}^L+i_t^{L,n}B_t^{L,n}.
-$$
+\]
 
 - **(F14) 总价格指数**：
 
-$$
+\[
 1=\theta(\pi_t^{\ast})^{1-\epsilon}\pi_t^{-(1-\epsilon)}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{1-\epsilon}.
-$$
+\]
 
 - **(F15) 财政税率规则**：
 
-$$
+\[
 \tau_t-\tau=\rho_{\tau}(\tau_{t-1}-\tau)+\phi_{\tau}\hat{b}_t^L.
-$$
+\]
 
 - **(F16) 实际形式的政府预算约束**：
 
-$$
+\[
 \tau_t w_t N_t+m_t-\frac{m_{t-1}}{\pi_t}+b_t^{L,n}
 =g+(\alpha+i_{t-1}^L)\frac{b_{t-1}^L}{\pi_t}.
-$$
+\]
 
 - **(F17) 实际长期债务运动方程**：
 
-$$
+\[
 b_t^L=(1-\alpha)\frac{b_{t-1}^L}{\pi_t}+b_t^{L,n}.
-$$
+\]
 
 - **(F18) 带时变通胀目标的 Taylor 规则**：
 
-$$
+\[
 i_t=\rho_i i_{t-1}
 +(1-\rho_i)\left[
 i+\hat{\pi}_t^{\ast}
@@ -193,65 +193,65 @@ i+\hat{\pi}_t^{\ast}
 +\phi_y(\hat{Y}_t-\hat{Y}_t^n)
 \right]
 +\eta_t.
-$$
+\]
 
 - **(F19) 总需求**：
 
-$$
+\[
 Y_t=C_t+g.
-$$
+\]
 
 - **(F20) 劳动市场/含价格分散的生产汇总**：
 
-$$
+\[
 \Delta_{p,t}Y_t=A N_t.
-$$
+\]
 
 - **(F21) 价格分散运动方程**：
 
-$$
+\[
 \Delta_{p,t}
 =\theta\Delta_{p,t-1}\left(\frac{\pi_t}{\pi_t^{\ast}}\right)^{\epsilon}
 +(1-\theta)\left(
 \frac{\epsilon}{\epsilon-1}\frac{\mathcal{Z}_{1,t}}{\mathcal{Z}_{2,t}}
 \right)^{-\epsilon}.
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F22) 通胀目标过程**：
 
-$$
+\[
 \hat{\pi}_t^{\ast}=\rho_{\pi}\hat{\pi}_{t-1}^{\ast}+\eta_t^{\pi}.
-$$
+\]
 
 - **(F23) 不完全信息下的货币政策信号**：
 
-$$
+\[
 \varepsilon_t^{\pi}\equiv(1-\rho_i)(1-\phi_{\pi})\hat{\pi}_t^{\ast}+\eta_t.
-$$
+\]
 
 - **(F24) 感知通胀目标更新**（`needs_review`：OCR 可读，但周边状态空间记号被压缩）：
 
-$$
+\[
 \tilde{E}_t\hat{\pi}_t^{\ast}
 =\tilde{E}_{t-1}\hat{\pi}_t^{\ast}
 +\frac{k}{\rho_{\pi}}
 \left(\varepsilon_t^{\pi}-\tilde{E}_{t-1}\varepsilon_t^{\pi}\right).
-$$
+\]
 
 - **(F25) 感知货币政策冲击**：
 
-$$
+\[
 \tilde{E}_t\eta_t
 =\varepsilon_t^{\pi}
 -(1-\rho_i)(1-\phi_{\pi})
 \tilde{E}_{t-1}\hat{\pi}_t^{\ast}.
-$$
+\]
 
 - **(F26) Kalman 滤波下的预测**：
 
-$$
+\[
 \begin{bmatrix}
 \tilde{E}_t\hat{\pi}_{t+i}^{\ast}\\
 \tilde{E}_t\eta_{t+i}
@@ -265,7 +265,7 @@ $$
 \tilde{E}_t\hat{\pi}_{t}^{\ast}\\
 \tilde{E}_t\eta_t
 \end{bmatrix}.
-$$
+\]
 
 论文还研究了带偏好冲击的零利率下限扩展，但该扩展不是基准 `NK_KM16` 档案抽取的一部分。
 

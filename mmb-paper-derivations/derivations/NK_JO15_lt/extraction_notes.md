@@ -17,7 +17,7 @@
 - MinerU OCR issues observed:
   - Some equation numbers appear malformed, e.g. `(2 7)`, `(2 8)`, `(3 0)`.
   - Several inline array renderings include duplicated or stray fragments.
-  - The source rendering of the CPI-inflation equations appears to include extra $r_t$ and $r_t^*$ terms. The appendix Dynare code and local implementation cross-check omit these terms.
+  - The source rendering of the CPI-inflation equations appears to include extra \(r_t\) and \(r_t^*\) terms. The appendix Dynare code and local implementation cross-check omit these terms.
   - The compact Phillips curve in the text uses a simplified coefficient presentation. The local `.mod` uses separate coefficients on domestic and foreign output gaps, consistent with substituting marginal-cost equations into the PPI Phillips curves.
 
 ## Implementation Cross-Check

@@ -24,7 +24,7 @@
 ## Deferred Issues
 
 - Recover or normalize online Appendices A-D and F before upgrading this entry from `needs_review`.
-- PDF-check the exact appendix definitions of $\alpha_1$, $\alpha_2$, $\delta_1$, $\xi_{1,t}$, $\xi_{2,t}$, $\xi_{3,t}$, and $\bar{\kappa}$.
+- PDF-check the exact appendix definitions of \(\alpha_1\), \(\alpha_2\), \(\delta_1\), \(\xi_{1,t}\), \(\xi_{2,t}\), \(\xi_{3,t}\), and \(\bar{\kappa}\).
 - PDF-check or appendix-check the Calvo reset-price recursion corresponding to `thet1_t` and `thet2_t`.
 - Decide whether implementation shocks to monitoring cost and idiosyncratic-risk dispersion should be documented as benchmark paper-side shocks or MMB implementation extensions.
 - Runtime validation, Dynare equation count, steady-state residuals, BK checks, and IRF checks were not performed.

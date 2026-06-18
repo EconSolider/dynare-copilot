@@ -22,17 +22,17 @@
 
 与论文一致的 Model 2 家庭问题可紧凑写为：
 
-$$
+\[
 \max_{\{C_t,M_t,B_t,N_t\}} E_0\sum_{t=0}^{\infty}\beta^t
 U(C_t,M_t/P_t,N_t;\varepsilon_t^p,\varepsilon_t^m)
-$$
+\]
 
 约束为包含消费、实际货币余额、一期间名义债券、劳动收入、利润和转移的名义预算约束：
 
-$$
+\[
 P_t C_t + M_t + Q_t B_t
 \le B_{t-1}+M_{t-1}+W_tN_t+\Pi_t^{div}-T_t.
-$$
+\]
 
 Markdown 中没有 Online Appendix 的精确效用聚合器，故为 `needs_review`。MMB 实现交叉检查显示，约化 IS 曲线和货币需求关系中，预期产出增长、名义利率缺口和货币冲击会影响实际货币余额。
 
@@ -52,62 +52,62 @@ Markdown 中没有 Online Appendix 的精确效用聚合器，故为 `needs_revi
 
 **(F1) 弹性价格产出**
 
-$$
+\[
 y_t^f =
 \frac{1+\eta}{D}a_t
 + \frac{(1-\alpha)(\nu-\sigma)(1-a_1)}{D}mp_t^f
 - \frac{(1-\alpha)\log\left(\frac{\varepsilon}{\varepsilon-1}\right)}{D}
 + \frac{(1-\alpha)(\nu-\sigma)(1-a_1)}{(1-\nu)D}e_t^m,
-$$
+\]
 
 其中
 
-$$
+\[
 D=\bigl(\nu-(\nu-\sigma)a_1\bigr)(1-\alpha)+\eta+\alpha.
-$$
+\]
 
 该公式依据 Markdown 中关于货币冲击系数的讨论以及 MMB 实现中的约化弹性价格模块；系数仍需来源级复核。
 
 **(F2) 弹性价格实际货币余额**
 
-$$
+\[
 mp_t^f =
 -\frac{a_2\bigl(\nu-(\nu-\sigma)a_1\bigr)}{\nu}E_t[y_{t+1}^f]
 + \left(1+\frac{a_2\bigl(\nu-(\nu-\sigma)a_1\bigr)}{\nu}\right)y_t^f
 + \frac{1}{\nu}e_t^m.
-$$
+\]
 
 **(F3) 新凯恩斯 Phillips 曲线**
 
-$$
+\[
 \pi_t=\beta E_t[\pi_{t+1}]
 + \kappa_y(y_t-y_t^f)
 + \kappa_m(mp_t-mp_t^f).
-$$
+\]
 
 实现交叉检查把斜率展开为 `\alpha`、`\theta`、`\beta`、`\nu`、`\sigma`、`a_1`、`\eta` 和加成冲击 `e_t^p` 的函数；这些分母项需对照 Online Appendix 复核，状态为 `needs_review`。
 
 **(F4) 动态 IS 曲线**
 
-$$
+\[
 y_t=E_t[y_{t+1}]
 -\frac{1}{\nu-a_1(\nu-\sigma)}(r_t-\bar r-E_t[\pi_{t+1}])
 +\frac{(\sigma-\nu)(1-a_1)}{\nu-a_1(\nu-\sigma)}E_t[mp_{t+1}-mp_t]
 -\frac{(1-a_1)(\nu-\sigma)}{(1-\nu)(\nu-a_1(\nu-\sigma))}E_t[e_{t+1}^m-e_t^m].
-$$
+\]
 
 **(F5) 实际货币需求**
 
-$$
+\[
 mp_t=y_t-\frac{a_2}{\nu}(r_t-\bar r)+\frac{1}{\nu}e_t^m.
-$$
+\]
 
 **(F6) 平滑 Taylor 规则**
 
-$$
+\[
 r_t-\bar r=(1-\lambda_i)\left[\lambda_\pi(\pi_t-\bar\pi)+\lambda_x(y_t-y_t^f)+\lambda_{mp}(mp_t-mp_t^f)\right]
 +\lambda_i(r_{t-1}-\bar r)+e_t^i.
-$$
+\]
 
 来源文字说明 Model 2 在政策规则中包含货币。实现交叉检查中货币项被注释掉，因此精确 MMB 规则变体为 `needs_review`。
 
@@ -115,9 +115,9 @@ $$
 
 **(F7) 产出缺口恒等式**
 
-$$
+\[
 ygap_t=y_t-y_t^f.
-$$
+\]
 
 文章 Markdown 未单独报告总资源约束；约化对数线性系统把商品市场出清嵌入 IS 方程和弹性产出方程。这是第一轮限制，仍为 `needs_review`。
 
@@ -127,55 +127,55 @@ $$
 
 **(F8) 技术冲击**
 
-$$
+\[
 a_t=\rho_a a_{t-1}+\varepsilon_t^a.
-$$
+\]
 
 **(F9) 加成冲击**
 
-$$
+\[
 e_t^p=\rho_p e_{t-1}^p+\varepsilon_t^p.
-$$
+\]
 
 **(F10) 货币政策冲击**
 
-$$
+\[
 e_t^i=\rho_i e_{t-1}^i+\varepsilon_t^i.
-$$
+\]
 
 **(F11) 货币冲击**
 
-$$
+\[
 e_t^m=\rho_m e_{t-1}^m+\varepsilon_t^m.
-$$
+\]
 
 ## 6. 稳态求解
 
 由于实现模型是对数线性的，扣除确定性均值或趋势后的稳态偏离为零：
 
-$$
+\[
 \bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^{\ast}=\bar r-r^{\ast}=\overline{ygap}=0.
-$$
+\]
 
 实现交叉检查单独设置平稳常数：
 
-$$
+\[
 \bar\pi=pb,\qquad \bar y=yb,\qquad \overline{mp}=mpb,\qquad \bar r=rb.
-$$
+\]
 
 观察到的 MMB 有效校准为：
 
-$$
+\[
 pb=0.92,\qquad yb=0,\qquad mpb=0,\qquad rb=0.
-$$
+\]
 
 实现中观察到的结构系数定义为：
 
-$$
+\[
 a_1=\frac{1}{1+\left(\frac{b}{1-b}\right)^{1-\nu}\left(\frac{1}{1-\exp(-1/\beta)}\right)^{(1-\nu)/\nu}},
 \qquad
 a_2=\frac{1}{\exp(1/\beta)-1}.
-$$
+\]
 
 上述指数定义在提升到 `needs_review` 以上状态前应对照论文/Online Appendix 检查。
 
@@ -192,32 +192,32 @@ $$
 
 | 类别 | 符号 / ASCII | 含义 | 由哪条方程决定 |
 |---|---|---|---|
-| 内生变量 | `y`, $y_t$ | 产出缺口/去趋势产出 | (F4) |
-| 内生变量 | `pi`, $\pi_t$ | 通胀 | (F3) |
-| 内生变量 | `r`, $r_t$ | 偏离形式的短期名义利率 | (F6) |
-| 内生变量 | `mp`, $mp_t$ | 实际货币余额 | (F5) |
-| 内生变量 | `yf`, $y_t^f$ | 弹性价格产出 | (F1) |
-| 内生变量 | `mpf`, $mp_t^f$ | 弹性价格实际货币余额 | (F2) |
-| 内生变量 | `ygap`, $ygap_t$ | 相对弹性价格产出的产出缺口 | (F7) |
-| 内生冲击状态 | `at`, $a_t$ | 技术状态 | (F8) |
-| 内生冲击状态 | `ep`, $e_t^p$ | 加成/偏好状态 | (F9) |
-| 内生冲击状态 | `ei`, $e_t^i$ | 货币政策冲击状态 | (F10) |
-| 内生冲击状态 | `em`, $e_t^m$ | 货币冲击状态 | (F11) |
-| 外生创新 | `ua`, $\varepsilon_t^a$ | 技术创新 | -- |
-| 外生创新 | `up`, $\varepsilon_t^p$ | 加成/偏好创新 | -- |
-| 外生创新 | `ui`, $\varepsilon_t^i$ | 货币政策创新 | -- |
-| 外生创新 | `um`, $\varepsilon_t^m$ | 货币创新 | -- |
-| 参数 | `alpha`, $\alpha$ | 生产中的劳动份额 | -- |
-| 参数 | `beta`, $\beta$ | 贴现因子 | -- |
-| 参数 | `teta`, $\theta$ | Calvo 不重设价格概率 | -- |
-| 参数 | `vega`, $\nu$ | 消费与实际货币余额之间替代弹性的倒数 | -- |
-| 参数 | `sigma`, $\sigma$ | 风险厌恶/跨期替代弹性倒数 | -- |
+| 内生变量 | `y`, \(y_t\) | 产出缺口/去趋势产出 | (F4) |
+| 内生变量 | `pi`, \(\pi_t\) | 通胀 | (F3) |
+| 内生变量 | `r`, \(r_t\) | 偏离形式的短期名义利率 | (F6) |
+| 内生变量 | `mp`, \(mp_t\) | 实际货币余额 | (F5) |
+| 内生变量 | `yf`, \(y_t^f\) | 弹性价格产出 | (F1) |
+| 内生变量 | `mpf`, \(mp_t^f\) | 弹性价格实际货币余额 | (F2) |
+| 内生变量 | `ygap`, \(ygap_t\) | 相对弹性价格产出的产出缺口 | (F7) |
+| 内生冲击状态 | `at`, \(a_t\) | 技术状态 | (F8) |
+| 内生冲击状态 | `ep`, \(e_t^p\) | 加成/偏好状态 | (F9) |
+| 内生冲击状态 | `ei`, \(e_t^i\) | 货币政策冲击状态 | (F10) |
+| 内生冲击状态 | `em`, \(e_t^m\) | 货币冲击状态 | (F11) |
+| 外生创新 | `ua`, \(\varepsilon_t^a\) | 技术创新 | -- |
+| 外生创新 | `up`, \(\varepsilon_t^p\) | 加成/偏好创新 | -- |
+| 外生创新 | `ui`, \(\varepsilon_t^i\) | 货币政策创新 | -- |
+| 外生创新 | `um`, \(\varepsilon_t^m\) | 货币创新 | -- |
+| 参数 | `alpha`, \(\alpha\) | 生产中的劳动份额 | -- |
+| 参数 | `beta`, \(\beta\) | 贴现因子 | -- |
+| 参数 | `teta`, \(\theta\) | Calvo 不重设价格概率 | -- |
+| 参数 | `vega`, \(\nu\) | 消费与实际货币余额之间替代弹性的倒数 | -- |
+| 参数 | `sigma`, \(\sigma\) | 风险厌恶/跨期替代弹性倒数 | -- |
 | 参数 | `b` | 实际货币余额在效用中的相对权重 | -- |
-| 参数 | `neta`, $\eta$ | Frisch 弹性倒数 | -- |
-| 参数 | `epsilon`, $\varepsilon$ | 产品间替代弹性 | -- |
-| 参数 | `li1`, $\lambda_i$ | 利率平滑 | -- |
-| 参数 | `li2`, $\lambda_\pi$ | 通胀反应 | -- |
-| 参数 | `li3`, $\lambda_x$ | 产出缺口反应 | -- |
-| 参数 | `li4`, $\lambda_{mp}$ | 货币缺口反应 | -- |
+| 参数 | `neta`, \(\eta\) | Frisch 弹性倒数 | -- |
+| 参数 | `epsilon`, \(\varepsilon\) | 产品间替代弹性 | -- |
+| 参数 | `li1`, \(\lambda_i\) | 利率平滑 | -- |
+| 参数 | `li2`, \(\lambda_\pi\) | 通胀反应 | -- |
+| 参数 | `li3`, \(\lambda_x\) | 产出缺口反应 | -- |
+| 参数 | `li4`, \(\lambda_{mp}\) | 货币缺口反应 | -- |
 | 参数 | `rhoa`, `rhop`, `rhoi`, `rhom` | 冲击持久性参数 | -- |
 | 参数 | `pb`, `yb`, `mpb`, `rb` | 线性模型常数/平稳值 | -- |

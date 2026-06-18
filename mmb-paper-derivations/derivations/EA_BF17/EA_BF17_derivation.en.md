@@ -22,17 +22,17 @@ The source describes two household preference cases. Model 1 omits money from ut
 
 A compact paper-consistent representation for the Model 2 household problem is:
 
-$$
+\[
 \max_{\{C_t,M_t,B_t,N_t\}} E_0\sum_{t=0}^{\infty}\beta^t
 U(C_t,M_t/P_t,N_t;\varepsilon_t^p,\varepsilon_t^m)
-$$
+\]
 
 subject to a nominal budget constraint with consumption, real money balances, one-period nominal bonds, labor income, profits, and transfers:
 
-$$
+\[
 P_t C_t + M_t + Q_t B_t
 \le B_{t-1}+M_{t-1}+W_tN_t+\Pi_t^{div}-T_t.
-$$
+\]
 
 The exact Online Appendix utility aggregator is not in the Markdown and is `needs_review`. The MMB implementation cross-check implies a reduced IS curve and a money-demand relation in which expected output growth, the nominal interest-rate gap, and a money shock affect real money balances.
 
@@ -52,62 +52,62 @@ The archived system is the nonseparable Model 2 reduced form. Equations are writ
 
 **(F1) Flexible-price output**
 
-$$
+\[
 y_t^f =
 \frac{1+\eta}{D}a_t
 + \frac{(1-\alpha)(\nu-\sigma)(1-a_1)}{D}mp_t^f
 - \frac{(1-\alpha)\log\left(\frac{\varepsilon}{\varepsilon-1}\right)}{D}
 + \frac{(1-\alpha)(\nu-\sigma)(1-a_1)}{(1-\nu)D}e_t^m,
-$$
+\]
 
 where
 
-$$
+\[
 D=\bigl(\nu-(\nu-\sigma)a_1\bigr)(1-\alpha)+\eta+\alpha.
-$$
+\]
 
 The formula follows the reduced flexible-price block indicated by the Markdown's money-shock coefficient discussion and the MMB implementation; source-level coefficient review is required.
 
 **(F2) Flexible-price real money balances**
 
-$$
+\[
 mp_t^f =
 -\frac{a_2\bigl(\nu-(\nu-\sigma)a_1\bigr)}{\nu}E_t[y_{t+1}^f]
 + \left(1+\frac{a_2\bigl(\nu-(\nu-\sigma)a_1\bigr)}{\nu}\right)y_t^f
 + \frac{1}{\nu}e_t^m.
-$$
+\]
 
 **(F3) New Keynesian Phillips curve**
 
-$$
+\[
 \pi_t=\beta E_t[\pi_{t+1}]
 + \kappa_y(y_t-y_t^f)
 + \kappa_m(mp_t-mp_t^f).
-$$
+\]
 
 The implementation cross-check expands the slopes as functions of `\alpha`, `\theta`, `\beta`, `\nu`, `\sigma`, `a_1`, `\eta`, and the markup shock `e_t^p`; these denominator terms are `needs_review` against the Online Appendix.
 
 **(F4) Dynamic IS curve**
 
-$$
+\[
 y_t=E_t[y_{t+1}]
 -\frac{1}{\nu-a_1(\nu-\sigma)}(r_t-\bar r-E_t[\pi_{t+1}])
 +\frac{(\sigma-\nu)(1-a_1)}{\nu-a_1(\nu-\sigma)}E_t[mp_{t+1}-mp_t]
 -\frac{(1-a_1)(\nu-\sigma)}{(1-\nu)(\nu-a_1(\nu-\sigma))}E_t[e_{t+1}^m-e_t^m].
-$$
+\]
 
 **(F5) Real money demand**
 
-$$
+\[
 mp_t=y_t-\frac{a_2}{\nu}(r_t-\bar r)+\frac{1}{\nu}e_t^m.
-$$
+\]
 
 **(F6) Smoothed Taylor rule**
 
-$$
+\[
 r_t-\bar r=(1-\lambda_i)\left[\lambda_\pi(\pi_t-\bar\pi)+\lambda_x(y_t-y_t^f)+\lambda_{mp}(mp_t-mp_t^f)\right]
 +\lambda_i(r_{t-1}-\bar r)+e_t^i.
-$$
+\]
 
 The source text states that Model 2 includes money in the policy rule. The implementation cross-check comments out the money term, so the exact MMB rule variant is `needs_review`.
 
@@ -115,9 +115,9 @@ The source text states that Model 2 includes money in the policy rule. The imple
 
 **(F7) Output gap identity**
 
-$$
+\[
 ygap_t=y_t-y_t^f.
-$$
+\]
 
 The aggregate resource constraint is not separately reported in the article's Markdown; the reduced log-linear system embeds goods-market clearing in the IS and flexible-output equations. This is a first-pass limitation and remains `needs_review`.
 
@@ -127,55 +127,55 @@ The source identifies markup, technology, monetary-policy, and money shocks. The
 
 **(F8) Technology shock**
 
-$$
+\[
 a_t=\rho_a a_{t-1}+\varepsilon_t^a.
-$$
+\]
 
 **(F9) Markup shock**
 
-$$
+\[
 e_t^p=\rho_p e_{t-1}^p+\varepsilon_t^p.
-$$
+\]
 
 **(F10) Monetary policy shock**
 
-$$
+\[
 e_t^i=\rho_i e_{t-1}^i+\varepsilon_t^i.
-$$
+\]
 
 **(F11) Money shock**
 
-$$
+\[
 e_t^m=\rho_m e_{t-1}^m+\varepsilon_t^m.
-$$
+\]
 
 ## 6. Steady-State Solution
 
 Because the implemented model is log-linear, steady-state deviations are zero after subtracting deterministic means or trends:
 
-$$
+\[
 \bar y=\bar y^f=\overline{mp}=\overline{mp^f}=\bar\pi-\pi^{\ast}=\bar r-r^{\ast}=\overline{ygap}=0.
-$$
+\]
 
 The implementation cross-check sets stationary constants separately:
 
-$$
+\[
 \bar\pi=pb,\qquad \bar y=yb,\qquad \overline{mp}=mpb,\qquad \bar r=rb.
-$$
+\]
 
 For the active MMB calibration observed in the cross-check:
 
-$$
+\[
 pb=0.92,\qquad yb=0,\qquad mpb=0,\qquad rb=0.
-$$
+\]
 
 Structural coefficient definitions observed in the implementation are:
 
-$$
+\[
 a_1=\frac{1}{1+\left(\frac{b}{1-b}\right)^{1-\nu}\left(\frac{1}{1-\exp(-1/\beta)}\right)^{(1-\nu)/\nu}},
 \qquad
 a_2=\frac{1}{\exp(1/\beta)-1}.
-$$
+\]
 
 The exponential definitions above should be checked against the paper/Online Appendix before moving beyond `needs_review`.
 
@@ -192,32 +192,32 @@ The exponential definitions above should be checked against the paper/Online App
 
 | Category | Symbol / ASCII | Meaning | Determined by |
 |---|---|---|---|
-| Endogenous | `y`, $y_t$ | Output gap/detrended output | (F4) |
-| Endogenous | `pi`, $\pi_t$ | Inflation | (F3) |
-| Endogenous | `r`, $r_t$ | Short-term nominal interest rate in deviation form | (F6) |
-| Endogenous | `mp`, $mp_t$ | Real money balances | (F5) |
-| Endogenous | `yf`, $y_t^f$ | Flexible-price output | (F1) |
-| Endogenous | `mpf`, $mp_t^f$ | Flexible-price real money balances | (F2) |
-| Endogenous | `ygap`, $ygap_t$ | Output gap relative to flexible-price output | (F7) |
-| Endogenous shock state | `at`, $a_t$ | Technology state | (F8) |
-| Endogenous shock state | `ep`, $e_t^p$ | Markup/preference state | (F9) |
-| Endogenous shock state | `ei`, $e_t^i$ | Monetary policy shock state | (F10) |
-| Endogenous shock state | `em`, $e_t^m$ | Money shock state | (F11) |
-| Exogenous innovation | `ua`, $\varepsilon_t^a$ | Technology innovation | -- |
-| Exogenous innovation | `up`, $\varepsilon_t^p$ | Markup/preference innovation | -- |
-| Exogenous innovation | `ui`, $\varepsilon_t^i$ | Monetary policy innovation | -- |
-| Exogenous innovation | `um`, $\varepsilon_t^m$ | Money innovation | -- |
-| Parameter | `alpha`, $\alpha$ | Labor share in production | -- |
-| Parameter | `beta`, $\beta$ | Discount factor | -- |
-| Parameter | `teta`, $\theta$ | Calvo no-reset probability | -- |
-| Parameter | `vega`, $\nu$ | Inverse substitution between consumption and real money balances | -- |
-| Parameter | `sigma`, $\sigma$ | Risk aversion / inverse intertemporal elasticity | -- |
+| Endogenous | `y`, \(y_t\) | Output gap/detrended output | (F4) |
+| Endogenous | `pi`, \(\pi_t\) | Inflation | (F3) |
+| Endogenous | `r`, \(r_t\) | Short-term nominal interest rate in deviation form | (F6) |
+| Endogenous | `mp`, \(mp_t\) | Real money balances | (F5) |
+| Endogenous | `yf`, \(y_t^f\) | Flexible-price output | (F1) |
+| Endogenous | `mpf`, \(mp_t^f\) | Flexible-price real money balances | (F2) |
+| Endogenous | `ygap`, \(ygap_t\) | Output gap relative to flexible-price output | (F7) |
+| Endogenous shock state | `at`, \(a_t\) | Technology state | (F8) |
+| Endogenous shock state | `ep`, \(e_t^p\) | Markup/preference state | (F9) |
+| Endogenous shock state | `ei`, \(e_t^i\) | Monetary policy shock state | (F10) |
+| Endogenous shock state | `em`, \(e_t^m\) | Money shock state | (F11) |
+| Exogenous innovation | `ua`, \(\varepsilon_t^a\) | Technology innovation | -- |
+| Exogenous innovation | `up`, \(\varepsilon_t^p\) | Markup/preference innovation | -- |
+| Exogenous innovation | `ui`, \(\varepsilon_t^i\) | Monetary policy innovation | -- |
+| Exogenous innovation | `um`, \(\varepsilon_t^m\) | Money innovation | -- |
+| Parameter | `alpha`, \(\alpha\) | Labor share in production | -- |
+| Parameter | `beta`, \(\beta\) | Discount factor | -- |
+| Parameter | `teta`, \(\theta\) | Calvo no-reset probability | -- |
+| Parameter | `vega`, \(\nu\) | Inverse substitution between consumption and real money balances | -- |
+| Parameter | `sigma`, \(\sigma\) | Risk aversion / inverse intertemporal elasticity | -- |
 | Parameter | `b` | Relative weight of real money balances in utility | -- |
-| Parameter | `neta`, $\eta$ | Inverse Frisch elasticity | -- |
-| Parameter | `epsilon`, $\varepsilon$ | Elasticity of substitution across goods | -- |
-| Parameter | `li1`, $\lambda_i$ | Interest-rate smoothing | -- |
-| Parameter | `li2`, $\lambda_\pi$ | Inflation response | -- |
-| Parameter | `li3`, $\lambda_x$ | Output-gap response | -- |
-| Parameter | `li4`, $\lambda_{mp}$ | Money-gap response | -- |
+| Parameter | `neta`, \(\eta\) | Inverse Frisch elasticity | -- |
+| Parameter | `epsilon`, \(\varepsilon\) | Elasticity of substitution across goods | -- |
+| Parameter | `li1`, \(\lambda_i\) | Interest-rate smoothing | -- |
+| Parameter | `li2`, \(\lambda_\pi\) | Inflation response | -- |
+| Parameter | `li3`, \(\lambda_x\) | Output-gap response | -- |
+| Parameter | `li4`, \(\lambda_{mp}\) | Money-gap response | -- |
 | Parameter | `rhoa`, `rhop`, `rhoi`, `rhom` | Shock persistence parameters | -- |
 | Parameter | `pb`, `yb`, `mpb`, `rb` | Linear-model constants / stationary values | -- |

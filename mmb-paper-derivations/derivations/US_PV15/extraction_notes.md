@@ -14,12 +14,12 @@
 - Status is `needs_review`, as required for first-pass extraction.
 - The main equation source is Appendix B.1-B.2 in the MinerU Markdown. Equations B.1-B.34 and B.35-B.53 are available, but several passages contain OCR artifacts.
 - Marked uncertain formulas:
-  - `F12` and `F13`: price markup / auxiliary term around $\Psi_t$ has noisy OCR and likely needs source-level PDF review.
-  - `F19`: source notation around external finance premium mixes the elasticity symbols $\chi$ and $\varkappa$ in nearby text and equations.
+  - `F12` and `F13`: price markup / auxiliary term around \(\Psi_t\) has noisy OCR and likely needs source-level PDF review.
+  - `F19`: source notation around external finance premium mixes the elasticity symbols \(\chi\) and \(\varkappa\) in nearby text and equations.
   - `F23`: nominal lending-rate FOC has a long adjustment-cost derivative expression; first pass keeps the paper-side structure but should be checked against the PDF.
-  - `F26`: source equation begins with $\varepsilon_t^I q_t`, while implementation cross-check uses `exp(s_i)*q`; likely OCR/notation issue.
-  - `F29`: Taylor rule source uses both $\rho$ and $\rho_R`; implementation uses one smoothing parameter.
-  - `F36`: Appendix B uses $n_{jt}$ notation while the model text and implementation use the aggregate number of firms.
+  - `F26`: source equation begins with \(\varepsilon_t^I q_t\), while implementation cross-check uses `exp(s_i)*q`; likely OCR/notation issue.
+  - `F29`: Taylor rule source uses both \(\rho\) and \(\rho_R\); implementation uses one smoothing parameter.
+  - `F36`: Appendix B uses \(n_{jt}\) notation while the model text and implementation use the aggregate number of firms.
 - The steady-state value sentence at the end of Appendix B.2.3 is visibly corrupted/repeated in MinerU output; the value list is preserved only as approximate and remains `needs_review`.
 
 ## Implementation Cross-Check

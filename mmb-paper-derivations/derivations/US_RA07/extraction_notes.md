@@ -27,7 +27,7 @@
 ## Deferred Issues
 
 - Source-level PDF review should check the nonlinear working-capital wage-bill expression and the utilization-cost notation.
-- Review the paper's use of $\gamma$ as the fraction/elasticity of firms affected by the cost channel against any implementation comments before promotion beyond `needs_review`.
+- Review the paper's use of \(\gamma\) as the fraction/elasticity of firms affected by the cost channel against any implementation comments before promotion beyond `needs_review`.
 - Review the exact fixed values versus estimated posterior baseline values before any runtime validation; the MMB implementation has figure-specific parameter blocks.
 - Confirm whether the resource constraint's utilization term should be retained exactly as in the paper's log-linear equation or transformed if a nonlinear runnable model is later built.
 - Runtime validation, residual checks, BK checks, and IRF checks were not performed.

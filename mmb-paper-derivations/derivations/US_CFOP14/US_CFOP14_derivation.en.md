@@ -16,81 +16,81 @@ Provenance: `US_CFOP14`, Carlstrom, Charles T.; Fuerst, Timothy S.; Ortiz, Alber
 
 ### 2.1 Lender
 
-The representative lender accepts household deposits paying the risk-free real return $R_t^d$ and extends one-period loans to entrepreneurs. Dividends equal the realized spread on the loan portfolio times deposits. The equity value is
+The representative lender accepts household deposits paying the risk-free real return \(R_t^d\) and extends one-period loans to entrepreneurs. Dividends equal the realized spread on the loan portfolio times deposits. The equity value is
 
-$$
+\[
 Q_t^L = E_t \sum_{j=1}^{\infty}\frac{\beta^j\Lambda_{t+j}}{\Lambda_t}\,\mathrm{Div}_{t+j}.
-$$
+\]
 
 ### 2.2 Entrepreneur And Contract
 
-Entrepreneurs purchase the aggregate capital stock at the end of period $t$ using net worth and credit:
+Entrepreneurs purchase the aggregate capital stock at the end of period \(t\) using net worth and credit:
 
-$$
+\[
 \mathrm{Credit}_t \equiv Q_t\overline{K}_t - NW_t,
 \qquad
 \bar{\kappa}_t \equiv \frac{Q_t\overline{K}_t}{NW_t}.
-$$
+\]
 
 The gross return on capital is
 
-$$
+\[
 R_{t+1}^k \equiv \frac{Q_{t+1}^{beg}}{Q_t},
 \qquad
 Q_{t+1}^{beg}=Q_{t+1}(1-\delta)+\rho_{t+1}u_{t+1}-a(u_{t+1}).
-$$
+\]
 
-The risky-debt contract sets a default cutoff $\varpi_{t+1}$ and promised return $R_{t+1}^p$:
+The risky-debt contract sets a default cutoff \(\varpi_{t+1}\) and promised return \(R_{t+1}^p\):
 
-$$
+\[
 R_{t+1}^p(Q_t\overline{K}_t-NW_t)
 = \varpi_{t+1}R_{t+1}^k Q_t\overline{K}_t.
-$$
+\]
 
 With entrepreneur and lender shares
 
-$$
+\[
 f(\varpi)=\int_{\varpi}^{\infty}\omega\phi(\omega)d\omega-[1-\Phi(\varpi)]\varpi,
-$$
+\]
 
-$$
+\[
 g(\varpi)=[1-\Phi(\varpi)]\varpi+(1-\mu_{mc})\int_0^{\varpi}\omega\phi(\omega)d\omega,
-$$
+\]
 
 the entrepreneur solves
 
-$$
+\[
 \max_{\bar{\kappa}_t,\varpi_{t+1}}
 E_t\left[V_{t+1}R_{t+1}^k\bar{\kappa}_t f(\varpi_{t+1})\right]
-$$
+\]
 
 subject to the lender participation constraint
 
-$$
+\[
 E_t R_{t+1}^k \frac{\bar{\kappa}_t}{\bar{\kappa}_t-1}\Lambda_{t+1}g(\varpi_{t+1})
 \ge R_t^d E_t\Lambda_{t+1}.
-$$
+\]
 
 Entrepreneurial net worth evolves from retained project payoffs:
 
-$$
+\[
 NW_t = \gamma NW_{t-1}\bar{\kappa}_{t-1}R_t^k f(\varpi_t)\eta_{nw,t}.
-$$
+\]
 
 ### 2.3 Final-Good And Intermediate-Good Firms
 
 Final-good producers combine differentiated goods:
 
-$$
+\[
 Y_t=\left[\int_0^1Y_t(i)^{1/(1+\lambda_{p,t})}di\right]^{1+\lambda_{p,t}}.
-$$
+\]
 
 Intermediate-good producers use
 
-$$
+\[
 Y_t(i)=\max\left\{A_t^{1-\alpha}K_t(i)^\alpha L_t(i)^{1-\alpha}
 -A_t\Upsilon_t^{\alpha/(1-\alpha)}F,0\right\}
-$$
+\]
 
 and face Calvo price rigidity with price indexation.
 
@@ -98,23 +98,23 @@ and face Calvo price rigidity with price indexation.
 
 Capital producers choose investment to maximize the value of transformed investment goods,
 
-$$
+\[
 \max_{\{I_t\}}\;E_t\sum_{s\ge0}\beta^s\frac{\Lambda_{t+s}}{\Lambda_t}
 \left[Q_{t+s}\mu_{t+s}\left(1-S\left(\frac{I_{t+s}}{I_{t+s-1}}\right)\right)I_{t+s}
 -P^I_{t+s}I_{t+s}\right].
-$$
+\]
 
 ### 2.5 Households
 
-Household $j$ maximizes
+Household \(j\) maximizes
 
-$$
+\[
 E_t\sum_{s=0}^{\infty}\beta^s b_{t+s}
 \left[\log(C_{t+s}-hC_{t+s-1})
 -\varphi\frac{L_{t+s}(j)^{1+\psi}}{1+\psi}\right]
-$$
+\]
 
-subject to a flow budget constraint containing consumption, taxes, deposits, nominal bonds, wages, deposit returns, and firm profits. A Calvo wage-setter chooses $W_t(j)$ subject to labor demand; non-reoptimizing wages are indexed to lagged inflation and balanced-growth terms.
+subject to a flow budget constraint containing consumption, taxes, deposits, nominal bonds, wages, deposit returns, and firm profits. A Calvo wage-setter chooses \(W_t(j)\) subject to labor demand; non-reoptimizing wages are indexed to lagged inflation and balanced-growth terms.
 
 ## 3. First-Order Conditions
 
@@ -122,103 +122,103 @@ The MMB implementation includes each baseline equation and a potential-output co
 
 - **(F1) Lender zero-profit condition**:
 
-$$
+\[
 E_t\frac{\Lambda_{t+1}}{\Lambda_t}\left(R_{t+1}^L-R_t^d\right)=0.
-$$
+\]
 
 - **(F2) Production function**:
 
-$$
+\[
 \hat{y}_t=\frac{y+F}{y}\left[\alpha\hat{k}_t+(1-\alpha)\hat{L}_t\right].
-$$
+\]
 
 - **(F3) Cost minimization**:
 
-$$
+\[
 \hat{\rho}_t-\hat{w}_t=\hat{L}_t-\hat{k}_t.
-$$
+\]
 
 - **(F4) Real marginal cost**:
 
-$$
+\[
 \hat{s}_t=\alpha\hat{\rho}_t+(1-\alpha)\hat{w}_t.
-$$
+\]
 
 - **(F5) Price Phillips curve with indexation**:
 
-$$
+\[
 \hat{\pi}_t=\frac{\beta}{1+\beta\iota_p}E_t\hat{\pi}_{t+1}
 +\frac{\iota_p}{1+\beta\iota_p}\hat{\pi}_{t-1}
 +\frac{(1-\beta\xi_p)(1-\xi_p)}{(1+\beta\iota_p)\xi_p}\hat{s}_t
 +\hat{\lambda}_{p,t}.
-$$
+\]
 
 - **(F6) Household marginal utility / consumption FOC** (`needs_review`: OCR notation around the MEI growth term is noisy):
 
-$$
+\[
 \hat{\lambda}_t =
 a_c E_t\hat{c}_{t+1}-b_c\hat{c}_t+d_c\hat{c}_{t-1}
 +a_z\hat{z}_t+a_b\hat{b}_t+a_{\mu}\hat{v}_t,
-$$
+\]
 
-where the coefficients are functions of $\beta,h,\gamma_z,\rho_z,\rho_b,\rho_v,\alpha$ as in paper equation (A5).
+where the coefficients are functions of \(\beta,h,\gamma_z,\rho_z,\rho_b,\rho_v,\alpha\) as in paper equation (A5).
 
 - **(F7) Euler equation for the risk-free nominal return**:
 
-$$
+\[
 \hat{\lambda}_t=\hat{R}_t+E_t\left(\hat{\lambda}_{t+1}-\hat{z}_{t+1}
 -\hat{\pi}_{t+1}-\frac{\alpha}{1-\alpha}\hat{v}_{t+1}\right).
-$$
+\]
 
 - **(F8) Capital utilization FOC**:
 
-$$
+\[
 \hat{\rho}_t=\vartheta\hat{u}_t.
-$$
+\]
 
 - **(F9) Frictionless expected capital-return condition**:
 
-$$
+\[
 E_t\hat{r}_{t+1}^k=\hat{\lambda}_t-E_t\hat{\lambda}_{t+1}
 +E_t\hat{z}_{t+1}
 +\frac{\alpha}{1-\alpha}E_t\hat{v}_{t+1}.
-$$
+\]
 
 - **(F10) Agency-cost expected capital-return condition**:
 
-$$
+\[
 E_t\hat{r}_{t+1}^k=\hat{\lambda}_t-E_t\hat{\lambda}_{t+1}
 +E_t\hat{z}_{t+1}
 +\frac{\alpha}{1-\alpha}E_t\hat{v}_{t+1}
 +\nu(\hat{q}_t+\hat{\bar{k}}_t-\hat{n}_t)+\hat{\sigma}_t.
-$$
+\]
 
 - **(F11) Investment FOC / Tobin's q**:
 
-$$
+\[
 \hat{q}_t=-\hat{\mu}_t+e^{2(\gamma_z+\gamma_v)}S''\left(\hat{i}_t-\hat{i}_{t-1}
 +\hat{z}_t+\frac{1}{1-\alpha}\hat{v}_t\right)
 -\beta e^{2(\gamma_z+\gamma_v)}S''E_t\left(\hat{i}_{t+1}-\hat{i}_t
 +\hat{z}_{t+1}+\frac{1}{1-\alpha}\hat{v}_{t+1}\right).
-$$
+\]
 
 - **(F12) Capital services input**:
 
-$$
+\[
 \hat{k}_t=\hat{u}_t+\hat{\bar{k}}_{t-1}-\hat{z}_t-\frac{1}{1-\alpha}\hat{v}_t.
-$$
+\]
 
 - **(F13) Capital accumulation**:
 
-$$
+\[
 \hat{\bar{k}}_t=(1-\delta)e^{-(\gamma_z+\gamma_v)}
 \left(\hat{\bar{k}}_{t-1}-\hat{z}_t-\frac{1}{1-\alpha}\hat{v}_t\right)
 +\left[1-(1-\delta)e^{-(\gamma_z+\gamma_v)}\right](\hat{\mu}_t+\hat{i}_t).
-$$
+\]
 
-- **(F14) Wage Phillips curve** (`needs_review`: OCR uses both $v$ and $\nu$ in growth notation):
+- **(F14) Wage Phillips curve** (`needs_review`: OCR uses both \(v\) and \(\nu\) in growth notation):
 
-$$
+\[
 \hat{w}_t=\frac{1}{1+\beta}\hat{w}_{t-1}
 +\frac{\beta}{1+\beta}E_t\hat{w}_{t+1}
 -\kappa_w\hat{g}_{w,t}
@@ -227,117 +227,117 @@ $$
 +\frac{\beta}{1+\beta}E_t\hat{\pi}_{t+1}
 +\text{growth-indexation terms}
 +\hat{\lambda}_{w,t}.
-$$
+\]
 
 - **(F15) Wage gap**:
 
-$$
+\[
 \hat{g}_{w,t}=\hat{w}_t-(\psi\hat{L}_t+\hat{b}_t-\hat{\lambda}_t).
-$$
+\]
 
 - **(F16) Monetary policy rule**:
 
-$$
+\[
 \hat{R}_t=\rho_R\hat{R}_{t-1}
 +(1-\rho_R)\left[\phi_{\pi}\hat{\pi}_t+\phi_x(\hat{x}_t-\hat{x}_t^{\ast})\right]
 +\phi_{dx}\left[(\hat{x}_t-\hat{x}_{t-1})-(\hat{x}_t^{\ast}-\hat{x}_{t-1}^{\ast})\right]
 +\hat{\eta}_{mp,t}.
-$$
+\]
 
 - **(F17) GDP gap definition**:
 
-$$
+\[
 \hat{x}_t=\hat{y}_t-\frac{\rho k}{y}\hat{u}_t.
-$$
+\]
 
 - **(F18) Real deposit return / Fisher equation**:
 
-$$
+\[
 \hat{r}_t^d=\hat{R}_t-E_t\hat{\pi}_{t+1}.
-$$
+\]
 
 - **(F19) Realized return to capital**:
 
-$$
+\[
 \hat{r}_t^k=\beta e^{-(\gamma_z+\gamma_v)}(1-\delta)\hat{q}_t
 +\left[1-\beta e^{-(\gamma_z+\gamma_v)}(1-\delta)\right]\hat{\rho}_t
 -\hat{q}_{t-1}.
-$$
+\]
 
 - **(F20) Net worth accumulation**:
 
-$$
+\[
 \hat{n}_t=\kappa\frac{\gamma}{\beta}(\hat{r}_t^k-\hat{r}_t^l)
 +\frac{\gamma}{\beta}(\hat{r}_t^l+\hat{n}_{t-1})
 +\gamma\kappa\frac{rp}{\beta}(\hat{\bar{k}}_{t-1}+\hat{q}_{t-1}+\hat{r}_t^k)
 -\hat{z}_t-\frac{1}{1-\alpha}\hat{v}_t+\hat{\eta}_{nw,t}.
-$$
+\]
 
 - **(F21) Lender return with contract indexation**:
 
-$$
+\[
 \hat{r}_t^l=\hat{r}_{t-1}^d+\left[1+\theta_g(\chi_k-1)\right]
 \left(\hat{r}_t^k-E_{t-1}\hat{r}_t^k\right).
-$$
+\]
 
 - **(F22) Expected return auxiliary**:
 
-$$
+\[
 \hat{r}_{t}^{ke}=E_t\hat{r}_{t+1}^k.
-$$
+\]
 
 - **(F23) Marginal-utility expectation auxiliary**:
 
-$$
+\[
 \hat{\lambda}_t^e=E_t\hat{\lambda}_{t+1}.
-$$
+\]
 
 - **(F24) Promised repayment rule**:
 
-$$
+\[
 \hat{r}_t^p=\hat{r}_{t-1}^d
 +\frac{(1-\theta_g)[1-\nu(\kappa-1)]}{\theta_g(\kappa-1)}
 (\hat{q}_{t-1}+\hat{\bar{k}}_{t-1}-\hat{n}_{t-1})
 +\chi_k(\hat{r}_t^k-E_{t-1}\hat{r}_t^k)
 +c_b(\hat{\lambda}_t-E_{t-1}\hat{\lambda}_t).
-$$
+\]
 
 - **(F25) Spread**:
 
-$$
+\[
 \widehat{spr}_t=E_t\hat{r}_{t+1}^k-\hat{r}_t^d.
-$$
+\]
 
 - **(F26) Credit**:
 
-$$
+\[
 \widehat{credit}_t=\frac{\kappa}{\kappa-1}\hat{q}_t
 +\frac{\kappa}{\kappa-1}\hat{\bar{k}}_t
 -\frac{1}{\kappa-1}\hat{n}_t.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F27) Resource constraint**:
 
-$$
+\[
 \frac{1}{g}\hat{y}_t=\frac{1}{g}\hat{g}_t+\frac{c}{y}\hat{c}_t
 +\frac{i}{y}\hat{i}_t+\frac{\rho k}{y}\hat{u}_t.
-$$
+\]
 
 - **(F28) Aggregate capital law from the nonlinear source model**:
 
-$$
+\[
 \overline{K}_t=(1-\delta)
 \left(1-\mu_{mc}\int_0^{\varpi_t}\omega\phi(\omega)d\omega\right)\overline{K}_{t-1}
 +\mu_t\left[1-S\left(\frac{I_t}{I_{t-1}}\right)\right]I_t.
-$$
+\]
 
 - **(F29) Government spending share identity**:
 
-$$
+\[
 G_t=\left(1-\frac{1}{g_t}\right)Y_t.
-$$
+\]
 
 The implementation cross-check also defines `gdp`, `gdpstar`, potential-output counterparts, and separate `star` versions of production, cost minimization, marginal cost, consumption, investment, capital, wages, and financial variables.
 
@@ -345,19 +345,19 @@ The implementation cross-check also defines `gdp`, `gdpstar`, potential-output c
 
 - **(F30) Net worth shock**:
 
-$$
+\[
 \hat{\eta}_{nw,t}=\rho_{nw}\hat{\eta}_{nw,t-1}+\varepsilon_{nw,t}.
-$$
+\]
 
 - **(F31) Idiosyncratic variance / external finance premium shock**:
 
-$$
+\[
 \hat{\sigma}_t=\rho_{\sigma}\hat{\sigma}_{t-1}+\varepsilon_{\sigma,t}.
-$$
+\]
 
 - **(F32) Nonfinancial AR and ARMA shocks**:
 
-$$
+\[
 \begin{aligned}
 \hat{z}_t &= \rho_z\hat{z}_{t-1}+\varepsilon_{z,t},\\
 \hat{g}_t &= \rho_g\hat{g}_{t-1}+\varepsilon_{g,t},\\
@@ -367,45 +367,45 @@ $$
 \hat{\lambda}_{p,t} &= \rho_p\hat{\lambda}_{p,t-1}+\varepsilon_{p,t}-\theta_p\varepsilon_{p,t-1},\\
 \hat{\lambda}_{w,t} &= \rho_w\hat{\lambda}_{w,t-1}+\varepsilon_{w,t}-\theta_w\varepsilon_{w,t-1}.
 \end{aligned}
-$$
+\]
 
 - **(F33) Investment-specific technology growth shock in the implementation**:
 
-$$
+\[
 \hat{\upsilon}_t=\rho_{\upsilon}\hat{\upsilon}_{t-1}+\varepsilon_{\upsilon,t}.
-$$
+\]
 
 ## 6. Steady-State Solution
 
 Because `US_CFOP14` is a linearized balanced-growth model, all model variables in the Dynare `model(linear)` block are deviations from steady state; the operational steady state is zero for those variables:
 
-$$
+\[
 \hat{y}=\hat{k}=\hat{L}=\hat{c}=\hat{q}=\hat{n}=\hat{R}=\hat{r}^k=\hat{spr}=0,
 \qquad
 \varepsilon_{\cdot}=0.
-$$
+\]
 
 The implementation computes required steady-state ratios and coefficients before the model block. The cross-check file defines:
 
-$$
+\[
 \beta=\frac{100}{Fbeta+100},\quad
 r_{ss}=e^{\gamma}/\beta-1,\quad
 \pi_{ss}=pss100/100,
-$$
+\]
 
-$$
+\[
 R^k_{ss}=e^{\gamma+\gamma_{\mu}}/\beta-1+\delta,\quad
 s_{ss}=\frac{1}{1+\lambda_{p,ss}},
-$$
+\]
 
-and then constructs steady-state wages, capital-labor ratios, output, investment, fixed costs, consumption, and the Calvo wage coefficient from calibrated or estimated parameters. Financial steady-state targets include leverage $\kappa=1.95$, quarterly risk premium $rp=0.02/4$, entrepreneurial survival $\gamma=0.94$, and agency-cost elasticity $\nu=0.19$ in the baseline indexation model.
+and then constructs steady-state wages, capital-labor ratios, output, investment, fixed costs, consumption, and the Calvo wage coefficient from calibrated or estimated parameters. Financial steady-state targets include leverage \(\kappa=1.95\), quarterly risk premium \(rp=0.02/4\), entrepreneurial survival \(\gamma=0.94\), and agency-cost elasticity \(\nu=0.19\) in the baseline indexation model.
 
 ## 7. Timing & Form Conventions
 
 - **Form**: log-linearized; Dynare implementation uses `model(linear)`.
-- **Capital timing**: installed capital stock $\bar{k}_t$ is predetermined through $\bar{k}_{t-1}$ in production services; current capital services combine utilization, lagged installed capital, and growth terms.
-- **Loans**: loans are made at the end of period $t$ and repaid in period $t+1$; the realized lender return in period $t$ depends on the previous period's deposit return and surprises in the realized return to capital.
-- **Net worth**: $\hat{n}_t$ is a state variable propagated from $\hat{n}_{t-1}$ and realized capital/lender returns, plus a net-worth redistribution shock.
+- **Capital timing**: installed capital stock \(\bar{k}_t\) is predetermined through \(\bar{k}_{t-1}\) in production services; current capital services combine utilization, lagged installed capital, and growth terms.
+- **Loans**: loans are made at the end of period \(t\) and repaid in period \(t+1\); the realized lender return in period \(t\) depends on the previous period's deposit return and surprises in the realized return to capital.
+- **Net worth**: \(\hat{n}_t\) is a state variable propagated from \(\hat{n}_{t-1}\) and realized capital/lender returns, plus a net-worth redistribution shock.
 - **Expectations**: the implementation uses lead notation such as `Rk(+1)` and auxiliaries `Rke = Rk(+1)`, `lambdae = lambda(+1)` for expected one-period-ahead objects.
 - **Potential-output system**: `star` variables represent the corresponding frictionless or potential-output block used in the policy rule and output gap.
 - **Runtime validation**: not performed; no Dynare command was run.

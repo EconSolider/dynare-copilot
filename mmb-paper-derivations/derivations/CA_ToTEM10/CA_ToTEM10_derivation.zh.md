@@ -21,17 +21,17 @@
 
 生命周期收入家庭在跨期预算约束下平滑消费，获得企业利润，供给差异化劳动服务，并可借入或储蓄。一个与来源一致的紧凑表示为：
 
-$$
+\[
 \max_{\{C^L_t,N^L_t,A^L_t\}} E_0\sum_{t=0}^{\infty}\beta^t
 U(C^L_t-h C^L_{t-1},N^L_t)
-$$
+\]
 
 约束为
 
-$$
+\[
 P^c_t C^L_t + A^L_t
 = W_t N^L_t + R_{t-1}A^L_{t-1}+\Pi_t-T^L_t .
-$$
+\]
 
 `needs_review`：论文来源识别了生命周期收入家庭及其跨期预算约束，但没有打印精确效用函数或资产定价方程。
 
@@ -39,9 +39,9 @@ $$
 
 当期收入家庭不能储蓄或借款，消费等于包括转移在内的当期可支配收入：
 
-$$
+\[
 P^c_t C^C_t = W_t N^C_t + TR_t - T^C_t .
-$$
+\]
 
 `needs_review`：Markdown 来源没有打印精确税收/转移分解。
 
@@ -49,12 +49,12 @@ $$
 
 由于劳动技能不可完全替代，家庭在劳动供给上具有市场势力。名义工资合约交错，并且平均约持续六个季度：
 
-$$
+\[
 \max_{W^{\ast}_t} E_t\sum_{j=0}^{\infty}(\beta \theta_w)^j
 \Lambda_{t,t+j}\left[
 W^{\ast}_t N_{t+j|t}-P^c_{t+j} MRS^N_{t+j}N_{t+j|t}
 \right] .
-$$
+\]
 
 `needs_review`：这是与论文描述一致的一般 Calvo 工资设定表示；论文侧 Markdown 没有打印精确 ToTEM 工资模块。
 
@@ -62,16 +62,16 @@ $$
 
 每个最终产品部门 `s in {c, inv, g, x}` 用 CES 生产技术组合资本服务、劳动、商品和进口品，并设置粘性价格：
 
-$$
+\[
 \max_{\{K_{s,t},L_{s,t},COM_{s,t},M_{s,t}\}}
 P^s_t Y^s_t-W_tL_{s,t}-R^k_tK_{s,t}-P^{com}_tCOM_{s,t}-P^m_tM_{s,t}
-$$
+\]
 
 约束为
 
-$$
+\[
 Y^s_t = A^s_t\,F_s(K_{s,t},L_{s,t},COM_{s,t},M_{s,t};u_{s,t}) .
-$$
+\]
 
 `needs_review`：Markdown 来源说明生产函数是 CES，当前 ToTEM 版本中最终产品主要通过相对进口含量区分，但没有打印嵌套 CES 公式。
 
@@ -79,16 +79,16 @@ $$
 
 商品部门独立于最终产品部门，是世界商品市场的价格接受者，并为国内使用、家庭消费和出口供给商品：
 
-$$
+\[
 \max_{\{K^{com}_t,L^{com}_t\}}
 P^{com}_tY^{com}_t-W_tL^{com}_t-R^k_tK^{com}_t
-$$
+\]
 
 约束为
 
-$$
+\[
 Y^{com}_t=A^{com}_tF^{com}(K^{com}_t,L^{com}_t).
-$$
+\]
 
 ### 中央银行和财政当局
 
@@ -102,99 +102,99 @@ $$
 
 - **(F1) 生命周期收入家庭欧拉条件**（`needs_review`）：
 
-$$
+\[
 U_{C,t}=\beta E_t\left[U_{C,t+1}\frac{1+i_t}{\Pi^c_{t+1}}\right].
-$$
+\]
 
 - **(F2) 当期收入家庭预算规则**（`needs_review`）：
 
-$$
+\[
 C^C_t=\frac{W_tN^C_t+TR_t-T^C_t}{P^c_t}.
-$$
+\]
 
 - **(F3) 劳动供给 / 期望实际工资条件**（`needs_review`）：
 
-$$
+\[
 \frac{W^{des}_t}{P^c_t}=MRS^N_t(C_t,N_t).
-$$
+\]
 
 - **(F4) Calvo 工资 Phillips 曲线模块**（`needs_review`）：
 
-$$
+\[
 \pi^w_t=\gamma_w\pi^w_{t-1}+\beta E_t\pi^w_{t+1}
 \kappa_w\left(\log W_t-\log P^c_t-\log MRS^N_t\right).
-$$
+\]
 
 - **(F5) 最终品投入需求，资本服务**（`needs_review`）：
 
-$$
+\[
 R^k_t=P^s_t MC^s_t\frac{\partial F_s}{\partial K_{s,t}}.
-$$
+\]
 
 - **(F6) 最终品投入需求，劳动**（`needs_review`）：
 
-$$
+\[
 W_t=P^s_t MC^s_t\frac{\partial F_s}{\partial L_{s,t}}.
-$$
+\]
 
 - **(F7) 最终品投入需求，商品**（`needs_review`）：
 
-$$
+\[
 P^{com}_t=P^s_t MC^s_t\frac{\partial F_s}{\partial COM_{s,t}}.
-$$
+\]
 
 - **(F8) 最终品投入需求，进口品**（`needs_review`）：
 
-$$
+\[
 P^m_t=P^s_t MC^s_t\frac{\partial F_s}{\partial M_{s,t}}.
-$$
+\]
 
 - **(F9) 部门新凯恩斯价格方程**（`needs_review`）：
 
-$$
+\[
 \pi^s_t=\gamma_s\pi^s_{t-1}+\beta E_t\pi^s_{t+1}
 \kappa_s\left(\log MC^s_t-\log \overline{MC}^s\right)+\varepsilon^s_t .
-$$
+\]
 
 - **(F10) 进口价格 Phillips 曲线 / 供应链传递模块**（`needs_review`）：
 
-$$
+\[
 \pi^m_t=\gamma_m\pi^m_{t-1}+\beta E_t\pi^m_{t+1}
 \kappa_m\left(\log P^{row}_t+\log S_t-\log P^m_t\right).
-$$
+\]
 
 - **(F11) 资本积累与利用成本**（`needs_review`）：
 
-$$
+\[
 K_{t+1}=(1-\delta(u_t))K_t+I_t-\Phi_I(I_t,I_{t-1}).
-$$
+\]
 
 - **(F12) Tobin's Q / 投资条件**（`needs_review`）：
 
-$$
+\[
 Q_t=1+\Phi_{I,t}+\beta E_t\left[\Lambda_{t,t+1}Q_{t+1}\Phi_{I,t+1}\right].
-$$
+\]
 
 - **(F13) 资本服务利用条件**（`needs_review`）：
 
-$$
+\[
 R^k_t=\frac{\partial \delta(u_t)}{\partial u_t}Q_t .
-$$
+\]
 
 - **(F14) 商品部门投入需求**（`needs_review`）：
 
-$$
+\[
 W_t=P^{com}_t\frac{\partial F^{com}}{\partial L^{com}_t},\qquad
 R^k_t=P^{com}_t\frac{\partial F^{com}}{\partial K^{com}_t}.
-$$
+\]
 
 - **(F15) 货币政策反馈规则**（`needs_review`；实现交叉检查）：
 
-$$
+\[
 i_t=\rho_i i_{t-1}+(1-\rho_i)\left(\bar{i}
 \phi_{\pi}(\pi^{cpi}_{t+h}-\pi^{target}_{t+h})
 \phi_y y^{gap}_t\right)+\varepsilon^i_t .
-$$
+\]
 
 实现交叉检查将其映射到针对 `infq2`、`pertarget`、`pertran` 和 `ly_gap` 反应的平滑 `r1n` 规则。
 
@@ -202,100 +202,100 @@ $$
 
 - **(F16) 最终品资源恒等式**（`needs_review`）：
 
-$$
+\[
 Y^c_t=C_t,\qquad Y^{inv}_t=I_t,\qquad Y^g_t=G_t,\qquad Y^x_t=X_t .
-$$
+\]
 
 - **(F17) 总 GDP 恒等式**（`needs_review`）：
 
-$$
+\[
 Y_t=C_t+I_t+G_t+X_t-M_t+Y^{com,value}_t .
-$$
+\]
 
 - **(F18) 商品配置**（`needs_review`）：
 
-$$
+\[
 Y^{com}_t=COM^c_t+COM^{inv}_t+COM^g_t+COM^x_t+COM^{hh}_t+X^{com}_t .
-$$
+\]
 
 - **(F19) 净外国资产积累**（`needs_review`；实现交叉检查）：
 
-$$
+\[
 NFA_t=\frac{1+i^{row}_{t-1}+\rho^{risk}_{t-1}}{\Pi_t}\frac{S_t}{S_{t-1}}NFA_{t-1}
 NX_t .
-$$
+\]
 
 实现交叉检查中有显式 `nfa` 运动方程和与期望 NFA 偏离相关的风险溢价项。
 
 - **(F20) 风险溢价 / 汇率关系**（`needs_review`；实现交叉检查）：
 
-$$
+\[
 1+i_t=(1+i^{row}_t)(1+risk_t)E_t\left[\frac{S_{t+1}}{S_t}\frac{\Pi^{row}_{t+1}}{\Pi_{t+1}}\right].
-$$
+\]
 
 - **(F21) 财政债务积累**（`needs_review`；实现交叉检查）：
 
-$$
+\[
 B^g_t=(1+i^g_{t-1})B^g_{t-1}+P^g_tG_t+TR_t-T_t .
-$$
+\]
 
 - **(F22) 财政规则模块**（`needs_review`；实现交叉检查）：
 
-$$
+\[
 G_t,TR_t,T_t=f(B^g_t/Y_t,\overline{B^g/Y},Y^{gap}_t,\varepsilon^g_t).
-$$
+\]
 
 - **(F23) 价格指数定义**（`needs_review`）：
 
-$$
+\[
 \Pi^{cpi}_t=g(\Pi^c_t,\Pi^m_t,\Pi^{com}_t,\Pi^g_t,\Pi^{inv}_t,\Pi^x_t).
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F24) 国内技术过程**（`needs_review`；实现交叉检查 `la_shk`）：
 
-$$
+\[
 a_t=a_{t-1}+\bar{g}_a+\varepsilon^a_t .
-$$
+\]
 
 - **(F25) 世界商品价格过程**（`needs_review`；实现交叉检查 `lpcomrow_shk`）：
 
-$$
+\[
 \log P^{com,row}_t-\log \bar{P}^{com,row}
 =\rho_{com}\left(\log P^{com,row}_{t-1}-\log \bar{P}^{com,row}\right)
 \varepsilon^{com}_t .
-$$
+\]
 
 - **(F26) 外国总产出模块**（`needs_review`；实现交叉检查 `lyrow_shk`）：
 
-$$
+\[
 y^{row}_t=y^{row,sreq}_t+y^{row,gap}_t .
-$$
+\]
 
 - **(F27) 汇率 / 国家风险冲击模块**（`needs_review`；实现交叉检查 `lforexn_shk`、`risk_shk`）：
 
-$$
+\[
 risk_t=\overline{risk}+\tau\left(e^{-(NFA_t-\overline{NFA})}-1\right)+\varepsilon^{risk}_t .
-$$
+\]
 
 - **(F28) 消费需求冲击**（`needs_review`；实现交叉检查 `lc_shk`）：
 
-$$
+\[
 \xi^c_t=\rho_c\xi^c_{t-1}+\varepsilon^c_t .
-$$
+\]
 
 - **(F29) 财政支出比率冲击**（`needs_review`；实现交叉检查 `gn_yn_shk`）：
 
-$$
+\[
 gny_t=\rho_g gny_{t-1}+\varepsilon^g_t .
-$$
+\]
 
 - **(F30) 直接 CPI 价格冲击**（`needs_review`；实现交叉检查 `lxdc_shk`）：
 
-$$
+\[
 \varepsilon^{pc}_t=\rho_{pc}\varepsilon^{pc}_{t-1}+\eta^{pc}_t .
-$$
+\]
 
 ## 6. Steady-State Solution
 
@@ -314,9 +314,9 @@ $$
 
 与实现交叉检查一致的稳态占位式：
 
-$$
+\[
 \pi^{target}=\bar{\pi},\qquad y^{gap}=0,\qquad i=\bar{i},\qquad risk=\overline{risk}.
-$$
+\]
 
 未运行 Dynare 稳态残差检查。
 

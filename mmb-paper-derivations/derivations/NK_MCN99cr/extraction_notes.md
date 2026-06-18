@@ -22,7 +22,7 @@
 
 ## Deferred Issues
 
-- Confirm from PDF pages that equation (F6) should be represented with the exact expectation timing used in the archive: the source text has the paper equation with $E_t y_{t+1}$ and later simulation discussion mentions replacing it with $E_{t-1}y_{t+1}$.
+- Confirm from PDF pages that equation (F6) should be represented with the exact expectation timing used in the archive: the source text has the paper equation with \(E_t y_{t+1}\) and later simulation discussion mentions replacing it with \(E_{t-1}y_{t+1}\).
 - Confirm the paper-to-implementation mapping for the `cr` suffix. The current inference is that `cr` corresponds to the Calvo-Rotemberg aggregate-supply variant, based on the `.mod` implementation.
 - Check whether catalog merge should use paper year 1999 from the MMB row or 1998 from the NBER working-paper cover page. The worker report proposes 1999 to match `model_index.csv`.
 - Runtime validation is explicitly deferred: no Dynare `resid`, `steady`, `check`, or `stoch_simul` was run.

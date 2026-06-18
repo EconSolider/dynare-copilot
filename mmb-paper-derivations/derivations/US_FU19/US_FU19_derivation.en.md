@@ -21,12 +21,12 @@ Source limitation: the paper-side Markdown describes the Smets-Wouters structure
 
 The household has external habit in consumption, supplies labor, holds bonds, and invests in physical capital with variable utilization. A source-complete utility and budget constraint are not printed in the Fratto-Uhlig paper body; the intended benchmark is the Smets-Wouters household block. A generic source-level problem to be verified is:
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 U(C_t-hC_{t-1},L_t)
 \right]
-$$
+\]
 
 subject to the real budget constraint that allocates resources among consumption, bond holdings, investment, capital utilization costs, taxes, wage income, rental income, bond returns, and profits. `needs_review`: the exact nonlinear household problem is not in the US_FU19 Markdown.
 
@@ -52,83 +52,83 @@ The following conditions are a source-backed skeleton for the US_FU19 archive en
 
 **(F1) Consumption Euler equation with habit and risk-premium wedge** (`needs_review`):
 
-$$
+\[
 c_t =
 \frac{h/\gamma}{1+h/\gamma}c_{t-1}
 +\frac{1}{1+h/\gamma}E_t c_{t+1}
 +\frac{(\sigma_c-1)w_L^c}{\sigma_c(1+h/\gamma)}(L_t-E_tL_{t+1})
 -\frac{1-h/\gamma}{\sigma_c(1+h/\gamma)}(R_t-E_t\pi_{t+1})
 +b^2_t .
-$$
+\]
 
 **(F2) Investment Euler equation / investment-adjustment-cost FOC** (`needs_review`):
 
-$$
+\[
 i_t =
 \frac{1}{1+\bar{\beta}\gamma}
 \left(i_{t-1}+\bar{\beta}\gamma E_t i_{t+1}
 +\frac{1}{\gamma^2\varphi_i}Q_t\right)+\mu_t .
-$$
+\]
 
 **(F3) Value of installed capital / Tobin's Q** (`needs_review`):
 
-$$
+\[
 Q_t =
 \frac{1}{\chi_c}b^2_t
 -(R_t-E_t\pi_{t+1})
 +\frac{r_k^\ast}{r_k^\ast+1-\delta}E_t r^k_{t+1}
 +\frac{1-\delta}{r_k^\ast+1-\delta}E_tQ_{t+1}.
-$$
+\]
 
-where $\chi_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]$.
+where \(\chi_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]\).
 
 **(F4) Capital utilization condition** (`needs_review`):
 
-$$
+\[
 u_t=\frac{1-c_z}{c_z}r^k_t .
-$$
+\]
 
 **(F5) Effective capital services** (`needs_review`):
 
-$$
+\[
 k_t=u_t+\bar{k}_{t-1}.
-$$
+\]
 
 **(F6) Physical-capital accumulation** (`needs_review`):
 
-$$
+\[
 \bar{k}_t=(1-\iota_k)\bar{k}_{t-1}+\iota_k(\gamma^2\varphi_i\mu_t+i_t).
-$$
+\]
 
 **(F7) Production function** (`needs_review`):
 
-$$
+\[
 y_t=\Phi Z_t+\alpha\Phi k_t+(1-\alpha)\Phi L_t .
-$$
+\]
 
 **(F8) Capital-labor demand relation** (`needs_review`):
 
-$$
+\[
 k_t=w_t-r^k_t+L_t .
-$$
+\]
 
 **(F9) Real marginal cost** (`needs_review`):
 
-$$
+\[
 mc_t=\alpha r^k_t+(1-\alpha)w_t-Z_t .
-$$
+\]
 
 **(F10) Hybrid price Phillips curve** (`source_stated`, paper equation (1), notation harmonized):
 
-$$
+\[
 \pi_t=\pi_1\pi_{t-1}+\pi_2E_t\pi_{t+1}-\pi_3\mu^p_t+\epsilon^p_t .
-$$
+\]
 
-Here $\mu^p_t$ is the price markup, defined in the paper as the difference between the marginal product of labor and the real wage.
+Here \(\mu^p_t\) is the price markup, defined in the paper as the difference between the marginal product of labor and the real wage.
 
 **(F11) Wage Phillips curve** (`needs_review`):
 
-$$
+\[
 w_t=
 \frac{1}{1+\bar{\beta}\gamma}
 \left[
@@ -142,98 +142,98 @@ w_{t-1}+\bar{\beta}\gamma E_tw_{t+1}
 +\iota_w\pi_{t-1}
 +\bar{\beta}\gamma E_t\pi_{t+1}
 \right]+\lambda^w_t .
-$$
+\]
 
 **(F12) Monetary policy rule** (`source_stated` for the rule form; benchmark uses constant target):
 
-$$
+\[
 R_t=\rho_RR_{t-1}+(1-\rho_R)\left(\psi_1\pi_t+\psi_2(y_t-y^{flex}_t)\right)
 +\psi_3\left[(y_t-y_{t-1})-(y^{flex}_t-y^{flex}_{t-1})\right]+ms_t .
-$$
+\]
 
 **(F13) Aggregate resource constraint** (`needs_review`):
 
-$$
+\[
 y_t=c_yc_t+i_yi_t+g_t+r_k^\ast k_yu_t .
-$$
+\]
 
 **(F14) Flexible-price consumption Euler equation** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 c^{flex}_t =
 \frac{h/\gamma}{1+h/\gamma}c^{flex}_{t-1}
 +\frac{1}{1+h/\gamma}E_t c^{flex}_{t+1}
 +\frac{(\sigma_c-1)w_L^c}{\sigma_c(1+h/\gamma)}(L^{flex}_t-E_tL^{flex}_{t+1})
 -\frac{1-h/\gamma}{\sigma_c(1+h/\gamma)}R^{flex}_t
 +b^2_t .
-$$
+\]
 
 **(F15) Flexible-price investment equation** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 i^{flex}_t =
 \frac{1}{1+\bar{\beta}\gamma}
 \left(i^{flex}_{t-1}+\bar{\beta}\gamma E_ti^{flex}_{t+1}
 +\frac{1}{\gamma^2\varphi_i}Q^{flex}_t\right)+\mu_t .
-$$
+\]
 
 **(F16) Flexible-price Tobin's Q** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 Q^{flex}_t =
 \frac{1}{\chi_c}b^2_t
 -R^{flex}_t
 +\frac{r_k^\ast}{r_k^\ast+1-\delta}E_tr^{k,flex}_{t+1}
 +\frac{1-\delta}{r_k^\ast+1-\delta}E_tQ^{flex}_{t+1}.
-$$
+\]
 
 **(F17) Flexible-price capital utilization** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 u^{flex}_t=\frac{1-c_z}{c_z}r^{k,flex}_t .
-$$
+\]
 
 **(F18) Flexible-price effective capital** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 k^{flex}_t=u^{flex}_t+\bar{k}^{flex}_{t-1}.
-$$
+\]
 
 **(F19) Flexible-price capital accumulation** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 \bar{k}^{flex}_t=(1-\iota_k)\bar{k}^{flex}_{t-1}+\iota_k(\gamma^2\varphi_i\mu_t+i^{flex}_t).
-$$
+\]
 
 **(F20) Flexible-price production** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 y^{flex}_t=\Phi Z_t+\alpha\Phi k^{flex}_t+(1-\alpha)\Phi L^{flex}_t .
-$$
+\]
 
 **(F21) Flexible-price capital-labor demand relation** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 k^{flex}_t=w^{flex}_t-r^{k,flex}_t+L^{flex}_t .
-$$
+\]
 
 **(F22) Flexible-price marginal cost normalization** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 0=\alpha r^{k,flex}_t+(1-\alpha)w^{flex}_t-Z_t .
-$$
+\]
 
 **(F23) Flexible-price wage/labor condition** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 w^{flex}_t=\frac{1}{1-h/\gamma}c^{flex}_t-\frac{h/\gamma}{1-h/\gamma}c^{flex}_{t-1}+\nu_LL^{flex}_t .
-$$
+\]
 
 **(F24) Flexible-price resource constraint** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 y^{flex}_t=c_yc^{flex}_t+i_yi^{flex}_t+g_t+r_k^\ast k_yu^{flex}_t .
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
@@ -243,16 +243,16 @@ The paper's accounting exercise uses seven observables:
 
 **(F25) Measurement equations** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 \Delta y^{obs}_t=y_t-y_{t-1},\quad
 \Delta c^{obs}_t=c_t-c_{t-1},\quad
 \Delta i^{obs}_t=i_t-i_{t-1},\quad
 \Delta w^{obs}_t=w_t-w_{t-1}.
-$$
+\]
 
-$$
+\[
 \pi^{obs}_t=\pi_t,\quad R^{obs}_t=R_t,\quad L^{obs}_t=L_t .
-$$
+\]
 
 The paper reports inflation and employment shock decompositions based on the solved linear system and these observables.
 
@@ -260,112 +260,112 @@ The paper reports inflation and employment shock decompositions based on the sol
 
 **(F26) Technology shock** (`needs_review`):
 
-$$
+\[
 Z_t=\rho_ZZ_{t-1}+\epsilon^Z_t .
-$$
+\]
 
 **(F27) Preference/risk-premium shock** (`needs_review`):
 
-$$
+\[
 b^2_t=\rho_{b2}b^2_{t-1}+\epsilon^{b2}_t .
-$$
+\]
 
 **(F28) Government spending shock with technology innovation spillover** (`implementation_cross_check`, `needs_review`):
 
-$$
+\[
 g_t=\rho_gg_{t-1}+\epsilon^g_t+\rho_{gZ}\epsilon^Z_t .
-$$
+\]
 
 **(F29) Investment-specific technology shock** (`needs_review`):
 
-$$
+\[
 \mu_t=\rho_\mu\mu_{t-1}+\epsilon^\mu_t .
-$$
+\]
 
 **(F30) Price-markup shock** (`source_stated` concept, `needs_review` for exact process):
 
-$$
+\[
 \lambda^p_t=\rho_p\lambda^p_{t-1}+\epsilon^p_t-\theta_p\epsilon^p_{t-1}.
-$$
+\]
 
 **(F31) Wage-markup shock** (`source_stated` concept, `needs_review` for exact process):
 
-$$
+\[
 \lambda^w_t=\rho_w\lambda^w_{t-1}+\epsilon^w_t-\theta_w\epsilon^w_{t-1}.
-$$
+\]
 
 **(F32) Monetary policy shock** (`source_stated` concept, `needs_review` for exact process):
 
-$$
+\[
 ms_t=\rho_{ms}ms_{t-1}+\epsilon^{ms}_t .
-$$
+\]
 
 For the ZLB accounting exercise, the paper states:
 
 **(F33) ZLB monetary-surprise mapping** (`source_stated`, paper equation (7)):
 
-$$
+\[
 \epsilon^m_t=\max\{-\tilde{i}_t,0\},
-$$
+\]
 
-where $\tilde{i}_t$ is the interest rate implied by the linear Taylor rule.
+where \(\tilde{i}_t\) is the interest rate implied by the linear Taylor rule.
 
 For the optional time-varying inflation-target extension, the paper states:
 
 **(F34) Time-varying inflation target extension** (`source_stated`, not part of baseline MMB implementation):
 
-$$
+\[
 i_t=\bar{i}+\rho_Ri_{t-1}+(1-\rho_R)\left[\psi_1(\pi_t-\pi_t^\ast)+\psi_2x_t\right]
 +\psi_3(x_t-x_{t-1})+\epsilon^r_t,
-$$
+\]
 
-$$
+\[
 \hat{\pi}^\ast_t=\rho_{\pi^\ast}\hat{\pi}^\ast_{t-1}+\sigma_{\pi^\ast}\epsilon^{\pi^\ast}_t .
-$$
+\]
 
 ## 6. Steady-State Solution
 
 Because the MMB implementation is `model(linear)`, the dynamic variables are deviations from the balanced-growth steady state and the model block is solved around zero:
 
-$$
+\[
 \bar{c}=\bar{i}=\bar{Q}=\bar{u}=\bar{k}=\bar{y}=\bar{\pi}=\bar{R}=\bar{L}=0 .
-$$
+\]
 
 Derived steady-state ratios and constants are calibrated or computed before the linear model is evaluated:
 
-$$
+\[
 \beta=\frac{1}{1+\mathrm{constebeta}/100},
 \qquad
 \bar{\beta}=\beta\gamma^{-\sigma_c},
 \qquad
 r_k^\ast=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
-$$
+\]
 
-$$
+\[
 w^\ast=
 \left[
 \frac{\alpha^\alpha(1-\alpha)^{1-\alpha}}{\Phi(r_k^\ast)^\alpha}
 \right]^{1/(1-\alpha)},
 \qquad
 \frac{K}{L}=\frac{\alpha}{1-\alpha}\frac{w^\ast}{r_k^\ast}.
-$$
+\]
 
-$$
+\[
 k_y=\Phi\left(\frac{K}{L}\right)^{1-\alpha},
 \qquad
 i_y=\left[1-\frac{1-\delta}{\gamma}\right]\gamma k_y,
 \qquad
 c_y=1-g^\ast-i_y .
-$$
+\]
 
 `needs_review`: these formulas are cross-checked against `US_FU19_rep.mod`; the US_FU19 paper body does not print the complete steady-state derivation.
 
 ## 7. Timing & Form Conventions
 
 - Form convention: `model(linear)`; all model variables in (F1)-(F34) are log deviations or linear deviations around the balanced-growth steady state unless otherwise stated.
-- Capital timing: production uses effective capital services $k_t=u_t+\bar{k}_{t-1}$; physical capital $\bar{k}_t$ is a predetermined stock chosen by end of period.
-- Expectations: equations are written with $E_t$ for one-period-ahead terms; the `.mod` cross-check uses Dynare leads such as `(+1)`.
-- Output gap: monetary policy responds to $y_t-y^{flex}_t$ and the change in that gap.
+- Capital timing: production uses effective capital services \(k_t=u_t+\bar{k}_{t-1}\); physical capital \(\bar{k}_t\) is a predetermined stock chosen by end of period.
+- Expectations: equations are written with \(E_t\) for one-period-ahead terms; the `.mod` cross-check uses Dynare leads such as `(+1)`.
+- Output gap: monetary policy responds to \(y_t-y^{flex}_t\) and the change in that gap.
 - ZLB treatment: the baseline retro analysis does not impose an occasionally binding constraint in the benchmark linear model; it treats the gap between the negative Taylor-rule shadow rate and zero as a sequence of surprise monetary shocks.
 - Runtime validation: not performed; Dynare was not run.
 

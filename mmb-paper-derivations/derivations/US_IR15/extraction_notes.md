@@ -19,7 +19,7 @@
 
 - Overall formula status: `needs_review`.
 - MinerU Markdown captured the main-text model equations (1)-(20): inflation-target process, policy rule, inflation/output/risk-factor equations, compact state transition, pricing kernel, risk prices, bond-price and yield recursions, risk-premium definition, and measurement equation.
-- OCR anomalies were visible in the Markdown, especially around Greek nu/v notation, the phrase around the sign of $\rho_\nu$, and some matrix/vector typography. The derivation uses normalized notation but keeps the status as first-pass `needs_review`.
+- OCR anomalies were visible in the Markdown, especially around Greek nu/v notation, the phrase around the sign of \(\rho_\nu\), and some matrix/vector typography. The derivation uses normalized notation but keeps the status as first-pass `needs_review`.
 - The paper points to supplementary appendix parts for the construction of the compact matrices, bond-pricing recursion derivation, steady-state yield matching, and construction of `U` and `V`. No local appendix normalization was present.
 - The PDF body was not opened because the Markdown was sufficient for a first-pass `needs_review` extraction and the task contract says not to read the PDF body by default.
 
@@ -36,7 +36,7 @@
 
 - Source-level review should check equations (F13)-(F20) against the PDF or supplementary appendix before moving beyond `needs_review`.
 - The local archive lacks the supplementary appendix, so exact formulas for constructing `U`, `V`, and the steady-state long-yield matching remain deferred.
-- Review the notation mapping between paper $\nu$ and implementation `v`, especially where OCR renders `v`/`\nu` inconsistently.
+- Review the notation mapping between paper \(\nu\) and implementation `v`, especially where OCR renders `v`/`\nu` inconsistently.
 - Runtime validation, residual checks, BK checks, IRF checks, and promotion to the runnable skill archive were not performed.
 
 ## Translation Status

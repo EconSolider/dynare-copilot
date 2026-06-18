@@ -18,7 +18,7 @@
 ## Implementation Cross-Check
 
 - `.agents/skills/dynare-copilot/references/examples/US_VMDno_rep.mod` exists and was read only as `implementation_cross_check`.
-- It confirms the `US_VMDno` normal-times switch: implementation sets the optimism sensitivity parameter corresponding to paper $\alpha_2$ to zero, while retaining the normal-times output-gap sensitivity.
+- It confirms the `US_VMDno` normal-times switch: implementation sets the optimism sensitivity parameter corresponding to paper \(\alpha_2\) to zero, while retaining the normal-times output-gap sensitivity.
 - It also confirms a large nonlinear sticky-price block and a duplicated flexible-price block. The derivation records the main sticky-price block only at a high level and flags implementation-derived standard equations as `needs_review`.
 - The implementation exposes one exogenous policy shock, `e_xpU`.
 

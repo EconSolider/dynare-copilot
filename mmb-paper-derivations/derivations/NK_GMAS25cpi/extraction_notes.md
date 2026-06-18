@@ -18,7 +18,7 @@
 - Core equations were extracted from the MinerU Markdown around the household problem, price-setting block, equilibrium conditions, policy-rule section, and appendix price-setting derivation.
 - The derivation uses the paper's log-linear canonical small-open-economy system as the operative model form.
 - The CPI Taylor rule is source-stated in the paper's simple-rules section; matching it specifically to `NK_GMAS25cpi` relies on the MMB model id label.
-- Coefficient definitions for $\Omega$, $\Theta$, and OCR-rendered appendix formulas are readable enough for first-pass extraction but should receive a targeted PDF check before reviewed status.
+- Coefficient definitions for \(\Omega\), \(\Theta\), and OCR-rendered appendix formulas are readable enough for first-pass extraction but should receive a targeted PDF check before reviewed status.
 
 ## Implementation Cross-Check
 

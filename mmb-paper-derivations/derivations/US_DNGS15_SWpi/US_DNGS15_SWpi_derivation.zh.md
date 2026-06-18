@@ -21,13 +21,13 @@
 
 代表性家庭选择消费、劳动和名义债券/存款头寸，并具有外部消费习惯。与所展示 Euler 方程和工资方程一致的通用非线性问题为：
 
-$$
+\[
 \max_{\{C_t,L_t,B_t\}} E_0 \sum_{t=0}^{\infty} \beta^t
 \left[
 \frac{(C_t-h C_{t-1})^{1-\sigma_c}}{1-\sigma_c}
 - \chi_L \frac{L_t^{1+\nu_l}}{1+\nu_l}
 \right]
-$$
+\]
 
 约束为包含名义总利率、工资收入、利润/转移以及影响 Euler 方程的偏好楔子 \(b_t\) 的跨期预算约束。
 
@@ -51,20 +51,20 @@ $$
 
 - **(F1) 去趋势生产率水平**：
 
-$$
+\[
 \tilde{z}_t = \rho_z \tilde{z}_{t-1} + \sigma_z \varepsilon_{z,t}.
-$$
+\]
 
 - **(F2) 趋势增长率组成项**：
 
-$$
+\[
 z_t = \frac{1}{1-\alpha}(\rho_z-1)\tilde{z}_{t-1}
 + \frac{1}{1-\alpha}\sigma_z \varepsilon_{z,t}.
-$$
+\]
 
 - **(F3) 带习惯的消费 Euler 方程**：
 
-$$
+\[
 \begin{aligned}
 c_t ={}& -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
 \big(R_t-E_t[\pi_{t+1}]+b_t\big)
@@ -73,99 +73,99 @@ c_t ={}& -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
 \frac{w_\astl_\ast}{c_\ast}(l_t-E_t[l_{t+1}]).
 \end{aligned}
-$$
+\]
 
 - **(F4) 投资 Euler 方程 / Tobin's \(q\)**：
 
-$$
+\[
 q_t^k = S''e^{2\gamma}(1+\bar{\beta})
 \left[
 i_t-\frac{1}{1+\bar{\beta}}(i_{t-1}-z_t)
 -\frac{\bar{\beta}}{1+\bar{\beta}}E_t[i_{t+1}+z_{t+1}]
 -\mu_t
 \right].
-$$
+\]
 
 - **(F5) 安装资本积累**：
 
-$$
+\[
 \bar{k}_t =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}-z_t)
 +\frac{i_\ast}{\bar{k}_\ast}i_t
 +\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
-$$
+\]
 
 - **(F6) 不含完整金融摩擦模块的无风险收益套利条件**：
 
-$$
+\[
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^k]
 +\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^k]
 -q_t^k
 = R_t+b_t-E_t[\pi_{t+1}].
-$$
+\]
 
 - **(F7) 实际资本服务**：
 
-$$
+\[
 k_t = u_t-z_t+\bar{k}_{t-1}.
-$$
+\]
 
 - **(F8) 利用率条件**：
 
-$$
+\[
 u_t = \frac{1-\psi}{\psi}r_t^k.
-$$
+\]
 
 - **(F9) 实际边际成本**：
 
-$$
+\[
 mc_t = w_t+\alpha l_t-\alpha k_t.
-$$
+\]
 
 - **(F10) 共同资本劳动比条件**：
 
-$$
+\[
 k_t = w_t-r_t^k+l_t.
-$$
+\]
 
 - **(F11) 总生产函数**：
 
-$$
+\[
 y_t =
 \Phi_p\big(\alpha k_t+(1-\alpha)l_t\big)
 +\mathcal{I}\{\rho_z<1\}(\Phi_p-1)\frac{1}{1-\alpha}\tilde{z}_t.
-$$
+\]
 
 - **(F12) 资源约束**：
 
-$$
+\[
 y_t =
 g_t+\frac{c_\ast}{y_\ast}c_t+\frac{i_\ast}{y_\ast}i_t
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t
 -\mathcal{I}\{\rho_z<1\}\frac{1}{1-\alpha}\tilde{z}_t.
-$$
+\]
 
 - **(F13) 价格 Phillips 曲线**：
 
-$$
+\[
 \pi_t =
 \kappa mc_t
 +\frac{\iota_p}{1+\iota_p\bar{\beta}}\pi_{t-1}
 +\frac{\bar{\beta}}{1+\iota_p\bar{\beta}}E_t[\pi_{t+1}]
 +\lambda_{f,t}.
-$$
+\]
 
 其中
 
-$$
+\[
 \kappa=
 \frac{(1-\zeta_p\bar{\beta})(1-\zeta_p)}
 {(1+\iota_p\bar{\beta})\zeta_p((\Phi_p-1)\epsilon_p+1)}.
-$$
+\]
 
 - **(F14) 工资 Phillips 曲线**：
 
-$$
+\[
 \begin{aligned}
 w_t ={}&
 \frac{(1-\zeta_w\bar{\beta})(1-\zeta_w)}
@@ -176,60 +176,60 @@ w_t ={}&
 +\frac{\bar{\beta}}{1+\bar{\beta}}E_t[w_{t+1}+z_{t+1}+\pi_{t+1}]
 +\lambda_{w,t}.
 \end{aligned}
-$$
+\]
 
 - **(F15) 工资设定中的家庭边际替代率**：
 
-$$
+\[
 w_t^h =
 \frac{1}{1-h e^{-\gamma}}
 \big(c_t-h e^{-\gamma}c_{t-1}+h e^{-\gamma}z_t\big)
 +\nu_l l_t.
-$$
+\]
 
 - **(F16) 含产出缺口的货币政策规则**：
 
-$$
+\[
 R_t =
 \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1\pi_t+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
-$$
+\]
 
 - **(F17) 含漂移通胀目标的货币政策规则**：
 
-$$
+\[
 R_t =
 \rho_R R_{t-1}
 +(1-\rho_R)\big(\psi_1(\pi_t-\pi_t^{\ast})+\psi_2(y_t-y_t^f)\big)
 +\psi_3\big((y_t-y_t^f)-(y_{t-1}-y_{t-1}^f)\big)
 +r_t^m.
-$$
+\]
 
 - **(F18) 时变通胀目标过程**：
 
-$$
+\[
 \pi_t^{\ast}=\rho_{\pi^{\ast}}\pi_{t-1}^{\ast}+\sigma_{\pi^{\ast}}\varepsilon_{\pi^{\ast},t}.
-$$
+\]
 
 `needs_review`：Rep-MMB `US_DNGS15_SWpi_rep.mod` 使用 `pist` 作为固定参数并注释掉 \(\pi_t^{\ast}\) 冲击过程，而论文侧 SWpi 小节定义了 (F18) 中的过程。
 
 - **(F19) 实现交叉核对中使用的资本名义总收益定义**：
 
-$$
+\[
 \tilde{R}_t^k-\pi_t =
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}r_t^k
 +\frac{1-\delta}{r_\ast^k+(1-\delta)}q_t^k
 -q_{t-1}^k.
-$$
+\]
 
 - **(F20) 实现交叉核对中使用的利差/套利方程**：
 
-$$
+\[
 E_t[\tilde{R}_{t+1}^k]
 = R_t-\frac{\sigma_c(1+h e^{-\gamma})}{1-h e^{-\gamma}}b_t+\sigma_{\omega,t}.
-$$
+\]
 
 `needs_review`：(F19)-(F20) 在 Rep-MMB SWpi 文件中位于 "Financial Frictions" 注释下，但该文件说明此变体没有金融摩擦。这里将其保留为实现交叉核对方程，而不是作为完整企业家净值模块处于激活状态的证据。
 
@@ -237,7 +237,7 @@ $$
 
 - **(F21) 弹性价格/工资消费 Euler 方程**：
 
-$$
+\[
 \begin{aligned}
 c_t^f ={}&
 -\frac{1-h e^{-\gamma}}{\sigma_c(1+h e^{-\gamma})}r_t^f+b_t
@@ -246,85 +246,85 @@ c_t^f ={}&
 +\frac{\sigma_c-1}{\sigma_c(1+h e^{-\gamma})}
 \frac{w_\astl_\ast}{c_\ast}(l_t^f-E_t[l_{t+1}^f]).
 \end{aligned}
-$$
+\]
 
 - **(F22) 弹性价格/工资投资方程**：
 
-$$
+\[
 q_t^{k,f}=S''e^{2\gamma}(1+\bar{\beta})
 \left[
 i_t^f-\frac{1}{1+\bar{\beta}}(i_{t-1}^f-z_t)
 -\frac{\bar{\beta}}{1+\bar{\beta}}E_t[i_{t+1}^f+z_{t+1}]
 -\mu_t
 \right].
-$$
+\]
 
 - **(F23) 弹性价格/工资资本积累**：
 
-$$
+\[
 \bar{k}_t^f=
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)(\bar{k}_{t-1}^f-z_t)
 +\frac{i_\ast}{\bar{k}_\ast}i_t^f
 +\frac{i_\ast}{\bar{k}_\ast}S''e^{2\gamma}(1+\bar{\beta})\mu_t.
-$$
+\]
 
 - **(F24) 弹性价格/工资实际资本**：
 
-$$
+\[
 k_t^f=u_t^f-z_t+\bar{k}_{t-1}^f.
-$$
+\]
 
 - **(F25) 弹性价格/工资利用率**：
 
-$$
+\[
 u_t^f=\frac{1-\psi}{\psi}r_t^{k,f}.
-$$
+\]
 
 - **(F26) 弹性价格/工资边际成本规范化**：
 
-$$
+\[
 w_t^f=-\alpha l_t^f+\alpha k_t^f.
-$$
+\]
 
 - **(F27) 弹性价格/工资资本劳动比**：
 
-$$
+\[
 k_t^f=w_t^f-r_t^{k,f}+l_t^f.
-$$
+\]
 
 - **(F28) 弹性价格/工资生产函数**：
 
-$$
+\[
 y_t^f=\Phi_p\alpha k_t^f+\Phi_p(1-\alpha)l_t^f
 +\frac{\Phi_p-1}{1-\alpha}\tilde{z}_t.
-$$
+\]
 
 - **(F29) 弹性价格/工资资源约束**：
 
-$$
+\[
 y_t^f=g_\astg_t+\frac{c_\ast}{y_\ast}c_t^f+\frac{i_\ast}{y_\ast}i_t^f
 +\frac{r_\ast^k k_\ast}{y_\ast}u_t^f
 -g_\ast\frac{1}{1-\alpha}\tilde{z}_t.
-$$
+\]
 
 - **(F30) 弹性价格/工资劳动供给 / MRS**：
 
-$$
+\[
 w_t^f=
 \frac{1}{1-h e^{-\gamma}}
 \big(c_t^f-h e^{-\gamma}c_{t-1}^f+h e^{-\gamma}z_t\big)
 +\nu_l l_t^f.
-$$
+\]
 
 - **(F31) 弹性价格/工资套利条件**：
 
-$$
+\[
 q_t^{k,f}=
 \frac{r_\ast^k}{r_\ast^k+(1-\delta)}E_t[r_{t+1}^{k,f}]
 +\frac{1-\delta}{r_\ast^k+(1-\delta)}E_t[q_{t+1}^{k,f}]
 -r_t^f
 +\frac{\sigma_c(1+h e^{-\gamma})}{1-h e^{-\gamma}}b_t.
-$$
+\]
 
 政策规则使用的产出缺口为 \(y_t-y_t^f\)。弹性价格/工资变量存在于 Rep-MMB 实现和论文对 \(y_t^f\) 的定义中；它们不是单独的福利模型。
 
@@ -332,51 +332,51 @@ $$
 
 - **(F32) 政府支出**：
 
-$$
+\[
 g_t=\rho_g g_{t-1}+\sigma_g\varepsilon_{g,t}+\eta_{gz}\sigma_z\varepsilon_{z,t}.
-$$
+\]
 
 - **(F33) 偏好楔子 / 跨期楔子**：
 
-$$
+\[
 b_t=\rho_b b_{t-1}+\sigma_b\varepsilon_{b,t}.
-$$
+\]
 
 - **(F34) 投资边际效率**：
 
-$$
+\[
 \mu_t=\rho_\mu\mu_{t-1}+\sigma_\mu\varepsilon_{\mu,t}.
-$$
+\]
 
 - **(F35) 价格加成冲击**：
 
-$$
+\[
 \lambda_{f,t}=
 \rho_{\lambda_f}\lambda_{f,t-1}
 +\sigma_{\lambda_f}\varepsilon_{\lambda_f,t}
 -\eta_{\lambda_f}\sigma_{\lambda_f}\varepsilon_{\lambda_f,t-1}.
-$$
+\]
 
 - **(F36) 工资加成冲击**：
 
-$$
+\[
 \lambda_{w,t}=
 \rho_{\lambda_w}\lambda_{w,t-1}
 +\sigma_{\lambda_w}\varepsilon_{\lambda_w,t}
 -\eta_{\lambda_w}\sigma_{\lambda_w}\varepsilon_{\lambda_w,t-1}.
-$$
+\]
 
 - **(F37) 货币政策残差**：
 
-$$
+\[
 r_t^m=\rho_{r^m}r_{t-1}^m+\sigma_{r^m}\varepsilon_{r^m,t}.
-$$
+\]
 
 - **(F38) 实现交叉核对中保留的利差冲击**：
 
-$$
+\[
 \sigma_{\omega,t}=\rho_{\sigma_\omega}\sigma_{\omega,t-1}+\sigma_{\sigma_\omega}\varepsilon_{\sigma_\omega,t}.
-$$
+\]
 
 在 Rep-MMB SWpi 文件中，`rho_sigw = 0` 且 `psi_sigw` 的标准差为零，因此该冲击存在于变量列表中，但在记录的校准下不活跃。
 
@@ -386,15 +386,15 @@ $$
 
 - **对数偏离稳态**：
 
-$$
+\[
 c=i=l=q^k=\bar{k}=y=k=u=mc=w=w^h=z=\tilde{z}=\mu=\lambda_f=\lambda_w=g=b=r^m=0.
-$$
+\]
 
 - **通胀目标约定**：
 
-$$
+\[
 \pi=0,\qquad R=0,\qquad \pi^{\ast}=0
-$$
+\]
 
 当目标被表示为相对均值的偏离时，上式成立。Rep-MMB 文件则校准 `pist = 1.0069`，并在 `model(linear)` 中使用 `pi - pist`，这一点在升级前应复核。
 

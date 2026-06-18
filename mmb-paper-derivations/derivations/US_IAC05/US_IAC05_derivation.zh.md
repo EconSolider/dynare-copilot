@@ -18,17 +18,17 @@
 
 耐心家庭选择消费、住房、劳动、债券和实际货币余额：
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}\beta^t
 \left(\log c'_t+j_t\log h'_t-\frac{(L'_t)^\eta}{\eta}+\chi\log\frac{M'_t}{P_t}\right)
-$$
+\]
 
 约束为名义债务流量预算：
 
-$$
+\[
 c'_t+q_t\Delta h'_t+\frac{R_{t-1}b'_{t-1}}{\pi_t}
 =b'_t+w'_tL'_t+F_t+T'_t-\frac{\Delta M'_t}{P_t}.
-$$
+\]
 
 货币需求是可分的；由于政策通过利率规则实施，简化系统省略货币需求。
 
@@ -36,69 +36,69 @@ $$
 
 企业家比耐心家庭更不耐心，选择消费、资本、商业地产、劳动需求和债务：
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}\gamma^t\log c_t,\qquad \gamma<\beta.
-$$
+\]
 
 扩展模型的生产函数为：
 
-$$
+\[
 Y_t=A_tK_{t-1}^{\mu}h_{t-1}^{\nu}(L'_t)^{\alpha(1-\mu-\nu)}
 (L''_t)^{(1-\alpha)(1-\mu-\nu)}.
-$$
+\]
 
 流量预算约束为：
 
-$$
+\[
 \frac{Y_t}{X_t}+b_t
 =c_t+q_t\Delta h_t+\frac{R_{t-1}b_{t-1}}{\pi_t}
 +w'_tL'_t+w''_tL''_t+I_t+\xi_{e,t}+\xi_{K,t}.
-$$
+\]
 
 资本随投资 \(I_t=K_t-(1-\delta)K_{t-1}\) 演化，调整成本为：
 
-$$
+\[
 \xi_{K,t}=\frac{\psi}{2\delta}\left(\frac{I_t}{K_{t-1}}-\delta\right)^2K_{t-1}.
-$$
+\]
 
 住房调整成本为：
 
-$$
+\[
 \xi_{e,t}=\frac{\phi_e}{2}\left(\frac{\Delta h_t}{h_{t-1}}\right)^2q_th_{t-1}.
-$$
+\]
 
 在用于对数线性化的确定性邻域中，企业家抵押约束为绑定：
 
-$$
+\[
 b_t=mE_t\left(\frac{q_{t+1}h_t\pi_{t+1}}{R_t}\right).
-$$
+\]
 
 ### 非耐心家庭
 
 非耐心家庭选择消费、住房、劳动、债务和实际货币余额：
 
-$$
+\[
 \max E_0\sum_{t=0}^{\infty}(\beta'')^t
 \left(\log c''_t+j_t\log h''_t-\frac{(L''_t)^\eta}{\eta}+\chi\log\frac{M''_t}{P_t}\right),
 \qquad \beta''<\beta.
-$$
+\]
 
 其流量预算和抵押约束为：
 
-$$
+\[
 c''_t+q_t\Delta h''_t+\frac{R_{t-1}b''_{t-1}}{\pi_t}
 =b''_t+w''_tL''_t+T''_t-\frac{\Delta M''_t}{P_t}-\xi_{h,t},
-$$
+\]
 
-$$
+\[
 b''_t=m''E_t\left(\frac{q_{t+1}h''_t\pi_{t+1}}{R_t}\right),
-$$
+\]
 
 其中：
 
-$$
+\[
 \xi_{h,t}=\frac{\phi_h}{2}\left(\frac{\Delta h''_t}{h''_{t-1}}\right)^2q_th''_{t-1}.
-$$
+\]
 
 ### 零售商和货币当局
 
@@ -110,22 +110,22 @@ $$
 
 - **(F1) 耐心家庭 Euler 方程**：
 
-$$
+\[
 \hat c'_t=E_t\hat c'_{t+1}-\widehat{rr}_t.
-$$
+\]
 
 - **(F2) 企业家投资条件**：
 
-$$
+\[
 \hat I_t-\hat K_{t-1}
 =\gamma(E_t\hat I_{t+1}-\hat K_t)
 +\frac{1-\gamma(1-\delta)}{\psi}(E_t\hat Y_{t+1}-E_t\hat X_{t+1}-\hat K_t)
 +\frac{1}{\psi}(\hat c_t-E_t\hat c_{t+1}).
-$$
+\]
 
 - **(F3) 企业家住房-消费边际条件**：
 
-$$
+\[
 \begin{aligned}
 \hat q_t={}&\gamma_eE_t\hat q_{t+1}
 +(1-\gamma_e)(E_t\hat Y_{t+1}-E_t\hat X_{t+1}-\hat h_t)
@@ -133,13 +133,13 @@ $$
 &-(1-m\beta)E_t\Delta\hat c_{t+1}
 -\phi_e(\Delta\hat h_t-\gamma E_t\Delta\hat h_{t+1}).
 \end{aligned}
-$$
+\]
 
 `needs_review`：Markdown 某处显示 `m beta r rrhat`，而 MMB `.mod` 使用 `m*beta*rrhat`；本稿依据 implementation cross-check 和附录上下文采用后者。
 
 - **(F4) 非耐心家庭住房-消费边际条件**：
 
-$$
+\[
 \begin{aligned}
 \hat q_t={}&\gamma_hE_t\hat q_{t+1}
 +(1-\gamma_h)(\hat j_t-\hat h''_t)
@@ -147,87 +147,87 @@ $$
 +(1-m''\beta)(\hat c''_t-\omega E_t\hat c''_{t+1})\\
 &-\phi_h(\Delta\hat h''_t-\beta''E_t\Delta\hat h''_{t+1}).
 \end{aligned}
-$$
+\]
 
 - **(F5) 含市场出清的耐心家庭住房需求**：
 
-$$
+\[
 \begin{aligned}
 \hat q_t={}&\beta E_t\hat q_{t+1}+(1-\beta)\hat j_t+\iota\hat h_t+\iota''\hat h''_t
 +\hat c'_t-\beta E_t\hat c'_{t+1}\\
 &+\frac{\phi_h}{h'}\left(h\Delta\hat h_t+h''\Delta\hat h''_t
 -\beta hE_t\Delta\hat h_{t+1}-\beta h''E_t\Delta\hat h''_{t+1}\right).
 \end{aligned}
-$$
+\]
 
 `needs_review`：附录将最后的调整成本括号归入耐心家庭住房条件；由于 OCR 换行较嘈杂，调整成本系数应对照 PDF 检查。
 
 - **(F6) 生产和劳动市场模块**：
 
-$$
+\[
 \hat Y_t=
 \frac{\eta}{\eta-(1-\nu-\mu)}
 \left(\hat A_t+\nu\hat h_{t-1}+\mu\hat K_{t-1}\right)
 -\frac{1-\nu-\mu}{\eta-(1-\nu-\mu)}
 \left(\hat X_t+\alpha\hat c'_t+(1-\alpha)\hat c''_t\right).
-$$
+\]
 
 - **(F7) Phillips 曲线**：
 
-$$
+\[
 \hat\pi_t=\beta E_t\hat\pi_{t+1}-\kappa\hat X_t+\hat u_t.
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F8) 总需求 / 商品市场出清**：
 
-$$
+\[
 \hat Y_t=\frac{c}{Y}\hat c_t+\frac{c'}{Y}\hat c'_t+\frac{c''}{Y}\hat c''_t+\frac{I}{Y}\hat I_t.
-$$
+\]
 
 - **(F9) 企业家借款约束**：
 
-$$
+\[
 \hat b_t=E_t\hat q_{t+1}+\hat h_t-\widehat{rr}_t.
-$$
+\]
 
 - **(F10) 非耐心家庭借款约束**：
 
-$$
+\[
 \hat b''_t=E_t\hat q_{t+1}+\hat h''_t-\widehat{rr}_t.
-$$
+\]
 
 - **(F11) 资本积累**：
 
-$$
+\[
 \hat K_t=\delta\hat I_t+(1-\delta)\hat K_{t-1}.
-$$
+\]
 
 - **(F12) 企业家资金流 / 净值动态**：
 
-$$
+\[
 \begin{aligned}
 \frac{b}{Y}\hat b_t={}&\frac{c}{Y}\hat c_t+\frac{qh}{Y}\Delta\hat h_t+\frac{I}{Y}\hat I_t
 +\frac{Rb}{Y}(\hat R_{t-1}+\hat b_{t-1}-\hat\pi_t)\\
 &-(1-s'-s'')(\hat Y_t-\hat X_t).
 \end{aligned}
-$$
+\]
 
 - **(F13) 非耐心家庭资金流 / 净值动态**：
 
-$$
+\[
 \frac{b''}{Y}\hat b''_t=
 \frac{c''}{Y}\hat c''_t+\frac{qh''}{Y}\Delta\hat h''_t
 +\frac{Rb''}{Y}(\hat b''_{t-1}+\hat R_{t-1}-\hat\pi_t)
 -s''(\hat Y_t-\hat X_t).
-$$
+\]
 
 - **(F14) 事前实际利率定义**：
 
-$$
+\[
 \widehat{rr}_t=\hat R_t-E_t\hat\pi_{t+1}.
-$$
+\]
 
 住房市场出清由固定总住房供给施加，并已嵌入变换后的住房需求方程。贷款市场出清为 \(b_t+b'_t+b''_t=0\)，稳态下耐心家庭为净贷款人。
 
@@ -235,29 +235,29 @@ $$
 
 - **(F15) 货币政策规则**：
 
-$$
+\[
 \hat R_t=(1-r_R)(1+r_\pi)\hat\pi_{t-1}
 +r_Y(1-r_R)\hat Y_{t-1}
 +r_R\hat R_{t-1}+\hat e_{R,t}.
-$$
+\]
 
 - **(F16) 住房偏好冲击**：
 
-$$
+\[
 \hat j_t=\rho_j\hat j_{t-1}+\hat e_{j,t}.
-$$
+\]
 
 - **(F17) 通胀/加成冲击**：
 
-$$
+\[
 \hat u_t=\rho_u\hat u_{t-1}+\hat e_{u,t}.
-$$
+\]
 
 - **(F18) 技术冲击**：
 
-$$
+\[
 \hat A_t=\rho_A\hat A_{t-1}+\hat e_{A,t}.
-$$
+\]
 
 ## 6. Steady-State Solution
 
@@ -265,66 +265,66 @@ $$
 
 定义：
 
-$$
+\[
 \gamma_e=(1-m)\gamma+m\beta,\qquad
 \gamma_h=\beta''+m''(\beta-\beta''),\qquad
 \omega=\frac{\beta''-m''\beta''}{1-m''\beta}.
-$$
+\]
 
 收入份额：
 
-$$
+\[
 s'=\frac{\alpha(1-\mu-\nu)+X-1}{X},\qquad
 s''=\frac{(1-\alpha)(1-\mu-\nu)}{X}.
-$$
+\]
 
 商业地产和债务比率：
 
-$$
+\[
 \frac{qh}{Y}=\frac{\gamma\nu}{1-\gamma_e}\frac{1}{X},\qquad
 \frac{b}{Y}=\frac{\beta m\gamma\nu}{1-\gamma_e}\frac{1}{X}.
-$$
+\]
 
 耐心和非耐心家庭的房地产比率：
 
-$$
+\[
 \frac{qh'}{Y}
 =\frac{j}{1-\beta}s'
 +\frac{jm\gamma\nu}{1-\gamma_e}\frac{1}{X}
 +\frac{jm''s''}{1-\beta''-m''(\beta-\beta''-j(1-\beta))}.
-$$
+\]
 
-$$
+\[
 \frac{qh''}{Y}
 =\frac{js''}{1-\beta''-m''(\beta-\beta''-j(1-\beta))}.
-$$
+\]
 
 非耐心家庭债务和消费比率：
 
-$$
+\[
 \frac{b''}{Y}
 =\frac{j\beta m''s''}{1-\beta''-m''(\beta-\beta'')+jm''(1-\beta)}.
-$$
+\]
 
-$$
+\[
 \frac{c''}{Y}
 =\frac{1-\beta''-m''(\beta-\beta'')}{1-\beta''-m''(\beta-\beta'')+jm''(1-\beta)}s''.
-$$
+\]
 
 企业家消费比率：
 
-$$
+\[
 \frac{c}{Y}
 =\left(\mu+\nu-\frac{\delta\gamma\mu}{1-\gamma(1-\delta)}
 -\frac{(1-\beta)m\gamma\nu}{1-\gamma_e}\right)\frac{1}{X}.
-$$
+\]
 
 耐心家庭消费比率和投资比率随后由总资源核算确定：
 
-$$
+\[
 \frac{c'}{Y}=1-\frac{c}{Y}-\frac{c''}{Y}-\frac{I}{Y},\qquad
 \frac{I}{Y}=1-\frac{c}{Y}-\frac{c'}{Y}-\frac{c''}{Y}.
-$$
+\]
 
 `needs_review`：论文附录给出了多个稳态比率，但没有给出每个归一化变量的完整独立求解顺序。本节应对照原始附录和 MMB 校准后再晋升为非 first-pass 状态。
 

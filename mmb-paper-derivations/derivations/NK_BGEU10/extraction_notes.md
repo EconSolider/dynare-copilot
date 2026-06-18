@@ -16,7 +16,7 @@
 - Status: `needs_review`
 - Core linear equations were extracted from the MinerU Markdown around paper equations (24)-(28), (34), (38)-(39), and the productivity process.
 - The derivation intentionally records the nonlinear setup only as background and uses the paper's linearized monetary-policy system as the archived operative model form.
-- The coefficient definitions for $h_0$ and $h_F$ are marked `needs_review`; the OCR is readable but may have dropped grouping around multiplicative factors. A targeted PDF formula check is recommended before this entry is promoted to reviewed.
+- The coefficient definitions for \(h_0\) and \(h_F\) are marked `needs_review`; the OCR is readable but may have dropped grouping around multiplicative factors. A targeted PDF formula check is recommended before this entry is promoted to reviewed.
 
 ## Implementation Cross-Check
 

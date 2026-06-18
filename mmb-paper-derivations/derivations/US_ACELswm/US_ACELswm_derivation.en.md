@@ -19,40 +19,40 @@
 
 The competitive final-good producer aggregates intermediate goods:
 
-$$
+\[
 Y_t=\left[\int_0^1 y_t(i)^{1/\lambda_f}\,di\right]^{\lambda_f},
 \qquad 1\leq \lambda_f<\infty .
 \tag{F1}
-$$
+\]
 
-Profit maximization implies the demand curve for intermediate good $i$:
+Profit maximization implies the demand curve for intermediate good \(i\):
 
-$$
+\[
 \frac{y_t(i)}{Y_t}=\left(\frac{P_t}{P_t(i)}\right)^{\lambda_f/(\lambda_f-1)} .
 \tag{F2}
-$$
+\]
 
 The associated aggregate price index is:
 
-$$
+\[
 P_t=\left[\int_0^1 P_t(i)^{1/(1-\lambda_f)}\,di\right]^{1-\lambda_f}.
 \tag{F3}
-$$
+\]
 
 ### 2.2 Intermediate-good firms
 
-Intermediate firm $i$ produces with neutral technology, embodied technology scaling, and fixed costs:
+Intermediate firm \(i\) produces with neutral technology, embodied technology scaling, and fixed costs:
 
-$$
+\[
 y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
 z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
 \tag{F4}
-$$
+\]
 
-For the homogeneous-capital benchmark the firm rents capital and labor and maximizes expected discounted nominal profits subject to demand and Calvo pricing. For the firm-specific-capital model, firm $i$ owns its capital and chooses price, labor, investment, and utilization:
+For the homogeneous-capital benchmark the firm rents capital and labor and maximizes expected discounted nominal profits subject to demand and Calvo pricing. For the firm-specific-capital model, firm \(i\) owns its capital and chooses price, labor, investment, and utilization:
 
-$$
+\[
 E_t\sum_{j=0}^{\infty}\beta^j v_{t+j}
 \left\{
 P_{t+j}(i)y_{t+j}(i)
@@ -60,39 +60,39 @@ P_{t+j}(i)y_{t+j}(i)
 -P_{t+j}\Upsilon_{t+j}^{-1}\left[I_{t+j}(i)+a(u_{t+j}(i))\bar K_{t+j}(i)\right]
 \right\}.
 \tag{F5}
-$$
+\]
 
 Firm-specific capital evolves as:
 
-$$
+\[
 \bar K_{t+1}(i)=(1-\delta)\bar K_t(i)+
 \left[1-S\left(\frac{I_t(i)}{I_{t-1}(i)}\right)\right]I_t(i).
 \tag{F6}
-$$
+\]
 
-Calvo price setting: with probability $1-\xi_p$ the firm reoptimizes its price; otherwise:
+Calvo price setting: with probability \(1-\xi_p\) the firm reoptimizes its price; otherwise:
 
-$$
+\[
 P_t(i)=\pi_{t-1}P_{t-1}(i).
 \tag{F7}
-$$
+\]
 
 ### 2.3 Households
 
-Household $j$ maximizes habit preferences:
+Household \(j\) maximizes habit preferences:
 
-$$
+\[
 E_t^j\sum_{\ell=0}^{\infty}\beta^{\ell-t}
 \left[
 \log(C_{t+\ell}-bC_{t+\ell-1})
 -\psi_L\frac{h_{j,t+\ell}^2}{2}
 \right].
 \tag{F8}
-$$
+\]
 
 The nominal asset accumulation equation is:
 
-$$
+\[
 \begin{aligned}
 M_{t+1}={}&R_t\left[M_t-Q_t+(x_t-1)M_t^a\right]+A_{j,t}+Q_t+W_{j,t}h_{j,t}\\
 &+P_t r_t^k u_t\bar K_t+D_t
@@ -100,47 +100,47 @@ M_{t+1}={}&R_t\left[M_t-Q_t+(x_t-1)M_t^a\right]+A_{j,t}+Q_t+W_{j,t}h_{j,t}\\
 -P_t\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right].
 \end{aligned}
 \tag{F9}
-$$
+\]
 
 Transactions velocity and money-service costs are:
 
-$$
+\[
 V_t=\frac{P_tC_t}{Q_t},\qquad \eta'(V_t)>0,\qquad \eta''(V_t)>0.
 \tag{F10}
-$$
+\]
 
 Capital services, utilization, and investment adjustment are:
 
-$$
+\[
 K_t=u_t\bar K_t,\qquad
 \bar K_{t+1}=(1-\delta)\bar K_t+\left[1-S\left(\frac{I_t}{I_{t-1}}\right)\right]I_t .
 \tag{F11}
-$$
+\]
 
 ### 2.4 Wage setters
 
 Differentiated labor services are aggregated as:
 
-$$
+\[
 H_t=\left[\int_0^1 h_{j,t}^{1/\lambda_w}\,dj\right]^{\lambda_w}.
 \tag{F12}
-$$
+\]
 
 Labor demand and the wage index are:
 
-$$
+\[
 h_{j,t}=\left(\frac{W_t}{W_{j,t}}\right)^{\lambda_w/(\lambda_w-1)}H_t,
 \qquad
 W_t=\left[\int_0^1 W_{j,t}^{1/(1-\lambda_w)}\,dj\right]^{1-\lambda_w}.
 \tag{F13}
-$$
+\]
 
-With probability $1-\xi_w$ the household reoptimizes its wage; otherwise:
+With probability \(1-\xi_w\) the household reoptimizes its wage; otherwise:
 
-$$
+\[
 W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
 \tag{F14}
-$$
+\]
 
 ## 3. First-Order Conditions
 
@@ -148,21 +148,21 @@ $$
 
 The paper states that the homogeneous- and firm-specific-capital aggregate systems differ only in the mapping from structural parameters to the slope of the inflation equation. The reduced inflation equation is:
 
-$$
+\[
 \Delta\hat\pi_t
 =E_t\left[\beta\Delta\hat\pi_{t+1}+\gamma\hat s_t\mid\Omega_t\right].
 \tag{F15}
-$$
+\]
 
 For homogeneous capital:
 
-$$
+\[
 \gamma=\frac{(1-\xi_p)(1-\beta\xi_p)}{\xi_p}\chi,
 \qquad \chi=1.
 \tag{F16}
-$$
+\]
 
-For firm-specific capital, $\chi$ is a nonlinear function of structural parameters; the exact function is referred to the technical appendix and is `needs_review` in this archive entry.
+For firm-specific capital, \(\chi\) is a nonlinear function of structural parameters; the exact function is referred to the technical appendix and is `needs_review` in this archive entry.
 
 ### 3.2 Linear equilibrium conditions from technical-appendix cross-check
 
@@ -170,18 +170,18 @@ The MMB implementation labels the sticky-price block equations as technical-appe
 
 **(F17) Capital Euler equation (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \hat\lambda_{z^{\ast},t+1}
 \frac{1-\delta}{\tilde\rho+1-\delta}\hat{\tilde\mu}_{t+1}
 \frac{\tilde\rho}{\tilde\rho+1-\delta}\hat{\tilde\rho}_{t+1}
 -\hat\lambda_{z^{\ast},t}-\hat{\tilde\mu}_t
 =\hat\mu_{z,t+1}+\frac{1}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 \tag{F17}
-$$
+\]
 
 **(F18) Investment Euler equation (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \begin{aligned}
 &-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t+1}
 -\hat{\tilde\mu}_{t-1|t}
@@ -193,11 +193,11 @@ $$
 -\frac{\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \end{aligned}
 \tag{F18}
-$$
+\]
 
 **(F19) Shadow rental rate on capital (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \begin{aligned}
 \hat{\tilde w}_{t-1|t}
 +\frac{1}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\hat{\tilde y}_t
@@ -210,30 +210,30 @@ $$
 +\frac{1}{1-\alpha}\epsilon_t .
 \end{aligned}
 \tag{F19}
-$$
+\]
 
 **(F20) Capital evolution (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 (\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))\hat i_{t-1|t}
 -\mu_\Upsilon\mu_{z^{\ast}}\hat{\bar k}_{t+1}
 +(1-\delta)\hat{\bar k}_{t}
 =(1-\delta)\hat\mu_{z,t}
 +\frac{1-\delta}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \tag{F20}
-$$
+\]
 
 **(F21) Sticky-price inflation equation (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \beta\hat\pi_{t+1}-(1+\beta\varsigma)\hat\pi_t+\gamma\hat s_t
 =-\varsigma\hat\pi_{t-1}.
 \tag{F21}
-$$
+\]
 
 **(F22) Marginal-cost equation (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \begin{aligned}
 \hat{\tilde w}_{t-1|t}-\hat s_t
 +\frac{\alpha}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\hat{\tilde y}_t
@@ -245,38 +245,38 @@ $$
 +\frac{1}{1-\alpha}\epsilon_t .
 \end{aligned}
 \tag{F22}
-$$
+\]
 
 **(F23) Money demand (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \hat c_{t-1|t}-\hat q_t=\frac{R}{(R-1)(2+\varphi_\eta)}\hat R_t .
 \tag{F23}
-$$
+\]
 
 **(F24) Consumption Euler equation (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \mathcal A_c E_t\hat c_{t+1}+\mathcal B_c\hat c_t+\mathcal C_c\hat\lambda_{z^{\ast},t}
 \mathcal D_c\hat q_t+\mathcal E_c\hat c_{t-1}
 =\mathcal F_cE_t\hat\mu_{z,t+1}+\mathcal G_cE_t\hat\mu_{\Upsilon,t+1}
 \mathcal H_c\hat\mu_{z,t}+\mathcal J_c\hat\mu_{\Upsilon,t}.
 \tag{F24}
-$$
+\]
 
-The coefficients $\mathcal A_c,\ldots,\mathcal J_c$ are functions of $(\beta,b,\mu_{z^{\ast}},c,\lambda_{z^{\ast}},\eta,\eta',V,\alpha)$ as in the implementation cross-check; this compact form is marked `needs_review`.
+The coefficients \(\mathcal A_c,\ldots,\mathcal J_c\) are functions of \((\beta,b,\mu_{z^{\ast}},c,\lambda_{z^{\ast}},\eta,\eta',V,\alpha)\) as in the implementation cross-check; this compact form is marked `needs_review`.
 
 **(F25) Monetary-base first-order condition (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \hat\lambda_{z^{\ast},t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^{\ast},t}
 =\hat\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
 \tag{F25}
-$$
+\]
 
 **(F26) Wage first-order condition (`needs_review`, implementation_cross_check):**
 
-$$
+\[
 \begin{aligned}
 \eta_2\hat{\tilde w}_{t+1}+\eta_4\hat\pi_{t+1}
 +\eta_1\hat{\tilde w}_{t}+\eta_3\hat\pi_t
@@ -288,67 +288,67 @@ $$
 -\eta_7\hat\mu_{z,t}.
 \end{aligned}
 \tag{F26}
-$$
+\]
 
 ### 3.3 Utilization and household steady-state FOCs
 
 The paper-side steady-state nominal return and money FOC are:
 
-$$
+\[
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 \tag{F27}
-$$
+\]
 
-$$
+\[
 R_t=1+\eta'\left(\frac{P_tC_t}{Q_t}\right)
 \left(\frac{P_tC_t}{Q_t}\right)^2.
 \tag{F28}
-$$
+\]
 
 The interest semi-elasticity of money demand is:
 
-$$
+\[
 \epsilon=\frac{1}{4}\left(\frac{1}{R-1}\right)\left(\frac{1}{2+\varphi_\eta}\right),
 \qquad
 \varphi_\eta=\frac{\eta''V}{\eta'} .
 \tag{F29}
-$$
+\]
 
 Linearized utilization satisfies:
 
-$$
+\[
 E_t\left[\frac{1}{\sigma_a}\hat r_t^k-\hat u_t\mid\Omega_t\right]=0.
 \tag{F30}
-$$
+\]
 
 The investment-adjustment-cost FOC can be summarized as:
 
-$$
+\[
 \hat i_t=\hat i_{t-1}
 +\frac{1}{S''}\sum_{j=0}^{\infty}\beta^j
 E_t\hat P_{k',t+j}.
 \tag{F31}
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 Loan market clearing requires financial intermediaries to lend the funds used by firms to pay the wage bill:
 
-$$
+\[
 W_tH_t=x_tM_t-Q_t.
 \tag{F32}
-$$
+\]
 
 The aggregate resource constraint is:
 
-$$
+\[
 (1+\eta(V_t))C_t+\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right]\leq Y_t .
 \tag{F33}
-$$
+\]
 
 The linear resource constraint used in the implementation cross-check is:
 
-$$
+\[
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)\hat c_{t-1|t}
 +\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,\hat i_{t-1|t}
@@ -361,19 +361,19 @@ $$
 -(\tilde y+\phi)\epsilon_t=0 .
 \end{aligned}
 \tag{F34}
-$$
+\]
 
 Money-base accumulation links money growth, money balances, and inflation:
 
-$$
+\[
 -\hat m_t-\hat\pi_{t-1}+\hat m_{t-1}+\hat x_{t-1}
 =\hat\mu_{z,t}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \tag{F35}
-$$
+\]
 
 The linearized production function is:
 
-$$
+\[
 \begin{aligned}
 (\tilde y+\phi)(1-\alpha)\hat h_t-\tilde y\hat{\tilde y}_t
 +\left((\tilde y+\phi)\alpha-\frac{\tilde\rho\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)\hat u_{t-1|t}
@@ -383,101 +383,101 @@ $$
 -(\tilde y+\phi)\epsilon_t .
 \end{aligned}
 \tag{F36}
-$$
+\]
 
 Capital utilization in the implementation cross-check is:
 
-$$
+\[
 \hat u_t=\frac{1}{\sigma_a}\hat{\tilde\rho}_t .
 \tag{F37}
-$$
+\]
 
 ## 5. Exogenous Processes
 
 Neutral technology growth:
 
-$$
+\[
 \hat\mu_{z,t}=\rho_{\mu_z}\hat\mu_{z,t-1}+\varepsilon_{\mu_z,t}.
 \tag{F38}
-$$
+\]
 
 Capital-embodied technology growth:
 
-$$
+\[
 \hat\mu_{\Upsilon,t}=\rho_{\mu_\Upsilon}\hat\mu_{\Upsilon,t-1}+\varepsilon_{\mu_\Upsilon,t}.
 \tag{F39}
-$$
+\]
 
 Monetary growth decomposes into a monetary-policy component and technology-response components:
 
-$$
+\[
 \hat x_t=\hat x_{M,t}+\hat x_{z,t}+\hat x_{\Upsilon,t}.
 \tag{F40}
-$$
+\]
 
 The monetary-policy component is:
 
-$$
+\[
 \hat x_{M,t}=\rho_{xM}\hat x_{M,t-1}+\varepsilon_{M,t}.
 \tag{F41}
-$$
+\]
 
 The policy response to neutral technology is ARMA(1,1):
 
-$$
+\[
 \hat x_{z,t}=\rho_{xz}\hat x_{z,t-1}+c_z\varepsilon_{\mu_z,t}
 +c_z^p\varepsilon_{\mu_z,t-1}.
 \tag{F42}
-$$
+\]
 
 The policy response to embodied technology is ARMA(1,1):
 
-$$
+\[
 \hat x_{\Upsilon,t}=\rho_{x\Upsilon}\hat x_{\Upsilon,t-1}
 +c_\Upsilon\varepsilon_{\mu_\Upsilon,t}
 +c_\Upsilon^p\varepsilon_{\mu_\Upsilon,t-1}.
 \tag{F43}
-$$
+\]
 
 The MMB implementation also includes an additional transitory neutral technology shock not in the original code:
 
-$$
+\[
 \epsilon_t=\rho_\epsilon\epsilon_{t-1}+\sigma_\epsilon\varepsilon_{\epsilon,t}.
 \tag{F44}
-$$
+\]
 
 ## 6. Steady-State Solution
 
 Because `US_ACELswm` is implemented as `model(linear)`, the dynamic equations are written for deviations around the balanced-growth steady state; the linearized steady states of hatted variables are zero. The nonstochastic levels used for scaling are:
 
-$$
+\[
 \mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z .
 \tag{F45}
-$$
+\]
 
-$$
+\[
 \tilde\rho=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta),
 \qquad
 \pi=\frac{x}{\mu_{z^{\ast}}},
 \qquad
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
 \tag{F46}
-$$
+\]
 
 Money-service calibration:
 
-$$
+\[
 \eta'=\frac{R-1}{V^2},
 \qquad
 \varphi_\eta=\frac{1}{4\epsilon(R-1)}-2,
 \qquad
 q=\frac{c}{V}.
 \tag{F47}
-$$
+\]
 
 Marginal cost and factor ratios:
 
-$$
+\[
 s=\frac{1}{\lambda_f},
 \qquad
 R_\nu=\nu R+1-\nu,
@@ -485,20 +485,20 @@ R_\nu=\nu R+1-\nu,
 \tilde w=\frac{1-\alpha}{R_\nu}s
 \left(\frac{\tilde\rho}{\alpha s}\right)^{\alpha/(\alpha-1)}.
 \tag{F48}
-$$
+\]
 
-$$
+\[
 \frac{h}{\bar k}
 =\left[
 \frac{\tilde\rho}
 {\alpha s(\mu_{z^{\ast}}\mu_\Upsilon)^{1-\alpha}}
 \right]^{1/(1-\alpha)} .
 \tag{F49}
-$$
+\]
 
 The remaining steady-state levels are solved recursively from the household labor condition, consumption, money, production, fixed-cost zero-profit condition, investment, and marginal utility:
 
-$$
+\[
 \bar k=
 \left[
 \frac{(1+\eta)\tilde w}{\psi_L(h/\bar k)^{\sigma_L}}
@@ -510,32 +510,32 @@ $$
 \right)
 \right]^{1/(1+\sigma_L)} .
 \tag{F50}
-$$
+\]
 
-$$
+\[
 h=(h/\bar k)\bar k,\qquad
 c=\bar k^{-\sigma_L}\frac{\tilde w}{\psi_L(h/\bar k)^{\sigma_L}}
 \frac{\mu_{z^{\ast}}-\beta b}{\lambda_w(\mu_{z^{\ast}}-b)(1+\eta+\eta'V)} .
 \tag{F51}
-$$
+\]
 
-$$
+\[
 m=\frac{\nu\tilde w h+q}{x},
 \qquad
 \tilde y=\frac{\tilde\rho\bar k}{\mu_\Upsilon\mu_{z^{\ast}}}+\tilde w R_\nu h,
 \qquad
 \phi=\tilde y(\lambda_f-1).
 \tag{F52}
-$$
+\]
 
-$$
+\[
 i=\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k,
 \qquad
 \lambda_{z^{\ast}}=
 \frac{\mu_{z^{\ast}}-b\beta}{\mu_{z^{\ast}}c-bc}
 \frac{1}{1+\eta+\eta'V}.
 \tag{F53}
-$$
+\]
 
 Steady-state values and formulas above are implementation-cross-checked and marked `needs_review` until the technical appendix or original replication package is source-level verified.
 

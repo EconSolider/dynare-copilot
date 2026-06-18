@@ -21,7 +21,7 @@
 
 - Overall formula status: `needs_review`.
 - MinerU Markdown captures the main model equations clearly enough for a first-pass derivation.
-- Several OCR issues remain possible because the body PDF was not opened for formula-level comparison. Examples include Greek-letter ambiguity, line breaks in long summations, and the paper's use of $\phi$ both for policy coefficients and a price-setting correction term.
+- Several OCR issues remain possible because the body PDF was not opened for formula-level comparison. Examples include Greek-letter ambiguity, line breaks in long summations, and the paper's use of \(\phi\) both for policy coefficients and a price-setting correction term.
 - The derivation normalizes notation to make the equations readable but does not claim source-level formula validation.
 - Equation (F10), corresponding to paper equation (3.17), should be checked against the PDF before promotion beyond `needs_review` because it is a long multi-line condition with several nested expectations.
 
@@ -30,7 +30,7 @@
 - `.agents/skills/dynare-copilot/references/examples/NK_RW97_rep.mod` exists and was read only as `implementation_cross_check`.
 - The `.mod` confirms `model(linear)` with endogenous variables `pi`, `y`, `ynat`, `rnat`, `i`, `x`, `u`, and `g`.
 - The `.mod` implements a reduced Woodford-style system: NKPC, AR(1) cost-push shock, IS equation in the output gap, natural real rate, natural output, output-gap identity, AR(1) autonomous-spending shock, and Taylor rule.
-- The `.mod` has shocks `u_` and `g_`; it does not include the paper's separate monetary-policy shock $\epsilon_t$.
+- The `.mod` has shocks `u_` and `g_`; it does not include the paper's separate monetary-policy shock \(\epsilon_t\).
 - The `.mod` uses `beta=1/(1+0.035/4)` and `sigma=6.25`, while the paper text reports `beta=0.99` and `sigma=0.16`. This reflects implementation convention/scaling and is not treated as paper-side evidence.
 - Dynare was not run.
 

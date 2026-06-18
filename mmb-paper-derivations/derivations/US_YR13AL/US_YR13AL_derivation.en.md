@@ -18,9 +18,9 @@ Provenance: `US_YR13AL`, Yuliya Rychalovska (2016), "The implications of financi
 
 ### 2.1 Capital-Goods Producers
 
-Competitive capital-goods producers choose investment and sell new capital to entrepreneurs at price $Q_t$. They face investment adjustment costs $S(I_t/I_{t-1})$ and an investment-specific shock $\varepsilon_t^i$:
+Competitive capital-goods producers choose investment and sell new capital to entrepreneurs at price \(Q_t\). They face investment adjustment costs \(S(I_t/I_{t-1})\) and an investment-specific shock \(\varepsilon_t^i\):
 
-$$
+\[
 \max_{\{I_t\}} E_t\sum_{s=0}^{\infty}\beta^s\frac{\lambda_{t+s}}{\lambda_t}
 \left[
 Q_{t+s} I_{t+s}\varepsilon_{t+s}^i
@@ -28,21 +28,21 @@ Q_{t+s} I_{t+s}\varepsilon_{t+s}^i
 - Q_{t+s} I_{t+s}\varepsilon_{t+s}^i
 S\left(\frac{I_{t+s}}{I_{t+s-1}}\right)
 \right].
-$$
+\]
 
 ### 2.2 Entrepreneurs and Banks
 
-Entrepreneurs are risk neutral and survive with probability $\varkappa$. At the end of period $t$, they buy capital $K_{t+1}$ at price $Q_t$ using net worth $N_{t+1}$ and bank borrowing:
+Entrepreneurs are risk neutral and survive with probability \(\varkappa\). At the end of period \(t\), they buy capital \(K_{t+1}\) at price \(Q_t\) using net worth \(N_{t+1}\) and bank borrowing:
 
-$$
+\[
 B_{t+1}=Q_tK_{t+1}-N_{t+1}.
-$$
+\]
 
-After observing the next-period shock, entrepreneurs choose utilization $U_{t+1}$:
+After observing the next-period shock, entrepreneurs choose utilization \(U_{t+1}\):
 
-$$
+\[
 \max_{U_{t+1}}\left[r^k_{t+1}U_{t+1}-a(U_{t+1})\right]\omega K_{t+1}.
-$$
+\]
 
 Banks obtain deposits from households at the risk-free rate and lend to entrepreneurs. Costly state verification generates an external finance premium.
 
@@ -50,7 +50,7 @@ Banks obtain deposits from households at the risk-free rate and lend to entrepre
 
 The structural system has the form:
 
-$$
+\[
 A_0
 \begin{bmatrix} y_{t-1}\\ w_{t-1}\end{bmatrix}
 + A_1
@@ -58,13 +58,13 @@ A_0
 + A_2 E_t y_{t+1}
 + B_0\epsilon_t
 = \text{const.}
-$$
+\]
 
-Agents do not know the RE law of motion. They use perceived laws of motion for each forward-looking variable $j$:
+Agents do not know the RE law of motion. They use perceived laws of motion for each forward-looking variable \(j\):
 
-$$
+\[
 y^f_{j,t}=\beta_{j,t-1}X_{j,t-1}+u_{j,t}.
-$$
+\]
 
 The belief vector is updated with a Kalman filter and then used to compute expectations in the structural equations.
 
@@ -72,7 +72,7 @@ The belief vector is updated with a Kalman filter and then used to compute expec
 
 - **(F1) Capital-goods producer Tobin's Q condition**:
 
-$$
+\[
 \varepsilon_t^i Q_t\left(1-S\left(\frac{I_t}{I_{t-1}}\right)\right)
 = 1
 + \varepsilon_t^i Q_t S'\left(\frac{I_t}{I_{t-1}}\right)\frac{I_t}{I_{t-1}}
@@ -82,11 +82,11 @@ $$
 S'\left(\frac{I_{t+1}}{I_t}\right)
 \left(\frac{I_{t+1}}{I_t}\right)^2
 \right].
-$$
+\]
 
 - **(F2) Log-linear investment dynamics implied by (F1)**:
 
-$$
+\[
 \widehat{i}_t =
 \frac{1}{1+\bar{\beta}\gamma}
 \left(
@@ -95,80 +95,80 @@ $$
 +\frac{1}{\gamma^2 S''}\widehat{Q}_t
 \right)
 +\widehat{q}_t.
-$$
+\]
 
 - **(F3) Capital accumulation, log-linearized**:
 
-$$
+\[
 \widehat{k}_t
 =
 \left(1-\frac{i_\ast}{\bar{k}_\ast}\right)\widehat{k}_{t-1}
 +\frac{i_\ast}{\bar{k}_\ast}\widehat{i}_t
 +\frac{i_\ast}{\bar{k}_\ast}(1+\bar{\beta}\gamma)\gamma^2 S''\widehat{q}_t.
-$$
+\]
 
 - **(F4) Utilization choice**:
 
-$$
+\[
 r^k_{t+1}=a'(U_{t+1}).
-$$
+\]
 
 - **(F5) Utilization condition, log-linearized**:
 
-$$
+\[
 \widehat{u}_t=\frac{1-\psi}{\psi}\widehat{r}^k_t.
-$$
+\]
 
 - **(F6) Capital services**:
 
-$$
+\[
 \widehat{k}^S_{t+1}=\widehat{u}_{t+1}+\widehat{k}_{t+1}.
-$$
+\]
 
 - **(F7) Expected return on capital**:
 
-$$
+\[
 E_t R^k_{t+1}
 =E_t\left[
 \frac{
 r^k_{t+1}U_{t+1}-a(U_{t+1})+Q_{t+1}(1-\tau)
 }{Q_t}
 \right].
-$$
+\]
 
 - **(F8) Expected return on capital, log-linearized**:
 
-$$
+\[
 E_t\widehat{R}^K_{t+1}
 =
 \frac{1-\tau}{\bar{R}^K}E_t\widehat{Q}_{t+1}
 +\frac{\bar{r}^k}{\bar{R}^K}E_t\widehat{r}^k_{t+1}
 -\widehat{Q}_t.
-$$
+\]
 
 - **(F9) Financial contract / external finance premium**:
 
-$$
+\[
 E_t R^k_{t+1}
 =
 E_t\left[
 s\left(\frac{N_{t+1}}{Q_tK_{t+1}}\right)
 \varepsilon_t^b R_t
 \right].
-$$
+\]
 
 - **(F10) External finance premium, log-linearized**:
 
-$$
+\[
 E_t\widehat{R}^K_{t+1}
 =
 -el\,E_t\left[\widehat{N}_{t+1}-\widehat{Q}_t-\widehat{k}_{t+1}\right]
 +\widehat{R}_t+\widehat{b}_t.
-$$
+\]
 
 - **(F11) Entrepreneurial net worth accumulation**:
 
-$$
+\[
 N_{t+1}
 =
 \varkappa\left[
@@ -176,11 +176,11 @@ R_t^KQ_{t-1}K_t
 -E_{t-1}R_t^K(Q_{t-1}K_t-N_t)
 \right]
 +W_t^e.
-$$
+\]
 
 - **(F12) Net worth, log-linearized**:
 
-$$
+\[
 \widehat{N}_{t+1}
 =
 \varkappa\bar{R}^K
@@ -190,11 +190,11 @@ $$
 +E_{t-1}\widehat{R}_t^K
 +\widehat{N}_t
 \right].
-$$
+\]
 
 - **(F13) Net worth with finance-premium substitution**:
 
-$$
+\[
 \widehat{N}_{t+1}
 =
 \varkappa\bar{R}^K
@@ -205,61 +205,61 @@ $$
 (\widehat{k}_t+\widehat{Q}_{t-1}-\widehat{N}_t)
 +\widehat{N}_t
 \right].
-$$
+\]
 
 - **(F14) Monetary policy rule**:
 
-$$
+\[
 \widehat{R}^n_t
 =
 \rho_R\widehat{R}^n_{t-1}
 +(1-\rho_R)(r_\pi\widehat{\pi}_t+r_y\widehat{ygap}_t)
 +r_{\Delta y}(\widehat{ygap}_t-\widehat{ygap}_{t-1})
 +\epsilon_{r,t}.
-$$
+\]
 
 - **(F15) Output gap definition**:
 
-$$
+\[
 \widehat{ygap}_t=\widehat{y}_t-\widehat{A}_t.
-$$
+\]
 
 - **(F16) Risk-free real interest rate definition**:
 
-$$
+\[
 \widehat{R}_t=\widehat{R}^n_t-E_t\widehat{\pi}_{t+1}.
-$$
+\]
 
 - **(F17) Household Euler equation inherited from Smets-Wouters (`needs_review`)**:
 
-$$
+\[
 E_t\widehat{c}_{t+1}=\mathcal{E}_c(\widehat{c}_t,\widehat{c}_{t-1},\widehat{R}_t,\widehat{g}_t,\widehat{\varepsilon}^b_t;\Theta_{SW}).
-$$
+\]
 
 - **(F18) Price Phillips curve inherited from Smets-Wouters (`needs_review`)**:
 
-$$
+\[
 \widehat{\pi}_t=\mathcal{P}(\widehat{\pi}_{t-1},E_t\widehat{\pi}_{t+1},\widehat{mc}_t,\widehat{\varepsilon}^p_t;\Theta_{SW}).
-$$
+\]
 
 - **(F19) Wage Phillips curve inherited from Smets-Wouters (`needs_review`)**:
 
-$$
+\[
 \widehat{\pi}^w_t=\mathcal{W}(\widehat{\pi}^w_{t-1},E_t\widehat{\pi}^w_{t+1},\widehat{w}_t,\widehat{l}_t,\widehat{\varepsilon}^w_t;\Theta_{SW}).
-$$
+\]
 
 - **(F20) Labor supply/demand and production block inherited from Smets-Wouters (`needs_review`)**:
 
-$$
+\[
 (\widehat{y}_t,\widehat{l}_t,\widehat{w}_t,\widehat{mc}_t,\widehat{r}^k_t)
 =\mathcal{S}(\widehat{k}^S_t,\widehat{A}_t,\widehat{u}_t;\Theta_{SW}).
-$$
+\]
 
 ## 4. Market Clearing & Identities
 
 - **(F21) Resource constraint, log-linearized**:
 
-$$
+\[
 \widehat{y}_t
 =
 \frac{(\bar{R}^K-1+\tau)k_\ast}{y_\ast}\widehat{u}_t
@@ -267,21 +267,21 @@ $$
 +\frac{c_\ast}{y_\ast}\widehat{c}_t
 +\frac{i_\ast}{y_\ast}\widehat{i}_t
 +\widehat{g}_t.
-$$
+\]
 
 - **(F22) Banking resource wedge**:
 
-$$
+\[
 \widehat{\mu}^{bank}_t
 =
 \frac{k_\ast}{y_\ast}(\bar{R}^K-\bar{R})
 \left(1-\frac{\bar{N}}{\bar{K}}\right)
 (\widehat{R}^K_t+\widehat{Q}_{t-1}+\widehat{k}_t).
-$$
+\]
 
 - **(F23) Measurement equations**:
 
-$$
+\[
 \begin{bmatrix}
 dlGdp_t\\ dlCons_t\\ dlInv_t\\ dlWage_t\\ lHours_t\\ dlP_t\\ FedFundsR_t
 \end{bmatrix}
@@ -299,91 +299,91 @@ dlGdp_t\\ dlCons_t\\ dlInv_t\\ dlWage_t\\ lHours_t\\ dlP_t\\ FedFundsR_t
 \widehat{\pi}_t\\
 \widehat{R}^n_t
 \end{bmatrix}.
-$$
+\]
 
 ## 5. Exogenous Processes
 
 - **(F24) General exogenous state vector**:
 
-$$
+\[
 w_t=\Gamma w_{t-1}+\Pi\epsilon_t.
-$$
+\]
 
 - **(F25) Investment-specific technology shock**:
 
-$$
+\[
 \widehat{q}_t=\rho_q\widehat{q}_{t-1}+\epsilon^i_t.
-$$
+\]
 
 - **(F26) Government spending shock**:
 
-$$
+\[
 \widehat{g}_t=\rho_g\widehat{g}_{t-1}+\rho_{ga}\epsilon^a_t+\epsilon^g_t.
-$$
+\]
 
 - **(F27) Remaining Smets-Wouters shocks (`needs_review`)**:
 
-$$
+\[
 (\widehat{A}_t,\widehat{b}_t,\widehat{\varepsilon}^p_t,\widehat{\varepsilon}^w_t)
 =\mathcal{X}((\widehat{A}_{t-1},\widehat{b}_{t-1},\widehat{\varepsilon}^p_{t-1},\widehat{\varepsilon}^w_{t-1}),\epsilon_t;\Theta_{SW}).
-$$
+\]
 
 - **(F28) Perceived law of motion for forward variables under learning**:
 
-$$
+\[
 y^f_{j,t}=\beta_{j,t-1}X_{j,t-1}+u_{j,t}.
-$$
+\]
 
 - **(F29) Kalman belief update**:
 
-$$
+\[
 \beta_{t/t}=\beta_{t/t-1}+K_t\widetilde{z}_t,
 \qquad
 P_{t/t}=(I-K_tX_{t-1})P_{t/t-1}.
-$$
+\]
 
 - **(F30) Belief prediction step**:
 
-$$
+\[
 (\beta_t-\bar{\beta})=F(\beta_{t-1}-\bar{\beta})+v_t.
-$$
+\]
 
 - **(F31) Actual law of motion under adaptive learning**:
 
-$$
+\[
 \begin{bmatrix}y_t\\w_t\end{bmatrix}
 =
 \mu_t+
 T_t\begin{bmatrix}y_{t-1}\\w_{t-1}\end{bmatrix}
 +R_t\epsilon_t.
-$$
+\]
 
 ## 6. Steady-State Solution
 
 The paper works with detrended variables and then log-linearizes around the stationary steady state. For the linearized archive representation, all hatted endogenous variables and shocks have zero steady state:
 
-$$
+\[
 \widehat{x}=0
 \quad\text{for}\quad
 x\in\{c,i,k,u,k^S,Q,R^K,R^n,R,\pi,\pi^w,l,w,mc,y,N,b,q,g,A\}.
-$$
+\]
 
 The source reports these steady-state objects or relationships:
 
-1. The deterministic trend is $\gamma$ and $\bar{\beta}=\beta/\gamma^{\sigma_c}$.
-2. The steady-state nominal interest rate in the measurement equation is $\bar{r}=100(\bar{\gamma}^{\sigma_c}II_\ast/\beta-1)`.
-3. Financial-friction parameters governing steady-state leverage and premium dynamics are $\bar{K}/\bar{N}$, $\varkappa$, and $el$.
+1. The deterministic trend is \(\gamma\) and \(\bar{\beta}=\beta/\gamma^{\sigma_c}\).
+2. The steady-state nominal interest rate in the measurement equation is \(\bar{r}=100(\bar{\gamma}^{\sigma_c}II_\ast/\beta-1)\).
+3. Financial-friction parameters governing steady-state leverage and premium dynamics are \(\bar{K}/\bar{N}\), \(\varkappa\), and \(el\).
 4. The learning model starts from REE-consistent initial beliefs. At the initial steady state, the learning ALM coincides with the RE solution; subsequent dynamics come from belief updates.
 
-Needs review: the paper does not print the complete Smets-Wouters steady-state construction for consumption, labor, wages, marginal cost, price and wage markup blocks, or the full calibrated/estimated steady-state ratios $c_\ast/y_\ast$, $i_\ast/y_\ast$, $k_\ast/y_\ast$.
+Needs review: the paper does not print the complete Smets-Wouters steady-state construction for consumption, labor, wages, marginal cost, price and wage markup blocks, or the full calibrated/estimated steady-state ratios \(c_\ast/y_\ast\), \(i_\ast/y_\ast\), \(k_\ast/y_\ast\).
 
 ## 7. Timing & Form Conventions
 
-- Capital is bought at the end of period $t$ as $K_{t+1}$ at price $Q_t$; services in $t+1$ are $K^S_{t+1}=U_{t+1}K_{t+1}$.
-- Entrepreneurial net worth $N_{t+1}$ finances the purchase of $K_{t+1}$; the loan is $B_{t+1}=Q_tK_{t+1}-N_{t+1}$.
-- Net worth evolves from realized and expected returns carried from the previous contract, so (F12) and (F13) mix $t+1$, $t$, and $t-1$ timing.
-- $R^n_t$ is the nominal risk-free rate; $R_t=R^n_t-E_t\pi_{t+1}$ in log-linear terms.
-- Variables are detrended by deterministic labor-augmenting growth $\gamma$ before log-linearization.
+- Capital is bought at the end of period \(t\) as \(K_{t+1}\) at price \(Q_t\); services in \(t+1\) are \(K^S_{t+1}=U_{t+1}K_{t+1}\).
+- Entrepreneurial net worth \(N_{t+1}\) finances the purchase of \(K_{t+1}\); the loan is \(B_{t+1}=Q_tK_{t+1}-N_{t+1}\).
+- Net worth evolves from realized and expected returns carried from the previous contract, so (F12) and (F13) mix \(t+1\), \(t\), and \(t-1\) timing.
+- \(R^n_t\) is the nominal risk-free rate; \(R_t=R^n_t-E_t\pi_{t+1}\) in log-linear terms.
+- Variables are detrended by deterministic labor-augmenting growth \(\gamma\) before log-linearization.
 - Hatted variables are deviations around the stationary steady state. Lower-case variables in the source denote detrended real variables.
 - `US_YR13AL` should be implemented as a linearized model. A future runtime implementation must decide whether to encode the adaptive-learning system directly or to use a fixed reduced-form representation generated by the learning toolbox.
 
@@ -391,24 +391,24 @@ Needs review: the paper does not print the complete Smets-Wouters steady-state c
 
 | Category | Symbol / ASCII candidate | Meaning | Equation coverage |
 |---|---|---|---|
-| Endogenous | `c` / $\widehat{c}_t$ | consumption | (F17), (F23), needs_review |
-| Endogenous | `i` / $\widehat{i}_t$ | investment | (F2), (F21), (F23) |
-| Endogenous | `k` / $\widehat{k}_t$ | capital stock | (F3), (F13), (F22) |
-| Endogenous | `u` / $\widehat{u}_t$ | utilization | (F5), (F21) |
-| Endogenous | `ks` / $\widehat{k}^S_t$ | capital services | (F6), (F20) |
-| Endogenous | `q` / $\widehat{Q}_t$ | asset price / Tobin's Q | (F1), (F2), (F8), (F10), (F13) |
-| Endogenous | `rk` / $\widehat{R}^K_t$ | return on capital | (F7), (F8), (F10), (F12), (F13) |
-| Endogenous | `r` / $\widehat{R}_t$ | real risk-free rate | (F10), (F13), (F16) |
-| Endogenous | `rn` / $\widehat{R}^n_t$ | nominal policy rate | (F14), (F16), (F23) |
-| Endogenous | `n` / $\widehat{N}_t$ | entrepreneurial net worth | (F9), (F11), (F12), (F13) |
-| Endogenous | `y` / $\widehat{y}_t$ | output | (F15), (F21), (F23) |
-| Endogenous | `ygap` / $\widehat{ygap}_t$ | output gap | (F14), (F15) |
-| Endogenous | `pi` / $\widehat{\pi}_t$ | price inflation | (F14), (F16), (F18), (F23), needs_review |
-| Endogenous | `piw` / $\widehat{\pi}^w_t$ | wage inflation | (F19), needs_review |
-| Endogenous | `w` / $\widehat{w}_t$ | real wage | (F19), (F20), (F23), needs_review |
-| Endogenous | `l` / $\widehat{l}_t$ | hours worked | (F19), (F20), (F23), needs_review |
-| Endogenous | `mc` / $\widehat{mc}_t$ | marginal cost | (F18), (F20), needs_review |
-| Endogenous | `mubank` / $\widehat{\mu}^{bank}_t$ | banking resource wedge | (F21), (F22) |
+| Endogenous | `c` / \(\widehat{c}_t\) | consumption | (F17), (F23), needs_review |
+| Endogenous | `i` / \(\widehat{i}_t\) | investment | (F2), (F21), (F23) |
+| Endogenous | `k` / \(\widehat{k}_t\) | capital stock | (F3), (F13), (F22) |
+| Endogenous | `u` / \(\widehat{u}_t\) | utilization | (F5), (F21) |
+| Endogenous | `ks` / \(\widehat{k}^S_t\) | capital services | (F6), (F20) |
+| Endogenous | `q` / \(\widehat{Q}_t\) | asset price / Tobin's Q | (F1), (F2), (F8), (F10), (F13) |
+| Endogenous | `rk` / \(\widehat{R}^K_t\) | return on capital | (F7), (F8), (F10), (F12), (F13) |
+| Endogenous | `r` / \(\widehat{R}_t\) | real risk-free rate | (F10), (F13), (F16) |
+| Endogenous | `rn` / \(\widehat{R}^n_t\) | nominal policy rate | (F14), (F16), (F23) |
+| Endogenous | `n` / \(\widehat{N}_t\) | entrepreneurial net worth | (F9), (F11), (F12), (F13) |
+| Endogenous | `y` / \(\widehat{y}_t\) | output | (F15), (F21), (F23) |
+| Endogenous | `ygap` / \(\widehat{ygap}_t\) | output gap | (F14), (F15) |
+| Endogenous | `pi` / \(\widehat{\pi}_t\) | price inflation | (F14), (F16), (F18), (F23), needs_review |
+| Endogenous | `piw` / \(\widehat{\pi}^w_t\) | wage inflation | (F19), needs_review |
+| Endogenous | `w` / \(\widehat{w}_t\) | real wage | (F19), (F20), (F23), needs_review |
+| Endogenous | `l` / \(\widehat{l}_t\) | hours worked | (F19), (F20), (F23), needs_review |
+| Endogenous | `mc` / \(\widehat{mc}_t\) | marginal cost | (F18), (F20), needs_review |
+| Endogenous | `mubank` / \(\widehat{\mu}^{bank}_t\) | banking resource wedge | (F21), (F22) |
 | Exogenous / shock | `eps_i`, `q` | investment-specific technology innovation/process | (F25) |
 | Exogenous / shock | `eps_g`, `g` | government spending innovation/process | (F26) |
 | Exogenous / shock | `eps_a`, `a` | productivity innovation/process | (F15), (F20), (F26), (F27), needs_review |
