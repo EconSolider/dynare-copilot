@@ -24,7 +24,7 @@
 
 ## Deferred Issues
 
-- Confirm the Online Appendix equations for the household problem, budget constraint, firm problem, and the welfare-relevant output gap \(\hat x^f_t\).
+- Confirm the Online Appendix equations for the household problem, budget constraint, firm problem, and the welfare-relevant output gap $`\hat x^f_t`$.
 - Resolve the sample endpoint discrepancy: the VAR discussion says the post-1984 sample is 1984:Q1-2007:Q4, while the structural estimation paragraph says 1984:Q1-2007:Q3.
 - Decide whether robustness variants should be represented as separate variant derivations or only as notes under `US_BR13`.
 - If implementing in Dynare later, choose a clear state/control set because several equations are identities used to map theoretical variables to observed IRFs rather than a minimal model block.

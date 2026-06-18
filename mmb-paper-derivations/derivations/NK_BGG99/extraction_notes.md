@@ -13,7 +13,7 @@
 - Status: `needs_review`.
 - The OCR Markdown includes the main source equations in Sections 3-4 and Appendices A-B.
 - The paper presents the computational macro model in log-linearized form and explicitly uses ellipses/second-order terms in several equations. Those omitted terms were not invented.
-- The extracted nonlinear contract equations use the appendix notation for \(\Gamma(\bar\omega)\), \(\mu G(\bar\omega)\), \(s=R^k/R\), and \(QK/N=\psi(s)\).
+- The extracted nonlinear contract equations use the appendix notation for $`\Gamma(\bar\omega)`$, $`\mu G(\bar\omega)`$, $`s=R^k/R`$, and $`QK/N=\psi(s)`$.
 - The final-goods resource constraint includes monitoring costs. Formula-level OCR should be reviewed before promoting the entry beyond first pass.
 
 ## Implementation Cross-Check
@@ -27,7 +27,7 @@
 ## Deferred Issues
 
 - Reconcile the paper's appendix contract calibration with the implementation formulas for `GAMMA_WBAR`, `NY`, `DY`, and `CY`.
-- Review OCR for the monitoring-cost term in the resource constraint and the \(\phi_t^v\), \(\phi_t^{c^e}\), and \(\phi_t^n\) terms.
+- Review OCR for the monitoring-cost term in the resource constraint and the $`\phi_t^v`$, $`\phi_t^{c^e}`$, and $`\phi_t^n`$ terms.
 - Confirm whether the archive should include the investment-delay extension for a separate variant; this first pass treats `NK_BGG99` as the baseline one-sector implementation.
 - No Dynare runtime validation was performed.
 

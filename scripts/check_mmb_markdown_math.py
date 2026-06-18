@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check MMB derivation Markdown for GitHub-hostile math delimiters."""
+"""Check MMB derivation Markdown for GitHub-compatible math delimiters."""
 
 from __future__ import annotations
 
@@ -33,44 +33,39 @@ def strip_inline_code(line: str) -> str:
     return "".join(pieces)
 
 
-def has_unescaped_dollar(line: str) -> bool:
-    line = strip_inline_code(line)
-    for idx, ch in enumerate(line):
-        if ch == "$" and (idx == 0 or line[idx - 1] != "\\"):
-            return True
-    return False
-
-
 def check_file(path: Path) -> list[str]:
     errors: list[str] = []
     in_fence = False
-    display_balance = 0
+    fence_delimiter = ""
 
     for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
-        if FENCE_RE.match(line):
-            in_fence = not in_fence
+        fence_match = FENCE_RE.match(line)
+        if fence_match:
+            delimiter = fence_match.group(1)
+            if in_fence and delimiter == fence_delimiter:
+                in_fence = False
+                fence_delimiter = ""
+            elif not in_fence:
+                in_fence = True
+                fence_delimiter = delimiter
             continue
         if in_fence:
             continue
 
         stripped = strip_inline_code(line)
-        if has_unescaped_dollar(line):
-            errors.append(f"{path}:{line_no}: dollar math delimiter is not allowed")
+        if "$$" in stripped:
+            errors.append(f"{path}:{line_no}: use fenced math blocks, not $$ display delimiters")
+        if r"\[" in stripped or r"\]" in stripped:
+            errors.append(f"{path}:{line_no}: GitHub Markdown does not support \\[...\\] math delimiters")
+        if r"\(" in stripped or r"\)" in stripped:
+            errors.append(f"{path}:{line_no}: GitHub Markdown does not support \\(...\\) math delimiters")
         if r"\left{" in stripped:
             errors.append(f"{path}:{line_no}: use \\left\\{{ or fixed-size braces, not \\left{{")
         if r"\right}" in stripped:
             errors.append(f"{path}:{line_no}: use \\right\\}} or fixed-size braces, not \\right}}")
 
-        display_balance += stripped.count(r"\[")
-        display_balance -= stripped.count(r"\]")
-        if display_balance < 0:
-            errors.append(f"{path}:{line_no}: display math closes before it opens")
-            display_balance = 0
-
     if in_fence:
         errors.append(f"{path}: unclosed fenced code block")
-    if display_balance:
-        errors.append(f"{path}: unbalanced \\[ / \\] display math delimiters")
     return errors
 
 

@@ -29,7 +29,7 @@
 ## Deferred Issues
 
 - Check the technical appendix or another source-backed normalization for the steady-state constants before upgrading `steady_state_quality`.
-- Decide whether reviewed `US_DNGS15_SWpi` should include the paper-side \(\pi_t^*\) AR(1) process as active, or follow the Rep-MMB file's fixed-`pist` implementation.
+- Decide whether reviewed `US_DNGS15_SWpi` should include the paper-side $`\pi_t^*`$ AR(1) process as active, or follow the Rep-MMB file's fixed-`pist` implementation.
 - Review whether the inactive spread-shock/`Rktil` block should remain in the SWpi derivation or be treated solely as Rep-MMB implementation residue.
 - Confirm whether the shared catalog should describe the model as "without financial frictions" despite `sigw`/spread observables appearing in the implementation file with zero variance.
 - Runtime validation, Dynare equation count, steady-state residuals, BK checks, and IRF checks were not performed.

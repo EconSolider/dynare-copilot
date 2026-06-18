@@ -18,70 +18,70 @@ Source: Nathan S. Balke and Stephen P. A. Brown (2018), "Oil supply shocks and t
 
 The household chooses consumption services, nondurable consumption, durable capital, oil use in consumption, oil-efficiency investment, labor allocated across sectors, and net foreign assets. The expected utility objective is:
 
-\[
+```math
 E_0\sum_{i=0}^{\infty}\beta^i u(c_t,l_t)
 \tag{F1}
-\]
+```
 
 with benchmark period utility:
 
-\[
+```math
 u(c_t,l_t)=\frac{(c_t-x_c h_t)^{1-\sigma}}{1-\sigma}
 -\chi\frac{l_t^{1+\eta}}{1+\eta}.
 \tag{F2}
-\]
+```
 
 External habits evolve as:
 
-\[
+```math
 h_t=c_{t-1}^{1-\gamma_h}h_{t-1}^{\gamma_h}.
 \tag{F3}
-\]
+```
 
 Consumption services aggregate nondurables and durable services:
 
-\[
+```math
 c_t=z_{c,t}\left(\psi_n n_t^{\rho_c}+(1-\psi_n)ks_{c,t}^{\rho_c}\right)^{1/\rho_c}.
 \tag{F4}
-\]
+```
 
 Total labor includes sectoral reallocation costs:
 
-\[
+```math
 l_t=\sum_{j\in\{f,m,o\}}\left[1+\phi_l\left(\frac{l_{j,t}}{l_{j,t-1}}\right)\right]l_{j,t},
 \qquad
 \phi_l\left(\frac{l_{j,t}}{l_{j,t-1}}\right)=a_{jl}\frac{(l_{j,t}/l_{j,t-1}-1)^2}{2}.
 \tag{F5}
-\]
+```
 
 Real wage rigidity is:
 
-\[
+```math
 w_t=w_{t-1}^{\alpha_w}\lambda_{l,t}^{1-\alpha_w},
 \qquad
 \lambda_{l,t}=\frac{1}{\rho_w}\lambda_{c,t}\frac{-U_l(c_t,l_t)}{U_c(c_t,l_t)}.
 \tag{F6}
-\]
+```
 
 Consumer durable services combine predetermined durable capital and current oil use:
 
-\[
+```math
 ks_{c,t}=z_{ksc,t}\left[\psi_{co}(e_{c,t-1}o_{c,t})^{\rho_{ksc}}+(1-\psi_{co})k_{c,t-1}^{\rho_{ksc}}\right]^{1/\rho_{ksc}}.
 \tag{F7}
-\]
+```
 
 Consumer durable capital and efficiency evolve as:
 
-\[
+```math
 k_{c,t}=(1-\delta)k_{c,t-1}+z_{I,t}I_{c,t},
 \qquad
 e_{c,t}=v_{c,t}x_{c,t}^{\delta}e_{c,t-1}^{1-\delta}.
 \tag{F8}
-\]
+```
 
 The household budget constraint is:
 
-\[
+```math
 \begin{aligned}
 &w_{f,t}l_{f,t}+w_{m,t}l_{m,t}+w_{o,t}l_{o,t}+pr_{f,t}+pr_{m,t}+pr_{ksm,t}+pr_{o,t}
 -p_{f,t}n_t \\
@@ -89,129 +89,129 @@ The household budget constraint is:
 +(1+R_t)A_t-A_{t+1}=0.
 \end{aligned}
 \tag{F9}
-\]
+```
 
 For consumption durables, adjustment costs are:
 
-\[
+```math
 \phi_I(I_{c,t}/k_{c,t-1})=a_{ck}\frac{(I_{c,t}/k_{c,t-1}-\delta)^2}{2},
 \qquad
 \phi_e(x_{c,t})=a_{ec}(x_{c,t}-x_{c,ss})+b_{ec}\frac{(x_{c,t}-x_{c,ss})^2}{2}.
 \tag{F10}
-\]
+```
 
 ### 2.2 Final Goods and Transportation Producers
 
 Final goods producers combine intermediate goods and transportation services:
 
-\[
+```math
 y_{f,t}=z_{f,t}\left(\psi_m y_{m,t}^{\rho_f}+(1-\psi_m)y_{tr,t}^{\rho_f}\right)^{1/\rho_f}.
 \tag{F11}
-\]
+```
 
 The intermediate composite and variety demand are:
 
-\[
+```math
 y_{m,t}=\int_0^1\left(y_{m,t}(z)^{\rho_m}\right)^{1/\rho_m}dz,
 \qquad
 y_{m,t}(z)=\left(\frac{p_{m,t}}{p_{m,t}(z)}\right)^{1/(1-\rho_m)}y_{m,t}.
 \tag{F12}
-\]
+```
 
 Transportation services and transportation capital services are:
 
-\[
+```math
 y_{tr,t}=z_{tr,t}\left(\psi_{tr,l}l_{tr,t}^{\rho_{tr}}+(1-\psi_{tr})ks_{tr,t}^{\rho_{tr}}\right)^{1/\rho_{tr}},
 \tag{F13}
-\]
+```
 
-\[
+```math
 ks_{tr,t}=z_{kstr,t}\left[\psi_{o,tr}(e_{tr,t-1}o_{tr,t})^{\rho_{kstr}}+(1-\psi_{o,tr})k_{tr,t-1}^{\rho_{kstr}}\right]^{1/\rho_{kstr}}.
 \tag{F14}
-\]
+```
 
 Transportation capital and efficiency evolve as:
 
-\[
+```math
 k_{tr,t}=(1-\delta)k_{tr,t-1}+z_{I,t}I_{tr,t},
 \qquad
 e_{tr,t}=x_{tr,t}^{\delta}e_{tr,t-1}^{1-\delta}.
 \tag{F15}
-\]
+```
 
 ### 2.3 Intermediate Goods Producers
 
 Each differentiated intermediate goods producer uses labor and capital services:
 
-\[
+```math
 y_{m,t}(z)=z_{m,t}l_{m,t}(z)^{\psi_{m,l}}ks_{m,t}(z)^{1-\psi_{m,l}}.
 \tag{F16}
-\]
+```
 
 The present-value profit objective is:
 
-\[
+```math
 \sum_{i=0}^{\infty}M_{t,t+i}
 \left[p_{m,t+i}(z)y_{m,t+i}(z)-w_{m,t+i}l_{m,t+i}(z)-r_{m,t+i}ks_{m,t+i}(z)
 -p_{f,t+i}\phi_p\left(\frac{p_{m,t+i}(z)}{p_{m,t+i-1}(z)}\right)y_{m,t+i}(z)\right].
 \tag{F17}
-\]
+```
 
 The common marginal cost expression is:
 
-\[
+```math
 \lambda_{m,t}=z_{m,t}^{-1}
 \left(\frac{w_{m,t}}{\psi_{m,l}}\right)^{\psi_{m,l}}
 \left(\frac{r_{m,t}}{1-\psi_{m,l}}\right)^{1-\psi_{m,l}}.
 \tag{F18}
-\]
+```
 
 ### 2.4 Capital-Services Suppliers for Intermediate Goods
 
 Capital-services suppliers choose oil, capital, and efficiency investment for intermediate production. Their paper-side objective is OCR-uncertain and marked `needs_review`, but the intended block is:
 
-\[
+```math
 \sum_{i=0}^{\infty}M_{t,t+i}
 \left[
 r_{m,t+i}ks_{m,t+i}-p_{o,t+i}o_{m,t+i}
 -p_{f,t+i}(1+\phi_I(I_{m,t+i}/k_{m,t+i-1}))(1+\phi_e(x_{m,t+i}))I_{m,t+i}
 \right].
 \tag{F19, needs_review}
-\]
+```
 
 Capital services, capital, and efficiency are:
 
-\[
+```math
 ks_{m,t}=z_{ksm,t}\left[\psi_{m,o}(e_{m,t-1}o_{m,t})^{\rho_{ksm}}+(1-\psi_{m,o})k_{m,t-1}^{\rho_{ksm}}\right]^{1/\rho_{ksm}},
 \tag{F20}
-\]
+```
 
-\[
+```math
 k_{m,t}=(1-\delta)k_{m,t-1}+z_{I,t}I_{m,t},
 \qquad
 e_{m,t}=x_{m,t}^{\delta}e_{m,t-1}^{1-\delta}.
 \tag{F21}
-\]
+```
 
 ### 2.5 Domestic Oil Producers
 
 Domestic oil producers maximize:
 
-\[
+```math
 \sum_{i=0}^{\infty}M_{t,t+i}
 \left[p_{o,t+i}y_{o,t+i}-w_{o,t+i}l_{o,t+i}
 -p_{f,t+i}(1+\phi_I(I_{o,t+i}/k_{o,t+i-1}))I_{o,t+i}\right].
 \tag{F22}
-\]
+```
 
 Domestic oil output and oil-sector capital accumulation are:
 
-\[
+```math
 y_{o,t}=z_{o,t}\left[\psi_{o,l}l_{o,t}^{\rho_o}+(1-\psi_{o,l})k_{o,t-1}^{\rho_o}\right]^{1/\rho_o},
 \qquad
 k_{o,t}=(1-\delta)k_{o,t-1}+z_{I,t}I_{o,t}.
 \tag{F23}
-\]
+```
 
 ## 3. First-Order Conditions
 
@@ -219,34 +219,34 @@ The paper prints selected FOCs explicitly. The remaining optimization FOCs are r
 
 - **(F24) Risk-free Euler equation**:
 
-\[
+```math
 E_t\left[\left(\frac{R_t}{\pi_{f,t+1}}\right)\beta
 \frac{u_c(c_{t+1},l_{t+1})/\lambda_{c,t+1}}
 {u_c(c_t,l_t)/\lambda_{c,t}}\right]=1.
 \tag{F24}
-\]
+```
 
 - **(F25) Firm stochastic discount factor with risk shock**:
 
-\[
+```math
 M_{t,t+1}=z_{risk,t}\beta
 \frac{u_c(c_{t+1},l_{t+1})/\lambda_{c,t+1}}
 {U_C(c_t,l_t)/\lambda_{c,t}}.
 \tag{F25}
-\]
+```
 
-- **(F26) Sectoral oil-use FOC**, for \(j\in\{c,tr,m\}\):
+- **(F26) Sectoral oil-use FOC**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 p_{j,t}\frac{\partial y_{j,t}}{\partial ks_{j,t}}
 \frac{\partial ks_{j,t}}{\partial(e_{j,t-1}o_{j,t})}e_{j,t-1}
 -p_{o,t}=0.
 \tag{F26}
-\]
+```
 
-- **(F27) Sectoral efficiency stock FOC**, for \(j\in\{c,tr,m\}\):
+- **(F27) Sectoral efficiency stock FOC**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 M_{t,t+1}
 \left[
 p_{j,t+1}\frac{\partial y_{j,t+1}}{\partial ks_{j,t+1}}
@@ -255,60 +255,60 @@ p_{j,t+1}\frac{\partial y_{j,t+1}}{\partial ks_{j,t+1}}
 \right]
 -\lambda^e_{j,t}=0.
 \tag{F27}
-\]
+```
 
-- **(F28) Combined oil-efficiency valuation FOC**, for \(j\in\{c,tr,m\}\):
+- **(F28) Combined oil-efficiency valuation FOC**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 M_{t,t+1}\left[p_{o,t+1}o_{j,t+1}+(1-\delta)e_{j,t+1}\lambda^e_{j,t+1}\right]
 -e_{j,t}\lambda^e_{j,t}=0.
 \tag{F28}
-\]
+```
 
-- **(F29) Efficiency-investment FOC**, for \(j\in\{c,tr,m\}\):
+- **(F29) Efficiency-investment FOC**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 -p_{f,t}\left[1+\phi_I(I_{j,t}/k_{j,t-1})\right]\phi_e'(x_{j,t})I_{j,t}
 +\delta\lambda^e_{j,t}\frac{e_{j,t}}{x_{j,t}}=0.
 \tag{F29}
-\]
+```
 
-- **(F30) Steady-state efficiency value**, for \(j\in\{c,tr,m\}\):
+- **(F30) Steady-state efficiency value**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 \lambda_j^e e_j=\frac{\beta p_o o_j}{1-\beta(1-\delta)}.
 \tag{F30}
-\]
+```
 
-- **(F31) Steady-state shadow price of efficiency**, for \(j\in\{c,tr,m\}\):
+- **(F31) Steady-state shadow price of efficiency**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 \lambda_j^e=p_f\phi_e'(x_{j,ss})k_{j,ss}.
 \tag{F31}
-\]
+```
 
-- **(F32) Steady-state efficiency-to-capital value ratio**, for \(j\in\{c,tr,m\}\):
+- **(F32) Steady-state efficiency-to-capital value ratio**, for $`j\in\{c,tr,m\}`$:
 
-\[
+```math
 \frac{\lambda_j^e e_j}{\lambda_j^k k_j}=\frac{s_{o,j}}{1-s_{o,j}}.
 \tag{F32}
-\]
+```
 
 - **(F33) Monetary policy rule**:
 
-\[
+```math
 R_t=\frac{R_{ss}}{(\pi_{ss}^{\ast})}\pi_t^{\ast}
 \left[\left(\frac{\pi_{GDP,t}}{\pi_t^{\ast}}\right)^{\gamma_\pi}
 \left(\frac{y_{GDP,t}}{y_{GDP,ss}}\right)^{\gamma_y}\right]^{1-\gamma_R}
 \left(\frac{R_{t-1}}{R_{ss}}\right)^{\gamma_R}\varepsilon_{R,t}.
 \tag{F33}
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F34) Final goods market clearing**:
 
-\[
+```math
 \begin{aligned}
 &y_{f,t}-n_t
 -[1+\phi_I(I_{c,t}/k_{c,t-1})][1+\phi_e(x_{c,t})]I_{c,t}\\
@@ -319,64 +319,64 @@ R_t=\frac{R_{ss}}{(\pi_{ss}^{\ast})}\pi_t^{\ast}
 -nx_{f,t}=0.
 \end{aligned}
 \tag{F34, needs_review}
-\]
+```
 
 - **(F35) Oil market clearing**:
 
-\[
+```math
 y_{o,t}-o_{c,t}-o_{tr,t}-o_{m,t}+row_{s,t}-row_{d,t}=0.
 \tag{F35}
-\]
+```
 
 - **(F36) Trade balance identity**:
 
-\[
+```math
 nx_t=nx_{f,t}-\frac{p_{o,t}}{p_{f,t}}\left(o_{c,t}+o_{tr,t}+o_{m,t}-y_{o,t}\right).
 \tag{F36}
-\]
+```
 
 - **(F37) Real GDP measurement identity**, log-linear around steady state:
 
-\[
+```math
 \hat y^{GDP}_t=
 \frac{p_{f,ss}y_{f,ss}}{ny_{GDP,ss}}\hat y_{f,t}
 +\frac{p_{o,ss}y_{o,ss}}{ny_{GDP,ss}}\hat y_{o,t}
 -\frac{p_{o,ss}o_{tr,ss}}{ny_{GDP,ss}}\hat o_{tr,t}
 -\frac{p_{o,ss}o_{m,ss}}{ny_{GDP,ss}}\hat o_{m,t}.
 \tag{F37, needs_review}
-\]
+```
 
 - **(F38) GDP inflation identity**, log-linear around steady state:
 
-\[
+```math
 \hat\pi_{GDP,t}=
 \frac{p_{f,ss}y_{f,ss}}{ny_{GDP,ss}}\hat\pi_{f,t}
 +\frac{p_{o,ss}(y_{o,ss}-o_{tr,ss}-o_{m,ss})}{ny_{GDP,ss}}\hat\pi_{o,t}.
 \tag{F38}
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F39) ROW oil supply**:
 
-\[
+```math
 row_{s,t}=row_{s,t-1}^{\theta_s}
 \left[\left(\frac{p_{o,t}}{p^{\ast}_{f,t}}\right)^{\eta_s}z_{row,t}\right]^{1-\theta_s}.
 \tag{F39}
-\]
+```
 
 - **(F40) ROW oil demand**:
 
-\[
+```math
 row_{d,t}=row_{d,t-1}^{\theta_d}
 \left[\left(\frac{p_{o,t}}{p^{\ast}_{f,t}}\right)^{\eta_d}
 y_{row,t}^{\eta_y}z^d_{row,t}\right]^{1-\theta_d}.
 \tag{F40}
-\]
+```
 
 - **(F41) ROW economic activity reduced-form equation**:
 
-\[
+```math
 \begin{aligned}
 \log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
 &=a_{row}(L)\log\left(\frac{y_{row,t-1}}{y_{row,ss}}\right)
@@ -387,11 +387,11 @@ y_{row,t}^{\eta_y}z^d_{row,t}\right]^{1-\theta_d}.
 +\varepsilon_{row,t}.
 \end{aligned}
 \tag{F41}
-\]
+```
 
 - **(F42) U.S. net exports reduced-form equation**:
 
-\[
+```math
 \begin{aligned}
 \log\left(\frac{nx_t}{nx_{ss}}\right)
 &=a_{nx}(L)\log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
@@ -402,11 +402,11 @@ y_{row,t}^{\eta_y}z^d_{row,t}\right]^{1-\theta_d}.
 +\varepsilon_{nx,t}.
 \end{aligned}
 \tag{F42}
-\]
+```
 
 - **(F43) ROW real exchange rate reduced-form equation**:
 
-\[
+```math
 \begin{aligned}
 \log\left(\frac{p^{\ast}_{f,t}}{p_{f,t}}\right)
 &=a_{rer}(L)\log\left(\frac{y_{row,t}}{y_{row,ss}}\right)
@@ -417,7 +417,7 @@ y_{row,t}^{\eta_y}z^d_{row,t}\right]^{1-\theta_d}.
 +\varepsilon_{rer,t}.
 \end{aligned}
 \tag{F43}
-\]
+```
 
 The implementation cross-check also contains AR(1) processes for U.S. consumption/preference, intermediate-goods TFP, U.S. oil technology, U.S. markup, investment technology, U.S. risk, ROW oil demand, and the U.S. inflation target. These process names are recorded in Section 8, but their exact paper-side transition equations are not printed as a compact list in the Markdown and remain `needs_review`.
 
@@ -427,38 +427,38 @@ The model is solved after log-linearization around a deterministic steady state,
 
 Steady-state restrictions recorded from the source include:
 
-\[
+```math
 \phi_I(\delta)=0,\qquad \phi_I'(\delta)=0,\qquad \phi_I''(\delta)>0.
 \tag{F44}
-\]
+```
 
-\[
+```math
 \phi_e(x_{j,ss})=0,\qquad \phi_e'(x_{j,ss})>0,\qquad \phi_e''(x_{j,ss})=0,
 \quad j\in\{c,tr,m\}.
 \tag{F45}
-\]
+```
 
-\[
+```math
 nx_{ss}=0,
 \qquad
 \frac{p^{\ast}_{f,ss}}{p_{f,ss}}=1.
 \tag{F46}
-\]
+```
 
-\[
+```math
 ny_{GDP,ss}=p_{f,ss}y_{f,ss}+p_{o,ss}(y_{o,ss}-o_{tr,ss}-o_{m,ss}).
 \tag{F47}
-\]
+```
 
-Key calibrated steady-state targets from the source include \(\beta=0.99\), \(\delta=0.025\), gasoline share in total consumption 0.03, motor-vehicle expenditure share in consumption 0.045, labor 0.30, transport share in gross output 0.03, transport oil-input share 0.25, intermediate-goods labor share 0.60, petroleum input share in intermediate goods 0.015, labor share in oil and gas extraction 0.15, U.S. oil import share in oil consumption 0.67, U.S. oil production share in world production 0.08, and implied oil expenditures/GDP about 0.035.
+Key calibrated steady-state targets from the source include $`\beta=0.99`$, $`\delta=0.025`$, gasoline share in total consumption 0.03, motor-vehicle expenditure share in consumption 0.045, labor 0.30, transport share in gross output 0.03, transport oil-input share 0.25, intermediate-goods labor share 0.60, petroleum input share in intermediate goods 0.015, labor share in oil and gas extraction 0.15, U.S. oil import share in oil consumption 0.67, U.S. oil production share in world production 0.08, and implied oil expenditures/GDP about 0.035.
 
 Implementation cross-check steady-state values include `yfss=1`, `css=1`, `pifss=1`, `Rss=pifss/beta`, `gss=0.1900`, `poss=0.0123`, `ocss=1.4083`, `ofss=0.6083`, `omss=0.9834`, `importoss=2.0000`, and `rowgdpss=1`. These are recorded as cross-check values, not independent paper-side derivations.
 
 ## 7. Timing & Form Conventions
 
 - **Form**: Log-linear rational expectations model around deterministic steady state. The `.mod` cross-check uses `model(linear)`.
-- **Capital stocks**: Sectoral capital stocks `kc`, `kf`, `km`, and `ko` are predetermined in production and services equations, appearing as \(k_{j,t-1}\) in the paper and as `k_j(-1)` in the implementation cross-check.
-- **Oil efficiency**: Sectoral efficiency stocks are predetermined for current oil-services production, appearing as \(e_{j,t-1}\) in \(ks_{j,t}\) and as `e_j(-1)` in the implementation.
+- **Capital stocks**: Sectoral capital stocks `kc`, `kf`, `km`, and `ko` are predetermined in production and services equations, appearing as $`k_{j,t-1}`$ in the paper and as `k_j(-1)` in the implementation cross-check.
+- **Oil efficiency**: Sectoral efficiency stocks are predetermined for current oil-services production, appearing as $`e_{j,t-1}`$ in $`ks_{j,t}`$ and as `e_j(-1)` in the implementation.
 - **Labor allocation**: Sectoral labor adjustment costs depend on current and lagged labor allocations and produce dynamic labor-allocation FOCs.
 - **Prices**: The paper uses Rotemberg price adjustment for intermediate goods and a Taylor-type rule with inflation target drift; implementation cross-check includes `pim`, `pif`, `pifstar`, `pi`, and `R`.
 - **ROW block**: ROW oil supply/demand are quasi-structural, while ROW activity, net exports, and real exchange rate are reduced-form VARX-style equations with current and lagged oil-price and U.S.-activity terms.
@@ -503,12 +503,12 @@ Implementation cross-check steady-state values include `yfss=1`, `css=1`, `pifss
 
 | ASCII / Symbol | Meaning |
 |---|---|
-| `beta`, \(\beta\) | Discount factor |
-| `delta`, \(\delta\) | Depreciation rate for durables/capital and efficiency evolution exponent |
-| `sigma`, \(\sigma\) | Inverse intertemporal elasticity |
-| `eta`, \(\eta\) | Inverse Frisch elasticity |
-| `xc`, \(\chi_c\) | Habit weight |
-| `thetah`, \(\gamma_h\) | Habit persistence |
+| `beta`, $`\beta`$ | Discount factor |
+| `delta`, $`\delta`$ | Depreciation rate for durables/capital and efficiency evolution exponent |
+| `sigma`, $`\sigma`$ | Inverse intertemporal elasticity |
+| `eta`, $`\eta`$ | Inverse Frisch elasticity |
+| `xc`, $`\chi_c`$ | Habit weight |
+| `thetah`, $`\gamma_h`$ | Habit persistence |
 | `rho*`, `psi*`, `sh*` | CES curvature and steady-state share parameters across consumption, transport, intermediate goods, oil production, and oil/capital services |
 | `af`, `am`, `ao` | Labor allocation adjustment costs |
 | `akc`, `akf`, `akm`, `ako` | Capital adjustment costs |

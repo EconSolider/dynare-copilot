@@ -12,7 +12,7 @@
 
 - Paper equations (1)-(12) were extracted into continuous archive equations (F1)-(F12), with additional identities and exogenous processes numbered (F13)-(F21).
 - The model is explicitly log-linearized in the paper, so the steady state is recorded as zero deviations plus nonzero steady-state ratios and estimated/calibrated constants.
-- `needs_review`: OCR renders the external finance elasticity symbol as a dash in prose. The derivation uses \(\varepsilon\) because paper equation (9), Table 1 context, and `US_DG08_rep.mod` use that symbol.
+- `needs_review`: OCR renders the external finance elasticity symbol as a dash in prose. The derivation uses $`\varepsilon`$ because paper equation (9), Table 1 context, and `US_DG08_rep.mod` use that symbol.
 - `needs_review`: paper equation (6) has a compact investment-technology disturbance term, while `US_DG08_rep.mod` normalizes the implemented shock as `tau*(1+beta)*phi*eps_I`.
 - `needs_review`: the paper does not print the full nonlinear optimization problems; Section 2 of the derivation records the economic primitives implied by the printed log-linear system.
 

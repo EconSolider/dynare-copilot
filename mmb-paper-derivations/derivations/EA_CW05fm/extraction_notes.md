@@ -34,7 +34,7 @@ Status: `needs_review`
 ## Deferred Issues
 
 - Source-level formula review should verify whether `EA_CW05fm` should be described as the baseline RW or RW-S variant in the archive.
-- A future implementation pass should re-derive the exact transformation from paper notation \((p_t,x_t,v_t,q_t)\) to the Rep-MMB linear auxiliary system.
+- A future implementation pass should re-derive the exact transformation from paper notation $`(p_t,x_t,v_t,q_t)`$ to the Rep-MMB linear auxiliary system.
 - A future runtime pass should run Dynare and record steady-state/model diagnostics.
 
 ## Translation Status

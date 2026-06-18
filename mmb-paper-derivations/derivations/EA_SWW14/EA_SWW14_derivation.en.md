@@ -20,11 +20,11 @@ The paper presents log-linearized equilibrium conditions rather than full nonlin
 
 ### 2.1 Household consumption-saving problem
 
-Households have external habit in consumption and choose consumption and nominal bond holdings. The paper states the resulting log-linear Euler equation directly. The implied objective has habit-adjusted marginal utility and the intertemporal wedge/risk-premium shock \(\widehat{\varepsilon}^b_t\) in the Euler equation.
+Households have external habit in consumption and choose consumption and nominal bond holdings. The paper states the resulting log-linear Euler equation directly. The implied objective has habit-adjusted marginal utility and the intertemporal wedge/risk-premium shock $`\widehat{\varepsilon}^b_t`$ in the Euler equation.
 
 ### 2.2 Investment and capital services
 
-Capital-goods decisions imply a forward-looking investment Euler equation in investment and the value of installed capital \(\widehat{q}^k_t\). Capital evolves with investment-specific technology shocks, and capital services used in production combine lagged installed capital and utilization.
+Capital-goods decisions imply a forward-looking investment Euler equation in investment and the value of installed capital $`\widehat{q}^k_t`$. Capital evolves with investment-specific technology shocks, and capital services used in production combine lagged installed capital and utilization.
 
 ### 2.3 Price and wage setting
 
@@ -40,174 +40,174 @@ Equations are numbered continuously across Sections 3-5. Hatted variables are de
 
 - **(F1) Consumption Euler equation with habit and risk premium**:
 
-\[
+```math
 \widehat{c}_t
 = c_1 E_t\widehat{c}_{t+1}
 + (1-c_1)\widehat{c}_{t-1}
 - c_2\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right),
-\]
+```
 
-where \(c_1=1/(1+h/\tau)\) and \(c_2=(1-h/\tau)/(1+h/\tau)\).
+where $`c_1=1/(1+h/\tau)`$ and $`c_2=(1-h/\tau)/(1+h/\tau)`$.
 
 - **(F2) Investment Euler equation**:
 
-\[
+```math
 \widehat{i}_t
 = i_1\widehat{i}_{t-1}
 + (1-i_1)E_t\widehat{i}_{t+1}
 + i_2\widehat{q}^k_t
 + \widehat{\varepsilon}^q_t,
-\]
+```
 
-with \(i_1=1/(1+\beta)\) and \(i_2=i_1/(\tau^2\varphi)\).
+with $`i_1=1/(1+\beta)`$ and $`i_2=i_1/(\tau^2\varphi)`$.
 
 - **(F3) Value of installed capital**:
 
-\[
+```math
 \widehat{q}^k_t
 = -\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right)
 + q_1E_t\widehat{r}^k_{t+1}
 + (1-q_1)E_t\widehat{q}^k_{t+1},
-\]
+```
 
-where \(q_1=r^k/(r^k+1-\delta)\).
+where $`q_1=r^k/(r^k+1-\delta)`$.
 
 - **(F4) Price Phillips curve with indexation**:
 
-\[
+```math
 \widehat{\pi}_t-\gamma_p\widehat{\pi}_{t-1}
 = \pi_1\left(E_t\widehat{\pi}_{t+1}-\gamma_p\widehat{\pi}_t\right)
 -\pi_2\left(\widehat{\mu}_{p,t}-\widehat{\mu}^n_{p,t}\right),
-\]
+```
 
-where \(\pi_1=\beta\) and \(\pi_2=(1-\theta_p\beta)(1-\theta_p)/[\theta_p(1+(\phi_p-1)\varepsilon_p)]\).
+where $`\pi_1=\beta`$ and $`\pi_2=(1-\theta_p\beta)(1-\theta_p)/[\theta_p(1+(\phi_p-1)\varepsilon_p)]`$.
 
 - **(F5) Average price markup / real marginal cost relation**:
 
-\[
+```math
 \widehat{mc}_t
 = (1-\alpha)(\widehat{w}_t-\widehat{p}_t)
 +\alpha\widehat{r}^k_t
 +\widehat{\varepsilon}^a_t,
 \qquad
 \widehat{\mu}_{p,t}\approx-\widehat{mc}_t.
-\]
+```
 
 The sign and markup normalization are marked `needs_review` because the Markdown has OCR noise around the inverse marginal-cost sentence.
 
 - **(F6) Natural price markup shock**:
 
-\[
+```math
 \widehat{\mu}^n_{p,t}=100\,\widehat{\varepsilon}^p_t.
-\]
+```
 
 - **(F7) Wage Phillips curve with indexation**:
 
-\[
+```math
 \Delta\widehat{w}_t
 = \gamma_w\widehat{\pi}_{t-1}
 +\beta E_t\left(\Delta\widehat{w}_{t+1}-\gamma_w\widehat{\pi}_t\right)
 -w_1\left(\widehat{\mu}_{w,t}-\widehat{\mu}^n_{w,t}\right),
-\]
+```
 
-where \(w_1=(1-\beta\theta_w)(1-\theta_w)/[\theta_w(1+\epsilon_w\omega)]\).
+where $`w_1=(1-\beta\theta_w)(1-\theta_w)/[\theta_w(1+\epsilon_w\omega)]`$.
 
 - **(F8) Average wage markup and unemployment**:
 
-\[
+```math
 \widehat{\mu}_{w,t}
 = \widehat{w}_t-\widehat{p}_t-\left(\widehat{z}_t+\widehat{\varepsilon}^s_t+\omega\widehat{e}_t\right)
 = \omega\widehat{u}_t.
-\]
+```
 
 - **(F9) Natural wage markup / natural unemployment**:
 
-\[
+```math
 \widehat{\mu}^n_{w,t}=100\,\widehat{\varepsilon}^w_t
 =\omega\widehat{u}^n_t.
-\]
+```
 
 - **(F10) Smoothed trend of consumption entering labor supply**:
 
-\[
+```math
 \widehat{z}_t
 =(1-\upsilon)\widehat{z}_{t-1}
 +\frac{\upsilon}{1-h/\tau}
 \left(\widehat{c}_t-\frac{h}{\tau}\widehat{c}_{t-1}\right).
-\]
+```
 
 - **(F11) Capital utilization condition**:
 
-\[
+```math
 \widehat{v}_t=\frac{1-\psi}{\psi}\widehat{r}^k_t.
-\]
+```
 
 - **(F12) Optimal capital-labor input condition**:
 
-\[
+```math
 \widehat{k}_t
 =\widehat{w}_t-\widehat{p}_t-\widehat{r}^k_t+\widehat{n}_t.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F13) Aggregate demand / resource constraint**:
 
-\[
+```math
 \widehat{y}_t
 =c_y\widehat{c}_t+i_y\widehat{i}_t+v_y\widehat{v}_t+\widehat{\varepsilon}^g_t.
-\]
+```
 
 - **(F14) Aggregate supply / production function**:
 
-\[
+```math
 \widehat{y}_t
 =\phi_p\left(\alpha\widehat{k}_t+(1-\alpha)\widehat{n}_t+\widehat{\varepsilon}^a_t\right).
-\]
+```
 
 - **(F15) Capital accumulation**:
 
-\[
+```math
 \widehat{\bar{k}}_t
 =\kappa_1\widehat{\bar{k}}_{t-1}
 +(1-\kappa_1)\widehat{i}_t
 +\kappa_2\widehat{\varepsilon}^q_t,
-\]
+```
 
-where \(\kappa_1=(1-\delta)/\tau\) and \(\kappa_2=(\tau+\delta-1)(1+\beta)\tau\varphi\).
+where $`\kappa_1=(1-\delta)/\tau`$ and $`\kappa_2=(\tau+\delta-1)(1+\beta)\tau\varphi`$.
 
 - **(F16) Capital services**:
 
-\[
+```math
 \widehat{k}_t=\widehat{v}_t+\widehat{\bar{k}}_{t-1}.
-\]
+```
 
 - **(F17) Labor force identity**:
 
-\[
+```math
 \widehat{l}_t=\widehat{e}_t+\widehat{u}_t.
-\]
+```
 
 - **(F18) Employment adjustment / productivity link**:
 
-\[
+```math
 \widehat{e}_t-\widehat{e}_{t-1}
 =E_t\widehat{e}_{t+1}-\widehat{e}_t
 +\frac{(1-\beta\theta_e)(1-\theta_e)}{\theta_e}
 \left(\widehat{n}_t-\widehat{e}_t\right).
-\]
+```
 
 - **(F19) Output gap definition**:
 
-\[
+```math
 \widehat{y}^{gap}_t=\widehat{y}_t-\widehat{y}^{flex}_t.
-\]
+```
 
 The flexible-price-and-wage block mirrors the structural equations without nominal markup distortions; the paper defines the gap as output relative to the flexible-price/wage economy but does not print every flexible-block equation.
 
 - **(F20) Measurement equations for the eight observed variables**:
 
-\[
+```math
 \begin{bmatrix}
 \Delta y_t\\
 \Delta c_t\\
@@ -240,18 +240,18 @@ r_t
 \widehat{u}_t\\
 4\widehat{r}_t
 \end{bmatrix}.
-\]
+```
 
 The fifth row is `needs_review`: the paper's printed measurement vector and the implementation cross-check differ in whether the wage observation subtracts inflation or the change in inflation.
 
 - **(F21) SPF noise measurement example for annual inflation**:
 
-\[
+```math
 \pi^a_{t+3|t}
 =4\bar{\pi}
 +E_t\left[\widehat{\pi}_{t+3}+\widehat{\pi}_{t+2}+\widehat{\pi}_{t+1}+\widehat{\pi}_{t}\right]
 +\eta_{\pi,t}.
-\]
+```
 
 Analogous noisy measurement equations are added for SPF unemployment three quarters ahead and annual real GDP growth two quarters ahead. Under the news interpretation, the SPF path is imposed as conditioning information through expected future shocks rather than as noisy measurement.
 
@@ -261,64 +261,64 @@ The paper states the shock list and AR/ARMA classes, and Table 2 reports persist
 
 - **(F22) Risk-premium shock**:
 
-\[
+```math
 \widehat{\varepsilon}^b_t=\rho_b\widehat{\varepsilon}^b_{t-1}+\eta^b_t.
-\]
+```
 
 - **(F23) Investment-specific technology shock**:
 
-\[
+```math
 \widehat{\varepsilon}^q_t=\rho_q\widehat{\varepsilon}^q_{t-1}+\eta^q_t.
-\]
+```
 
 - **(F24) Exogenous spending shock with productivity innovation spillover**:
 
-\[
+```math
 \widehat{\varepsilon}^g_t=\rho_g\widehat{\varepsilon}^g_{t-1}+\eta^g_t+\rho_{ga}\eta^a_t.
-\]
+```
 
 - **(F25) Productivity shock**:
 
-\[
+```math
 \widehat{\varepsilon}^a_t=\rho_a\widehat{\varepsilon}^a_{t-1}+\eta^a_t.
-\]
+```
 
 - **(F26) Price-markup ARMA(1,1) shock**:
 
-\[
+```math
 \widehat{\varepsilon}^p_t
 =\rho_p\widehat{\varepsilon}^p_{t-1}+\eta^p_t-\mu_p\eta^p_{t-1}.
-\]
+```
 
 - **(F27) Wage-markup ARMA(1,1) shock**:
 
-\[
+```math
 \widehat{\varepsilon}^w_t
 =\rho_w\widehat{\varepsilon}^w_{t-1}+\eta^w_t-\mu_w\eta^w_{t-1}.
-\]
+```
 
 - **(F28) Labor-supply shock**:
 
-\[
+```math
 \widehat{\varepsilon}^s_t=\rho_s\widehat{\varepsilon}^s_{t-1}+\eta^s_t.
-\]
+```
 
 - **(F29) Monetary-policy shock process**:
 
-\[
+```math
 \widehat{\varepsilon}^r_t=\rho_r\widehat{\varepsilon}^r_{t-1}+\eta^r_t.
-\]
+```
 
 - **(F30) Monetary policy rule**:
 
-\[
+```math
 \widehat{r}_t
 =\rho_R\widehat{r}_{t-1}
 +(1-\rho_R)
 \left(r_\pi\widehat{\pi}_t+r_y\widehat{y}^{gap}_t
 +r_{\Delta y}\Delta\widehat{y}^{gap}_t\right)
 +\widehat{\varepsilon}^r_t.
-\]
+```
 
 The implementation cross-check uses a minus sign before `epsilonr`; this sign convention is `needs_review` against the authors' state-space shock definition.
 
@@ -326,47 +326,47 @@ The implementation cross-check uses a minus sign before `epsilonr`; this sign co
 
 Because the model is log-linearized around a balanced growth path, all hatted structural variables have zero steady state:
 
-\[
+```math
 \widehat{x}=0
 \quad\text{for}\quad
 x\in\{c,i,q^k,r,\pi,r^k,y,v,k,n,mc,w,z,u,e,l,\bar{k},y^{gap}\}.
-\]
+```
 
 The paper reports the steady-state transformations used in measurement equations:
 
-\[
+```math
 \bar{\tau}=100(\tau-1),\qquad
 \bar{\pi}=100(\pi-1),
-\]
+```
 
-\[
+```math
 \bar{r}=100\left(\frac{\pi\tau}{\beta}-1\right),\qquad
 \bar{u}=100\left(\frac{\phi_w-1}{\omega}\right).
-\]
+```
 
 Calibrated non-estimated parameters include:
 
-\[
+```math
 g_y=0.18,\qquad \delta=0.025,\qquad \varepsilon_p=10.
-\]
+```
 
 Derived ratios used by the implementation cross-check include:
 
-\[
+```math
 i_y=(\tau+\delta-1)k_y,\qquad
 c_y=1-i_y-g_y,\qquad
 v_y=r^k k_y.
-\]
+```
 
 No nonlinear steady-state solver or Dynare check was run for this archive pass.
 
 ## 7. Timing & Form Conventions
 
 - **Linear form**: All model equations are written in log deviations or level deviations from the balanced-growth path and are suitable for `model(linear)`.
-- **Capital stock timing**: Installed capital stock \(\widehat{\bar{k}}_t\) is predetermined; production capital services use \(\widehat{\bar{k}}_{t-1}\) plus current utilization \(\widehat{v}_t\).
-- **Expectations**: \(E_t\) is conditional on information at time \(t\).
-- **Nominal interest and inflation**: The policy rate and inflation variables are deviations; the observed interest rate is annualized in measurement as \(4\widehat{r}_t\) plus its steady-state annual rate.
-- **Output gap**: \(\widehat{y}^{gap}_t\) is the difference between actual output and the flexible-price-and-wage counterpart.
+- **Capital stock timing**: Installed capital stock $`\widehat{\bar{k}}_t`$ is predetermined; production capital services use $`\widehat{\bar{k}}_{t-1}`$ plus current utilization $`\widehat{v}_t`$.
+- **Expectations**: $`E_t`$ is conditional on information at time $`t`$.
+- **Nominal interest and inflation**: The policy rate and inflation variables are deviations; the observed interest rate is annualized in measurement as $`4\widehat{r}_t`$ plus its steady-state annual rate.
+- **Output gap**: $`\widehat{y}^{gap}_t`$ is the difference between actual output and the flexible-price-and-wage counterpart.
 - **SPF conditioning**: Noise variants add forecast measurement errors; news variants condition forecasts on expected future structural shocks. These are estimation/forecasting extensions, not a different private-sector equilibrium block.
 
 ## 8. Variable & Parameter Reference Table
@@ -375,17 +375,17 @@ No nonlinear steady-state solver or Dynare check was run for this archive pass.
 
 | Symbol | Meaning | Main equations |
 |---|---|---|
-| `c` | Consumption deviation \(\widehat{c}_t\) | (F1), (F13), (F20) |
-| `r` | Short-term nominal interest-rate deviation \(\widehat{r}_t\) | (F1), (F3), (F30), (F20) |
-| `pi` | Inflation deviation \(\widehat{\pi}_t\) | (F1), (F4), (F20), (F30) |
-| `i` | Investment deviation \(\widehat{i}_t\) | (F2), (F13), (F15), (F20) |
-| `q` | Value of capital \(\widehat{q}^k_t\) | (F2), (F3) |
-| `rk` | Rental return on capital \(\widehat{r}^k_t\) | (F3), (F5), (F11), (F12) |
-| `y` | Output deviation \(\widehat{y}_t\) | (F13), (F14), (F19), (F20) |
-| `v` | Capital utilization \(\widehat{v}_t\) | (F11), (F13), (F16) |
-| `k` | Capital services \(\widehat{k}_t\) | (F12), (F14), (F16) |
-| `n` | Hours worked \(\widehat{n}_t\) | (F12), (F14), (F18) |
-| `mc` | Real marginal cost \(\widehat{mc}_t\) | (F5) |
+| `c` | Consumption deviation $`\widehat{c}_t`$ | (F1), (F13), (F20) |
+| `r` | Short-term nominal interest-rate deviation $`\widehat{r}_t`$ | (F1), (F3), (F30), (F20) |
+| `pi` | Inflation deviation $`\widehat{\pi}_t`$ | (F1), (F4), (F20), (F30) |
+| `i` | Investment deviation $`\widehat{i}_t`$ | (F2), (F13), (F15), (F20) |
+| `q` | Value of capital $`\widehat{q}^k_t`$ | (F2), (F3) |
+| `rk` | Rental return on capital $`\widehat{r}^k_t`$ | (F3), (F5), (F11), (F12) |
+| `y` | Output deviation $`\widehat{y}_t`$ | (F13), (F14), (F19), (F20) |
+| `v` | Capital utilization $`\widehat{v}_t`$ | (F11), (F13), (F16) |
+| `k` | Capital services $`\widehat{k}_t`$ | (F12), (F14), (F16) |
+| `n` | Hours worked $`\widehat{n}_t`$ | (F12), (F14), (F18) |
+| `mc` | Real marginal cost $`\widehat{mc}_t`$ | (F5) |
 | `w` | Real wage deviation | (F7), (F8), (F12), (F20) |
 | `z` | Smoothed consumption trend | (F8), (F10) |
 | `u` | Unemployment deviation | (F8), (F17), (F20) |
@@ -402,14 +402,14 @@ No nonlinear steady-state solver or Dynare check was run for this archive pass.
 
 | Symbol | Meaning |
 |---|---|
-| `etab` | Risk-premium innovation \(\eta^b_t\) |
-| `etaq` | Investment-specific technology innovation \(\eta^q_t\) |
-| `etag` | Exogenous-spending innovation \(\eta^g_t\) |
-| `etaa` | Productivity innovation \(\eta^a_t\) |
-| `etap` | Price-markup innovation \(\eta^p_t\) |
-| `etas` | Labor-supply innovation \(\eta^s_t\) |
-| `etaw` | Wage-markup innovation \(\eta^w_t\) |
-| `etar` | Monetary-policy innovation \(\eta^r_t\) |
+| `etab` | Risk-premium innovation $`\eta^b_t`$ |
+| `etaq` | Investment-specific technology innovation $`\eta^q_t`$ |
+| `etag` | Exogenous-spending innovation $`\eta^g_t`$ |
+| `etaa` | Productivity innovation $`\eta^a_t`$ |
+| `etap` | Price-markup innovation $`\eta^p_t`$ |
+| `etas` | Labor-supply innovation $`\eta^s_t`$ |
+| `etaw` | Wage-markup innovation $`\eta^w_t`$ |
+| `etar` | Monetary-policy innovation $`\eta^r_t`$ |
 
 ### Parameters
 

@@ -12,8 +12,8 @@
 
 - Core paper-side formulas extracted from the Markdown include the household problem, budget constraint, goods and labor aggregators, firm profit problem, Taylor rule, flexible-information reduced-form equations, sticky-information Phillips/IS/wage curves, and AR(1) shock processes.
 - First-pass uncertain formulas are explicitly marked `needs_review` in the derivations:
-  - The Euler-equation notation uses \(C_{t,j}^{-1/\theta}\) in the OCR while the surrounding parameter list in the paper emphasizes \(\xi\), \(\psi\), \(\nu\), \(\gamma\), \(\beta\), and related terms. The implementation uses `theta` in output and wage sticky-information target equations.
-  - The sticky-information IS equation appears with \(y_\infty^n\) in the rendered equation but the surrounding text defines the wealth measure as \(y_\infty^c\); the derivation uses \(y_\infty^c\) and records the issue.
+  - The Euler-equation notation uses $`C_{t,j}^{-1/\theta}`$ in the OCR while the surrounding parameter list in the paper emphasizes $`\xi`$, $`\psi`$, $`\nu`$, $`\gamma`$, $`\beta`$, and related terms. The implementation uses `theta` in output and wage sticky-information target equations.
+  - The sticky-information IS equation appears with $`y_\infty^n`$ in the rendered equation but the surrounding text defines the wealth measure as $`y_\infty^c`$; the derivation uses $`y_\infty^c`$ and records the issue.
 - The paper is a reduced-form log-linear system. It does not provide a nonlinear steady-state system comparable to a Dynare `steady_state_model`; steady-state notes are therefore `needs_review`.
 
 ## Implementation Cross-Check
@@ -31,7 +31,7 @@
 
 - Review the title/version mismatch between `model_index.csv`, raw PDF filename, and MinerU Markdown title before promoting this entry out of first-pass status.
 - Review the equation count mapping between the paper's 20 documented archive conditions and the MMB replication's 19 endogenous variables plus auxiliary sticky-information targets.
-- Source-level check the ambiguous \(y_\infty^c\) versus \(y_\infty^n\) OCR rendering against the PDF if exact formula fidelity is required.
+- Source-level check the ambiguous $`y_\infty^c`$ versus $`y_\infty^n`$ OCR rendering against the PDF if exact formula fidelity is required.
 - Source-level check the intertemporal elasticity notation around the Euler equation and the implementation's `theta` usage.
 - Runtime validation, BK checks, steady-state checks, and IRF checks are deferred by instruction.
 

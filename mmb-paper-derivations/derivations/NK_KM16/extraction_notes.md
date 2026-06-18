@@ -31,7 +31,7 @@
 
 - Full source-level equation audit against the PDF remains deferred.
 - Runtime validation in Dynare remains deferred.
-- The natural-rate block behind \(Y_t^n\) should be reviewed if this derivation is promoted into a runnable model archive entry.
+- The natural-rate block behind $`Y_t^n`$ should be reviewed if this derivation is promoted into a runnable model archive entry.
 - Shared `catalog.csv` and `status.csv` were intentionally not edited because this task restricted ownership to `mmb-paper-derivations/derivations/NK_KM16/`.
 
 ## Translation Status

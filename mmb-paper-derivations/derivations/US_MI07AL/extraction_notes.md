@@ -11,9 +11,9 @@
 
 - The main model equations are printed in the Markdown source: modified IS/Euler equation, Phillips curve, policy rule, transformed inflation/output-gap definitions, shock processes, PLM, constant-gain updates, subjective forecast formula, and state-space representation.
 - First-pass formula status is `needs_review`.
-- `needs_review`: the Markdown forecast formula uses \(I_5\) while \(Z_t=[\pi_t,x_t,i_t]'\) is defined as three-dimensional. This may refer to the augmented five-dimensional state including \(u_t\) and \(r_t^n\), but the dimensioning should be source-checked.
+- `needs_review`: the Markdown forecast formula uses $`I_5`$ while $`Z_t=[\pi_t,x_t,i_t]'`$ is defined as three-dimensional. This may refer to the augmented five-dimensional state including $`u_t`$ and $`r_t^n`$, but the dimensioning should be source-checked.
 - `needs_review`: the paper reports reduced-form log-linear equilibrium conditions, not the full nonlinear household and price-setting FOCs. The derivation states generic optimization problems only as background and treats the source-stated log-linear equations as the core extracted conditions.
-- `needs_review`: the state-space matrices \(A_t\), \(F_t\), \(G_t\), and \(H\) are not printed in the Markdown and were not reconstructed.
+- `needs_review`: the state-space matrices $`A_t`$, $`F_t`$, $`G_t`$, and $`H`$ are not printed in the Markdown and were not reconstructed.
 
 ## Implementation Cross-Check
 

@@ -19,12 +19,12 @@ Source: Stefania Villa (2016), "Financial frictions in the Euro Area and the Uni
 
 Households choose consumption, bond holdings, and labor supply with external habit. The source Table 1 reports the resulting Euler equation and wage Phillips curve rather than a complete household Lagrangian; the underlying optimization problem is therefore recorded as:
 
-\[
+```math
 \max_{\{C_t,L_t,B_t\}} E_0 \sum_{t=0}^{\infty} \beta^t
 \left[ U(C_t-h C_{t-1}) - V(L_t) \right]
 \quad\text{s.t.}\quad
 P_t C_t + B_t \le W_t L_t + R^n_{t-1}B_{t-1} + \Pi_t^{div}.
-\]
+```
 
 `needs_review`: The exact utility normalization is appendix-dependent; the linearized Euler and wage equations below are source-stated in Table 1.
 
@@ -42,9 +42,9 @@ Intermediate goods firms choose factors for production and finance capital purch
 
 Because the project return is subject to an idiosyncratic shock observed costlessly by the firm but only at monitoring cost by the lender, the optimal contract creates an external finance premium:
 
-\[
+```math
 EP_t = EP\!\left(Q_t + E_t[\hat{K}_{t+1}] - E_t[\hat{N}_{t+1}]\right),
-\]
+```
 
 linearized in Table 1 as equation (F14).
 
@@ -60,16 +60,16 @@ The policy maker follows an interest-rate rule with smoothing, inflation respons
 
 **(F1) Euler equation with habit**
 
-\[
+```math
 \frac{1+h}{1-h}\hat{C}_{t}
 = \frac{1}{1-h}E_t[\hat{C}_{t+1}]
 + \frac{h}{1-h}\hat{C}_{t-1}
 - \hat{R}_{t}.
-\]
+```
 
 **(F2) Wage Phillips curve**
 
-\[
+```math
 \hat{W}_{t}
 = \frac{\beta}{1+\beta}E_t[\hat{W}_{t+1}]
 + \frac{1}{1+\beta}\hat{W}_{t-1}
@@ -81,51 +81,51 @@ The policy maker follows an interest-rate rule with smoothing, inflation respons
 \left[\phi\hat{L}_{t}-\frac{h}{1-h}\hat{C}_{t-1}
 +\frac{1}{1-h}\hat{C}_{t}-\hat{W}_{t}\right]
 +\varepsilon_t^w.
-\]
+```
 
 **(F3) Capital accumulation**
 
-\[
+```math
 \hat{K}_{t+1}
 = \delta(\hat{I}_{t}+\varepsilon_t^x)
 + (1-\delta)(\hat{K}_{t}+\varepsilon_t^k).
-\]
+```
 
 **(F4) Optimal capital utilization**
 
-\[
+```math
 \hat{Z}_t^k = \frac{\zeta}{1-\zeta}\hat{U}_t.
-\]
+```
 
 **(F5) Investment Euler equation**
 
-\[
+```math
 \hat{I}_t
 = \frac{1}{\xi(1+\beta)}(\hat{Q}_t+\varepsilon_t^x)
 + \frac{1}{1+\beta}\hat{I}_{t-1}
 + \frac{\beta}{1+\beta}E_t[\hat{I}_{t+1}].
-\]
+```
 
 **(F6) Production-side factor FOC**
 
-\[
+```math
 \hat{W}_t = \hat{Z}_t^k - \hat{L}_t + \hat{K}_t + \hat{U}_t.
-\]
+```
 
 **(F7) Price Phillips curve**
 
-\[
+```math
 \hat{\Pi}_t
 = \frac{\sigma_{pi}}{1+\sigma_{pi}\beta}\hat{\Pi}_{t-1}
 + \frac{\beta}{1+\sigma_{pi}\beta}E_t[\hat{\Pi}_{t+1}]
 - \frac{(1-\beta\sigma_p)(1-\sigma_p)}{(1+\sigma_{pi}\beta)\sigma_p}
 \left[\varepsilon_t^a-\alpha\hat{Z}_t^k-(1-\alpha)\hat{W}_t\right]
 + \varepsilon_t^p.
-\]
+```
 
 **(F8) Taylor rule**
 
-\[
+```math
 \hat{R}_t^n
 = \rho_i\hat{R}_{t-1}^n
 + (1-\rho_i)\left[\rho_\pi\hat{\Pi}_t
@@ -133,77 +133,77 @@ The policy maker follows an interest-rate rule with smoothing, inflation respons
 + \rho_{\Delta y}\left[\hat{Y}_t-\hat{Y}_t^p
 - (\hat{Y}_{t-1}-\hat{Y}_{t-1}^p)\right]
 + \varepsilon_t^r.
-\]
+```
 
 **(F9) Fisher equation**
 
-\[
+```math
 \hat{R}_t^n = \hat{R}_t + E_t[\hat{\Pi}_{t+1}].
-\]
+```
 
 **(F10) Price of capital / return on capital in SWBGG**
 
-\[
+```math
 \hat{R}_t^k
 = \frac{Z^k}{R^k}\hat{Z}_t^k
 + \frac{1-\delta}{R^k}(\hat{Q}_t+\varepsilon_t^k)
 - \hat{Q}_{t-1}.
-\]
+```
 
 **(F11) External finance premium**
 
-\[
+```math
 \hat{EP}_t
 = \varkappa\left(\hat{Q}_t + E_t[\hat{K}_{t+1}]
 - E_t[\hat{N}_{t+1}]\right).
-\]
+```
 
 **(F12) Spread / capital-return arbitrage**
 
-\[
+```math
 E_t[\hat{R}_{t+1}^k] = \hat{R}_t + \hat{EP}_t.
-\]
+```
 
 **(F13) Firms' net worth accumulation**
 
-\[
+```math
 \frac{1}{\theta R^k}E_t[\hat{N}_{t+1}]
 = \frac{K}{N}\hat{R}_t^k
 - \left(\frac{K}{N}-1\right)\hat{R}_{t-1}
 - \varkappa\left(\frac{K}{N}-1\right)(\hat{K}_t+\hat{Q}_{t-1})
 + \left[\left(\frac{K}{N}-1\right)\varkappa+1\right]\hat{N}_t.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 **(F14) Resource constraint**
 
-\[
+```math
 \hat{Y}_t
 = \frac{C}{Y}\hat{C}_t
 + \frac{I}{Y}\hat{I}_t
 + \frac{G}{Y}\varepsilon_t^g
 + Z^k\frac{K}{Y}\hat{U}_t.
-\]
+```
 
 **(F15) Production function**
 
-\[
+```math
 \hat{Y}_t
 = \Theta\left[\varepsilon_t^a
 + \alpha(\varepsilon_t^k+\hat{K}_t+\hat{U}_t)
 + (1-\alpha)\hat{L}_t\right].
-\]
+```
 
 **(F16) Optional employment Phillips curve**
 
-\[
+```math
 \hat{E}_t
 = \frac{1}{1+\beta}\hat{E}_{t-1}
 + \frac{\beta}{1+\beta}E_t[\hat{E}_{t+1}]
 - \frac{(1-\beta\sigma_E)(1-\sigma_E)}{(1+\beta)\sigma_E}
 (\hat{L}_t-\hat{E}_t).
-\]
+```
 
 `needs_review`: The implementation cross-check comments out employment for the US replication because US hours are available; this archive keeps the source-stated Table 1 equation but marks it optional for the US MMB implementation.
 
@@ -213,71 +213,71 @@ The paper states that seven orthogonal shocks follow AR(1) processes. The signs 
 
 **(F17) Technology shock**
 
-\[
+```math
 \varepsilon_t^a = \rho_a\varepsilon_{t-1}^a - e_t^a.
-\]
+```
 
 **(F18) Government shock**
 
-\[
+```math
 \varepsilon_t^g = \rho_g\varepsilon_{t-1}^g - e_t^g.
-\]
+```
 
 **(F19) Investment-specific technology shock**
 
-\[
+```math
 \varepsilon_t^x = \rho_x\varepsilon_{t-1}^x - e_t^x.
-\]
+```
 
 **(F20) Monetary policy shock**
 
-\[
+```math
 \varepsilon_t^r = \rho_{ri}\varepsilon_{t-1}^r + e_t^r.
-\]
+```
 
 **(F21) Price mark-up shock**
 
-\[
+```math
 \varepsilon_t^p = \rho_p\varepsilon_{t-1}^p + e_t^p.
-\]
+```
 
 **(F22) Wage mark-up shock**
 
-\[
+```math
 \varepsilon_t^w = \rho_w\varepsilon_{t-1}^w + e_t^w.
-\]
+```
 
 **(F23) Capital quality shock**
 
-\[
+```math
 \varepsilon_t^k = \rho_k\varepsilon_{t-1}^k - e_t^k.
-\]
+```
 
 ## 6. Steady-State Solution
 
 Because the model is linearized, all hatted endogenous variables and zero-mean shocks have steady state zero:
 
-\[
+```math
 \hat{C}=\hat{I}=\hat{Y}=\hat{W}=\hat{L}=\hat{\Pi}=\hat{R}=\hat{R}^n
 =\hat{K}=\hat{Q}=\hat{R}^k=\hat{EP}=\hat{N}=\hat{U}=\hat{Z}^k=0.
-\]
+```
 
 The source and implementation cross-check define the steady-state constants:
 
-\[
+```math
 R=\frac{1}{\beta},\qquad
 Z^k=R-(1-\delta),\qquad
 R^k=S R,\qquad
 \frac{K}{N}=2.
-\]
+```
 
 Additional ratios used in the linear equations are computed from calibrated constants:
 
-\[
+```math
 \frac{I}{K}=\delta,\qquad
 \frac{G}{Y}=0.20,\qquad
 \frac{C}{Y}=1-\frac{I}{Y}-\frac{G}{Y}.
-\]
+```
 
 `needs_review`: The source Table 1 does not print every steady-state ratio formula. The implementation cross-check computes `W`, `K_L`, `Y_K`, `K_Y`, `I_Y`, and `C_Y`; these are recorded in `extraction_notes.md` as implementation evidence, not independent paper-side derivation.
 

@@ -18,85 +18,85 @@ Runtime validation was not performed. This is a first-pass source-backed derivat
 
 The household chooses consumption, labor, and one-period riskless bond holdings. It has habit formation in consumption:
 
-\[
+```math
 \max_{\{C_t,L_t,B_{t+1}\}} E_t \sum_{i=0}^{\infty}\beta^i
 \left[\log(C_{t+i}-h C_{t+i-1})-\frac{\chi}{1+\varphi}L_{t+i}^{1+\varphi}\right].
-\]
+```
 
 The period budget constraint is
 
-\[
+```math
 C_t = W_tL_t+\Pi_t+T_t+R_tB_t-B_{t+1}.
-\]
+```
 
 ### Banker/intermediary
 
 Banker `j` starts period `t` with net worth `N_{jt}` and obtains deposits `B_{jt+1}` to purchase claims `S_{jt}` at price `Q_t`:
 
-\[
+```math
 Q_tS_{jt}=N_{jt}+B_{jt+1}.
-\]
+```
 
 Intermediary net worth next period equals asset payoffs less deposit repayment:
 
-\[
+```math
 N_{j,t+1}=R_{k,t+1}Q_tS_{jt}-R_{t+1}B_{j,t+1}.
-\]
+```
 
 The banker maximizes expected terminal wealth:
 
-\[
+```math
 V_{jt}=\max E_t\sum_{i=0}^{\infty}(1-\theta)\theta^i\beta^{i+1}
 \Lambda_{t,t+1+i}N_{j,t+1+i}.
-\]
+```
 
 Depositors lend only if the franchise value exceeds the gain from diverting a fraction of assets:
 
-\[
+```math
 V_{jt}\geq \lambda Q_tS_{jt}.
-\]
+```
 
 ### Intermediate goods producer
 
 At the end of `t`, firms acquire capital for use at `t+1` by issuing claims equal to capital acquired:
 
-\[
+```math
 Q_tK_{t+1}=Q_tS_t.
-\]
+```
 
 At `t`, they choose utilization and labor to produce
 
-\[
+```math
 Y_t=A_t(U_t\xi_tK_t)^\alpha L_t^{1-\alpha}.
-\]
+```
 
 ### Capital producer
 
 Capital producers buy and refurbish depreciated capital and produce new capital subject to flow adjustment costs. Their discounted profit problem is
 
-\[
+```math
 \max_{\{I_{n,t}\}} E_t\sum_{\tau=t}^{\infty}\beta^{\tau-t}\Lambda_{t,\tau}
 \left[(Q_\tau-1)I_{n,\tau}
 -f\!\left(\frac{I_{n,\tau}+I_{ss}}{I_{n,\tau-1}+I_{ss}}\right)(I_{n,\tau}+I_{ss})\right].
-\]
+```
 
 ### Retailers
 
 Final output is a CES aggregate of differentiated retail goods:
 
-\[
+```math
 Y_t=\left[\int_0^1 Y_{ft}^{(\varepsilon-1)/\varepsilon}df\right]^{\varepsilon/(\varepsilon-1)}.
-\]
+```
 
 Retailer `f` chooses its reset price under Calvo stickiness and lagged inflation indexation:
 
-\[
+```math
 \max_{P_t^{\ast}} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
 \frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -P_{m,t+i}
 \right]Y_{f,t+i}.
-\]
+```
 
 ## 3. First-Order Conditions
 
@@ -104,292 +104,292 @@ Retailer `f` chooses its reset price under Calvo stickiness and lagged inflation
 
 - **(F1) Marginal utility with external habit**:
 
-\[
+```math
 \varrho_t=(C_t-hC_{t-1})^{-1}-\beta h E_t(C_{t+1}-hC_t)^{-1}.
-\]
+```
 
 - **(F2) Labor supply**:
 
-\[
+```math
 \varrho_t W_t=\chi L_t^\varphi.
-\]
+```
 
 - **(F3) Euler equation for riskless bonds**:
 
-\[
+```math
 E_t\beta\Lambda_{t,t+1}R_{t+1}=1,\qquad
 \Lambda_{t,t+1}=\frac{\varrho_{t+1}}{\varrho_t}.
-\]
+```
 
 **Financial intermediaries**
 
 - **(F4) Balance sheet**:
 
-\[
+```math
 Q_tS_{jt}=N_{jt}+B_{j,t+1}.
-\]
+```
 
 - **(F5) Net-worth accumulation**:
 
-\[
+```math
 N_{j,t+1}=(R_{k,t+1}-R_{t+1})Q_tS_{jt}+R_{t+1}N_{jt}.
-\]
+```
 
 - **(F6) Banker value decomposition**:
 
-\[
+```math
 V_{jt}=\nu_t Q_tS_{jt}+\eta_t N_{jt}.
-\]
+```
 
 - **(F7) Marginal value of intermediary assets**:
 
-\[
+```math
 \nu_t=E_t\left\{(1-\theta)\beta\Lambda_{t,t+1}(R_{k,t+1}-R_{t+1})
 +\beta\Lambda_{t,t+1}\theta x_{t,t+1}\nu_{t+1}\right\}.
-\]
+```
 
 - **(F8) Marginal value of intermediary net worth**:
 
-\[
+```math
 \eta_t=E_t\left\{(1-\theta)+\beta\Lambda_{t,t+1}\theta z_{t,t+1}\eta_{t+1}\right\}.
-\]
+```
 
 - **(F9) Incentive constraint**:
 
-\[
+```math
 \eta_tN_{jt}+\nu_tQ_tS_{jt}\geq \lambda Q_tS_{jt}.
-\]
+```
 
 - **(F10) Binding leverage relation**:
 
-\[
+```math
 Q_tS_{jt}=\frac{\eta_t}{\lambda-\nu_t}N_{jt}\equiv \phi_tN_{jt}.
-\]
+```
 
 - **(F11) Aggregate privately intermediated assets**:
 
-\[
+```math
 Q_tS_{p,t}=\phi_tN_t.
-\]
+```
 
 - **(F12) Growth in intermediary net worth**:
 
-\[
+```math
 z_{t,t+1}=(R_{k,t+1}-R_{t+1})\phi_t+R_{t+1}.
-\]
+```
 
 - **(F13) Growth in intermediary assets**:
 
-\[
+```math
 x_{t,t+1}=\frac{\phi_{t+1}}{\phi_t}z_{t,t+1}.
-\]
+```
 
 - **(F14) Aggregate intermediary net worth**:
 
-\[
+```math
 N_t=N_{e,t}+N_{n,t}.
-\]
+```
 
 - **(F15) Existing bankers' net worth**:
 
-\[
+```math
 N_{e,t}=\theta\left[(R_{k,t}-R_t)\phi_{t-1}+R_t\right]N_{t-1}.
-\]
+```
 
 - **(F16) Entering bankers' net worth**:
 
-\[
+```math
 N_{n,t}=\omega Q_tS_{t-1}.
-\]
+```
 
 **Credit policy and aggregate intermediation**
 
 - **(F17) Total assets split between private and public intermediation**:
 
-\[
+```math
 Q_tS_t=Q_tS_{p,t}+Q_tS_{g,t}.
-\]
+```
 
 - **(F18) Public intermediation share**:
 
-\[
+```math
 Q_tS_{g,t}=\psi_tQ_tS_t.
-\]
+```
 
 - **(F19) Total leverage with credit policy**:
 
-\[
+```math
 Q_tS_t=\phi_tN_t+\psi_tQ_tS_t\equiv \phi_{c,t}N_t,\qquad
 \phi_{c,t}=\frac{\phi_t}{1-\psi_t}.
-\]
+```
 
 **Intermediate goods producers**
 
 - **(F20) Claims equal next-period capital**:
 
-\[
+```math
 Q_tK_{t+1}=Q_tS_t.
-\]
+```
 
 - **(F21) Production function**:
 
-\[
+```math
 Y_t=A_t(U_t\xi_tK_t)^\alpha L_t^{1-\alpha}.
-\]
+```
 
 - **(F22) Utilization choice**:
 
-\[
+```math
 P_{m,t}\alpha\frac{Y_t}{U_t}=\delta'(U_t)\xi_tK_t.
-\]
+```
 
 - **(F23) Labor demand**:
 
-\[
+```math
 P_{m,t}(1-\alpha)\frac{Y_t}{L_t}=W_t.
-\]
+```
 
 - **(F24) Return to capital**:
 
-\[
+```math
 R_{k,t+1}=
 \frac{\left[P_{m,t+1}\alpha\frac{Y_{t+1}}{\xi_{t+1}K_{t+1}}
 +Q_{t+1}-\delta(U_{t+1})\right]\xi_{t+1}}{Q_t}.
-\]
+```
 
 **Capital producers**
 
 - **(F25) Net investment definition**:
 
-\[
+```math
 I_{n,t}=I_t-\delta(U_t)\xi_tK_t.
-\]
+```
 
 - **(F26) Capital producer's Q relation**:
 
-\[
+```math
 Q_t=1+f(\cdot)
 +\frac{I_{n,t}+I_{ss}}{I_{n,t-1}+I_{ss}}f'(\cdot)
 -E_t\beta\Lambda_{t,t+1}
 \left(\frac{I_{n,t+1}+I_{ss}}{I_{n,t}+I_{ss}}\right)^2f'(\cdot).
-\]
+```
 
 **Retailers**
 
 - **(F27) Demand for retail variety**:
 
-\[
+```math
 Y_{f,t}=\left(\frac{P_{f,t}}{P_t}\right)^{-\varepsilon}Y_t.
-\]
+```
 
 - **(F28) Price index**:
 
-\[
+```math
 P_t=\left[\int_0^1P_{f,t}^{1-\varepsilon}df\right]^{1/(1-\varepsilon)}.
-\]
+```
 
 - **(F29) Reset-price FOC**:
 
-\[
+```math
 E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
 \frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -\mu P_{m,t+i}
 \right]Y_{f,t+i}=0,\qquad
 \mu=\frac{1}{1-1/\varepsilon}.
-\]
+```
 
 - **(F30) Price-level law of motion**:
 
-\[
+```math
 P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma\left(\Pi_{t-1}^{\gamma_p}P_{t-1}\right)^{1-\varepsilon}\right]^{1/(1-\varepsilon)}.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F31) Resource constraint**:
 
-\[
+```math
 Y_t=C_t+I_t+
 f\!\left(\frac{I_{n,t}+I_{ss}}{I_{n,t-1}+I_{ss}}\right)(I_{n,t}+I_{ss})
 +G+\tau\psi_tQ_tK_{t+1}.
-\]
+```
 
 - **(F32) Capital accumulation**:
 
-\[
+```math
 K_{t+1}=\xi_tK_t+I_{n,t}.
-\]
+```
 
 - **(F33) Government budget identity**:
 
-\[
+```math
 G+\tau\psi_tQ_tK_{t+1}=T_t+(R_{k,t}-R_t)B_{g,t-1}.
-\]
+```
 
 - **(F34) Government debt used for public intermediation**:
 
-\[
+```math
 B_{g,t}=\psi_tQ_tS_t.
-\]
+```
 
 - **(F35) Wholesale-to-retail output relation**:
 
-\[
+```math
 Y_{m,t}=D_tY_t.
-\]
+```
 
 - **(F36) Markup definition**:
 
-\[
+```math
 X_t=\frac{1}{P_{m,t}}.
-\]
+```
 
 - **(F37) Fisher relation**:
 
-\[
+```math
 1+i_t=R_{t+1}\frac{E_tP_{t+1}}{P_t}.
-\]
+```
 
 - **(F38) Taylor rule**:
 
-\[
+```math
 i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})\right]
 +\rho i_{t-1}+\varepsilon^i_t.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F39) Credit-policy feedback rule**:
 
-\[
+```math
 \psi_t=\psi+\nu_\psi E_t\left[(\log R_{k,t+1}-\log R_{t+1})-(\log R_k-\log R)\right].
-\]
+```
 
 - **(F40) Technology shock**:
 
-\[
+```math
 \log A_t=\rho_a\log A_{t-1}+\varepsilon^a_t.
-\]
+```
 
 - **(F41) Capital-quality shock**:
 
-\[
+```math
 \log \xi_t=\rho_\xi\log \xi_{t-1}+\varepsilon^\xi_t.
-\]
+```
 
 - **(F42) Government-spending shock**:
 
-\[
+```math
 \log G_t=(1-\rho_g)\log G+\rho_g\log G_{t-1}+\varepsilon^g_t.
-\]
+```
 
 - **(F43) Intermediary wealth shock, implementation cross-check only**:
 
-\[
+```math
 N_{e,t}=\theta\left[(R_{k,t}-R_t)\phi_{t-1}+R_t\right]N_{t-1}\exp(-\varepsilon^N_t).
-\]
+```
 
 The source paper uses valuation and policy experiments; the implementation also carries an intermediary net-worth shock and a monetary policy shock for MMB simulations.
 
@@ -399,64 +399,64 @@ Steady state sets inflation and capital-quality shocks to their deterministic me
 
 1. From **(F3)**, with constant marginal utility:
 
-\[
+```math
 R=\frac{1}{\beta}.
-\]
+```
 
 2. The target steady-state spread implies
 
-\[
+```math
 R_k=R\cdot\exp(\overline{\text{prem}}).
-\]
+```
 
 3. From the target leverage ratio:
 
-\[
+```math
 \phi=\overline{\phi}.
-\]
+```
 
 4. The banker block solves jointly for `lambda`, `omega`, and `chi` to match leverage, spread, and labor targets. At steady state,
 
-\[
+```math
 z=(R_k-R)\phi+R,\qquad x=z.
-\]
+```
 
 5. With `Q=1` and `xi=1`, the capital return equation implies a steady-state marginal product relation:
 
-\[
+```math
 R_k=P_m\alpha\frac{Y}{K}+1-\delta(U).
-\]
+```
 
 6. The utilization condition pins down the depreciation-function scale:
 
-\[
+```math
 P_m\alpha Y=b U^{1+\zeta}K.
-\]
+```
 
 7. Net investment and capital accumulation imply
 
-\[
+```math
 I_n=0,\qquad I=\delta(U)K.
-\]
+```
 
 8. The Calvo block has zero inflation and no price dispersion:
 
-\[
+```math
 D=1,\qquad X=\frac{\varepsilon}{\varepsilon-1},\qquad P_m=\frac{\varepsilon-1}{\varepsilon}.
-\]
+```
 
 9. Resource feasibility then determines consumption:
 
-\[
+```math
 C=Y-I-G.
-\]
+```
 
 10. The labor target and **(F1)**-**(F2)** pin down the labor utility weight:
 
-\[
+```math
 \chi=\frac{\varrho W}{L^\varphi},\qquad
 \varrho=(C-hC)^{-1}-\beta h(C-hC)^{-1}.
-\]
+```
 
 The exact MMB steady-state implementation numerically solves the calibration targets and is recorded only as `implementation_cross_check`; the paper does not provide a complete closed-form steady-state algorithm.
 

@@ -28,7 +28,7 @@
 ## Deferred Issues
 
 - `needs_review`: the employment Phillips curve is source-visible but omitted in the implementation.
-- `needs_review`: timing normalization from source equations with \(E_t\hat{K}_{t+1}\) and \(E_t\hat{N}_{t+1}\) to implementation variables `k` and `n`.
+- `needs_review`: timing normalization from source equations with $`E_t\hat{K}_{t+1}`$ and $`E_t\hat{N}_{t+1}`$ to implementation variables `k` and `n`.
 - `needs_review`: formula signs for shock processes should be checked against the original appendix or code comments before a reviewed archive status.
 - `needs_review`: the full online appendix mentioned by the paper was not available in the required local source set and was not fetched.
 - Runtime validation was not performed; no Dynare run, BK check, or IRF reproduction was attempted.

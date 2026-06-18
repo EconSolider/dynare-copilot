@@ -13,7 +13,7 @@
 - The article body contains the main model equations, but several derivations are delegated to online appendices that are not present in this source packet.
 - The heterogeneous-agent equity and bond Euler equations are source-backed but OCR-sensitive, especially conditional expectations and payoff weights over seller/keeper/buyer regions.
 - The steady-state section is partial because the paper states the model is stationarized and log-linearized but does not provide a complete closed-form steady-state derivation in the extracted article body.
-- The intermediation wedge appears as \(Q_t^B=(1+\tau_t^q)Q_t^A\) in the paper text, while the MMB implementation uses `exp(Q_t_B) = exp(Q_t_A)*exp(tau_q_t)`. This is recorded as a notation/implementation convention requiring review.
+- The intermediation wedge appears as $`Q_t^B=(1+\tau_t^q)Q_t^A`$ in the paper text, while the MMB implementation uses `exp(Q_t_B) = exp(Q_t_A)*exp(tau_q_t)`. This is recorded as a notation/implementation convention requiring review.
 
 ## Implementation Cross-Check
 

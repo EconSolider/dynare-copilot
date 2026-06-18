@@ -13,8 +13,8 @@
 - Main extraction source is Table 1, "Linearized model equations", plus Table 1 Continued for SWGK equations (19b)-(23b).
 - The source table is readable enough for a first-pass derivation, but several OCR artifacts remain:
   - Equation (17b) appears as `E_t [ lev t + 1 ]`; this was normalized to expected next-period leverage using the equation label and implementation cross-check. Status: `needs_review`.
-  - Equation (19b) splits `lev` as `l\hat{ev}`; this was normalized to \(\widehat{lev}_t\). Status: `needs_review`.
-  - The note defining \(\hat{\Lambda}_{t,t+1}\) and \(\hat{\mu}_t\) contains malformed OCR; the derivation uses the readable structure plus implementation cross-check. Status: `needs_review`.
+  - Equation (19b) splits `lev` as `l\hat{ev}`; this was normalized to $`\widehat{lev}_t`$. Status: `needs_review`.
+  - The note defining $`\hat{\Lambda}_{t,t+1}`$ and $`\hat{\mu}_t`$ contains malformed OCR; the derivation uses the readable structure plus implementation cross-check. Status: `needs_review`.
 - The paper says all shocks follow AR(1), but the main text does not print each AR(1) equation. The process block uses the Rep-MMB implementation as `implementation_cross_check` and should be checked against the online appendix.
 
 ## Implementation Cross-Check

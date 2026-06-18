@@ -15,47 +15,47 @@
 
 ### 2.1 更安全的 LR 企业家
 
-更安全的企业家使用债券融资。在 \(t\) 期末，债券融资的资本购置为
+更安全的企业家使用债券融资。在 $`t`$ 期末，债券融资的资本购置为
 
-\[
+```math
 B I_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}.
-\]
+```
 
 企业家选择利用率和下一期资本以最大化当期利润：
 
-\[
+```math
 \Pi_t^{LR,l}
 =\left[u_t^{LR,l}r_t^{k,LR}-a(u_t^{LR,l})\right]\bar{K}_t^{LR,l}P_t
 +(1-\delta)Q_{\bar{k}',t}\bar{K}_t^{LR,l}
 -Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}
 -R_t^{coupon}\left(Q_{\bar{k}',t-1}\bar{K}_t^{LR,l}-N_t^{LR,l}\right).
-\]
+```
 
 ### 2.2 更安全企业家的债券承销需求
 
 企业家在具有垄断竞争的投资银行之间最小化总偿还额：
 
-\[
+```math
 \min_{\{BI_{t+1}^{LR,l}(z)\}_{z\in[0,1]}}
 \int_0^1\left[1+R_{t+1}^{coupon}(z)\right]BI_{t+1}^{LR,l}(z)\,dz
-\]
+```
 
 约束为 Dixit-Stiglitz 聚合器：
 
-\[
+```math
 BI_{t+1}^{LR,l}
 =\left\{\int_0^1\left[BI_{t+1}^{LR,l}(z)\right]^{\frac{\varepsilon_{t+1}^{coupon}-1}{\varepsilon_{t+1}^{coupon}}}dz\right\}^{\frac{\varepsilon_{t+1}^{coupon}}{\varepsilon_{t+1}^{coupon}-1}}.
-\]
+```
 
 ### 2.3 投资银行
 
 承销商选择债券发行的票息利率，并把家庭要求的回报率视为无风险政策利率：
 
-\[
+```math
 \max_{R_{t+1}^{coupon}(z)}
 \left\{\left[1+R_{t+1}^{coupon}(z)\right]BI_{t+1}^{LR,l}(z)
 -\left[1+R_{t+1}^{e}\right]BI_{t+1}^{LR,l}(z)\right\}
-\]
+```
 
 约束为企业家聚合器隐含的个别需求曲线。
 
@@ -69,193 +69,193 @@ BI_{t+1}^{LR,l}
 
 - **(F1) 债券融资资本购置。**
 
-\[
+```math
 BI_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}.
-\]
+```
 
 - **(F2) 利用率条件。**
 
-\[
+```math
 r_t^{k,LR}=a'\left(u_t^{LR,l}\right).
-\]
+```
 
 - **(F3) 资本 Euler 方程。**
 
-\[
+```math
 Q_{\bar{k}',t}
 =\beta E_t\left\{\left[u_{t+1}^{LR,l}r_{t+1}^{k,LR}-a(u_{t+1}^{LR,l})\right]P_{t+1}
 +(1-\delta)Q_{\bar{k}',t+1}
 -R_{t+1}^{coupon}Q_{\bar{k}',t}\right\}.
-\]
+```
 
-- **(F4) 企业家对承销商 \(z\) 的资金需求。**
+- **(F4) 企业家对承销商 $`z`$ 的资金需求。**
 
-\[
+```math
 BI_{t+1}^{LR,l}(z)
 =\left(\frac{1+R_{t+1}^{coupon}(z)}{1+R_{t+1}^{coupon}}\right)^{-\varepsilon_{t+1}^{coupon}}BI_{t+1}^{LR,l}.
-\]
+```
 
 - **(F5) 平均票息利率指数。**
 
-\[
+```math
 1+R_{t+1}^{coupon}
 =\left\{\int_0^1\left[1+R_{t+1}^{coupon}(z)\right]^{1-\varepsilon_{t+1}^{coupon}}dz\right\}^{\frac{1}{1-\varepsilon_{t+1}^{coupon}}}.
-\]
+```
 
 - **(F6) 投资银行加成条件。**
 
-\[
+```math
 1+R_{t+1}^{coupon}
 =\frac{\varepsilon_{t+1}^{coupon}}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
-\]
+```
 
 - **(F7) 债券融资利差。**
 
-\[
+```math
 spread_{t+1}\equiv R_{t+1}^{coupon}-R_{t+1}^e
 =\frac{1}{\varepsilon_{t+1}^{coupon}-1}\left(1+R_{t+1}^e\right).
-\]
+```
 
 - **(F8) 更安全企业家的权益价值。**
 
-\[
+```math
 V_t^{LR,l}
 =\left\{\left[u_t^{LR,l}r_t^{k,LR}-a(u_t^{LR,l})\right]P_t+(1-\delta)Q_{\bar{k}',t}\right\}\bar{K}_t^{LR,l}
 -\left(1+R_t^{coupon}\right)\left(Q_{\bar{k}',t-1}\bar{K}_t^{LR,l}-N_t^{LR,l}\right).
-\]
+```
 
 - **(F9) 更安全企业家的净值。**
 
-\[
+```math
 N_{t+1}^{LR,l}=\gamma^{LR}V_t^{LR,l}+W_t^{e,LR,l}.
-\]
+```
 
 **正常时期影子银行校准**
 
 - **(F10) 正常时期债券需求弹性。**
 
-\[
+```math
 \varepsilon_{t+1}^{normal}=\bar{\varepsilon}+\alpha_1\left(Y_t-\bar{Y}\right).
-\]
+```
 
 - **(F11) 正常时期票息利率。**
 
-\[
+```math
 1+R_{t+1}^{coupon,normal}
 =\frac{\varepsilon_{t+1}^{normal}}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
-\]
+```
 
 - **(F12) 正常时期利差。**
 
-\[
+```math
 spread_{t+1}^{normal}
 =\frac{1}{\varepsilon_{t+1}^{normal}-1}\left(1+R_{t+1}^{e}\right).
-\]
+```
 
 **为区分变体而记录的乐观情绪层；在 `US_VMDno` 中不激活**
 
 - **(F13) 乐观情绪过程。**
 
-\[
+```math
 \chi_t=\rho_\chi\chi_{t-1}+(1-\rho_\chi)\left[\bar{\chi}+\alpha_2\left(N_{t+1}^{LR,l}-N^{LR,l}\right)\right].
-\]
+```
 
-对 `US_VMDno`，\(\alpha_2=0\)，所以该层不是额外乐观动态的来源。
+对 `US_VMDno`，$`\alpha_2=0`$，所以该层不是额外乐观动态的来源。
 
 - **(F14) 乐观情绪弹性。**
 
-\[
+```math
 \varepsilon_{t+1}^{optimistic}=\varepsilon_{t+1}^{normal}(1+\chi_t).
-\]
+```
 
 - **(F15) 乐观情绪票息利率。**
 
-\[
+```math
 1+R_{t+1}^{coupon,optimistic}
 =\frac{\varepsilon_{t+1}^{normal}(1+\chi_t)}{\varepsilon_{t+1}^{normal}(1+\chi_t)-1}(1+R_{t+1}^{e}).
-\]
+```
 
 **政策规则和标准模型外壳**
 
 - **(F16) 固定利率实验之外的 Taylor 型政策规则。**
 
-\[
+```math
 R_t^e
 =\tilde{\rho}R_{t-1}^e
 +(1-\tilde{\rho})\left[R^e+\alpha_\pi(E_t\pi_{t+1}-\bar{\pi})+\alpha_y(Y_t-\bar{Y})\right]
 +\varepsilon_t^{MP}.
-\]
+```
 
 - **(F17) 政策实验路径。**
 
-\[
+```math
 R_t^e=R^e-0.01 \quad \text{for } t=1,\ldots,6,
-\]
+```
 
 通过每期残差非预期冲击或预先宣布的预期冲击序列实现。
 
 - **(F18) 家庭 Euler 方程，实现交叉检查，needs_review。**
 
-\[
+```math
 \lambda_t=\beta E_t\left[\lambda_{t+1}\frac{1+R_t^e}{\pi_{t+1}}\right].
-\]
+```
 
 - **(F19) 含习惯的边际效用，实现交叉检查，needs_review。**
 
-\[
+```math
 \lambda_t=(c_t-bc_{t-1})^{-\sigma_c}-b\beta E_t\left[(c_{t+1}-bc_t)^{-\sigma_c}\right].
-\]
+```
 
 - **(F20) 投资调整成本条件，实现交叉检查，needs_review。**
 
-\[
+```math
 \lambda_t q_t\left[1-\frac{S''}{2}\left(\frac{i_t}{i_{t-1}}-1\right)^2-S''\frac{i_t}{i_{t-1}}\left(\frac{i_t}{i_{t-1}}-1\right)\right]
 -\lambda_t
 +\beta E_t\left[\lambda_{t+1}q_{t+1}S''\left(\frac{i_{t+1}}{i_t}\right)^2\left(\frac{i_{t+1}}{i_t}-1\right)\right]=0.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F21) CES 总资本服务。**
 
-\[
+```math
 K_t=\left[\eta\left(u_t^{HR,r}\bar{K}_t^{HR,r}\right)^\rho+(1-\eta)\left(u_t^{LR,l}\bar{K}_t^{LR,l}\right)^\rho\right]^{1/\rho}.
-\]
+```
 
 - **(F22) 商品市场资源约束，实现交叉检查，needs_review。**
 
-\[
+```math
 Y_t=G_t+C_t+I_t+a(u_t^{HR})\eta\bar{K}_{t-1}^{HR}+a(u_t^{LR})(1-\eta)\bar{K}_{t-1}^{LR}+monitoring\ costs_t.
-\]
+```
 
 - **(F23) 总债券、银行贷款和总融资定义。**
 
-\[
+```math
 B_t^{LR}=Q_t\bar{K}_t^{LR}-N_t^{LR},\qquad
 Loans_t^{HR}=Q_t\bar{K}_t^{HR}-N_t^{HR},\qquad
 Finance_t=(1-\eta)B_t^{LR}+\eta Loans_t^{HR}.
-\]
+```
 
 - **(F24) 杠杆定义。**
 
-\[
+```math
 lev_t^{LR}=\frac{Q_t\bar{K}_t^{LR}}{N_t^{LR}},\qquad
 lev_t^{HR}=\frac{Q_t\bar{K}_t^{HR}}{N_t^{HR}}.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F25) 货币政策创新。**
 
-\[
+```math
 \varepsilon_t^{MP}\sim iid(0,\sigma_{MP}^2).
-\]
+```
 
 - **(F26) 乐观情绪持久性过程，在正常时期校准中不激活。**
 
-\[
+```math
 \chi_t=\rho_\chi\chi_{t-1}\quad\text{when }\alpha_2=0,\ \bar{\chi}=0.
-\]
+```
 
 本一遍初稿没有从论文正文中清楚抽取到额外技术或偏好冲击过程。实现交叉检查显示 MMB 复制文件中有一个政策冲击 `e_xpU`。
 
@@ -265,30 +265,30 @@ lev_t^{HR}=\frac{Q_t\bar{K}_t^{HR}}{N_t^{HR}}.
 
 1. 设置零通胀/稳态政策对象并关闭乐观情绪：
 
-\[
+```math
 \chi=0,\qquad \varepsilon^{normal}=\bar{\varepsilon},\qquad \alpha_2=0\quad(\text{for }US\_VMDno).
-\]
+```
 
 2. 计算正常时期稳态票息和利差：
 
-\[
+```math
 1+R^{coupon}=\frac{\bar{\varepsilon}}{\bar{\varepsilon}-1}(1+R^e),\qquad
 spread=\frac{1}{\bar{\varepsilon}-1}(1+R^e).
-\]
+```
 
 3. 使用论文报告的校准目标：
 
-\[
+```math
 \beta=0.9875,\quad \eta=0.2772,\quad \bar{\varepsilon}=510,\quad \alpha_1=30000,\quad \gamma^{LR}=0.96,\quad \gamma^{HR}=0.97.
-\]
+```
 
-4. 来源表格还报告了 \(C/Y=0.63\)、\(I/Y=0.17\)、\(G/Y=0.2\)、债券-银行融资比 \(1.5152\)、更安全企业家杠杆率 \(1.26\)、高风险企业家杠杆率 \(1.35\) 等目标。把这些目标映射到完整稳态系统需要被延后审查的 Appendix A 方程或 MMB 稳态数据文件，因此此处不声称存在已验证的闭式解。
+4. 来源表格还报告了 $`C/Y=0.63`$、$`I/Y=0.17`$、$`G/Y=0.2`$、债券-银行融资比 $`1.5152`$、更安全企业家杠杆率 $`1.26`$、高风险企业家杠杆率 $`1.35`$ 等目标。把这些目标映射到完整稳态系统需要被延后审查的 Appendix A 方程或 MMB 稳态数据文件，因此此处不声称存在已验证的闭式解。
 
 ## 7. Timing & Form Conventions
 
-- 实物资本是为下一期使用而选择的存量；来源将购置写作 \(BI_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}\)。
+- 实物资本是为下一期使用而选择的存量；来源将购置写作 $`BI_{t+1}^{LR,l}=Q_{\bar{k}',t}\bar{K}_{t+1}^{LR,l}-N_{t+1}^{LR,l}`$。
 - 生产中的资本服务使用利用率乘以既有企业家资本。实现交叉检查在生产型方程中使用滞后资本；准确的论文到代码时序应对照 Appendix A 复核。
-- 在投资银行问题中，\(t\) 期末发行债券的票息利率以 \(t+1\) 期偿还为索引。
+- 在投资银行问题中，$`t`$ 期末发行债券的票息利率以 $`t+1`$ 期偿还为索引。
 - `US_VMDno` 是正常时期版本：记录 (F13)-(F15) 是为了区分变体，但乐观情绪敏感度设为零。
 - 未进行运行时验证。
 
@@ -296,27 +296,27 @@ spread=\frac{1}{\bar{\varepsilon}-1}(1+R^e).
 
 | Category | Symbol / ASCII hint | Meaning | Equation anchor |
 |---|---|---|---|
-| Endogenous | \(BI^{LR}\) / `btotBU`, `btotSU` | 更安全企业家的债券融资 | (F1), (F23) |
-| Endogenous | \(Q\) / `qU` | 已安装资本价格 | (F1), (F3) |
-| Endogenous | \(\bar{K}^{LR}\) / `kbarBU` | 更安全企业家的实物资本 | (F1), (F21) |
-| Endogenous | \(N^{LR}\) / `nBU` | 更安全企业家的净值 | (F8), (F9) |
-| Endogenous | \(u^{LR}\) / `uBU` | 更安全企业家的资本利用率 | (F2), (F21) |
-| Endogenous | \(R^{coupon}\) / `RcouponXU` | 债券票息利率 | (F5), (F6), (F11) |
-| Endogenous | \(R^e\) / `ReXU` | 无风险政策/定期存款利率 | (F6), (F16) |
-| Endogenous | \(\varepsilon^{coupon}\) / `eps_couponU` | 债券资金需求弹性 | (F4), (F10) |
-| Endogenous | \(spread\) / `SpreadU` | 债券融资利差 | (F7), (F12) |
-| Endogenous | \(Y\) / `YU` | 产出 | (F10), (F16), (F21), (F22) |
-| Endogenous | \(c,i,\pi,\lambda\) / `cU`, `iU`, `piU`, `lambdanU` | 消费、投资、通胀、家庭边际效用 | (F18)-(F20), needs_review |
-| Endogenous | \(lev^{LR},lev^{HR}\) / `levBU`, `levSU` | 杠杆率 | (F24) |
-| Exogenous | \(\varepsilon^{MP}\) / `e_xpU` | 货币政策创新 | (F16), (F25) |
-| Parameter | \(\beta\) / `betaUU` | 贴现因子 | (F3), (F18), (F20) |
-| Parameter | \(\eta\) / `etaSE` | 高风险企业家占比 | (F21), (F23) |
-| Parameter | \(\rho\) / `rhoEIS` | 资本服务之间的替代性 | (F21) |
-| Parameter | \(\bar{\varepsilon}\) / `eps_couponUU` | 稳态债券需求弹性 | (F10)-(F12) |
-| Parameter | \(\alpha_1\) / `alpha4` in implementation | 正常时期弹性对产出缺口的敏感度 | (F10) |
-| Parameter | \(\alpha_2\) / `alpha3` in implementation | 乐观情绪敏感度；在 `US_VMDno` 中为零 | (F13) |
-| Parameter | \(\rho_\chi\) / `rho_chi` | 乐观情绪持久性 | (F13), (F26) |
-| Parameter | \(\gamma^{LR},\gamma^{HR}\) / `gammaBUU`, `gammaSUU` | 企业家存活概率 | (F9) |
-| Parameter | \(\tilde{\rho},\alpha_\pi,\alpha_y\) / `rhotilUU`, `aptilUU`, `aytilUU` | 货币政策规则系数 | (F16) |
-| Parameter | \(S''\) / `SdouprXUU` | 投资调整成本曲率 | (F20) |
+| Endogenous | $`BI^{LR}`$ / `btotBU`, `btotSU` | 更安全企业家的债券融资 | (F1), (F23) |
+| Endogenous | $`Q`$ / `qU` | 已安装资本价格 | (F1), (F3) |
+| Endogenous | $`\bar{K}^{LR}`$ / `kbarBU` | 更安全企业家的实物资本 | (F1), (F21) |
+| Endogenous | $`N^{LR}`$ / `nBU` | 更安全企业家的净值 | (F8), (F9) |
+| Endogenous | $`u^{LR}`$ / `uBU` | 更安全企业家的资本利用率 | (F2), (F21) |
+| Endogenous | $`R^{coupon}`$ / `RcouponXU` | 债券票息利率 | (F5), (F6), (F11) |
+| Endogenous | $`R^e`$ / `ReXU` | 无风险政策/定期存款利率 | (F6), (F16) |
+| Endogenous | $`\varepsilon^{coupon}`$ / `eps_couponU` | 债券资金需求弹性 | (F4), (F10) |
+| Endogenous | $`spread`$ / `SpreadU` | 债券融资利差 | (F7), (F12) |
+| Endogenous | $`Y`$ / `YU` | 产出 | (F10), (F16), (F21), (F22) |
+| Endogenous | $`c,i,\pi,\lambda`$ / `cU`, `iU`, `piU`, `lambdanU` | 消费、投资、通胀、家庭边际效用 | (F18)-(F20), needs_review |
+| Endogenous | $`lev^{LR},lev^{HR}`$ / `levBU`, `levSU` | 杠杆率 | (F24) |
+| Exogenous | $`\varepsilon^{MP}`$ / `e_xpU` | 货币政策创新 | (F16), (F25) |
+| Parameter | $`\beta`$ / `betaUU` | 贴现因子 | (F3), (F18), (F20) |
+| Parameter | $`\eta`$ / `etaSE` | 高风险企业家占比 | (F21), (F23) |
+| Parameter | $`\rho`$ / `rhoEIS` | 资本服务之间的替代性 | (F21) |
+| Parameter | $`\bar{\varepsilon}`$ / `eps_couponUU` | 稳态债券需求弹性 | (F10)-(F12) |
+| Parameter | $`\alpha_1`$ / `alpha4` in implementation | 正常时期弹性对产出缺口的敏感度 | (F10) |
+| Parameter | $`\alpha_2`$ / `alpha3` in implementation | 乐观情绪敏感度；在 `US_VMDno` 中为零 | (F13) |
+| Parameter | $`\rho_\chi`$ / `rho_chi` | 乐观情绪持久性 | (F13), (F26) |
+| Parameter | $`\gamma^{LR},\gamma^{HR}`$ / `gammaBUU`, `gammaSUU` | 企业家存活概率 | (F9) |
+| Parameter | $`\tilde{\rho},\alpha_\pi,\alpha_y`$ / `rhotilUU`, `aptilUU`, `aytilUU` | 货币政策规则系数 | (F16) |
+| Parameter | $`S''`$ / `SdouprXUU` | 投资调整成本曲率 | (F20) |
 | Status | `needs_review` | 缺失/延后的 Appendix A 和 OCR 敏感公式 | 整个条目 |

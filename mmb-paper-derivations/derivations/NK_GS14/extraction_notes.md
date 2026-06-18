@@ -14,7 +14,7 @@
 ## Formula Quality
 
 - Main extraction uses paper-side equations in Appendix A plus the policy-rule and technology-shock formulas in the main text.
-- The production function timing was normalized to predetermined capital, because Appendix A's production equation prints \(k_t^E\) while the return-to-capital equation and the MMB implementation use \(k_{t-1}^E\). This remains `needs_review`.
+- The production function timing was normalized to predetermined capital, because Appendix A's production equation prints $`k_t^E`$ while the return-to-capital equation and the MMB implementation use $`k_{t-1}^E`$. This remains `needs_review`.
 - The goods markup / cost-push process is recorded from the implementation cross-check and from the paper's Phillips-curve discussion. It should receive source-level review before being treated as fully source-verified.
 - Appendix C contains useful log-linear checks, but several formulas include OCR artifacts; those expressions were not copied wholesale into the derivation.
 - The nominal-debt Appendix D variant was not folded into the baseline equation list.

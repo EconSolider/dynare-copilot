@@ -19,17 +19,17 @@
 
 家庭选择消费、一期期限无风险资产和劳动：
 
-\[
+```math
 \max_{\{C_t,l_t,B_t,B_t^g\}} E_t \sum_{i=0}^{\infty}\beta^i
 \left[\log(C_{t+i}-hC_{t+i-1})-\frac{\chi}{1+\varphi}(l_{t+i}^s)^{1+\varphi}\right].
-\]
+```
 
 名义预算约束在来源中写为：
 
-\[
+```math
 P_t C_t = w_tP_t l_t + P_t prof_t + R_{t-1}B_{t-1}-B_t
 + R_t^{gov}B_{t-1}^g - B_t^g.
-\]
+```
 
 `needs_review`：附录 A 中政府债券记号附近的 OCR 有噪声，但一阶条件表明存款和政府债券是完全替代品。
 
@@ -37,13 +37,13 @@ P_t C_t = w_tP_t l_t + P_t prof_t + R_{t-1}B_{t-1}-B_t
 
 资本品生产者由家庭拥有，选择投资并以实际价格 `Q_t` 出售新资本，其贴现利润问题为：
 
-\[
+```math
 \max_{\{I_t\}} E_t\sum_{i=0}^{\infty}\beta^i
 \frac{\varrho_{t+i}}{\varrho_t}
 I_{t+i}\left[
 Q_{t+i}\left(1-\frac{\eta_i}{2}\left(\frac{I_{t+i}}{I_{t+i-1}}-1\right)^2\right)-1
 \right].
-\]
+```
 
 ### 2.3 零售商
 
@@ -53,17 +53,17 @@ Q_{t+i}\left(1-\frac{\eta_i}{2}\left(\frac{I_{t+i}}{I_{t+i-1}}-1\right)^2\right)
 
 银行家风险中性，并以概率 `theta` 存活。银行吸收存款，向企业家发放有风险跨期贷款，并向零售商发放无风险日内营运资本贷款。吸收存款后，银行家可以转移企业家贷款中的 `lambda` 份额，因此存款人要求：
 
-\[
+```math
 V_t^b(q) \ge \lambda L_t^e(q).
-\]
+```
 
 银行家 `q` 的价值为：
 
-\[
+```math
 V_t^b(q)=E_t\left\{\sum_{i=0}^{\infty}(1-\theta)\theta^i
 \left(\frac{1}{\prod_{j=0}^i R_{t+1+j}^r}\right)N_{t+1+i}^b(q)\right\},
 \qquad R_{t+1}^r=\frac{R_t}{\Pi_{t+1}}.
-\]
+```
 
 论文校准 `lambda`，使激励相容约束在局部均衡中绑定。
 
@@ -71,16 +71,16 @@ V_t^b(q)=E_t\left\{\sum_{i=0}^{\infty}(1-\theta)\theta^i
 
 风险中性企业家在 `t` 期末用净值和银行贷款购买资本：
 
-\[
+```math
 P_tL_t^j=P_t(Q_tK_t^j-N_t^j).
-\]
+```
 
 贷款合约受到对数正态个体风险 `omega`、监控成本 `mu` 和违约阈值 `\bar{\omega}_{t+1}` 约束：
 
-\[
+```math
 \bar{\omega}_{t+1}^j R_{t+1}^K P_tQ_tK_t^j
 =R_t^L P_tL_t^j.
-\]
+```
 
 企业家选择杠杆和贷款合约以在银行参与约束下最大化预期权益。
 
@@ -92,61 +92,61 @@ P_tL_t^j=P_t(Q_tK_t^j-N_t^j).
 
 **(F1) 带内部习惯的家庭边际效用**
 
-\[
+```math
 \varrho_t =
 \frac{1}{C_t-hC_{t-1}}
 -\beta h E_t\left[\frac{1}{C_{t+1}-hC_t}\right].
-\]
+```
 
 **(F2) 无风险存款 Euler 方程**
 
-\[
+```math
 \varrho_t=\beta E_t\left[\varrho_{t+1}\frac{R_t}{\Pi_{t+1}}\right].
-\]
+```
 
 **(F3) 政府债券 Euler 方程与资产替代条件**
 
-\[
+```math
 \varrho_t=\beta E_t\left[\varrho_{t+1}\frac{R_t^{gov}}{\Pi_{t+1}}\right],
 \qquad R_t=R_t^{gov}.
-\]
+```
 
 **(F4) 家庭劳动供给**
 
-\[
+```math
 \varrho_t w_t=\chi l_t^{\varphi}.
-\]
+```
 
 **(F5) 实现中使用的线性边际效用方程**
 
-\[
+```math
 \hat{\varrho}_t=
 \frac{1}{(1-h)(1-\beta h)}
 \left[-(\hat{C}_t-h\hat{C}_{t-1})
 +\beta h(\hat{C}_{t+1}-h\hat{C}_t)\right].
-\]
+```
 
 **(F6) 线性无风险 Euler 方程**
 
-\[
+```math
 \hat{R}_t+\hat{\Lambda}_{t+1}-\hat{\Pi}_{t+1}=0.
-\]
+```
 
 **(F7) 随机贴现因子**
 
-\[
+```math
 \hat{\Lambda}_t=\hat{\varrho}_t-\hat{\varrho}_{t-1}.
-\]
+```
 
 **(F8) 线性劳动供给**
 
-\[
+```math
 \varphi\hat{l}_t=\hat{\varrho}_t+\hat{w}_t.
-\]
+```
 
 **(F9) 资本品生产者投资 FOC**
 
-\[
+```math
 \begin{aligned}
 Q_t\left(1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right)
 &=1+Q_t\eta_i\left(\frac{I_t}{I_{t-1}}-1\right)\frac{I_t}{I_{t-1}} \\
@@ -154,213 +154,213 @@ Q_t\left(1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right)
 Q_{t+1}\eta_i\left(\frac{I_{t+1}}{I_t}-1\right)
 \left(\frac{I_{t+1}}{I_t}\right)^2\right].
 \end{aligned}
-\]
+```
 
 **(F10) 线性投资动态**
 
-\[
+```math
 \hat{I}_t=\frac{1}{1+\beta}
 \left(\hat{I}_{t-1}+\beta\hat{I}_{t+1}+\frac{\hat{Q}_t}{\eta_i}\right).
-\]
+```
 
 **(F11) 资本积累**
 
-\[
+```math
 K_t=(1-\delta)K_{t-1}
 +I_t\left[1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right].
-\]
+```
 
 **(F12) 线性资本积累**
 
-\[
+```math
 \hat{K}_t=(1-\delta)\hat{K}_{t-1}+\delta\hat{I}_t.
-\]
+```
 
 **(F13) 带利用率的生产函数**
 
-\[
+```math
 \hat{Y}_t=\alpha(\hat{U}_t+\hat{K}_{t-1})+(1-\alpha)(\hat{a}_t+\hat{l}_t).
-\]
+```
 
 **(F14) 含营运资本成本的零售商劳动需求**
 
-\[
+```math
 w_t(1+\psi_L(R_t-1))=(1-\alpha)mc_t\frac{Y_t}{l_t}.
-\]
+```
 
 **(F15) 线性零售商劳动需求**
 
-\[
+```math
 w(1+\psi_L(R-1))\hat{w}_t+w\psi_LR\hat{R}_t
 =(1+\psi_L(R-1))w(\widehat{mc}_t+\hat{Y}_t-\hat{l}_t).
-\]
+```
 
 **(F16) 含营运资本成本的零售商资本需求**
 
-\[
+```math
 r_t^k(1+\psi_K(R_t-1))=\alpha mc_t\frac{Y_t}{K_{t-1}}.
-\]
+```
 
 **(F17) 带利用率的线性零售商资本需求**
 
-\[
+```math
 \frac{\hat{r}_t^k}{r^k}
 +\frac{\psi_KR}{1+\psi_K(R-1)}\hat{R}_t
 =\widehat{mc}_t+\hat{Y}_t-\hat{K}_{t-1}-\hat{U}_t.
-\]
+```
 
 **(F18) 营运资本贷款**
 
-\[
+```math
 L_t^r=\psi_Lw_tl_t+\psi_Kr_t^kK_{t-1}.
-\]
+```
 
 **(F19) New Keynesian Phillips 曲线**
 
-\[
+```math
 \hat{\Pi}_t=
 \frac{1}{1+\beta\gamma_P}
 \left[
 \beta\hat{\Pi}_{t+1}+\gamma_P\hat{\Pi}_{t-1}
 +\frac{(1-\xi^P\beta)(1-\xi^P)}{\xi^P}\widehat{mc}_t
 \right].
-\]
+```
 
 **(F20) 银行杠杆恒等式**
 
-\[
+```math
 \hat{\phi}_t^b=\hat{L}_t^e-\hat{N}_t^b.
-\]
+```
 
 **(F21) 存续银行家的净值**
 
-\[
+```math
 N_{et}^b=\theta z_{t-1,t}N_{t-1}^b.
-\]
+```
 
 **(F22) 总银行净值**
 
-\[
+```math
 N_t^b=N_{et}^b+N_n^b.
-\]
+```
 
 **(F23) 银行资产增长**
 
-\[
+```math
 z_{t-1,t}=
 \frac{[(R_t^b-R_{t-1})\phi_{t-1}^b+R_{t-1}]}{\Pi_t}\exp(e_t^z).
-\]
+```
 
 **(F24) 银行家消费**
 
-\[
+```math
 C_t^b=(1-\theta)z_{t-1,t}N_{t-1}^b.
-\]
+```
 
 **(F25) 前瞻性银行杠杆条件**
 
-\[
+```math
 \hat{\phi}_t^b
 =E_t\left[
 \theta\beta^2z^2\hat{\phi}_{t+1}^b
 +\phi^b\frac{R^b}{R}\left(\hat{R}_{t+1}^b-\hat{R}_t\right)
 \right].
-\]
+```
 
 **(F26) 企业家贷款的银行资产负债表**
 
-\[
+```math
 L_t^e=\phi_t^bN_t^b.
-\]
+```
 
 **(F27) 资本回报率**
 
-\[
+```math
 R_{t+1}^K=\Pi_{t+1}\frac{r_{t+1}^k+Q_{t+1}(1-\delta)}{Q_t}.
-\]
+```
 
 **(F28) 企业家杠杆**
 
-\[
+```math
 \phi_t^e=\frac{Q_tK_t}{N_t}.
-\]
+```
 
 **(F29) 企业家银行参与约束**
 
-\[
+```math
 (\phi_t^e-1)E_tR_{t+1}^b
 =\phi_t^eE_t\left[
 R_{t+1}^K\left(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1})\right)
 \right].
-\]
+```
 
 **(F30) 企业家最优合约关于杠杆的 FOC**
 
-\[
+```math
 E_t\left[R_{t+1}^K(1-\Gamma(\bar{\omega}_{t+1}))\right]
 +\xi_tE_t\left[
 R_{t+1}^K(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1}))
 -R_{t+1}^b
 \right]=0.
-\]
+```
 
 **(F31) 企业家最优合约关于阈值的 FOC**
 
-\[
+```math
 E_t\left[
 -\Gamma'(\bar{\omega}_{t+1})
 +\xi_t\left(\Gamma'(\bar{\omega}_{t+1})-\mu G'(\bar{\omega}_{t+1})\right)
 \right]=0.
-\]
+```
 
 **(F32) 企业家最优合约参与 FOC**
 
-\[
+```math
 E_t\left[
 \phi_t^e R_{t+1}^K(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1}))
 -R_{t+1}^b(\phi_t^e-1)
 \right]=0.
-\]
+```
 
 **(F33) 资本回报相对银行资产回报的线性利差**
 
-\[
+```math
 E_t\hat{R}_{t+1}^K-E_t\hat{R}_{t+1}^b
 =\chi^l(\hat{K}_t+\hat{Q}_t-\hat{N}_t).
-\]
+```
 
 **(F34) 企业家权益**
 
-\[
+```math
 V_t=Q_{t-1}K_{t-1}\frac{R_t^K}{\Pi_t}
 \left[1-\Gamma(\bar{\omega}_t)\right]\exp(e_t^N).
-\]
+```
 
 `needs_review`：正文方程 (15) 给出积分形式；附录 A29 给出紧凑的 `1-\Gamma` 形式。`Q_{t-1}K_{t-1}` 乘法附近的 OCR 较脆弱。
 
 **(F35) 企业家净值**
 
-\[
+```math
 N_t=\gamma V_t+W^e.
-\]
+```
 
 **(F36) 企业家消费**
 
-\[
+```math
 C_t^e=(1-\gamma)V_t.
-\]
+```
 
 **(F37) 企业家违约阈值**
 
-\[
+```math
 \bar{\omega}_t=
 \frac{R_{t-1}^L(Q_{t-1}K_{t-1}-N_{t-1})}
 {R_t^KQ_{t-1}K_{t-1}}.
-\]
+```
 
 **(F38) 银行对企业家贷款的平均回报**
 
-\[
+```math
 \begin{aligned}
 R_t^b
 &=R_{t-1}^L\int_{\bar{\omega}_t}^{\infty}f(\omega^j)d\omega^j \\
@@ -368,113 +368,113 @@ R_t^b
 \frac{\phi_{t-1}^e}{\phi_{t-1}^e-1}
 \int_0^{\bar{\omega}_t}\omega^j f(\omega^j)d\omega^j .
 \end{aligned}
-\]
+```
 
 **(F39) 线性贷款利率/阈值关系**
 
-\[
+```math
 \widehat{\bar{\omega}R^K}_t=\hat{R}_t^L+\frac{1}{\phi^e-1}\hat{\phi}_t^e.
-\]
+```
 
 **(F40) 货币政策规则**
 
-\[
+```math
 R_t-1=(1-\rho_i)\left[
 R-1+\psi_{\pi}(\log\Pi_t-\log\Pi)
 +\psi_y(\log GDP_t-\log GDP_t^{\ast})
 \right]
 +\rho_i(R_{t-1}-1)+e_t^i.
-\]
+```
 
 在实现中，产出缺口项由实际边际成本代理：
 
-\[
+```math
 R\hat{R}_t=(1-\rho_i)(\psi_{\pi}\hat{\Pi}_t+\psi_y\widehat{mc}_t)
 +\rho_iR\hat{R}_{t-1}+e_t^i.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 **(F41) 总私人消费**
 
-\[
+```math
 C_t^P=C_t+C_t^e+C_t^b.
-\]
+```
 
 **(F42) 含监控成本和利用率成本的资源约束**
 
-\[
+```math
 Y_t=S_t\left[
 I_t+C_t^P
 +\frac{R_t^K}{\Pi_t}Q_{t-1}K_{t-1}\mu
 \int_0^{\bar{\omega}_t}\omega f(\omega)d\omega
 \right].
-\]
+```
 
 实现交叉检查在线性资源约束中加入了可变利用率成本项。
 
 **(F43) GDP 恒等式**
 
-\[
+```math
 GDP_t=I_t+C_t+G_t.
-\]
+```
 
 **(F44) 总贷款**
 
-\[
+```math
 L_t=L_t^e+L_t^r.
-\]
+```
 
 **(F45) 价格离散递归**
 
-\[
+```math
 S_t=(1-\xi^P)\left(\frac{\Pi_t}{\Pi_t^{\ast}}\right)^{\varepsilon}
 +\xi^P\left(\frac{\Pi_t}{\Pi_{t-1}^{\gamma_P}\Pi^{1-\gamma_P}}\right)^{\varepsilon}S_{t-1}.
-\]
+```
 
 **(F46) 商品生产**
 
-\[
+```math
 Y_t=K_{t-1}^{\alpha}(A_tl_t)^{1-\alpha}.
-\]
+```
 
 **(F47) 银行贷款会计关系**
 
-\[
+```math
 P_tL_t^e(q)=P_tN_t^b(q)+B_t(q).
-\]
+```
 
 ## 5. Exogenous Processes
 
 **(F48) 技术冲击**
 
-\[
+```math
 \hat{a}_t=\rho_a\hat{a}_{t-1}-e_t^a.
-\]
+```
 
 **(F49) 政府支出冲击**
 
-\[
+```math
 \hat{g}_t=\rho_g\hat{g}_{t-1}-e_t^g.
-\]
+```
 
 **(F50) 货币政策创新**
 
-\[
+```math
 e_t^i \sim iid(0,\sigma_i^2).
-\]
+```
 
 **(F51) 银行净值冲击**
 
-\[
+```math
 e_t^z \sim iid.
-\]
+```
 
 **(F52) 企业家净值冲击**
 
-\[
+```math
 e_t^N \sim iid.
-\]
+```
 
 `needs_review`：Rep-MMB 模拟声明了货币、技术和政府创新。论文用银行和企业家净值冲击做危机实验，但交叉检查实现未在最终 `shocks` 块中保留它们。
 
@@ -486,53 +486,53 @@ e_t^N \sim iid.
 2. 设置金融合约参数和目标：`sigma=0.35`、`mu=0.2981`、企业家存活率 `gamma=0.975`、银行家存活率 `theta=0.9915`、政府支出份额 `G/Y=0.2`、违约率目标 `brate=0.0075`、银行杠杆 `phi_b=1/0.125`、银行利差目标 `spread_RbR=(1.002)^{1/4}`。
 3. 设置季度通胀和名义无风险稳态：
 
-\[
+```math
 \Pi=(1+0.0223)^{1/4},\qquad R=\frac{\Pi}{\beta}.
-\]
+```
 
 4. 构造对数正态违约项：
 
-\[
+```math
 \bar{\omega}=\exp(\sigma\Phi^{-1}(brate)-0.5\sigma^2),\quad
 F=\Phi\left(\frac{\log\bar{\omega}+0.5\sigma^2}{\sigma}\right),
 \quad G=\Phi\left(\frac{\log\bar{\omega}+0.5\sigma^2}{\sigma}-\sigma\right).
-\]
+```
 
 5. 使用 `F`、`G`、`Gamma` 的导数计算合约乘数 `xi`、资本-银行利差 `spread_RkRb`、企业家杠杆 `phi_e` 和 (F33) 中的线性系数 `chi_e`。
 6. 设置：
 
-\[
+```math
 R^b=spread_{RbR}R,\qquad R^K=R^b spread_{RkRb},\qquad
 R^L=\frac{\bar{\omega}R^K}{1-1/\phi_e}.
-\]
+```
 
 7. 设置加成和边际成本：
 
-\[
+```math
 X=\frac{\varepsilon}{\varepsilon-1},\qquad mc=\frac{\varepsilon-1}{\varepsilon},\qquad Q=1.
-\]
+```
 
 8. 由含营运资本成本的要素需求解资本劳动比，然后规范化劳动 `l=1/3`，计算 `K`、`Y`、`I=delta K` 和 `G=0.2Y`。
 9. 计算企业家变量：
 
-\[
+```math
 N=\frac{K}{\phi_e},\qquad L^e=K-N,\qquad
 V=K\frac{R^K}{\Pi}(1-\Gamma),\qquad C^e=(1-\gamma)V.
-\]
+```
 
 10. 计算营运资本贷款和银行变量：
 
-\[
+```math
 L^r=\psi_Lwl+\psi_Kr^kK,\quad L=L^e+L^r,\quad
 N^b=\frac{L^e}{\phi_b},\quad C^b=(1-\theta)zN^b.
-\]
+```
 
 11. 家庭消费和总消费为残差：
 
-\[
+```math
 C=Y-I-C^e-C^b-G-\mu G(\bar{\omega})\frac{R^K}{\Pi}K,
 \qquad C^P=C+C^e+C^b.
-\]
+```
 
 12. 在 `model(linear)` 中，赋值这些水平和比率后，所有带帽/偏离变量的稳态均为零。
 

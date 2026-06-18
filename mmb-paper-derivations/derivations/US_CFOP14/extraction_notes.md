@@ -14,7 +14,7 @@
 - The main source is MinerU OCR Markdown. It captures the core Section 3 and Appendix A equations, but some notation has OCR damage.
 - Marked uncertain in the derivation:
   - (F6): consumption/marginal-utility FOC has noisy notation around coefficients and MEI growth terms in equation (A5).
-  - (F14): wage Phillips curve has noisy growth-indexation notation and inconsistent OCR rendering of \(v\) versus \(\nu\) in equation (A12).
+  - (F14): wage Phillips curve has noisy growth-indexation notation and inconsistent OCR rendering of $`v`$ versus $`\nu`$ in equation (A12).
 - The appendix equation label for agency-cost replacement appears as malformed `{A8 prime}` in OCR; it is normalized in prose as the agency-cost expected capital-return condition and marked through the source context.
 - The paper-side Appendix A presents only a compact subset of equations relative to the Rep-MMB implementation, which includes potential-output `star` counterparts and auxiliary expectation variables.
 

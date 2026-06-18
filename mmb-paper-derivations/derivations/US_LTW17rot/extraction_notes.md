@@ -14,7 +14,7 @@
   - final-goods and labor aggregation exponents include stray OCR fragments;
   - Calvo price-setting objective has a suspect `+` where the economic expression should multiply discount factors by profits;
   - wage indexation formula includes malformed spacing and marks;
-  - government budget identity has OCR artifacts around \(P_t^B B_t\), consumption taxes, and expenditure terms.
+  - government budget identity has OCR artifacts around $`P_t^B B_t`$, consumption taxes, and expenditure terms.
 - The derivation keeps these equations as first-pass formulas and marks the affected equations `needs_review`.
 
 ## Implementation Cross-Check

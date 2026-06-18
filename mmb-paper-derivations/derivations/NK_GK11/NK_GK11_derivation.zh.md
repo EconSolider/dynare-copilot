@@ -18,85 +18,85 @@
 
 家庭选择消费、劳动和一期无风险债券持有量。消费具有习惯形成：
 
-\[
+```math
 \max_{\{C_t,L_t,B_{t+1}\}} E_t \sum_{i=0}^{\infty}\beta^i
 \left[\log(C_{t+i}-h C_{t+i-1})-\frac{\chi}{1+\varphi}L_{t+i}^{1+\varphi}\right].
-\]
+```
 
 当期预算约束为
 
-\[
+```math
 C_t = W_tL_t+\Pi_t+T_t+R_tB_t-B_{t+1}.
-\]
+```
 
 ### 银行家/中介
 
 银行家 `j` 在时期 `t` 以净值 `N_{jt}` 开始，并取得存款 `B_{jt+1}`，以价格 `Q_t` 购买索取权 `S_{jt}`：
 
-\[
+```math
 Q_tS_{jt}=N_{jt}+B_{jt+1}.
-\]
+```
 
 下一期中介净值等于资产收益减去存款偿还：
 
-\[
+```math
 N_{j,t+1}=R_{k,t+1}Q_tS_{jt}-R_{t+1}B_{j,t+1}.
-\]
+```
 
 银行家最大化预期终值财富：
 
-\[
+```math
 V_{jt}=\max E_t\sum_{i=0}^{\infty}(1-\theta)\theta^i\beta^{i+1}
 \Lambda_{t,t+1+i}N_{j,t+1+i}.
-\]
+```
 
 只有当特许经营价值超过转移一部分资产的收益时，存款人才愿意放贷：
 
-\[
+```math
 V_{jt}\geq \lambda Q_tS_{jt}.
-\]
+```
 
 ### 中间品生产者
 
 在时期 `t` 末，企业取得用于 `t+1` 生产的资本，并发行等于所取得资本的索取权：
 
-\[
+```math
 Q_tK_{t+1}=Q_tS_t.
-\]
+```
 
 在时期 `t`，企业选择利用率和劳动来生产
 
-\[
+```math
 Y_t=A_t(U_t\xi_tK_t)^\alpha L_t^{1-\alpha}.
-\]
+```
 
 ### 资本品生产者
 
 资本品生产者购买并翻新折旧资本，并在流量调整成本下生产新资本。其贴现利润问题为
 
-\[
+```math
 \max_{\{I_{n,t}\}} E_t\sum_{\tau=t}^{\infty}\beta^{\tau-t}\Lambda_{t,\tau}
 \left[(Q_\tau-1)I_{n,\tau}
 -f\!\left(\frac{I_{n,\tau}+I_{ss}}{I_{n,\tau-1}+I_{ss}}\right)(I_{n,\tau}+I_{ss})\right].
-\]
+```
 
 ### 零售商
 
 最终产出是差异化零售品的 CES 聚合：
 
-\[
+```math
 Y_t=\left[\int_0^1 Y_{ft}^{(\varepsilon-1)/\varepsilon}df\right]^{\varepsilon/(\varepsilon-1)}.
-\]
+```
 
 零售商 `f` 在 Calvo 粘性和滞后通胀指数化下选择重设价格：
 
-\[
+```math
 \max_{P_t^{\ast}} E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
 \frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -P_{m,t+i}
 \right]Y_{f,t+i}.
-\]
+```
 
 ## 3. First-Order Conditions
 
@@ -104,292 +104,292 @@ Y_t=\left[\int_0^1 Y_{ft}^{(\varepsilon-1)/\varepsilon}df\right]^{\varepsilon/(\
 
 - **(F1) 带外部习惯的边际效用**：
 
-\[
+```math
 \varrho_t=(C_t-hC_{t-1})^{-1}-\beta h E_t(C_{t+1}-hC_t)^{-1}.
-\]
+```
 
 - **(F2) 劳动供给**：
 
-\[
+```math
 \varrho_t W_t=\chi L_t^\varphi.
-\]
+```
 
 - **(F3) 无风险债券欧拉方程**：
 
-\[
+```math
 E_t\beta\Lambda_{t,t+1}R_{t+1}=1,\qquad
 \Lambda_{t,t+1}=\frac{\varrho_{t+1}}{\varrho_t}.
-\]
+```
 
 **金融中介**
 
 - **(F4) 资产负债表**：
 
-\[
+```math
 Q_tS_{jt}=N_{jt}+B_{j,t+1}.
-\]
+```
 
 - **(F5) 净值积累**：
 
-\[
+```math
 N_{j,t+1}=(R_{k,t+1}-R_{t+1})Q_tS_{jt}+R_{t+1}N_{jt}.
-\]
+```
 
 - **(F6) 银行家价值分解**：
 
-\[
+```math
 V_{jt}=\nu_t Q_tS_{jt}+\eta_t N_{jt}.
-\]
+```
 
 - **(F7) 中介资产的边际价值**：
 
-\[
+```math
 \nu_t=E_t\left\{(1-\theta)\beta\Lambda_{t,t+1}(R_{k,t+1}-R_{t+1})
 +\beta\Lambda_{t,t+1}\theta x_{t,t+1}\nu_{t+1}\right\}.
-\]
+```
 
 - **(F8) 中介净值的边际价值**：
 
-\[
+```math
 \eta_t=E_t\left\{(1-\theta)+\beta\Lambda_{t,t+1}\theta z_{t,t+1}\eta_{t+1}\right\}.
-\]
+```
 
 - **(F9) 激励约束**：
 
-\[
+```math
 \eta_tN_{jt}+\nu_tQ_tS_{jt}\geq \lambda Q_tS_{jt}.
-\]
+```
 
 - **(F10) 绑定杠杆关系**：
 
-\[
+```math
 Q_tS_{jt}=\frac{\eta_t}{\lambda-\nu_t}N_{jt}\equiv \phi_tN_{jt}.
-\]
+```
 
 - **(F11) 私人中介资产总量**：
 
-\[
+```math
 Q_tS_{p,t}=\phi_tN_t.
-\]
+```
 
 - **(F12) 中介净值增长率**：
 
-\[
+```math
 z_{t,t+1}=(R_{k,t+1}-R_{t+1})\phi_t+R_{t+1}.
-\]
+```
 
 - **(F13) 中介资产增长率**：
 
-\[
+```math
 x_{t,t+1}=\frac{\phi_{t+1}}{\phi_t}z_{t,t+1}.
-\]
+```
 
 - **(F14) 中介净值总量**：
 
-\[
+```math
 N_t=N_{e,t}+N_{n,t}.
-\]
+```
 
 - **(F15) 存续银行家的净值**：
 
-\[
+```math
 N_{e,t}=\theta\left[(R_{k,t}-R_t)\phi_{t-1}+R_t\right]N_{t-1}.
-\]
+```
 
 - **(F16) 新进入银行家的净值**：
 
-\[
+```math
 N_{n,t}=\omega Q_tS_{t-1}.
-\]
+```
 
 **信贷政策与总中介**
 
 - **(F17) 总资产在私人和公共中介之间拆分**：
 
-\[
+```math
 Q_tS_t=Q_tS_{p,t}+Q_tS_{g,t}.
-\]
+```
 
 - **(F18) 公共中介份额**：
 
-\[
+```math
 Q_tS_{g,t}=\psi_tQ_tS_t.
-\]
+```
 
 - **(F19) 信贷政策下的总杠杆**：
 
-\[
+```math
 Q_tS_t=\phi_tN_t+\psi_tQ_tS_t\equiv \phi_{c,t}N_t,\qquad
 \phi_{c,t}=\frac{\phi_t}{1-\psi_t}.
-\]
+```
 
 **中间品生产者**
 
 - **(F20) 索取权等于下一期资本**：
 
-\[
+```math
 Q_tK_{t+1}=Q_tS_t.
-\]
+```
 
 - **(F21) 生产函数**：
 
-\[
+```math
 Y_t=A_t(U_t\xi_tK_t)^\alpha L_t^{1-\alpha}.
-\]
+```
 
 - **(F22) 利用率选择**：
 
-\[
+```math
 P_{m,t}\alpha\frac{Y_t}{U_t}=\delta'(U_t)\xi_tK_t.
-\]
+```
 
 - **(F23) 劳动需求**：
 
-\[
+```math
 P_{m,t}(1-\alpha)\frac{Y_t}{L_t}=W_t.
-\]
+```
 
 - **(F24) 资本回报**：
 
-\[
+```math
 R_{k,t+1}=
 \frac{\left[P_{m,t+1}\alpha\frac{Y_{t+1}}{\xi_{t+1}K_{t+1}}
 +Q_{t+1}-\delta(U_{t+1})\right]\xi_{t+1}}{Q_t}.
-\]
+```
 
 **资本品生产者**
 
 - **(F25) 净投资定义**：
 
-\[
+```math
 I_{n,t}=I_t-\delta(U_t)\xi_tK_t.
-\]
+```
 
 - **(F26) 资本品生产者的 Q 关系**：
 
-\[
+```math
 Q_t=1+f(\cdot)
 +\frac{I_{n,t}+I_{ss}}{I_{n,t-1}+I_{ss}}f'(\cdot)
 -E_t\beta\Lambda_{t,t+1}
 \left(\frac{I_{n,t+1}+I_{ss}}{I_{n,t}+I_{ss}}\right)^2f'(\cdot).
-\]
+```
 
 **零售商**
 
 - **(F27) 零售品种需求**：
 
-\[
+```math
 Y_{f,t}=\left(\frac{P_{f,t}}{P_t}\right)^{-\varepsilon}Y_t.
-\]
+```
 
 - **(F28) 价格指数**：
 
-\[
+```math
 P_t=\left[\int_0^1P_{f,t}^{1-\varepsilon}df\right]^{1/(1-\varepsilon)}.
-\]
+```
 
 - **(F29) 重设价格 FOC**：
 
-\[
+```math
 E_t\sum_{i=0}^{\infty}\gamma^i\beta^i\Lambda_{t,t+i}
 \left[
 \frac{P_t^{\ast}}{P_{t+i}}\prod_{k=1}^{i}(1+\pi_{t+k-1})^{\gamma_p}
 -\mu P_{m,t+i}
 \right]Y_{f,t+i}=0,\qquad
 \mu=\frac{1}{1-1/\varepsilon}.
-\]
+```
 
 - **(F30) 价格水平运动方程**：
 
-\[
+```math
 P_t=\left[(1-\gamma)(P_t^{\ast})^{1-\varepsilon}
 +\gamma\left(\Pi_{t-1}^{\gamma_p}P_{t-1}\right)^{1-\varepsilon}\right]^{1/(1-\varepsilon)}.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F31) 资源约束**：
 
-\[
+```math
 Y_t=C_t+I_t+
 f\!\left(\frac{I_{n,t}+I_{ss}}{I_{n,t-1}+I_{ss}}\right)(I_{n,t}+I_{ss})
 +G+\tau\psi_tQ_tK_{t+1}.
-\]
+```
 
 - **(F32) 资本积累**：
 
-\[
+```math
 K_{t+1}=\xi_tK_t+I_{n,t}.
-\]
+```
 
 - **(F33) 政府预算恒等式**：
 
-\[
+```math
 G+\tau\psi_tQ_tK_{t+1}=T_t+(R_{k,t}-R_t)B_{g,t-1}.
-\]
+```
 
 - **(F34) 用于公共中介的政府债**：
 
-\[
+```math
 B_{g,t}=\psi_tQ_tS_t.
-\]
+```
 
 - **(F35) 批发与零售产出关系**：
 
-\[
+```math
 Y_{m,t}=D_tY_t.
-\]
+```
 
 - **(F36) 加成定义**：
 
-\[
+```math
 X_t=\frac{1}{P_{m,t}}.
-\]
+```
 
 - **(F37) Fisher 关系**：
 
-\[
+```math
 1+i_t=R_{t+1}\frac{E_tP_{t+1}}{P_t}.
-\]
+```
 
 - **(F38) Taylor 规则**：
 
-\[
+```math
 i_t=(1-\rho)\left[i+\kappa_\pi\pi_t+\kappa_y(\log Y_t-\log Y_t^{\ast})\right]
 +\rho i_{t-1}+\varepsilon^i_t.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F39) 信贷政策反馈规则**：
 
-\[
+```math
 \psi_t=\psi+\nu_\psi E_t\left[(\log R_{k,t+1}-\log R_{t+1})-(\log R_k-\log R)\right].
-\]
+```
 
 - **(F40) 技术冲击**：
 
-\[
+```math
 \log A_t=\rho_a\log A_{t-1}+\varepsilon^a_t.
-\]
+```
 
 - **(F41) 资本质量冲击**：
 
-\[
+```math
 \log \xi_t=\rho_\xi\log \xi_{t-1}+\varepsilon^\xi_t.
-\]
+```
 
 - **(F42) 政府支出冲击**：
 
-\[
+```math
 \log G_t=(1-\rho_g)\log G+\rho_g\log G_{t-1}+\varepsilon^g_t.
-\]
+```
 
 - **(F43) 中介财富冲击，仅作为实现交叉检查**：
 
-\[
+```math
 N_{e,t}=\theta\left[(R_{k,t}-R_t)\phi_{t-1}+R_t\right]N_{t-1}\exp(-\varepsilon^N_t).
-\]
+```
 
 来源论文使用估值和政策实验；实现文件还为 MMB 模拟保留了中介净值冲击和货币政策冲击。
 
@@ -399,64 +399,64 @@ N_{e,t}=\theta\left[(R_{k,t}-R_t)\phi_{t-1}+R_t\right]N_{t-1}\exp(-\varepsilon^N
 
 1. 由 **(F3)**，在边际效用为常数时：
 
-\[
+```math
 R=\frac{1}{\beta}.
-\]
+```
 
 2. 目标稳态利差意味着
 
-\[
+```math
 R_k=R\cdot\exp(\overline{\text{prem}}).
-\]
+```
 
 3. 由目标杠杆率：
 
-\[
+```math
 \phi=\overline{\phi}.
-\]
+```
 
 4. 银行家模块联合求解 `lambda`、`omega` 和 `chi`，以匹配杠杆率、利差和劳动目标。在稳态，
 
-\[
+```math
 z=(R_k-R)\phi+R,\qquad x=z.
-\]
+```
 
 5. 当 `Q=1` 且 `xi=1` 时，资本回报方程给出稳态边际产出关系：
 
-\[
+```math
 R_k=P_m\alpha\frac{Y}{K}+1-\delta(U).
-\]
+```
 
 6. 利用率条件确定折旧函数的尺度：
 
-\[
+```math
 P_m\alpha Y=b U^{1+\zeta}K.
-\]
+```
 
 7. 净投资和资本积累意味着
 
-\[
+```math
 I_n=0,\qquad I=\delta(U)K.
-\]
+```
 
 8. Calvo 模块在零通胀下无价格分散：
 
-\[
+```math
 D=1,\qquad X=\frac{\varepsilon}{\varepsilon-1},\qquad P_m=\frac{\varepsilon-1}{\varepsilon}.
-\]
+```
 
 9. 资源可行性随后决定消费：
 
-\[
+```math
 C=Y-I-G.
-\]
+```
 
 10. 劳动目标和 **(F1)**-**(F2)** 确定劳动效用权重：
 
-\[
+```math
 \chi=\frac{\varrho W}{L^\varphi},\qquad
 \varrho=(C-hC)^{-1}-\beta h(C-hC)^{-1}.
-\]
+```
 
 精确的 MMB 稳态实现通过数值方式求解校准目标，并且只记录为 `implementation_cross_check`；论文没有给出完整的闭式稳态算法。
 

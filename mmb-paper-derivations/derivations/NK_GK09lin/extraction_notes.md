@@ -12,7 +12,7 @@
 - The main model section of the Markdown exposes the household, intermediary, credit-policy, production, capital-production, retail-pricing, resource, government-budget, Fisher, Taylor-rule, and credit-policy-feedback equations.
 - The paper source is nonlinear. `NK_GK09lin_rep.mod` is a compact `model(linear)` implementation. The derivation records the nonlinear paper-side ancestors and marks equation-by-equation linearization parity as `needs_review`.
 - The MinerU OCR has visible notation noise in several places, including the household occupational-switching paragraph, Eq. (23), Eq. (25), and Greek-letter rendering in the policy rule discussion. The archive formula choices were made from the readable Markdown equations, not from the raw PDF body.
-- Marked `needs_review`: exact mapping between paper \(K_t/K_{t+1}\) timing notation and each lag/lead in the MMB linear implementation; exact auxiliary-variable recursions for Calvo pricing as implemented by `f`, `f1`, and `d`; the linear net-worth shock `e_n`, which is implementation-specific rather than a separately named paper shock.
+- Marked `needs_review`: exact mapping between paper $`K_t/K_{t+1}`$ timing notation and each lag/lead in the MMB linear implementation; exact auxiliary-variable recursions for Calvo pricing as implemented by `f`, `f1`, and `d`; the linear net-worth shock `e_n`, which is implementation-specific rather than a separately named paper shock.
 
 ## Implementation Cross-Check
 

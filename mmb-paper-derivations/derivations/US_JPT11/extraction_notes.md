@@ -14,11 +14,11 @@
 - The core paper-side equations extracted from Markdown include the final-good aggregator, intermediate-good demand, intermediate production technology, price indexation rule, investment-good technology, capital-good technology, capital-producer objective, household utility and budget constraint, capital utilization, physical capital accumulation, labor aggregator, wage indexation rule, government spending rule, monetary policy rule, investment relative-price identity, one-sector capital accumulation representation, and the exogenous processes.
 - First-pass uncertain formulas are explicitly marked `needs_review` in the derivations:
   - Intermediate-firm cost-minimization conditions are inferred from the production technology; the main Markdown source does not print all factor FOCs.
-  - The real marginal-cost normalization with nonstationary \(A_t\) and \(\Upsilon_t\) should be source-level checked.
+  - The real marginal-cost normalization with nonstationary $`A_t`$ and $`\Upsilon_t`$ should be source-level checked.
   - The explicit recursive Calvo price and wage Phillips-curve conditions are not printed in the paper-side model section in the Markdown.
-  - The capital-producer \(Q\) condition is inferred from the intertemporal profit problem and should be checked against the PDF before any reviewed status.
+  - The capital-producer $`Q`$ condition is inferred from the intertemporal profit problem and should be checked against the PDF before any reviewed status.
   - Household marginal utility, Euler, and utilization FOCs are standard implications of the stated problem but require source-level formula review because the paper text emphasizes the log-linear solution rather than listing every nonlinear FOC.
-  - The GDP-gap flexible counterpart \(X_t^*\) is identified from the policy rule and implementation cross-check, but the exact flexible-economy subsystem requires review.
+  - The GDP-gap flexible counterpart $`X_t^*`$ is identified from the policy rule and implementation cross-check, but the exact flexible-economy subsystem requires review.
 - Appendix A was used only to record the relative-price wedge result for sticky prices in both consumption and investment sectors; the main `US_JPT11` derivation remains the baseline competitive investment-good model.
 
 ## Implementation Cross-Check

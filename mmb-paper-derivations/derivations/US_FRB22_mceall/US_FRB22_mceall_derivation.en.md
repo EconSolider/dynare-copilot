@@ -22,19 +22,19 @@ The LINVER paper does not present household, firm, government, or financial-sect
 
 **(F1) Generic inertial policy rule from the paper**:
 
-\[
+```math
 R_t = \alpha R_{t-1} + (1-\alpha)\left[r^{\ast} + \pi_t + \beta(\pi_t-\pi^{\ast}) + \gamma Y_t\right].
-\]
+```
 
-Here \(R_t\) is the nominal federal funds rate, \(r^{\ast}\) the neutral real rate, \(\pi_t\) inflation, \(\pi^{\ast}\) the inflation target, and \(Y_t\) the output gap. This is source-stated as a generic characterization used in optimal-rule studies, not necessarily the exact MMB policy equation.
+Here $`R_t`$ is the nominal federal funds rate, $`r^{\ast}`$ the neutral real rate, $`\pi_t`$ inflation, $`\pi^{\ast}`$ the inflation target, and $`Y_t`$ the output gap. This is source-stated as a generic characterization used in optimal-rule studies, not necessarily the exact MMB policy equation.
 
 - **Fiscal stabilization mechanism**: the appendix describes an emergency fiscal stabilization variable used when ELB simulations would otherwise produce severe downturns.
 
 **(F2) ECFS fiscal process from the paper**:
 
-\[
+```math
 FISCAL_t = 0.97 FISCAL_{t-1} + \varepsilon_t.
-\]
+```
 
 The shock is selected by the solution routine when needed to keep the expected near-term output gap above a floor. This is a simulation mechanism rather than a welfare-optimization FOC.
 
@@ -44,28 +44,28 @@ No source-level first-order conditions are reported in the LINVER overview paper
 
 **(F3) Linear behavioral equation template (`implementation_cross_check`)**:
 
-\[
+```math
 x_t =
 c_x
 + \sum_{j \in L_x} a_{x,j} x_{j,t-\ell_j}
 + \sum_{k \in F_x} b_{x,k} E_t x_{k,t+h_k}
 + \sum_{m \in Z_x} d_{x,m} z_{m,t}
 + \varepsilon^x_t.
-\]
+```
 
 This template represents the many named equations in the MMB `.mod`, each written as a calibrated linear relation in lagged, contemporaneous, and sometimes future-dated variables.
 
 **(F4) Model-consistent expectations object (`implementation_cross_check`)**:
 
-\[
+```math
 z^q_t = \sum_i \omega_i q_{i,t+s_i}.
-\]
+```
 
 The MMB implementation has many expectation variables such as `zebfi`, `zecd`, `zeco`, `zeh`, `zgap05`, `zgap10`, `zgap30`, `zpi10`, `zpicxfe`, and `zrff5`/`zrff10`/`zrff30`, often involving leads. For `mceall`, these objects are consistent with the variant description "all expectations are model consistent."
 
 **(F5) Interest-rate policy rule in the MMB implementation (`implementation_cross_check`)**:
 
-\[
+```math
 \begin{aligned}
 i_t ={}&
 \sum_{j=1}^{4} a_j i_{t-j}
@@ -80,7 +80,7 @@ i_t ={}&
 + \sum_{j=1}^{4} g_j E_t y_{t+j}
 + \sigma_i \varepsilon^i_t .
 \end{aligned}
-\]
+```
 
 The exact coefficients are `cofint*` and `std_r_` in the implementation. The source paper's policy equation (F1) motivates this rule family but does not list this high-dimensional implementation formula.
 
@@ -92,44 +92,44 @@ The MMB implementation exposes summary identities for Modelbase reporting:
 
 **(F6) Reported short-rate identity (`implementation_cross_check`)**:
 
-\[
+```math
 interest_t = rff_t.
-\]
+```
 
 **(F7) Quarterly inflation reporting identity (`implementation_cross_check`)**:
 
-\[
+```math
 inflationq_t = 4\,picnia_t.
-\]
+```
 
 **(F8) Output-gap reporting identity (`implementation_cross_check`)**:
 
-\[
+```math
 outputgap_t = xgap2_t.
-\]
+```
 
 **(F9) Output reporting identity (`implementation_cross_check`)**:
 
-\[
+```math
 output_t = 100\,xgdp\_l_t.
-\]
+```
 
 **(F10) Production-side output-gap identity (`implementation_cross_check`)**:
 
-\[
+```math
 xgap2_t = 100\,xgdo\_l_t - 100\,xgdpt\_l_t.
-\]
+```
 
 **(F11) GDP accounting block template (`implementation_cross_check`)**:
 
-\[
+```math
 xgdpn\_l_t =
 \sum_s \lambda_s\,component_{s,t}
 + p_{k,t}
 + p_{x,t}
 + \lambda_i\,ki\_l_t
 + \lambda_{i,-1}\,ki\_l_{t-1}.
-\]
+```
 
 `needs_review`: the exact source-level accounting identities and sector aggregation should be checked against the official LINVER package documentation, not inferred only from the `.mod`.
 
@@ -139,33 +139,33 @@ The paper describes equation residuals sampled from 1970-2019 and rescaled wage-
 
 **(F12) Generic equation residual (`implementation_cross_check`)**:
 
-\[
+```math
 u^x_t = \sigma_x \varepsilon^x_t.
-\]
+```
 
 **(F13) Fiscal policy shock mapping (`implementation_cross_check`)**:
 
-\[
+```math
 fispol_t = \kappa_f \varepsilon^f_t.
-\]
+```
 
 **(F14) Fiscal stock process (`implementation_cross_check`, paper-consistent)**:
 
-\[
+```math
 fiscal_t = 0.97\,fiscal_{t-1} + fiscal\_aerr_t.
-\]
+```
 
 **(F15) Moving-average fiscal impetus (`implementation_cross_check`)**:
 
-\[
+```math
 fiscalav_t = 0.90\,fiscalav_{t-1} + fiscal_t.
-\]
+```
 
 **(F16) Persistent trend/process template (`implementation_cross_check`)**:
 
-\[
+```math
 s_t = \rho_s s_{t-1} + \varepsilon^s_t.
-\]
+```
 
 Examples in the implementation include persistent variables for trend productivity, labor-force participation, natural unemployment, prices, term premiums, and foreign-sector objects.
 
@@ -177,21 +177,21 @@ For a linear implementation, the archive-level steady-state interpretation is:
 
 **(F17) Baseline deviation convention**:
 
-\[
+```math
 \tilde{x}_t = x_t - x^{base}_t,
 \qquad
 E[\tilde{x}_t] = 0
-\]
+```
 
 for variables represented as linear deviations around the LINVER baseline/evaluation point.
 
 **(F18) Inflation and interest baseline targets**:
 
-\[
+```math
 \pi_t = \pi^{\ast} + \tilde{\pi}_t,
 \qquad
 i_t = i^{\ast} + \tilde{i}_t.
-\]
+```
 
 The paper discusses simulations under alternative neutral nominal federal funds rates, such as 2, 3, and 4 percent, and a zero ELB. These are scenario assumptions, not a single source-stated steady state.
 

@@ -21,12 +21,12 @@
 
 家庭具有消费外部习惯，供给劳动，持有债券，并通过可变利用率投资物质资本。Fratto-Uhlig 论文正文没有印出源层完整效用函数和预算约束；目标基准是 Smets-Wouters 家庭模块。待核实的通用源层问题为：
 
-\[
+```math
 \max E_0\sum_{t=0}^{\infty}\beta^t
 \left[
 U(C_t-hC_{t-1},L_t)
 \right]
-\]
+```
 
 约束为实际预算约束，将资源分配到消费、债券持有、投资、资本利用成本、税收、工资收入、租金收入、债券收益和利润。`needs_review`：确切的非线性家庭问题不在 US_FU19 Markdown 中。
 
@@ -52,83 +52,83 @@ U(C_t-hC_{t-1},L_t)
 
 **(F1) 带习惯和风险溢价 wedge 的消费 Euler 方程**（`needs_review`）：
 
-\[
+```math
 c_t =
 \frac{h/\gamma}{1+h/\gamma}c_{t-1}
 +\frac{1}{1+h/\gamma}E_t c_{t+1}
 +\frac{(\sigma_c-1)w_L^c}{\sigma_c(1+h/\gamma)}(L_t-E_tL_{t+1})
 -\frac{1-h/\gamma}{\sigma_c(1+h/\gamma)}(R_t-E_t\pi_{t+1})
 +b^2_t .
-\]
+```
 
 **(F2) 投资 Euler 方程 / 投资调整成本 FOC**（`needs_review`）：
 
-\[
+```math
 i_t =
 \frac{1}{1+\bar{\beta}\gamma}
 \left(i_{t-1}+\bar{\beta}\gamma E_t i_{t+1}
 +\frac{1}{\gamma^2\varphi_i}Q_t\right)+\mu_t .
-\]
+```
 
 **(F3) 已安装资本价值 / Tobin's Q**（`needs_review`）：
 
-\[
+```math
 Q_t =
 \frac{1}{\chi_c}b^2_t
 -(R_t-E_t\pi_{t+1})
 +\frac{r_k^\ast}{r_k^\ast+1-\delta}E_t r^k_{t+1}
 +\frac{1-\delta}{r_k^\ast+1-\delta}E_tQ_{t+1}.
-\]
+```
 
-其中 \(\chi_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]\)。
+其中 $`\chi_c=(1-h/\gamma)/[\sigma_c(1+h/\gamma)]`$。
 
 **(F4) 资本利用率条件**（`needs_review`）：
 
-\[
+```math
 u_t=\frac{1-c_z}{c_z}r^k_t .
-\]
+```
 
 **(F5) 有效资本服务**（`needs_review`）：
 
-\[
+```math
 k_t=u_t+\bar{k}_{t-1}.
-\]
+```
 
 **(F6) 物质资本积累**（`needs_review`）：
 
-\[
+```math
 \bar{k}_t=(1-\iota_k)\bar{k}_{t-1}+\iota_k(\gamma^2\varphi_i\mu_t+i_t).
-\]
+```
 
 **(F7) 生产函数**（`needs_review`）：
 
-\[
+```math
 y_t=\Phi Z_t+\alpha\Phi k_t+(1-\alpha)\Phi L_t .
-\]
+```
 
 **(F8) 资本-劳动需求关系**（`needs_review`）：
 
-\[
+```math
 k_t=w_t-r^k_t+L_t .
-\]
+```
 
 **(F9) 实际边际成本**（`needs_review`）：
 
-\[
+```math
 mc_t=\alpha r^k_t+(1-\alpha)w_t-Z_t .
-\]
+```
 
 **(F10) Hybrid price Phillips curve**（`source_stated`，论文方程 (1)，符号已统一）：
 
-\[
+```math
 \pi_t=\pi_1\pi_{t-1}+\pi_2E_t\pi_{t+1}-\pi_3\mu^p_t+\epsilon^p_t .
-\]
+```
 
-其中 \(\mu^p_t\) 是价格 markup，论文定义为劳动边际产出和实际工资之间的差。
+其中 $`\mu^p_t`$ 是价格 markup，论文定义为劳动边际产出和实际工资之间的差。
 
 **(F11) Wage Phillips curve**（`needs_review`）：
 
-\[
+```math
 w_t=
 \frac{1}{1+\bar{\beta}\gamma}
 \left[
@@ -142,98 +142,98 @@ w_{t-1}+\bar{\beta}\gamma E_tw_{t+1}
 +\iota_w\pi_{t-1}
 +\bar{\beta}\gamma E_t\pi_{t+1}
 \right]+\lambda^w_t .
-\]
+```
 
 **(F12) 货币政策规则**（规则形式为 `source_stated`；基准使用常数通胀目标）：
 
-\[
+```math
 R_t=\rho_RR_{t-1}+(1-\rho_R)\left(\psi_1\pi_t+\psi_2(y_t-y^{flex}_t)\right)
 +\psi_3\left[(y_t-y_{t-1})-(y^{flex}_t-y^{flex}_{t-1})\right]+ms_t .
-\]
+```
 
 **(F13) 总资源约束**（`needs_review`）：
 
-\[
+```math
 y_t=c_yc_t+i_yi_t+g_t+r_k^\ast k_yu_t .
-\]
+```
 
 **(F14) Flexible-price 消费 Euler 方程**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 c^{flex}_t =
 \frac{h/\gamma}{1+h/\gamma}c^{flex}_{t-1}
 +\frac{1}{1+h/\gamma}E_t c^{flex}_{t+1}
 +\frac{(\sigma_c-1)w_L^c}{\sigma_c(1+h/\gamma)}(L^{flex}_t-E_tL^{flex}_{t+1})
 -\frac{1-h/\gamma}{\sigma_c(1+h/\gamma)}R^{flex}_t
 +b^2_t .
-\]
+```
 
 **(F15) Flexible-price 投资方程**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 i^{flex}_t =
 \frac{1}{1+\bar{\beta}\gamma}
 \left(i^{flex}_{t-1}+\bar{\beta}\gamma E_ti^{flex}_{t+1}
 +\frac{1}{\gamma^2\varphi_i}Q^{flex}_t\right)+\mu_t .
-\]
+```
 
 **(F16) Flexible-price Tobin's Q**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 Q^{flex}_t =
 \frac{1}{\chi_c}b^2_t
 -R^{flex}_t
 +\frac{r_k^\ast}{r_k^\ast+1-\delta}E_tr^{k,flex}_{t+1}
 +\frac{1-\delta}{r_k^\ast+1-\delta}E_tQ^{flex}_{t+1}.
-\]
+```
 
 **(F17) Flexible-price 资本利用率**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 u^{flex}_t=\frac{1-c_z}{c_z}r^{k,flex}_t .
-\]
+```
 
 **(F18) Flexible-price 有效资本**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 k^{flex}_t=u^{flex}_t+\bar{k}^{flex}_{t-1}.
-\]
+```
 
 **(F19) Flexible-price 资本积累**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 \bar{k}^{flex}_t=(1-\iota_k)\bar{k}^{flex}_{t-1}+\iota_k(\gamma^2\varphi_i\mu_t+i^{flex}_t).
-\]
+```
 
 **(F20) Flexible-price 生产函数**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 y^{flex}_t=\Phi Z_t+\alpha\Phi k^{flex}_t+(1-\alpha)\Phi L^{flex}_t .
-\]
+```
 
 **(F21) Flexible-price 资本-劳动需求关系**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 k^{flex}_t=w^{flex}_t-r^{k,flex}_t+L^{flex}_t .
-\]
+```
 
 **(F22) Flexible-price 边际成本归一化**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 0=\alpha r^{k,flex}_t+(1-\alpha)w^{flex}_t-Z_t .
-\]
+```
 
 **(F23) Flexible-price 工资/劳动条件**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 w^{flex}_t=\frac{1}{1-h/\gamma}c^{flex}_t-\frac{h/\gamma}{1-h/\gamma}c^{flex}_{t-1}+\nu_LL^{flex}_t .
-\]
+```
 
 **(F24) Flexible-price 资源约束**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 y^{flex}_t=c_yc^{flex}_t+i_yi^{flex}_t+g_t+r_k^\ast k_yu^{flex}_t .
-\]
+```
 
 ## 4. Market Clearing & Identities
 
@@ -243,16 +243,16 @@ y^{flex}_t=c_yc^{flex}_t+i_yi^{flex}_t+g_t+r_k^\ast k_yu^{flex}_t .
 
 **(F25) 观测方程**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 \Delta y^{obs}_t=y_t-y_{t-1},\quad
 \Delta c^{obs}_t=c_t-c_{t-1},\quad
 \Delta i^{obs}_t=i_t-i_{t-1},\quad
 \Delta w^{obs}_t=w_t-w_{t-1}.
-\]
+```
 
-\[
+```math
 \pi^{obs}_t=\pi_t,\quad R^{obs}_t=R_t,\quad L^{obs}_t=L_t .
-\]
+```
 
 论文报告的通胀和就业 shock decompositions 基于求解后的线性系统以及这些观测变量。
 
@@ -260,112 +260,112 @@ y^{flex}_t=c_yc^{flex}_t+i_yi^{flex}_t+g_t+r_k^\ast k_yu^{flex}_t .
 
 **(F26) 技术冲击**（`needs_review`）：
 
-\[
+```math
 Z_t=\rho_ZZ_{t-1}+\epsilon^Z_t .
-\]
+```
 
 **(F27) 偏好/风险溢价冲击**（`needs_review`）：
 
-\[
+```math
 b^2_t=\rho_{b2}b^2_{t-1}+\epsilon^{b2}_t .
-\]
+```
 
 **(F28) 带技术创新联动的政府支出冲击**（`implementation_cross_check`, `needs_review`）：
 
-\[
+```math
 g_t=\rho_gg_{t-1}+\epsilon^g_t+\rho_{gZ}\epsilon^Z_t .
-\]
+```
 
 **(F29) 投资专用技术冲击**（`needs_review`）：
 
-\[
+```math
 \mu_t=\rho_\mu\mu_{t-1}+\epsilon^\mu_t .
-\]
+```
 
 **(F30) 价格 markup 冲击**（概念为 `source_stated`，确切过程为 `needs_review`）：
 
-\[
+```math
 \lambda^p_t=\rho_p\lambda^p_{t-1}+\epsilon^p_t-\theta_p\epsilon^p_{t-1}.
-\]
+```
 
 **(F31) 工资 markup 冲击**（概念为 `source_stated`，确切过程为 `needs_review`）：
 
-\[
+```math
 \lambda^w_t=\rho_w\lambda^w_{t-1}+\epsilon^w_t-\theta_w\epsilon^w_{t-1}.
-\]
+```
 
 **(F32) 货币政策冲击**（概念为 `source_stated`，确切过程为 `needs_review`）：
 
-\[
+```math
 ms_t=\rho_{ms}ms_{t-1}+\epsilon^{ms}_t .
-\]
+```
 
 对于 ZLB 会计分解，论文给出：
 
 **(F33) ZLB 货币意外映射**（`source_stated`，论文方程 (7)）：
 
-\[
+```math
 \epsilon^m_t=\max\{-\tilde{i}_t,0\},
-\]
+```
 
-其中 \(\tilde{i}_t\) 是线性 Taylor 规则隐含的利率。
+其中 $`\tilde{i}_t`$ 是线性 Taylor 规则隐含的利率。
 
 对于可选的 time-varying inflation-target 扩展，论文给出：
 
 **(F34) Time-varying inflation target extension**（`source_stated`，不是基准 MMB 实现的一部分）：
 
-\[
+```math
 i_t=\bar{i}+\rho_Ri_{t-1}+(1-\rho_R)\left[\psi_1(\pi_t-\pi_t^\ast)+\psi_2x_t\right]
 +\psi_3(x_t-x_{t-1})+\epsilon^r_t,
-\]
+```
 
-\[
+```math
 \hat{\pi}^\ast_t=\rho_{\pi^\ast}\hat{\pi}^\ast_{t-1}+\sigma_{\pi^\ast}\epsilon^{\pi^\ast}_t .
-\]
+```
 
 ## 6. Steady-State Solution
 
 由于 MMB 实现为 `model(linear)`，动态变量是相对于 balanced-growth steady state 的偏离，模型块围绕零求解：
 
-\[
+```math
 \bar{c}=\bar{i}=\bar{Q}=\bar{u}=\bar{k}=\bar{y}=\bar{\pi}=\bar{R}=\bar{L}=0 .
-\]
+```
 
 派生稳态比率和常数在评价线性模型前校准或计算：
 
-\[
+```math
 \beta=\frac{1}{1+\mathrm{constebeta}/100},
 \qquad
 \bar{\beta}=\beta\gamma^{-\sigma_c},
 \qquad
 r_k^\ast=\beta^{-1}\gamma^{\sigma_c}-(1-\delta).
-\]
+```
 
-\[
+```math
 w^\ast=
 \left[
 \frac{\alpha^\alpha(1-\alpha)^{1-\alpha}}{\Phi(r_k^\ast)^\alpha}
 \right]^{1/(1-\alpha)},
 \qquad
 \frac{K}{L}=\frac{\alpha}{1-\alpha}\frac{w^\ast}{r_k^\ast}.
-\]
+```
 
-\[
+```math
 k_y=\Phi\left(\frac{K}{L}\right)^{1-\alpha},
 \qquad
 i_y=\left[1-\frac{1-\delta}{\gamma}\right]\gamma k_y,
 \qquad
 c_y=1-g^\ast-i_y .
-\]
+```
 
 `needs_review`：这些公式通过 `US_FU19_rep.mod` 交叉检查；US_FU19 论文正文没有印出完整稳态推导。
 
 ## 7. Timing & Form Conventions
 
 - 形式约定：`model(linear)`；除非另有说明，(F1)-(F34) 中所有模型变量均为围绕 balanced-growth steady state 的 log deviations 或 linear deviations。
-- 资本时序：生产使用有效资本服务 \(k_t=u_t+\bar{k}_{t-1}\)；物质资本 \(\bar{k}_t\) 是期初预定、期末选择的存量。
-- 期望：方程使用 \(E_t\) 表示一期超前项；`.mod` 交叉检查使用 Dynare leads，例如 `(+1)`。
-- 产出缺口：货币政策响应 \(y_t-y^{flex}_t\) 及该缺口的变化。
+- 资本时序：生产使用有效资本服务 $`k_t=u_t+\bar{k}_{t-1}`$；物质资本 $`\bar{k}_t`$ 是期初预定、期末选择的存量。
+- 期望：方程使用 $`E_t`$ 表示一期超前项；`.mod` 交叉检查使用 Dynare leads，例如 `(+1)`。
+- 产出缺口：货币政策响应 $`y_t-y^{flex}_t`$ 及该缺口的变化。
 - ZLB 处理：基准 retro analysis 不在基准线性模型中施加 occasionally binding constraint；它把负 Taylor-rule shadow rate 和零之间的差额视为一系列 surprise monetary shocks。
 - 运行验证：未执行；没有运行 Dynare。
 

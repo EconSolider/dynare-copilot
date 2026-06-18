@@ -16,9 +16,9 @@ Status: `needs_review`
 - Marked as `needs_review` in the derivation:
   - capital shadow-price and capital-demand equations, because Appendix A mixes time subscripts and has punctuation/OCR damage;
   - retail reset-price and retail loan-rate equations, because OCR disrupts exponents and continuation text;
-  - aggregate labor identity, because Appendix A says \(H_t=H_t^h+H_t^e\) while the main text distinguishes saver/borrower household labor and entrepreneur labor demand;
-  - aggregate equity-dividend equation, because Appendix A repeats \(\Pi_t^\psi\) in the numerator where entrepreneur dividends appear intended;
-  - monetary policy shock AR coefficient, because Appendix A prints \(\rho_z\) for \(\xi_{i,t}\) while the text and implementation point to \(\rho_i\).
+  - aggregate labor identity, because Appendix A says $`H_t=H_t^h+H_t^e`$ while the main text distinguishes saver/borrower household labor and entrepreneur labor demand;
+  - aggregate equity-dividend equation, because Appendix A repeats $`\Pi_t^\psi`$ in the numerator where entrepreneur dividends appear intended;
+  - monetary policy shock AR coefficient, because Appendix A prints $`\rho_z`$ for $`\xi_{i,t}`$ while the text and implementation point to $`\rho_i`$.
 - Long prose from the paper was not copied into the derivation; equations and concise model structure were extracted.
 
 ## Implementation Cross-Check

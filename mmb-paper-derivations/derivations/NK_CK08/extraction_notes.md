@@ -13,7 +13,7 @@
 
 - Status: `needs_review`.
 - The main text and appendix A.2 provide a coherent linearized RTM system.
-- MinerU OCR has visible symbol ambiguity in several places, especially where the source separation parameter \(\vartheta\) appears as `9` in long value/surplus equations.
+- MinerU OCR has visible symbol ambiguity in several places, especially where the source separation parameter $`\vartheta`$ appears as `9` in long value/surplus equations.
 - Equations (F8)-(F11) are marked `needs_review` because they are long OCR-sensitive recursions for marginal wage-surplus terms, firm value, and worker surplus.
 - The annual inflation convention differs across sources: the paper is monthly and uses year-on-year inflation, while the MMB replication is a quarterly recalibration. The derivation records both the paper monthly source and the implementation cross-check.
 

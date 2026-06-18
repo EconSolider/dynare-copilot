@@ -17,54 +17,54 @@
 
 The household chooses differentiated consumption, labor supplies, and bond holdings to maximize expected discounted utility with internal habit:
 
-\[
+```math
 E_t \sum_{s=0}^{\infty}\delta^s b_{t+s}
 \left[
 \log(C_{t+s}-h C_{t+s-1})
 -\varphi\int_0^1 \frac{L_{t+s}(i)^{1+\nu}}{1+\nu}\,di
 \right].
-\]
+```
 
 The nominal budget constraint is:
 
-\[
+```math
 \int_0^1 P_t(i) C_t(i)\,di + B_t + T_t
 \le R_{t-1} B_{t-1} + \Pi_t + \int_0^1 W_t(i)L_t(i)\,di.
-\]
+```
 
 Differentiated consumption is aggregated by:
 
-\[
+```math
 C_t =
 \left[\int_0^1 C_t(i)^{1/(1+\theta_t)}\,di\right]^{1+\theta_t}.
-\]
+```
 
-Here `needs_review`: the paper uses \(\delta\) for the discount factor, while the Rep-MMB file uses `betta = 100/(Fbeta+100)` with `Fbeta` denoting the estimated annualized percentage discount-rate parameter.
+Here `needs_review`: the paper uses $`\delta`$ for the discount factor, while the Rep-MMB file uses `betta = 100/(Fbeta+100)` with `Fbeta` denoting the estimated annualized percentage discount-rate parameter.
 
 ### 2.2 Firms
 
 Each monopolistically competitive firm produces one differentiated good with linear labor technology:
 
-\[
+```math
 Y_t(i)=A_t L_t(i).
-\]
+```
 
-With Calvo probability \(\xi\), a firm cannot reoptimize and indexes its price to the steady-state gross inflation rate \(\pi\). A reoptimizing firm chooses \(\tilde P_t(i)\) to maximize:
+With Calvo probability $`\xi`$, a firm cannot reoptimize and indexes its price to the steady-state gross inflation rate $`\pi`$. A reoptimizing firm chooses $`\tilde P_t(i)`$ to maximize:
 
-\[
+```math
 E_t \sum_{s=0}^{\infty}\xi^s\delta^s\lambda_{t+s}
 \left\{
 \tilde P_t(i)\pi^s Y_{t+s}(i)-W_{t+s}(i)L_{t+s}(i)
 \right\}.
-\]
+```
 
-The desired-markup shock \(\theta_t\) enters the elasticity embedded in the Dixit-Stiglitz aggregator and therefore the New-Keynesian Phillips curve slope and cost-push term.
+The desired-markup shock $`\theta_t`$ enters the elasticity embedded in the Dixit-Stiglitz aggregator and therefore the New-Keynesian Phillips curve slope and cost-push term.
 
 ### 2.3 Government and Monetary Authority
 
 Fiscal policy closes through lump-sum taxes/transfers and bond supply. The monetary authority sets the gross nominal short rate by a smoothed Taylor rule:
 
-\[
+```math
 \frac{R_t}{R} =
 \left(\frac{R_{t-1}}{R}\right)^{\rho_R}
 \left[
@@ -72,7 +72,7 @@ Fiscal policy closes through lump-sum taxes/transfers and bond supply. The monet
 \left(\frac{Y_t}{Y_t^{\ast}}\right)^{\varphi_Y}
 \right]^{1-\rho_R}
 e^{\varepsilon_{R,t}}.
-\]
+```
 
 The rule responds to annual inflation relative to the time-varying inflation target and to the output gap relative to flexible-price output.
 
@@ -82,70 +82,70 @@ The paper's primitives imply the usual consumption Euler equation, labor supply 
 
 - **(F1) New-Keynesian Phillips curve for inflation-gap inflation `p`**:
 
-\[
+```math
 p_t-\frac{\beta}{1+\iota_p\beta}p_{t+1}-\lambda^p_t
 -\frac{(1-\beta\xi_p)(1-\xi_p)}
 {(1+\iota_p\beta)\xi_p\left[1+\nu(1+1/\bar\lambda^p)\right]}w_t
 =\frac{\iota_p}{1+\iota_p\beta}p_{t-1}.
-\]
+```
 
 - **(F2) Flexible-price real wage gap normalization**:
 
-\[
+```math
 w^{\ast}_t=0.
-\]
+```
 
 - **(F3) Marginal utility and output with habit**:
 
-\[
+```math
 (g-h\beta)(g-h)\lambda_t
 -(g-h\beta\rho_b)(g-h)b_t
 -(\beta h g\rho_z-hg)z_t
 (g^2+\beta h^2)y_t
 -\beta hg\,y_{t+1}
 =gh\,y_{t-1}.
-\]
+```
 
 - **(F4) Flexible-price counterpart of marginal utility and output**:
 
-\[
+```math
 (g-h\beta)(g-h)\lambda^{\ast}_t
 -(g-h\beta\rho_b)(g-h)b_t
 -(\beta h g\rho_z-hg)z_t
 (g^2+\beta h^2)y^{\ast}_t
 -\beta hg\,y^{\ast}_{t+1}
 =gh\,y^{\ast}_{t-1}.
-\]
+```
 
 - **(F5) Euler equation**:
 
-\[
+```math
 \lambda_t-R_t-\lambda_{t+1}+p_{t+1}+\rho_z z_t=0.
-\]
+```
 
 - **(F6) Flexible-price Euler equation**:
 
-\[
+```math
 \lambda^{\ast}_t-R^{\ast}_t-\lambda^{\ast}_{t+1}+\rho_z z_t=0.
-\]
+```
 
 - **(F7) Labor supply / real wage relation**:
 
-\[
+```math
 w_t-b_t-\nu y_t+\lambda_t=0.
-\]
+```
 
 - **(F8) Flexible-price labor supply / real wage relation**:
 
-\[
+```math
 w^{\ast}_t-b_t-\nu y^{\ast}_t+\lambda^{\ast}_t=0.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F9) Monetary policy rule**:
 
-\[
+```math
 R_t-(1-\rho_R)\frac{\varphi_\pi}{4}p_t
 +(1-\rho_R)\varphi_\pi\pi^{\ast}_t
 -(1-\rho_R)\varphi_y y_t
@@ -153,81 +153,81 @@ R_t-(1-\rho_R)\frac{\varphi_\pi}{4}p_t
 =\rho_R R_{t-1}
 +(1-\rho_R)\frac{\varphi_\pi}{4}(p_{t-1}+p_{t-2}+p_{t-3})
 +\varepsilon_{R,t}.
-\]
+```
 
 - **(F10) Inflation gap definition**:
 
-\[
+```math
 \text{inflgap}_t=p_t-\pi^{\ast}_t.
-\]
+```
 
 - **(F11) Ex-post real interest rate definition**:
 
-\[
+```math
 \text{realR}_t=R_t-p_t.
-\]
+```
 
 - **(F12) Output gap definition**:
 
-\[
+```math
 \text{outpgap}_t=y_t-y^{\ast}_t.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F13) Technology-growth shock**:
 
-\[
+```math
 z_t=\rho_z z_{t-1}+\varepsilon_{z,t}.
-\]
+```
 
 - **(F14) Desired-markup shock**:
 
-\[
+```math
 \lambda^p_t=\rho_{\lambda^p}\lambda^p_{t-1}+\varepsilon_{\lambda^p,t}.
-\]
+```
 
 - **(F15) Inflation-target process**:
 
-\[
+```math
 \pi^{\ast}_t=\rho_{\pi^{\ast}}\pi^{\ast}_{t-1}+\varepsilon_{\pi^{\ast},t}.
-\]
+```
 
-Paper OCR note: equation (21) in the MinerU Markdown repeats \(\log\pi_t^{\ast}\) on both sides; the intended persistent target process uses the lagged target, matching the Rep-MMB implementation and the surrounding paper discussion. This normalization is marked `needs_review`.
+Paper OCR note: equation (21) in the MinerU Markdown repeats $`\log\pi_t^{\ast}`$ on both sides; the intended persistent target process uses the lagged target, matching the Rep-MMB implementation and the surrounding paper discussion. This normalization is marked `needs_review`.
 
 - **(F16) Preference shock**:
 
-\[
+```math
 b_t=\rho_b b_{t-1}+\varepsilon_{b,t}.
-\]
+```
 
 ## 6. Steady-State Solution
 
 Because the archive target is the Rep-MMB linear implementation, the steady state of all model variables in the `model(linear)` block is zero:
 
-\[
+```math
 \bar p=\bar y=\bar\lambda=\bar w=\bar R=\bar z=\bar\lambda^p=\bar\pi^{\ast}
 =\bar b=\bar y^{\ast}=\bar\lambda^{\ast}=\bar w^{\ast}=\bar R^{\ast}
 =\overline{\text{inflgap}}=\overline{\text{realR}}=\overline{\text{outpgap}}=0.
-\]
+```
 
 The nonstochastic levels behind the log-linearization are pinned down by:
 
-\[
+```math
 g=e^\gamma,\qquad
 \beta=\frac{100}{100+F_\beta},\qquad
 r^{ss}=e^\gamma/\beta-1,\qquad
 100r^{ss}=100\,r^{ss}.
-\]
+```
 
-The MMB calibration uses `gamma100/100` for \(\gamma\) and `pss100/100` for the quarterly gross inflation steady-state deviation measure. The paper estimates the model on two subsamples; the Rep-MMB file activates the 1960-1979 posterior medians by default and leaves the 1982-2006 and counterfactual values commented.
+The MMB calibration uses `gamma100/100` for $`\gamma`$ and `pss100/100` for the quarterly gross inflation steady-state deviation measure. The paper estimates the model on two subsamples; the Rep-MMB file activates the 1960-1979 posterior medians by default and leaves the 1982-2006 and counterfactual values commented.
 
 ## 7. Timing & Form Conventions
 
-- **Timing**: forward-looking variables appear as \(p_{t+1}\), \(y_{t+1}\), \(\lambda_{t+1}\), and flexible-price counterparts. The policy rule contains \(R_{t-1}\) and four-quarter inflation terms \(p_t,p_{t-1},p_{t-2},p_{t-3}\).
+- **Timing**: forward-looking variables appear as $`p_{t+1}`$, $`y_{t+1}`$, $`\lambda_{t+1}`$, and flexible-price counterparts. The policy rule contains $`R_{t-1}`$ and four-quarter inflation terms $`p_t,p_{t-1},p_{t-2},p_{t-3}`$.
 - **Stock variables**: the paper's DSGE section has no capital stock. Bonds enter the household budget, but the log-linear MMB implementation has no explicit bond-state equation.
 - **Trend scaling**: because technology has a unit root, consumption, output, and real wages are scaled by technology before log-linearization.
-- **Inflation target**: the target is highly persistent, with \(\rho_{\pi^{\ast}}=0.995\) in the baseline.
+- **Inflation target**: the target is highly persistent, with $`\rho_{\pi^{\ast}}=0.995`$ in the baseline.
 - **Runtime validation**: not performed; Dynare was not run.
 
 ## 8. Variable & Parameter Reference Table
@@ -250,21 +250,21 @@ The MMB calibration uses `gamma100/100` for \(\gamma\) and `pss100/100` for the 
 | Endogenous | `inflgap` | Inflation gap | (F10) |
 | Endogenous | `realR` | Ex-post real interest rate | (F11) |
 | Endogenous | `outpgap` | Output gap | (F12) |
-| Exogenous shock | `Rs` | Monetary-policy innovation \(\varepsilon_{R,t}\) | (F9) |
-| Exogenous shock | `zs` | Technology-growth innovation \(\varepsilon_{z,t}\) | (F13) |
-| Exogenous shock | `lambddaps` | Desired-markup innovation \(\varepsilon_{\lambda^p,t}\) | (F14) |
-| Exogenous shock | `pits` | Inflation-target innovation \(\varepsilon_{\pi^{\ast},t}\) | (F15) |
-| Exogenous shock | `bs` | Preference innovation \(\varepsilon_{b,t}\) | (F16) |
-| Parameter | `niu` / \(\nu\) | Inverse Frisch elasticity; calibrated at 2 | - |
-| Parameter | `lambddapss` / \(\bar\lambda^p\) | Steady-state markup parameter; calibrated at 0.1 | - |
-| Parameter | `iotap` / \(\iota_p\) | Price-indexation coefficient in implemented Phillips curve; default 0 | - |
-| Parameter | `rhopit` / \(\rho_{\pi^{\ast}}\) | Inflation-target persistence; baseline 0.995 | (F15) |
+| Exogenous shock | `Rs` | Monetary-policy innovation $`\varepsilon_{R,t}`$ | (F9) |
+| Exogenous shock | `zs` | Technology-growth innovation $`\varepsilon_{z,t}`$ | (F13) |
+| Exogenous shock | `lambddaps` | Desired-markup innovation $`\varepsilon_{\lambda^p,t}`$ | (F14) |
+| Exogenous shock | `pits` | Inflation-target innovation $`\varepsilon_{\pi^{\ast},t}`$ | (F15) |
+| Exogenous shock | `bs` | Preference innovation $`\varepsilon_{b,t}`$ | (F16) |
+| Parameter | `niu` / $`\nu`$ | Inverse Frisch elasticity; calibrated at 2 | - |
+| Parameter | `lambddapss` / $`\bar\lambda^p`$ | Steady-state markup parameter; calibrated at 0.1 | - |
+| Parameter | `iotap` / $`\iota_p`$ | Price-indexation coefficient in implemented Phillips curve; default 0 | - |
+| Parameter | `rhopit` / $`\rho_{\pi^{\ast}}`$ | Inflation-target persistence; baseline 0.995 | (F15) |
 | Parameter | `gamma100`, `gamma` | Technology growth estimate and quarterly value | - |
 | Parameter | `pss100` | Steady-state inflation estimate | - |
 | Parameter | `Fbeta`, `betta` | Discount-rate estimate and discount factor | (F1), (F3)-(F6) |
-| Parameter | `hparam` | Internal habit parameter \(h\) | (F3), (F4) |
-| Parameter | `xip` / \(\xi_p\) | Calvo price stickiness | (F1) |
-| Parameter | `fp`, `fy`, `rhoR` | Taylor-rule coefficients \(\varphi_\pi,\varphi_y,\rho_R\) | (F9) |
+| Parameter | `hparam` | Internal habit parameter $`h`$ | (F3), (F4) |
+| Parameter | `xip` / $`\xi_p`$ | Calvo price stickiness | (F1) |
+| Parameter | `fp`, `fy`, `rhoR` | Taylor-rule coefficients $`\varphi_\pi,\varphi_y,\rho_R`$ | (F9) |
 | Parameter | `rhoz`, `rholambddap`, `rhob` | Shock persistence parameters | (F13), (F14), (F16) |
 | Parameter | `sdr`, `sdz`, `sdlambddap`, `sdpit`, `sdb` | Shock standard deviations | shocks block |
 | Parameter | `rss`, `rss100`, `expg` | Steady-state rate and growth transformations | steady state |

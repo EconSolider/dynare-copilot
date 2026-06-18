@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Convert MMB derivation math delimiters away from dollar syntax.
+"""Convert MMB derivation math delimiters to GitHub-supported syntax.
 
-GitHub Markdown math rendering is less fragile when display math uses
-``\[...\]`` and inline math uses ``\(...\)``.  This script rewrites only MMB
-derivation Markdown and skips fenced code blocks plus inline code spans.
+GitHub supports display math via fenced ``math`` code blocks or ``$$`` blocks.
+It does not support LaTeX ``\[...\]`` and ``\(...\)`` delimiters in Markdown.
+This script uses fenced ``math`` blocks for display equations and GitHub's
+backtick-protected inline math syntax for inline equations.
 """
 
 from __future__ import annotations
@@ -16,6 +17,7 @@ from pathlib import Path
 DEFAULT_GLOB = "mmb-paper-derivations/**/*.md"
 SINGLE_LINE_DISPLAY = re.compile(r"^(\s*)\$\$(.*?)\$\$([.,;:]?)\s*$")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
+INLINE_PARENS_RE = re.compile(r"\\\((.*?)\\\)")
 
 
 def expand_display_dollars(lines: list[str]) -> tuple[list[str], int]:
@@ -73,7 +75,17 @@ def convert_display_delimiters(lines: list[str]) -> tuple[list[str], int]:
 
         if line.strip() == "$$":
             indent = line[: len(line) - len(line.lstrip())]
-            converted.append(f"{indent}\\]" if in_math else f"{indent}\\[")
+            converted.append(f"{indent}```" if in_math else f"{indent}```math")
+            in_math = not in_math
+            changed += 1
+        elif line.strip() == r"\[":
+            indent = line[: len(line) - len(line.lstrip())]
+            converted.append(f"{indent}```math")
+            in_math = True
+            changed += 1
+        elif line.strip() == r"\]":
+            indent = line[: len(line) - len(line.lstrip())]
+            converted.append(f"{indent}```")
             in_math = not in_math
             changed += 1
         else:
@@ -100,6 +112,15 @@ def convert_inline_dollars(line: str) -> tuple[str, int]:
     idx = 0
 
     while idx < len(line):
+        if line.startswith("$`", idx):
+            close = line.find("`$", idx + 2)
+            if close == -1:
+                pieces.append(line[idx:])
+                break
+            pieces.append(line[idx : close + 2])
+            idx = close + 2
+            continue
+
         if line[idx] == "`":
             tick_end = idx + 1
             while tick_end < len(line) and line[tick_end] == "`":
@@ -121,7 +142,7 @@ def convert_inline_dollars(line: str) -> tuple[str, int]:
             close = find_closing_inline_dollar(line, idx)
             if close is not None:
                 inner = line[idx + 1 : close]
-                pieces.append(r"\(" + inner + r"\)")
+                pieces.append("$`" + inner + "`$")
                 changed += 1
                 idx = close + 1
                 continue
@@ -148,11 +169,11 @@ def convert_inline_outside_display(lines: list[str]) -> tuple[list[str], int]:
             continue
 
         stripped = line.strip()
-        if stripped == r"\[":
+        if stripped in {r"\[", "```math"}:
             in_display = True
             converted.append(line)
             continue
-        if stripped == r"\]":
+        if stripped in {r"\]", "```"} and in_display:
             in_display = False
             converted.append(line)
             continue
@@ -161,8 +182,9 @@ def convert_inline_outside_display(lines: list[str]) -> tuple[list[str], int]:
             continue
 
         new_line, line_changes = convert_inline_dollars(line)
+        new_line, paren_changes = INLINE_PARENS_RE.subn(lambda m: "$`" + m.group(1) + "`$", new_line)
         converted.append(new_line)
-        changed += line_changes
+        changed += line_changes + paren_changes
 
     return converted, changed
 

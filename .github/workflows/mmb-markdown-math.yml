@@ -5,6 +5,7 @@ on:
     paths:
       - "mmb-paper-derivations/**/*.md"
       - "scripts/check_mmb_markdown_math.py"
+      - "scripts/convert_mmb_math_delimiters.py"
       - ".github/workflows/mmb-markdown-math.yml"
   push:
     branches:
@@ -12,6 +13,7 @@ on:
     paths:
       - "mmb-paper-derivations/**/*.md"
       - "scripts/check_mmb_markdown_math.py"
+      - "scripts/convert_mmb_math_delimiters.py"
       - ".github/workflows/mmb-markdown-math.yml"
 
 jobs:

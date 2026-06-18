@@ -13,9 +13,9 @@
 
 - The household, firm, equilibrium, and log-linear sticky-price blocks are mostly readable from MinerU Markdown.
 - The paper's equation numbering was not preserved in the archive derivation. Equations were renumbered continuously as `(F1)` through `(F48)` to match archive style.
-- `needs_review`: the policy-rule coefficient in the source around paper Eqs. (61) and (77) is rendered by OCR as `9`; the derivation uses \(\vartheta\) by inference from the surrounding definition.
-- `needs_review`: the cooperative reduced-form inflation expression near paper Eq. (76) has unreadable/duplicated \(\psi\) symbols in the Markdown. I did not include that expression as a core archive equation.
-- `needs_review`: technology shocks \(a_t,a_t^*\) enter natural output and exchange-rate formulas, but the Markdown source does not specify an independent stochastic law for technology.
+- `needs_review`: the policy-rule coefficient in the source around paper Eqs. (61) and (77) is rendered by OCR as `9`; the derivation uses $`\vartheta`$ by inference from the surrounding definition.
+- `needs_review`: the cooperative reduced-form inflation expression near paper Eq. (76) has unreadable/duplicated $`\psi`$ symbols in the Markdown. I did not include that expression as a core archive equation.
+- `needs_review`: technology shocks $`a_t,a_t^*`$ enter natural output and exchange-rate formulas, but the Markdown source does not specify an independent stochastic law for technology.
 
 ## Implementation Cross-Check
 

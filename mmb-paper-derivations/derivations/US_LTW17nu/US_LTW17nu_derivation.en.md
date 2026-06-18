@@ -18,28 +18,28 @@ Provenance: `US_LTW17nu`, Leeper, Traum, and Walker (2017), "Clearing Up the Fis
 
 The final-good firm aggregates differentiated intermediate goods:
 
-\[
+```math
 Y_t \leq \left(\int_0^1 Y_t(i)^{\frac{1}{1+\eta_t^p}}\,di\right)^{1+\eta_t^p}.
-\]
+```
 
 It chooses input demands to maximize final-good revenue net of payments to intermediate firms. The implied Dixit-Stiglitz demand is recorded as (F1).
 
 ### 2.2 Intermediate-Good Firms
 
-Intermediate firm \(i\) operates the technology:
+Intermediate firm $`i`$ operates the technology:
 
-\[
+```math
 Y_t(i)=K_t(i)^\alpha \big(A_t L_t(i)\big)^{1-\alpha}-A_t\Omega.
-\]
+```
 
-Cost minimization gives common nominal marginal cost. Firms reset prices with Calvo probability \(1-\omega_p\); non-reset prices are partially indexed to lagged inflation and steady-state inflation.
+Cost minimization gives common nominal marginal cost. Firms reset prices with Calvo probability $`1-\omega_p`$; non-reset prices are partially indexed to lagged inflation and steady-state inflation.
 
 The reoptimizing firm maximizes expected discounted profits:
 
-\[
+```math
 E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
 \left[\left(\prod_{k=1}^{s}\pi_{t+k-1}^{\chi_p}\pi^{1-\chi_p}\right)P_t(i)Y_{t+s}(i)-MC_{t+s}Y_{t+s}(i)\right].
-\]
+```
 
 `needs_review`: the Markdown formula for the price-setting problem is readable in structure but should be checked against the PDF for exact nominal/relative-price notation.
 
@@ -47,33 +47,33 @@ E_t\sum_{s=0}^{\infty}(\beta\omega_p)^s\frac{\lambda_{t+s}}{\lambda_t}
 
 A labor agency combines differentiated labor services:
 
-\[
+```math
 L_t=\left(\int_0^1 L_t(l)^{\frac{1}{1+\eta_t^w}}\,dl\right)^{1+\eta_t^w}.
-\]
+```
 
-Households supply differentiated labor services. Saver households reset nominal wages with probability \(1-\omega_w\) and otherwise index wages to lagged inflation and trend growth. The wage-reset problem is the household analogue of the Calvo price problem.
+Households supply differentiated labor services. Saver households reset nominal wages with probability $`1-\omega_w`$ and otherwise index wages to lagged inflation and trend growth. The wage-reset problem is the household analogue of the Calvo price problem.
 
 ### 2.4 Saver Households
 
-Saver household \(j\) maximizes:
+Saver household $`j`$ maximizes:
 
-\[
+```math
 E_0\sum_{t=0}^{\infty}\beta^t u_t^b
 \left[
 \log\big(C_t^{\astS}(j)-\theta \widetilde C_{t-1}^{\astS}\big)
 -\frac{(L_t^S(j))^{1+\xi}}{1+\xi}
 \right],
-\]
+```
 
 with composite consumption:
 
-\[
+```math
 C_t^{\astS}(j)=C_t^S(j)+\alpha_G G_t.
-\]
+```
 
-For `US_LTW17nu`, `implementation_cross_check` sets \(\alpha_G=0\), so \(C_t^{\astS}=C_t^S\). The nominal budget constraint is:
+For `US_LTW17nu`, `implementation_cross_check` sets $`\alpha_G=0`$, so $`C_t^{\astS}=C_t^S`$. The nominal budget constraint is:
 
-\[
+```math
 \begin{aligned}
 P_t(1+\tau_t^C)C_t^S(j)+P_t I_t^S(j)+P_t^B B_t(j)+R_t^{-1}B_{s,t}(j)
 &=(1+\rho P_t^B)B_{t-1}(j)+B_{s,t-1}(j)\\
@@ -81,21 +81,21 @@ P_t(1+\tau_t^C)C_t^S(j)+P_t I_t^S(j)+P_t^B B_t(j)+R_t^{-1}B_{s,t}(j)
 &\quad +(1-\tau_t^K)R_t^k\nu_t(j)\bar K_{t-1}^S(j)-\Psi(\nu_t)\bar K_{t-1}^S(j)\\
 &\quad +P_t Z_t^S(j)+D_t(j).
 \end{aligned}
-\]
+```
 
 Physical capital evolves according to:
 
-\[
+```math
 \bar K_t^S(j)=(1-\delta)\bar K_{t-1}^S(j)+u_t^i\left[1-s\left(\frac{I_t^S(j)}{I_{t-1}^S(j)}\right)\right]I_t^S(j).
-\]
+```
 
 ### 2.5 Non-Saver Households
 
-The paper-side general model allows a fraction \(\mu\) of non-savers. They consume disposable income each period:
+The paper-side general model allows a fraction $`\mu`$ of non-savers. They consume disposable income each period:
 
-\[
+```math
 (1+\tau_t^C)P_t C_t^N(j)=(1-\tau_t^L)\int_0^1 W_t(l)L_t^N(j,l)\,dl+P_t Z_t^N(j).
-\]
+```
 
 For `US_LTW17nu`, `implementation_cross_check` sets `muHH = 0`; the non-saver block is inactive in the numerical variant but retained here for source coverage.
 
@@ -107,112 +107,112 @@ The monetary authority follows a Taylor-type feedback rule. The fiscal authority
 
 - **(F1) Intermediate-good demand**:
 
-\[
+```math
 Y_t(i)=Y_t\left(\frac{P_t(i)}{P_t}\right)^{-\frac{1+\eta_t^p}{\eta_t^p}}.
-\]
+```
 
 - **(F2) Production function, stationary/log-linear implementation form**:
 
-\[
+```math
 \hat y_t-\frac{\bar Y+\bar\Omega}{\bar Y}\alpha \hat k_t-\frac{\bar Y+\bar\Omega}{\bar Y}(1-\alpha)\hat l_t=0.
-\]
+```
 
 - **(F3) Factor-price relation**:
 
-\[
+```math
 \hat r_t^k-\hat w_t+\hat k_t-\hat l_t=0.
-\]
+```
 
 - **(F4) Real marginal cost**:
 
-\[
+```math
 \widehat{mc}_t-\alpha\hat r_t^k+(\alpha-1)\hat w_t=0.
-\]
+```
 
 - **(F5) Price Phillips curve**:
 
-\[
+```math
 \Lambda_p\pi_t-\frac{\Lambda_p\beta}{1+\beta\chi_p}\pi_{t+1}-\widehat{mc}_t-\Lambda_p u_t^p
 =\frac{\Lambda_p\chi_p}{1+\beta\chi_p}\pi_{t-1}.
-\]
+```
 
 `needs_review`: the structural Calvo FOC is source-stated, while this compact linear Phillips curve is cross-checked from the `.mod` implementation.
 
 - **(F6) Saver marginal utility of wealth**:
 
-\[
+```math
 \lambda_t+\frac{\theta}{e^\gamma-\theta}u_t^a+\frac{e^\gamma}{e^\gamma-\theta}\hat c_t^{\ast}
 -u_t^b+\frac{\bar\tau^C}{1+\bar\tau^C}\hat\tau_t^C
 =\frac{\theta}{e^\gamma-\theta}\hat c_{t-1}^{\ast}.
-\]
+```
 
 - **(F7) Long-run real interest rate and bond price**:
 
-\[
+```math
 \hat r_t^L+\widehat P_t^B-\frac{\beta\rho}{e^\gamma}\hat r_{t+1}^L
 -\frac{\beta\rho}{e^\gamma}\widehat P_{t+1}^B+\pi_{t+1}=0.
-\]
+```
 
 - **(F8) Long-run inflation relation**:
 
-\[
+```math
 \hat\pi_t^L+\widehat P_t^B+\hat r_t^L=0.
-\]
+```
 
 - **(F9) Consumption in utility, `nu` variant**:
 
-\[
+```math
 \hat c_t^{\ast}-\hat c_t^S=0,\qquad \alpha_G=0.
-\]
+```
 
 - **(F10) Saver Euler equation**:
 
-\[
+```math
 \lambda_t-\hat R_t+\pi_{t+1}-\lambda_{t+1}+\rho_a u_t^a=0.
-\]
+```
 
 - **(F11) Capacity utilization**:
 
-\[
+```math
 \frac{1-\psi}{\psi}\hat r_t^k-\hat\nu_t
 -\frac{1-\psi}{\psi}\frac{\bar\tau^K}{1-\bar\tau^K}\hat\tau_t^K=0.
-\]
+```
 
 - **(F12) Capital FOC**:
 
-\[
+```math
 \hat q_t+\hat R_t-\pi_{t+1}
 -\beta e^{-\gamma}(1-\delta)\hat q_{t+1}
 -\beta e^{-\gamma}\bar R^k(1-\bar\tau^K)\hat r_{t+1}^k
 +\bar\tau^K\beta e^{-\gamma}\bar R^k\hat\tau_{t+1}^K=0.
-\]
+```
 
 - **(F13) Investment FOC**:
 
-\[
+```math
 -\frac{1}{(1+\beta)s e^{2\gamma}}\hat q_t+\hat i_t-\frac{\beta}{1+\beta}\hat i_{t+1}
 +\frac{1-\beta\rho_a}{1+\beta}u_t^a-u_t^i
 =\frac{1}{1+\beta}\hat i_{t-1}.
-\]
+```
 
 - **(F14) Effective capital**:
 
-\[
+```math
 \hat k_t-\hat\nu_t+u_t^a=\hat{\bar k}_{t-1}.
-\]
+```
 
 - **(F15) Physical capital accumulation**:
 
-\[
+```math
 \hat{\bar k}_t-\left[1-(1-\delta)e^{-\gamma}\right](1+\beta)s e^{2\gamma}u_t^i
 -\left[1-(1-\delta)e^{-\gamma}\right]\hat i_t
 +(1-\delta)e^{-\gamma}u_t^a
 =(1-\delta)e^{-\gamma}\hat{\bar k}_{t-1}.
-\]
+```
 
 - **(F16) Wage Phillips curve**:
 
-\[
+```math
 \begin{aligned}
 (1+\Lambda_w)\hat w_t-\frac{\Lambda_w\beta}{1+\beta}\hat w_{t+1}
 +\frac{\Lambda_w(1+\beta\chi_w)}{1+\beta}\pi_t
@@ -225,48 +225,48 @@ Y_t(i)=Y_t\left(\frac{P_t(i)}{P_t}\right)^{-\frac{1+\eta_t^p}{\eta_t^p}}.
 +\frac{\Lambda_w\chi_w}{1+\beta}\pi_{t-1}
 +\frac{\Lambda_w\chi_w}{1+\beta}u_{t-1}^a.
 \end{aligned}
-\]
+```
 
 `needs_review`: the paper states the Calvo wage problem, but this linear wage equation is taken from the implementation cross-check.
 
 - **(F17) Monetary policy rule**:
 
-\[
+```math
 \hat R_t-\left(1-\rho_R\right)\phi_\pi\pi_t-\left(1-\rho_R\right)\phi_y\hat y_t-u_t^m
 =\rho_R\hat R_{t-1}.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F18) Aggregate resource constraint**:
 
-\[
+```math
 \bar C\hat c_t+\bar I\hat i_t-\bar Y\hat y_t+\bar s_G\bar Y\hat g_t+\Psi'(1)\bar K\hat\nu_t=0.
-\]
+```
 
-- **(F19) Non-saver budget constraint, inactive when \(\mu=0\)**:
+- **(F19) Non-saver budget constraint, inactive when $`\mu=0`$**:
 
-\[
+```math
 \bar C^N(1+\bar\tau^C)\hat c_t^N+\bar\tau^C\bar C^N\hat\tau_t^C
 -\bar W\bar L(1-\bar\tau^L)(\hat w_t+\hat l_t)
 +\bar W\bar L\bar\tau^L\hat\tau_t^L-\bar Z\hat z_t=0.
-\]
+```
 
 - **(F20) Consumption aggregation**:
 
-\[
+```math
 \bar C\hat c_t-(1-\mu)\bar C^S\hat c_t^S-\mu\bar C^N\hat c_t^N=0.
-\]
+```
 
 - **(F21) Long-maturity bond pricing**:
 
-\[
+```math
 \hat R_t-\frac{\rho\bar P^B}{1+\rho\bar P^B}\widehat P_{t+1}^B+\widehat P_t^B=0.
-\]
+```
 
 - **(F22) Government budget constraint**:
 
-\[
+```math
 \begin{aligned}
 \bar s_b\hat b_t-\bar s_G\hat g_t-\frac{\bar Z}{\bar Y}\hat z_t
 +\bar\tau^K\bar r^k\bar k_y(\hat\tau_t^K+\hat r_t^k+\hat k_t)
@@ -276,150 +276,150 @@ Y_t(i)=Y_t\left(\frac{P_t(i)}{P_t}\right)^{-\frac{1+\eta_t^p}{\eta_t^p}}.
 -\bar s_b\rho e^{-\gamma}\widehat P_t^B+\frac{\bar s_b}{\beta}\pi_t\\
 =\frac{\bar s_b}{\beta}\hat b_{t-1}-\frac{\bar s_b}{\beta}\widehat P_{t-1}^B.
 \end{aligned}
-\]
+```
 
 `needs_review`: OCR for the paper's government budget identity is noisy; this log-linear version is from the implementation cross-check.
 
 - **(F23) Government consumption rule**:
 
-\[
+```math
 \hat g_t-u_t^G=\rho_G\hat g_{t-1}-(1-\rho_G)\gamma_G\hat s_{t-1}^b.
-\]
+```
 
 - **(F24) Capital tax rule**:
 
-\[
+```math
 \hat\tau_t^K=(1-\rho_K)\gamma_K\hat s_{t-1}^b+\rho_K\hat\tau_{t-1}^K.
-\]
+```
 
 - **(F25) Labor tax rule**:
 
-\[
+```math
 \hat\tau_t^L=(1-\rho_L)\gamma_L\hat s_{t-1}^b+\rho_L\hat\tau_{t-1}^L.
-\]
+```
 
 - **(F26) Consumption tax rule**:
 
-\[
+```math
 \hat\tau_t^C=\rho_C\hat\tau_{t-1}^C.
-\]
+```
 
 - **(F27) Transfer rule**:
 
-\[
+```math
 \hat z_t-u_t^Z=-(1-\rho_Z)\gamma_Z\hat s_{t-1}^b+\rho_Z\hat z_{t-1}.
-\]
+```
 
 - **(F28) Fisher equation**:
 
-\[
+```math
 \hat r_t-\hat R_t+\pi_{t+1}=0.
-\]
+```
 
 - **(F29) Debt-output ratio definition**:
 
-\[
+```math
 \hat s_t^b+\hat y_t-\hat b_t=0.
-\]
+```
 
 - **(F30) Consumption tax revenue**:
 
-\[
+```math
 \widehat T_t^C-\hat\tau_t^C-\hat c_t=0.
-\]
+```
 
 - **(F31) Capital tax revenue**:
 
-\[
+```math
 \widehat T_t^K-\hat\tau_t^K-\hat r_t^k-\hat k_t=0.
-\]
+```
 
 - **(F32) Real bond return definition**:
 
-\[
+```math
 \widehat r_t^b-\rho\beta e^{-\gamma}\widehat P_t^B+\pi_t=-\widehat P_{t-1}^B.
-\]
+```
 
 - **(F33) Primary surplus definition**:
 
-\[
+```math
 \widehat S_t-\frac{\bar\tau^K\bar r^k\bar k}{\bar S}(\hat\tau_t^K+\hat r_t^k+\hat k_t)
 -\frac{\bar\tau^L\bar w\bar l}{\bar S}(\hat\tau_t^L+\hat w_t+\hat l_t)
 -\frac{\bar\tau^C\bar c}{\bar S}(\hat\tau_t^C+\hat c_t)
 +\frac{\bar Z}{\bar S}\hat z_t+\frac{\bar G}{\bar S}\hat g_t=0.
-\]
+```
 
 - **(F34) Labor tax revenue**:
 
-\[
+```math
 \widehat T_t^L-\hat\tau_t^L-\hat w_t-\hat l_t=0.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F35) Government consumption shock**:
 
-\[
+```math
 u_t^G=\rho_{eG}u_{t-1}^G+\epsilon_t^G.
-\]
+```
 
 - **(F36) Transfer shock**:
 
-\[
+```math
 u_t^Z=\rho_{eZ}u_{t-1}^Z+\epsilon_t^Z.
-\]
+```
 
 - **(F37) Technology growth shock**:
 
-\[
+```math
 u_t^a=\rho_a u_{t-1}^a+\epsilon_t^a.
-\]
+```
 
 - **(F38) Preference shock**:
 
-\[
+```math
 u_t^b=\rho_b u_{t-1}^b+\epsilon_t^b.
-\]
+```
 
 - **(F39) Monetary policy shock**:
 
-\[
+```math
 u_t^m=\rho_{em}u_{t-1}^m+\epsilon_t^m.
-\]
+```
 
 - **(F40) Investment shock**:
 
-\[
+```math
 u_t^i=\rho_i u_{t-1}^i+\epsilon_t^i.
-\]
+```
 
 - **(F41) Wage markup shock**:
 
-\[
+```math
 u_t^w=\rho_w u_{t-1}^w+\epsilon_t^w.
-\]
+```
 
 - **(F42) Price markup shock**:
 
-\[
+```math
 u_t^p=\rho_p u_{t-1}^p+\epsilon_t^p.
-\]
+```
 
 ## 6. Steady-State Solution
 
-The MMB implementation computes the deterministic steady state in levels, then uses `model(linear)` for deviations. Let \(\bar\pi=1\), \(\bar\nu=1\), and \(e^\gamma\) be the gross trend growth rate.
+The MMB implementation computes the deterministic steady state in levels, then uses `model(linear)` for deviations. Let $`\bar\pi=1`$, $`\bar\nu=1`$, and $`e^\gamma`$ be the gross trend growth rate.
 
-1. Calibrate fiscal steady states \(\bar s_b\), \(\bar\tau^L\), \(\bar\tau^K\), \(\bar\tau^C\), and \(\bar s_G\) from US averages.
-2. Set \(\bar R=e^\gamma/\beta\) and the long-bond price \(\bar P^B=1/(\bar R-\rho)\).
+1. Calibrate fiscal steady states $`\bar s_b`$, $`\bar\tau^L`$, $`\bar\tau^K`$, $`\bar\tau^C`$, and $`\bar s_G`$ from US averages.
+2. Set $`\bar R=e^\gamma/\beta`$ and the long-bond price $`\bar P^B=1/(\bar R-\rho)`$.
 3. Set after-tax private capital return:
 
-\[
+```math
 \bar R^k=\frac{e^\gamma/\beta-1+\delta}{1-\bar\tau^K}.
-\]
+```
 
-4. Set real marginal cost \(\overline{mc}=1/(1+\eta^p)\) and recover \(\bar W\), \(\bar K/\bar L\), \(\bar Y/\bar L\), \(\bar I/\bar L\), and aggregate consumption per labor unit from production, investment, and resource constraints.
-5. For `US_LTW17nu`, set \(\alpha_G=0\), \(\mu=0\), and \(\theta=0.8\) from implementation cross-check. Then \(C^{\ast S}=C^S\) in steady state.
-6. Recover labor from the saver intratemporal condition and scale level variables by \(\bar L\).
+4. Set real marginal cost $`\overline{mc}=1/(1+\eta^p)`$ and recover $`\bar W`$, $`\bar K/\bar L`$, $`\bar Y/\bar L`$, $`\bar I/\bar L`$, and aggregate consumption per labor unit from production, investment, and resource constraints.
+5. For `US_LTW17nu`, set $`\alpha_G=0`$, $`\mu=0`$, and $`\theta=0.8`$ from implementation cross-check. Then $`C^{\ast S}=C^S`$ in steady state.
+6. Recover labor from the saver intratemporal condition and scale level variables by $`\bar L`$.
 7. Compute tax revenues, primary surplus, transfers, debt, and government consumption from the fiscal steady-state ratios.
 
 `needs_review`: steady-state formulas are summarized from the paper structure and implementation cross-check. No independent algebraic verification or Dynare steady-state validation was performed.
@@ -427,18 +427,18 @@ The MMB implementation computes the deterministic steady state in levels, then u
 ## 7. Timing & Form Conventions
 
 - **Form**: `model(linear)`; variables in (F2)-(F42) are hatted or implementation-style deviations around the deterministic steady state.
-- **Technology trend**: permanent technology \(A_t\) has stationary growth shock \(u_t^a=\log A_t-\log A_{t-1}\).
-- **Capital timing**: physical capital \(\bar K_t\) is the end-of-period stock; effective capital used in production is tied to utilization and lagged physical capital.
-- **Debt timing**: long-term nominal debt pays a decaying coupon stream with maturity parameter \(\rho\); market-value debt-to-output ratio \(s_t^b\) uses bond prices and outstanding debt.
-- **Variant restriction**: `US_LTW17nu` removes government consumption from utility, \(\alpha_G=0`, and lowers habit formation to \)\theta=0.8` in the MMB implementation.
+- **Technology trend**: permanent technology $`A_t`$ has stationary growth shock $`u_t^a=\log A_t-\log A_{t-1}`$.
+- **Capital timing**: physical capital $`\bar K_t`$ is the end-of-period stock; effective capital used in production is tied to utilization and lagged physical capital.
+- **Debt timing**: long-term nominal debt pays a decaying coupon stream with maturity parameter $`\rho`$; market-value debt-to-output ratio $`s_t^b`$ uses bond prices and outstanding debt.
+- **Variant restriction**: `US_LTW17nu` removes government consumption from utility, $`\alpha_G=0`, and lowers habit formation to `$\theta=0.8` in the MMB implementation.
 - **Runtime validation**: not performed; no Dynare command was run.
 
 ## 8. Variable & Parameter Reference Table
 
 | Category | Symbol / ASCII | Meaning | Equation source |
 |---|---|---|---|
-| Endogenous | `cs`, \(C^S\) | saver consumption | (F6), (F9), (F10), (F20) |
-| Endogenous | `cn`, \(C^N\) | non-saver consumption, inactive if \(\mu=0\) | (F19), (F20) |
+| Endogenous | `cs`, $`C^S`$ | saver consumption | (F6), (F9), (F10), (F20) |
+| Endogenous | `cn`, $`C^N`$ | non-saver consumption, inactive if $`\mu=0`$ | (F19), (F20) |
 | Endogenous | `R` | nominal interest rate | (F17), (F28) |
 | Endogenous | `i` | investment | (F13), (F18) |
 | Endogenous | `k` | effective capital | (F2), (F14) |

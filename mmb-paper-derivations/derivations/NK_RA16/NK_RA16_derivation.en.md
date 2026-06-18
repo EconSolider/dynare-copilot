@@ -19,17 +19,17 @@ Source: Ansgar Rannenberg (2016), "Bank leverage cycles and the external finance
 
 Households choose consumption, one-period risk-free assets, and labor effort:
 
-\[
+```math
 \max_{\{C_t,l_t,B_t,B_t^g\}} E_t \sum_{i=0}^{\infty}\beta^i
 \left[\log(C_{t+i}-hC_{t+i-1})-\frac{\chi}{1+\varphi}(l_{t+i}^s)^{1+\varphi}\right].
-\]
+```
 
 Their nominal budget constraint is source-stated as:
 
-\[
+```math
 P_t C_t = w_tP_t l_t + P_t prof_t + R_{t-1}B_{t-1}-B_t
 + R_t^{gov}B_{t-1}^g - B_t^g.
-\]
+```
 
 `needs_review`: Appendix A OCR around government-bond notation is noisy, but the FOCs imply deposits and government bonds are perfect substitutes.
 
@@ -37,13 +37,13 @@ P_t C_t = w_tP_t l_t + P_t prof_t + R_{t-1}B_{t-1}-B_t
 
 Capital-goods producers, owned by households, choose investment to maximize discounted profits from selling new capital at real price `Q_t`:
 
-\[
+```math
 \max_{\{I_t\}} E_t\sum_{i=0}^{\infty}\beta^i
 \frac{\varrho_{t+i}}{\varrho_t}
 I_{t+i}\left[
 Q_{t+i}\left(1-\frac{\eta_i}{2}\left(\frac{I_{t+i}}{I_{t+i-1}}-1\right)^2\right)-1
 \right].
-\]
+```
 
 ### 2.3 Retailers
 
@@ -53,17 +53,17 @@ Retailers hire labor and capital services in economy-wide factor markets, operat
 
 Bankers are risk neutral and survive with probability `theta`. They collect deposits to fund risky interperiod loans to entrepreneurs and risk-free intraperiod working-capital loans to retailers. After collecting deposits, a banker can divert a fraction `lambda` of entrepreneurial loans, so depositors require:
 
-\[
+```math
 V_t^b(q) \ge \lambda L_t^e(q).
-\]
+```
 
 The value of banker `q` is:
 
-\[
+```math
 V_t^b(q)=E_t\left\{\sum_{i=0}^{\infty}(1-\theta)\theta^i
 \left(\frac{1}{\prod_{j=0}^i R_{t+1+j}^r}\right)N_{t+1+i}^b(q)\right\},
 \qquad R_{t+1}^r=\frac{R_t}{\Pi_{t+1}}.
-\]
+```
 
 The paper calibrates `lambda` so the incentive constraint binds locally.
 
@@ -71,16 +71,16 @@ The paper calibrates `lambda` so the incentive constraint binds locally.
 
 Risk-neutral entrepreneurs buy capital at the end of period `t` using net worth and bank loans:
 
-\[
+```math
 P_tL_t^j=P_t(Q_tK_t^j-N_t^j).
-\]
+```
 
 The loan contract is subject to idiosyncratic lognormal risk `omega`, monitoring cost `mu`, and a cutoff `\bar{\omega}_{t+1}` satisfying:
 
-\[
+```math
 \bar{\omega}_{t+1}^j R_{t+1}^K P_tQ_tK_t^j
 =R_t^L P_tL_t^j.
-\]
+```
 
 Entrepreneurs choose leverage and the loan contract to maximize expected equity subject to the bank participation constraint.
 
@@ -92,61 +92,61 @@ The government-spending block is exogenous in the implementation cross-check. Mo
 
 **(F1) Household marginal utility with internal habit**
 
-\[
+```math
 \varrho_t =
 \frac{1}{C_t-hC_{t-1}}
 -\beta h E_t\left[\frac{1}{C_{t+1}-hC_t}\right].
-\]
+```
 
 **(F2) Household Euler equation for risk-free deposits**
 
-\[
+```math
 \varrho_t=\beta E_t\left[\varrho_{t+1}\frac{R_t}{\Pi_{t+1}}\right].
-\]
+```
 
 **(F3) Government-bond Euler equation and asset-substitution condition**
 
-\[
+```math
 \varrho_t=\beta E_t\left[\varrho_{t+1}\frac{R_t^{gov}}{\Pi_{t+1}}\right],
 \qquad R_t=R_t^{gov}.
-\]
+```
 
 **(F4) Household labor supply**
 
-\[
+```math
 \varrho_t w_t=\chi l_t^{\varphi}.
-\]
+```
 
 **(F5) Linear marginal utility equation used in the implementation**
 
-\[
+```math
 \hat{\varrho}_t=
 \frac{1}{(1-h)(1-\beta h)}
 \left[-(\hat{C}_t-h\hat{C}_{t-1})
 +\beta h(\hat{C}_{t+1}-h\hat{C}_t)\right].
-\]
+```
 
 **(F6) Linear risk-free Euler equation**
 
-\[
+```math
 \hat{R}_t+\hat{\Lambda}_{t+1}-\hat{\Pi}_{t+1}=0.
-\]
+```
 
 **(F7) Stochastic discount factor**
 
-\[
+```math
 \hat{\Lambda}_t=\hat{\varrho}_t-\hat{\varrho}_{t-1}.
-\]
+```
 
 **(F8) Linear labor supply**
 
-\[
+```math
 \varphi\hat{l}_t=\hat{\varrho}_t+\hat{w}_t.
-\]
+```
 
 **(F9) Capital-goods producer investment FOC**
 
-\[
+```math
 \begin{aligned}
 Q_t\left(1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right)
 &=1+Q_t\eta_i\left(\frac{I_t}{I_{t-1}}-1\right)\frac{I_t}{I_{t-1}} \\
@@ -154,213 +154,213 @@ Q_t\left(1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right)
 Q_{t+1}\eta_i\left(\frac{I_{t+1}}{I_t}-1\right)
 \left(\frac{I_{t+1}}{I_t}\right)^2\right].
 \end{aligned}
-\]
+```
 
 **(F10) Linear investment dynamics**
 
-\[
+```math
 \hat{I}_t=\frac{1}{1+\beta}
 \left(\hat{I}_{t-1}+\beta\hat{I}_{t+1}+\frac{\hat{Q}_t}{\eta_i}\right).
-\]
+```
 
 **(F11) Capital accumulation**
 
-\[
+```math
 K_t=(1-\delta)K_{t-1}
 +I_t\left[1-\frac{\eta_i}{2}\left(\frac{I_t}{I_{t-1}}-1\right)^2\right].
-\]
+```
 
 **(F12) Linear capital accumulation**
 
-\[
+```math
 \hat{K}_t=(1-\delta)\hat{K}_{t-1}+\delta\hat{I}_t.
-\]
+```
 
 **(F13) Production function with utilization**
 
-\[
+```math
 \hat{Y}_t=\alpha(\hat{U}_t+\hat{K}_{t-1})+(1-\alpha)(\hat{a}_t+\hat{l}_t).
-\]
+```
 
 **(F14) Retailer labor demand with working-capital cost**
 
-\[
+```math
 w_t(1+\psi_L(R_t-1))=(1-\alpha)mc_t\frac{Y_t}{l_t}.
-\]
+```
 
 **(F15) Linear retailer labor demand**
 
-\[
+```math
 w(1+\psi_L(R-1))\hat{w}_t+w\psi_LR\hat{R}_t
 =(1+\psi_L(R-1))w(\widehat{mc}_t+\hat{Y}_t-\hat{l}_t).
-\]
+```
 
 **(F16) Retailer capital demand with working-capital cost**
 
-\[
+```math
 r_t^k(1+\psi_K(R_t-1))=\alpha mc_t\frac{Y_t}{K_{t-1}}.
-\]
+```
 
 **(F17) Linear retailer capital demand with utilization**
 
-\[
+```math
 \frac{\hat{r}_t^k}{r^k}
 +\frac{\psi_KR}{1+\psi_K(R-1)}\hat{R}_t
 =\widehat{mc}_t+\hat{Y}_t-\hat{K}_{t-1}-\hat{U}_t.
-\]
+```
 
 **(F18) Working-capital loans**
 
-\[
+```math
 L_t^r=\psi_Lw_tl_t+\psi_Kr_t^kK_{t-1}.
-\]
+```
 
 **(F19) New Keynesian Phillips curve**
 
-\[
+```math
 \hat{\Pi}_t=
 \frac{1}{1+\beta\gamma_P}
 \left[
 \beta\hat{\Pi}_{t+1}+\gamma_P\hat{\Pi}_{t-1}
 +\frac{(1-\xi^P\beta)(1-\xi^P)}{\xi^P}\widehat{mc}_t
 \right].
-\]
+```
 
 **(F20) Bank leverage identity**
 
-\[
+```math
 \hat{\phi}_t^b=\hat{L}_t^e-\hat{N}_t^b.
-\]
+```
 
 **(F21) Existing bankers' net worth**
 
-\[
+```math
 N_{et}^b=\theta z_{t-1,t}N_{t-1}^b.
-\]
+```
 
 **(F22) Aggregate bank net worth**
 
-\[
+```math
 N_t^b=N_{et}^b+N_n^b.
-\]
+```
 
 **(F23) Bank asset growth**
 
-\[
+```math
 z_{t-1,t}=
 \frac{[(R_t^b-R_{t-1})\phi_{t-1}^b+R_{t-1}]}{\Pi_t}\exp(e_t^z).
-\]
+```
 
 **(F24) Bankers' consumption**
 
-\[
+```math
 C_t^b=(1-\theta)z_{t-1,t}N_{t-1}^b.
-\]
+```
 
 **(F25) Forward-looking bank leverage condition**
 
-\[
+```math
 \hat{\phi}_t^b
 =E_t\left[
 \theta\beta^2z^2\hat{\phi}_{t+1}^b
 +\phi^b\frac{R^b}{R}\left(\hat{R}_{t+1}^b-\hat{R}_t\right)
 \right].
-\]
+```
 
 **(F26) Bank balance sheet for entrepreneurial loans**
 
-\[
+```math
 L_t^e=\phi_t^bN_t^b.
-\]
+```
 
 **(F27) Return to capital**
 
-\[
+```math
 R_{t+1}^K=\Pi_{t+1}\frac{r_{t+1}^k+Q_{t+1}(1-\delta)}{Q_t}.
-\]
+```
 
 **(F28) Entrepreneur leverage**
 
-\[
+```math
 \phi_t^e=\frac{Q_tK_t}{N_t}.
-\]
+```
 
 **(F29) Entrepreneurial bank-participation constraint**
 
-\[
+```math
 (\phi_t^e-1)E_tR_{t+1}^b
 =\phi_t^eE_t\left[
 R_{t+1}^K\left(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1})\right)
 \right].
-\]
+```
 
 **(F30) Entrepreneur optimal-contract FOC for leverage**
 
-\[
+```math
 E_t\left[R_{t+1}^K(1-\Gamma(\bar{\omega}_{t+1}))\right]
 +\xi_tE_t\left[
 R_{t+1}^K(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1}))
 -R_{t+1}^b
 \right]=0.
-\]
+```
 
 **(F31) Entrepreneur optimal-contract FOC for the cutoff**
 
-\[
+```math
 E_t\left[
 -\Gamma'(\bar{\omega}_{t+1})
 +\xi_t\left(\Gamma'(\bar{\omega}_{t+1})-\mu G'(\bar{\omega}_{t+1})\right)
 \right]=0.
-\]
+```
 
 **(F32) Entrepreneur optimal-contract participation FOC**
 
-\[
+```math
 E_t\left[
 \phi_t^e R_{t+1}^K(\Gamma(\bar{\omega}_{t+1})-\mu G(\bar{\omega}_{t+1}))
 -R_{t+1}^b(\phi_t^e-1)
 \right]=0.
-\]
+```
 
 **(F33) Linear spread from capital return to bank-asset return**
 
-\[
+```math
 E_t\hat{R}_{t+1}^K-E_t\hat{R}_{t+1}^b
 =\chi^l(\hat{K}_t+\hat{Q}_t-\hat{N}_t).
-\]
+```
 
 **(F34) Entrepreneur equity**
 
-\[
+```math
 V_t=Q_{t-1}K_{t-1}\frac{R_t^K}{\Pi_t}
 \left[1-\Gamma(\bar{\omega}_t)\right]\exp(e_t^N).
-\]
+```
 
 `needs_review`: In the main text, equation (15) writes the integral form; Appendix A29 gives the compact `1-\Gamma` form. OCR around multiplication by `Q_{t-1}K_{t-1}` is fragile.
 
 **(F35) Entrepreneur net worth**
 
-\[
+```math
 N_t=\gamma V_t+W^e.
-\]
+```
 
 **(F36) Entrepreneur consumption**
 
-\[
+```math
 C_t^e=(1-\gamma)V_t.
-\]
+```
 
 **(F37) Entrepreneur cutoff**
 
-\[
+```math
 \bar{\omega}_t=
 \frac{R_{t-1}^L(Q_{t-1}K_{t-1}-N_{t-1})}
 {R_t^KQ_{t-1}K_{t-1}}.
-\]
+```
 
 **(F38) Average return on bank loans to entrepreneurs**
 
-\[
+```math
 \begin{aligned}
 R_t^b
 &=R_{t-1}^L\int_{\bar{\omega}_t}^{\infty}f(\omega^j)d\omega^j \\
@@ -368,113 +368,113 @@ R_t^b
 \frac{\phi_{t-1}^e}{\phi_{t-1}^e-1}
 \int_0^{\bar{\omega}_t}\omega^j f(\omega^j)d\omega^j .
 \end{aligned}
-\]
+```
 
 **(F39) Linear loan-rate/cutoff relation**
 
-\[
+```math
 \widehat{\bar{\omega}R^K}_t=\hat{R}_t^L+\frac{1}{\phi^e-1}\hat{\phi}_t^e.
-\]
+```
 
 **(F40) Monetary policy rule**
 
-\[
+```math
 R_t-1=(1-\rho_i)\left[
 R-1+\psi_{\pi}(\log\Pi_t-\log\Pi)
 +\psi_y(\log GDP_t-\log GDP_t^{\ast})
 \right]
 +\rho_i(R_{t-1}-1)+e_t^i.
-\]
+```
 
 In the implementation, the output-gap term is proxied by real marginal cost:
 
-\[
+```math
 R\hat{R}_t=(1-\rho_i)(\psi_{\pi}\hat{\Pi}_t+\psi_y\widehat{mc}_t)
 +\rho_iR\hat{R}_{t-1}+e_t^i.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 **(F41) Aggregate private consumption**
 
-\[
+```math
 C_t^P=C_t+C_t^e+C_t^b.
-\]
+```
 
 **(F42) Resource constraint with monitoring and utilization costs**
 
-\[
+```math
 Y_t=S_t\left[
 I_t+C_t^P
 +\frac{R_t^K}{\Pi_t}Q_{t-1}K_{t-1}\mu
 \int_0^{\bar{\omega}_t}\omega f(\omega)d\omega
 \right].
-\]
+```
 
 The implementation cross-check adds the variable-utilization cost term in the linear resource constraint.
 
 **(F43) GDP identity**
 
-\[
+```math
 GDP_t=I_t+C_t+G_t.
-\]
+```
 
 **(F44) Aggregate loans**
 
-\[
+```math
 L_t=L_t^e+L_t^r.
-\]
+```
 
 **(F45) Price-dispersion recursion**
 
-\[
+```math
 S_t=(1-\xi^P)\left(\frac{\Pi_t}{\Pi_t^{\ast}}\right)^{\varepsilon}
 +\xi^P\left(\frac{\Pi_t}{\Pi_{t-1}^{\gamma_P}\Pi^{1-\gamma_P}}\right)^{\varepsilon}S_{t-1}.
-\]
+```
 
 **(F46) Goods production**
 
-\[
+```math
 Y_t=K_{t-1}^{\alpha}(A_tl_t)^{1-\alpha}.
-\]
+```
 
 **(F47) Aggregate bank-loan accounting**
 
-\[
+```math
 P_tL_t^e(q)=P_tN_t^b(q)+B_t(q).
-\]
+```
 
 ## 5. Exogenous Processes
 
 **(F48) Technology shock**
 
-\[
+```math
 \hat{a}_t=\rho_a\hat{a}_{t-1}-e_t^a.
-\]
+```
 
 **(F49) Government-spending shock**
 
-\[
+```math
 \hat{g}_t=\rho_g\hat{g}_{t-1}-e_t^g.
-\]
+```
 
 **(F50) Monetary policy innovation**
 
-\[
+```math
 e_t^i \sim iid(0,\sigma_i^2).
-\]
+```
 
 **(F51) Bank net-worth shock**
 
-\[
+```math
 e_t^z \sim iid.
-\]
+```
 
 **(F52) Entrepreneurial net-worth shock**
 
-\[
+```math
 e_t^N \sim iid.
-\]
+```
 
 `needs_review`: The Rep-MMB simulation declares monetary, technology, and government innovations. The paper uses bank- and entrepreneur-net-worth shocks for crisis experiments, but the cross-check implementation does not keep them as simulated shocks in the final `shocks` block.
 
@@ -486,53 +486,53 @@ The implementation cross-check stores the steady-state calibration directly. The
 2. Set financial-contract parameters and targets: `sigma=0.35`, `mu=0.2981`, entrepreneurial survival `gamma=0.975`, banker survival `theta=0.9915`, government share `G/Y=0.2`, default rate target `brate=0.0075`, bank leverage `phi_b=1/0.125`, and bank spread target `spread_RbR=(1.002)^{1/4}`.
 3. Set quarterly inflation and nominal risk-free steady state:
 
-\[
+```math
 \Pi=(1+0.0223)^{1/4},\qquad R=\frac{\Pi}{\beta}.
-\]
+```
 
 4. Construct the lognormal default terms:
 
-\[
+```math
 \bar{\omega}=\exp(\sigma\Phi^{-1}(brate)-0.5\sigma^2),\quad
 F=\Phi\left(\frac{\log\bar{\omega}+0.5\sigma^2}{\sigma}\right),
 \quad G=\Phi\left(\frac{\log\bar{\omega}+0.5\sigma^2}{\sigma}-\sigma\right).
-\]
+```
 
 5. Use derivatives of `F`, `G`, and `Gamma` to compute the contract multiplier `xi`, capital-bank spread `spread_RkRb`, entrepreneurial leverage `phi_e`, and `chi_e`, the linear coefficient in (F33).
 6. Set:
 
-\[
+```math
 R^b=spread_{RbR}R,\qquad R^K=R^b spread_{RkRb},\qquad
 R^L=\frac{\bar{\omega}R^K}{1-1/\phi_e}.
-\]
+```
 
 7. Set markup and marginal cost:
 
-\[
+```math
 X=\frac{\varepsilon}{\varepsilon-1},\qquad mc=\frac{\varepsilon-1}{\varepsilon},\qquad Q=1.
-\]
+```
 
 8. Solve capital-labor ratios from factor demand with working-capital costs, then normalize labor `l=1/3`, compute `K`, `Y`, `I=delta K`, and `G=0.2Y`.
 9. Compute entrepreneur variables:
 
-\[
+```math
 N=\frac{K}{\phi_e},\qquad L^e=K-N,\qquad
 V=K\frac{R^K}{\Pi}(1-\Gamma),\qquad C^e=(1-\gamma)V.
-\]
+```
 
 10. Compute working-capital loans and bank variables:
 
-\[
+```math
 L^r=\psi_Lwl+\psi_Kr^kK,\quad L=L^e+L^r,\quad
 N^b=\frac{L^e}{\phi_b},\quad C^b=(1-\theta)zN^b.
-\]
+```
 
 11. Residual household consumption and aggregate consumption are:
 
-\[
+```math
 C=Y-I-C^e-C^b-G-\mu G(\bar{\omega})\frac{R^K}{\Pi}K,
 \qquad C^P=C+C^e+C^b.
-\]
+```
 
 12. In `model(linear)`, all hatted/deviation variables have zero steady state after these levels and ratios are assigned.
 

@@ -26,7 +26,7 @@
 ## Variant Notes
 
 - The same paper row also covers related Gali-Monacelli variants. This entry is specific to `NK_GMAS25ppi`, interpreted as the producer-price/domestic-inflation Taylor-rule variant.
-- CPI inflation and exchange-rate-peg rules are mentioned only to distinguish variants. The equation set closes with the PPI/domestic-inflation rule \(r_t=\rho+\phi_\pi\pi_{H,t}\).
+- CPI inflation and exchange-rate-peg rules are mentioned only to distinguish variants. The equation set closes with the PPI/domestic-inflation rule $`r_t=\rho+\phi_\pi\pi_{H,t}`$.
 
 ## Deferred Issues
 

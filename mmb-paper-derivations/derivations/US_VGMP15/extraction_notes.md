@@ -31,7 +31,7 @@
 ## Deferred Issues
 
 - Locate or normalize the online appendix for the exact log-linear model, Calvo pricing block, price-markup shock, and steady-state equations.
-- Review the paper's use of \(P_{c,t}\) versus \(P_{q,t}\) in household Euler conditions and convert consistently before any runnable `.mod` work.
+- Review the paper's use of $`P_{c,t}`$ versus $`P_{q,t}`$ in household Euler conditions and convert consistently before any runnable `.mod` work.
 - Confirm the exact MMB implementation variable names and equation count once a `US_VGMP15` implementation source is available.
 - No Dynare runtime validation was performed.
 

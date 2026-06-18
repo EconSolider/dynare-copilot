@@ -27,7 +27,7 @@
 ## Deferred Issues
 
 - Review the OCR formulas against the raw PDF before promoting beyond `needs_review`.
-- Reconcile the paper's nonlinear capital timing \(k_{t+1}\) with the implementation's shifted linear timing equation one more time during review.
+- Reconcile the paper's nonlinear capital timing $`k_{t+1}`$ with the implementation's shifted linear timing equation one more time during review.
 - Check whether the implementation's omitted `eta` parameter declaration is a known Rep-MMB transcription issue.
 - Runtime validation was intentionally not performed; no Dynare commands were run.
 - Shared `catalog.csv` and `status.csv` were intentionally not edited for this task; proposed rows are in `worker_report.json`.

@@ -26,7 +26,7 @@
 
 - Obtain or parse the Altig et al. (2004) technical appendix before promoting exact linear implementation equations from `needs_review`.
 - Verify whether the transitory neutral technology shock in the Rep-MMB file is an MMB addition rather than part of the original paper code.
-- Source-check the exact mapping from firm-specific capital primitives to the reduced-form \(\gamma\) used in the MMB calibration.
+- Source-check the exact mapping from firm-specific capital primitives to the reduced-form $`\gamma`$ used in the MMB calibration.
 - Review steady-state formulas against the original code package or appendix before marking `draft_extracted`.
 
 ## Translation Status

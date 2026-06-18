@@ -20,14 +20,14 @@
 
 - Read `.agents/skills/dynare-copilot/references/examples/NK_ST13_rep.mod` only as `implementation_cross_check`.
 - No Dynare run was performed.
-- Cross-check confirmed the implementation variables for consumption, investment, output, labor, wage, capital, deposits, bonds, loans, loan/deposit rates, multipliers, SDF, inflation, marginal cost, marginal products, intermediation costs, inside-money premium, external finance premium, \(\alpha_t\), \(\omega_t\), \(A_t\), and \(\theta_t\).
+- Cross-check confirmed the implementation variables for consumption, investment, output, labor, wage, capital, deposits, bonds, loans, loan/deposit rates, multipliers, SDF, inflation, marginal cost, marginal products, intermediation costs, inside-money premium, external finance premium, $`\alpha_t`$, $`\omega_t`$, $`A_t`$, and $`\theta_t`$.
 - Cross-check also confirmed a parallel frictionless block in the implementation. The archive derivation documents the paper-side baseline and notes the frictionless implementation as a reference block rather than a separate paper source.
 
 ## Deferred Issues
 
 - PDF-level formula verification should inspect equations (11), (25), and Appendix equations (A.5)-(A.6).
-- The paper's notation for \(\psi_{t,t+1}\) includes an expectation in the definition; the implementation uses a one-step SDF variable. The timing convention should be reviewed before generating executable code from this archive entry.
-- The optional banking-distress variant \(\sigma_t=\sigma+\omega_t-\omega\) is recorded but not treated as the baseline model.
+- The paper's notation for $`\psi_{t,t+1}`$ includes an expectation in the definition; the implementation uses a one-step SDF variable. The timing convention should be reviewed before generating executable code from this archive entry.
+- The optional banking-distress variant $`\sigma_t=\sigma+\omega_t-\omega`$ is recorded but not treated as the baseline model.
 - Runtime validation, steady-state residual checks, BK checks, and IRF comparison are deferred by instruction.
 
 ## Translation Status

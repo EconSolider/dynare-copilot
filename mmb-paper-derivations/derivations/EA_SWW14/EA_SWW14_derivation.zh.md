@@ -20,11 +20,11 @@
 
 ### 2.1 家庭消费-储蓄问题
 
-家庭具有外部消费习惯，并选择消费和名义债券持有。论文直接给出对应的对数线性 Euler 方程。隐含目标函数具有习惯调整后的边际效用，Euler 方程中含有跨期楔子/风险溢价冲击 \(\widehat{\varepsilon}^b_t\)。
+家庭具有外部消费习惯，并选择消费和名义债券持有。论文直接给出对应的对数线性 Euler 方程。隐含目标函数具有习惯调整后的边际效用，Euler 方程中含有跨期楔子/风险溢价冲击 $`\widehat{\varepsilon}^b_t`$。
 
 ### 2.2 投资与资本服务
 
-资本品决策推出关于投资和安装资本价值 \(\widehat{q}^k_t\) 的前瞻性投资 Euler 方程。资本随投资专用技术冲击演化，生产中的资本服务由滞后安装资本和当期利用率组成。
+资本品决策推出关于投资和安装资本价值 $`\widehat{q}^k_t`$ 的前瞻性投资 Euler 方程。资本随投资专用技术冲击演化，生产中的资本服务由滞后安装资本和当期利用率组成。
 
 ### 2.3 价格和工资设定
 
@@ -40,174 +40,174 @@
 
 - **(F1) 含习惯和风险溢价的消费 Euler 方程**：
 
-\[
+```math
 \widehat{c}_t
 = c_1 E_t\widehat{c}_{t+1}
 + (1-c_1)\widehat{c}_{t-1}
 - c_2\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right),
-\]
+```
 
-其中 \(c_1=1/(1+h/\tau)\) 且 \(c_2=(1-h/\tau)/(1+h/\tau)\)。
+其中 $`c_1=1/(1+h/\tau)`$ 且 $`c_2=(1-h/\tau)/(1+h/\tau)`$。
 
 - **(F2) 投资 Euler 方程**：
 
-\[
+```math
 \widehat{i}_t
 = i_1\widehat{i}_{t-1}
 + (1-i_1)E_t\widehat{i}_{t+1}
 + i_2\widehat{q}^k_t
 + \widehat{\varepsilon}^q_t,
-\]
+```
 
-其中 \(i_1=1/(1+\beta)\) 且 \(i_2=i_1/(\tau^2\varphi)\)。
+其中 $`i_1=1/(1+\beta)`$ 且 $`i_2=i_1/(\tau^2\varphi)`$。
 
 - **(F3) 安装资本价值**：
 
-\[
+```math
 \widehat{q}^k_t
 = -\left(\widehat{r}_t-E_t\widehat{\pi}_{t+1}-\widehat{\varepsilon}^b_t\right)
 + q_1E_t\widehat{r}^k_{t+1}
 + (1-q_1)E_t\widehat{q}^k_{t+1},
-\]
+```
 
-其中 \(q_1=r^k/(r^k+1-\delta)\)。
+其中 $`q_1=r^k/(r^k+1-\delta)`$。
 
 - **(F4) 带指数化的价格 Phillips 曲线**：
 
-\[
+```math
 \widehat{\pi}_t-\gamma_p\widehat{\pi}_{t-1}
 = \pi_1\left(E_t\widehat{\pi}_{t+1}-\gamma_p\widehat{\pi}_t\right)
 -\pi_2\left(\widehat{\mu}_{p,t}-\widehat{\mu}^n_{p,t}\right),
-\]
+```
 
-其中 \(\pi_1=\beta\) 且 \(\pi_2=(1-\theta_p\beta)(1-\theta_p)/[\theta_p(1+(\phi_p-1)\varepsilon_p)]\)。
+其中 $`\pi_1=\beta`$ 且 $`\pi_2=(1-\theta_p\beta)(1-\theta_p)/[\theta_p(1+(\phi_p-1)\varepsilon_p)]`$。
 
 - **(F5) 平均价格 markup / 实际边际成本关系**：
 
-\[
+```math
 \widehat{mc}_t
 = (1-\alpha)(\widehat{w}_t-\widehat{p}_t)
 +\alpha\widehat{r}^k_t
 +\widehat{\varepsilon}^a_t,
 \qquad
 \widehat{\mu}_{p,t}\approx-\widehat{mc}_t.
-\]
+```
 
 符号与 markup 归一化标记为 `needs_review`，因为 Markdown 在 inverse marginal-cost 句子附近有 OCR 噪声。
 
 - **(F6) 自然价格 markup 冲击**：
 
-\[
+```math
 \widehat{\mu}^n_{p,t}=100\,\widehat{\varepsilon}^p_t.
-\]
+```
 
 - **(F7) 带指数化的工资 Phillips 曲线**：
 
-\[
+```math
 \Delta\widehat{w}_t
 = \gamma_w\widehat{\pi}_{t-1}
 +\beta E_t\left(\Delta\widehat{w}_{t+1}-\gamma_w\widehat{\pi}_t\right)
 -w_1\left(\widehat{\mu}_{w,t}-\widehat{\mu}^n_{w,t}\right),
-\]
+```
 
-其中 \(w_1=(1-\beta\theta_w)(1-\theta_w)/[\theta_w(1+\epsilon_w\omega)]\)。
+其中 $`w_1=(1-\beta\theta_w)(1-\theta_w)/[\theta_w(1+\epsilon_w\omega)]`$。
 
 - **(F8) 平均工资 markup 与失业**：
 
-\[
+```math
 \widehat{\mu}_{w,t}
 = \widehat{w}_t-\widehat{p}_t-\left(\widehat{z}_t+\widehat{\varepsilon}^s_t+\omega\widehat{e}_t\right)
 = \omega\widehat{u}_t.
-\]
+```
 
 - **(F9) 自然工资 markup / 自然失业率**：
 
-\[
+```math
 \widehat{\mu}^n_{w,t}=100\,\widehat{\varepsilon}^w_t
 =\omega\widehat{u}^n_t.
-\]
+```
 
 - **(F10) 进入劳动供给的平滑消费趋势**：
 
-\[
+```math
 \widehat{z}_t
 =(1-\upsilon)\widehat{z}_{t-1}
 +\frac{\upsilon}{1-h/\tau}
 \left(\widehat{c}_t-\frac{h}{\tau}\widehat{c}_{t-1}\right).
-\]
+```
 
 - **(F11) 资本利用率条件**：
 
-\[
+```math
 \widehat{v}_t=\frac{1-\psi}{\psi}\widehat{r}^k_t.
-\]
+```
 
 - **(F12) 最优资本-劳动投入条件**：
 
-\[
+```math
 \widehat{k}_t
 =\widehat{w}_t-\widehat{p}_t-\widehat{r}^k_t+\widehat{n}_t.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F13) 总需求 / 资源约束**：
 
-\[
+```math
 \widehat{y}_t
 =c_y\widehat{c}_t+i_y\widehat{i}_t+v_y\widehat{v}_t+\widehat{\varepsilon}^g_t.
-\]
+```
 
 - **(F14) 总供给 / 生产函数**：
 
-\[
+```math
 \widehat{y}_t
 =\phi_p\left(\alpha\widehat{k}_t+(1-\alpha)\widehat{n}_t+\widehat{\varepsilon}^a_t\right).
-\]
+```
 
 - **(F15) 资本积累**：
 
-\[
+```math
 \widehat{\bar{k}}_t
 =\kappa_1\widehat{\bar{k}}_{t-1}
 +(1-\kappa_1)\widehat{i}_t
 +\kappa_2\widehat{\varepsilon}^q_t,
-\]
+```
 
-其中 \(\kappa_1=(1-\delta)/\tau\) 且 \(\kappa_2=(\tau+\delta-1)(1+\beta)\tau\varphi\)。
+其中 $`\kappa_1=(1-\delta)/\tau`$ 且 $`\kappa_2=(\tau+\delta-1)(1+\beta)\tau\varphi`$。
 
 - **(F16) 资本服务**：
 
-\[
+```math
 \widehat{k}_t=\widehat{v}_t+\widehat{\bar{k}}_{t-1}.
-\]
+```
 
 - **(F17) 劳动力恒等式**：
 
-\[
+```math
 \widehat{l}_t=\widehat{e}_t+\widehat{u}_t.
-\]
+```
 
 - **(F18) 就业调整 / 生产率连接方程**：
 
-\[
+```math
 \widehat{e}_t-\widehat{e}_{t-1}
 =E_t\widehat{e}_{t+1}-\widehat{e}_t
 +\frac{(1-\beta\theta_e)(1-\theta_e)}{\theta_e}
 \left(\widehat{n}_t-\widehat{e}_t\right).
-\]
+```
 
 - **(F19) 产出缺口定义**：
 
-\[
+```math
 \widehat{y}^{gap}_t=\widehat{y}_t-\widehat{y}^{flex}_t.
-\]
+```
 
 弹性价格与弹性工资模块复制无名义 markup 扭曲时的结构方程；论文将缺口定义为实际产出相对弹性价格/工资经济的产出，但没有逐条列出所有 flex-block 方程。
 
 - **(F20) 八个观测变量的测量方程**：
 
-\[
+```math
 \begin{bmatrix}
 \Delta y_t\\
 \Delta c_t\\
@@ -240,18 +240,18 @@ r_t
 \widehat{u}_t\\
 4\widehat{r}_t
 \end{bmatrix}.
-\]
+```
 
 第五行是 `needs_review`：论文印刷的测量向量与实现交叉检查文件在工资观测项是减通胀还是减通胀变化上存在差异。
 
 - **(F21) 年通胀 SPF noise 测量示例**：
 
-\[
+```math
 \pi^a_{t+3|t}
 =4\bar{\pi}
 +E_t\left[\widehat{\pi}_{t+3}+\widehat{\pi}_{t+2}+\widehat{\pi}_{t+1}+\widehat{\pi}_{t}\right]
 +\eta_{\pi,t}.
-\]
+```
 
 类似的 noisy 测量方程也加入到三季度后 SPF 失业预测和两季度后年度实际 GDP 增长预测中。在 news 解释下，SPF 路径通过预期未来结构冲击作为条件信息施加，而不是作为 noisy measurement。
 
@@ -261,64 +261,64 @@ r_t
 
 - **(F22) 风险溢价冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^b_t=\rho_b\widehat{\varepsilon}^b_{t-1}+\eta^b_t.
-\]
+```
 
 - **(F23) 投资专用技术冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^q_t=\rho_q\widehat{\varepsilon}^q_{t-1}+\eta^q_t.
-\]
+```
 
 - **(F24) 带生产率创新溢出的外生支出冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^g_t=\rho_g\widehat{\varepsilon}^g_{t-1}+\eta^g_t+\rho_{ga}\eta^a_t.
-\]
+```
 
 - **(F25) 生产率冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^a_t=\rho_a\widehat{\varepsilon}^a_{t-1}+\eta^a_t.
-\]
+```
 
 - **(F26) 价格 markup ARMA(1,1) 冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^p_t
 =\rho_p\widehat{\varepsilon}^p_{t-1}+\eta^p_t-\mu_p\eta^p_{t-1}.
-\]
+```
 
 - **(F27) 工资 markup ARMA(1,1) 冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^w_t
 =\rho_w\widehat{\varepsilon}^w_{t-1}+\eta^w_t-\mu_w\eta^w_{t-1}.
-\]
+```
 
 - **(F28) 劳动供给冲击**：
 
-\[
+```math
 \widehat{\varepsilon}^s_t=\rho_s\widehat{\varepsilon}^s_{t-1}+\eta^s_t.
-\]
+```
 
 - **(F29) 货币政策冲击过程**：
 
-\[
+```math
 \widehat{\varepsilon}^r_t=\rho_r\widehat{\varepsilon}^r_{t-1}+\eta^r_t.
-\]
+```
 
 - **(F30) 货币政策规则**：
 
-\[
+```math
 \widehat{r}_t
 =\rho_R\widehat{r}_{t-1}
 +(1-\rho_R)
 \left(r_\pi\widehat{\pi}_t+r_y\widehat{y}^{gap}_t
 +r_{\Delta y}\Delta\widehat{y}^{gap}_t\right)
 +\widehat{\varepsilon}^r_t.
-\]
+```
 
 实现交叉检查文件在 `epsilonr` 前使用负号；这个符号约定相对作者状态空间冲击定义标记为 `needs_review`。
 
@@ -326,47 +326,47 @@ r_t
 
 由于模型围绕平衡增长路径对数线性化，所有带帽结构变量的稳态均为零：
 
-\[
+```math
 \widehat{x}=0
 \quad\text{for}\quad
 x\in\{c,i,q^k,r,\pi,r^k,y,v,k,n,mc,w,z,u,e,l,\bar{k},y^{gap}\}.
-\]
+```
 
 论文报告了测量方程使用的稳态变换：
 
-\[
+```math
 \bar{\tau}=100(\tau-1),\qquad
 \bar{\pi}=100(\pi-1),
-\]
+```
 
-\[
+```math
 \bar{r}=100\left(\frac{\pi\tau}{\beta}-1\right),\qquad
 \bar{u}=100\left(\frac{\phi_w-1}{\omega}\right).
-\]
+```
 
 非估计的校准参数包括：
 
-\[
+```math
 g_y=0.18,\qquad \delta=0.025,\qquad \varepsilon_p=10.
-\]
+```
 
 实现交叉检查文件使用的派生比率包括：
 
-\[
+```math
 i_y=(\tau+\delta-1)k_y,\qquad
 c_y=1-i_y-g_y,\qquad
 v_y=r^k k_y.
-\]
+```
 
 本次归档未运行非线性稳态求解器或 Dynare check。
 
 ## 7. Timing & Form Conventions
 
 - **线性形式**：所有模型方程均写为相对平衡增长路径的对数偏离或水平偏离，适合 `model(linear)`。
-- **资本存量时序**：安装资本存量 \(\widehat{\bar{k}}_t\) 为预定状态；生产中的资本服务使用 \(\widehat{\bar{k}}_{t-1}\) 加当期利用率 \(\widehat{v}_t\)。
-- **期望**：\(E_t\) 以 \(t\) 期信息为条件。
-- **名义利率与通胀**：政策利率和通胀变量为偏离值；观测利率在测量方程中写作 \(4\widehat{r}_t\) 加其年度化稳态值。
-- **产出缺口**：\(\widehat{y}^{gap}_t\) 是实际产出与弹性价格和工资对应产出的差。
+- **资本存量时序**：安装资本存量 $`\widehat{\bar{k}}_t`$ 为预定状态；生产中的资本服务使用 $`\widehat{\bar{k}}_{t-1}`$ 加当期利用率 $`\widehat{v}_t`$。
+- **期望**：$`E_t`$ 以 $`t`$ 期信息为条件。
+- **名义利率与通胀**：政策利率和通胀变量为偏离值；观测利率在测量方程中写作 $`4\widehat{r}_t`$ 加其年度化稳态值。
+- **产出缺口**：$`\widehat{y}^{gap}_t`$ 是实际产出与弹性价格和工资对应产出的差。
 - **SPF 条件信息**：noise 变体增加预测测量误差；news 变体将预测条件化于预期未来结构冲击。这些是估计/预测扩展，而不是不同的私人部门均衡模块。
 
 ## 8. Variable & Parameter Reference Table
@@ -375,17 +375,17 @@ v_y=r^k k_y.
 
 | Symbol | Meaning | Main equations |
 |---|---|---|
-| `c` | 消费偏离 \(\widehat{c}_t\) | (F1), (F13), (F20) |
-| `r` | 短期名义利率偏离 \(\widehat{r}_t\) | (F1), (F3), (F30), (F20) |
-| `pi` | 通胀偏离 \(\widehat{\pi}_t\) | (F1), (F4), (F20), (F30) |
-| `i` | 投资偏离 \(\widehat{i}_t\) | (F2), (F13), (F15), (F20) |
-| `q` | 资本价值 \(\widehat{q}^k_t\) | (F2), (F3) |
-| `rk` | 资本租金回报 \(\widehat{r}^k_t\) | (F3), (F5), (F11), (F12) |
-| `y` | 产出偏离 \(\widehat{y}_t\) | (F13), (F14), (F19), (F20) |
-| `v` | 资本利用率 \(\widehat{v}_t\) | (F11), (F13), (F16) |
-| `k` | 资本服务 \(\widehat{k}_t\) | (F12), (F14), (F16) |
-| `n` | 工作小时 \(\widehat{n}_t\) | (F12), (F14), (F18) |
-| `mc` | 实际边际成本 \(\widehat{mc}_t\) | (F5) |
+| `c` | 消费偏离 $`\widehat{c}_t`$ | (F1), (F13), (F20) |
+| `r` | 短期名义利率偏离 $`\widehat{r}_t`$ | (F1), (F3), (F30), (F20) |
+| `pi` | 通胀偏离 $`\widehat{\pi}_t`$ | (F1), (F4), (F20), (F30) |
+| `i` | 投资偏离 $`\widehat{i}_t`$ | (F2), (F13), (F15), (F20) |
+| `q` | 资本价值 $`\widehat{q}^k_t`$ | (F2), (F3) |
+| `rk` | 资本租金回报 $`\widehat{r}^k_t`$ | (F3), (F5), (F11), (F12) |
+| `y` | 产出偏离 $`\widehat{y}_t`$ | (F13), (F14), (F19), (F20) |
+| `v` | 资本利用率 $`\widehat{v}_t`$ | (F11), (F13), (F16) |
+| `k` | 资本服务 $`\widehat{k}_t`$ | (F12), (F14), (F16) |
+| `n` | 工作小时 $`\widehat{n}_t`$ | (F12), (F14), (F18) |
+| `mc` | 实际边际成本 $`\widehat{mc}_t`$ | (F5) |
 | `w` | 实际工资偏离 | (F7), (F8), (F12), (F20) |
 | `z` | 平滑消费趋势 | (F8), (F10) |
 | `u` | 失业偏离 | (F8), (F17), (F20) |
@@ -402,14 +402,14 @@ v_y=r^k k_y.
 
 | Symbol | Meaning |
 |---|---|
-| `etab` | 风险溢价创新 \(\eta^b_t\) |
-| `etaq` | 投资专用技术创新 \(\eta^q_t\) |
-| `etag` | 外生支出创新 \(\eta^g_t\) |
-| `etaa` | 生产率创新 \(\eta^a_t\) |
-| `etap` | 价格 markup 创新 \(\eta^p_t\) |
-| `etas` | 劳动供给创新 \(\eta^s_t\) |
-| `etaw` | 工资 markup 创新 \(\eta^w_t\) |
-| `etar` | 货币政策创新 \(\eta^r_t\) |
+| `etab` | 风险溢价创新 $`\eta^b_t`$ |
+| `etaq` | 投资专用技术创新 $`\eta^q_t`$ |
+| `etag` | 外生支出创新 $`\eta^g_t`$ |
+| `etaa` | 生产率创新 $`\eta^a_t`$ |
+| `etap` | 价格 markup 创新 $`\eta^p_t`$ |
+| `etas` | 劳动供给创新 $`\eta^s_t`$ |
+| `etaw` | 工资 markup 创新 $`\eta^w_t`$ |
+| `etar` | 货币政策创新 $`\eta^r_t`$ |
 
 ### 参数
 

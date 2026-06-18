@@ -18,70 +18,70 @@ Source: Ratto, Marco; Roeger, Werner; Veld, Jan (2009), "QUEST III: An estimated
 
 ### Domestic Final-Goods Firms
 
-Firm \(j\) faces demand for its differentiated domestic variety:
+Firm $`j`$ faces demand for its differentiated domestic variety:
 
 **(F1) Domestic-variety demand**:
 
-\[
+```math
 Y_t^j =
 \frac{1-s^M-u_t^M}{n}
 \left(\frac{P_t}{P_t^j}\right)^{\sigma^d}
 \left(\frac{P_t^C}{P_t}\right)^{\sigma^M}
 \left(C_t+C_t^G+I_t^G+I_t^{inp}+X_t\right).
-\]
+```
 
 Production uses utilized private capital, labor net of overhead labor, technology, and public capital:
 
 **(F2) Production function**:
 
-\[
+```math
 Y_t^j =
 \left(ucap_t^j K_t^j\right)^{1-\alpha}
 \left(L_t^j-LO_t^j\right)^\alpha
 \left(U_t^Y\right)^\alpha
 \left(K_t^G\right)^{1-\alpha_G}.
-\]
+```
 
 Total firm labor is a CES aggregate of household labor types:
 
 **(F3) Labor aggregation**:
 
-\[
+```math
 L_t^j =
 \left[\int_0^1 \left(L_t^{i,j}\right)^{(\theta-1)/\theta}\,di\right]^{\theta/(\theta-1)}.
-\]
+```
 
 The representative firm chooses labor, capital services, utilization, and price to maximize period real profit:
 
 **(F4) Firm profit objective**:
 
-\[
+```math
 Pr_t^j =
 \frac{P_t^j}{P_t}Y_t^j
 -\frac{W_t}{P_t}L_t^j
 -i_t^K\frac{P_t^I}{P_t}K_t^j
 -\frac{adj^P(P_t^j)+adj^L(L_t^j)+adj^{UCAP}(ucap_t^j)}{P_t}.
-\]
+```
 
 Adjustment costs are:
 
 **(F5) Labor adjustment cost**:
 
-\[
+```math
 adj^L(L_t^j)=W_t\left(L_t^j u_t^L+\frac{\gamma_L}{2}(\Delta L_t^j)^2\right).
-\]
+```
 
 **(F6) Price adjustment cost**:
 
-\[
+```math
 adj^P(P_t^j)=\frac{\gamma_P}{2}\frac{(\Delta P_t^j)^2}{P_{t-1}^j}.
-\]
+```
 
 **(F7) Capacity-utilization adjustment cost**:
 
-\[
+```math
 adj^{UCAP}(ucap_t^j)=P_t^I K_t\left[\gamma_{ucap,1}(ucap_t^j-1)+\frac{\gamma_{ucap,2}}{2}(ucap_t^j-1)^2\right].
-\]
+```
 
 ### Investment-Goods Producers
 
@@ -89,15 +89,15 @@ The investment-goods sector combines domestic and foreign final goods into an in
 
 **(F8) Investment-goods technology**:
 
-\[
+```math
 I_t=I_t^{inp}U_t^I.
-\]
+```
 
 **(F9) Investment-goods price**:
 
-\[
+```math
 P_t^I=\frac{P_t^C}{U_t^I}.
-\]
+```
 
 ### Ricardian Households
 
@@ -105,15 +105,15 @@ Non-liquidity-constrained households choose consumption, domestic and foreign bo
 
 **(F10) Ricardian household objective**:
 
-\[
+```math
 \max E_0\sum_{t=0}^{\infty}\beta^t U(C_t^i,1-L_t^i).
-\]
+```
 
 The period utility is:
 
 **(F11) Habit utility**:
 
-\[
+```math
 U(C_t^i,1-L_t^i)=
 \frac{
 \exp(\varepsilon_t^C)
@@ -122,17 +122,17 @@ U(C_t^i,1-L_t^i)=
 \left(1-\exp(\varepsilon_t^L)\omega(L_t^i-h^L L_{t-1})^\kappa\right)
 \right]^{1-\rho}-1
 }{1-\rho}.
-\]
+```
 
 Physical investment expenditure with adjustment costs is:
 
 **(F12) Investment adjustment cost for household capital**:
 
-\[
+```math
 I_t^i=
 J_t^i\left(1+\frac{\gamma_K}{2}\frac{J_t^i}{K_{t-1}^i}\right)
 +\frac{\gamma_I}{2}(\Delta J_t^i)^2.
-\]
+```
 
 ### Liquidity-Constrained Households
 
@@ -140,9 +140,9 @@ Liquidity-constrained households do not optimize over assets; they consume curre
 
 **(F13) Liquidity-constrained consumption**:
 
-\[
+```math
 (1+t_t^c)P_t^C C_t^k=(1-t_t^w)W_t L_t+\mathrm{TR}_t^k-T_t^{LS,k}.
-\]
+```
 
 ### Trade Aggregators
 
@@ -150,13 +150,13 @@ Private consumption, investment, government consumption, and government investme
 
 **(F14) Domestic/foreign absorption aggregator**:
 
-\[
+```math
 Z^i=
 \left[
 (1-s^M-u_t^M)^{1/\sigma^M}(Z^{d,i})^{(\sigma^M-1)/\sigma^M}
 +(s^M+u_t^M)^{1/\sigma^M}(Z^{f,i})^{(\sigma^M-1)/\sigma^M}
 \right]^{\sigma^M/(\sigma^M-1)}.
-\]
+```
 
 ## 3. First-Order Conditions
 
@@ -164,63 +164,63 @@ Z^i=
 
 **(F15) Labor demand condition** (`needs_review`: OCR parentheses around the forward labor-adjustment term are damaged):
 
-\[
+```math
 \alpha\frac{Y_t^j}{L_t^j-LO_t^j}\eta_t^j
 -\frac{W_t}{P_t^j}u_t^L
 -\frac{W_t}{P_t^j}\gamma_L\Delta L_t^j
 +E_t\left[\frac{W_{t+1}}{P_{t+1}^j}\frac{\gamma_L}{1+r_t}\Delta L_{t+1}^j\right]
 =\frac{W_t}{P_t^j}.
-\]
+```
 
 **(F16) Capital-services demand**:
 
-\[
+```math
 (1-\alpha)\frac{Y_t^j}{K_t^j}\eta_t^j
 =i_t^K\frac{P_t^{I,j}}{P_t^j}.
-\]
+```
 
 **(F17) Capacity-utilization condition**:
 
-\[
+```math
 (1-\alpha)\frac{Y_t^j}{K_t^j ucap_t^j}\eta_t^j
 =
 \frac{P_t^{I,j}}{P_t^j}
 \left(\gamma_{ucap,1}+\gamma_{ucap,2}(ucap_t^j-1)\right).
-\]
+```
 
 **(F18) Firm markup condition** (`needs_review`: source OCR mangles the prime on Eq. 7d):
 
-\[
+```math
 \eta_t =
 1-\frac{1}{\sigma^d}
 -\gamma_P\left[
 \beta\left(sfp\,E_t\pi_{t+1}+(1-sfp)\pi_{t-1}\right)-\pi_t
 \right]
 -u_t^p.
-\]
+```
 
 ### Ricardian Households
 
 **(F19) Consumption marginal utility condition**:
 
-\[
+```math
 U_{C,t}^i-\lambda_t\frac{(1+t_t^c)P_t^C}{P_t}=0.
-\]
+```
 
 **(F20) Domestic bond Euler equation**:
 
-\[
+```math
 -\lambda_t+
 E_t\left[
 \lambda_{t+1}\beta
 \left(1+(1-t_t^i)i_t\right)
 \frac{P_t}{P_{t+1}}
 \right]=0.
-\]
+```
 
 **(F21) Foreign bond Euler equation with risk premium**:
 
-\[
+```math
 -\lambda_t+
 E_t\left[
 \lambda_{t+1}\beta
@@ -228,11 +228,11 @@ E_t\left[
 \left(1-risk\!\left(\frac{E_tB_t^F}{P_tY_t}\right)-u_t^{B^F}\right)
 \frac{P_t}{P_{t+1}}\frac{E_{t+1}}{E_t}
 \right]=0.
-\]
+```
 
 **(F22) Capital Euler equation**:
 
-\[
+```math
 -\xi_t+
 E_t\left[
 \xi_{t+1}\beta(1-\delta)
@@ -240,35 +240,35 @@ E_t\left[
 \left((1-t_t^K)(i_t^K-rp_t^K)+t_t^K\delta\right)
 \frac{P_t^I}{P_{t+1}}
 \right]=0.
-\]
+```
 
 **(F23) Physical-investment FOC** (`needs_review`: source OCR uses inconsistent capital timing in Eq. 13 vs Eq. 15a):
 
-\[
+```math
 \gamma_K\frac{J_t^i}{K_{t-1}^i}
 +\gamma_I\Delta J_t^i
 -\frac{\gamma_I}{1+r_t}E_t(\Delta J_{t+1}^i)
 =Q_t-1,
 \qquad
 Q_t=\frac{\xi_t}{\lambda_t}\frac{P_t}{P_t^I}.
-\]
+```
 
 **(F24) Tobin-Q asset value equation**:
 
-\[
+```math
 Q_t=
 E_t\left[
 \frac{1-\delta}{(1-t_t^i)(1+i_t)/(1+{}_{t}\pi_{t+1}^I)}
 Q_{t+1}
 \right]
 +(1-t_t^K)(i_t^K-rp_t^K)+t_t^K\delta.
-\]
+```
 
 ### Wage Setting
 
 **(F25) Wage rule**:
 
-\[
+```math
 \frac{W_t}{P_t^C}
 =
 \gamma_{WR}\frac{W_{t-1}}{P_{t-1}^C}
@@ -277,11 +277,11 @@ Q_{t+1}
 \frac{1+t_t^C}{1-t_t^W}
 \frac{(1-slc)U_{1-L,t}^i+slc\,U_{1-L,t}^k}
 {(1-slc)U_{c,t}^i+slc\,U_{c,t}^k}.
-\]
+```
 
 **(F26) Wage markup with indexation** (`needs_review`: OCR bracket is damaged):
 
-\[
+```math
 \eta_t^W=
 1-\frac{1}{\theta}
 -\frac{\gamma_W}{\theta}
@@ -290,60 +290,60 @@ Q_{t+1}
 -\left(\pi_t^W-(1-sfw)\pi_{t-1}\right)
 \right]
 +u_t^W.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 **(F27) Aggregate consumption**:
 
-\[
+```math
 C_t=(1-slc)C_t^i+slc\,C_t^k.
-\]
+```
 
 **(F28) Aggregate employment**:
 
-\[
+```math
 L_t=(1-slc)L_t^i+slc\,L_t^k,
 \qquad L_t^i=L_t^k=L_t.
-\]
+```
 
 **(F29) Import demand**:
 
-\[
+```math
 M_t=(s^M+u_t^M)
 \left[
 \rho^{PCPM}\frac{P_{t-1}^C}{P_{t-1}^M}
 +(1-\rho^{PCPM})\frac{P_t^C}{P_t^M}
 \right]^{\sigma^M}
 \left(C_t+I_t^{inp}+C_t^G+I_t^G\right).
-\]
+```
 
 **(F30) Export demand**:
 
-\[
+```math
 X_t=(s^{M,W}+u_t^X)
 \left[
 \rho^{PWPX}\frac{P_{t-1}^{C,F}E_{t-1}}{P_{t-1}^X}
 +(1-\rho^{PWPX})\frac{P_t^{C,F}E_t}{P_t^X}
 \right]^{\sigma^X}
 Y_t^F.
-\]
+```
 
 **(F31) Export-price markup**:
 
-\[
+```math
 \eta_t^X P_t^X=P_t.
-\]
+```
 
 **(F32) Import-price markup**:
 
-\[
+```math
 \eta_t^M P_t^M=E_tP_t^F.
-\]
+```
 
 **(F33) Import/export markup dynamics**:
 
-\[
+```math
 \eta_t^k=
 1-\frac{1}{\sigma^{v,k}}
 -\gamma_{Pk}
@@ -352,120 +352,120 @@ Y_t^F.
 \right]
 +u_t^{P,k},
 \qquad k\in\{X,M\}.
-\]
+```
 
 **(F34) Net foreign assets**:
 
-\[
+```math
 E_tB_t^F=(1+i_t^F)E_tB_{t-1}^F+P_t^X X_t-P_t^M M_t.
-\]
+```
 
 **(F35) Output gap indicator**:
 
-\[
+```math
 YGAP_t=
 \left(\frac{ucap_t}{ucap_t^{ss}}\right)^{1-\alpha}
 \left(\frac{L_t}{L_t^{ss}}\right)^\alpha.
-\]
+```
 
 **(F36) Smoothed capacity-utilization reference**:
 
-\[
+```math
 ucap_t^{ss}=(1-\rho^{ucap})ucap_{t-1}^{ss}+\rho^{ucap}ucap_t.
-\]
+```
 
 **(F37) Smoothed employment reference**:
 
-\[
+```math
 L_t^{ss}=(1-\rho^{Lss})L_{t-1}^{ss}+\rho^{Lss}L_t.
-\]
+```
 
 **(F38) Government revenues**:
 
-\[
+```math
 R_t^G=t_t^w W_tL_t+t_t^cP_t^C C_t+t_t^K i_t^K P_t^I K_{t-1}.
-\]
+```
 
 **(F39) Labor-income tax schedule**:
 
-\[
+```math
 t_t^w=\tau_0^w Y_t^{\tau_1^w}U_t^{TW}.
-\]
+```
 
 **(F40) Linearized labor-income tax response**:
 
-\[
+```math
 t_t^w=\tau_0^w+\tau_0^w\tau_1^w ygap_t.
-\]
+```
 
 **(F41) Government debt law of motion**:
 
-\[
+```math
 B_t=(1+i_t)B_{t-1}+P_t^C C_t^G+P_t^C I_t^G+\mathrm{TR}_t-R_t^G-T_t^{LS}.
-\]
+```
 
 **(F42) Lump-sum tax/debt feedback**:
 
-\[
+```math
 \Delta T_t^{LS}
 =\tau^B\left(\frac{B_{t-1}}{Y_{t-1}P_{t-1}}-b^T\right)
 +\tau^{DEF}\Delta\left(\frac{B_t}{Y_tP_t}\right).
-\]
+```
 
 ## 5. Exogenous Processes
 
 **(F43) TFP stochastic trend**:
 
-\[
+```math
 u_t^Y=g_t^U+u_{t-1}^Y+\varepsilon_t^Y.
-\]
+```
 
 **(F44) Overhead-labor share**:
 
-\[
+```math
 lol_t^j=(1-\rho^{LOL})lol+\rho^{LOL}lol_{t-1}^j+\varepsilon_t^{LOL}.
-\]
+```
 
 **(F45) Investment-technology stochastic trend**:
 
-\[
+```math
 u_t^I=g^{UI}+u_{t-1}^I+\varepsilon_t^{UI}.
-\]
+```
 
 **(F46) Fiscal rule for government consumption**:
 
-\[
+```math
 \Delta c_t^G=
 (1-\tau_{Lag}^{CG})\overline{\Delta c^G}
 +\tau_{Lag}^{CG}\Delta c_{t-1}^G
 +\tau_{Adj}^{CG}(cgy_{t-1}-\overline{cgy})
 +\sum_i\tau_i^{CG}ygap_{t-i}
 +u_t^{CG}.
-\]
+```
 
 **(F47) Fiscal rule for government investment**:
 
-\[
+```math
 \Delta i_t^G=
 (1-\tau_{Lag}^{IG})\overline{\Delta i^G}
 +\tau_{Lag}^{IG}\Delta i_{t-1}^G
 +\tau_{Adj}^{IG}(igy_{t-1}-\overline{igy})
 +\sum_i\tau_i^{IG}ygap_{t-i}
 +u_t^{IG}.
-\]
+```
 
 **(F48) Transfer rule**:
 
-\[
+```math
 \mathrm{TR}_t=
 b^U W_t(POP_t^W-POP_t^{NPART}-L_t)
 +b^R W_tPOP_t^P
 +u_t^{TR}.
-\]
+```
 
 **(F49) Monetary policy rule**:
 
-\[
+```math
 i_t=
 \tau_{lag}^{INOM}i_{t-1}
 +(1-\tau_{lag}^{INOM})
@@ -475,13 +475,13 @@ r^{EQ}+\pi^T+\tau_\pi^{INOM}(\pi_t^C-\pi^T)
 \right]
 +\tau_{y,2}^{INOM}(ygap_t-ygap_{t-1})
 +u_t^{INOM}.
-\]
+```
 
 **(F50) Generic autocorrelated structural shock**:
 
-\[
+```math
 \log U_t^k=\rho^k\log U_{t-1}^k+\varepsilon_t^k.
-\]
+```
 
 ## 6. Steady-State Solution
 
@@ -498,7 +498,7 @@ For this first-pass archive entry:
 ## 7. Timing & Form Conventions
 
 - Capital used in production is predetermined relative to current investment; the implementation cross-check uses state variables such as `E_GK` and investment-capital ratios such as `E_LIK`.
-- The paper distinguishes physical investment \(J_t\) from investment expenditure \(I_t\) because of capital adjustment costs.
+- The paper distinguishes physical investment $`J_t`$ from investment expenditure $`I_t`$ because of capital adjustment costs.
 - Capacity utilization is a current control, with a slowly moving reference utilization rate used in the output-gap indicator.
 - Employment and capacity utilization trend/reference variables are smoothed states.
 - Net foreign assets are denominated in domestic currency and evolve with foreign interest payments and the trade balance.
@@ -510,40 +510,40 @@ For this first-pass archive entry:
 
 | Category | Symbol / implementation name | Meaning | Main equation(s) |
 |---|---|---|---|
-| Endogenous | \(Y_t^j\), `E_GY` | domestic output/growth | (F1), (F2), (F35) |
-| Endogenous | \(L_t\), `E_LL`, `E_GL` | employment and employment growth | (F3), (F15), (F28), (F37) |
-| Endogenous | \(K_t\), `E_GK` | private capital stock/growth | (F16), (F22), (F24) |
-| Endogenous | \(ucap_t\), `E_UCAP` | capacity utilization | (F17), (F35), (F36) |
-| Endogenous | \(P_t^j\), \(\pi_t\), `E_PHI` | domestic price inflation/markup | (F6), (F18) |
-| Endogenous | \(I_t\), \(J_t\), `E_GI`, `E_LIK` | investment and physical investment | (F8), (F12), (F23) |
-| Endogenous | \(Q_t\), `E_Q` | Tobin's Q | (F23), (F24) |
-| Endogenous | \(C_t^i\), `E_LCNLCSN` | Ricardian consumption | (F10), (F11), (F19), (F27) |
-| Endogenous | \(C_t^k\), `E_LCLCSN` | liquidity-constrained consumption | (F13), (F27) |
-| Endogenous | \(C_t\), `E_LCSN` | aggregate consumption | (F27) |
-| Endogenous | \(W_t/P_t^C\), `E_LYWR`, `E_WS` | real consumption wage/wage share | (F25), (F26) |
-| Endogenous | \(M_t\), `E_LIMYN` | imports | (F29), (F32), (F33) |
-| Endogenous | \(X_t\), `E_LEXYN` | exports | (F30), (F31), (F33) |
-| Endogenous | \(B_t^F\), `E_BWRY` | net foreign assets | (F21), (F34) |
-| Endogenous | \(B_t\), `E_LBGYN` | government debt | (F41), (F42) |
-| Endogenous | \(YGAP_t\), `E_LYGAP` | output gap | (F35) |
-| Endogenous | \(i_t\), `E_INOM` | nominal interest rate | (F49) |
-| Exogenous shock | \(\varepsilon_t^Y\), `E_EPS_Y` | TFP innovation | (F43) |
-| Exogenous shock | \(\varepsilon_t^{UI}\) | investment-technology innovation | (F45) |
-| Exogenous shock | \(u_t^{CG}\), `E_EPS_G` / `fiscal_` | government-consumption shock | (F46) |
-| Exogenous shock | \(u_t^{IG}\), `E_EPS_IG` | government-investment shock | (F47) |
-| Exogenous shock | \(u_t^{TR}\), `E_EPS_TR` | transfer shock | (F48) |
-| Exogenous shock | \(u_t^{INOM}\), `E_EPS_M` / `interest_` | monetary-policy shock | (F49) |
-| Exogenous shock | \(u_t^M\), `E_EPS_EX` | import/trade preference shock | (F14), (F29), (F30) |
-| Exogenous shock | \(u_t^p\), `E_EPS_ETA` | domestic price-markup shock | (F18) |
-| Exogenous shock | \(u_t^W\), `E_EPS_W` | wage-markup shock | (F26) |
-| Exogenous shock | \(u_t^{P,k}\), `E_EPS_ETAM`, `E_EPS_ETAX` | import/export markup shocks | (F33) |
-| Parameter | \(\beta\), `BETAE` | discount factor | (F10), (F20)-(F24) |
-| Parameter | \(\alpha\), `ALPHAE` | labor/capital production share convention | (F2), (F15)-(F17) |
-| Parameter | \(\alpha_G\), `ALPHAGE` | public-capital production elasticity | (F2) |
-| Parameter | \(\gamma_L\), `GAMLE` | labor adjustment cost | (F5), (F15) |
-| Parameter | \(\gamma_P\), `GAMPE` | domestic price adjustment cost | (F6), (F18) |
-| Parameter | \(\gamma_{ucap,1}\), \(\gamma_{ucap,2}\), `A1E`, `A2E` | utilization cost | (F7), (F17) |
-| Parameter | \(\gamma_K\), \(\gamma_I\), `GAMIE`, `GAMI2E` | investment adjustment costs | (F12), (F23) |
-| Parameter | \(slc\), `SLC` | share of liquidity-constrained households | (F13), (F27), (F28) |
-| Parameter | \(\tau\) coefficients | fiscal and monetary rule coefficients | (F46), (F47), (F49) |
-| Parameter | \(\rho\) coefficients | persistence parameters | (F36), (F37), (F43)-(F50) |
+| Endogenous | $`Y_t^j`$, `E_GY` | domestic output/growth | (F1), (F2), (F35) |
+| Endogenous | $`L_t`$, `E_LL`, `E_GL` | employment and employment growth | (F3), (F15), (F28), (F37) |
+| Endogenous | $`K_t`$, `E_GK` | private capital stock/growth | (F16), (F22), (F24) |
+| Endogenous | $`ucap_t`$, `E_UCAP` | capacity utilization | (F17), (F35), (F36) |
+| Endogenous | $`P_t^j`$, $`\pi_t`$, `E_PHI` | domestic price inflation/markup | (F6), (F18) |
+| Endogenous | $`I_t`$, $`J_t`$, `E_GI`, `E_LIK` | investment and physical investment | (F8), (F12), (F23) |
+| Endogenous | $`Q_t`$, `E_Q` | Tobin's Q | (F23), (F24) |
+| Endogenous | $`C_t^i`$, `E_LCNLCSN` | Ricardian consumption | (F10), (F11), (F19), (F27) |
+| Endogenous | $`C_t^k`$, `E_LCLCSN` | liquidity-constrained consumption | (F13), (F27) |
+| Endogenous | $`C_t`$, `E_LCSN` | aggregate consumption | (F27) |
+| Endogenous | $`W_t/P_t^C`$, `E_LYWR`, `E_WS` | real consumption wage/wage share | (F25), (F26) |
+| Endogenous | $`M_t`$, `E_LIMYN` | imports | (F29), (F32), (F33) |
+| Endogenous | $`X_t`$, `E_LEXYN` | exports | (F30), (F31), (F33) |
+| Endogenous | $`B_t^F`$, `E_BWRY` | net foreign assets | (F21), (F34) |
+| Endogenous | $`B_t`$, `E_LBGYN` | government debt | (F41), (F42) |
+| Endogenous | $`YGAP_t`$, `E_LYGAP` | output gap | (F35) |
+| Endogenous | $`i_t`$, `E_INOM` | nominal interest rate | (F49) |
+| Exogenous shock | $`\varepsilon_t^Y`$, `E_EPS_Y` | TFP innovation | (F43) |
+| Exogenous shock | $`\varepsilon_t^{UI}`$ | investment-technology innovation | (F45) |
+| Exogenous shock | $`u_t^{CG}`$, `E_EPS_G` / `fiscal_` | government-consumption shock | (F46) |
+| Exogenous shock | $`u_t^{IG}`$, `E_EPS_IG` | government-investment shock | (F47) |
+| Exogenous shock | $`u_t^{TR}`$, `E_EPS_TR` | transfer shock | (F48) |
+| Exogenous shock | $`u_t^{INOM}`$, `E_EPS_M` / `interest_` | monetary-policy shock | (F49) |
+| Exogenous shock | $`u_t^M`$, `E_EPS_EX` | import/trade preference shock | (F14), (F29), (F30) |
+| Exogenous shock | $`u_t^p`$, `E_EPS_ETA` | domestic price-markup shock | (F18) |
+| Exogenous shock | $`u_t^W`$, `E_EPS_W` | wage-markup shock | (F26) |
+| Exogenous shock | $`u_t^{P,k}`$, `E_EPS_ETAM`, `E_EPS_ETAX` | import/export markup shocks | (F33) |
+| Parameter | $`\beta`$, `BETAE` | discount factor | (F10), (F20)-(F24) |
+| Parameter | $`\alpha`$, `ALPHAE` | labor/capital production share convention | (F2), (F15)-(F17) |
+| Parameter | $`\alpha_G`$, `ALPHAGE` | public-capital production elasticity | (F2) |
+| Parameter | $`\gamma_L`$, `GAMLE` | labor adjustment cost | (F5), (F15) |
+| Parameter | $`\gamma_P`$, `GAMPE` | domestic price adjustment cost | (F6), (F18) |
+| Parameter | $`\gamma_{ucap,1}`$, $`\gamma_{ucap,2}`$, `A1E`, `A2E` | utilization cost | (F7), (F17) |
+| Parameter | $`\gamma_K`$, $`\gamma_I`$, `GAMIE`, `GAMI2E` | investment adjustment costs | (F12), (F23) |
+| Parameter | $`slc`$, `SLC` | share of liquidity-constrained households | (F13), (F27), (F28) |
+| Parameter | $`\tau`$ coefficients | fiscal and monetary rule coefficients | (F46), (F47), (F49) |
+| Parameter | $`\rho`$ coefficients | persistence parameters | (F36), (F37), (F43)-(F50) |

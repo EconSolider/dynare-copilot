@@ -22,18 +22,18 @@
 
 中央银行评价通胀偏离目标、产出偏离潜在产出以及名义利率变化：
 
-\[
+```math
 \ell_t = (\pi_t-\pi^{\ast})^2 + \lambda (y_t-y_t^{\ast})^2 + \gamma (\Delta r_t)^2,
 \qquad \Delta r_t = r_t-r_{t-1}.
-\]
+```
 
 ### 2.2 无条件损失
 
 在政策规则比较中，期间损失用无条件标准差表示：
 
-\[
+```math
 \mathcal{L} = \sigma_\pi^2 + \lambda \sigma_{gap}^2 + \gamma \sigma_{\Delta r}^2.
-\]
+```
 
 在许多报告的实验中，利率变化波动率被约束为匹配欧元区经验上界，因此平滑项并不总是直接加入损失函数。
 
@@ -41,9 +41,9 @@
 
 广义简单规则选择反应系数和预测期：
 
-\[
+```math
 r_t = \rho r_{t-1} + \alpha E_t\pi_{t+\theta} + \beta E_t gap_{t+\kappa}.
-\]
+```
 
 随后使用模型搜索在确定性/稳定性限制下使损失最小的参数向量。这个优化针对政策规则系数，而不是私人主体配置。
 
@@ -53,25 +53,25 @@ r_t = \rho r_{t-1} + \alpha E_t\pi_{t+\theta} + \beta E_t gap_{t+\kappa}.
 
 - **(F1) 政策制定者期间损失**：
 
-\[
+```math
 \ell_t = (\pi_t-\pi^{\ast})^2 + \lambda gap_t^2 + \gamma (r_t-r_{t-1})^2.
-\]
+```
 
 - **(F2) 政策评价损失**：
 
-\[
+```math
 \mathcal{L} = \sigma_\pi^2 + \lambda \sigma_{gap}^2 + \gamma \sigma_{\Delta r}^2.
-\]
+```
 
 - **(F3) 通用简单利率规则**：
 
-\[
+```math
 r_t = \rho r_{t-1} + \alpha E_t\pi_{t+\theta} + \beta E_t gap_{t+\kappa}.
-\]
+```
 
 - **(F4) MMB 灵活政策规则，implementation_cross_check，needs_review**：
 
-\[
+```math
 \begin{aligned}
 i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 + b_0 \pi^q_t + \sum_{j=1}^{4} b^-_j \pi^q_{t-j}
@@ -80,11 +80,11 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 + \sum_{j=1}^{4} d^+_j E_t y^{gap}_{t+j}
 + b_\pi \pi^{\ast} + b_{rlb}\bar r + \sigma_i \varepsilon^i_t .
 \end{aligned}
-\]
+```
 
 - **(F5) 就业方程，implementation_cross_check，needs_review**：
 
-\[
+```math
 \ell^n_t =
 \ell^n_{t-1}
 + a_y(\Delta y^r_t+\pi^{pot}_t)
@@ -93,11 +93,11 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 + a_{w1}\Delta w^r_{t-1}
 + a_{ecm}\left(\ell^n_{t-1}-\frac{1}{1-\beta_B}y^r_{t-1}\right)
 + \varepsilon^\ell_t .
-\]
+```
 
 - **(F6) 工资方程，implementation_cross_check，needs_review**：
 
-\[
+```math
 \Delta w^n_t =
 \Delta lprod_t + \Delta p^c_t - \omega_\pi \pi^c_{t-1}
 + \sum_j \omega_{pj}\Delta \pi^c_{t-j}
@@ -105,22 +105,22 @@ i_t ={}& c + \sum_{j=1}^{4} a_j i_{t-j}
 + \omega_u urx_{t-1}
 - \omega_{ecm} ulc^T_{t-1}
 + \varepsilon^w_t .
-\]
+```
 
 - **(F7) GDP 平减指数通胀，implementation_cross_check，needs_review**：
 
-\[
+```math
 \pi^{yfd}_t =
 a_g y^r_{t-1} - a_\pi \pi^{yfd}_{t-1}
 + \sum_j a_{u,j}\Delta ulc^T_{t-j}
 + a_m \pi^m_{t-1}
 - a_{ecm} ulc^T_{t-1}
 + \varepsilon^{yfd}_t .
-\]
+```
 
 - **(F8) 消费者价格通胀，implementation_cross_check，needs_review**：
 
-\[
+```math
 \pi^c_t =
 a_4\pi^c_{t-4}
 + a_y\pi^{yfd}_t + a_{y1}\pi^{yfd}_{t-1}
@@ -128,32 +128,32 @@ a_4\pi^c_{t-4}
 + a_o\pi^{oil}_t
 + a_{ecm}\left(p^c_{t-1}-\eta_m m^d_{t-1}\right)
 + \varepsilon^c_t .
-\]
+```
 
 - **(F9) 投资比率，implementation_cross_check，needs_review**：
 
-\[
+```math
 i^r_t =
 i^r_{t-1}+\Delta y^r_t
 + a_{y1}\Delta y^r_{t-1}
 + a_{ecm}\left[-(\bar s+\delta+a_i)i^r_{t-1}-s^r_{t-1}\right]
 + \varepsilon^I_t .
-\]
+```
 
 - **(F10) 进口价格通胀，implementation_cross_check，needs_review**：
 
-\[
+```math
 \pi^m_t =
 a_m\pi^m_{t-1}
 + a_{wx}\pi^{ywdx}_t
 + a_o\pi^{oil}_t+a_{o1}\pi^{oil}_{t-1}
 + a_{ecm}\left[\eta_x(m^d_{t-1}-x^d_{t-1})+\eta_o(m^d_{t-1}-oil_{t-1})+\eta_w(m^d_{t-1}-y^w_{t-1})\right]
 + \varepsilon^m_t .
-\]
+```
 
 - **(F11) 私人消费比率，implementation_cross_check，needs_review**：
 
-\[
+```math
 c^r_t =
 c^r_{t-1}-\pi^{pot}_t
 + a_u(urx_t-urx_{t-1})
@@ -162,15 +162,15 @@ c^r_{t-1}-\pi^{pot}_t
 + a_{py}(c^r_{t-1}-y^p_{t-1})
 + a_{w}(c^r_{t-1}-w^l_{t-1}+p^c_{t-1})
 + \varepsilon^C_t .
-\]
+```
 
 - **(F12) 长期债券利率，implementation_cross_check，needs_review**：
 
-\[
+```math
 \ell^T_t =
 \chi_T \frac{1}{20}\sum_{j=0}^{19} E_t s^n_{t+j}
 + \varepsilon^{LT}_t .
-\]
+```
 
 ## 4. Market Clearing & Identities
 
@@ -178,117 +178,117 @@ c^r_{t-1}-\pi^{pot}_t
 
 - **(F13) 产出缺口定义**：
 
-\[
+```math
 gap_t = y^r_t-y^{pot}_t .
-\]
+```
 
 - **(F14) 季度和年化消费者通胀定义**：
 
-\[
+```math
 \pi^q_t = 400\,\pi^c_t,\qquad
 \pi^{ann}_t = \pi^c_t+\pi^c_{t-1}+\pi^c_{t-2}+\pi^c_{t-3}.
-\]
+```
 
 - **(F15) 模型恒等式中使用的潜在产出增长过程**：
 
-\[
+```math
 \pi^{pot}_t = \beta_B \pi^{pot}_{t-1} + \beta_B(k^s_{t-1}-k^s_{t-2}).
-\]
+```
 
 - **(F16) 由就业得到的失业缺口**：
 
-\[
+```math
 urx_t = -\frac{1-\bar U}{\bar U}\ell^n_t .
-\]
+```
 
 - **(F17) 劳动生产率**：
 
-\[
+```math
 lprod_t = y^r_t + y^{trend}_t - \ell^n_t .
-\]
+```
 
 - **(F18) 单位劳动成本恒等式**：
 
-\[
+```math
 ulc_t = w^i_t-y^{trend}_t-y^r_t,\qquad ulc^T_t=w^n_t-y^{trend}_t .
-\]
+```
 
 - **(F19) 资本存量积累，线性化比率形式**：
 
-\[
+```math
 k^s_t =
 \frac{1-\delta}{1+\bar g}k^s_{t-1}
 -\frac{1-\delta}{1+\bar g}\pi^{pot}_t
 +\frac{\bar g+\delta}{1+\bar g}i^r_t .
-\]
+```
 
 - **(F20) 短期实际利率代理变量**：
 
-\[
+```math
 s^r_t =
 \frac{0.25}{100}\left(\frac{1}{1+\bar s/100}\right)^{0.75}s^n_t
 -0.25(\pi^{yfd}_t+\pi^{yfd}_{t-1}+\pi^{yfd}_{t-2}+\pi^{yfd}_{t-3}).
-\]
+```
 
 - **(F21) 国内需求平减指数汇总**：
 
-\[
+```math
 f^d_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_X x^r_t
 +(1-\omega_C-\omega_G-\omega_I-\omega_X)s^c_t .
-\]
+```
 
 - **(F22) 贸易余额汇总**：
 
-\[
+```math
 tb_t = \omega_X x^n_t + (1-\omega_X)m^n_t .
-\]
+```
 
 - **(F23) 实际 GDP 支出恒等式**：
 
-\[
+```math
 y^r_t =
 \omega_C c^r_t+\omega_G g^c_t+\omega_I i^r_t+\omega_{TB}tb_t
 +(1-\omega_C-\omega_G-\omega_I-\omega_{TB})s^c_t .
-\]
+```
 
 - **(F24) 经常账户恒等式**：
 
-\[
+```math
 ca_t=\omega_{TB}tb_t+(1-\omega_{TB})nfn_t .
-\]
+```
 
 - **(F25) 净外国资产积累**：
 
-\[
+```math
 nfa_t =
 \frac{1}{(1+\bar g)(1+\bar\pi)}(nfa_{t-1}-\pi^{pot}_t-\pi^{yfd}_t)
 + \omega_{CA} ca_t .
-\]
+```
 
 - **(F26) 私人收入恒等式**：
 
-\[
+```math
 y^p_t =
 \omega_Y y^r_t +(1-\omega_Y-\omega_T-\omega_N-\omega_D)g^y_t
 +\omega_T y^r_t+\omega_N nfn_t+\omega_D y^r_t .
-\]
+```
 
 - **(F27) 私人财富恒等式**：
 
-\[
+```math
 w^l_t =
 \omega_N nfa_t+\omega_K(k^s_t+i^d_t)+(1-\omega_N-\omega_K)g^d_t .
-\]
+```
 
 - **(F28) 政府收入恒等式**：
 
-\[
+```math
 g^y_t =
 \omega_{tdn}tdn_t+\omega_{ssn}y^r_t+\omega_{tin}y^r_t+\omega_{ogn}y^r_t
 -\omega_{inn}inn_t-\omega_{trn}trn_t-\omega_{oth}y^r_t
 +(1-\omega_{tdn}-\omega_{ssn}-\omega_{tin}-\omega_{ogn}+\omega_{inn}+\omega_{trn}+\omega_{oth})y^r_t .
-\]
+```
 
 ## 5. Exogenous Processes
 
@@ -296,26 +296,26 @@ g^y_t =
 
 - **(F29) 政策规则中的利率冲击，implementation_cross_check**：
 
-\[
+```math
 i_t = \cdots + \sigma_i \varepsilon^i_t .
-\]
+```
 
 - **(F30) 政府消费冲击，implementation_cross_check，needs_review**：
 
-\[
+```math
 g^c_t-\bar a_g g^c_{t-1}+\pi^{pot}_t =
 \rho_g(g^c_{t-1}-\bar a_g g^c_{t-2}+\pi^{pot}_{t-1})
 + \sigma_g\varepsilon^g_t .
-\]
+```
 
 - **(F31) 结构残差模块，implementation_cross_check，needs_review**：
 
-\[
+```math
 \varepsilon_t =
 \{\varepsilon^\ell_t,\varepsilon^w_t,\varepsilon^{yfd}_t,\varepsilon^c_t,\varepsilon^I_t,
 \varepsilon^{id}_t,\varepsilon^x_t,\varepsilon^m_t,\varepsilon^C_t,\varepsilon^{lsr}_t,
 \varepsilon^{xr}_t,\varepsilon^{mr}_t,\varepsilon^{LT}_t\}.
-\]
+```
 
 ## 6. Steady-State Solution
 
@@ -323,9 +323,9 @@ MMB 实现声明为 `model(linear)`。因此：
 
 - **(F32) 线性模型稳态**：
 
-\[
+```math
 \bar x = 0 \quad \text{for each stationary deviation variable } x_t .
-\]
+```
 
 非零长期比率和常数是校准输入，而不是非线性稳态未知量。实现交叉检查把它们存为 `PIBAR`、`STNBAR`、`YETGBAR`、稳态支出份额、政府债务份额、贸易份额和财富份额等参数。这些参数用于缩放第 3-5 节的线性化恒等式。
 
@@ -344,7 +344,7 @@ MMB 实现声明为 `model(linear)`。因此：
 
 | 类别 | 符号 / ASCII | 含义 | 主要方程 |
 |---|---|---|---|
-| 内生 | `interest`, `stn`, \(i_t\) | 短期名义利率 | (F4) |
+| 内生 | `interest`, `stn`, $`i_t`$ | 短期名义利率 | (F4) |
 | 内生 | `inflation`, `infl` | 年通胀指标 | (F14) |
 | 内生 | `inflationq`, `pipcd` | 年化季度消费者通胀 | (F14), (F8) |
 | 内生 | `outputgap` | 产出缺口 | (F13) |
@@ -365,9 +365,9 @@ MMB 实现声明为 `model(linear)`。因此：
 | 外生 | `interest_` | 货币政策创新 | (F29) |
 | 外生 | `fiscal_` | 财政/政府消费创新 | (F30) |
 | 外生 | `innoe*` | 经验 AWM 模块残差创新 | (F31) |
-| 参数 | \(\lambda\) | 损失函数中产出缺口波动权重 | (F1), (F2) |
-| 参数 | \(\gamma\) | 损失函数中利率变化波动权重 | (F1), (F2) |
-| 参数 | \(\rho,\alpha,\beta,\theta,\kappa\) | 简单规则平滑、反应系数和预测期 | (F3) |
+| 参数 | $`\lambda`$ | 损失函数中产出缺口波动权重 | (F1), (F2) |
+| 参数 | $`\gamma`$ | 损失函数中利率变化波动权重 | (F1), (F2) |
+| 参数 | $`\rho,\alpha,\beta,\theta,\kappa`$ | 简单规则平滑、反应系数和预测期 | (F3) |
 | 参数 | `cofint*` | 实现中的政策规则系数 | (F4) |
 | 参数 | `PIBAR`, `STNBAR`, `YETGBAR` | 通胀、短期利率和潜在增长稳态常数 | (F19), (F20), (F32) |
 | 参数 | `*_YERBAR`, `*_YENBAR`, `*_FDDBAR` | 线性汇总中使用的稳态份额 | (F21)-(F28) |

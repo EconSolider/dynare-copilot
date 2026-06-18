@@ -21,185 +21,185 @@
 
 Households choose consumption, deposits, labor, and real money balances:
 
-\[
+```math
 \max_{\{C_t,D_{t+1},H_t,M_t/P_t\}} E_t\sum_{k=0}^{\infty}\beta^k
 \left[\ln C_{t+k}+\xi\ln(M_{t+k}/P_{t+k})+\xi\ln(1-H_{t+k})\right]
-\]
+```
 
 subject to
 
-\[
+```math
 C_t=W_tH_t-T_t+\Pi_t+R_tD_t-D_{t+1}+\frac{M_{t-1}-M_t}{P_t}.
-\]
+```
 
 ### Entrepreneurs and Financial Contract
 
-Entrepreneur \(j\) buys capital at the end of period \(t\) for use in \(t+1\). Borrowing is
+Entrepreneur $`j`$ buys capital at the end of period $`t`$ for use in $`t+1`$. Borrowing is
 
-\[
+```math
 B_{t+1}^j=Q_tK_{t+1}^j-N_{t+1}^j.
-\]
+```
 
-The costly-state-verification contract chooses capital and a cutoff \(\bar{\omega}^j\). If \(\omega^j\geq\bar{\omega}^j\), the borrower repays the promised amount; otherwise the lender monitors and receives net residual claims. The cutoff satisfies
+The costly-state-verification contract chooses capital and a cutoff $`\bar{\omega}^j`$. If $`\omega^j\geq\bar{\omega}^j`$, the borrower repays the promised amount; otherwise the lender monitors and receives net residual claims. The cutoff satisfies
 
-\[
+```math
 \bar{\omega}^j R_{t+1}^k Q_tK_{t+1}^j=Z_{t+1}^jB_{t+1}^j.
-\]
+```
 
 The lender break-even condition is
 
-\[
+```math
 [1-F(\bar{\omega}^j)]Z_{t+1}^jB_{t+1}^j
 +(1-\mu)\int_0^{\bar{\omega}^j}\omega R_{t+1}^kQ_tK_{t+1}^j\,dF(\omega)
 =R_{t+1}B_{t+1}^j.
-\]
+```
 
-In the appendix formulation, with \(s=R^k/R\) and \(k=QK/N\), the normalized contract problem is
+In the appendix formulation, with $`s=R^k/R`$ and $`k=QK/N`$, the normalized contract problem is
 
-\[
+```math
 \max_{K,\bar{\omega}}\;(1-\Gamma(\bar{\omega}))R^kQK
 \quad\text{s.t.}\quad
 [\Gamma(\bar{\omega})-\mu G(\bar{\omega})]R^kQK=R(QK-N).
-\]
+```
 
 ### Retailers
 
-Retailer \(z\) faces CES demand and chooses a reset price when allowed to reprice:
+Retailer $`z`$ faces CES demand and chooses a reset price when allowed to reprice:
 
-\[
+```math
 \max_{P_t^{\ast}}\sum_{k=0}^{\infty}\theta^kE_{t-1}\left[
 \Lambda_{t,k}\frac{P_t^{\ast}-P_{t+k}^w}{P_{t+k}}Y_{t+k}^{\ast}(z)
 \right],
-\]
+```
 
-where \(\Lambda_{t,k}=\beta C_t/C_{t+k}\) and \(P_t^w=P_t/X_t\).
+where $`\Lambda_{t,k}=\beta C_t/C_{t+k}`$ and $`P_t^w=P_t/X_t`$.
 
 ## 3. First-Order Conditions
 
 - **(F1) Household Euler equation**:
 
-\[
+```math
 \frac{1}{C_t}=E_t\left\{\beta\frac{1}{C_{t+1}}\right\}R_{t+1}.
-\]
+```
 
 - **(F2) Household labor supply**:
 
-\[
+```math
 W_t\frac{1}{C_t}=\xi\frac{1}{1-H_t}.
-\]
+```
 
 - **(F3) Money demand**:
 
-\[
+```math
 \frac{M_t}{P_t}=\zeta C_t\left(\frac{R_{t+1}^n-1}{R_{t+1}^n}\right)^{-1}.
-\]
+```
 
 - **(F4) Financial contract lender break-even after substitution**:
 
-\[
+```math
 \left([1-F(\bar{\omega}^j)]\bar{\omega}^j+(1-\mu)\int_0^{\bar{\omega}^j}\omega\,dF(\omega)\right)
 R_{t+1}^kQ_tK_{t+1}^j
 =R_{t+1}(Q_tK_{t+1}^j-N_{t+1}^j).
-\]
+```
 
 - **(F5) Capital demand/net-worth relation**:
 
-\[
+```math
 Q_tK_{t+1}^j=\psi(s_t)N_{t+1}^j,\qquad \psi(1)=1,\quad\psi'(\cdot)>0.
-\]
+```
 
 - **(F6) External finance premium relation**:
 
-\[
+```math
 E_t\{R_{t+1}^k\}=s\left(\frac{N_{t+1}^j}{Q_tK_{t+1}^j}\right)R_{t+1},\qquad s'(\cdot)<0.
-\]
+```
 
 - **(F7) Appendix cutoff-premium mapping**:
 
-\[
+```math
 s=\rho(\bar{\omega}).
-\]
+```
 
 - **(F8) Appendix leverage-premium mapping**:
 
-\[
+```math
 k=\psi(s),\qquad \psi'(s)>0,\qquad k=\frac{QK}{N}.
-\]
+```
 
 - **(F9) Production technology**:
 
-\[
+```math
 Y_t=A_tK_t^{\alpha}L_t^{1-\alpha}.
-\]
+```
 
 - **(F10) Capital accumulation with adjustment costs**:
 
-\[
+```math
 K_{t+1}=\Phi\left(\frac{I_t}{K_t}\right)K_t+(1-\delta)K_t.
-\]
+```
 
 - **(F11) Price of capital**:
 
-\[
+```math
 Q_t=\left[\Phi'\left(\frac{I_t}{K_t}\right)\right]^{-1}.
-\]
+```
 
 - **(F12) Expected gross return to capital**:
 
-\[
+```math
 E_t\{R_{t+1}^k\}
 =E_t\left\{\frac{\frac{1}{X_{t+1}}\frac{\alpha Y_{t+1}}{K_{t+1}}+Q_{t+1}(1-\delta)}{Q_t}\right\}.
-\]
+```
 
 - **(F13) Aggregate investment finance supply**:
 
-\[
+```math
 E_t\{R_{t+1}^k\}=s\left(\frac{N_{t+1}}{Q_tK_{t+1}}\right)R_{t+1}.
-\]
+```
 
 - **(F14) Composite labor input**:
 
-\[
+```math
 L_t=H_t^{\Omega}(H_t^e)^{1-\Omega}.
-\]
+```
 
 - **(F15) Entrepreneurial net worth**:
 
-\[
+```math
 N_{t+1}=\gamma V_t+W_t^e.
-\]
+```
 
 - **(F16) Entrepreneurial equity**:
 
-\[
+```math
 V_t=R_t^kQ_{t-1}K_t-\left(R_t+
 \frac{\mu\int_0^{\bar{\omega}_t}\omega R_t^kQ_{t-1}K_t\,dF(\omega)}
 {Q_{t-1}K_t-N_t}\right)(Q_{t-1}K_t-N_t).
-\]
+```
 
-`needs_review`: the paper text around this expression also contains adjacent timing notation with \(N_{t-1}\) in the denominator in one displayed equation before presenting the aggregate difference equation with \(N_t\); the final equation above follows the aggregate difference equation but should be source-checked against the PDF before implementation.
+`needs_review`: the paper text around this expression also contains adjacent timing notation with $`N_{t-1}`$ in the denominator in one displayed equation before presenting the aggregate difference equation with $`N_t`$; the final equation above follows the aggregate difference equation but should be source-checked against the PDF before implementation.
 
 - **(F17) Entrepreneurial consumption**:
 
-\[
+```math
 C_t^e=(1-\gamma)V_t.
-\]
+```
 
 - **(F18) Household labor demand**:
 
-\[
+```math
 (1-\alpha)\Omega\frac{Y_t}{H_t}=X_tW_t.
-\]
+```
 
 - **(F19) Entrepreneurial labor demand**:
 
-\[
+```math
 (1-\alpha)(1-\Omega)\frac{Y_t}{H_t^e}=X_tW_t^e.
-\]
+```
 
 - **(F20) Aggregate net-worth transition**:
 
-\[
+```math
 \begin{aligned}
 N_{t+1}={}&\gamma\left[
 R_t^kQ_{t-1}K_t-\left(R_t+
@@ -207,157 +207,157 @@ R_t^kQ_{t-1}K_t-\left(R_t+
 {Q_{t-1}K_t-N_t}\right)(Q_{t-1}K_t-N_t)\right] \\
 &+(1-\alpha)(1-\Omega)A_tK_t^{\alpha}H_t^{(1-\alpha)\Omega}.
 \end{aligned}
-\]
+```
 
 - **(F21) Retail demand curve**:
 
-\[
+```math
 Y_t(z)=\left(\frac{P_t(z)}{P_t}\right)^{-\epsilon}Y_t^f.
-\]
+```
 
 - **(F22) Calvo reset-price condition**:
 
-\[
+```math
 \sum_{k=0}^{\infty}\theta^kE_{t-1}\left\{
 \Lambda_{t,k}\left(\frac{P_t^{\ast}}{P_{t+k}}\right)^{-\epsilon}Y_{t+k}^{\ast}(z)
 \left[\frac{P_t^{\ast}}{P_{t+k}}-\left(\frac{\epsilon}{\epsilon-1}\right)\frac{P_{t+k}^w}{P_{t+k}}\right]\right\}=0.
-\]
+```
 
 - **(F23) Aggregate price index evolution**:
 
-\[
+```math
 P_t=\left[\theta P_{t-1}^{1-\epsilon}+(1-\theta)(P_t^{\ast})^{1-\epsilon}\right]^{1/(1-\epsilon)}.
-\]
+```
 
 - **(F24) Log-linear resource constraint**:
 
-\[
+```math
 y_t=\frac{C}{Y}c_t+\frac{I}{Y}i_t+\frac{G}{Y}g_t+\frac{C^e}{Y}c_t^e+\cdots+\phi_t^v.
-\]
+```
 
 - **(F25) Log-linear household consumption Euler equation**:
 
-\[
+```math
 c_t=-r_{t+1}+E_t\{c_{t+1}\}.
-\]
+```
 
 - **(F26) Log-linear entrepreneurial consumption**:
 
-\[
+```math
 c_t^e=n_{t+1}+\cdots+\phi_t^{c^e}.
-\]
+```
 
 - **(F27) Log-linear external finance premium**:
 
-\[
+```math
 E_t\{r_{t+1}^k\}-r_{t+1}=-\nu[n_{t+1}-(q_t+k_{t+1})].
-\]
+```
 
 - **(F28) Log-linear return to capital**:
 
-\[
+```math
 r_{t+1}^k=(1-\epsilon)(y_{t+1}-k_{t+1}-x_{t+1})+\epsilon q_{t+1}-q_t.
-\]
+```
 
 - **(F29) Log-linear capital price/investment relation**:
 
-\[
+```math
 q_t=\varphi(i_t-k_t).
-\]
+```
 
 - **(F30) Log-linear aggregate production**:
 
-\[
+```math
 y_t=a_t+\alpha k_t+(1-\alpha)\Omega h_t.
-\]
+```
 
 - **(F31) Log-linear labor-market equilibrium**:
 
-\[
+```math
 y_t-h_t-x_t-c_t=\eta^{-1}h_t.
-\]
+```
 
 - **(F32) Log-linear Phillips curve**:
 
-\[
+```math
 \pi_t=E_{t-1}\{\kappa(-x_t)+\beta\pi_{t+1}\}.
-\]
+```
 
 - **(F33) Log-linear capital transition**:
 
-\[
+```math
 k_{t+1}=\delta i_t+(1-\delta)k_t.
-\]
+```
 
 - **(F34) Log-linear net-worth transition**:
 
-\[
+```math
 n_{t+1}=\frac{\gamma RK}{N}(r_t^k-r_t)+r_t+n_t+\cdots+\phi_t^n.
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F35) Household deposits equal entrepreneurial borrowing**:
 
-\[
+```math
 D_t=B_t.
-\]
+```
 
 - **(F36) CES final-good aggregator**:
 
-\[
+```math
 Y_t^f=\left[\int_0^1Y_t(z)^{(\epsilon-1)/\epsilon}\,dz\right]^{\epsilon/(\epsilon-1)}.
-\]
+```
 
 - **(F37) Retail price index**:
 
-\[
+```math
 P_t=\left[\int_0^1P_t(z)^{1-\epsilon}\,dz\right]^{1/(1-\epsilon)}.
-\]
+```
 
 - **(F38) Nonlinear resource constraint with monitoring costs**:
 
-\[
+```math
 Y_t^f=C_t+C_t^e+I_t+G_t+\mu\int_0^{\bar{\omega}_t}\omega\,dF(\omega)R_t^kQ_{t-1}K_t.
-\]
+```
 
 - **(F39) Government budget constraint**:
 
-\[
+```math
 G_t=\frac{M_t-M_{t-1}}{P_t}+T_t.
-\]
+```
 
 - **(F40) Gross nominal interest definition**:
 
-\[
+```math
 i_{t+1}\equiv R_{t+1}^n\frac{P_{t+1}}{P_t}-1.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F41) Monetary policy rule**:
 
-\[
+```math
 r_t^n=\rho r_{t-1}^n+\varsigma\pi_{t-1}+\varepsilon_t^{rn}.
-\]
+```
 
 - **(F42) Government-spending process**:
 
-\[
+```math
 g_t=\rho_g g_{t-1}+\varepsilon_t^g.
-\]
+```
 
 - **(F43) Technology process**:
 
-\[
+```math
 a_t=\rho_a a_{t-1}+\varepsilon_t^a.
-\]
+```
 
 - **(F44) Investment-delay extension, if the `AL` variant uses the paper's one-period planning lag**:
 
-\[
+```math
 E_t\left\{q_{t+j}-\varphi(i_{t+j}-k_{t+j})\right\}=0,\qquad j=1\ \text{in the simulations}.
-\]
+```
 
 `needs_review`: the source paper contains this extension, but the model-index row alone does not prove that `NK_BGG99AL` is exactly the investment-delay variant. This equation is included as a variant candidate rather than as a confirmed baseline replacement for (F29).
 
@@ -365,54 +365,54 @@ E_t\left\{q_{t+j}-\varphi(i_{t+j}-k_{t+j})\right\}=0,\qquad j=1\ \text{in the si
 
 The computational system is log-linearized around a deterministic steady state. Thus the log-deviation variables have zero steady state:
 
-\[
+```math
 \bar{a}=\bar{g}=\bar{c}=\bar{i}=\bar{y}=\bar{k}=\bar{n}=\bar{q}=\bar{x}=\bar{\pi}=0.
-\]
+```
 
 The nonlinear normalization and calibration targets stated in the paper are:
 
-\[
+```math
 \bar{R}=\beta^{-1},\qquad \bar{Q}=1,\qquad \bar{G}/\bar{Y}=0.2,\qquad \bar{K}/\bar{N}=2.
-\]
+```
 
 The steady-state external finance premium target is
 
-\[
+```math
 \bar{R}^k-\bar{R}=200\ \text{annual basis points}.
-\]
+```
 
 The steady-state default/failure target is
 
-\[
+```math
 F(\bar{\omega})=0.03\ \text{annualized}.
-\]
+```
 
 The paper calibrates the entrepreneurial death rate, idiosyncratic-risk dispersion, and monitoring cost as
 
-\[
+```math
 1-\gamma=0.0272,\qquad \operatorname{Var}(\log\omega)=0.28,\qquad \mu=0.12.
-\]
+```
 
 Other baseline calibrations reported in the source include
 
-\[
+```math
 \beta=0.99,\quad \eta=3.0,\quad \alpha=0.35,\quad (1-\alpha)(1-\Omega)=0.64,\quad \delta=0.025,\quad \varphi=0.25.
-\]
+```
 
 Shock and policy parameters reported in the source include
 
-\[
+```math
 \rho_a=1.0,\qquad \rho_g=0.95,\qquad \theta=0.75,\qquad \rho=0.9,\qquad \varsigma=0.11.
-\]
+```
 
 `needs_review`: the source gives calibration targets and log-linear steady-state implications, not a full nonlinear `steady_state_model` ordering. A later implementation pass should reconstruct exact steady-state levels from the chosen MMB `.mod` variant.
 
 ## 7. Timing & Form Conventions
 
-- Capital purchased in period \(t\) is denoted \(K_{t+1}\) because it is used in production in \(t+1\).
-- The production function in period \(t\) uses the capital stock purchased in the preceding period.
-- Entrepreneurial net worth \(N_{t+1}\) is the end-of-period state carried into capital purchases and borrowing.
-- Retailers set prices before period-\(t\) aggregate uncertainty is realized in the Bernanke-Woodford timing used for the Phillips curve.
+- Capital purchased in period $`t`$ is denoted $`K_{t+1}`$ because it is used in production in $`t+1`$.
+- The production function in period $`t`$ uses the capital stock purchased in the preceding period.
+- Entrepreneurial net worth $`N_{t+1}`$ is the end-of-period state carried into capital purchases and borrowing.
+- Retailers set prices before period-$`t`$ aggregate uncertainty is realized in the Bernanke-Woodford timing used for the Phillips curve.
 - The computational block is log-linearized. Lower-case variables denote percent deviations from steady state, except inflation and interest-rate notation as defined in the paper.
 - The baseline capital-price equation is (F29). The investment-delay extension replaces it with expected future relation (F44) when the lagged-investment variant is confirmed.
 - The model is not a `model(linear)` source file here; it is a paper-side log-linear system to be mapped to implementation later.
@@ -421,47 +421,47 @@ Shock and policy parameters reported in the source include
 
 | Category | Symbol / ASCII hint | Meaning | Main equation(s) |
 |---|---|---|---|
-| Endogenous | \(C_t\), `c` | household consumption | (F1), (F24), (F25) |
-| Endogenous | \(D_t\), `d` | household deposits / loanable funds | (F35) |
-| Endogenous | \(H_t\), `h` | household labor | (F2), (F18), (F30), (F31) |
-| Endogenous | \(M_t/P_t\), `m` | real money balances | (F3), (F39) |
-| Endogenous | \(B_t\), `b` | entrepreneurial borrowing | (F4), (F35) |
-| Endogenous | \(K_t\), `k` | capital stock | (F10), (F33) |
-| Endogenous | \(I_t\), `i` | investment | (F10), (F29), (F44) |
-| Endogenous | \(Q_t\), `q` | relative price of capital | (F11), (F29), (F44) |
-| Endogenous | \(N_t\), `n` | entrepreneurial net worth | (F15), (F20), (F34) |
-| Endogenous | \(V_t\), `v` | entrepreneurial equity | (F16) |
-| Endogenous | \(C_t^e\), `ce` | entrepreneurial consumption | (F17), (F26), (F38) |
-| Endogenous | \(Y_t\), `y` | wholesale/final output, depending on context | (F9), (F24), (F30), (F38) |
-| Endogenous | \(L_t\), `l` | composite labor input | (F14) |
-| Endogenous | \(W_t\), `w` | household real wage | (F18) |
-| Endogenous | \(W_t^e\), `we` | entrepreneurial wage | (F19) |
-| Endogenous | \(X_t\), `x` | retail markup over wholesale goods | (F12), (F18), (F19), (F31), (F32) |
-| Endogenous | \(R_t\), `r` | riskless real gross return / log real rate | (F1), (F4), (F13), (F40) |
-| Endogenous | \(R_t^k\), `rk` | gross return to capital | (F12), (F16), (F20), (F28), (F34) |
-| Endogenous | \(R_t^n\), `rn` | gross nominal return / policy instrument | (F3), (F40), (F41) |
-| Endogenous | \(\pi_t\), `pi` | inflation | (F32), (F41) |
-| Endogenous | \(\bar{\omega}_t\), `omega_bar` | default cutoff | (F4), (F7), (F16), (F20), (F38) |
-| Endogenous | \(P_t^{\ast}\), `pstar` | Calvo reset price | (F22), (F23) |
-| Endogenous | \(Y_t(z)\), `yz` | retailer-level demand/output | (F21) |
-| Exogenous | \(a_t\), `a` | technology log-deviation | (F30), (F43) |
-| Exogenous | \(g_t\), `g` | government-spending log-deviation | (F24), (F42) |
-| Exogenous shock | \(\varepsilon_t^{rn}\), `eps_rn` | monetary policy innovation | (F41) |
-| Exogenous shock | \(\varepsilon_t^g\), `eps_g` | government-spending innovation | (F42) |
-| Exogenous shock | \(\varepsilon_t^a\), `eps_a` | technology innovation | (F43) |
-| Parameter | \(\beta\) | household discount factor | (F1), (F22), (F32) |
-| Parameter | \(\xi\) | utility weight on real balances/leisure | (F2), (F3) |
-| Parameter | \(\zeta\) | money-demand scale parameter | (F3) |
-| Parameter | \(\alpha\) | capital share | (F9), (F12), (F18), (F19), (F20), (F30) |
-| Parameter | \(\delta\) | depreciation rate | (F10), (F12), (F33) |
-| Parameter | \(\gamma\) | entrepreneurial survival probability | (F15), (F17), (F20), (F34) |
-| Parameter | \(\mu\) | monitoring cost share | (F4), (F16), (F20), (F38) |
-| Parameter | \(\Omega\) | household-labor share in composite labor | (F14), (F18), (F19), (F30) |
-| Parameter | \(\theta\) | Calvo non-repricing probability | (F22), (F23), (F32) |
-| Parameter | \(\epsilon\) | demand elasticity / return-weight parameter in OCR source | (F21), (F22), (F23), (F28) |
-| Parameter | \(\eta\) | labor supply elasticity parameter | (F31) |
-| Parameter | \(\nu\) | financial accelerator elasticity | (F27) |
-| Parameter | \(\varphi\) | capital-price/investment elasticity | (F29), (F44) |
-| Parameter | \(\kappa\) | Phillips-curve slope | (F32) |
-| Parameter | \(\rho\), \(\varsigma\) | policy-rule persistence and inflation response | (F41) |
-| Parameter | \(\rho_g\), \(\rho_a\) | shock persistence | (F42), (F43) |
+| Endogenous | $`C_t`$, `c` | household consumption | (F1), (F24), (F25) |
+| Endogenous | $`D_t`$, `d` | household deposits / loanable funds | (F35) |
+| Endogenous | $`H_t`$, `h` | household labor | (F2), (F18), (F30), (F31) |
+| Endogenous | $`M_t/P_t`$, `m` | real money balances | (F3), (F39) |
+| Endogenous | $`B_t`$, `b` | entrepreneurial borrowing | (F4), (F35) |
+| Endogenous | $`K_t`$, `k` | capital stock | (F10), (F33) |
+| Endogenous | $`I_t`$, `i` | investment | (F10), (F29), (F44) |
+| Endogenous | $`Q_t`$, `q` | relative price of capital | (F11), (F29), (F44) |
+| Endogenous | $`N_t`$, `n` | entrepreneurial net worth | (F15), (F20), (F34) |
+| Endogenous | $`V_t`$, `v` | entrepreneurial equity | (F16) |
+| Endogenous | $`C_t^e`$, `ce` | entrepreneurial consumption | (F17), (F26), (F38) |
+| Endogenous | $`Y_t`$, `y` | wholesale/final output, depending on context | (F9), (F24), (F30), (F38) |
+| Endogenous | $`L_t`$, `l` | composite labor input | (F14) |
+| Endogenous | $`W_t`$, `w` | household real wage | (F18) |
+| Endogenous | $`W_t^e`$, `we` | entrepreneurial wage | (F19) |
+| Endogenous | $`X_t`$, `x` | retail markup over wholesale goods | (F12), (F18), (F19), (F31), (F32) |
+| Endogenous | $`R_t`$, `r` | riskless real gross return / log real rate | (F1), (F4), (F13), (F40) |
+| Endogenous | $`R_t^k`$, `rk` | gross return to capital | (F12), (F16), (F20), (F28), (F34) |
+| Endogenous | $`R_t^n`$, `rn` | gross nominal return / policy instrument | (F3), (F40), (F41) |
+| Endogenous | $`\pi_t`$, `pi` | inflation | (F32), (F41) |
+| Endogenous | $`\bar{\omega}_t`$, `omega_bar` | default cutoff | (F4), (F7), (F16), (F20), (F38) |
+| Endogenous | $`P_t^{\ast}`$, `pstar` | Calvo reset price | (F22), (F23) |
+| Endogenous | $`Y_t(z)`$, `yz` | retailer-level demand/output | (F21) |
+| Exogenous | $`a_t`$, `a` | technology log-deviation | (F30), (F43) |
+| Exogenous | $`g_t`$, `g` | government-spending log-deviation | (F24), (F42) |
+| Exogenous shock | $`\varepsilon_t^{rn}`$, `eps_rn` | monetary policy innovation | (F41) |
+| Exogenous shock | $`\varepsilon_t^g`$, `eps_g` | government-spending innovation | (F42) |
+| Exogenous shock | $`\varepsilon_t^a`$, `eps_a` | technology innovation | (F43) |
+| Parameter | $`\beta`$ | household discount factor | (F1), (F22), (F32) |
+| Parameter | $`\xi`$ | utility weight on real balances/leisure | (F2), (F3) |
+| Parameter | $`\zeta`$ | money-demand scale parameter | (F3) |
+| Parameter | $`\alpha`$ | capital share | (F9), (F12), (F18), (F19), (F20), (F30) |
+| Parameter | $`\delta`$ | depreciation rate | (F10), (F12), (F33) |
+| Parameter | $`\gamma`$ | entrepreneurial survival probability | (F15), (F17), (F20), (F34) |
+| Parameter | $`\mu`$ | monitoring cost share | (F4), (F16), (F20), (F38) |
+| Parameter | $`\Omega`$ | household-labor share in composite labor | (F14), (F18), (F19), (F30) |
+| Parameter | $`\theta`$ | Calvo non-repricing probability | (F22), (F23), (F32) |
+| Parameter | $`\epsilon`$ | demand elasticity / return-weight parameter in OCR source | (F21), (F22), (F23), (F28) |
+| Parameter | $`\eta`$ | labor supply elasticity parameter | (F31) |
+| Parameter | $`\nu`$ | financial accelerator elasticity | (F27) |
+| Parameter | $`\varphi`$ | capital-price/investment elasticity | (F29), (F44) |
+| Parameter | $`\kappa`$ | Phillips-curve slope | (F32) |
+| Parameter | $`\rho`$, $`\varsigma`$ | policy-rule persistence and inflation response | (F41) |
+| Parameter | $`\rho_g`$, $`\rho_a`$ | shock persistence | (F42), (F43) |

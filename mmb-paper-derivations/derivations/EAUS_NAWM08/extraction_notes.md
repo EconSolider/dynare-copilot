@@ -29,7 +29,7 @@
 - The paper has a compact source-level model section with equations (1)-(39), Appendix A functional forms, and Appendix B calibration tables. It is not a full implementation appendix.
 - MinerU captured most displayed equations, but several formulas show OCR or line-wrap damage:
   - firm labor FOC text around the marginal product of labor;
-  - consumption-good \(\Gamma^\dagger\) definition after equation (30);
+  - consumption-good $`\Gamma^\dagger`$ definition after equation (30);
   - aggregate transaction-cost notation in the resource constraint;
   - some non-ASCII or malformed symbols in country/star notation.
 - The derivation marks these areas as `needs_review` instead of silently normalizing them.
@@ -43,7 +43,7 @@
 ## Deferred Issues
 
 - Full formula-level review should compare the compact source equations against the PDF or a cleaner appendix before using the derivation for code generation.
-- The exact investment FOC derivative convention in equation (5) and the import-adjustment \(\Gamma^\dagger\) terms should be checked.
+- The exact investment FOC derivative convention in equation (5) and the import-adjustment $`\Gamma^\dagger`$ terms should be checked.
 - The government budget constraint timing in the implementation differs from the paper's next-period stock notation and should be audited before promotion.
 - Dynare runtime validation was not run.
 - The entry was not promoted to `.agents/skills/dynare-copilot/references/model-archive/`.

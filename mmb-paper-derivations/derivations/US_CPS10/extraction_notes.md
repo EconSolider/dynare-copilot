@@ -14,7 +14,7 @@
 - Paper-side structural primitives are clear in Section V.A: household objective, budget constraint, consumption aggregator, production function, Calvo price-setting problem, Taylor rule, and exogenous target process.
 - The paper states that the model is solved by scaling variables by unit-root technology and log-linearizing around the nonstochastic steady state, but it does not print the complete log-linear system used by Rep-MMB.
 - The derivation therefore records the primitives as paper source evidence and the full linear system as `implementation_cross_check` evidence from `.agents/skills/dynare-copilot/references/examples/US_CPS10_rep.mod`.
-- MinerU OCR issue: equation (21) repeats \(\log\pi_t^*\) on both sides. The lagged process in the implementation and surrounding prose is used in the derivation but remains marked `needs_review`.
+- MinerU OCR issue: equation (21) repeats $`\log\pi_t^*`$ on both sides. The lagged process in the implementation and surrounding prose is used in the derivation but remains marked `needs_review`.
 
 ## Implementation Cross-Check
 

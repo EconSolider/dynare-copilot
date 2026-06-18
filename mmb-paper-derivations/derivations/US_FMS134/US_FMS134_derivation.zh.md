@@ -19,27 +19,27 @@
 
 定量来源模型在简单分析模型基础上加入资本、投资、偏好冲击和劳动习惯。在线性化前的水平记号下，代表性家庭最大化：
 
-\[
+```math
 E_t\sum_{i=0}^{\infty}\beta^i
 \left[
 e^{\epsilon_{c,t+i}}\log(C_{t+i}+\alpha_g G_{t+i})
 -e^{\epsilon_{n,t+i}}\frac{\eta}{1+\nu}
 \left(\frac{N_{t+i}}{N_{t+i-1}^{\phi}}\right)^{1+\nu}
 \right].
-\]
+```
 
 约束为预算约束：
 
-\[
+```math
 C_t+X_t+E_t\{q_{t,t+1}B_{t+1}\}
 =W_tN_t+R^k_tK_t-T_t+B_t .
-\]
+```
 
 以及物理资本积累：
 
-\[
+```math
 K_{t+1}=(1-\delta)K_t+X_t .
-\]
+```
 
 在中等规模稳健性模型中，MMB 实现还加入习惯调整后的消费服务、投资调整成本和可变利用率。这些细节作为 `implementation_cross_check` 使用，因为论文对中等规模模型只作压缩描述。
 
@@ -47,16 +47,16 @@ K_{t+1}=(1-\delta)K_t+X_t .
 
 论文中定量基准的生产端有最终品：
 
-\[
+```math
 Y_t=K_t^{\theta}\left(e^{Z_t}N_t\right)^{1-\theta},
-\]
+```
 
 完全竞争下的要素价格为：
 
-\[
+```math
 R^k_t=\theta\frac{Y_t}{K_t}, \qquad
 W_t=(1-\theta)\frac{Y_t}{N_t}.
-\]
+```
 
 中等规模稳健性模型沿用 Christiano-Eichenbaum-Evans / Smets-Wouters 结构，包括最终品生产者、中间品生产者、Calvo 定价和工资设定。下面的精确线性价格/工资块标为 `needs_review`，因为本地 Markdown 只概述该模块，没有打印所有中等规模 FOC。
 
@@ -64,19 +64,19 @@ W_t=(1-\theta)\frac{Y_t}{N_t}.
 
 来源基准中，政府购买由一次总付税融资：
 
-\[
+```math
 T_t=G_t.
-\]
+```
 
 政府支出的平稳成分服从内生反馈规则：
 
-\[
+```math
 G_t e^{-Z_t}=\bar{G}^s\widetilde{G}_t e^{\epsilon_{g,t}},
-\]
+```
 
-\[
+```math
 \log\widetilde{G}_t=-\varphi_g\left(\Delta\log Y_t-\log\gamma_z\right).
-\]
+```
 
 在 MMB 中等规模实现中，同一机制表现为 `g` 和 `gf` 的线性规则，即政府支出响应相对于趋势的产出增长。
 
@@ -88,180 +88,180 @@ G_t e^{-Z_t}=\bar{G}^s\widetilde{G}_t e^{\epsilon_{g,t}},
 
 - **(F1) 弹性有效资本** (`implementation_cross_check`):
 
-\[
+```math
 k^f_t=u^f_t+\bar{k}^f_{t-1}-e^z_t .
-\]
+```
 
 - **(F2) 弹性物理资本积累** (`implementation_cross_check`):
 
-\[
+```math
 \bar{k}^f_t=\frac{1-\delta}{e^\gamma}(\bar{k}^f_{t-1}-e^z_t)
 \left(1-\frac{1-\delta}{e^\gamma}\right)
 \left[x^f_t+\eta_k e^{2\gamma}(1+\beta)e^x_t\right].
-\]
+```
 
 - **(F3) 弹性消费服务边际效用** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 \lambda^f_t =
 a_1 c^{\astf}_{t+1}-a_2 c^{\astf}_t+a_3 c^{\astf}_{t-1}
 a_4 e^z_t+a_5 e^b_t .
-\]
+```
 
 - **(F4) 弹性消费 Euler 方程** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 c^{\astf}_t=b_1c^{\astf}_{t+1}-b_2c^{\astf}_{t+2}
 b_3c^{\astf}_{t-1}+b_4e^z_t-b_5r^f_t+e^b_t .
-\]
+```
 
 - **(F5) 带 Edgeworth 项的弹性消费服务**:
 
-\[
+```math
 c^{\astf}_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c^f_t
 \frac{\alpha_g g_{ss}}{c_{ss}+\alpha_g g_{ss}}g^f_t .
-\]
+```
 
 - **(F6) 弹性投资方程** (`implementation_cross_check`):
 
-\[
+```math
 x^f_t=\frac{1}{1+\beta}(x^f_{t-1}-e^z_t)
 \frac{1}{\eta_k e^{2\gamma}(1+\beta)}q^f_t
 \frac{\beta}{1+\beta}(x^f_{t+1}+e^z_{t+1})+e^x_t .
-\]
+```
 
 - **(F7) 弹性 Tobin's Q** (`implementation_cross_check`):
 
-\[
+```math
 q^f_t=\frac{\beta(1-\delta)}{e^\gamma}q^f_{t+1}
 \left(1-\frac{\beta(1-\delta)}{e^\gamma}\right)r^{k,f}_{t+1}-r^f_t .
-\]
+```
 
 - **(F8) 弹性资本利用率** (`implementation_cross_check`):
 
-\[
+```math
 u^f_t=\eta_u r^{k,f}_t .
-\]
+```
 
 - **(F9) 弹性生产函数** (`implementation_cross_check`):
 
-\[
+```math
 y^f_t=(1+f_{ss}/y_{ss})\left[\alpha k^f_t+(1-\alpha)n^f_t\right].
-\]
+```
 
 - **(F10) 弹性劳动需求** (`implementation_cross_check`):
 
-\[
+```math
 w^f_t=\alpha k^f_t-\alpha n^f_t .
-\]
+```
 
 - **(F11) 弹性资本租金率** (`implementation_cross_check`):
 
-\[
+```math
 r^{k,f}_t=(1-\alpha)n^f_t-(1-\alpha)k^f_t .
-\]
+```
 
 - **(F12) 弹性工资曲线** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 w^f_t=\omega n^f_t+a_5 e^b_t-\lambda^f_t .
-\]
+```
 
 - **(F13) 弹性政府支出规则**:
 
-\[
+```math
 g^f_t=-\varphi_g(y^f_t-y^f_{t-1}+e^z_t)+e^g_t .
-\]
+```
 
 ### 黏性价格/黏性工资块
 
 - **(F14) 黏性有效资本** (`implementation_cross_check`):
 
-\[
+```math
 k_t=u_t+\bar{k}_{t-1}-e^z_t .
-\]
+```
 
 - **(F15) 黏性物理资本积累** (`implementation_cross_check`):
 
-\[
+```math
 \bar{k}_t=\frac{1-\delta}{e^\gamma}(\bar{k}_{t-1}-e^z_t)
 \left(1-\frac{1-\delta}{e^\gamma}\right)
 \left[x_t+\eta_k e^{2\gamma}(1+\beta)e^x_t\right].
-\]
+```
 
 - **(F16) 黏性消费服务边际效用** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 \lambda_t =
 a_1 c^{\ast}_{t+1}-a_2 c^{\ast}_t+a_3 c^{\ast}_{t-1}
 a_4 e^z_t+a_5 e^b_t .
-\]
+```
 
 - **(F17) 黏性消费 Euler 方程** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 c^{\ast}_t=b_1c^{\ast}_{t+1}-b_2c^{\ast}_{t+2}
 b_3c^{\ast}_{t-1}+b_4e^z_t-b_5(r_t-\pi_{t+1})+e^b_t .
-\]
+```
 
 - **(F18) 带 Edgeworth 项的黏性消费服务**:
 
-\[
+```math
 c^{\ast}_t=\frac{c_{ss}}{c_{ss}+\alpha_g g_{ss}}c_t
 \frac{\alpha_g g_{ss}}{c_{ss}+\alpha_g g_{ss}}g_t .
-\]
+```
 
 - **(F19) 黏性投资方程** (`implementation_cross_check`):
 
-\[
+```math
 x_t=\frac{1}{1+\beta}(x_{t-1}-e^z_t)
 \frac{1}{\eta_k e^{2\gamma}(1+\beta)}q_t
 \frac{\beta}{1+\beta}(x_{t+1}+e^z_{t+1})+e^x_t .
-\]
+```
 
 - **(F20) 黏性 Tobin's Q** (`implementation_cross_check`):
 
-\[
+```math
 q_t=\frac{\beta(1-\delta)}{e^\gamma}q_{t+1}
 \left(1-\frac{\beta(1-\delta)}{e^\gamma}\right)r^k_{t+1}
 -(r_t-\pi_{t+1}) .
-\]
+```
 
 - **(F21) 黏性资本利用率** (`implementation_cross_check`):
 
-\[
+```math
 u_t=\eta_u r^k_t .
-\]
+```
 
 - **(F22) 黏性生产函数** (`implementation_cross_check`):
 
-\[
+```math
 y_t=(1+f_{ss}/y_{ss})\left[\alpha k_t+(1-\alpha)n_t\right].
-\]
+```
 
 - **(F23) 黏性劳动需求** (`implementation_cross_check`):
 
-\[
+```math
 w_t=mc_t+\alpha k_t-\alpha n_t .
-\]
+```
 
 - **(F24) 黏性资本租金率** (`implementation_cross_check`):
 
-\[
+```math
 r^k_t=mc_t-(1-\alpha)k_t+(1-\alpha)n_t .
-\]
+```
 
 - **(F25) 价格 Phillips 曲线** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 \pi_t=\frac{\beta}{1+\gamma_p\beta}\pi_{t+1}
 \frac{\gamma_p}{1+\gamma_p\beta}\pi_{t-1}
 \kappa mc_t+e^p_t .
-\]
+```
 
 - **(F26) 工资 Phillips 曲线** (`needs_review`, `implementation_cross_check`):
 
-\[
+```math
 w_t=\frac{
 \frac{1}{1+\beta}w_{t-1}+\frac{\beta}{1+\beta}w_{t+1}
 \kappa_w mrs_t+\frac{\gamma_w}{1+\beta}\pi_{t-1}
@@ -269,179 +269,179 @@ w_t=\frac{
 \frac{\beta}{1+\beta}\pi_{t+1}
 -\frac{1-\rho_z\beta}{1+\beta}e^z_t
 }{1+\kappa_w}+e^w_t .
-\]
+```
 
 - **(F27) 边际替代率** (`implementation_cross_check`):
 
-\[
+```math
 mrs_t=\omega n_t+a_5e^b_t-\lambda_t .
-\]
+```
 
 - **(F28) 黏性政府支出规则**:
 
-\[
+```math
 g_t=-\varphi_g(y_t-y_{t-1}+e^z_t)+e^g_t .
-\]
+```
 
 - **(F29) 货币政策规则** (`implementation_cross_check`):
 
-\[
+```math
 r_t=\rho_s r_{t-1}
 (1-\rho_s)\left[\rho_{\pi}\pi_t+\rho_y(y_t-y^f_t)\right]
 \rho_{\Delta y}\left[(y_t-y_{t-1})+(y^f_{t-1}-y^f_t)\right]
 \zeta^r_t .
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F30) 弹性资源约束** (`implementation_cross_check`):
 
-\[
+```math
 y^f_t=c_{ss}/y_{ss}\,c^f_t+x_{ss}/y_{ss}\,x^f_t
 g_{ss}/y_{ss}\,g^f_t+\bar{r}^k k_{ss}/y_{ss}\,u^f_t .
-\]
+```
 
 - **(F31) 黏性资源约束** (`implementation_cross_check`):
 
-\[
+```math
 y_t=c_{ss}/y_{ss}\,c_t+x_{ss}/y_{ss}\,x_t
 g_{ss}/y_{ss}\,g_t+\bar{r}^k k_{ss}/y_{ss}\,u_t .
-\]
+```
 
 - **(F32) 政府预算恒等式**:
 
-\[
+```math
 T_t=G_t .
-\]
+```
 
 - **(F33) 产出增长观测方程**:
 
-\[
+```math
 dyobs_t=y_t-y_{t-1}+\gamma_z+e^z_t .
-\]
+```
 
 - **(F34) 消费增长观测方程**:
 
-\[
+```math
 dcobs_t=c_t-c_{t-1}+\gamma_z+e^z_t .
-\]
+```
 
 - **(F35) 投资增长观测方程**:
 
-\[
+```math
 dxobs_t=x_t-x_{t-1}+\gamma_z+e^z_t .
-\]
+```
 
 - **(F36) 政府支出增长观测方程**:
 
-\[
+```math
 dgobs_t=g_t-g_{t-1}+\gamma_z+e^z_t .
-\]
+```
 
 - **(F37) 工资增长观测方程**:
 
-\[
+```math
 dwobs_t=w_t-w_{t-1}+\gamma_z+e^z_t .
-\]
+```
 
 - **(F38) 通胀观测方程**:
 
-\[
+```math
 inflobs_t=\pi_t+\bar{\pi}_{obs}.
-\]
+```
 
 - **(F39) 名义利率观测方程**:
 
-\[
+```math
 robs_t=r_t+\bar{r}_{obs}.
-\]
+```
 
 - **(F40) 工时观测方程**:
 
-\[
+```math
 labobs2_t=n_t+\bar{n}_{obs}.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F41) 技术冲击**:
 
-\[
+```math
 e^z_t=\rho_z e^z_{t-1}+\zeta^z_t .
-\]
+```
 
 - **(F42) 偏好/风险溢价冲击** (`implementation_cross_check`):
 
-\[
+```math
 e^b_t=\rho_b e^b_{t-1}+\zeta^b_t .
-\]
+```
 
 - **(F43) 投资冲击** (`implementation_cross_check`):
 
-\[
+```math
 e^x_t=\rho_x e^x_{t-1}+\zeta^x_t .
-\]
+```
 
 - **(F44) 价格加成冲击** (`implementation_cross_check`):
 
-\[
+```math
 e^p_t=\rho_p e^p_{t-1}+\zeta^p_t .
-\]
+```
 
 - **(F45) 政府支出冲击**:
 
-\[
+```math
 e^g_t=\rho_g e^g_{t-1}+\zeta^g_t .
-\]
+```
 
 - **(F46) 工资加成冲击** (`implementation_cross_check`):
 
-\[
+```math
 e^w_t=\rho_w e^w_{t-1}+\zeta^w_t .
-\]
+```
 
 - **(F47) 货币政策冲击** (`implementation_cross_check`):
 
-\[
+```math
 \zeta^r_t \sim iid(0,\sigma_r^2).
-\]
+```
 
 ## 6. Steady-State Solution
 
 由于 `US_FMS134` 实现为 `model(linear)`，模型块中的所有动态变量在确定性稳态为零。实现文件在模型块之前计算稳态比率和线性化系数：
 
-\[
+```math
 e^\gamma=\exp(\gamma_z/100), \qquad
 \bar{r}^k=\frac{e^\gamma}{\beta}-(1-\delta).
-\]
+```
 
 生产端稳态比率为：
 
-\[
+```math
 \bar{w}=
 \left[
 \frac{1}{1+\lambda_p}
 \frac{\alpha^\alpha(1-\alpha)^{1-\alpha}}{(\bar{r}^k)^\alpha}
 \right]^{1/(1-\alpha)},
-\]
+```
 
-\[
+```math
 k/y=\frac{k/l}{y/l}, \qquad
 x/y=\frac{\left(1-\frac{1-\delta}{e^\gamma}\right)e^\gamma k/l}{y/l},
 \qquad c/y=1-x/y-g/y.
-\]
+```
 
 线性 Phillips 系数为：
 
-\[
+```math
 \kappa=\frac{(1-\beta\theta_p)(1-\theta_p)}{\theta_p(1+\beta\gamma_p)},
-\]
+```
 
-\[
+```math
 \kappa_w=
 \frac{(1-\beta\theta_w)(1-\theta_w)}
 {\theta_w(1+\beta)(1+\omega(1+1/\lambda_w))}.
-\]
+```
 
 效用/互补性稳态项通过 (F5) 和 (F18) 中的 `csy`、`gsy` 与 `alphag` 进入。运行层面的稳态验证延后。
 

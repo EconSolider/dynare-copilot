@@ -18,138 +18,138 @@ Provenance: model ID `US_ACELswt`; paper "Firm-specific capital, nominal rigidit
 
 The competitive final-good firm combines differentiated intermediate goods:
 
-\[
+```math
 Y_t=\left[\int_0^1 y_t(i)^{1/\lambda_f}\,di\right]^{\lambda_f},
 \qquad 1\leq \lambda_f<\infty .
-\]
+```
 
 It chooses inputs to maximize final-good profit taking all prices as given.
 
 ### 2.2 Intermediate-good firms
 
-For the homogeneous-capital benchmark, intermediate producer \(i\) uses:
+For the homogeneous-capital benchmark, intermediate producer $`i`$ uses:
 
-\[
+```math
 y_t(i)=K_t(i)^\alpha\left(z_t h_t(i)\right)^{1-\alpha}-\phi z_t^{\ast},
 \qquad
 z_t^{\ast}=\Upsilon_t^{\alpha/(1-\alpha)}z_t .
-\]
+```
 
 The firm sets prices under Calvo frictions. If it cannot re-optimize, it indexes to lagged inflation. Its discounted nominal profit objective is:
 
-\[
+```math
 E_t\sum_{j=0}^{\infty}\beta^j v_{t+j}\left[
 P_{t+j}(i)y_{t+j}(i)
 -P_{t+j}\left(w_{t+j}R_{t+j}h_{t+j}(i)+r^k_{t+j}K_{t+j}(i)\right)
 \right].
-\]
+```
 
 For the firm-specific-capital model, each firm owns predetermined physical capital. It chooses price, employment, utilization, and investment to maximize:
 
-\[
+```math
 E_t\sum_{j=0}^{\infty}\beta^j v_{t+j}\left\{
 P_{t+j}(i)y_{t+j}(i)
 -P_{t+j}R_{t+j}w_{t+j}h_{t+j}(i)
 -P_{t+j}\Upsilon_{t+j}^{-1}\left[I_{t+j}(i)+a(u_{t+j}(i))\bar K_{t+j}(i)\right]
 \right\}.
-\]
+```
 
 ### 2.3 Households
 
-Household \(j\) has habit preferences over consumption and hours:
+Household $`j`$ has habit preferences over consumption and hours:
 
-\[
+```math
 E_t^j\sum_{\ell=0}^{\infty}\beta^{\ell-t}
 \left[
 \log(C_{t+\ell}-bC_{t+\ell-1})
 -\psi_L\frac{h_{j,t+\ell}^2}{2}
 \right].
-\]
+```
 
 The nominal asset accumulation constraint is:
 
-\[
+```math
 \begin{aligned}
 M_{t+1}={}&R_t\left[M_t-Q_t+(x_t-1)M_t^a\right]+A_{j,t}+Q_t+W_{j,t}h_{j,t} \\
 &+P_t r_t^k u_t\bar K_t+D_t-(1+\eta(V_t))P_tC_t
 -P_t\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right].
 \end{aligned}
-\]
+```
 
 Households also choose wage offers subject to Calvo wage frictions and wage indexation.
 
 ## 3. First-Order Conditions
 
-- **(F1) Final-good demand for variety \(i\)**:
+- **(F1) Final-good demand for variety $`i`$**:
 
-\[
+```math
 \frac{y_t(i)}{Y_t}=\left(\frac{P_t}{P_t(i)}\right)^{\lambda_f/(\lambda_f-1)} .
-\]
+```
 
 - **(F2) Aggregate final-good price index**:
 
-\[
+```math
 P_t=\left[\int_0^1 P_t(i)^{1/(1-\lambda_f)}\,di\right]^{1-\lambda_f}.
-\]
+```
 
 - **(F3) Price indexation for non-reoptimizing firms**:
 
-\[
+```math
 P_t(i)=\pi_{t-1}P_{t-1}(i).
-\]
+```
 
 - **(F4) Capital-service definition**:
 
-\[
+```math
 K_t=u_t\bar K_t .
-\]
+```
 
 - **(F5) Money-demand FOC**:
 
-\[
+```math
 R_t=1+\eta'\left(\frac{P_tC_t}{Q_t}\right)\left(\frac{P_tC_t}{Q_t}\right)^2 .
-\]
+```
 
 - **(F6) Steady-state Fisher relation on the balanced-growth path**:
 
-\[
+```math
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
-\]
+```
 
 - **(F7) Wage-services aggregator**:
 
-\[
+```math
 H_t=\left[\int_0^1 h_{j,t}^{1/\lambda_w}\,dj\right]^{\lambda_w},
 \qquad 1\leq\lambda_w<\infty .
-\]
+```
 
-- **(F8) Demand for household labor type \(j\)**:
+- **(F8) Demand for household labor type $`j`$**:
 
-\[
+```math
 h_{j,t}=\left(\frac{W_t}{W_{j,t}}\right)^{\lambda_w/(\lambda_w-1)}H_t .
-\]
+```
 
 - **(F9) Aggregate wage index**:
 
-\[
+```math
 W_t=\left[\int_0^1 W_{j,t}^{1/(1-\lambda_w)}\,dj\right]^{1-\lambda_w}.
-\]
+```
 
 - **(F10) Wage indexation for non-reoptimizing households**:
 
-\[
+```math
 W_{j,t}=\pi_{t-1}\mu_{z^{\ast}}W_{j,t-1}.
-\]
+```
 
 - **(F11) Inflation equation, paper reduced form**:
 
-\[
+```math
 \Delta\hat\pi_t=E\left[\beta\Delta\hat\pi_{t+1}+\gamma\hat s_t\mid\Omega_t\right],
 \qquad
 \gamma=\frac{(1-\xi_p)(1-\beta\xi_p)}{\xi_p}\chi .
-\]
+```
 
-For homogeneous capital, \(\chi=1\). For firm-specific capital, \(\chi\) is a nonlinear function of structural parameters and is `needs_review` because the exact appendix expression is not present in the source Markdown.
+For homogeneous capital, $`\chi=1`$. For firm-specific capital, $`\chi`$ is a nonlinear function of structural parameters and is `needs_review` because the exact appendix expression is not present in the source Markdown.
 
 ### 3.1 Linear MMB implementation cross-check equations
 
@@ -157,17 +157,17 @@ The MMB implementation uses the following sticky-price linear restrictions. Thes
 
 - **(F12) Capital Euler equation** (`implementation_cross_check`, `needs_review` against technical appendix):
 
-\[
+```math
 \hat\lambda_{z^{\ast},t+1}
 +\frac{1-\delta}{\tilde r+1-\delta}\hat{\tilde\mu}_{t+1}
 +\frac{\tilde r}{\tilde r+1-\delta}\hat{\tilde r}_{t+1}
 -\hat\lambda_{z^{\ast},t}-\hat{\tilde\mu}_t
 =\hat\mu_{z,t+1}+\frac{1}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
-\]
+```
 
 - **(F13) Investment Euler equation** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \begin{aligned}
 &-\beta\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat i_{t+1}-\hat{\tilde\mu}_t
 +\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2(1+\beta)\hat i_t
@@ -177,39 +177,39 @@ The MMB implementation uses the following sticky-price linear restrictions. Thes
 -\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2\hat\mu_{z,t}
 -\frac{\kappa(\mu_{z^{\ast}}\mu_\Upsilon)^2}{1-\alpha}\hat\mu_{\Upsilon,t}.
 \end{aligned}
-\]
+```
 
 - **(F14) Shadow rental rate on capital** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \hat{\tilde w}_t+\frac{1}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\hat{\tilde y}_t
 +\frac{\nu R}{\nu R+1-\nu}\hat R_t-\hat{\tilde r}_t
 -\frac{1}{1-\alpha}\hat u_t-\frac{1}{1-\alpha}\hat{\bar k}_{t-1}
 =-\frac{1}{1-\alpha}\hat\mu_{z,t}
 -\frac{1}{(1-\alpha)^2}\hat\mu_{\Upsilon,t}
 +\frac{1}{1-\alpha}\hat\epsilon_t .
-\]
+```
 
 - **(F15) Linear capital evolution** (`implementation_cross_check`):
 
-\[
+```math
 (\mu_{z^{\ast}}\mu_\Upsilon-(1-\delta))\hat i_t
 -\mu_\Upsilon\mu_{z^{\ast}}\hat{\bar k}_t
 +(1-\delta)\hat{\bar k}_{t-1}
 =(1-\delta)\hat\mu_{z,t}
 +\frac{1-\delta}{1-\alpha}\hat\mu_{\Upsilon,t}.
-\]
+```
 
 - **(F16) Sticky-price inflation equation in MMB file** (`implementation_cross_check`):
 
-\[
+```math
 \beta\hat\pi_{t+1}-(1+\beta\varsigma)\hat\pi_t+\gamma\hat s_t
 =-\varsigma\hat\pi_{t-1}.
-\]
+```
 
 - **(F17) Linear marginal-cost equation** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \hat{\tilde w}_t-\hat s_t+\frac{\alpha}{1-\alpha}\frac{\tilde y}{\tilde y+\phi}\hat{\tilde y}_t
 +\frac{\nu R}{\nu R+1-\nu}\hat R_t
 -\frac{\alpha}{1-\alpha}\hat u_t
@@ -217,92 +217,92 @@ The MMB implementation uses the following sticky-price linear restrictions. Thes
 =-\frac{\alpha}{1-\alpha}\hat\mu_{z,t}
 -\frac{\alpha}{(1-\alpha)^2}\hat\mu_{\Upsilon,t}
 +\frac{1}{1-\alpha}\hat\epsilon_t .
-\]
+```
 
 - **(F18) Linear money demand** (`implementation_cross_check`):
 
-\[
+```math
 \hat c_t-\hat q_t=\frac{R}{R-1}\frac{1}{2+\varphi}\hat R_t .
-\]
+```
 
 - **(F19) Linear consumption Euler equation** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \text{linear habit Euler restriction in }(\hat c_{t+1},\hat c_t,\hat c_{t-1},\hat\lambda_{z^{\ast},t},\hat q_t,\hat\mu_{z,t+1},\hat\mu_{\Upsilon,t+1},\hat\mu_{z,t},\hat\mu_{\Upsilon,t}).
-\]
+```
 
 The exact coefficient-level expression is available in the implementation cross-check and should be verified against the technical appendix before promotion.
 
 - **(F20) Monetary-base FOC** (`implementation_cross_check`):
 
-\[
+```math
 \hat\lambda_{z^{\ast},t+1}-\hat\pi_{t+1}+\hat R_{t+1}-\hat\lambda_{z^{\ast},t}
 =\hat\mu_{z,t+1}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}.
-\]
+```
 
 - **(F21) Linear wage FOC** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \eta_3\hat{\tilde w}_{t+1}+\eta_6\hat\pi_{t+1}
 +\eta_2\hat{\tilde w}_t+\eta_5\hat\pi_t+\eta_7\hat h_t+\eta_8\hat\lambda_{z^{\ast},t}
 +\eta_1\hat{\tilde w}_{t-1}+\eta_4\hat\pi_{t-1}
 =-\eta_{10}\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t+1}-\eta_{10}\hat\mu_{z,t+1}
 -\eta_9\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}-\eta_9\hat\mu_{z,t}.
-\]
+```
 
 - **(F22) Capital-utilization FOC** (`implementation_cross_check`):
 
-\[
+```math
 \frac{1}{\sigma_a}\hat{\tilde r}_t=\hat u_t .
-\]
+```
 
 ## 4. Market Clearing & Identities
 
 - **(F23) Technology scaling for balanced growth**:
 
-\[
+```math
 \mu_{z^{\ast},t}=\mu_{\Upsilon,t}^{\alpha/(1-\alpha)}\mu_{z,t}.
-\]
+```
 
 - **(F24) Investment-to-capital transformation, homogeneous capital**:
 
-\[
+```math
 \bar K_{t+1}=(1-\delta)\bar K_t+\left[1-S\left(\frac{I_t}{I_{t-1}}\right)\right]I_t .
-\]
+```
 
 - **(F25) Firm-specific capital accumulation**:
 
-\[
+```math
 \bar K_{t+1}(i)=(1-\delta)\bar K_t(i)
 +\left[1-S\left(\frac{I_t(i)}{I_{t-1}(i)}\right)\right]I_t(i).
-\]
+```
 
 - **(F26) Loan-market clearing**:
 
-\[
+```math
 W_tH_t=x_tM_t-Q_t .
-\]
+```
 
 - **(F27) Final-goods resource constraint**:
 
-\[
+```math
 (1+\eta(V_t))C_t+\Upsilon_t^{-1}\left[I_t+a(u_t)\bar K_t\right]\leq Y_t .
-\]
+```
 
 - **(F28) Linear production function** (`implementation_cross_check`):
 
-\[
+```math
 (\tilde y+\phi)(1-\alpha)\hat h_t-\tilde y\hat{\tilde y}_t
 +\left((\tilde y+\phi)\alpha-\frac{\tilde r\bar k}{\mu_{z^{\ast}}\mu_\Upsilon}\right)\hat u_t
 +(\tilde y+\phi)\alpha\hat{\bar k}_{t-1}
 =(\tilde y+\phi)\alpha\hat\mu_{z,t}
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
 -(\tilde y+\phi)\hat\epsilon_t .
-\]
+```
 
 - **(F29) Linear resource constraint** (`implementation_cross_check`, `needs_review`):
 
-\[
+```math
 \begin{aligned}
 &\left((1+\eta)c+\eta'c^2/q\right)\hat c_t
 +\left(1-\frac{1-\delta}{\mu_\Upsilon\mu_{z^{\ast}}}\right)\bar k\,\hat i_t
@@ -313,103 +313,103 @@ W_tH_t=x_tM_t-Q_t .
 +\frac{(\tilde y+\phi)\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}
 -(\tilde y+\phi)\hat\epsilon_t=0 .
 \end{aligned}
-\]
+```
 
 - **(F30) Money-market clearing** (`implementation_cross_check`):
 
-\[
+```math
 \hat{\tilde w}_t-\frac{x m}{xm-q}\hat m_t+\hat h_t+\frac{q}{xm-q}\hat q_t
 =\frac{x m}{xm-q}\hat x_t .
-\]
+```
 
 - **(F31) Monetary-base accumulation identity** (`implementation_cross_check`):
 
-\[
+```math
 -\hat m_t-\hat\pi_t+\hat m_{t-1}+\hat x_{t-1}
 =\hat\mu_{z,t}+\frac{\alpha}{1-\alpha}\hat\mu_{\Upsilon,t}.
-\]
+```
 
 ## 5. Exogenous Processes
 
 - **(F32) Money-growth policy decomposition**:
 
-\[
+```math
 \hat x_t=\hat x_{z,t}+\hat x_{\Upsilon,t}+\hat x_{M,t}.
-\]
+```
 
 - **(F33) Monetary shock process**:
 
-\[
+```math
 \hat x_{M,t}=\rho_{xM}\hat x_{M,t-1}+\varepsilon_{M,t}.
-\]
+```
 
 - **(F34) Neutral technology growth**:
 
-\[
+```math
 \hat\mu_{z,t}=\rho_{\mu_z}\hat\mu_{z,t-1}+\varepsilon_{\mu_z,t}.
-\]
+```
 
 - **(F35) Policy response to neutral technology innovation**:
 
-\[
+```math
 \hat x_{z,t}=\rho_{xz}\hat x_{z,t-1}+c_z\varepsilon_{z,t}+c_z^p\varepsilon_{z,t-1}.
-\]
+```
 
 - **(F36) Capital-embodied technology growth**:
 
-\[
+```math
 \hat\mu_{\Upsilon,t}=\rho_{\mu_\Upsilon}\hat\mu_{\Upsilon,t-1}+\varepsilon_{\mu_\Upsilon,t}.
-\]
+```
 
 - **(F37) Policy response to embodied-technology innovation**:
 
-\[
+```math
 \hat x_{\Upsilon,t}=\rho_{x\Upsilon}\hat x_{\Upsilon,t-1}+c_\Upsilon\varepsilon_{\Upsilon,t}+c_\Upsilon^p\varepsilon_{\Upsilon,t-1}.
-\]
+```
 
 - **(F38) Transitory neutral technology process in MMB implementation** (`implementation_cross_check`):
 
-\[
+```math
 \hat\epsilon_t=\rho_\epsilon\hat\epsilon_{t-1}+\sigma_\epsilon\varepsilon_{\epsilon,t}.
-\]
+```
 
 ## 6. Steady-State Solution
 
 The source paper describes a non-stochastic steady state on a balanced-growth path. The MMB implementation supplies a concrete steady-state normalization for the linear model:
 
-1. Compute \(\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z\).
+1. Compute $`\mu_{z^{\ast}}=\mu_\Upsilon^{\alpha/(1-\alpha)}\mu_z`$.
 2. Compute the steady-state capital rental term:
 
-\[
+```math
 \tilde r=\frac{\mu_\Upsilon\mu_{z^{\ast}}}{\beta}-(1-\delta).
-\]
+```
 
 3. Compute steady-state inflation and nominal gross interest:
 
-\[
+```math
 \pi=\frac{x}{\mu_{z^{\ast}}},
 \qquad
 R=\frac{\pi\mu_{z^{\ast}}}{\beta}.
-\]
+```
 
 4. Compute the money-demand transaction-cost slope from velocity:
 
-\[
+```math
 \eta'=\frac{R-1}{V^2},
 \qquad
 \varphi=\frac{1}{4\epsilon(R-1)}-2.
-\]
+```
 
-5. Set \(s=1/\lambda_f\), \(R_\nu=\nu R+1-\nu\), and solve the steady-state real wage, capital-hours ratio, capital, hours, consumption, real balances, output, fixed cost, investment, and marginal utility using the recursive formulas in `US_ACELswt_rep.mod`.
+5. Set $`s=1/\lambda_f`$, $`R_\nu=\nu R+1-\nu`$, and solve the steady-state real wage, capital-hours ratio, capital, hours, consumption, real balances, output, fixed cost, investment, and marginal utility using the recursive formulas in `US_ACELswt_rep.mod`.
 
 Because the archive entry is for a `model(linear)` implementation, steady-state values are parameters around which deviations are taken; all dynamic variables in the model block have zero deterministic steady state. The exact coefficient-level steady-state recursion is marked `implementation_cross_check` and should be reviewed against the technical appendix before any runnable promotion.
 
 ## 7. Timing & Form Conventions
 
 - **Information timing**: technology shocks are observed before price/wage and real decisions; the monetary policy shock occurs after price/wage setting and before demand realization.
-- **Firm-specific capital timing**: firm \(i\) enters period \(t\) with predetermined \(\bar K_t(i)\). It can adjust future capital only through current investment \(I_t(i)\), so output after the monetary shock is met through labor demand and utilization rather than same-period capital reallocation.
+- **Firm-specific capital timing**: firm $`i`$ enters period $`t`$ with predetermined $`\bar K_t(i)`$. It can adjust future capital only through current investment $`I_t(i)`$, so output after the monetary shock is met through labor demand and utilization rather than same-period capital reallocation.
 - **Capital stock**: the MMB variable `kbar_t1` denotes the physical capital stock available from the previous period in production equations and the stock updated by the capital law.
-- **Wages and prices**: prices and wages are Calvo with lagged-inflation indexation; the paper's inflation equation uses \(\Delta\hat\pi_t\), while the MMB linear cross-check writes the sticky-price equation in terms of \(\hat\pi_t,\hat\pi_{t+1},\hat\pi_{t-1}\).
+- **Wages and prices**: prices and wages are Calvo with lagged-inflation indexation; the paper's inflation equation uses $`\Delta\hat\pi_t`$, while the MMB linear cross-check writes the sticky-price equation in terms of $`\hat\pi_t,\hat\pi_{t+1},\hat\pi_{t-1}`$.
 - **Model form**: `model(linear)`. Hats denote log deviations or stationary percentage deviations from the balanced-growth steady state. This entry does not run Dynare and does not certify Blanchard-Kahn or IRF behavior.
 
 ## 8. Variable & Parameter Reference Table
