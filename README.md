@@ -12,6 +12,7 @@
 >
 > - **A vetted starting point, never a blank page** — a built-in dual reference library (149 MMB replication models for economic structure + 89 Pfeifer examples for Dynare syntax) means every model starts from working code.
 > - **A tool that sharpens with use** — every model you finish is archived and consulted on future tasks; every bug you hit is logged with its fix, so the same trap is never debugged twice.
+> - **Faithful replication, never a guessed model** — when a paper hands part of its model off to another paper ("the financial block is identical to Gertler-Karadi 2011"), it stops and asks you for that source instead of silently reconstructing the missing block from memory.
 > - **Paper-ready output** — every IRF is delivered as a publication-quality vector figure, ready to drop into your manuscript.
 >
 > No timing pitfalls. No silent errors. No blank page.
@@ -182,7 +183,7 @@ The skill bundles two reference libraries under `references/` — 149 MMB replic
 
 It does not write purely from memory. It follows a fixed workflow:
 
-1. **Confirm first, then write**: before coding, it asks you to approve **modeling choices that change equation structure**, such as which agents are included, whether labor supply is homogeneous or heterogeneous, whether capital is included, and the market structure. It then produces a structured derivation file covering the optimization problems, FOCs, steady-state solution, and timing. It only writes code after you confirm. These two pauses are meant to catch mistakes before they happen, rather than reworking a large block of code afterward.
+1. **Confirm first, then write**: before coding, it asks you to approve **modeling choices that change equation structure**, such as which agents are included, whether labor supply is homogeneous or heterogeneous, whether capital is included, and the market structure. It then produces a structured derivation file covering the optimization problems, FOCs, steady-state solution, and timing. It only writes code after you confirm. And when a paper defers a whole block to a cited source it hasn't given you — e.g. "the banking sector is identical to Gertler-Karadi (2011)" — it stops and asks you to upload that source (or confirm a local version) rather than reconstructing the missing block from memory, even when you named the paper; a guessed block can run yet produce plausible-but-wrong results, so it refuses to invent a core mechanism. These pauses are meant to catch mistakes before they happen, rather than reworking a large block of code afterward.
 2. **Incremental construction**: variable declarations, equations, steady state, shocks, and experiments are written stage by stage. Each stage must work before moving to the next one.
 3. **Nonlinear first**: by default, it writes the original nonlinear equation system and lets Dynare handle expansion, instead of manually deriving a linearized system, which is a common source of hidden mistakes.
 4. **Run-debug loop**: when connected to MATLAB MCP, it automatically runs Dynare, reads errors, applies minimal fixes, and reruns. It consults a bundled **error log** (`known-issues.md`) of known traps first, and writes any newly solved error back — so the same trap is never debugged from scratch twice.
